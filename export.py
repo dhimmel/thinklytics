@@ -52,15 +52,21 @@ if __name__ == '__main__':
 
     Example usage:
     ```
-    python export.py --login login.json --project rephetio --output export/rephetio.json
+    python export.py --loginfile login.json --project rephetio --output export/rephetio.json
     ```
     """
     parser = argparse.ArgumentParser(description='Retrieve Thinklab Project export.')
-    parser.add_argument('--login', default='login.json', help='path to Thinklab login credentials')
+    parser.add_argument('--username', default='', help='Thinklab login')
+    parser.add_argument('--password', default='', help='Thinklab password')
+    parser.add_argument('--loginfile', default='login.json', help='alternatively, path to file with Thinklab login credentials')
     parser.add_argument('--project', default='rephetio', help='project id')
     parser.add_argument('--output', default='export.json', help='path to export to')
     args = parser.parse_args()
 
-    username, password = parse_login_json(args.login)
+    if (args.username == '') & (args.password == ''):
+        username, password = parse_login_json(args.loginfile)
+    else:
+        username, password = args.username, args.password
+
     export = retrieve_project_export(args.project, username, password)
     save_export(export, args.output)
