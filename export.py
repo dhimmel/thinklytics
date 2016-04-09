@@ -4,6 +4,17 @@ import datetime
 import os
 
 import requests
+from bs4 import BeautifulSoup as bfs
+
+def retrieve_project_urls(url, css_sel = 'a.list-proj-name'):
+    """
+    Retrieve the list of url for projects or proposals,
+    based on the url fof the page that lists them
+    """
+    r = requests.Session().get(url) 
+    soup = bfs(r.content, 'lxml')
+    link_tags = soup.select(css_sel)
+    return [x.attrs['href'][3:] for x in link_tags]
 
 def retrieve_project_export(project, username, password):
     """
@@ -36,7 +47,7 @@ def save_export(export, project, json_dir):
     Write a JSON export to a text file.
     """
     os.makedirs(json_dir, exist_ok=True)
-    with open(os.path.join(json_dir, "{}.json".), 'wt') as write_file:
+    with open("{}/{}.json".format(json_dir, project), 'wt') as write_file:
         json.dump(export, write_file, ensure_ascii=False, indent=2, sort_keys=True)
 
 def parse_login_json(path):
@@ -49,7 +60,7 @@ def parse_login_json(path):
 
 if __name__ == '__main__':
     """
-    Export a Thinklab project to a file.
+    Export Thinklab projects and proposals to a file.
 
     Example usage:
     ```
@@ -69,6 +80,14 @@ if __name__ == '__main__':
     else:
         username, password = args.username, args.password
 
-    project = args.project
-    export = retrieve_project_export(project, username, password)
-    save_export(export, project, args.outputdir)
+    if args.project == "all":
+        projects = retrieve_project_urls(url = 'http://thinklab.com/projects')
+        projects = projects + retrieve_project_urls(url = 'http://thinklab.com/proposals')
+        projects = list(set(projects))
+    else: 
+        projects = [ args.project ]
+
+    for project in projects:
+        print("Getting project '{}'".format(project))
+        export = retrieve_project_export(project, username, password)
+        save_export(export, project, args.outputdir)
