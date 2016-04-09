@@ -31,11 +31,12 @@ def retrieve_project_export(project, username, password):
     export['retrieved'] = datetime.datetime.utcnow().isoformat() + 'Z'
     return export
 
-def save_export(export, path):
+def save_export(export, project, json_dir):
     """
     Write a JSON export to a text file.
     """
-    with open(path, 'wt') as write_file:
+    os.makedirs(json_dir, exist_ok=True)
+    with open(os.path.join(json_dir, "{}.json".), 'wt') as write_file:
         json.dump(export, write_file, ensure_ascii=False, indent=2, sort_keys=True)
 
 def parse_login_json(path):
@@ -60,7 +61,7 @@ if __name__ == '__main__':
     parser.add_argument('--password', default='', help='Thinklab password')
     parser.add_argument('--loginfile', default='login.json', help='alternatively, path to file with Thinklab login credentials')
     parser.add_argument('--project', default='rephetio', help='project id')
-    parser.add_argument('--output', default='export.json', help='path to export to')
+    parser.add_argument('--outputdir', default='exported', help='path to export to')
     args = parser.parse_args()
 
     if (args.username == '') & (args.password == ''):
@@ -68,5 +69,6 @@ if __name__ == '__main__':
     else:
         username, password = args.username, args.password
 
-    export = retrieve_project_export(args.project, username, password)
-    save_export(export, args.output)
+    project = args.project
+    export = retrieve_project_export(project, username, password)
+    save_export(export, project, args.outputdir)
