@@ -10,7 +10,7 @@ The export for a specific project can be retrieved using:
 python export.py --login login.json --project rephetio --output export/rephetio.json
 ```
 
-Users need to create a `login.json` file with their personal Thinklab credentials. ['login-template.json'](login-template.json) provides a template.
+Users need to create a `login.json` file with their personal Thinklab credentials. [`login-template.json`](login-template.json) provides a template.
 
 ## License
 
