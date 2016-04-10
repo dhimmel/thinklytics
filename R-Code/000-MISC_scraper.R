@@ -27,12 +27,14 @@ sign_in_form$url <- "" # THIS IS A BUG, see https://github.com/hadley/rvest/issu
 # In spite of the concordance of the csrf token in the form with
 # the one in the cookie, I get a csrf token error. 
 # (you need real email/password to run in the error)
-logged_in <- session %>% rvest::submit_form(sign_in_form)
+logged_in <- session %>% 
+  rvest::submit_form(sign_in_form, submit = NULL,
+                     httr::config(followlocation = FALSE)) # THIS IS A BUG, see https://github.com/hadley/httr/issues/356
   
 ## Retrive the file
 export <- logged_in %>% 
   rvest::jump_to("http://thinklab.com/p/rephetio/export.json") %>% 
-  `[[`("response") %>% content
+  `[[`("response") %>% httr::content()
 
 
 # Do it by hand ------------------------------------------------------------------
@@ -40,6 +42,10 @@ export <- logged_in %>%
 ## We tried here to specify everything ourselves to bypass the 
 ## rvest package (in case the session state was not handled properly)
 ## and we get the same error.
+## DEBUGGED: it comes from the redirection by default from cURL. The 
+## 302 gets a redirection header ('Location: ...'). It's extremely obscure,
+## but the idea is that cURL (and thus httr) follows 
+## This code is not useful anymore, but kept for post-mortem
 
 header_list <- c(
   'Cookie' = 'orig_referrer=https://www.google.com/; thread_view=191,; _gat=1; csrftoken=arbitrary; pv=anonymous; _ga=GA1.2.1147535651.1460154913',
@@ -62,7 +68,10 @@ response <- httr::POST(url = start_url, #"http://httpbin.org/headers",
                                    password = passwd,
                                    csrfmiddlewaretoken = 'arbitrary',
                                    save = 'Continue'),
-                       httr::add_headers(.headers = header_list))
+                       httr::add_headers(.headers = header_list),
+                       # httr::config(followlocation = 0L),
+                       # httr::config(postredir = 0L),
+                       httr::verbose(info = TRUE))
 
 
 # Get list of pages -------------------------------------------------------
