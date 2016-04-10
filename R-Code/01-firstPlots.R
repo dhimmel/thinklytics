@@ -34,6 +34,7 @@ pubs <- list(
 pubs <- pubs %>% 
   mutate(type = relevel(factor(type), "threads"),
          project = reorder(factor(project), project, length),
+         profile = factor(fields.profile),
          time = as.POSIXct(fields.published),
          date = as.Date(time),
          weight = 4 - as.numeric(type), # threads = 3, comments = 2, notes = 1
@@ -60,28 +61,29 @@ ggsave(ggLCounts, filename = "Output/counts.pdf", w = 10, h = 5)
 # Evolution ---------------------------------------------------------------
 
 colors <- suppressWarnings(
-  colorRampPalette(RColorBrewer::brewer.pal(12, "Accent")) # "Set1"
+  colorRampPalette(RColorBrewer::brewer.pal(12, "Accent")) # "Set1", "Accent"
 )
+m6breaks <- seq(as.Date("2014-07-01"), max(pubs$date), by = "6 months")
 
 ## Histograms
-bin = 365.25 / 23 # 1 month
+bin = 365.25 / 12 # 1 month
 ggHistDate <- pubs %>% 
   ggplot(aes(x = date)) +
   geom_histogram(aes(fill = project, weight = weight),
                  binwidth  = bin, origin = min(as.numeric(pubs$date)) - bin/2,
                  color = "black", alpha = 0.6) +
-  scale_x_date(breaks = scales::date_breaks("1 month"),
-               labels = scales::date_format("%Y-%b")) +
+  scale_x_date(breaks = m6breaks,
+               labels = scales::date_format("%Y-%b"),
+               minor_breaks = scales::date_breaks("1 month")) +
   scale_fill_manual(values = colors(length(levels(pubs$project))),
-                    guide = guide_legend(reverse = TRUE)) +
+                    guide = guide_legend(reverse = TRUE, order = 1)) +
   theme_perso(angle = 60) +
   labs(x = NULL, y = "Weighted number of events per week") +
   # Fake legend...
   geom_point(aes(alpha = type), x = 1, y = 1) +
   scale_alpha_manual("Weights", values = c(1, 0.99, 0.98), 
                      labels = c("threads: 3", "comments: 2", "notes: 1")) +
-  guides(fill = guide_legend(order = 1), colour = guide_legend(order = 1),
-         alpha = guide_legend(keywidth = 0,
+  guides(alpha = guide_legend(keywidth = 0,
                               override.aes = list(fill = NA, color = NA))) + 
   theme(legend.key = element_blank())
 
@@ -105,25 +107,29 @@ ggDensDate <- pubs %>%
   ggplot() +
   geom_area(aes(x = x, y = y, group = project, fill = project, color = project), 
             alpha = 0.4, size = 0.5) +
-  scale_x_date(breaks = scales::date_breaks("6 month"),
+  scale_x_date(breaks = m6breaks,
                minor_breaks = scales::date_breaks("1 month"),
                labels = scales::date_format("%Y-%b")) +
   scale_fill_manual(values = colors(length(levels(pubs$project))),
-                    guide = guide_legend(reverse = TRUE)) +
+                    guide = guide_legend(reverse = TRUE, order = 1)) +
   scale_color_manual(values = colors(length(levels(pubs$project))),
-                     guide = guide_legend(reverse = TRUE)) +
+                     guide = guide_legend(reverse = TRUE, order = 1)) +
   theme_perso(angle = 60) +
   labs(x = NULL, y = "Number of weighted contributions per day") +
   # Fake legend...
   geom_point(aes(alpha = type), x = 1, y = 1) +
   scale_alpha_manual("Weights", values = c(1, 0.99, 0.98), 
                      labels = c("threads: 3", "comments: 2", "notes: 1")) +
-  guides(fill = guide_legend(order = 1), colour = guide_legend(order = 1),
-         alpha = guide_legend(keywidth = 0,
+  guides(alpha = guide_legend(keywidth = 0,
                               override.aes = list(fill = NA, color = NA))) + 
   theme(legend.key = element_blank())
 
-## Look at the character level
+ggsave(ggHistDate, filename = "Output/evoHist.pdf", w = 12, h = 8)
+ggsave(ggDensDate, filename = "Output/evoDens.pdf", w = 12, h = 8)
+
+
+# Look at the character level ---------------------------------------------
+
 # Hist
 bin = 7
 ggHistChar <- pubs %>% 
@@ -137,6 +143,7 @@ ggHistChar <- pubs %>%
                     guide = guide_legend(reverse = TRUE)) +
   theme_perso(angle = 60) +
   labs(x = NULL, y = "Characters written per week")
+
 # Density
 d0N <- suppressWarnings(density(as.numeric(pubs$date), 
                                 weight = pubs$N,
@@ -146,7 +153,7 @@ ggDensChar <- pubs %>%
   do({
     dd <- suppressWarnings(
       density(as.numeric(.$date), 
-              bw = 7, weight = .$N, 
+              bw = bin, weight = .$N, 
               from = min(d0N$x), to = max(d0N$x))
     )
     data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
@@ -154,7 +161,7 @@ ggDensChar <- pubs %>%
   ggplot() +
   geom_area(aes(x = x, y = y, group = project, fill = project, color = project), 
             alpha = 0.4, size = 0.5) +
-  scale_x_date(breaks = scales::date_breaks("6 month"),
+  scale_x_date(breaks = m6breaks,
                minor_breaks = scales::date_breaks("1 month"),
                labels = scales::date_format("%Y-%b")) +
   scale_fill_manual(values = colors(length(levels(pubs$project))),
@@ -164,9 +171,86 @@ ggDensChar <- pubs %>%
   theme_perso(angle = 60) +
   labs(x = NULL, y = "Number of Character written per day")
 
-ggsave(ggHistDate, filename = "Output/evoHist.pdf", w = 12, h = 8)
-ggsave(ggDensDate, filename = "Output/evoDens.pdf", w = 12, h = 8)
 ggsave(ggHistChar, filename = "Output/evoHistChar.pdf", w = 12, h = 8)
 ggsave(ggDensChar, filename = "Output/evoDensChar.pdf", w = 12, h = 8)
   
+
+# Look at users -----------------------------------------------------------
+
+colors <- suppressWarnings(
+  colorRampPalette(RColorBrewer::brewer.pal(12, "Set1")) # "Set1", "Accent"
+)
+
+# Look at the character generation
+ggDensPPl <- pubs %>% 
+  group_by(profile) %>%
+  mutate(tot = sum(N)) %>% 
+  filter(tot > 1000) %>% 
+  do({
+    dd <- suppressWarnings(
+      density(as.numeric(.$date), 
+              bw = 30, weight = .$N, 
+              from = min(d0N$x), to = max(d0N$x))
+    )
+    data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
+  }) %>% 
+  ggplot() +
+  geom_area(aes(x = x, y = y, group = profile, fill = profile, color = profile), 
+            alpha = 0.4, size = 0.5) +
+  scale_x_date(breaks = m6breaks,
+               minor_breaks = scales::date_breaks("1 month"),
+               labels = scales::date_format("%Y-%b")) +
+  scale_fill_manual(values = colors(length(levels(pubs$profile))),
+                    guide = guide_legend(reverse = TRUE), drop = FALSE) +
+  scale_color_manual(values = colors(length(levels(pubs$profile))),
+                     guide = guide_legend(reverse = TRUE), drop = FALSE) +
+  theme_perso(angle = 60) +
+  labs(x = NULL, y = "Cumulative number of Character written per profile")
+
+
+# Look at the character sum over time
+pubsSumPPl <- pubs %>% 
+  group_by(profile) %>%
+  mutate(tot = sum(N)) %>% 
+  filter(tot > 500) %>% 
+  do({
+    dd <- suppressWarnings(
+      density(as.numeric(.$date), 
+              bw = 7, weight = .$N, 
+              from = min(d0N$x), to = max(d0N$x))
+    )
+    data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
+  }) %>% 
+  arrange(x) %>% 
+  # mutate(cumN = log1p(cumsum(y)) / log(10)) %>% 
+  # mutate(cumN = asinh(cumsum(y) / 1000)) %>% 
+  mutate(cumN = sqrt(cumsum(y))) %>% # Most easily interpreable
+  ungroup()
+
+ggDensSumPPl <- ggplot(pubsSumPPl) +
+  geom_area(aes(x = x, y = cumN, group = profile, fill = profile), 
+            alpha = 0.9, size = 0.1, colour = "grey95") +
+  geom_text(data = pubsSumPPl %>% 
+              group_by(profile) %>% 
+              summarize_each(funs(last)) %>% 
+              arrange(profile) %>% 
+              mutate(yEnd = cumsum(cumN) - cumN/2) %>% 
+              filter(cumN > 100),
+            aes(label = profile, y = yEnd, colour = profile), 
+            x = max(as.numeric(pubsSumPPl$x)) + 10, size = 5) +
+  scale_x_date(breaks = m6breaks,
+               minor_breaks = scales::date_breaks("1 month"),
+               labels = scales::date_format("%Y-%b")) +
+  scale_fill_manual(values = colors(length(levels(pubsSumPPl$profile))),
+                    guide = guide_legend(reverse = TRUE), drop = FALSE) +
+  scale_color_manual(values = colors(length(levels(pubsSumPPl$profile))),
+                     guide = guide_legend(reverse = TRUE), drop = FALSE) +
+  scale_y_continuous(labels = function(x) sprintf("%.2g", x*x)) +
+  theme_perso(angle = 60) +
+  labs(x = NULL, y = "Square root of the Characters written per profile") +
+  guides(colour = "none", fill = "none")
+
+ggsave(ggDensPPl, filename = "Output/evoProfiles.pdf", w = 12, h = 8)
+ggsave(ggDensSumPPl, filename = "Output/evoCumProfiles.pdf", w = 12, h = 8)
+
 

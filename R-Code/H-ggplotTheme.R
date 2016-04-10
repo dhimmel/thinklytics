@@ -17,7 +17,6 @@ theme_perso <- function(angle = 0, ...) {
 }
 
 
-
 # Helper for internal --------------------------------------------------
 
 # reproduce bandwith computation in stat_density to 
