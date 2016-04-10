@@ -11,7 +11,7 @@ library(dplyr)
 library(ggplot2)
 
 # Helpers
-source("R-Code/H-ggplotTheme.R")
+source("R-Code/H-ggplot.R")
 
 
 # Load & prepare data -----------------------------------------------------
@@ -54,8 +54,8 @@ ggCounts <- pubs %>%
 
 ggLCounts <- ggCounts + scale_y_log10()
 
-ggsave(ggCounts, filename = "Output/counts_raw.pdf", w = 10, h = 5)
-ggsave(ggLCounts, filename = "Output/counts.pdf", w = 10, h = 5)
+savePlot(ggCounts, filename = "Output/counts_raw", w = 10, h = 5)
+savePlot(ggLCounts, filename = "Output/counts", w = 10, h = 5)
 
 
 # Evolution ---------------------------------------------------------------
@@ -78,7 +78,7 @@ ggHistDate <- pubs %>%
   scale_fill_manual(values = colors(length(levels(pubs$project))),
                     guide = guide_legend(reverse = TRUE, order = 1)) +
   theme_perso(angle = 60) +
-  labs(x = NULL, y = "Weighted number of events per week") +
+  labs(x = NULL, y = "Weighted number of events per month") +
   # Fake legend...
   geom_point(aes(alpha = type), x = 1, y = 1) +
   scale_alpha_manual("Weights", values = c(1, 0.99, 0.98), 
@@ -103,6 +103,7 @@ ggDensDate <- pubs %>%
     )
     data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
   }) %>% 
+  mutate(y = sqrt(y)) %>% # Transform for better readability
   # Plot:
   ggplot() +
   geom_area(aes(x = x, y = y, group = project, fill = project, color = project), 
@@ -124,8 +125,8 @@ ggDensDate <- pubs %>%
                               override.aes = list(fill = NA, color = NA))) + 
   theme(legend.key = element_blank())
 
-ggsave(ggHistDate, filename = "Output/evoHist.pdf", w = 12, h = 8)
-ggsave(ggDensDate, filename = "Output/evoDens.pdf", w = 12, h = 8)
+savePlot(ggHistDate, filename = "Output/evoHist")
+savePlot(ggDensDate, filename = "Output/evoDens")
 
 
 # Look at the character level ---------------------------------------------
@@ -171,8 +172,8 @@ ggDensChar <- pubs %>%
   theme_perso(angle = 60) +
   labs(x = NULL, y = "Number of Character written per day")
 
-ggsave(ggHistChar, filename = "Output/evoHistChar.pdf", w = 12, h = 8)
-ggsave(ggDensChar, filename = "Output/evoDensChar.pdf", w = 12, h = 8)
+savePlot(ggHistChar, filename = "Output/evoHistChar")
+savePlot(ggDensChar, filename = "Output/evoDensChar")
   
 
 # Look at users -----------------------------------------------------------
@@ -250,7 +251,7 @@ ggDensSumPPl <- ggplot(pubsSumPPl) +
   labs(x = NULL, y = "Square root of the Characters written per profile") +
   guides(colour = "none", fill = "none")
 
-ggsave(ggDensPPl, filename = "Output/evoProfiles.pdf", w = 12, h = 8)
-ggsave(ggDensSumPPl, filename = "Output/evoCumProfiles.pdf", w = 12, h = 8)
+savePlot(ggDensPPl, filename = "Output/evoProfiles")
+savePlot(ggDensSumPPl, filename = "Output/evoCumProfiles")
 
 
