@@ -22,15 +22,22 @@ source("R-Code/H-ggplotTheme.R")
 collections <- get(load("R-Code/collections.RData"))
 
 # Isolate "publications"
-pubs <- lapply(collections[c("comments", "notes", "threads")], 
-               '[', c("project", "fields.published", "fields.profile")) %>% 
-  bind_rows(.id = "type")
+pubs <- list(
+  comments = collections$comments %>% 
+    select(project, fields.published, fields.profile, fields.body_md),
+  notes = collections$notes %>% 
+    select(project, fields.published, fields.profile, fields.body_md),
+  threads = collections$threads %>% 
+    select(project, fields.published, fields.profile)
+) %>% bind_rows(.id = "type")
 # Prep
 pubs <- pubs %>% 
   mutate(type = relevel(factor(type), "threads"),
          project = reorder(factor(project), project, length),
          time = as.POSIXct(fields.published),
-         date = as.Date(time))
+         date = as.Date(time),
+         weight = 4 - as.numeric(type), # threads = 3, comments = 2, notes = 1
+         N = nchar(fields.body_md))
 
 
 # Quick overview -------------------------------------------------------
@@ -40,7 +47,8 @@ ggCounts <- pubs %>%
   geom_bar() +
   facet_wrap( ~ project, nrow = 1) +
   theme_perso(angle = 45, base_size = 8) +
-  labs(y = NULL, x = NULL, labs = "Publication counts, per type and project") +
+  labs(y = "Number of events since start of Thinklab", 
+       x = NULL, labs = "Publication counts, per type and project") +
   guides(colour = "none", fill = "none")
 
 ggLCounts <- ggCounts + scale_y_log10()
@@ -59,24 +67,87 @@ colors <- suppressWarnings(
 bin = 365.25 / 23 # 1 month
 ggHistDate <- pubs %>% 
   ggplot(aes(x = date)) +
-  geom_histogram(aes(fill = project), 
+  geom_histogram(aes(fill = project, weight = weight),
                  binwidth  = bin, origin = min(as.numeric(pubs$date)) - bin/2,
                  color = "black", alpha = 0.6) +
   scale_x_date(breaks = scales::date_breaks("1 month"),
                labels = scales::date_format("%Y-%b")) +
   scale_fill_manual(values = colors(length(levels(pubs$project))),
                     guide = guide_legend(reverse = TRUE)) +
-  theme_perso(angle = 60)
+  theme_perso(angle = 60) +
+  labs(x = NULL, y = "Weighted number of events per week") +
+  # Fake legend...
+  geom_point(aes(alpha = type), x = 1, y = 1) +
+  scale_alpha_manual("Weights", values = c(1, 0.99, 0.98), 
+                     labels = c("threads: 3", "comments: 2", "notes: 1")) +
+  guides(fill = guide_legend(order = 1), colour = guide_legend(order = 1),
+         alpha = guide_legend(keywidth = 0,
+                              override.aes = list(fill = NA, color = NA))) + 
+  theme(legend.key = element_blank())
 
-## Densities
-d0 <- density(as.numeric(pubs$date))
+## Show density
+# Compute a global one to get the parameters
+d0 <- suppressWarnings(density(as.numeric(pubs$date), 
+                               weight = pubs$weight,
+                               adjust = 1, cut = 0))
+# Compute the densities per group & plot it
 ggDensDate <- pubs %>% 
+  group_by(project, type) %>% 
+  do({
+    dd <- suppressWarnings(
+      density(as.numeric(.$date), bw = bin,
+              weight = .$weight,
+              from = min(d0$x), to = max(d0$x))
+    )
+    data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
+  }) %>% 
+  # Plot:
+  ggplot() +
+  geom_area(aes(x = x, y = y, group = project, fill = project, color = project), 
+            alpha = 0.4, size = 0.5) +
+  scale_x_date(breaks = scales::date_breaks("6 month"),
+               minor_breaks = scales::date_breaks("1 month"),
+               labels = scales::date_format("%Y-%b")) +
+  scale_fill_manual(values = colors(length(levels(pubs$project))),
+                    guide = guide_legend(reverse = TRUE)) +
+  scale_color_manual(values = colors(length(levels(pubs$project))),
+                     guide = guide_legend(reverse = TRUE)) +
+  theme_perso(angle = 60) +
+  labs(x = NULL, y = "Number of weighted contributions per day") +
+  # Fake legend...
+  geom_point(aes(alpha = type), x = 1, y = 1) +
+  scale_alpha_manual("Weights", values = c(1, 0.99, 0.98), 
+                     labels = c("threads: 3", "comments: 2", "notes: 1")) +
+  guides(fill = guide_legend(order = 1), colour = guide_legend(order = 1),
+         alpha = guide_legend(keywidth = 0,
+                              override.aes = list(fill = NA, color = NA))) + 
+  theme(legend.key = element_blank())
+
+## Look at the character level
+# Hist
+bin = 7
+ggHistChar <- pubs %>% 
+  ggplot(aes(x = date)) +
+  geom_histogram(aes(fill = project, weight = N),
+                 binwidth  = bin, origin = min(as.numeric(pubs$date)) - bin/2,
+                 color = "black", alpha = 0.6) +
+  scale_x_date(breaks = scales::date_breaks("1 month"),
+               labels = scales::date_format("%Y-%b")) +
+  scale_fill_manual(values = colors(length(levels(pubs$project))),
+                    guide = guide_legend(reverse = TRUE)) +
+  theme_perso(angle = 60) +
+  labs(x = NULL, y = "Characters written per week")
+# Density
+d0N <- suppressWarnings(density(as.numeric(pubs$date), 
+                                weight = pubs$N,
+                                adjust = 0.2, cut = 0))
+ggDensChar <- pubs %>% 
   group_by(project) %>% 
   do({
     dd <- suppressWarnings(
-      density(as.numeric(.$date), bw = d0$bw,
-              weight = 1 / as.numeric(.$type),
-              from = min(d0$x), to = max(d0$x))
+      density(as.numeric(.$date), 
+              bw = 7, weight = .$N, 
+              from = min(d0N$x), to = max(d0N$x))
     )
     data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
   }) %>% 
@@ -91,10 +162,11 @@ ggDensDate <- pubs %>%
   scale_color_manual(values = colors(length(levels(pubs$project))),
                      guide = guide_legend(reverse = TRUE)) +
   theme_perso(angle = 60) +
-  labs(x = NULL, y = "Number of contributions per day")
+  labs(x = NULL, y = "Number of Character written per day")
 
-ggsave(ggHistDate, filename = "Output/evoHist.pdf", w = 10, h = 8)
-ggsave(ggDensDate, filename = "Output/evoDens.pdf", w = 10, h = 8)
-
-
+ggsave(ggHistDate, filename = "Output/evoHist.pdf", w = 12, h = 8)
+ggsave(ggDensDate, filename = "Output/evoDens.pdf", w = 12, h = 8)
+ggsave(ggHistChar, filename = "Output/evoHistChar.pdf", w = 12, h = 8)
+ggsave(ggDensChar, filename = "Output/evoDensChar.pdf", w = 12, h = 8)
+  
 

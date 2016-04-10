@@ -4,7 +4,7 @@ login.json
 # R files
 *.Rproj*
 .Rhistory
-*.pdf
+.RData
 
 **/.Rproj*/
 .Rproj.user
