@@ -38,7 +38,11 @@ pubs <- pubs %>%
          time = as.POSIXct(fields.published),
          date = as.Date(time),
          weight = 4 - as.numeric(type), # threads = 3, comments = 2, notes = 1
-         N = nchar(fields.body_md))
+         N = nchar(fields.body_md)) %>% 
+  left_join(collections$profiles %>% 
+              select(-project, fields.profile = pk, 
+                     fn = fields.first_name, ln = fields.last_name, 
+                     un = fields.username) %>% distinct)
 
 
 # Quick overview -------------------------------------------------------
@@ -213,7 +217,7 @@ ggDensPPl <- pubs %>%
 
 # character cumulative activity
 pubsSumPPl <- pubs %>% 
-  group_by(profile) %>%
+  group_by(profile, fn, ln, un) %>%
   mutate(tot = sum(N)) %>% 
   filter(tot > 500) %>% 
   do({
@@ -239,11 +243,11 @@ ggDensSumPPl <- ggplot(pubsSumPPl) +
               arrange(profile) %>% 
               mutate(yEnd = cumsum(cumN) - cumN/2) %>% 
               filter(cumN > sqrt(4000)),
-            aes(label = profile, y = yEnd, colour = profile), 
+            aes(label = fn, y = yEnd, colour = profile), 
             x = max(as.numeric(pubsSumPPl$x)) + 2, size = 5, hjust = 0) +
   scale_x_date(breaks = m6breaks,
                minor_breaks = scales::date_breaks("1 month"),
-               labels = scales::date_format("%Y-%b")) +
+               labels = scales::date_format("%Y-%b"), expand = c(0.1, 0)) +
   scale_fill_manual(values = colors(length(levels(pubsSumPPl$profile))),
                     guide = guide_legend(reverse = TRUE), drop = FALSE) +
   scale_color_manual(values = colors(length(levels(pubsSumPPl$profile))),
