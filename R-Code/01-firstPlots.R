@@ -216,7 +216,7 @@ ggDensPPl <- pubs %>%
 
 
 # character cumulative activity
-pubsSumPPl <- pubs %>% 
+pubsSumPpl <- pubs %>% 
   group_by(profile, fn, ln, un) %>%
   mutate(tot = sum(N)) %>% 
   filter(tot > 500) %>% 
@@ -234,25 +234,30 @@ pubsSumPPl <- pubs %>%
   mutate(cumN = sqrt(cumsum(y))) %>% # Most easily interpreable
   ungroup()
 
-ggDensSumPPl <- ggplot(pubsSumPPl) +
+pubsSumPplLab <- pubsSumPpl %>% 
+  group_by(profile) %>% 
+  summarize_each(funs(last)) %>% 
+  arrange(profile) %>% 
+  mutate(yEnd = cumsum(cumN) - cumN/2) %>% 
+  filter(cumN > sqrt(4000))
+
+ggDensSumPPl <- ggplot(pubsSumPpl) +
   geom_area(aes(x = x, y = cumN, group = profile, fill = profile), 
             alpha = 0.9, size = 0.1, colour = "grey95") +
-  geom_text(data = pubsSumPPl %>% 
-              group_by(profile) %>% 
-              summarize_each(funs(last)) %>% 
-              arrange(profile) %>% 
-              mutate(yEnd = cumsum(cumN) - cumN/2) %>% 
-              filter(cumN > sqrt(4000)),
-            aes(label = fn, y = yEnd, colour = profile), 
-            x = max(as.numeric(pubsSumPPl$x)) + 2, size = 5, hjust = 0) +
+  geom_text(data = pubsSumPplLab,
+            aes(label = sprintf(" %s", fn), x = x,
+                y = yEnd, colour = profile), size = 5, hjust = 0) +
+  geom_text(data = pubsSumPplLab,
+            aes(label = sprintf("%.1fK ", cumN^2/1000),  x = x,
+                y = yEnd), colour = "black", size = 4, hjust = 1) +
   scale_x_date(breaks = m6breaks,
                minor_breaks = scales::date_breaks("1 month"),
                labels = scales::date_format("%Y-%b"), expand = c(0.1, 0)) +
-  scale_fill_manual(values = colors(length(levels(pubsSumPPl$profile))),
+  scale_fill_manual(values = colors(length(levels(pubsSumPpl$profile))),
                     guide = guide_legend(reverse = TRUE), drop = FALSE) +
-  scale_color_manual(values = colors(length(levels(pubsSumPPl$profile))),
+  scale_color_manual(values = colors(length(levels(pubsSumPpl$profile))),
                      guide = guide_legend(reverse = TRUE), drop = FALSE) +
-  scale_y_continuous(labels = function(x) sprintf("%.2g", x*x)) +
+  scale_y_continuous(labels = NULL) +
   theme_perso(angle = 60) +
   labs(x = NULL, y = "Square root of the Characters written per profile") +
   guides(colour = "none", fill = "none")
