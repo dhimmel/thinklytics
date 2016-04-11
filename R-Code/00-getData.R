@@ -36,7 +36,36 @@ collections <- sapply(collectionNames,
 collections$notes$fields.published <- collections$notes$fields.added
 
 
-# Save object -------------------------------------------------------------
+# Prepare publication table -----------------------------------------------
+# Isolate "publications"
+
+pubs <- list(
+  comments = collections$comments %>% 
+    select(project, fields.published, fields.profile, fields.body_md),
+  notes = collections$notes %>% 
+    select(project, fields.published, fields.profile, fields.body_md),
+  threads = collections$threads %>% 
+    select(project, fields.published, fields.profile)
+) %>% bind_rows(.id = "type")
+
+# Preprocessing
+pubs <- pubs %>% 
+  mutate(type = relevel(factor(type), "threads"),
+         project = reorder(factor(project), project, length),
+         profile = factor(fields.profile),
+         time = as.POSIXct(fields.published),
+         date = as.Date(time),
+         weight = 4 - as.numeric(type), # threads = 3, comments = 2, notes = 1
+         N = nchar(fields.body_md)) %>% 
+  left_join(collections$profiles %>% 
+              select(-project, fields.profile = pk, 
+                     fn = fields.first_name, ln = fields.last_name, 
+                     un = fields.username) %>% distinct)
+
+# Save objects -------------------------------------------------------------
 
 save(collections, file = "R-Code/collections.RData")
+save(pubs, file = "R-Code/pubs.RData")
+write.csv(pubs, "Output/pubs.csv")
+
 rm(list = ls())

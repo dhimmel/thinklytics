@@ -1,4 +1,4 @@
-## 00-firstPlots.R
+## 01-firstPlots.R
 # This scripts create the first plots for the analysis of the Thinklab activity.
 #
 # Copyright Antoine Lizee 2016 - see LICENSE or README file at the repository level.
@@ -20,29 +20,7 @@ source("R-Code/H-ggplot.R")
 # source("R-Code/00-getData.R") 
 
 collections <- get(load("R-Code/collections.RData"))
-
-# Isolate "publications"
-pubs <- list(
-  comments = collections$comments %>% 
-    select(project, fields.published, fields.profile, fields.body_md),
-  notes = collections$notes %>% 
-    select(project, fields.published, fields.profile, fields.body_md),
-  threads = collections$threads %>% 
-    select(project, fields.published, fields.profile)
-) %>% bind_rows(.id = "type")
-# Prep
-pubs <- pubs %>% 
-  mutate(type = relevel(factor(type), "threads"),
-         project = reorder(factor(project), project, length),
-         profile = factor(fields.profile),
-         time = as.POSIXct(fields.published),
-         date = as.Date(time),
-         weight = 4 - as.numeric(type), # threads = 3, comments = 2, notes = 1
-         N = nchar(fields.body_md)) %>% 
-  left_join(collections$profiles %>% 
-              select(-project, fields.profile = pk, 
-                     fn = fields.first_name, ln = fields.last_name, 
-                     un = fields.username) %>% distinct)
+pubs <- get(load("R-Code/pubs.RData"))
 
 
 # Quick overview -------------------------------------------------------
