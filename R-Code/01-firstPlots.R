@@ -94,7 +94,7 @@ d0 <- suppressWarnings(density(as.numeric(pubs$date),
                                adjust = 1, cut = 0))
 # Compute the densities per group & plot it
 ggDensDate <- pubs %>% 
-  group_by(project, type) %>% 
+  group_by(project) %>% 
   do({
     dd <- suppressWarnings(
       density(as.numeric(.$date), bw = bin,
@@ -103,7 +103,7 @@ ggDensDate <- pubs %>%
     )
     data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
   }) %>% 
-  mutate(y = sqrt(y)) %>% # Transform for better readability
+  # mutate(y = sqrt(y)) %>% # Transform for better readability
   # Plot:
   ggplot() +
   geom_area(aes(x = x, y = y, group = project, fill = project, color = project), 
@@ -118,7 +118,8 @@ ggDensDate <- pubs %>%
   theme_perso(angle = 60) +
   labs(x = NULL, y = "Number of weighted contributions per day") +
   # Fake legend...
-  geom_point(aes(alpha = type), x = 1, y = 1) +
+  geom_point(aes(alpha = rep(c("1","2", "3"), length.out = 5120)), 
+             x = 1, y = 1, color = NA) +
   scale_alpha_manual("Weights", values = c(1, 0.99, 0.98), 
                      labels = c("threads: 3", "comments: 2", "notes: 1")) +
   guides(alpha = guide_legend(keywidth = 0,
@@ -159,6 +160,7 @@ ggDensChar <- pubs %>%
     )
     data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
   }) %>% 
+  # mutate(y= sqrt(y)) %>% 
   ggplot() +
   geom_area(aes(x = x, y = y, group = project, fill = project, color = project), 
             alpha = 0.4, size = 0.5) +
@@ -182,7 +184,7 @@ colors <- suppressWarnings(
   colorRampPalette(RColorBrewer::brewer.pal(12, "Set1")) # "Set1", "Accent"
 )
 
-# Look at the character generation
+# character activity
 ggDensPPl <- pubs %>% 
   group_by(profile) %>%
   mutate(tot = sum(N)) %>% 
@@ -209,7 +211,7 @@ ggDensPPl <- pubs %>%
   labs(x = NULL, y = "Cumulative number of Character written per profile")
 
 
-# Look at the character sum over time
+# character cumulative activity
 pubsSumPPl <- pubs %>% 
   group_by(profile) %>%
   mutate(tot = sum(N)) %>% 
@@ -236,9 +238,9 @@ ggDensSumPPl <- ggplot(pubsSumPPl) +
               summarize_each(funs(last)) %>% 
               arrange(profile) %>% 
               mutate(yEnd = cumsum(cumN) - cumN/2) %>% 
-              filter(cumN > 100),
+              filter(cumN > sqrt(4000)),
             aes(label = profile, y = yEnd, colour = profile), 
-            x = max(as.numeric(pubsSumPPl$x)) + 10, size = 5) +
+            x = max(as.numeric(pubsSumPPl$x)) + 2, size = 5, hjust = 0) +
   scale_x_date(breaks = m6breaks,
                minor_breaks = scales::date_breaks("1 month"),
                labels = scales::date_format("%Y-%b")) +
