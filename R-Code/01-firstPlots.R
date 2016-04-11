@@ -176,7 +176,7 @@ ggDensChar <- pubs %>%
   scale_color_manual(values = colors(length(levels(pubs$project))),
                      guide = guide_legend(reverse = TRUE)) +
   theme_perso(angle = 60) +
-  labs(x = NULL, y = "Number of Character written per day")
+  labs(x = NULL, y = "Number of characters written per day")
 
 savePlot(ggHistChar, filename = "Output/evoHistChar")
 savePlot(ggDensChar, filename = "Output/evoDensChar")
