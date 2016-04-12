@@ -37,6 +37,7 @@ m1breaks <- seq(as.Date("2014-12-01"), max(pubs$date), by = "1 month")
 d0N <- suppressWarnings(density(as.numeric(pubs$date), 
                                 weight = pubs$N,
                                 adjust = 0.2, cut = 0))
+r0N <- length(as.numeric(d0N$x)) / diff(range(d0N$x))
 
 # character activity
 pubsPpl <- pubs %>% 
@@ -50,7 +51,7 @@ pubsPpl <- pubs %>%
               bw = 30, weight = .$N, 
               from = min(d0N$x), to = max(d0N$x))
     )
-    data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
+    data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y / r0N)
   })
 # Small detail: we need to break up the data and the plot here because of the scale_manual. 
 # Indeed, since we need to specify the colors manually (due to the lack of scale_brewer_n()
@@ -81,7 +82,7 @@ pubsSumPpl <- pubs %>%
               bw = 7, weight = .$N, 
               from = min(d0N$x), to = max(d0N$x))
     )
-    data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
+    data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y / r0N, tot = .$tot[1])
   }) %>% 
   arrange(x) %>% 
   # mutate(cumN = log1p(cumsum(y)) / log(10)) %>% 
@@ -94,7 +95,7 @@ pubsSumPplLab <- pubsSumPpl %>%
   summarize_each(funs(last)) %>% 
   arrange(profile) %>% 
   mutate(yEnd = cumsum(cumN) - cumN/2) %>% 
-  filter(cumN > sqrt(5500))
+  filter(tot > 5000)
 # Plot:
 xrange <- range(pubsSumPpl$x)
 ggDensSumPPl <- ggplot(pubsSumPpl) +
@@ -104,7 +105,7 @@ ggDensSumPPl <- ggplot(pubsSumPpl) +
             aes(label = sprintf("- %s %s", fn, ln), x = x,
                 y = yEnd, colour = profile), size = 4.5, hjust = 0) +
   geom_text(data = pubsSumPplLab,
-            aes(label = sprintf("%.1fK ", cumN^2/1000),  x = x,
+            aes(label = sprintf("%.1fK ", tot/1000),  x = x,
                 y = yEnd), colour = "black", size = 4, hjust = 1) +
   scale_x_date(breaks = m6breaks,
                minor_breaks = m1breaks,
