@@ -26,7 +26,7 @@ gg_bw <- function(b = 1.5, x) { b/bw.nrd0(x) }
 
 # Helper for saving plots -------------------------------------------------
 
-savePlot <- function(plot, filename, w = 12, h = 8, res = 100) {
+savePlot <- function(plot, filename, w = 8, h = 5, res = 100) {
   ggsave(filename = paste0(filename, ".pdf"), plot = plot, 
          w = w, h = h)
   ggsave(filename = paste0(filename, ".png"), plot = plot, 

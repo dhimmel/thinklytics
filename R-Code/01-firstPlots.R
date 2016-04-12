@@ -36,8 +36,8 @@ ggCounts <- pubs %>%
 
 ggLCounts <- ggCounts + scale_y_log10()
 
-savePlot(ggCounts, filename = "Output/counts_raw", w = 10, h = 5)
-savePlot(ggLCounts, filename = "Output/counts", w = 10, h = 5)
+savePlot(ggCounts, filename = "Output/counts_raw")
+savePlot(ggLCounts, filename = "Output/counts")
 
 
 # Evolution ---------------------------------------------------------------
@@ -59,7 +59,7 @@ ggHistDate <- pubs %>%
                minor_breaks = scales::date_breaks("1 month")) +
   scale_fill_manual(values = colors(length(levels(pubs$project))),
                     guide = guide_legend(reverse = TRUE, order = 1)) +
-  theme_perso(angle = 60) +
+  theme_perso() +
   labs(x = NULL, y = "Weighted number of events per month") +
   # Fake legend...
   geom_point(aes(alpha = type), x = 1, y = 1) +
@@ -97,7 +97,7 @@ ggDensDate <- pubs %>%
                     guide = guide_legend(reverse = TRUE, order = 1)) +
   scale_color_manual(values = colors(length(levels(pubs$project))),
                      guide = guide_legend(reverse = TRUE, order = 1)) +
-  theme_perso(angle = 60) +
+  theme_perso() +
   labs(x = NULL, y = "Number of weighted contributions per day") +
   # Fake legend...
   geom_point(aes(alpha = rep(c("1","2", "3"), length.out = 5120)), 
@@ -153,7 +153,7 @@ ggDensChar <- pubs %>%
                     guide = guide_legend(reverse = TRUE)) +
   scale_color_manual(values = colors(length(levels(pubs$project))),
                      guide = guide_legend(reverse = TRUE)) +
-  theme_perso(angle = 60) +
+  theme_perso() +
   labs(x = NULL, y = "Number of characters written per day")
 
 savePlot(ggHistChar, filename = "Output/evoHistChar")
@@ -165,10 +165,12 @@ savePlot(ggDensChar, filename = "Output/evoDensChar")
 colors <- suppressWarnings(
   colorRampPalette(RColorBrewer::brewer.pal(12, "Set1")) # "Set1", "Accent"
 )
+m1breaks <- seq(as.Date("2014-05-01"), max(pubs$date), by = "1 month")
 
 # character activity
-ggDensPPl <- pubs %>% 
-  group_by(profile) %>%
+pubsPpl <- pubs %>% 
+  mutate(un = reorder(un, fields.profile, unique)) %>% 
+  group_by(un) %>%
   mutate(tot = sum(N)) %>% 
   filter(tot > 1000) %>% 
   do({
@@ -178,19 +180,23 @@ ggDensPPl <- pubs %>%
               from = min(d0N$x), to = max(d0N$x))
     )
     data.frame(x = as.Date(dd$x, "1970-01-01"), y = dd$y)
-  }) %>% 
-  ggplot() +
-  geom_area(aes(x = x, y = y, group = profile, fill = profile, color = profile), 
+  })
+# Small detail: we need to break up the data and the plot here because of the scale_manual. 
+# Indeed, since we need to specify the colors manually (due to the lack of scale_brewer_n()
+# or something along these lines.). drop = FALSE would work but is problematic for the legend.
+ggDensPPl <-  ggplot(pubsPpl) +
+  geom_area(aes(x = x, y = y, group = un, fill = un, color = un), 
             alpha = 0.4, size = 0.5) +
   scale_x_date(breaks = m6breaks,
                minor_breaks = scales::date_breaks("1 month"),
                labels = scales::date_format("%Y-%b")) +
-  scale_fill_manual(values = colors(length(levels(pubs$profile))),
-                    guide = guide_legend(reverse = TRUE), drop = FALSE) +
-  scale_color_manual(values = colors(length(levels(pubs$profile))),
-                     guide = guide_legend(reverse = TRUE), drop = FALSE) +
-  theme_perso(angle = 60) +
-  labs(x = NULL, y = "Cumulative number of Character written per profile")
+  scale_fill_manual(values = colors(length(unique(pubsPpl$un))),
+                    guide = guide_legend(reverse = TRUE)) +
+  scale_color_manual(values = colors(length(unique(pubsPpl$un))),
+                     guide = guide_legend(reverse = TRUE)) +
+  theme_perso() +
+  labs(x = NULL, y = "Cumulative number of characters written per profile",
+       colour = "username, in order of apparition", fill = "username, in order of apparition")
 
 
 # character cumulative activity
@@ -211,33 +217,40 @@ pubsSumPpl <- pubs %>%
   # mutate(cumN = asinh(cumsum(y) / 1000)) %>% 
   mutate(cumN = sqrt(cumsum(y))) %>% # Most easily interpreable
   ungroup()
-
+# Create labels
 pubsSumPplLab <- pubsSumPpl %>% 
   group_by(profile) %>% 
   summarize_each(funs(last)) %>% 
   arrange(profile) %>% 
   mutate(yEnd = cumsum(cumN) - cumN/2) %>% 
   filter(cumN > sqrt(4000))
-
+# Plot:
+xrange <- range(pubsSumPpl$x)
 ggDensSumPPl <- ggplot(pubsSumPpl) +
   geom_area(aes(x = x, y = cumN, group = profile, fill = profile), 
             alpha = 0.9, size = 0.1, colour = "grey95") +
   geom_text(data = pubsSumPplLab,
-            aes(label = sprintf(" %s", fn), x = x,
-                y = yEnd, colour = profile), size = 5, hjust = 0) +
+            aes(label = sprintf("- %s %s", fn, ln), x = x,
+                y = yEnd, colour = profile), size = 4, hjust = 0) +
   geom_text(data = pubsSumPplLab,
             aes(label = sprintf("%.1fK ", cumN^2/1000),  x = x,
                 y = yEnd), colour = "black", size = 4, hjust = 1) +
   scale_x_date(breaks = m6breaks,
-               minor_breaks = scales::date_breaks("1 month"),
-               labels = scales::date_format("%Y-%b"), expand = c(0.1, 0)) +
+               minor_breaks = m1breaks,
+               labels = scales::date_format("%Y-%b"), 
+               limits = c(xrange[1], xrange[2] + 0.3 * diff(xrange))) +
   scale_fill_manual(values = colors(length(levels(pubsSumPpl$profile))),
                     guide = guide_legend(reverse = TRUE), drop = FALSE) +
   scale_color_manual(values = colors(length(levels(pubsSumPpl$profile))),
                      guide = guide_legend(reverse = TRUE), drop = FALSE) +
-  scale_y_continuous(labels = NULL) +
-  theme_perso(angle = 60) +
-  labs(x = NULL, y = "Square root of the Characters written per profile") +
+  scale_y_continuous(breaks = NULL, minor_breaks = NULL, labels = NULL,
+                     expand = c(0.01, 0)) +
+  theme_perso() + 
+  theme_minimal() +
+  theme(axis.ticks.y = element_blank(), 
+        panel.grid.major.x = element_line(colour = "grey70"),
+        panel.grid.minor.x = element_line(colour = "grey98")) +
+  labs(x = NULL, y = "Characters written per user (sqrt)") +
   guides(colour = "none", fill = "none")
 
 savePlot(ggDensPPl, filename = "Output/evoProfiles")
