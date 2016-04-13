@@ -197,7 +197,7 @@ ggDensPPl <-  ggplot(pubsPpl) +
   scale_color_manual(values = colors(length(unique(pubsPpl$un))),
                      guide = guide_legend(reverse = TRUE)) +
   theme_perso() +
-  labs(x = NULL, y = "Cumulative number of characters written per profile",
+  labs(x = NULL, y = "Characters written per day",
        colour = "username, in order of apparition", fill = "username, in order of apparition")
 
 
@@ -252,7 +252,7 @@ ggDensSumPPl <- ggplot(pubsSumPpl) +
   theme(axis.ticks.y = element_blank(), 
         panel.grid.major.x = element_line(colour = "grey70"),
         panel.grid.minor.x = element_line(colour = "grey98")) +
-  labs(x = NULL, y = "Characters written per user (sqrt)") +
+  labs(x = NULL, y = "Total characters written per user (sqrt)") +
   guides(colour = "none", fill = "none")
 
 savePlot(ggDensPPl, filename = "Output/evoProfiles")
