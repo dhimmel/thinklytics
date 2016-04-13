@@ -198,7 +198,35 @@ ggDensPPl <-  ggplot(pubsPpl) +
                      guide = guide_legend(reverse = TRUE)) +
   theme_perso() +
   labs(x = NULL, y = "Characters written per day",
-       colour = "username, in order of apparition", fill = "username, in order of apparition")
+       colour = "username, in order of sign-up", fill = "username, in order of sign-up")
+
+# Stream chart
+ggStreamPpl <- pubsPpl %>% group_by(x) %>% 
+  arrange(un) %>% 
+  mutate(cy = cumsum(y),
+         ymax = cy - sum(y)/2,
+         ymin = dplyr::lag(ymax, default = -sum(y)/2)) %>% 
+  ungroup() %>% 
+  ggplot() +
+  geom_ribbon(aes(x = x, ymin = ymin, ymax = ymax, 
+                  group = un, fill = un), 
+              alpha = 0.9, size = 0.1, colour = "grey95") +
+  scale_x_date(breaks = m6breaks,
+               minor_breaks = m1breaks,
+               labels = scales::date_format("%Y-%b")) +
+  scale_fill_manual(values = colors(length(unique(pubsPpl$un))),
+                    guide = guide_legend(reverse = TRUE)) +
+  scale_color_manual(values = colors(length(unique(pubsPpl$un))),
+                     guide = guide_legend(reverse = TRUE)) +
+  scale_y_continuous(breaks = NULL, minor_breaks = NULL, labels = NULL,
+                     expand = c(0.01, 0)) +
+  theme_perso() + 
+  theme_minimal() +
+  theme(axis.ticks.y = element_blank(), 
+        panel.grid.major.x = element_line(colour = "grey70"),
+        panel.grid.minor.x = element_line(colour = "grey98")) +
+  labs(x = NULL, y = "Characters written per day",
+       colour = "username, in order of sign-up", fill = "username, in order of sign-up")
 
 
 # character cumulative activity
@@ -256,6 +284,7 @@ ggDensSumPPl <- ggplot(pubsSumPpl) +
   guides(colour = "none", fill = "none")
 
 savePlot(ggDensPPl, filename = "Output/evoProfiles")
+savePlot(ggStreamPpl, filename = "Output/evoStreamProfiles")
 savePlot(ggDensSumPPl, filename = "Output/evoCumProfiles")
 
 
