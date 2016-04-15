@@ -71,7 +71,8 @@ ggDensPPl <-  ggplot(pubsPpl) +
        colour = "username, in order of sign-up", fill = "username, in order of sign-up")
 
 # Stream chart
-ggStreamPpl <- pubsPpl %>% group_by(x) %>% 
+ggStreamPpl <- pubsPpl %>% filter(!un %in% c("dhimmel")) %>% 
+  group_by(x) %>% 
   arrange(un) %>% 
   mutate(cy = cumsum(y),
          ymax = cy - sum(y)/2,
