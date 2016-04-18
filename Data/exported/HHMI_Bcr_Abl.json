@@ -1,0 +1,1206 @@
+{
+  "comments": [
+    {
+      "fields": {
+        "body_html": "<p>CML causes Bcr-Abl ?   Don't you mean that a  chromosomal translocation results in the fusion of Bcr and Abl which results in the new gene Bcr-Abl, whose constitutive expression produces CML?  A small figure might be nice to explain the biology. </p>",
+        "body_md": "CML causes Bcr-Abl ?   Don't you mean that a  chromosomal translocation results in the fusion of Bcr and Abl which results in the new gene Bcr-Abl, whose constitutive expression produces CML?  A small figure might be nice to explain the biology. ",
+        "profile": 48,
+        "published": "2016-01-18T23:39:45.695Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 620
+    },
+    {
+      "fields": {
+        "body_html": "<p>The figure should not come before its mention in the text.  You should not state your hypothesis a figure caption.   </p>",
+        "body_md": "The figure should not come before its mention in the text.  You should not state your hypothesis a figure caption.   ",
+        "profile": 48,
+        "published": "2016-01-18T23:40:00.075Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 621
+    },
+    {
+      "fields": {
+        "body_html": "<p>Would be better to introduce the concept first before you use it.  A knowledge network is ...   Don't depend on the figure to do that for you.   </p>",
+        "body_md": "Would be better to introduce the concept first before you use it.  A knowledge network is ...   Don't depend on the figure to do that for you.   ",
+        "profile": 48,
+        "published": "2016-01-18T23:40:12.678Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 622
+    },
+    {
+      "fields": {
+        "body_html": "<p>either drop this or expand and be specific.  The sentence limitation does not apply to all techniques. </p>",
+        "body_md": "either drop this or expand and be specific.  The sentence limitation does not apply to all techniques. ",
+        "profile": 48,
+        "published": "2016-01-18T23:40:30.706Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 623
+    },
+    {
+      "fields": {
+        "body_html": "<p>Not seeing how this follows from the sentence before it.  </p>\n\n<p>I would take this out.   </p>",
+        "body_md": "Not seeing how this follows from the sentence before it.  \n\nI would take this out.   ",
+        "profile": 48,
+        "published": "2016-01-18T23:40:39.684Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 624
+    },
+    {
+      "fields": {
+        "body_html": "<p>Seems like the first step would be to benchmark a fully automated approach to the specific task you had in mind.  (And before that, to define the specific task and why it is going to solve the biological problem) </p>",
+        "body_md": "Seems like the first step would be to benchmark a fully automated approach to the specific task you had in mind.  (And before that, to define the specific task and why it is going to solve the biological problem) ",
+        "profile": 48,
+        "published": "2016-01-18T23:41:02.461Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 625
+    },
+    {
+      "fields": {
+        "body_html": "<p>If this were required as written, I would not believe that this would work.  You need to show the ability to divide and conquer the problem and not depend on individuals really deeply understanding scientific literature on their own. </p>",
+        "body_md": "If this were required as written, I would not believe that this would work.  You need to show the ability to divide and conquer the problem and not depend on individuals really deeply understanding scientific literature on their own. ",
+        "profile": 48,
+        "published": "2016-01-18T23:41:15.576Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 626
+    },
+    {
+      "fields": {
+        "body_html": "<p>Accuracy of the system is fundamental.  I don't believe the previous sentence is enough to 'ensure' it. </p>",
+        "body_md": "Accuracy of the system is fundamental.  I don't believe the previous sentence is enough to 'ensure' it. ",
+        "profile": 48,
+        "published": "2016-01-18T23:41:23.257Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 627
+    },
+    {
+      "fields": {
+        "body_html": "<p>You need to have a specific plan </p>",
+        "body_md": "You need to have a specific plan ",
+        "profile": 48,
+        "published": "2016-01-18T23:41:28.448Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 628
+    },
+    {
+      "fields": {
+        "body_html": "<p>This section is really not very clear.   </p>",
+        "body_md": "This section is really not very clear.   ",
+        "profile": 48,
+        "published": "2016-01-18T23:41:37.712Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 629
+    },
+    {
+      "fields": {
+        "body_html": "<p>Up until now I was assuming the ML had something to do with the target identification step.   </p>",
+        "body_md": "Up until now I was assuming the ML had something to do with the target identification step.   ",
+        "profile": 48,
+        "published": "2016-01-18T23:41:52.907Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 630
+    },
+    {
+      "fields": {
+        "body_html": "<p>How have others previously applied machine learning or other algorithmic techniques to convert collections of non-expert judgments into high-quality, expert-level judgments ?  For example Learning From Crowds.\" Journal of Machine Learning Research 11 (2010): 1297-1322.\"</p>",
+        "body_md": "How have others previously applied machine learning or other algorithmic techniques to convert collections of non-expert judgments into high-quality, expert-level judgments ?  For example [@citation_key]:  \"Raykar, Vikas C., et al. \"Learning From Crowds.\" Journal of Machine Learning Research 11 (2010): 1297-1322.\"",
+        "profile": 48,
+        "published": "2016-01-18T23:51:24.094Z",
+        "thread": 142
+      },
+      "model": "base.comment",
+      "pk": 631
+    },
+    {
+      "fields": {
+        "body_html": "<p>This should remain the focus.  You should be composing the other aims much more specifically to get to here. </p>",
+        "body_md": "This should remain the focus.  You should be composing the other aims much more specifically to get to here. ",
+        "profile": 48,
+        "published": "2016-01-18T23:52:09.574Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 632
+    },
+    {
+      "fields": {
+        "body_html": "<p>these are your controls.  Can your method predict them? </p>",
+        "body_md": "these are your controls.  Can your method predict them? ",
+        "profile": 48,
+        "published": "2016-01-18T23:52:31.026Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 633
+    },
+    {
+      "fields": {
+        "body_html": "<p>Clinicians are the wrong judges of these predictions.  (Should be scientists)  What does blinded mean here?  Do they get both predicted and known?  You are missing the computational validation step before this. </p>",
+        "body_md": "Clinicians are the wrong judges of these predictions.  (Should be scientists)  What does blinded mean here?  Do they get both predicted and known?  You are missing the computational validation step before this. ",
+        "profile": 48,
+        "published": "2016-01-18T23:53:00.383Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 634
+    },
+    {
+      "fields": {
+        "body_html": "<p>You need stronger evidence than the one reference regarding prostate cancer to get here.  As it stands, I would not be convinced.  Further, since that work did not use crowdsourcing, why do you need to ?  If you just did exactly what they did, but enhanced their workflow through crowdsourcing, could you identify better drugs than they did?  WHy do you think so?  How similar is that to what you are planning to do here?</p>",
+        "body_md": "You need stronger evidence than the one reference regarding prostate cancer to get here.  As it stands, I would not be convinced.  Further, since that work did not use crowdsourcing, why do you need to ?  If you just did exactly what they did, but enhanced their workflow through crowdsourcing, could you identify better drugs than they did?  WHy do you think so?  How similar is that to what you are planning to do here?",
+        "profile": 48,
+        "published": "2016-01-18T23:55:37.075Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 635
+    },
+    {
+      "fields": {
+        "body_html": "<p>Seems easily estimated.   If you can predict it clearly, than its not a potential pitfall, its part of the plan.</p>",
+        "body_md": "Seems easily estimated.   If you can predict it clearly, than its not a potential pitfall, its part of the plan.",
+        "profile": 48,
+        "published": "2016-01-18T23:56:10.300Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 636
+    },
+    {
+      "fields": {
+        "body_html": "<p>What about using a crowd-trained machine learning model ? </p>\n\n<p>This is what I thought you were going for.  (Personally I would be much more excited about this as a direction for integration)</p>",
+        "body_md": "What about using a crowd-trained machine learning model ? \n\nThis is what I thought you were going for.  (Personally I would be much more excited about this as a direction for integration)",
+        "profile": 48,
+        "published": "2016-01-18T23:57:00.147Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 637
+    },
+    {
+      "fields": {
+        "body_html": "<p>the significance is the medical impact </p>",
+        "body_md": "the significance is the medical impact ",
+        "profile": 48,
+        "published": "2016-01-18T23:57:10.478Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 638
+    },
+    {
+      "fields": {
+        "body_html": "<p>What would be a good place to start looking for proteins impacted by the expression of Bcr-Abl ?  For example, would <a href=\"https://www.pharmgkb.org/pathway/PA164713427\">https://www.pharmgkb.org/pathway/PA164713427</a> \"Imatinib pathway\" be a good place to start?</p>",
+        "body_md": "What would be a good place to start looking for proteins impacted by the expression of Bcr-Abl ?  For example, would https://www.pharmgkb.org/pathway/PA164713427 \"Imatinib pathway\" be a good place to start?",
+        "profile": 48,
+        "published": "2016-01-19T16:59:17.918Z",
+        "thread": 143
+      },
+      "model": "base.comment",
+      "pk": 639
+    },
+    {
+      "fields": {
+        "body_html": "<p>I was under the impression that the untrained folk would be doing simple tasks. </p>",
+        "body_md": "I was under the impression that the untrained folk would be doing simple tasks. ",
+        "profile": 180,
+        "published": "2016-01-19T18:59:40.666Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 646
+    },
+    {
+      "fields": {
+        "body_html": "<p>A little redundant to use \"than what is...\"  twice here </p>",
+        "body_md": "A little redundant to use \"than what is...\"  twice here ",
+        "profile": 180,
+        "published": "2016-01-19T19:00:00.326Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 647
+    },
+    {
+      "fields": {
+        "body_html": "<p>I know you mention it a few paragraphs back, but maybe a little refresher or more description on what a classifier is. </p>",
+        "body_md": "I know you mention it a few paragraphs back, but maybe a little refresher or more description on what a classifier is. ",
+        "profile": 180,
+        "published": "2016-01-19T19:00:28.262Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 648
+    },
+    {
+      "fields": {
+        "body_html": "<p>This could be expanded on.  That doesn't necessarily sound like an unfortunate thing.   </p>",
+        "body_md": "This could be expanded on.  That doesn't necessarily sound like an unfortunate thing.   ",
+        "profile": 180,
+        "published": "2016-01-19T19:00:55.494Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 649
+    },
+    {
+      "fields": {
+        "body_html": "<p>I agree that specific steps need to be added </p>",
+        "body_md": "I agree that specific steps need to be added ",
+        "profile": 180,
+        "published": "2016-01-19T19:02:19.451Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 650
+    },
+    {
+      "fields": {
+        "body_html": "<p>I think that this should be expanded on.  The knowledge network is key.  By making the connections through unbiased observations, the answer will come.  Very important to make it clear what this means.</p>",
+        "body_md": "I think that this should be expanded on.  The knowledge network is key.  By making the connections through unbiased observations, the answer will come.  Very important to make it clear what this means.",
+        "profile": 180,
+        "published": "2016-01-19T19:03:45.507Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 651
+    },
+    {
+      "fields": {
+        "body_html": "<p>I completely agree.  The free option is always more attractive</p>",
+        "body_md": "I completely agree.  The free option is always more attractive",
+        "profile": 180,
+        "published": "2016-01-19T19:04:49.312Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 652
+    },
+    {
+      "fields": {
+        "body_html": "<p>This is a key motivating principle for your proposal, so would be best to find a stronger citation and/or more citations. </p>",
+        "body_md": "This is a key motivating principle for your proposal, so would be best to find a stronger citation and/or more citations. ",
+        "profile": 181,
+        "published": "2016-01-20T06:35:43.945Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 662
+    },
+    {
+      "fields": {
+        "body_html": "<p>You might consider briefly relating the story of Swanson / Reynaud / fish oil here instead of these refs.  It has the advantage of saying <em>how</em> information extraction can lead to testable hypotheses in an intuitively understandable way. </p>",
+        "body_md": "You might consider briefly relating the story of Swanson / Reynaud / fish oil here instead of these refs.  It has the advantage of saying *how* information extraction can lead to testable hypotheses in an intuitively understandable way. ",
+        "profile": 181,
+        "published": "2016-01-20T06:36:11.668Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 663
+    },
+    {
+      "fields": {
+        "body_html": "<p>If crowdsourcing is a central theme, then devote a paragraph to it.  Here, it's buried and easily missed. </p>",
+        "body_md": "If crowdsourcing is a central theme, then devote a paragraph to it.  Here, it's buried and easily missed. ",
+        "profile": 181,
+        "published": "2016-01-20T06:36:17.651Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 664
+    },
+    {
+      "fields": {
+        "body_html": "<p>will you mention feedback between crowdsourcing and text mining later?  I think this is an attractive point... </p>",
+        "body_md": "will you mention feedback between crowdsourcing and text mining later?  I think this is an attractive point... ",
+        "profile": 181,
+        "published": "2016-01-20T06:36:24.398Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 665
+    },
+    {
+      "fields": {
+        "body_html": "<p>I'm assuming the glucose, g6p, f6p example is merely an example of a larger knowledge network.  If so, I think this is too specific — better generalize into a schematic network. </p>",
+        "body_md": "I'm assuming the glucose, g6p, f6p example is merely an example of a larger knowledge network.  If so, I think this is too specific -- better generalize into a schematic network. ",
+        "profile": 181,
+        "published": "2016-01-20T06:36:29.701Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 666
+    },
+    {
+      "fields": {
+        "body_html": "<p>Is this from Ben's PSB paper?  How do you define \"performance\"?  Surprised that experts achieve 100%... </p>",
+        "body_md": "Is this from Ben's PSB paper?  How do you define \"performance\"?  Surprised that experts achieve 100%... ",
+        "profile": 181,
+        "published": "2016-01-20T06:36:36.240Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 667
+    },
+    {
+      "fields": {
+        "body_html": "<p>I don't think the figure illustrates well what the text says. </p>",
+        "body_md": "I don't think the figure illustrates well what the text says. ",
+        "profile": 181,
+        "published": "2016-01-20T06:36:42.030Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 668
+    },
+    {
+      "fields": {
+        "body_html": "<p>based on what corpus? </p>",
+        "body_md": "based on what corpus? ",
+        "profile": 181,
+        "published": "2016-01-20T06:36:49.644Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 669
+    },
+    {
+      "fields": {
+        "body_html": "<p>Clinicians I don't think are the target audience (nor the best people to evaluate). You need either experts in Bcr-Abl, or ideally an experimental system to evaluate your predictions.   </p>",
+        "body_md": "Clinicians I don't think are the target audience (nor the best people to evaluate). You need either experts in Bcr-Abl, or ideally an experimental system to evaluate your predictions.   ",
+        "profile": 181,
+        "published": "2016-01-20T06:36:56.212Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 670
+    },
+    {
+      "fields": {
+        "body_html": "<p>agree, turn it into a positive...</p>",
+        "body_md": "agree, turn it into a positive...",
+        "profile": 181,
+        "published": "2016-01-20T06:37:23.142Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 671
+    },
+    {
+      "fields": {
+        "body_html": "<p>... though also agree with Toby that the generalizability of the significant too...</p>",
+        "body_md": "... though also agree with Toby that the generalizability of the significant too...",
+        "profile": 181,
+        "published": "2016-01-20T06:41:05.486Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 672
+    },
+    {
+      "fields": {
+        "body_html": "<p>I found this figure a little too general for its ambitious goals. It feels a bit naive. I don't think glucose metabolism is a good example of a part of the knowledge network that is likely to contribute to knowledge of Bcr-Abl targets. </p>",
+        "body_md": "I found this figure a little too general for its ambitious goals. It feels a bit naive. I don't think glucose metabolism is a good example of a part of the knowledge network that is likely to contribute to knowledge of Bcr-Abl targets. ",
+        "profile": 187,
+        "published": "2016-01-31T05:17:47.722Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 718
+    },
+    {
+      "fields": {
+        "body_html": "<p>awkward wording </p>",
+        "body_md": "awkward wording ",
+        "profile": 187,
+        "published": "2016-01-31T05:18:05.468Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 719
+    },
+    {
+      "fields": {
+        "body_html": "<p>you haven't explained/introduced why cytoplasmic targets are of particular interest </p>",
+        "body_md": "you haven't explained/introduced why cytoplasmic targets are of particular interest ",
+        "profile": 187,
+        "published": "2016-01-31T05:18:15.719Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 720
+    },
+    {
+      "fields": {
+        "body_html": "<p>The novelty of the hybrid method is a strength of this proposal </p>",
+        "body_md": "The novelty of the hybrid method is a strength of this proposal ",
+        "profile": 187,
+        "published": "2016-01-31T05:18:26.232Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 721
+    },
+    {
+      "fields": {
+        "body_html": "<p>This is a bit bold. It remains to be seen whether the proposed approach will identify ANY previously unidentified targets </p>",
+        "body_md": "This is a bit bold. It remains to be seen whether the proposed approach will identify ANY previously unidentified targets ",
+        "profile": 187,
+        "published": "2016-01-31T05:18:35.606Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 722
+    },
+    {
+      "fields": {
+        "body_html": "<p>I think you should be specific here in the sentence about what type of biological concept. Say that you have shown that groups of non-experts can identify biological concepts such as diseases, genes, etc with high accuracy. If you just say \"biological concepts\" a reader might imagine something more complex and get riled up by this statement. </p>",
+        "body_md": "I think you should be specific here in the sentence about what type of biological concept. Say that you have shown that groups of non-experts can identify biological concepts such as diseases, genes, etc with high accuracy. If you just say \"biological concepts\" a reader might imagine something more complex and get riled up by this statement. ",
+        "profile": 187,
+        "published": "2016-01-31T05:18:54.986Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 723
+    },
+    {
+      "fields": {
+        "body_html": "<p>For the </p>",
+        "body_md": "For the ",
+        "profile": 187,
+        "published": "2016-01-31T05:20:17.819Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 724
+    },
+    {
+      "fields": {
+        "body_html": "<p>Provide an example of what you mean here </p>",
+        "body_md": "Provide an example of what you mean here ",
+        "profile": 187,
+        "published": "2016-01-31T05:20:24.978Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 725
+    },
+    {
+      "fields": {
+        "body_html": "<p>It would be helpful to explain the source of these non-experts </p>",
+        "body_md": "It would be helpful to explain the source of these non-experts ",
+        "profile": 187,
+        "published": "2016-01-31T05:20:31.412Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 726
+    },
+    {
+      "fields": {
+        "body_html": "<p>word not necessary and repeats recent use </p>",
+        "body_md": "word not necessary and repeats recent use ",
+        "profile": 187,
+        "published": "2016-01-31T05:20:38.302Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 727
+    },
+    {
+      "fields": {
+        "body_html": "<p>an </p>",
+        "body_md": "an ",
+        "profile": 187,
+        "published": "2016-01-31T05:21:08.316Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 728
+    },
+    {
+      "fields": {
+        "body_html": "<p>combine </p>",
+        "body_md": "combine ",
+        "profile": 187,
+        "published": "2016-01-31T05:21:27.151Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 729
+    },
+    {
+      "fields": {
+        "body_html": "<p>This is a good opportunity for a specific hypothesis (always needed/expected in NIH-style grant applications). Rephrase as a hypothesis </p>",
+        "body_md": "This is a good opportunity for a specific hypothesis (always needed/expected in NIH-style grant applications). Rephrase as a hypothesis ",
+        "profile": 187,
+        "published": "2016-01-31T05:21:34.656Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 730
+    },
+    {
+      "fields": {
+        "body_html": "<p>Again, rephrase this as specific hypothesis </p>",
+        "body_md": "Again, rephrase this as specific hypothesis ",
+        "profile": 187,
+        "published": "2016-01-31T05:21:42.031Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 731
+    },
+    {
+      "fields": {
+        "body_html": "<p>This is the first mention of paid online crowdsourcing platforms. It should be introduced as an approach before it can become a potential pitfall </p>",
+        "body_md": "This is the first mention of paid online crowdsourcing platforms. It should be introduced as an approach before it can become a potential pitfall ",
+        "profile": 187,
+        "published": "2016-01-31T05:21:49.012Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 732
+    },
+    {
+      "fields": {
+        "body_html": "<p>delete for redundancy </p>",
+        "body_md": "delete for redundancy ",
+        "profile": 187,
+        "published": "2016-01-31T05:21:54.998Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 733
+    },
+    {
+      "fields": {
+        "body_html": "<p>emphasize the hybrid approach here </p>",
+        "body_md": "emphasize the hybrid approach here ",
+        "profile": 187,
+        "published": "2016-01-31T05:22:03.115Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 734
+    },
+    {
+      "fields": {
+        "body_html": "<p>This is an awkward tautology. If everyone's path is different then by saying your is no exception you mean that yours is also different?  What if your path wasn't the exception then it would be the same? Impossible.  I suggest you drop this first sentence and just begin the story of your unique journey to comp biol. </p>",
+        "body_md": "This is an awkward tautology. If everyone's path is different then by saying your is no exception you mean that yours is also different?  What if your path wasn't the exception then it would be the same? Impossible.  I suggest you drop this first sentence and just begin the story of your unique journey to comp biol. ",
+        "profile": 187,
+        "published": "2016-01-31T05:22:18.102Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 735
+    },
+    {
+      "fields": {
+        "body_html": "<p>explored </p>",
+        "body_md": "explored ",
+        "profile": 187,
+        "published": "2016-01-31T05:22:28.449Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 736
+    },
+    {
+      "fields": {
+        "body_html": "<p>delete </p>",
+        "body_md": "delete ",
+        "profile": 187,
+        "published": "2016-01-31T05:22:34.330Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 737
+    },
+    {
+      "fields": {
+        "body_html": "<p>field? </p>",
+        "body_md": "field? ",
+        "profile": 187,
+        "published": "2016-01-31T05:22:38.899Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 738
+    },
+    {
+      "fields": {
+        "body_html": "<p>that most inspired me </p>",
+        "body_md": "that most inspired me ",
+        "profile": 187,
+        "published": "2016-01-31T05:22:43.692Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 739
+    },
+    {
+      "fields": {
+        "body_html": "<p>delete </p>",
+        "body_md": "delete ",
+        "profile": 187,
+        "published": "2016-01-31T05:22:48.656Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 740
+    },
+    {
+      "fields": {
+        "body_html": "<p>it was biology that  </p>",
+        "body_md": "it was biology that  ",
+        "profile": 187,
+        "published": "2016-01-31T05:22:53.375Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 741
+    },
+    {
+      "fields": {
+        "body_html": "<p>Make this its own sentence. it will have greater impact that way. </p>",
+        "body_md": "Make this its own sentence. it will have greater impact that way. ",
+        "profile": 187,
+        "published": "2016-01-31T05:22:57.714Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 742
+    },
+    {
+      "fields": {
+        "body_html": "<p>I think you need a comma after this </p>",
+        "body_md": "I think you need a comma after this ",
+        "profile": 187,
+        "published": "2016-01-31T05:23:02.119Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 743
+    },
+    {
+      "fields": {
+        "body_html": "<p>This feels redundant with above. Maybe just start with \"In high school, I was ...\" </p>",
+        "body_md": "This feels redundant with above. Maybe just start with \"In high school, I was ...\" ",
+        "profile": 187,
+        "published": "2016-01-31T05:23:06.556Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 744
+    },
+    {
+      "fields": {
+        "body_html": "<p>Sounds better as either \"I relished the logical rigor of\" or \"I thrived on the logical rigor\" or \"I flourished in the logical rigor\" </p>",
+        "body_md": "Sounds better as either \"I relished the logical rigor of\" or \"I thrived on the logical rigor\" or \"I flourished in the logical rigor\" ",
+        "profile": 187,
+        "published": "2016-01-31T05:23:11.655Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 745
+    },
+    {
+      "fields": {
+        "body_html": "<p>Explain just a little more what this means </p>",
+        "body_md": "Explain just a little more what this means ",
+        "profile": 187,
+        "published": "2016-01-31T05:23:16.224Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 746
+    },
+    {
+      "fields": {
+        "body_html": "<p>rephrase </p>",
+        "body_md": "rephrase ",
+        "profile": 187,
+        "published": "2016-01-31T05:23:20.993Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 747
+    },
+    {
+      "fields": {
+        "body_html": "<p>italicize </p>",
+        "body_md": "italicize ",
+        "profile": 187,
+        "published": "2016-01-31T05:23:26.084Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 748
+    },
+    {
+      "fields": {
+        "body_html": "<p>Why raise this as a negative?  Introduce your experience studying abroad as a separate positive growth experience. </p>",
+        "body_md": "Why raise this as a negative?  Introduce your experience studying abroad as a separate positive growth experience. ",
+        "profile": 187,
+        "published": "2016-01-31T05:23:31.882Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 749
+    },
+    {
+      "fields": {
+        "body_html": "<p>further pursue my passion for? </p>",
+        "body_md": "further pursue my passion for? ",
+        "profile": 187,
+        "published": "2016-01-31T05:23:44.981Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 750
+    },
+    {
+      "fields": {
+        "body_html": "<p>delete </p>",
+        "body_md": "delete ",
+        "profile": 187,
+        "published": "2016-01-31T05:23:53.765Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 751
+    },
+    {
+      "fields": {
+        "body_html": "<p>focused on utilizing and verifying </p>",
+        "body_md": "focused on utilizing and verifying ",
+        "profile": 187,
+        "published": "2016-01-31T05:23:58.051Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 752
+    },
+    {
+      "fields": {
+        "body_html": "<p>improve outcomes </p>",
+        "body_md": "improve outcomes ",
+        "profile": 187,
+        "published": "2016-01-31T05:24:02.543Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 753
+    },
+    {
+      "fields": {
+        "body_html": "<p>I consider myself sufficiently expert on the topic to review. I really like the idea of the proposal but think it needs more polishing before it would be worthy of funding. A challenge is that I am sympathetic to the approach being proposed but a typical HHMI reviewer may not be. More work is needed to get across a strong message of how novel, ambitious, and game-changing this approach can be. You need to explain the problem that you are trying to solve (identifying potential new drug targets for bcr-abl inhibitor resistant disease from the vast knowledge trapped and unsynthesized in the biomedical literature). Then convince the reviewer that your hybrid crowd-sourcing + ML approach is an exciting and novel new way to potentially solve this problem.</p>",
+        "body_md": "I consider myself sufficiently expert on the topic to review. I really like the idea of the proposal but think it needs more polishing before it would be worthy of funding. A challenge is that I am sympathetic to the approach being proposed but a typical HHMI reviewer may not be. More work is needed to get across a strong message of how novel, ambitious, and game-changing this approach can be. You need to explain the problem that you are trying to solve (identifying potential new drug targets for bcr-abl inhibitor resistant disease from the vast knowledge trapped and unsynthesized in the biomedical literature). Then convince the reviewer that your hybrid crowd-sourcing + ML approach is an exciting and novel new way to potentially solve this problem.",
+        "profile": 187,
+        "published": "2016-01-31T05:30:14.256Z",
+        "thread": 154
+      },
+      "model": "base.comment",
+      "pk": 754
+    },
+    {
+      "fields": {
+        "body_html": "<p>Hi Obi,</p>\r\n\r\n<p>Thanks for your feedback. I found it difficult to balance the need to provide background information for the reviewers with the need to explain why the technique is novel. The strict three page word limit is preventing me from going into the detail I would ideally want.</p>\r\n\r\n<p>Did you have any general recommendations? I also agree that the proposal needs more polishing.</p>\r\n\r\n<p>Best,<br>Toby</p>",
+        "body_md": "Hi Obi,\r\n\r\nThanks for your feedback. I found it difficult to balance the need to provide background information for the reviewers with the need to explain why the technique is novel. The strict three page word limit is preventing me from going into the detail I would ideally want.\r\n\r\nDid you have any general recommendations? I also agree that the proposal needs more polishing.\r\n\r\nBest,\r\nToby",
+        "profile": 176,
+        "published": "2016-02-01T22:06:38.038Z",
+        "thread": 154
+      },
+      "model": "base.comment",
+      "pk": 755
+    },
+    {
+      "fields": {
+        "body_html": "<p>I don't have any additional recommendations beyond the general comments I outline above and the specific/detailed notes I provided in my review.</p>",
+        "body_md": "I don't have any additional recommendations beyond the general comments I outline above and the specific/detailed notes I provided in my review.",
+        "profile": 187,
+        "published": "2016-02-01T22:41:26.957Z",
+        "thread": 154
+      },
+      "model": "base.comment",
+      "pk": 757
+    },
+    {
+      "fields": {
+        "body_html": "<p>Ok, thank you very much for reviewing my proposal.</p>",
+        "body_md": "Ok, thank you very much for reviewing my proposal.",
+        "profile": 176,
+        "published": "2016-02-02T00:12:12.367Z",
+        "thread": 154
+      },
+      "model": "base.comment",
+      "pk": 758
+    },
+    {
+      "fields": {
+        "body_html": "<p>I had similar thoughts (written before reading Dr. Good's comment):</p>\n\n<p>I am not a biologist. I have no idea what Bcr-Abl is. I am guessing it is a protein because of \"constitutively active tyrosine kinase\" but I don't fully grasp what is going on with the chromosome translocation. Without the translocation, are humans devoid of Bcr-Abl? Also searching for \"Bcr-Abl\" hasn't been helpful because \"BCR-ABL\" is a gene name. Is all CML caused by Bcr-Abl? Is all Bcr-Abl bad? </p>",
+        "body_md": "I had similar thoughts (written before reading Dr. Good's comment):\n\nI am not a biologist. I have no idea what Bcr-Abl is. I am guessing it is a protein because of \"constitutively active tyrosine kinase\" but I don't fully grasp what is going on with the chromosome translocation. Without the translocation, are humans devoid of Bcr-Abl? Also searching for \"Bcr-Abl\" hasn't been helpful because \"BCR-ABL\" is a gene name. Is all CML caused by Bcr-Abl? Is all Bcr-Abl bad? ",
+        "profile": 17,
+        "published": "2016-02-05T04:47:32.837Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 777
+    },
+    {
+      "fields": {
+        "body_html": "<p>More Bcr-Abl confusion: are you considering a downstream protein a \"Bcr-Abl target\"?</p>",
+        "body_md": "More Bcr-Abl confusion: are you considering a downstream protein a \"Bcr-Abl target\"?",
+        "profile": 17,
+        "published": "2016-02-05T04:50:17.185Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 778
+    },
+    {
+      "fields": {
+        "body_html": "<p>I have a hard time understanding the \"Knowledge Network\" from Figure 1. Drawing node borders in addition to edge arrows may help. My current understanding of your network at this point in reading is that you are using text mining + crowdsourcing to construct a metabolite network.</p>",
+        "body_md": "I have a hard time understanding the \"Knowledge Network\" from Figure 1. Drawing node borders in addition to edge arrows may help. My current understanding of your network at this point in reading is that you are using text mining + crowdsourcing to construct a metabolite network.",
+        "profile": 17,
+        "published": "2016-02-05T04:51:25.960Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 779
+    },
+    {
+      "fields": {
+        "body_html": "<p>The paragraph up till the end of this sentence has primed me: you've led me to believe that NLP programs need to span multiple sentences. The rest of the paragraph is a complete non-sequitur. I finish the paragraph confused, having just read a list of definition with no cohesive connection. </p>",
+        "body_md": "The paragraph up till the end of this sentence has primed me: you've led me to believe that NLP programs need to span multiple sentences. The rest of the paragraph is a complete non-sequitur. I finish the paragraph confused, having just read a list of definition with no cohesive connection. ",
+        "profile": 17,
+        "published": "2016-02-05T04:52:23.718Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 780
+    },
+    {
+      "fields": {
+        "body_html": "<p>Don't be vague. I would get more out of: </p>\n\n<blockquote><p>I propose combining crowdsourcing and automated text mining to identify cytoplasmic Bcr-Abl targets </p></blockquote>",
+        "body_md": "Don't be vague. I would get more out of: \n\n> I propose combining crowdsourcing and automated text mining to identify cytoplasmic Bcr-Abl targets ",
+        "profile": 17,
+        "published": "2016-02-05T04:53:12.853Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 781
+    },
+    {
+      "fields": {
+        "body_html": "<p>My comment on this phrase:</p>\n\n<p>I feel that this is a precondition for funding you. If in general it is unknown whether non-experts can read science publications, I don't see the point of exploring such a specific application of crowdsourcing.</p>\n\n<p>Now I agree that you should evaluate whether non-experts succeed on your specific problem, but you should have examples of where non-experts read science successfully. Here is one example that non-experts understood drug labels <span class=\"citation\">[<a href=\"/doi/10.1093/database/bav016\" class=\"citation\" data-key=\"10.1093/database/bav016\">1</a>]</span>.</p>\n\n<p>Update: your next sentences answer the point, so you should assert that non-experts can from the start. </p>",
+        "body_md": "My comment on this phrase:\n\nI feel that this is a precondition for funding you. If in general it is unknown whether non-experts can read science publications, I don't see the point of exploring such a specific application of crowdsourcing.\n\nNow I agree that you should evaluate whether non-experts succeed on your specific problem, but you should have examples of where non-experts read science successfully. Here is one example that non-experts understood drug labels [@10.1093/database/bav016].\n\nUpdate: your next sentences answer the point, so you should assert that non-experts can from the start. ",
+        "profile": 17,
+        "published": "2016-02-05T04:54:03.291Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 782
+    },
+    {
+      "fields": {
+        "body_html": "<p>y-axis labels are unreadable. Either make them larger or remove them </p>",
+        "body_md": "y-axis labels are unreadable. Either make them larger or remove them ",
+        "profile": 17,
+        "published": "2016-02-05T04:54:55.389Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 783
+    },
+    {
+      "fields": {
+        "body_html": "<p>Move the circles closer to increase the overlap size. The visual elicits the opposite response as the numbers. </p>",
+        "body_md": "Move the circles closer to increase the overlap size. The visual elicits the opposite response as the numbers. ",
+        "profile": 17,
+        "published": "2016-02-05T04:55:03.817Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 784
+    },
+    {
+      "fields": {
+        "body_html": "<p>What is a \"known non-targets\" and where does that knowledge come from?</p>",
+        "body_md": "What is a \"known non-targets\" and where does that knowledge come from?",
+        "profile": 17,
+        "published": "2016-02-05T04:57:11.079Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 785
+    },
+    {
+      "fields": {
+        "body_html": "<p>Move this citation to the first part of the sentence? </p>",
+        "body_md": "Move this citation to the first part of the sentence? ",
+        "profile": 17,
+        "published": "2016-02-05T04:58:10.518Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 786
+    },
+    {
+      "fields": {
+        "body_html": "<p>Details please! What are your positives and negatives? What are your predictors? All this talk of machine learning and I can't figure out what your models will predict and what datasets they will be trained and tested on. </p>",
+        "body_md": "Details please! What are your positives and negatives? What are your predictors? All this talk of machine learning and I can't figure out what your models will predict and what datasets they will be trained and tested on. ",
+        "profile": 17,
+        "published": "2016-02-05T04:59:06.171Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 787
+    },
+    {
+      "fields": {
+        "body_html": "<p>A little more background is needed in the caption to appreciate Figure 3A — performance of what? </p>",
+        "body_md": "A little more background is needed in the caption to appreciate Figure 3A -- performance of what? ",
+        "profile": 17,
+        "published": "2016-02-05T05:00:00.260Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 788
+    },
+    {
+      "fields": {
+        "body_html": "<p>The expense issue should be worked out beforehand. Given that you haven't explained the \"concept similarity method\", what's the point of introducing an alternative? You could just say we will use A if the network is sparse and B if the network is dense. </p>",
+        "body_md": "The expense issue should be worked out beforehand. Given that you haven't explained the \"concept similarity method\", what's the point of introducing an alternative? You could just say we will use A if the network is sparse and B if the network is dense. ",
+        "profile": 17,
+        "published": "2016-02-05T05:01:23.133Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 789
+    },
+    {
+      "fields": {
+        "body_html": "<p>Is Bcr-Abl a small molecule, target, or protein therapeutic? </p>",
+        "body_md": "Is Bcr-Abl a small molecule, target, or protein therapeutic? ",
+        "profile": 17,
+        "published": "2016-02-05T05:01:45.740Z",
+        "thread": 141
+      },
+      "model": "base.comment",
+      "pk": 790
+    },
+    {
+      "fields": {
+        "body_html": "<p>The proposal lacks a cohesive flow. I don't know how all the pieces (Bcr-Abl, CML, crowdsourcing, machine learning, NLP) fit together. I recommend telling a story. Here's an off-the-cuff example:</p>\r\n\r\n<ul><li>CML is a big problem.</li><li>The solution lies in Bcr-Abl.</li><li>Lot's of research has been done about Bcr-Abl, so much that no one expert can know it all.</li><li>In fact you couldn't even get many experts to write down all the knowledge on Brc-Abl.</li><li>The easiest/cheapest/fastest/most-scalable method for retrieving all the knowledge on Brc-Abl is to use automated text mining.</li><li>However automated text mining alone is unreliable.</li><li>Crowdsourcing (getting non-experts who are cheap to read through literature) allows us to evaluate and improve on the NLP. Crowdsourcing provides the necessary feedback to learn how to do the automated text mining.</li><li>The literature mined information fits into a network.</li><li>There is a network algorithm that uses the network topology to predict the solution to CML.</li></ul>\r\n\r\n<p>You need to present each stage as the most logical next step. Additionally, it would be nice to address the shortcomings of alternatives. For example, what is deficient about current text mining networks relating to Bcr-Abl? Shouldn't you try those first? Preferably, you can answer these questions about alternatives as part of the story.</p>\r\n\r\n<p>Best of luck — I think the proposal combines a bunch of cool and cutting edge techniques. Now you just need to communicate the logic of the approach in a clear and accessible way.</p>",
+        "body_md": "The proposal lacks a cohesive flow. I don't know how all the pieces (Bcr-Abl, CML, crowdsourcing, machine learning, NLP) fit together. I recommend telling a story. Here's an off-the-cuff example:\r\n\r\n+ CML is a big problem.\r\n+ The solution lies in Bcr-Abl.\r\n+ Lot's of research has been done about Bcr-Abl, so much that no one expert can know it all.\r\n+ In fact you couldn't even get many experts to write down all the knowledge on Brc-Abl.\r\n+ The easiest/cheapest/fastest/most-scalable method for retrieving all the knowledge on Brc-Abl is to use automated text mining.\r\n+ However automated text mining alone is unreliable.\r\n+ Crowdsourcing (getting non-experts who are cheap to read through literature) allows us to evaluate and improve on the NLP. Crowdsourcing provides the necessary feedback to learn how to do the automated text mining.\r\n+ The literature mined information fits into a network.\r\n+ There is a network algorithm that uses the network topology to predict the solution to CML.\r\n \r\nYou need to present each stage as the most logical next step. Additionally, it would be nice to address the shortcomings of alternatives. For example, what is deficient about current text mining networks relating to Bcr-Abl? Shouldn't you try those first? Preferably, you can answer these questions about alternatives as part of the story.\r\n\r\nBest of luck -- I think the proposal combines a bunch of cool and cutting edge techniques. Now you just need to communicate the logic of the approach in a clear and accessible way.",
+        "profile": 17,
+        "published": "2016-02-05T05:19:40.806Z",
+        "thread": 156
+      },
+      "model": "base.comment",
+      "pk": 791
+    },
+    {
+      "fields": {
+        "body_html": "<p>Hi Daniel,</p>\r\n\r\n<p>Thanks for the helpful review. I agree that the proposal lacked cohesiveness and am working on a revised version now.</p>",
+        "body_md": "Hi Daniel,\r\n\r\nThanks for the helpful review. I agree that the proposal lacked cohesiveness and am working on a revised version now.",
+        "profile": 176,
+        "published": "2016-02-05T21:36:54.786Z",
+        "thread": 156
+      },
+      "model": "base.comment",
+      "pk": 792
+    },
+    {
+      "fields": {
+        "body_html": "<blockquote><p>I agree that the proposal lacked cohesiveness and am working on a revised version now.</p></blockquote>\r\n\r\n<p>Awesome, can't wait to see the next draft. You're the first person to receive in depth proposal review on <em>Thinklab</em>, so I'm excited to see how helpful you find it. I can imagine so much feedback (currently four detailed reviews) can be a bit overwhelming, but I suspect the proposal will strengthen as a result. Consider posting your experience when done: what worked, what didn't work, and whether you'd recommend public proposal review to others.</p>\r\n\r\n<p>One further piece of feedback: the techniques you propose implementing, specifically crowdsourcing and machine learning, have high upfront costs. Therefore, I feel that it's especially important to justify that they're essential to solving the problem. Otherwise, the grant reviewers may hesitate. Instead you want the reviewers to \"hesitate not, fund or fund not\".</p>",
+        "body_md": "> I agree that the proposal lacked cohesiveness and am working on a revised version now.\r\n\r\nAwesome, can't wait to see the next draft. You're the first person to receive in depth proposal review on *Thinklab*, so I'm excited to see how helpful you find it. I can imagine so much feedback (currently four detailed reviews) can be a bit overwhelming, but I suspect the proposal will strengthen as a result. Consider posting your experience when done: what worked, what didn't work, and whether you'd recommend public proposal review to others.\r\n\r\nOne further piece of feedback: the techniques you propose implementing, specifically crowdsourcing and machine learning, have high upfront costs. Therefore, I feel that it's especially important to justify that they're essential to solving the problem. Otherwise, the grant reviewers may hesitate. Instead you want the reviewers to \"hesitate not, fund or fund not\".",
+        "profile": 17,
+        "published": "2016-02-05T21:55:26.689Z",
+        "thread": 156
+      },
+      "model": "base.comment",
+      "pk": 793
+    },
+    {
+      "fields": {
+        "body_html": "<p>I would be more than happy to write up my thoughts about the review process and Thinklab itself after I submit the proposal. I will also be providing a reference to these discussions in the application itself, so maybe the HHMI reviewers will visit the site.</p>\r\n\r\n<p>As for the proposal itself, I will work to have a revised version posted before the application deadline, but don't know if I will be successful. I've decided to alter the direction slightly to go after why CML stem cells are not killed by Bcr-Abl inhibitors, since after a further review of the literature it seems that this is where the field is going.</p>",
+        "body_md": "I would be more than happy to write up my thoughts about the review process and Thinklab itself after I submit the proposal. I will also be providing a reference to these discussions in the application itself, so maybe the HHMI reviewers will visit the site.\r\n\r\nAs for the proposal itself, I will work to have a revised version posted before the application deadline, but don't know if I will be successful. I've decided to alter the direction slightly to go after why CML stem cells are not killed by Bcr-Abl inhibitors, since after a further review of the literature it seems that this is where the field is going.",
+        "profile": 176,
+        "published": "2016-02-05T23:19:52.284Z",
+        "thread": 156
+      },
+      "model": "base.comment",
+      "pk": 794
+    },
+    {
+      "fields": {
+        "body_html": "<blockquote><p>I will also be providing a reference to these discussions in the application itself, so maybe the HHMI reviewers will visit the site.</p></blockquote>\r\n\r\n<p>Great idea. I think it will impress the reviewers that the proposal has already been publicly vetted by peers.</p>\r\n\r\n<p>Best of luck with the new direction!</p>",
+        "body_md": "> I will also be providing a reference to these discussions in the application itself, so maybe the HHMI reviewers will visit the site.\r\n\r\nGreat idea. I think it will impress the reviewers that the proposal has already been publicly vetted by peers.\r\n\r\nBest of luck with the new direction!",
+        "profile": 17,
+        "published": "2016-02-05T23:24:56.574Z",
+        "thread": 156
+      },
+      "model": "base.comment",
+      "pk": 795
+    }
+  ],
+  "documents": [
+    {
+      "fields": {
+        "body_html": "<p>Chronic myeloid leukemia (CML) is a disorder of uncontrolled leukocyte proliferation caused by a chromosome translocation resulting in Bcr-Abl, a constitutively active tyrosine kinase <span class=\"citation\">[<a href=\"/doi/10.1002/ajh.24221\" class=\"citation\" data-key=\"10.1002/ajh.24221\">1</a>, <a href=\"/doi/10.1126/science.2406902\" class=\"citation\" data-key=\"10.1126/science.2406902\">2</a>]</span>. Over a thousand Americans die from CML each year due to resistance to existing therapies like imatinib <span class=\"citation\">[<a href=\"http://www.cancer.org/acs/groups/content/@editorial/documents/document/acspc-044552.pdf\" class=\"citation\" data-key=\"cancer_facts\">3</a>, <a href=\"http://www.ncbi.nlm.nih.gov/pubmed/26458439\" class=\"citation\" data-key=\"kimura2015\">4</a>, <a href=\"/doi/10.2174/1568009615666150921141004\" class=\"citation\" data-key=\"10.2174/1568009615666150921141004\">5</a>]</span>. Difficulties in selectively inhibiting Bcr-Abl have shifted drug development towards targeting downstream Bcr-Abl interactors, many of which are still unknown <span class=\"citation\">[<a href=\"http://www.njmonline.nl/getpdf.php?id=1107\" class=\"citation\" data-key=\"thielen2011\">6</a>]</span>. Identifying new Bcr-Abl targets would spur drug development and lead to novel CML treatments.</p>\r\n\r\n<a name=\"proposal\"></a><div class=\"figure\" figure-id=\"proposal\"><div class=\"figure-content\"><img src=\"http://think-lab.s3.amazonaws.com/m/figures/16.jpg\"></div>\n            <div class=\"signature-1\">\n                <div class=\"figure-title\">Figure 1. Informatics workflow for predicting Bcr-Abl targets.</div>\n                <div class=\"figure-description\"><p>Biomedical publications are converted into a structured knowledge network using a hybrid information extraction system. I hypothesize that such a network can be used to predict novel Bcr-Abl targets.</p></div>\n            </div>\n        </div>\r\n\r\n<p>Informatics techniques utilizing knowledge networks built from the biomedical literature have successfully identified novel p53 kinases and prostate cancer drugs <span class=\"citation\">[<a href=\"/doi/10.4137/CIN.S13889\" class=\"citation\" data-key=\"10.4137/CIN.S13889\">7</a>, <a href=\"/doi/10.1145/2623330.2623667\" class=\"citation\" data-key=\"10.1145/2623330.2623667\">8</a>]</span>. By exhaustively processing millions of documents, informatics techniques discover insights previously missed by individual scientists. However, existing computer programs cannot extract a significant portion of important information due to limitations like being able to only process individual sentences <span class=\"citation\">[<a href=\"/doi/10.1016/j.jbi.2014.05.013\" class=\"citation\" data-key=\"10.1016/j.jbi.2014.05.013\">9</a>]</span>. Improvements to processing programs would increase the breadth and depth of extractable information <span class=\"citation\">[<a href=\"/doi/10.1007/s11390-010-9313-5\" class=\"citation\" data-key=\"10.1007/s11390-010-9313-5\">10</a>, <a href=\"/doi/10.1186/gb-2008-9-s2-s7\" class=\"citation\" data-key=\"10.1186/gb-2008-9-s2-s7\">11</a>]</span>. Crowdsourcing, an approach using groups of untrained experts to perform complex tasks, has been applied to predict protein and mRNA structure and mine biomedical text <span class=\"citation\">[<a href=\"/doi/10.1073/pnas.1313039111\" class=\"citation\" data-key=\"10.1073/pnas.1313039111\">12</a>, <a href=\"/doi/10.1038/nature09304\" class=\"citation\" data-key=\"10.1038/nature09304\">13</a>, <a href=\"/doi/10.1093/bioinformatics/btt333\" class=\"citation\" data-key=\"10.1093/bioinformatics/btt333\">14</a>]</span>. Machine learning (ML) is an analytical technique that allows programs, or classifiers, to infer patterns from provided data <span class=\"citation\">[<a href=\"https://mitpress.mit.edu/books/introduction-machine-learning-0\" class=\"citation\" data-key=\"alpaydin2014\">15</a>]</span>.</p>\r\n\r\n<p>I propose to identify cytoplasmic Bcr-Abl targets using an informatics technique combining crowdsourcing and automated text mining (<a href=\"#proposal\">Figure 1</a>). I will develop an information extraction workflow using crowdsourcing and integrate machine learning methods for automated pattern recognition. This will allow a higher number of documents to be processed than what is possible with crowdsourcing alone at a quality higher than what is currently possible with automated programs. Applying the hybrid method to the literature surrounding CML and Bcr-Abl will answer the following two questions: 1) What are the limitations of existing automated information extraction programs? 2) What are previously unidentified targets of Bcr-Abl? Researchers in the natural language processing and drug discovery domains have long sought answers to these questions.</p>\r\n\r\n<h2 id=\"specific-aims\">Specific Aims</h2>\r\n\r\n<h3>Aim 1: Validate non-expert information extraction ability</h3>\r\n\r\n<p>The first step to developing a hybrid information extraction technique is to demonstrate that non-experts can read and interpret scientific publications. This step is necessary to ensure that the assertions extracted by the system can be trusted, a common problem in interpreting output of purely automated methods. In preliminary experiments we have determined that the pooled judgments of six non-experts is almost as accurate as domain experts at identifying biological concepts in text (<a href=\"#proof\">Figure 2a</a>). On a more complex task of determining chemical-induced diseases, we found that using as few as four non-experts already gave accuracies of 65% (<a href=\"#proof\">Figure 2b</a>), demonstrating that non-experts can interpret publications with little training. I will expand the difficulty and variety of tasks, and continue to evaluate worker performance by comparing performance to gold standards produced by expert biocurators.</p>\r\n\r\n<a name=\"proof\"></a><div class=\"figure\" figure-id=\"proof\"><div class=\"figure-content\"><img src=\"http://think-lab.s3.amazonaws.com/m/figures/17.png\"></div>\n            <div class=\"signature-1\">\n                <div class=\"figure-title\">Figure 2. Non-experts can interpret biomedical text.</div>\n                <div class=\"figure-description\"><p><strong>a)</strong> Non-expert performance on a disease annotation task steadily improves as the number of workers increases, eventually reaching that of a domain expert. <strong>b)</strong> On a more complex chemical-disease relation identification task, non-experts found 56% of relations picked by experts, but 75% of the predictions were correct, leading to a overall performance of 65%.</p></div>\n            </div>\n        </div>\r\n\r\n<h3>Aim 2: Integrate machine learning with a crowdsourcing workflow</h3>\r\n\r\n<p>Although preliminary studies have shown that ML techniques can be used to resolve judgment disagreements better than majority voting (<a href=\"#machine_learn\">Figure 3a</a>), how the approaches can be used to complement one another is still mostly unknown, as the two approaches have historically been used independently <span class=\"citation\">[<a href=\"/doi/10.1007/978-3-642-36406-8_1\" class=\"citation\" data-key=\"10.1007/978-3-642-36406-8_1\">16</a>]</span>. To address this question, I will perform experiments attempting to fuse the two techniques together in novel ways in order to utilize the strengths of each technique.</p>\r\n\r\n<p>For this aim, I will identify areas where predictive classifiers would provide an advantage over currently used methods. Our preliminary experiments show that task allotment and judgment aggregation would benefit from enhanced modelling. I will apply standard classifiers trained on crowd gathered data and compare whether performance or scalability increased. As a control, I will perform the same tasks with no classifiers. I expect that classifier application will enhance performance and increase the number of documents which can be processed, but that these improvements will be partially dependent upon the consistency of the human judgments.</p>\r\n\r\n<h3>Aim 3: Identify downstream protein targets of Bcr-Abl</h3>\r\n\r\n<p>I will answer the following question: which cytoplasmic proteins in the literature are likely downstream targets of Bcr-Abl? To address this question, I will apply the hybrid information extraction system to documents related to Bcr-Abl to produce a knowledge network centered around the protein.</p>\r\n\r\n<a name=\"machine_learn\"></a><div class=\"figure\" figure-id=\"machine_learn\">\n                <table class=\"full-width\" style=\"table-layout: fixed;\"><tr><td style=\"width:50%\">\n                    <div class=\"figure-content\"><img src=\"http://think-lab.s3.amazonaws.com/m/figures/18.png\"></div>\n                </td><td style=\"width:50%\">\n                    \n            <div class=\"signature-2\">\n                <div class=\"figure-title\">Figure 3. Advantages of machine learning.</div>\n                <div class=\"figure-description\"><p><strong>a)</strong> Using machine learning to aggregate votes increases performance by 26% compared to simple majority voting (adapted from <span class=\"citation\">[<a href=\"/doi/10.1007/978-3-642-36406-8_1\" class=\"citation\" data-key=\"10.1007/978-3-642-36406-8_1\">16</a>]</span>). <strong>b)</strong> An example of a prostate cancer drug identified using a network analysis <span class=\"citation\">[<a href=\"/doi/10.4137/CIN.S13889\" class=\"citation\" data-key=\"10.4137/CIN.S13889\">7</a>]</span>.</p></div>\n            </div>\n        \n                </td></tr></table>\n            </div>\r\n\r\n<p>I will then overlay known Bcr-Abl targets and known non-targets with the extracted information graph, and use concept similarities and term connectivities to rank potential proteins based on their resemblance to known Bcr-Abl targets. For validation, I will ask a group of blinded clinicians to review the predictions based on the original supporting literature documents and judge for prediction validity. Real and fake targets will be introduced as control items to verify expert consistency. Since a similar network analysis was used to identify prostate cancer drugs (<a href=\"#machine_learn\">Figure 3b</a>), I expect that the method will find at least one novel Bcr-Abl target, and that other proteins like extracellular proteins will rank near the bottom of the predictions <span class=\"citation\">[<a href=\"/doi/10.4137/CIN.S13889\" class=\"citation\" data-key=\"10.4137/CIN.S13889\">7</a>]</span>.</p>\r\n\r\n<h3>Pitfalls and Alternatives</h3>\r\n\r\n<p>One potential complication is that processing the large set of CML documents using paid online crowdsourcing platforms will be prohibitively expensive. If this were to occur, we would instead re-adapt our crowdsourcing model to instead harness volunteers, large communities of which already exist <span class=\"citation\">[<a href=\"http://wwwconference.org/proceedings/www2014/companion/p1049.pdf\" class=\"citation\" data-key=\"simpson2014\">17</a>]</span>. In addition, the concept similarity method for finding new Bcr-Abl targets may not work for sparsely connected networks, in which case we would use an alternative concept category knowledge-based method instead <span class=\"citation\">[<a href=\"/doi/10.4137/CIN.S13889\" class=\"citation\" data-key=\"10.4137/CIN.S13889\">7</a>]</span>.</p>\r\n\r\n<h3>Significance and Innovation</h3>\r\n\r\n<p>This proposal represents one of the first studies aiming to solve biological problems using a representation of the literature generated through crowdsourcing. The technique is novel in that it can be adapted to other domain specific problems, and can therefore be reused on different parts of the literature. Exposure of the general public to scientific literature through crowdsourcing also improves scientific literacy and outreach.</p>\r\n\r\n<h3>Contributions</h3>\r\n\r\n<p>I conceived and devised the specific aims described. My advisor Dr. Su provided high-level feedback and advice regarding the proposal's research direction. Dr. Benjamin Good provided helpful discussion and insight.</p>\r\n\r\n<hr>\r\n\r\n<h1 id=\"personal-statement\">Personal Statement</h1>\r\n\r\n<p>Everyone's path to bioinformatics is different, and mine is no exception. During my early schooling I spent much of my time exploring the physical sciences broadly, trying to find the area where I felt the greatest interest. Although I found physics to be powerful and chemistry to be precise, I discovered that biology fascinated me the most because it has a direct and lasting influence on the people around me. Thanks to two excellent high school teachers who instilled in me an appreciation for both computer science and biology, I proceeded down the path which would eventually lead me to computational biology.</p>\r\n\r\n<p>My journey towards bioinformatics began in earnest during high school. I was a member of our school's Programming Enrichment Group, an extracurricular activity focused on problem solving and critical thinking through algorithmic design. We participated in many programming competitions, and I along with other members of our club competed for a chance to represent Canada at the International Olympiad in Informatics at the Canadian Computing Competition. I relished in the logical rigor of informatics, and sought to apply it to other domains.</p>\r\n\r\n<p>As an undergraduate I worked in Virginia Cornish's lab at Columbia University on a directed evolution project seeking to evolve protein binders. The project was motivated by a desire to develop protein therapeutics for targets difficult to target specifically with small molecules, such as Bcr-Abl. Under the guidance of my graduate mentor I helped to characterize variants generated by the in vivo protein recombination system. This was my first experience working in a laboratory, and I found science to be a demanding but ultimately fulfilling endeavour. I returned to the Cornish lab the following summer to continue my work, but unfortunately had to leave prior to the project's completion due to a year spent studying abroad at Oxford. The most valuable experience from my time in the lab, other than learning to balance research with my other academic commitments, was the exposure to experimental techniques requiring large scale data interpretation and analysis.</p>\r\n\r\n<p>Upon starting my Ph.D. at Scripps after graduation, I quickly sought out Andrew Su's lab so that I could fulfill my interest in computation and biology. In particular the application of computational approaches to generate hypotheses from the existing literature fascinated me because I saw new opportunities to solve old problems like finding Bcr-Abl targets. In order to generate novel hypotheses, it is first necessary to create a computational representation of the literature. I realized that existing methods for generating these representations suffered either from a lack of quality or scalability, and sought to solve both problems by merging human judgments with automated machine learning. While working on this project I have had the opportunity to hone my communication skills through conference presentations, and managed to win a presentation prize.</p>\r\n\r\n<p>Following completion of my Ph.D. I hope to broaden my research background by working as a postdoctoral researcher in a laboratory which is both able to make computationally guided hypotheses and able to verify them biologically. My eventual goal is to establish a research group of my own which is able to utilize and verify the predictions of rapidly advancing computational tools in order to produce treatments and results for patients directly. Support from HHMI at this early stage in my career would provide me with the freedom to guide and develop my own research path without having to worry about financial burdens. Thank you for considering my application.</p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+        "body_md": "Chronic myeloid leukemia (CML) is a disorder of uncontrolled leukocyte proliferation caused by a chromosome translocation resulting in Bcr-Abl, a constitutively active tyrosine kinase [@10.1002/ajh.24221 @10.1126/science.2406902]. Over a thousand Americans die from CML each year due to resistance to existing therapies like imatinib [@cancer_facts @kimura2015 @10.2174/1568009615666150921141004]. Difficulties in selectively inhibiting Bcr-Abl have shifted drug development towards targeting downstream Bcr-Abl interactors, many of which are still unknown [@thielen2011]. Identifying new Bcr-Abl targets would spur drug development and lead to novel CML treatments.\r\n\r\n[:figure](proposal)\r\n\r\nInformatics techniques utilizing knowledge networks built from the biomedical literature have successfully identified novel p53 kinases and prostate cancer drugs [@10.4137/CIN.S13889 @10.1145/2623330.2623667]. By exhaustively processing millions of documents, informatics techniques discover insights previously missed by individual scientists. However, existing computer programs cannot extract a significant portion of important information due to limitations like being able to only process individual sentences [@10.1016/j.jbi.2014.05.013]. Improvements to processing programs would increase the breadth and depth of extractable information [@10.1007/s11390-010-9313-5 @10.1186/gb-2008-9-s2-s7]. Crowdsourcing, an approach using groups of untrained experts to perform complex tasks, has been applied to predict protein and mRNA structure and mine biomedical text [@10.1073/pnas.1313039111 @10.1038/nature09304 @10.1093/bioinformatics/btt333]. Machine learning (ML) is an analytical technique that allows programs, or classifiers, to infer patterns from provided data [@alpaydin2014].\r\n\r\n\r\nI propose to identify cytoplasmic Bcr-Abl targets using an informatics technique combining crowdsourcing and automated text mining ([Figure {n}](#proposal)). I will develop an information extraction workflow using crowdsourcing and integrate machine learning methods for automated pattern recognition. This will allow a higher number of documents to be processed than what is possible with crowdsourcing alone at a quality higher than what is currently possible with automated programs. Applying the hybrid method to the literature surrounding CML and Bcr-Abl will answer the following two questions: 1) What are the limitations of existing automated information extraction programs? 2) What are previously unidentified targets of Bcr-Abl? Researchers in the natural language processing and drug discovery domains have long sought answers to these questions.\r\n\r\n\r\n## Specific Aims\r\n\r\n### Aim 1: Validate non-expert information extraction ability\r\nThe first step to developing a hybrid information extraction technique is to demonstrate that non-experts can read and interpret scientific publications. This step is necessary to ensure that the assertions extracted by the system can be trusted, a common problem in interpreting output of purely automated methods. In preliminary experiments we have determined that the pooled judgments of six non-experts is almost as accurate as domain experts at identifying biological concepts in text ([Figure {n}a](#proof)). On a more complex task of determining chemical-induced diseases, we found that using as few as four non-experts already gave accuracies of 65% ([Figure {n}b](#proof)), demonstrating that non-experts can interpret publications with little training. I will expand the difficulty and variety of tasks, and continue to evaluate worker performance by comparing performance to gold standards produced by expert biocurators.\r\n\r\n\r\n[:figure](proof)\r\n\r\n\r\n### Aim 2: Integrate machine learning with a crowdsourcing workflow\r\nAlthough preliminary studies have shown that ML techniques can be used to resolve judgment disagreements better than majority voting ([Figure {n}a](#machine_learn)), how the approaches can be used to complement one another is still mostly unknown, as the two approaches have historically been used independently [@10.1007/978-3-642-36406-8_1]. To address this question, I will perform experiments attempting to fuse the two techniques together in novel ways in order to utilize the strengths of each technique.\r\n\r\n\r\nFor this aim, I will identify areas where predictive classifiers would provide an advantage over currently used methods. Our preliminary experiments show that task allotment and judgment aggregation would benefit from enhanced modelling. I will apply standard classifiers trained on crowd gathered data and compare whether performance or scalability increased. As a control, I will perform the same tasks with no classifiers. I expect that classifier application will enhance performance and increase the number of documents which can be processed, but that these improvements will be partially dependent upon the consistency of the human judgments.\r\n\r\n\r\n### Aim 3: Identify downstream protein targets of Bcr-Abl\r\nI will answer the following question: which cytoplasmic proteins in the literature are likely downstream targets of Bcr-Abl? To address this question, I will apply the hybrid information extraction system to documents related to Bcr-Abl to produce a knowledge network centered around the protein.\r\n\r\n[:figure](machine_learn)\r\n\r\nI will then overlay known Bcr-Abl targets and known non-targets with the extracted information graph, and use concept similarities and term connectivities to rank potential proteins based on their resemblance to known Bcr-Abl targets. For validation, I will ask a group of blinded clinicians to review the predictions based on the original supporting literature documents and judge for prediction validity. Real and fake targets will be introduced as control items to verify expert consistency. Since a similar network analysis was used to identify prostate cancer drugs ([Figure {n}b](#machine_learn)), I expect that the method will find at least one novel Bcr-Abl target, and that other proteins like extracellular proteins will rank near the bottom of the predictions [@10.4137/CIN.S13889].\r\n\r\n\r\n### Pitfalls and Alternatives\r\nOne potential complication is that processing the large set of CML documents using paid online crowdsourcing platforms will be prohibitively expensive. If this were to occur, we would instead re-adapt our crowdsourcing model to instead harness volunteers, large communities of which already exist [@simpson2014]. In addition, the concept similarity method for finding new Bcr-Abl targets may not work for sparsely connected networks, in which case we would use an alternative concept category knowledge-based method instead [@10.4137/CIN.S13889].\r\n\r\n\r\n### Significance and Innovation\r\nThis proposal represents one of the first studies aiming to solve biological problems using a representation of the literature generated through crowdsourcing. The technique is novel in that it can be adapted to other domain specific problems, and can therefore be reused on different parts of the literature. Exposure of the general public to scientific literature through crowdsourcing also improves scientific literacy and outreach.\r\n\r\n\r\n### Contributions\r\nI conceived and devised the specific aims described. My advisor Dr. Su provided high-level feedback and advice regarding the proposal's research direction. Dr. Benjamin Good provided helpful discussion and insight.\r\n\r\n\r\n---\r\n\r\n# Personal Statement\r\n\r\nEveryone's path to bioinformatics is different, and mine is no exception. During my early schooling I spent much of my time exploring the physical sciences broadly, trying to find the area where I felt the greatest interest. Although I found physics to be powerful and chemistry to be precise, I discovered that biology fascinated me the most because it has a direct and lasting influence on the people around me. Thanks to two excellent high school teachers who instilled in me an appreciation for both computer science and biology, I proceeded down the path which would eventually lead me to computational biology.\r\n\r\nMy journey towards bioinformatics began in earnest during high school. I was a member of our school's Programming Enrichment Group, an extracurricular activity focused on problem solving and critical thinking through algorithmic design. We participated in many programming competitions, and I along with other members of our club competed for a chance to represent Canada at the International Olympiad in Informatics at the Canadian Computing Competition. I relished in the logical rigor of informatics, and sought to apply it to other domains.\r\n\r\nAs an undergraduate I worked in Virginia Cornish's lab at Columbia University on a directed evolution project seeking to evolve protein binders. The project was motivated by a desire to develop protein therapeutics for targets difficult to target specifically with small molecules, such as Bcr-Abl. Under the guidance of my graduate mentor I helped to characterize variants generated by the in vivo protein recombination system. This was my first experience working in a laboratory, and I found science to be a demanding but ultimately fulfilling endeavour. I returned to the Cornish lab the following summer to continue my work, but unfortunately had to leave prior to the project's completion due to a year spent studying abroad at Oxford. The most valuable experience from my time in the lab, other than learning to balance research with my other academic commitments, was the exposure to experimental techniques requiring large scale data interpretation and analysis.\r\n\r\nUpon starting my Ph.D. at Scripps after graduation, I quickly sought out Andrew Su's lab so that I could fulfill my interest in computation and biology. In particular the application of computational approaches to generate hypotheses from the existing literature fascinated me because I saw new opportunities to solve old problems like finding Bcr-Abl targets. In order to generate novel hypotheses, it is first necessary to create a computational representation of the literature. I realized that existing methods for generating these representations suffered either from a lack of quality or scalability, and sought to solve both problems by merging human judgments with automated machine learning. While working on this project I have had the opportunity to hone my communication skills through conference presentations, and managed to win a presentation prize.\r\n\r\nFollowing completion of my Ph.D. I hope to broaden my research background by working as a postdoctoral researcher in a laboratory which is both able to make computationally guided hypotheses and able to verify them biologically. My eventual goal is to establish a research group of my own which is able to utilize and verify the predictions of rapidly advancing computational tools in order to produce treatments and results for patients directly. Support from HHMI at this early stage in my career would provide me with the freedom to guide and develop my own research path without having to worry about financial burdens. Thank you for considering my application.\r\n\r\n\r\n[@cancer_facts]: http://www.cancer.org/acs/groups/content/@editorial/documents/document/acspc-044552.pdf \"American Cancer Society. Cancer Facts & Figures 2015. Atlanta: American Cancer Society; 2015.\"\r\n\r\n[@kimura2015]: http://www.ncbi.nlm.nih.gov/pubmed/26458439 \"S. Kimura. State-of-the-art management of CML in 2015 and future prospects. The Japanese Journal of Clinical Hematology. 56.10 (2015) 2005-2014.\"\r\n\r\n[@thielen2011]: http://www.njmonline.nl/getpdf.php?id=1107 \"N. Thielen et al. New insights into the pathogenesis of chronic myeloid leukaemia: towards a path to cure. Netherlands Journal of Medicine 69.10 (2011) 430-440\"\r\n\r\n[@alpaydin2014]: https://mitpress.mit.edu/books/introduction-machine-learning-0 \"Ethem Alpaydin. Introduction to Machine Learning, Third Edition. MIT press. 2014.\"\r\n\r\n[@simpson2014]: http://wwwconference.org/proceedings/www2014/companion/p1049.pdf \"R. Simpson et al. Zooniverse: Observing the World's Largest Citizen Science Platform. In: Proceedings of the 23rd International Conference on World Wide Web. Seoul. 2014. 1049-1054.\"",
+        "doc_published": "2016-01-18T19:48:55.182Z",
+        "intro_html": "<p>I am a second-year graduate student in <a href=\"http://sulab.org/andrew-i-su-ph-d/\">Dr. Andrew Su's</a> lab at <a href=\"http://scripps.edu\">The Scripps Research Institute</a>. My current research focus is on resolving biological problems using literature-based discovery improved by crowdsourcing and machine learning.</p>\r\n\r\n<p>I am currently applying for the 2016 Howard Hughes Medical Institute's (HHMI) <a href=\"http://www.hhmi.org/programs/international-student-research-fellowships\">International Student Research Fellowship</a> (<a href=\"http://www.hhmi.org/sites/default/files/Programs/International/I16_ProgramAnnouncement.pdf\">official announcement</a>). The application consists of a one page personal statement and a research proposal, which must:</p>\r\n\r\n<ol><li>Be aligned with the research goals of HHMI.</li><li>Be structured similarly to a NIH grant application (e.g. address the significance and innovation, potential pitfalls, alternative strategies, and include a testable hypothesis).</li><li>Be no longer than three (3) pages in length (excluding references).</li></ol>\r\n\r\n<p>Thank you for reviewing my proposal. PDFs of the <a href=\"https://drive.google.com/file/d/0ByxTs7M4ndeJSDc5M1dqbEVlZlU/view?usp=sharing\">research proposal</a> and <a href=\"https://drive.google.com/file/d/0ByxTs7M4ndeJaVFVdl9iY1VOOU0/view?usp=sharing\">personal statement</a> are also available. My email is <a href=\"mailto:tongli@scripps.edu\"></a><a href=\"mailto:tongli@scripps.edu\">tongli@scripps.edu</a>.</p>",
+        "intro_md": "I am a second-year graduate student in [Dr. Andrew Su's](http://sulab.org/andrew-i-su-ph-d/) lab at [The Scripps Research Institute](http://scripps.edu). My current research focus is on resolving biological problems using literature-based discovery improved by crowdsourcing and machine learning.\r\n\r\nI am currently applying for the 2016 Howard Hughes Medical Institute's (HHMI) [International Student Research Fellowship](http://www.hhmi.org/programs/international-student-research-fellowships) ([official announcement](http://www.hhmi.org/sites/default/files/Programs/International/I16_ProgramAnnouncement.pdf)). The application consists of a one page personal statement and a research proposal, which must:\r\n\r\n1. Be aligned with the research goals of HHMI.\r\n2. Be structured similarly to a NIH grant application (e.g. address the significance and innovation, potential pitfalls, alternative strategies, and include a testable hypothesis).\r\n3. Be no longer than three (3) pages in length (excluding references).\r\n\r\n\r\nThank you for reviewing my proposal. PDFs of the [research proposal](https://drive.google.com/file/d/0ByxTs7M4ndeJSDc5M1dqbEVlZlU/view?usp=sharing) and [personal statement](https://drive.google.com/file/d/0ByxTs7M4ndeJaVFVdl9iY1VOOU0/view?usp=sharing) are also available. My email is <tongli@scripps.edu>.",
+        "title": "",
+        "topic_field": ""
+      },
+      "model": "base.document",
+      "pk": 11
+    }
+  ],
+  "notes": [],
+  "profiles": [
+    {
+      "fields": {
+        "first_name": "Daniel",
+        "last_name": "Himmelstein",
+        "username": "dhimmel"
+      },
+      "model": "base.profile",
+      "pk": 17
+    },
+    {
+      "fields": {
+        "first_name": "Benjamin",
+        "last_name": "Good",
+        "username": "b_good"
+      },
+      "model": "base.profile",
+      "pk": 48
+    },
+    {
+      "fields": {
+        "first_name": "Tong Shu",
+        "last_name": "Li",
+        "username": "tongli"
+      },
+      "model": "base.profile",
+      "pk": 176
+    },
+    {
+      "fields": {
+        "first_name": "Tim",
+        "last_name": "Putman",
+        "username": "timputman"
+      },
+      "model": "base.profile",
+      "pk": 180
+    },
+    {
+      "fields": {
+        "first_name": "Andrew",
+        "last_name": "Su",
+        "username": "andrewsu"
+      },
+      "model": "base.profile",
+      "pk": 181
+    },
+    {
+      "fields": {
+        "first_name": "Obi",
+        "last_name": "Griffith",
+        "username": "obigriffith"
+      },
+      "model": "base.profile",
+      "pk": 187
+    }
+  ],
+  "retrieved": "2016-04-09T03:28:46.719600Z",
+  "threads": [
+    {
+      "fields": {
+        "document": null,
+        "doi_field": null,
+        "profile": null,
+        "published": "2016-01-18T19:48:55.431Z",
+        "subject": "Predicting Bcr-Abl targets using a hybrid information extraction system",
+        "topic_field": "Machine learning,Cancer Biology,Crowdsourcing,Literature Mining,Drug Targets"
+      },
+      "model": "base.thread",
+      "pk": 141
+    },
+    {
+      "fields": {
+        "document": null,
+        "doi_field": null,
+        "profile": 48,
+        "published": "2016-01-18T23:51:24.055Z",
+        "subject": "Applications of machine learning for aggregating judgments",
+        "topic_field": "Machine learning,Crowdsourcing"
+      },
+      "model": "base.thread",
+      "pk": 142
+    },
+    {
+      "fields": {
+        "document": null,
+        "doi_field": "",
+        "profile": 48,
+        "published": "2016-01-19T16:59:17.873Z",
+        "subject": "What lies ‘downstream’ of Bcr-Abl ?",
+        "topic_field": "Cancer Biology,Pathways,Imatinib Bcr-Abl"
+      },
+      "model": "base.thread",
+      "pk": 143
+    },
+    {
+      "fields": {
+        "document": null,
+        "doi_field": "",
+        "profile": 187,
+        "published": "2016-01-31T05:30:14.232Z",
+        "subject": "",
+        "topic_field": ""
+      },
+      "model": "base.thread",
+      "pk": 154
+    },
+    {
+      "fields": {
+        "document": null,
+        "doi_field": "",
+        "profile": 17,
+        "published": "2016-02-05T05:19:40.782Z",
+        "subject": "",
+        "topic_field": ""
+      },
+      "model": "base.thread",
+      "pk": 156
+    }
+  ]
+}

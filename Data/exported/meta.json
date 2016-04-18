@@ -1726,6 +1726,17 @@
       },
       "model": "base.comment",
       "pk": 1233
+    },
+    {
+      "fields": {
+        "body_html": "<h1>A repository for project analytics</h1>\r\n\r\n<p>I created a repository (<a href=\"https://github.com/dhimmel/thinklytics\" title=\"dhimmel/thinklytics on GitHub\"><code>thinklytics</code></a>) for exporting and analyzing Thinklab content.</p>\r\n\r\n<p><a href=\"/u/alizee\" class=\"username\">@alizee</a>, I think <a href=\"http://thinklab.com/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#7\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d191\">you want</a> data for all <a href=\"http://thinklab.com/projects\">projects</a> and <a href=\"http://thinklab.com/proposals\">proposals</a> using my <a href=\"https://github.com/dhimmel/thinklytics/blob/e6c64cf1a709653032605e008fcc828f6e4f0d0f/export.py\"><code>export.py</code></a>. The only missing piece to programmatic retrieval of all content is a complete list of proposal and project IDs. For now this can be compiled manually, but it would be nice to have a <code>thinklab.com/projects.json</code> for getting this list. Consider forking <code>thinklytics</code>.</p>",
+        "body_md": "# A repository for project analytics\r\n\r\nI created a repository ([`thinklytics`](https://github.com/dhimmel/thinklytics \"dhimmel/thinklytics on GitHub\")) for exporting and analyzing Thinklab content.\r\n\r\n@alizee, I think [you want](http://thinklab.com/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#7) data for all [projects](http://thinklab.com/projects) and [proposals](http://thinklab.com/proposals) using my [`export.py`](https://github.com/dhimmel/thinklytics/blob/e6c64cf1a709653032605e008fcc828f6e4f0d0f/export.py). The only missing piece to programmatic retrieval of all content is a complete list of proposal and project IDs. For now this can be compiled manually, but it would be nice to have a `thinklab.com/projects.json` for getting this list. Consider forking `thinklytics`.",
+        "profile": 17,
+        "published": "2016-04-08T20:10:47.969Z",
+        "thread": 191
+      },
+      "model": "base.comment",
+      "pk": 1234
     }
   ],
   "documents": [
@@ -2469,6 +2480,17 @@
       },
       "model": "base.note",
       "pk": 235
+    },
+    {
+      "fields": {
+        "added": "2016-04-08T20:14:28.607Z",
+        "body_html": "<p>I agree the visitor counts would be great. I'm already learning from our project's <a href=\"http://thinklab.com/p/rephetio/discussion\">discussion view counts</a>. And if we set up an automatic export every week, we will be able to do fascinating analytics of interest in subjects over time.</p>",
+        "body_md": "I agree the visitor counts would be great. I'm already learning from our project's [discussion view counts](http://thinklab.com/p/rephetio/discussion). And if we set up an automatic export every week, we will be able to do fascinating analytics of interest in subjects over time.",
+        "comment": 1232,
+        "profile": 17
+      },
+      "model": "base.note",
+      "pk": 236
     }
   ],
   "profiles": [
@@ -2608,7 +2630,7 @@
       "pk": 188
     }
   ],
-  "retrieved": "2016-04-08T19:59:01.675230Z",
+  "retrieved": "2016-04-09T03:28:45.685227Z",
   "threads": [
     {
       "fields": {

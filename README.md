@@ -1,16 +1,10 @@
-# Thinklab project exports and analytics
+# Analytics for the Thinklab platform
 
-[Thinklab](http://thinklab.com/) is a platform for collaborative online open science. This repository retrieves Thinklab [project exports](http://thinklab.com/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#4). Future releases will perform analytics on the content.
+[Thinklab](http://thinklab.com/) is a platform for collaborative online open science. 
 
-## Usage
+The code in `Data/` retrieves Thinklab [project exports](http://thinklab.com/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#4). 
 
-The export for a specific project can be retrieved using:
-
-```sh
-python export.py --login login.json --project rephetio --output export/rephetio.json
-```
-
-Users need to create a `login.json` file with their personal Thinklab credentials. [`login-template.json`](login-template.json) provides a template.
+The Code in `R-Code/` performs the analyses, while the `Output/` folder holds the results.
 
 ## License
 
