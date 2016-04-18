@@ -1,15 +1,17 @@
-# Private login credentials
-login.json
-
-# R files
-*.Rproj*
+### R ###
+# History files
 .Rhistory
+.Rapp.history
+
+# Session Data files
 .RData
 
+# RStudio files
+.Rproj.user/
+*.Rproj*
 **/.Rproj*/
-.Rproj.user
 
-# Created by https://www.gitignore.io/api/python
+# Created by https://www.gitignore.io/api/r,python,linux
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -101,4 +103,15 @@ ENV/
 # Rope project settings
 .ropeproject
 
-.Rproj.user
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
