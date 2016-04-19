@@ -10,6 +10,11 @@ headers = {
     'referer': 'https://thinklab.com',
 }
 
+project_listing_urls = [
+    'https://thinklab.com/proposals',
+    'https://thinklab.com/projects',
+]
+
 def retrieve_project_urls(url, css_sel = 'a.list-proj-name'):
     """
     Retrieve the list of url for projects or proposals,
@@ -57,7 +62,10 @@ def save_export(export, project, json_dir):
     """
     Write a JSON export to a text file.
     """
-    os.makedirs(json_dir, exist_ok=True)
+    try:
+        os.mkdir(json_dir)
+    except FileExistsError:
+        pass
     path = os.path.join(json_dir, '{}.json'.format(project))
     with open(path, 'wt') as write_file:
         json.dump(export, write_file, ensure_ascii=False, indent=2, sort_keys=True)
@@ -100,7 +108,7 @@ if __name__ == '__main__':
 
     projects = set()
     if args.all_projects:
-        for url in 'https://thinklab.com/proposals', 'https://thinklab.com/projects':
+        for url in project_listing_urls:
             projects.update(retrieve_project_urls(url))
         projects = list(projects)
     else:
@@ -108,7 +116,7 @@ if __name__ == '__main__':
 
     session = start_session(username, password)
     for project in projects:
-        print("Getting project '{}'".format(project))
+        print('Getting project {}'.format(project))
         export = retrieve_project_export(project, session)
         save_export(export, project, args.outputdir)
 
