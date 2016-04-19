@@ -1,8 +1,8 @@
 # Analytics for the Thinklab platform
 
-[Thinklab](http://thinklab.com/) is a platform for collaborative online open science. 
+[Thinklab](https://thinklab.com/) is a platform for collaborative online open science.
 
-The code in `Data/` retrieves Thinklab [project exports](http://thinklab.com/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#4). 
+The code in `Data/` retrieves Thinklab [project exports](https://thinklab.com/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#4).
 
 The Code in `R-Code/` performs the analyses, while the `Output/` folder holds the results.
 

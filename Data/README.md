@@ -2,19 +2,14 @@
 
 ## Usage
 
-The exports for all projects can automatically be retrieved using:
+`export.py` is a Python script for retrieving JSON-formatted Thinklab project exports. The exports for all projects can automatically be retrieved using:
 
 ```sh
-python export.py --loginfile login.json
+python export.py --all-projects
 ```
 
-... while a specific project can be retrieved with:
+A specific project can be retrieved with:
 
 ```sh
-python export.py --login login.json --project rephetio
+python export.py --project rephetio
 ```
-
-
-## License
-
-Thinklab user content is licensed as [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/ "Creative Commons · Attribution 4.0 International"). Original content in this repository is released under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/ "Creative Commons · CC0 1.0 Universal · Public Domain Dedication").
