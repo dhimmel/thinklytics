@@ -6,39 +6,50 @@ import os
 import requests
 from bs4 import BeautifulSoup as bfs
 
+headers = {
+    'referer': 'https://thinklab.com',
+}
+
 def retrieve_project_urls(url, css_sel = 'a.list-proj-name'):
     """
     Retrieve the list of url for projects or proposals,
     based on the url fof the page that lists them
     """
-    r = requests.Session().get(url) 
-    soup = bfs(r.content, 'lxml')
+    r = requests.get(url)
+    soup = bfs(r.text, 'lxml')
     link_tags = soup.select(css_sel)
     return [x.attrs['href'][3:] for x in link_tags]
 
-def retrieve_project_export(project, username, password):
+def base_payload(session):
+    """Create a base payload with the CSRF token for the session"""
+    payload = {
+        'csrfmiddlewaretoken': session.cookies['csrftoken'],
+    }
+    return payload
+
+def start_session(username, password):
+    """Initiate a Thinklab requests session"""
+    session = requests.Session()
+    login_url = 'https://thinklab.com/login'
+    session.get(login_url)
+    payload = base_payload(session)
+    payload['email'] = username
+    payload['password'] = password
+    session.post(login_url, data=payload, headers=headers)
+    return session
+
+def retrieve_project_export(project, session):
     """
     Retrieve a JSON-formatted Thinklab project export.
-    See http://thinklab.com/d/191#8
+    See https://thinklab.com/d/191#8
 
     `project` is a Thinklab project id such as `rephetio`.
     `username` and `password` are Thinklab login credentials.
     """
-    with requests.Session() as session:
-        login_url = 'http://thinklab.com/login'
-        session.get(login_url)
-        csrf_token = session.cookies['csrftoken']
-        payload = {
-            'email': username,
-            'password': password,
-            'csrfmiddlewaretoken': csrf_token,
-        }
-        session.post(login_url, data=payload)
-
-        export_url = 'http://thinklab.com/p/{}/export.json'.format(project)
-        response = session.get(export_url)
-        export = response.json()
-
+    export_url = 'https://thinklab.com/p/{}/export.json'.format(project)
+    payload = base_payload(session)
+    response = session.post(export_url, data=payload, headers=headers)
+    export = response.json()
     export['retrieved'] = datetime.datetime.utcnow().isoformat() + 'Z'
     return export
 
@@ -47,7 +58,8 @@ def save_export(export, project, json_dir):
     Write a JSON export to a text file.
     """
     os.makedirs(json_dir, exist_ok=True)
-    with open("{}/{}.json".format(json_dir, project), 'wt') as write_file:
+    path = os.path.join(json_dir, '{}.json'.format(project))
+    with open(path, 'wt') as write_file:
         json.dump(export, write_file, ensure_ascii=False, indent=2, sort_keys=True)
 
 def parse_login_json(path):
@@ -68,26 +80,36 @@ if __name__ == '__main__':
     ```
     """
     parser = argparse.ArgumentParser(description='Retrieve Thinklab Project export.')
-    parser.add_argument('--username', default='', help='Thinklab login')
-    parser.add_argument('--password', default='', help='Thinklab password')
-    parser.add_argument('--loginfile', default='login.json', help='alternatively, path to file with Thinklab login credentials')
-    parser.add_argument('--project', default='all', help='project id. "all" gets all the current project and proposals.')
-    parser.add_argument('--outputdir', default='exported', help='path to export to')
+
+    parser.add_argument('--username', help='Thinklab login')
+    parser.add_argument('--password', help='Thinklab password')
+    parser.add_argument('--loginfile', default='login.json', help='Path to JSON file with Thinklab login credentials')
+
+    project_group = parser.add_mutually_exclusive_group(required=True)
+    project_group.add_argument('--project', default='rephetio', help='export a specific project given by its project id')
+    project_group.add_argument('--all-projects', action='store_true', help='export all thinklab projects')
+
+    parser.add_argument('--outputdir', default='exported', help='directory to export JSON files')
+
     args = parser.parse_args()
 
-    if (args.username == '') & (args.password == ''):
-        username, password = parse_login_json(args.loginfile)
-    else:
+    if args.username and args.password:
         username, password = args.username, args.password
+    else:
+        username, password = parse_login_json(args.loginfile)
 
-    if args.project == "all":
-        projects = retrieve_project_urls(url = 'http://thinklab.com/projects')
-        projects = projects + retrieve_project_urls(url = 'http://thinklab.com/proposals')
-        projects = list(set(projects))
-    else: 
-        projects = [ args.project ]
+    projects = set()
+    if args.all_projects:
+        for url in 'https://thinklab.com/proposals', 'https://thinklab.com/projects':
+            projects.update(retrieve_project_urls(url))
+        projects = list(projects)
+    else:
+        projects.add(args.project)
 
+    session = start_session(username, password)
     for project in projects:
         print("Getting project '{}'".format(project))
-        export = retrieve_project_export(project, username, password)
+        export = retrieve_project_export(project, session)
         save_export(export, project, args.outputdir)
+
+    session.close()
