@@ -2157,7 +2157,7 @@
       "username": "pouyakhankhanian"
     }
   ],
-  "retrieved": "2016-04-19T02:15:44.008246Z",
+  "retrieved": "2016-04-19T14:18:19.339083Z",
   "threads": [
     {
       "document": null,
@@ -2388,7 +2388,7 @@
       "subject": "Citation metadata refreshing",
       "topic_field": "Metadata,Citation,Citations,DOI,References,CrossRef",
       "url": "/discussion/citation-metadata-refreshing/86",
-      "views": 22
+      "views": 23
     },
     {
       "document": null,
@@ -2399,7 +2399,7 @@
       "subject": "Impact points and leaderboard demotivating",
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 40
+      "views": 41
     },
     {
       "document": null,
@@ -2421,7 +2421,7 @@
       "subject": "Switching DOI links to the preferred format",
       "topic_field": "Standards,DOI,DOI resolution",
       "url": "/discussion/switching-doi-links-to-the-preferred-format/109",
-      "views": 22
+      "views": 23
     },
     {
       "document": null,
@@ -2443,7 +2443,7 @@
       "subject": "ThinkLab needs a story",
       "topic_field": "",
       "url": "/discussion/thinklab-needs-a-story/131",
-      "views": 31
+      "views": 32
     },
     {
       "document": null,
@@ -2454,7 +2454,7 @@
       "subject": "A PDF upload option for proposal creation",
       "topic_field": "",
       "url": "/discussion/a-pdf-upload-option-for-proposal-creation/138",
-      "views": 23
+      "views": 24
     },
     {
       "document": null,
@@ -2476,7 +2476,7 @@
       "subject": "Whole proposal reviewer synopsis - fund or no fund?",
       "topic_field": "Review Process",
       "url": "/discussion/whole-proposal-reviewer-synopsis-fund-or-no-fund/144",
-      "views": 36
+      "views": 37
     },
     {
       "document": null,
@@ -2487,7 +2487,7 @@
       "subject": "Markdown bug: hyperlink with title attribute causes excision",
       "topic_field": "Markdown,TLFM,Bug",
       "url": "/discussion/markdown-bug-hyperlink-with-title-attribute-causes-excision/163",
-      "views": 10
+      "views": 11
     },
     {
       "document": null,
@@ -2509,7 +2509,7 @@
       "subject": "Streamlining access to the common interactions with citations",
       "topic_field": "popover,citation,user experience,Thinklab",
       "url": "/discussion/streamlining-access-to-the-common-interactions-with-citations/188",
-      "views": 7
+      "views": 8
     },
     {
       "document": null,
@@ -2520,7 +2520,7 @@
       "subject": "MathJax Block markers",
       "topic_field": "Technical Issue",
       "url": "/discussion/mathjax-block-markers/189",
-      "views": 6
+      "views": 7
     },
     {
       "document": null,
@@ -2531,7 +2531,7 @@
       "subject": "Hyperlinks inserted when printing Thinklab pages",
       "topic_field": "Thinklab,printing,typesetting",
       "url": "/discussion/hyperlinks-inserted-when-printing-thinklab-pages/190",
-      "views": 5
+      "views": 6
     },
     {
       "document": null,
@@ -2542,7 +2542,7 @@
       "subject": "Discussion summary statistics for illustrating project impact",
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 32
+      "views": 34
     },
     {
       "document": null,
@@ -2553,7 +2553,7 @@
       "subject": "Disambiguating proposal, project, and report titles",
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 8
+      "views": 11
     },
     {
       "document": null,
@@ -2575,7 +2575,7 @@
       "subject": "Automatically insert images",
       "topic_field": "",
       "url": "/discussion/automatically-insert-images/196",
-      "views": 9
+      "views": 10
     },
     {
       "document": null,
@@ -2597,7 +2597,7 @@
       "subject": "Improving search engine previewing",
       "topic_field": "SEO,Search Engine Marketing,HMTL,meta,description",
       "url": "/discussion/improving-search-engine-previewing/198",
-      "views": 12
+      "views": 13
     }
   ]
 }
