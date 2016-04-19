@@ -830,7 +830,7 @@
       "username": "obigriffith"
     }
   ],
-  "retrieved": "2016-04-19T01:09:09.958280Z",
+  "retrieved": "2016-04-19T02:15:45.065697Z",
   "threads": [
     {
       "document": null,
@@ -841,7 +841,7 @@
       "subject": "Predicting Bcr-Abl targets using a hybrid information extraction system",
       "topic_field": "Machine learning,Cancer Biology,Crowdsourcing,Literature Mining,Drug Targets",
       "url": "/doc/11/review",
-      "views": 10
+      "views": 11
     },
     {
       "document": null,

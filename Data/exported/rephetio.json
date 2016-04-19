@@ -4759,7 +4759,7 @@
       "username": "ostrokach"
     }
   ],
-  "retrieved": "2016-04-19T01:09:14.646141Z",
+  "retrieved": "2016-04-19T02:15:38.488222Z",
   "threads": [
     {
       "document": null,
@@ -4902,7 +4902,7 @@
       "subject": "Unifying disease vocabularies",
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 110
+      "views": 112
     },
     {
       "document": null,
@@ -5034,7 +5034,7 @@
       "subject": "Mining knowledge from MEDLINE articles and their indexed MeSH terms",
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 90
+      "views": 91
     },
     {
       "document": null,
@@ -5441,7 +5441,7 @@
       "subject": "Announcing PharmacotherapyDB: the Open Catalog of Drug Therapies for Disease",
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 95
+      "views": 96
     },
     {
       "document": null,
