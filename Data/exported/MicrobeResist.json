@@ -180,7 +180,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/MicrobeResist/proposal",
-      "views": 330
+      "views": 338
     }
   ],
   "notes": [
@@ -285,7 +285,7 @@
       "username": "JamesMeadow"
     }
   ],
-  "retrieved": "2016-04-19T14:18:14.820929Z",
+  "retrieved": "2016-04-22T19:13:13.697505Z",
   "threads": [
     {
       "document": null,
@@ -296,7 +296,7 @@
       "subject": "Play up your lab’s leadership in open science!",
       "topic_field": "",
       "url": "/discussion/play-up-your-labs-leadership-in-open-science/3",
-      "views": 39
+      "views": 40
     },
     {
       "document": null,
@@ -307,7 +307,7 @@
       "subject": "Fungal diversity characterization using ITS",
       "topic_field": "ITS,Fungi",
       "url": "/discussion/fungal-diversity-characterization-using-its/5",
-      "views": 23
+      "views": 24
     },
     {
       "document": null,
@@ -318,7 +318,7 @@
       "subject": "Introduction to the ThinkLab pilot",
       "topic_field": "ThinkLab,Meta",
       "url": "/discussion/introduction-to-the-thinklab-pilot/6",
-      "views": 12
+      "views": 13
     },
     {
       "document": null,
@@ -329,7 +329,7 @@
       "subject": "Peer review notes for pilot",
       "topic_field": "",
       "url": "/discussion/peer-review-notes-for-pilot/8",
-      "views": 23
+      "views": 24
     },
     {
       "document": null,
@@ -340,7 +340,7 @@
       "subject": "Offline feedback for the proposal from two non-ecologists",
       "topic_field": "Feedback",
       "url": "/discussion/offline-feedback-for-the-proposal-from-two-non-ecologists/9",
-      "views": 22
+      "views": 24
     },
     {
       "document": null,
@@ -351,7 +351,7 @@
       "subject": "Concerns with projected outcomes",
       "topic_field": "",
       "url": "/discussion/concerns-with-projected-outcomes/10",
-      "views": 34
+      "views": 35
     },
     {
       "document": null,
@@ -362,7 +362,7 @@
       "subject": "Methods considerations",
       "topic_field": "",
       "url": "/discussion/methods-considerations/11",
-      "views": 27
+      "views": 28
     },
     {
       "document": null,
@@ -373,7 +373,7 @@
       "subject": "Markdown text formatting tips for proposal",
       "topic_field": "Markdown",
       "url": "/discussion/markdown-text-formatting-tips-for-proposal/15",
-      "views": 43
+      "views": 44
     }
   ]
 }
