@@ -1428,7 +1428,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/thinklabOSP/proposal",
-      "views": 167
+      "views": 174
     }
   ],
   "notes": [
@@ -1479,7 +1479,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2016-04-22T19:13:11.875927Z",
+  "retrieved": "2016-04-26T00:42:12.695906Z",
   "threads": [
     {
       "document": 12,
@@ -1490,7 +1490,7 @@
       "subject": "",
       "topic_field": "Open science,Peer review,Science Funding,Grant Writing,Grantmaking,Open Notebook Science",
       "url": "/doc/12/review",
-      "views": 34
+      "views": 36
     },
     {
       "document": null,
@@ -1501,7 +1501,7 @@
       "subject": "Highlighting the immediacy of Thinklab",
       "topic_field": "ASAPbio,Delays,Publishing,Preprints",
       "url": "/discussion/highlighting-the-immediacy-of-thinklab/160",
-      "views": 10
+      "views": 11
     },
     {
       "document": null,
@@ -1512,7 +1512,7 @@
       "subject": "How to address the risk of stealing ideas",
       "topic_field": "",
       "url": "/discussion/how-to-address-the-risk-of-stealing-ideas/161",
-      "views": 37
+      "views": 40
     },
     {
       "document": 12,
@@ -1523,7 +1523,7 @@
       "subject": "",
       "topic_field": "",
       "url": "/discussion/review-summary/164",
-      "views": 14
+      "views": 15
     },
     {
       "document": null,
@@ -1534,7 +1534,7 @@
       "subject": "Using the prize money for integrating with the larger internet movement in science",
       "topic_field": "Indexing,Altmetrics,Integration",
       "url": "/discussion/using-the-prize-money-for-integrating-with-the-larger-internet-movement-in-science/165",
-      "views": 11
+      "views": 12
     },
     {
       "document": 12,
@@ -1545,7 +1545,7 @@
       "subject": "",
       "topic_field": "",
       "url": "/discussion/review-summary/166",
-      "views": 13
+      "views": 14
     },
     {
       "document": 12,
@@ -1556,7 +1556,7 @@
       "subject": "",
       "topic_field": "",
       "url": "/discussion/review-summary/168",
-      "views": 14
+      "views": 16
     },
     {
       "document": null,
@@ -1567,7 +1567,7 @@
       "subject": "Has our scientific system been optimized by an evolutionary process?",
       "topic_field": "Open science,Incentives",
       "url": "/discussion/has-our-scientific-system-been-optimized-by-an-evolutionary-process/170",
-      "views": 22
+      "views": 24
     },
     {
       "document": 12,
@@ -1578,7 +1578,7 @@
       "subject": "",
       "topic_field": "",
       "url": "/discussion/review-summary/175",
-      "views": 11
+      "views": 12
     }
   ]
 }

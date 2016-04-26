@@ -788,7 +788,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/HHMI_Bcr_Abl/proposal",
-      "views": 189
+      "views": 194
     }
   ],
   "notes": [],
@@ -830,7 +830,7 @@
       "username": "obigriffith"
     }
   ],
-  "retrieved": "2016-04-22T19:13:09.565253Z",
+  "retrieved": "2016-04-26T00:42:14.446904Z",
   "threads": [
     {
       "document": null,
@@ -852,7 +852,7 @@
       "subject": "Applications of machine learning for aggregating judgments",
       "topic_field": "Machine learning,Crowdsourcing",
       "url": "/discussion/applications-of-machine-learning-for-aggregating-judgments/142",
-      "views": 18
+      "views": 19
     },
     {
       "document": null,
@@ -863,7 +863,7 @@
       "subject": "What lies ‘downstream’ of Bcr-Abl ?",
       "topic_field": "Cancer Biology,Pathways,Imatinib Bcr-Abl",
       "url": "/discussion/what-lies-downstream-of-bcr-abl/143",
-      "views": 18
+      "views": 19
     },
     {
       "document": null,
@@ -874,7 +874,7 @@
       "subject": "",
       "topic_field": "",
       "url": "/discussion/review-summary/154",
-      "views": 21
+      "views": 22
     },
     {
       "document": null,
@@ -885,7 +885,7 @@
       "subject": "",
       "topic_field": "",
       "url": "/discussion/review-summary/156",
-      "views": 20
+      "views": 22
     }
   ]
 }

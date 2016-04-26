@@ -3404,7 +3404,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 818
+      "views": 821
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -4542,8 +4542,8 @@
     },
     {
       "added": "2016-04-18T18:55:45.079216Z",
-      "body_html": "<p>By sequential complexity, I am referring to forward sequential complexity. My choice between forward versus backward complexity was arbitrary but motivated by our application where we have more compounds than diseases. The way I have approached complexity estimation is for a single source–target node pair. Therefore the current averaging allows comparison to join index complexities. Can you explain how the multipliers differ between metapaths, when they all start on compounds and end on diseases?</p>",
-      "body_md": "By sequential complexity, I am referring to forward sequential complexity. My choice between forward versus backward complexity was arbitrary but motivated by our application where we have more compounds than diseases. The way I have approached complexity estimation is for a single source--target node pair. Therefore the current averaging allows comparison to join index complexities. Can you explain how the multipliers differ between metapaths, when they all start on compounds and end on diseases?",
+      "body_html": "<p>EDIT: removed in response to the removal of <a href=\"/u/alizee\" class=\"username\">@alizee</a>'s preceding note.</p>",
+      "body_md": "EDIT: removed in response to the removal of @alizee's preceding note.",
       "comment": 1269,
       "profile": 17,
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187#note-248"
@@ -4563,6 +4563,14 @@
       "comment": 1278,
       "profile": 17,
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#note-254"
+    },
+    {
+      "added": "2016-04-24T17:49:50.704531Z",
+      "body_html": "<p>See the <a href=\"http://nbviewer.jupyter.org/github/dhimmel/learn/blob/f8f41e7e024733f443817c2a0353bc711bfa879e/optimize/time.ipynb\">updated notebook</a> where the silent timeout issue has been fixed. Now all queries count towards average time.</p>",
+      "body_md": "See the [updated notebook](http://nbviewer.jupyter.org/github/dhimmel/learn/blob/f8f41e7e024733f443817c2a0353bc711bfa879e/optimize/time.ipynb) where the silent timeout issue has been fixed. Now all queries count towards average time.",
+      "comment": 1269,
+      "profile": 17,
+      "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187#note-255"
     }
   ],
   "profiles": [
@@ -4807,7 +4815,7 @@
       "username": "ostrokach"
     }
   ],
-  "retrieved": "2016-04-22T19:13:04.806641Z",
+  "retrieved": "2016-04-26T00:42:28.782606Z",
   "threads": [
     {
       "document": null,
@@ -4818,7 +4826,7 @@
       "subject": "How should we construct a catalog of drug indications?",
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 307
+      "views": 313
     },
     {
       "document": null,
@@ -4829,7 +4837,7 @@
       "subject": "Suggestions for additional information types?",
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 78
+      "views": 81
     },
     {
       "document": null,
@@ -4840,7 +4848,7 @@
       "subject": "Enabling reproducibility and reuse",
       "topic_field": "Reproducibility",
       "url": "/discussion/enabling-reproducibility-and-reuse/23",
-      "views": 77
+      "views": 80
     },
     {
       "document": null,
@@ -4862,7 +4870,7 @@
       "subject": "Assessing the quality and applicability of the SIDER 2 resource",
       "topic_field": "SIDER,Indications,NLP,Drugs,Side Effects,Drug Labels",
       "url": "/discussion/assessing-the-quality-and-applicability-of-the-sider-2-resource/30",
-      "views": 88
+      "views": 92
     },
     {
       "document": null,
@@ -4873,7 +4881,7 @@
       "subject": "MEDI indications data — discrepancy in resource-specific counts",
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 45
+      "views": 51
     },
     {
       "document": null,
@@ -4884,7 +4892,7 @@
       "subject": "Using Entrez Gene as our gene vocabulary",
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 105
+      "views": 107
     },
     {
       "document": null,
@@ -4895,7 +4903,7 @@
       "subject": "Compiling Gene Ontology annotations into an easy-to-use format",
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 127
+      "views": 134
     },
     {
       "document": null,
@@ -4906,7 +4914,7 @@
       "subject": "Unifying drug vocabularies",
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 168
+      "views": 172
     },
     {
       "document": null,
@@ -4917,7 +4925,7 @@
       "subject": "Tissue Node",
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 88
+      "views": 92
     },
     {
       "document": null,
@@ -4928,7 +4936,7 @@
       "subject": "Mapping Incomplete Interactome disease names to MeSH",
       "topic_field": "Terminologies,Mapping,Incomplete Interactome,MeSH",
       "url": "/discussion/mapping-incomplete-interactome-disease-names-to-mesh/42",
-      "views": 48
+      "views": 50
     },
     {
       "document": null,
@@ -4939,7 +4947,7 @@
       "subject": "Computing consensus transcriptional profiles for LINCS L1000 perturbations",
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 228
+      "views": 238
     },
     {
       "document": null,
@@ -4950,7 +4958,7 @@
       "subject": "Unifying disease vocabularies",
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 116
+      "views": 118
     },
     {
       "document": null,
@@ -4961,7 +4969,7 @@
       "subject": "Processing LabeledIn to extract indications",
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 55
+      "views": 56
     },
     {
       "document": null,
@@ -4972,7 +4980,7 @@
       "subject": "Evaluation framework",
       "topic_field": "Validation,Evalauation",
       "url": "/discussion/evaluation-framework/47",
-      "views": 30
+      "views": 32
     },
     {
       "document": null,
@@ -4983,7 +4991,7 @@
       "subject": "Text as a resource for network population?",
       "topic_field": "Natural Language Processing,Relation Extraction,Bias,Prior Knowledge",
       "url": "/discussion/text-as-a-resource-for-network-population/48",
-      "views": 49
+      "views": 51
     },
     {
       "document": null,
@@ -4994,7 +5002,7 @@
       "subject": "UniChem Mapping to LINCS Small Molecules",
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 152
+      "views": 159
     },
     {
       "document": null,
@@ -5005,7 +5013,7 @@
       "subject": "Human Symptom Disease Network-MeSH ID Matching",
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 177
+      "views": 180
     },
     {
       "document": null,
@@ -5016,7 +5024,7 @@
       "subject": "Integrating drug target information from BindingDB",
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 135
+      "views": 139
     },
     {
       "document": null,
@@ -5027,7 +5035,7 @@
       "subject": "Selecting informative ERC (evolutionary rate covariation) values between genes",
       "topic_field": "Evolution,Entrez Gene,ERC,UCSC Genome Browser,Evolutionary Rate Covariation",
       "url": "/discussion/selecting-informative-erc-evolutionary-rate-covariation-values-between-genes/57",
-      "views": 49
+      "views": 51
     },
     {
       "document": null,
@@ -5038,7 +5046,7 @@
       "subject": "Retrieving the ingredients in RxNorm concepts",
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 225
+      "views": 230
     },
     {
       "document": null,
@@ -5049,7 +5057,7 @@
       "subject": "Extracting indications from the ehrlink resource",
       "topic_field": "Databases,Indications,Clinical Informatics,EHR,Ehrlink,Medications,Health Records",
       "url": "/discussion/extracting-indications-from-the-ehrlink-resource/62",
-      "views": 49
+      "views": 51
     },
     {
       "document": null,
@@ -5060,7 +5068,7 @@
       "subject": "Protein (target, carrier, transporter, and enzyme) interactions in DrugBank",
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 184
+      "views": 190
     },
     {
       "document": null,
@@ -5071,7 +5079,7 @@
       "subject": "KaBOB Knowledgebase",
       "topic_field": "",
       "url": "/discussion/kabob-knowledgebase/66",
-      "views": 62
+      "views": 64
     },
     {
       "document": null,
@@ -5082,7 +5090,7 @@
       "subject": "Mining knowledge from MEDLINE articles and their indexed MeSH terms",
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 91
+      "views": 94
     },
     {
       "document": null,
@@ -5093,7 +5101,7 @@
       "subject": "Disease Ontology feature requests",
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 41
+      "views": 42
     },
     {
       "document": null,
@@ -5104,7 +5112,7 @@
       "subject": "Calculating molecular similarities between DrugBank compounds",
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 59
+      "views": 62
     },
     {
       "document": null,
@@ -5115,7 +5123,7 @@
       "subject": "Calculating genomic windows for GWAS lead SNPs",
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 217
+      "views": 220
     },
     {
       "document": null,
@@ -5126,7 +5134,7 @@
       "subject": "Adding pathway resources to your network",
       "topic_field": "Databases,Networks,Pathways",
       "url": "/discussion/adding-pathway-resources-to-your-network/72",
-      "views": 69
+      "views": 70
     },
     {
       "document": null,
@@ -5137,7 +5145,7 @@
       "subject": "Extracting disease-gene associations from the GWAS Catalog",
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 109
+      "views": 112
     },
     {
       "document": null,
@@ -5148,7 +5156,7 @@
       "subject": "Tissue-specific gene expression resources",
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 226
+      "views": 234
     },
     {
       "document": null,
@@ -5159,7 +5167,7 @@
       "subject": "Processing GTEx for tissue-specific gene expression",
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 204
+      "views": 210
     },
     {
       "document": null,
@@ -5170,7 +5178,7 @@
       "subject": "R best practices",
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 384
+      "views": 405
     },
     {
       "document": null,
@@ -5181,7 +5189,7 @@
       "subject": "Python for the modern biodata scientist",
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 479
+      "views": 481
     },
     {
       "document": null,
@@ -5192,7 +5200,7 @@
       "subject": "Creating a catalog of protein interactions",
       "topic_field": "Protein Interactions,Interactions,PPI",
       "url": "/discussion/creating-a-catalog-of-protein-interactions/85",
-      "views": 89
+      "views": 92
     },
     {
       "document": null,
@@ -5203,7 +5211,7 @@
       "subject": "The TISSUES resource for the tissue-specificity of genes",
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 69
+      "views": 71
     },
     {
       "document": null,
@@ -5214,7 +5222,7 @@
       "subject": "Disease similarity from MEDLINE topic cooccurrence",
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 30
+      "views": 33
     },
     {
       "document": null,
@@ -5225,7 +5233,7 @@
       "subject": "Functional disease annotations for genes using DOAF",
       "topic_field": "Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations",
       "url": "/discussion/functional-disease-annotations-for-genes-using-doaf/94",
-      "views": 37
+      "views": 40
     },
     {
       "document": null,
@@ -5236,7 +5244,7 @@
       "subject": "Expert curation of our indication catalog for disease-modifying treatments",
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 129
+      "views": 131
     },
     {
       "document": null,
@@ -5247,7 +5255,7 @@
       "subject": "STARGEO: expression signatures for disease using crowdsourced GEO annotation",
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 145
+      "views": 151
     },
     {
       "document": null,
@@ -5258,7 +5266,7 @@
       "subject": "Extracting side effects from SIDER 4",
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 74
+      "views": 77
     },
     {
       "document": null,
@@ -5269,7 +5277,7 @@
       "subject": "The ADEPTUS resource for expression signatures of disease",
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 64
+      "views": 66
     },
     {
       "document": null,
@@ -5280,7 +5288,7 @@
       "subject": "One network to rule them all",
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 166
+      "views": 168
     },
     {
       "document": null,
@@ -5291,7 +5299,7 @@
       "subject": "Renaming ‘heterogeneous networks’ to a more concise and catchy term",
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 90
+      "views": 94
     },
     {
       "document": null,
@@ -5302,7 +5310,7 @@
       "subject": "Processing DisGeNET for disease-gene relationships",
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 48
+      "views": 51
     },
     {
       "document": null,
@@ -5313,7 +5321,7 @@
       "subject": "Processing the DISEASES resource for disease–gene relationships",
       "topic_field": "Databases,Diseases,Associations",
       "url": "/discussion/processing-the-diseases-resource-for-diseasegene-relationships/106",
-      "views": 35
+      "views": 40
     },
     {
       "document": null,
@@ -5324,7 +5332,7 @@
       "subject": "Integrating resources with disparate licensing into an open network",
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 157
+      "views": 164
     },
     {
       "document": null,
@@ -5335,7 +5343,7 @@
       "subject": "MSigDB licensing",
       "topic_field": "Copyright,Permission,Licensing,MSigDB,MIT",
       "url": "/discussion/msigdb-licensing/108",
-      "views": 68
+      "views": 71
     },
     {
       "document": null,
@@ -5346,7 +5354,7 @@
       "subject": "LINCS L1000 licensing",
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 132
+      "views": 139
     },
     {
       "document": null,
@@ -5357,7 +5365,7 @@
       "subject": "Incomplete Interactome licensing",
       "topic_field": "Incomplete Interactome,Permission,Licensing,Copyright Transfer,Supplement,AAAS",
       "url": "/discussion/incomplete-interactome-licensing/111",
-      "views": 64
+      "views": 68
     },
     {
       "document": null,
@@ -5368,7 +5376,7 @@
       "subject": "Using the neo4j graph database for hetnets",
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 216
+      "views": 224
     },
     {
       "document": null,
@@ -5379,7 +5387,7 @@
       "subject": "Tracking project reuse, citation, and publicity",
       "topic_field": "Citations,Publicity,Media Coverage,Reuse,Attention",
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113",
-      "views": 41
+      "views": 42
     },
     {
       "document": null,
@@ -5390,7 +5398,7 @@
       "subject": "Assessing the informativeness of features",
       "topic_field": "HNEP,Hetnets,Features,Metapaths",
       "url": "/discussion/assessing-the-informativeness-of-features/115",
-      "views": 23
+      "views": 25
     },
     {
       "document": null,
@@ -5401,7 +5409,7 @@
       "subject": "Processing Bgee for tissue-specific gene presence and over/under-expression",
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 52
+      "views": 56
     },
     {
       "document": null,
@@ -5412,7 +5420,7 @@
       "subject": "Licensing neo4j",
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 49
+      "views": 53
     },
     {
       "document": null,
@@ -5423,7 +5431,7 @@
       "subject": "Path exclusion conditions",
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 56
+      "views": 58
     },
     {
       "document": null,
@@ -5434,7 +5442,7 @@
       "subject": "Permuting hetnets and implementing randomized edge swaps in cypher",
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 36
+      "views": 37
     },
     {
       "document": null,
@@ -5445,7 +5453,7 @@
       "subject": "Data nomenclature: naming and abbreviating our network types",
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 42
+      "views": 46
     },
     {
       "document": null,
@@ -5456,7 +5464,7 @@
       "subject": "Positive correlations between knockdown and overexpression profiles from LINCS L1000",
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 85
+      "views": 91
     },
     {
       "document": null,
@@ -5467,7 +5475,7 @@
       "subject": "Assessing the effectiveness of our hetnet permutations",
       "topic_field": "permutation,XSwap,network randomization,hetnets,hetio",
       "url": "/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178",
-      "views": 20
+      "views": 21
     },
     {
       "document": null,
@@ -5478,7 +5486,7 @@
       "subject": "Workshop to analyze LINCS data for the Systems Pharmacology course at UCSF",
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 73
+      "views": 78
     },
     {
       "document": null,
@@ -5489,7 +5497,7 @@
       "subject": "Announcing PharmacotherapyDB: the Open Catalog of Drug Therapies for Disease",
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 101
+      "views": 104
     },
     {
       "document": null,
@@ -5500,7 +5508,7 @@
       "subject": "Assessing the imputation quality of gene expression in LINCS L1000",
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 28
+      "views": 29
     },
     {
       "document": null,
@@ -5511,7 +5519,7 @@
       "subject": "Incorporating DrugCentral data in our network",
       "topic_field": "DrugCentral,pharmacology,Database",
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186",
-      "views": 30
+      "views": 34
     },
     {
       "document": null,
@@ -5522,7 +5530,7 @@
       "subject": "Estimating the complexity of hetnet traversal",
       "topic_field": "complexity,runtime,optimization,Neo4J,join hints",
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187",
-      "views": 25
+      "views": 27
     },
     {
       "document": null,
@@ -5533,7 +5541,7 @@
       "subject": "Transforming DWPCs for hetnet edge prediction",
       "topic_field": "IHS,transformation,DWPC,regression",
       "url": "/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193",
-      "views": 21
+      "views": 22
     },
     {
       "document": null,
@@ -5544,7 +5552,7 @@
       "subject": "Network Edge Prediction: how to deal with self-testing",
       "topic_field": "HNEP,Hetnets,Machine learning,self-testing",
       "url": "/discussion/network-edge-prediction-how-to-deal-with-self-testing/194",
-      "views": 24
+      "views": 25
     },
     {
       "document": null,
@@ -5555,7 +5563,7 @@
       "subject": "Measuring user contribution and content creation",
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 11
+      "views": 13
     },
     {
       "document": null,
@@ -5566,7 +5574,7 @@
       "subject": "Network Edge Prediction: Estimating the prior",
       "topic_field": "Machine learning,Heterogeneous Networks,Hetnets,HNEP,Prior Knowledge",
       "url": "/discussion/network-edge-prediction-estimating-the-prior/201",
-      "views": 16
+      "views": 17
     },
     {
       "document": null,
@@ -5577,7 +5585,7 @@
       "subject": "Describing Hetionet v1.0 through visualization and statistics",
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 24
+      "views": 25
     },
     {
       "document": null,
@@ -5588,7 +5596,7 @@
       "subject": "Computing standardized logistic regression coefficients",
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 7
+      "views": 14
     }
   ]
 }

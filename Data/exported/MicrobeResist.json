@@ -180,7 +180,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/MicrobeResist/proposal",
-      "views": 338
+      "views": 345
     }
   ],
   "notes": [
@@ -285,7 +285,7 @@
       "username": "JamesMeadow"
     }
   ],
-  "retrieved": "2016-04-22T19:13:13.697505Z",
+  "retrieved": "2016-04-26T00:42:09.690743Z",
   "threads": [
     {
       "document": null,
@@ -296,7 +296,7 @@
       "subject": "Play up your lab’s leadership in open science!",
       "topic_field": "",
       "url": "/discussion/play-up-your-labs-leadership-in-open-science/3",
-      "views": 40
+      "views": 41
     },
     {
       "document": null,
@@ -307,7 +307,7 @@
       "subject": "Fungal diversity characterization using ITS",
       "topic_field": "ITS,Fungi",
       "url": "/discussion/fungal-diversity-characterization-using-its/5",
-      "views": 24
+      "views": 25
     },
     {
       "document": null,
@@ -318,7 +318,7 @@
       "subject": "Introduction to the ThinkLab pilot",
       "topic_field": "ThinkLab,Meta",
       "url": "/discussion/introduction-to-the-thinklab-pilot/6",
-      "views": 13
+      "views": 14
     },
     {
       "document": null,
@@ -351,7 +351,7 @@
       "subject": "Concerns with projected outcomes",
       "topic_field": "",
       "url": "/discussion/concerns-with-projected-outcomes/10",
-      "views": 35
+      "views": 37
     },
     {
       "document": null,
@@ -362,7 +362,7 @@
       "subject": "Methods considerations",
       "topic_field": "",
       "url": "/discussion/methods-considerations/11",
-      "views": 28
+      "views": 30
     },
     {
       "document": null,
@@ -373,7 +373,7 @@
       "subject": "Markdown text formatting tips for proposal",
       "topic_field": "Markdown",
       "url": "/discussion/markdown-text-formatting-tips-for-proposal/15",
-      "views": 44
+      "views": 45
     }
   ]
 }
