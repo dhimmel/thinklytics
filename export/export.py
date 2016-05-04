@@ -97,7 +97,7 @@ if __name__ == '__main__':
     project_group.add_argument('--project', default='rephetio', help='export a specific project given by its project id')
     project_group.add_argument('--all-projects', action='store_true', help='export all thinklab projects')
 
-    parser.add_argument('--outputdir', default='exported', help='directory to export JSON files')
+    parser.add_argument('--outputdir', default='json', help='directory to export JSON files')
 
     args = parser.parse_args()
 
