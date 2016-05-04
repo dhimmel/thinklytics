@@ -788,7 +788,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/HHMI_Bcr_Abl/proposal",
-      "views": 194
+      "views": 209
     }
   ],
   "notes": [],
@@ -830,7 +830,7 @@
       "username": "obigriffith"
     }
   ],
-  "retrieved": "2016-04-26T00:42:14.446904Z",
+  "retrieved": "2016-05-04T18:19:16.756359Z",
   "threads": [
     {
       "document": null,
@@ -841,7 +841,7 @@
       "subject": "Predicting Bcr-Abl targets using a hybrid information extraction system",
       "topic_field": "Machine learning,Cancer Biology,Crowdsourcing,Literature Mining,Drug Targets",
       "url": "/doc/11/review",
-      "views": 11
+      "views": 13
     },
     {
       "document": null,
@@ -852,7 +852,7 @@
       "subject": "Applications of machine learning for aggregating judgments",
       "topic_field": "Machine learning,Crowdsourcing",
       "url": "/discussion/applications-of-machine-learning-for-aggregating-judgments/142",
-      "views": 19
+      "views": 22
     },
     {
       "document": null,
@@ -863,7 +863,7 @@
       "subject": "What lies ‘downstream’ of Bcr-Abl ?",
       "topic_field": "Cancer Biology,Pathways,Imatinib Bcr-Abl",
       "url": "/discussion/what-lies-downstream-of-bcr-abl/143",
-      "views": 19
+      "views": 21
     },
     {
       "document": null,
@@ -885,7 +885,7 @@
       "subject": "",
       "topic_field": "",
       "url": "/discussion/review-summary/156",
-      "views": 22
+      "views": 24
     }
   ]
 }

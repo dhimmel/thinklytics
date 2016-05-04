@@ -1447,6 +1447,30 @@
       "published": "2016-04-15T00:10:54.681807Z",
       "thread": 197,
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197#15"
+    },
+    {
+      "body_html": "<p>Integrating with <a href=\"https://www.altmetric.com/\">Altmetric</a> will help track project attention, as we've <a href=\"https://thinklab.com/discussion/tracking-project-reuse-citation-and-publicity/113\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d113\">been doing manually</a> for Project Rephetio. Altmetric is becoming core infrastructure with <a href=\"https://impactstory.org/u/0000-0002-3012-7446\">Impactstory</a> now being built on top of it.</p>\r\n\r\n<p>There are two sides to Altmetric integration.</p>\r\n\r\n<h2>1. Altmetric tracking</h2>\r\n\r\n<p>The first step is making sure all Thinklab pages with a DOI are tracked by Altmetric. Thinklab discussions are already tracked, but some Thinklab pages like projects don't provide the necessary identifying metadata.</p>\r\n\r\n<h2>2. Embedded badges</h2>\r\n\r\n<p>Second, it would be nice to report Altmetric scores for Thinklab content. For example, you could embed badges into discussion and project pages. It's unclear whether embedding the badges would be free. The <a href=\"https://api.altmetric.com/embeds.html\" title=\"Embeddable badges\">API documentation</a> states:</p>\r\n\r\n<blockquote><p>The badges are free to use for academic repositories and individual researchers. If you're an organisation or publisher and would like to use these badges, please get in touch to discuss implementation.</p></blockquote>\r\n\r\n<p>However, a more recent <a href=\"https://help.altmetric.com/support/solutions/articles/6000086842-getting-started-with-altmetric-on-your-journal-or-institutional-repository\" title=\"Getting started with Altmetric on your journal or institutional repository\">blog post</a> doesn't mention any restrictions and states:</p>\r\n\r\n<blockquote><p>Altmetric.com embeds allow you to add new social metrics and data to your content with a minimum of fuss and technical effort</p></blockquote>\r\n\r\n<p>So perhaps the right approach would be to see if Thinklab qualifies for free badges. If so, I think they'd be a worthwhile addition.</p>",
+      "body_md": "Integrating with [Altmetric](https://www.altmetric.com/) will help track project attention, as we've [been doing manually](https://thinklab.com/discussion/tracking-project-reuse-citation-and-publicity/113) for Project Rephetio. Altmetric is becoming core infrastructure with [Impactstory](https://impactstory.org/u/0000-0002-3012-7446) now being built on top of it.\r\n\r\nThere are two sides to Altmetric integration.\r\n\r\n## 1. Altmetric tracking\r\n\r\nThe first step is making sure all Thinklab pages with a DOI are tracked by Altmetric. Thinklab discussions are already tracked, but some Thinklab pages like projects don't provide the necessary identifying metadata.\r\n\r\n## 2. Embedded badges\r\n\r\nSecond, it would be nice to report Altmetric scores for Thinklab content. For example, you could embed badges into discussion and project pages. It's unclear whether embedding the badges would be free. The [API documentation](https://api.altmetric.com/embeds.html \"Embeddable badges\") states:\r\n\r\n> The badges are free to use for academic repositories and individual researchers. If you're an organisation or publisher and would like to use these badges, please get in touch to discuss implementation.\r\n\r\nHowever, a more recent [blog post](https://help.altmetric.com/support/solutions/articles/6000086842-getting-started-with-altmetric-on-your-journal-or-institutional-repository \"Getting started with Altmetric on your journal or institutional repository\") doesn't mention any restrictions and states:\r\n\r\n> Altmetric.com embeds allow you to add new social metrics and data to your content with a minimum of fuss and technical effort\r\n\r\nSo perhaps the right approach would be to see if Thinklab qualifies for free badges. If so, I think they'd be a worthwhile addition.",
+      "profile": 17,
+      "published": "2016-05-01T19:25:33.494514Z",
+      "thread": 207,
+      "url": "/discussion/tracking-attention-through-altmetric-integration/207"
+    },
+    {
+      "body_html": "<p>Project metadata has been added. The following is now included on the homepage of the <a href=\"https://thinklab.com/p/rephetio\">Rephetio project</a>:</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">&lt;meta name=\"citation_doi\" content=\"10.15363/thinklab.4\"&gt;\r\n&lt;meta name=\"citation_title\" content=\"Rephetio: Repurposing drugs on a hetnet [project]\"&gt;\r\n&lt;meta name=\"citation_online_date\" content=\"Jan. 12, 2015\"&gt;\r\n&lt;meta name=\"citation_author\" content=\"Daniel Himmelstein, Antoine Lizee, Pouya Khankhanian, Leo Brueggeman, Sabrina Chen, Chrissy Hessler, Dexter Hadley, Sergio Baranzini\"&gt;\r\n&lt;meta name=\"citation_journal_title\" content=\"Thinklab\"&gt;\r\n&lt;meta name=\"citation_publisher\" content=\"Thinklab\"&gt;</code></pre>\r\n\r\n<p>I will email Altmetric to ask about adding their badges added on Thinklab.</p>",
+      "body_md": "Project metadata has been added. The following is now included on the homepage of the [Rephetio project](https://thinklab.com/p/rephetio):\r\n\r\n```\r\n<meta name=\"citation_doi\" content=\"10.15363/thinklab.4\">\r\n<meta name=\"citation_title\" content=\"Rephetio: Repurposing drugs on a hetnet [project]\">\r\n<meta name=\"citation_online_date\" content=\"Jan. 12, 2015\">\r\n<meta name=\"citation_author\" content=\"Daniel Himmelstein, Antoine Lizee, Pouya Khankhanian, Leo Brueggeman, Sabrina Chen, Chrissy Hessler, Dexter Hadley, Sergio Baranzini\">\r\n<meta name=\"citation_journal_title\" content=\"Thinklab\">\r\n<meta name=\"citation_publisher\" content=\"Thinklab\">\r\n```\r\n\r\nI will email Altmetric to ask about adding their badges added on Thinklab.",
+      "profile": 2,
+      "published": "2016-05-02T16:58:15.175110Z",
+      "thread": 207,
+      "url": "/discussion/tracking-attention-through-altmetric-integration/207#2"
+    },
+    {
+      "body_html": "<p>Because discussions gather several posts of different significance, and since a few discussions have grown quite long, it would be great to let the posts exists by themselves. </p>\r\n\r\n<p>The first step would be to add a \"share\" button like those of stack-overflow answers for instance. I feel like a good few options would be an url or a post-specific doi to be copied, and a tweet?</p>",
+      "body_md": "Because discussions gather several posts of different significance, and since a few discussions have grown quite long, it would be great to let the posts exists by themselves. \r\n\r\nThe first step would be to add a \"share\" button like those of stack-overflow answers for instance. I feel like a good few options would be an url or a post-specific doi to be copied, and a tweet?",
+      "profile": 23,
+      "published": "2016-05-03T07:47:07.001905Z",
+      "thread": 209,
+      "url": "/discussion/share-single-posts/209"
     }
   ],
   "documents": [
@@ -2063,6 +2087,14 @@
       "comment": 1262,
       "profile": 2,
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197#note-252"
+    },
+    {
+      "added": "2016-05-03T18:12:45.810780Z",
+      "body_html": "<p>Actually I like the idea of one \"share\" and one \"cite\" button. And to be clear - I think the post should still be shown in the context of the discussion, as it is now when you create the link by hand with the anchor (https://thinklab..../209<strong>#2</strong> for instance).</p>",
+      "body_md": "Actually I like the idea of one \"share\" and one \"cite\" button. And to be clear - I think the post should still be shown in the context of the discussion, as it is now when you create the link by hand with the anchor (https://thinklab..../209**#2** for instance).",
+      "comment": 1292,
+      "profile": 23,
+      "url": "/discussion/share-single-posts/209#note-257"
     }
   ],
   "profiles": [
@@ -2157,7 +2189,7 @@
       "username": "pouyakhankhanian"
     }
   ],
-  "retrieved": "2016-04-26T00:42:09.161800Z",
+  "retrieved": "2016-05-04T18:19:18.526103Z",
   "threads": [
     {
       "document": null,
@@ -2168,7 +2200,7 @@
       "subject": "Add your ThinkLab feedback here in Meta",
       "topic_field": "",
       "url": "/discussion/add-your-thinklab-feedback-here-in-meta/2",
-      "views": 39
+      "views": 43
     },
     {
       "document": null,
@@ -2179,7 +2211,7 @@
       "subject": "Discussion Ranking and Visibility",
       "topic_field": "ThinkLab,Discussions",
       "url": "/discussion/discussion-ranking-and-visibility/26",
-      "views": 30
+      "views": 33
     },
     {
       "document": null,
@@ -2190,7 +2222,7 @@
       "subject": "File hosting advice",
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 69
+      "views": 73
     },
     {
       "document": null,
@@ -2212,7 +2244,7 @@
       "subject": "Markdown feedback, bugs, and suggestions",
       "topic_field": "Markdown,TLFM",
       "url": "/discussion/markdown-feedback-bugs-and-suggestions/32",
-      "views": 55
+      "views": 58
     },
     {
       "document": null,
@@ -2223,7 +2255,7 @@
       "subject": "Web analytics platform",
       "topic_field": "Privacy,IT,Google Analytics,Piwik,Sysadmin,Analytics",
       "url": "/discussion/web-analytics-platform/33",
-      "views": 49
+      "views": 55
     },
     {
       "document": null,
@@ -2234,7 +2266,7 @@
       "subject": "Draft mode for new discussions",
       "topic_field": "ThinkLab,Discussions,Draft",
       "url": "/discussion/draft-mode-for-new-discussions/37",
-      "views": 21
+      "views": 22
     },
     {
       "document": null,
@@ -2245,7 +2277,7 @@
       "subject": "New features for tracking ThinkLab citations",
       "topic_field": "Citation",
       "url": "/discussion/new-features-for-tracking-thinklab-citations/45",
-      "views": 31
+      "views": 35
     },
     {
       "document": null,
@@ -2256,7 +2288,7 @@
       "subject": "Contribution valuation options",
       "topic_field": "ThinkLab,Contributions,Incentives",
       "url": "/discussion/contribution-valuation-options/49",
-      "views": 49
+      "views": 52
     },
     {
       "document": null,
@@ -2267,7 +2299,7 @@
       "subject": "Comment specific options and features",
       "topic_field": "Discussions,TLFM,Comments",
       "url": "/discussion/comment-specific-options-and-features/54",
-      "views": 28
+      "views": 29
     },
     {
       "document": null,
@@ -2278,7 +2310,7 @@
       "subject": "RSS Feed per project option",
       "topic_field": "RSS Feed,Project Tracking",
       "url": "/discussion/rss-feed-per-project-option/55",
-      "views": 27
+      "views": 32
     },
     {
       "document": null,
@@ -2289,7 +2321,7 @@
       "subject": "Your comments in ThinkLab Meta are now payment eligible!",
       "topic_field": "",
       "url": "/discussion/your-comments-in-thinklab-meta-are-now-payment-eligible/56",
-      "views": 32
+      "views": 34
     },
     {
       "document": null,
@@ -2300,7 +2332,7 @@
       "subject": "ThinkLab as a vetting system for traditional grants",
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 138
+      "views": 146
     },
     {
       "document": null,
@@ -2311,7 +2343,7 @@
       "subject": "ThinkLab editor and markdown suggestions",
       "topic_field": "Markdown,TLFM,Editor",
       "url": "/discussion/thinklab-editor-and-markdown-suggestions/59",
-      "views": 38
+      "views": 42
     },
     {
       "document": null,
@@ -2322,7 +2354,7 @@
       "subject": "Comments & Notes interface and behaviour - Suggestions",
       "topic_field": "Comments",
       "url": "/discussion/comments-notes-interface-and-behaviour-suggestions/60",
-      "views": 39
+      "views": 42
     },
     {
       "document": null,
@@ -2333,7 +2365,7 @@
       "subject": "Why ThinkLab uses a flat discussion structure (not threaded)",
       "topic_field": "",
       "url": "/discussion/why-thinklab-uses-a-flat-discussion-structure-not-threaded/63",
-      "views": 52
+      "views": 58
     },
     {
       "document": null,
@@ -2344,7 +2376,7 @@
       "subject": "Should we aim to keep discussions narrowly focused?",
       "topic_field": "",
       "url": "/discussion/should-we-aim-to-keep-discussions-narrowly-focused/64",
-      "views": 44
+      "views": 46
     },
     {
       "document": null,
@@ -2355,7 +2387,7 @@
       "subject": "Citing ThinkLab discussions — feedback please",
       "topic_field": "Markdown,Discussions,Citation,DOI",
       "url": "/discussion/citing-thinklab-discussions-feedback-please/69",
-      "views": 29
+      "views": 32
     },
     {
       "document": null,
@@ -2366,7 +2398,7 @@
       "subject": "Reviewers or contributors — what term should we use for ThinkLab participants?",
       "topic_field": "",
       "url": "/discussion/reviewers-or-contributors-what-term-should-we-use-for-thinklab-participants/78",
-      "views": 23
+      "views": 28
     },
     {
       "document": null,
@@ -2377,7 +2409,7 @@
       "subject": "We now have a figures feature",
       "topic_field": "DOI,ThinkLab figures",
       "url": "/discussion/we-now-have-a-figures-feature/79",
-      "views": 32
+      "views": 37
     },
     {
       "document": null,
@@ -2388,7 +2420,7 @@
       "subject": "Citation metadata refreshing",
       "topic_field": "Metadata,Citation,Citations,DOI,References,CrossRef",
       "url": "/discussion/citation-metadata-refreshing/86",
-      "views": 25
+      "views": 31
     },
     {
       "document": null,
@@ -2399,7 +2431,7 @@
       "subject": "Impact points and leaderboard demotivating",
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 45
+      "views": 49
     },
     {
       "document": null,
@@ -2410,7 +2442,7 @@
       "subject": "Optional transparency to enable rating analytics",
       "topic_field": "Analytics,Transparency,Identity,Ratings,Rewards",
       "url": "/discussion/optional-transparency-to-enable-rating-analytics/100",
-      "views": 30
+      "views": 33
     },
     {
       "document": null,
@@ -2421,7 +2453,7 @@
       "subject": "Switching DOI links to the preferred format",
       "topic_field": "Standards,DOI,DOI resolution",
       "url": "/discussion/switching-doi-links-to-the-preferred-format/109",
-      "views": 25
+      "views": 27
     },
     {
       "document": null,
@@ -2432,7 +2464,7 @@
       "subject": "Heading style not applied to inline code or math",
       "topic_field": "Markdown,TLFM,Inline Math,Inline Code",
       "url": "/discussion/heading-style-not-applied-to-inline-code-or-math/114",
-      "views": 24
+      "views": 29
     },
     {
       "document": null,
@@ -2443,7 +2475,7 @@
       "subject": "ThinkLab needs a story",
       "topic_field": "",
       "url": "/discussion/thinklab-needs-a-story/131",
-      "views": 39
+      "views": 43
     },
     {
       "document": null,
@@ -2454,7 +2486,7 @@
       "subject": "A PDF upload option for proposal creation",
       "topic_field": "",
       "url": "/discussion/a-pdf-upload-option-for-proposal-creation/138",
-      "views": 25
+      "views": 27
     },
     {
       "document": null,
@@ -2465,7 +2497,7 @@
       "subject": "LaTeX integration",
       "topic_field": "",
       "url": "/discussion/latex-integration/139",
-      "views": 34
+      "views": 38
     },
     {
       "document": null,
@@ -2476,7 +2508,7 @@
       "subject": "Whole proposal reviewer synopsis - fund or no fund?",
       "topic_field": "Review Process",
       "url": "/discussion/whole-proposal-reviewer-synopsis-fund-or-no-fund/144",
-      "views": 38
+      "views": 39
     },
     {
       "document": null,
@@ -2487,7 +2519,7 @@
       "subject": "Markdown bug: hyperlink with title attribute causes excision",
       "topic_field": "Markdown,TLFM,Bug",
       "url": "/discussion/markdown-bug-hyperlink-with-title-attribute-causes-excision/163",
-      "views": 14
+      "views": 15
     },
     {
       "document": null,
@@ -2498,7 +2530,7 @@
       "subject": "Hypothesis for alerting authors of writing errors in discussion posts",
       "topic_field": "Hypothesis,hypothes.is,typos,annotations",
       "url": "/discussion/hypothesis-for-alerting-authors-of-writing-errors-in-discussion-posts/167",
-      "views": 20
+      "views": 24
     },
     {
       "document": null,
@@ -2509,7 +2541,7 @@
       "subject": "Streamlining access to the common interactions with citations",
       "topic_field": "popover,citation,user experience,Thinklab",
       "url": "/discussion/streamlining-access-to-the-common-interactions-with-citations/188",
-      "views": 11
+      "views": 15
     },
     {
       "document": null,
@@ -2520,7 +2552,7 @@
       "subject": "MathJax Block markers",
       "topic_field": "Technical Issue",
       "url": "/discussion/mathjax-block-markers/189",
-      "views": 12
+      "views": 15
     },
     {
       "document": null,
@@ -2531,7 +2563,7 @@
       "subject": "Hyperlinks inserted when printing Thinklab pages",
       "topic_field": "Thinklab,printing,typesetting",
       "url": "/discussion/hyperlinks-inserted-when-printing-thinklab-pages/190",
-      "views": 11
+      "views": 18
     },
     {
       "document": null,
@@ -2542,7 +2574,7 @@
       "subject": "Discussion summary statistics for illustrating project impact",
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 41
+      "views": 46
     },
     {
       "document": null,
@@ -2553,7 +2585,7 @@
       "subject": "Disambiguating proposal, project, and report titles",
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 17
+      "views": 22
     },
     {
       "document": null,
@@ -2564,7 +2596,7 @@
       "subject": "Auto-save",
       "topic_field": "",
       "url": "/discussion/auto-save/195",
-      "views": 10
+      "views": 14
     },
     {
       "document": null,
@@ -2575,7 +2607,7 @@
       "subject": "Automatically insert images",
       "topic_field": "",
       "url": "/discussion/automatically-insert-images/196",
-      "views": 12
+      "views": 18
     },
     {
       "document": null,
@@ -2586,7 +2618,7 @@
       "subject": "Support (and enforce) ssl connections to Thinklab",
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 16
+      "views": 17
     },
     {
       "document": null,
@@ -2597,7 +2629,29 @@
       "subject": "Improving search engine previewing",
       "topic_field": "SEO,Search Engine Marketing,HMTL,meta,description",
       "url": "/discussion/improving-search-engine-previewing/198",
-      "views": 16
+      "views": 24
+    },
+    {
+      "document": null,
+      "doi": "10.15363/thinklab.d207",
+      "doi_field": "",
+      "profile": 17,
+      "published": "2016-05-01T19:25:33.441488Z",
+      "subject": "Tracking attention through Altmetric integration",
+      "topic_field": "Altmetrics,Altmetric,attention",
+      "url": "/discussion/tracking-attention-through-altmetric-integration/207",
+      "views": 8
+    },
+    {
+      "document": null,
+      "doi": "10.15363/thinklab.d209",
+      "doi_field": "",
+      "profile": 23,
+      "published": "2016-05-03T07:47:06.967691Z",
+      "subject": "Share single posts",
+      "topic_field": "",
+      "url": "/discussion/share-single-posts/209",
+      "views": 7
     }
   ]
 }

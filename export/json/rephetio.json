@@ -3391,6 +3391,38 @@
       "published": "2016-04-21T20:16:45.695287Z",
       "thread": 205,
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205#2"
+    },
+    {
+      "body_html": "<h1>A note on standardized coefficients for logistic regression</h1>\r\n\r\n<p>This note aims at (i) understanding what standardized coefficients are, (ii) sketching the landscape of standardization approaches for logistic regression, (iii) drawing conclusions and guidelines to follow in general, and for our study in particular. I apologize for the length of the piece, but I find the exhaustivity of the result desirable — don't hesitate to jump to the conclusion if short in time.</p>\r\n\r\n<p>This note draws mainly from the most recent review of Menart (2011) <span class=\"citation\">[<a href=\"/doi/10.1093/sf/89.4.1409\" class=\"citation\" data-key=\"10.1093/sf/89.4.1409\">1</a>]</span>, as well as a few other papers <span class=\"citation\">[<a href=\"/doi/10.1007/978-981-287-077-3_63\" class=\"citation\" data-key=\"10.1007/978-981-287-077-3_63\">2</a>, <a href=\"/doi/10.1198/000313004x946\" class=\"citation\" data-key=\"10.1198/000313004x946\">3</a>]</span> for exhaustivity and clarification purposes.</p>\r\n\r\n<h2>Standardization is a transformation of the coefficients (not the model)</h2>\r\n\r\n<p>The goal of standardized coefficients is to specify a same model with different nominal values of its parameters. These transformed values present the main advantage of relying on an objectively defined scale rather than depending on the original metric of the corresponding predictor.</p>\r\n\r\n<p>Standardizing the coefficients is a matter of presentation and interpretation of a given model; it does not modify the model, its hypotheses, or its output. It <em>happens</em> that the approaches presented here sometimes results in parameters that coincide with the <em>expected</em> values for a different model, eg fitted with transformed input data. These are properties of some methods, not the goal of standardization.</p>\r\n\r\n<p>Standardization enables three things that are not possible with unstandardized coefficients. First, it offers an objective scale to coefficients corresponding to variables that have no natural metric. Second, and most importantly, it lets the user compare the effect of different predictor variables within the same model, by simply comparing the values of the corresponding standardized coefficients. Third, standardized coefficients provide an alternative interpretation of the model parameters, based on 'standard deviation' units of the predicted variables (and optionally of the predictor). </p>\r\n\r\n<p>Nevertheless, a few strong cases remain in favor of using unstandardized coefficients. The first one is the practical meaning of unstandardized coefficients when the predictor variable has a meaningful natural metric (like time, in years), or if the predictor is a boolean category (gender). In these cases, the interpretative power associated with unstandardized coefficients and their related parameters (e.g. odd ratios) promotes intuitive understanding and easy communication of the results. The second important problem that comes with (over)using standardized coefficients is their <em>sample specificity</em>. Even when studying the same phenomena, the standardized coefficients will have a different practical unit depending on the sample variance. This can pose significant challenges in interpreting the data, particularly when comparing models.</p>\r\n\r\n<h2>Standardization approaches</h2>\r\n\r\n<p>While standardized coefficients in classic linear regression are well-defined, logistic regression, like other generalized linear models, present additional complexity as a result of the non-linear link function (logit), and non-normal error function (binomial).</p>\r\n\r\n<p>The — historically — first <em>Goodman</em>'s standardization method standardizes each coefficient by its standard-error, effectively performing the equivalent of a Wald-Test. Beyond this first method, irrelevant here, two approaches have been taken. We call the first <em>partial standardization</em>; it leaves the predicted boolean variable untouched when standardizing the coefficients, and solely relies on the dispersion of each corresponding predictor. The second approach, <em>full standardization</em>, incorporates the dispersion of the predicted variable in an attempt to improve the general relevance of the resulting standardized coefficients.</p>\r\n\r\n<p>All these approaches result in sets of coefficients that are proportional to each other for a given model.</p>\r\n\r\n<h3>Partial standardization</h3>\r\n\r\n<p>We list here three variants of partial standardization. In all cases, each standardized coefficient <span class=\"math\">$$b^*$$</span> is a scaling of the corresponding unstandardized coefficient <span class=\"math\">$$b$$</span> by the sample standard deviation of the corresponding predictor <span class=\"math\">$$\\sigma_x$$</span>:</p>\r\n\r\n<div class=\"math\">$$$ b_{PS}^* = b \\cdot \\sigma_x \\big/ C$$$</div>\r\n\r\n<p>...where <span class=\"math\">$$C$$</span> is a constant that depends on the variation.</p>\r\n\r\n<p><strong>Agresti: <span class=\"math\">$$ C = 1 $$</span></strong>. This is the most straightforward and clear approach, where the coefficient is specified in 'per standard deviation' unit of the predictor. The <em>Agresti</em> coefficients are equal to the expected values for the coefficients of the same model fitted on the standardized predictors, if the Maximum Likelihood Estimator is the fitting algorithm.</p>\r\n\r\n<p><strong>SAS: <span class=\"math\">$$ C = \\text{sd}(logis) = \\frac{\\pi}{\\sqrt3} $$</span></strong>. This method scales by the standard deviation of the logistic distribution of unit scale. The resulting coefficients are equal to the expected values for the coefficients of the logistic regression on the standardized predictors, if fitted with Ordinary Least Square. This approach is used in the software SAS. </p>\r\n\r\n<p><strong>Long: <span class=\"math\">$$ C = \\text{sd}(logis) + \\text{sd}(norm) = \\frac{\\pi}{\\sqrt3} + 1 $$</span></strong>, where the standard deviation of the normal distribution is added to the normalization.</p>\r\n\r\n<h3>Full standardization</h3>\r\n\r\n<p>Here, we use the variance of the predicted variable to further scale the coefficients. This provides a closer equivalent to standardized coefficients of classic linear regression.</p>\r\n\r\n<p>The main difficulty resides in the non-meaningful variance of the class outcome, which points to using the variance of the linear predictor <span class=\"math\">$$\\mathrm{logit}(Y)$$</span>. Nevertheless, because <span class=\"math\">$$\\mathrm{logit}(Y)$$</span> takes only values of <span class=\"math\">$$\\pm\\infty$$</span>, its variance is not defined and we need proxies for it, based on <span class=\"math\">$$\\hat{Y}$$</span>, the <em>predicted</em> outcome. <em>Menard</em><span class=\"citation\">[<a href=\"/doi/10.4135/9781412983433\" class=\"citation\" data-key=\"10.4135/9781412983433\">4</a>]</span> proposes the variance estimate <span class=\"math\">$$ \\sigma_{\\mathrm{logit}(\\hat{Y})}^2 / R^2 $$</span>, while <em>Long</em> proposes to use the variance of the underlying latent variable <span class=\"math\">$$ \\sigma_{\\mathrm{logit}(\\hat{Y})}^2 + \\pi^2 / 3 $$</span>. The results can be expressed with the same formalism as above:</p>\r\n\r\n<p><strong>Menard: <span class=\"math\">$$ C = \\sigma_{\\mathrm{logit}(\\hat{Y})} \\big/ R $$</span></strong> This method, presented as superior than the others by its author <span class=\"citation\">[<a href=\"/doi/10.1093/sf/89.4.1409\" class=\"citation\" data-key=\"10.1093/sf/89.4.1409\">1</a>]</span>, has the downside of relying on the R-square of the model, whose computation is ambiguous (Cox &amp; Snell, Nagelkerke, and others have proposed <a href=\"http://www.ats.ucla.edu/stat/mult_pkg/faq/general/Psuedo_RSquareds.htm\"><em>pseudo</em>-R-squared</a> measures for logistic regression).</p>\r\n\r\n<p><strong>Long (full): <span class=\"math\">$$ C = \\sqrt{\\sigma_{\\mathrm{logit}(\\hat{Y})} ^2 + \\pi^2/3} $$</span></strong></p>\r\n\r\n<h2>Conclusion</h2>\r\n\r\n<p>Standardized coefficients are extremely valuable, mainly to (i) give a meaning to the coefficient affecting a predictor that has no natural metric and (ii) compare effects of predictors reported in different units.</p>\r\n\r\n<p>To achieve these two goals, I advise using the most straightforward, simple <em>Agresti</em> method of standardization:</p>\r\n\r\n<div class=\"math\">$$$ b^*_A = b \\cdot \\sigma_X $$$</div>\r\n\r\n<p>Further, to improve the general relevance of the standardized coefficients, one can account for the sample dispersion of the outcome variable, and use <em>fully standardized</em> coefficients as first introduced by <em>Menard</em> (1995). When using <em>Menard</em>'s standardization, one must choose and report the measure of pseudo-R-squared used:</p>\r\n\r\n<div class=\"math\">$$$ b^*_M = b \\cdot \\sigma_X \\cdot \\frac{R}{\\sigma_{\\mathrm{logit}(\\hat{Y})}}$$$</div>\r\n\r\n<p>Standardized coefficients don't change the model. If they are used as the main specification of the model, the variables need to be scaled accordingly, and the intercept should be transformed as the result. </p>\r\n\r\n<h3>For ML models on hetionet</h3>\r\n\r\n<p>For <em>hetionet</em>'s edge prediction problems,  we use DWPCs features, whose unit is highly non-intuitive and of variable range across metapaths. Therefore, we settled on using exclusively standardized coefficients of the <em>Agresti</em> method.</p>",
+      "body_md": "# A note on standardized coefficients for logistic regression\r\n\r\nThis note aims at (i) understanding what standardized coefficients are, (ii) sketching the landscape of standardization approaches for logistic regression, (iii) drawing conclusions and guidelines to follow in general, and for our study in particular. I apologize for the length of the piece, but I find the exhaustivity of the result desirable -- don't hesitate to jump to the conclusion if short in time.\r\n\r\nThis note draws mainly from the most recent review of Menart (2011) [@10.1093/sf/89.4.1409], as well as a few other papers [@10.1007/978-981-287-077-3_63 @10.1198/000313004x946] for exhaustivity and clarification purposes.\r\n\r\n## Standardization is a transformation of the coefficients (not the model)\r\n\r\nThe goal of standardized coefficients is to specify a same model with different nominal values of its parameters. These transformed values present the main advantage of relying on an objectively defined scale rather than depending on the original metric of the corresponding predictor.\r\n\r\nStandardizing the coefficients is a matter of presentation and interpretation of a given model; it does not modify the model, its hypotheses, or its output. It _happens_ that the approaches presented here sometimes results in parameters that coincide with the _expected_ values for a different model, eg fitted with transformed input data. These are properties of some methods, not the goal of standardization.\r\n\r\nStandardization enables three things that are not possible with unstandardized coefficients. First, it offers an objective scale to coefficients corresponding to variables that have no natural metric. Second, and most importantly, it lets the user compare the effect of different predictor variables within the same model, by simply comparing the values of the corresponding standardized coefficients. Third, standardized coefficients provide an alternative interpretation of the model parameters, based on 'standard deviation' units of the predicted variables (and optionally of the predictor). \r\n\r\nNevertheless, a few strong cases remain in favor of using unstandardized coefficients. The first one is the practical meaning of unstandardized coefficients when the predictor variable has a meaningful natural metric (like time, in years), or if the predictor is a boolean category (gender). In these cases, the interpretative power associated with unstandardized coefficients and their related parameters (e.g. odd ratios) promotes intuitive understanding and easy communication of the results. The second important problem that comes with (over)using standardized coefficients is their *sample specificity*. Even when studying the same phenomena, the standardized coefficients will have a different practical unit depending on the sample variance. This can pose significant challenges in interpreting the data, particularly when comparing models.\r\n\r\n## Standardization approaches\r\n\r\nWhile standardized coefficients in classic linear regression are well-defined, logistic regression, like other generalized linear models, present additional complexity as a result of the non-linear link function (logit), and non-normal error function (binomial).\r\n\r\nThe -- historically -- first _Goodman_'s standardization method standardizes each coefficient by its standard-error, effectively performing the equivalent of a Wald-Test. Beyond this first method, irrelevant here, two approaches have been taken. We call the first _partial standardization_; it leaves the predicted boolean variable untouched when standardizing the coefficients, and solely relies on the dispersion of each corresponding predictor. The second approach, _full standardization_, incorporates the dispersion of the predicted variable in an attempt to improve the general relevance of the resulting standardized coefficients.\r\n\r\nAll these approaches result in sets of coefficients that are proportional to each other for a given model.\r\n\r\n### Partial standardization\r\n\r\nWe list here three variants of partial standardization. In all cases, each standardized coefficient $$b^*$$ is a scaling of the corresponding unstandardized coefficient $$b$$ by the sample standard deviation of the corresponding predictor $$\\sigma_x$$:\r\n\r\n$$$ b_{PS}^* = b \\cdot \\sigma_x \\big/ C$$$\r\n\r\n...where $$C$$ is a constant that depends on the variation.\r\n \r\n**Agresti: $$ C = 1 $$**. This is the most straightforward and clear approach, where the coefficient is specified in 'per standard deviation' unit of the predictor. The _Agresti_ coefficients are equal to the expected values for the coefficients of the same model fitted on the standardized predictors, if the Maximum Likelihood Estimator is the fitting algorithm.\r\n\r\n**SAS: $$ C = \\text{sd}(logis) = \\frac{\\pi}{\\sqrt3} $$**. This method scales by the standard deviation of the logistic distribution of unit scale. The resulting coefficients are equal to the expected values for the coefficients of the logistic regression on the standardized predictors, if fitted with Ordinary Least Square. This approach is used in the software SAS. \r\n\r\n**Long: $$ C = \\text{sd}(logis) + \\text{sd}(norm) = \\frac{\\pi}{\\sqrt3} + 1 $$**, where the standard deviation of the normal distribution is added to the normalization.\r\n\r\n### Full standardization\r\n\r\nHere, we use the variance of the predicted variable to further scale the coefficients. This provides a closer equivalent to standardized coefficients of classic linear regression.\r\n\r\nThe main difficulty resides in the non-meaningful variance of the class outcome, which points to using the variance of the linear predictor $$\\mathrm{logit}(Y)$$. Nevertheless, because $$\\mathrm{logit}(Y)$$ takes only values of $$\\pm\\infty$$, its variance is not defined and we need proxies for it, based on $$\\hat{Y}$$, the _predicted_ outcome. _Menard_[@10.4135/9781412983433] proposes the variance estimate $$ \\sigma_{\\mathrm{logit}(\\hat{Y})}^2 / R^2 $$, while _Long_ proposes to use the variance of the underlying latent variable $$ \\sigma_{\\mathrm{logit}(\\hat{Y})}^2 + \\pi^2 / 3 $$. The results can be expressed with the same formalism as above:\r\n\r\n**Menard: $$ C = \\sigma_{\\mathrm{logit}(\\hat{Y})} \\big/ R $$** This method, presented as superior than the others by its author [@10.1093/sf/89.4.1409], has the downside of relying on the R-square of the model, whose computation is ambiguous (Cox & Snell, Nagelkerke, and others have proposed [_pseudo_-R-squared](http://www.ats.ucla.edu/stat/mult_pkg/faq/general/Psuedo_RSquareds.htm) measures for logistic regression).\r\n\r\n**Long (full): $$ C = \\sqrt{\\sigma_{\\mathrm{logit}(\\hat{Y})} ^2 + \\pi^2/3} $$**\r\n\r\n## Conclusion\r\n\r\nStandardized coefficients are extremely valuable, mainly to (i) give a meaning to the coefficient affecting a predictor that has no natural metric and (ii) compare effects of predictors reported in different units.\r\n\r\nTo achieve these two goals, I advise using the most straightforward, simple _Agresti_ method of standardization:\r\n\r\n$$$ b^*_A = b \\cdot \\sigma_X $$$\r\n\r\nFurther, to improve the general relevance of the standardized coefficients, one can account for the sample dispersion of the outcome variable, and use _fully standardized_ coefficients as first introduced by _Menard_ (1995). When using _Menard_'s standardization, one must choose and report the measure of pseudo-R-squared used:\r\n\r\n$$$ b^*_M = b \\cdot \\sigma_X \\cdot \\frac{R}{\\sigma_{\\mathrm{logit}(\\hat{Y})}}$$$\r\n\r\nStandardized coefficients don't change the model. If they are used as the main specification of the model, the variables need to be scaled accordingly, and the intercept should be transformed as the result. \r\n\r\n### For ML models on hetionet\r\n\r\nFor _hetionet_'s edge prediction problems,  we use DWPCs features, whose unit is highly non-intuitive and of variable range across metapaths. Therefore, we settled on using exclusively standardized coefficients of the _Agresti_ method.",
+      "profile": 23,
+      "published": "2016-05-01T23:34:02.781816Z",
+      "thread": 205,
+      "url": "/discussion/computing-standardized-logistic-regression-coefficients/205#3"
+    },
+    {
+      "body_html": "<h2>Standardized coefficients &amp; glmnet</h2>\r\n\r\n<p>In the edge prediction problem for <em>rephetio</em>, we use the R-package <code>glmnet</code> to perform lasso and ridge regression, in order to perform feature selection while fitting the model.</p>\r\n\r\n<p>In the light of the note above, we wanted to adapt the <em>Artesi</em> standardization to the tools we are using.</p>\r\n\r\n<h2>Summary</h2>\r\n\r\n<p><code>glmnet</code>, by default, standardizes the predictor variables <strong>before</strong> fitting the model. After checking in the source code and testing (see below) we came to the conclusion that the computed coefficients were then <em>reverse</em> standardized, with the inverse of the Artesi transformation, in order to report the coefficients in their natural metric †.</p>\r\n\r\n<p>Hence, there are three way to use standardization with the <code>glmnet</code> package:</p>\r\n\r\n<ol><li><p><strong>Untransformed variables, specifying <code>standardize = FALSE</code></strong>: this corresponds to taking into account the units of the variables when fitting the regularisation. Because of the nature of regularization, this setting is usually undesirable and should be reserved to specific, well understood use-cases where keeping the variables in their natural metrics is justified. This is the only method where standardization of the coefficients after fitting of the model, as described in the note above, is appropriate.</p></li><li><p><strong>Untransformed variables, keeping the default <code>standardize = TRUE</code></strong>: This is the easiest option and advised for quick analysis. In order to get the standardized coefficients that actually were the result of the fitting process, apply the Agresti transformation.</p></li><li><p><strong>Standardized variables, with <code>standardize = FALSE</code></strong>: This last method has three key features: (i) it lets the user diagnose the regularisation in the correct units for the coefficients (using, e.g. <code>glmnet:::plot.glmnet()</code>); (ii) it lets the user deal differently with boolean or categorical variables if necessary; (iii) it makes obvious that the regularization has been done on transformed variables. The main disadvantage is that one must separately keep record of the scaling coefficients for future use of the model.</p></li></ol>\r\n\r\n<h2>Proof</h2>\r\n\r\n<p>We needed to understand how were the variables standardized when using the <code>glmnet</code> package, and more importantly how were the coefficients transformed back in their natural metric after fitting the model with those standardized variables.</p>\r\n\r\n<p>Unfortunately for our digging purposes (i) the code is written in FORTRAN, which made us nostalgic but required some getting used to; (ii) the code does not live on a source sharing platform, but fortunately has <a href=\"https://github.com/cran/glmnet\">a mirror on github</a>, like all packages published on CRAN.</p>\r\n\r\n<p>Everything we are interested in is in the <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90\">fortran source code file</a>, whose <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L280\">detailed comments</a> on the top alieviated the need to reverse-enginner the variable names.</p>\r\n\r\n<ol><li><p>Definition of the <code>lognet</code> function (<code>routine</code>) starts at line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2032\">2032</a>. We will follow the track of the standardization flag <code>isd</code>.</p></li><li><p>Line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2154\">2154-2159</a>, we withness the centering and standardization of the variable array <code>x</code> by the vector of means <code>xms</code> and the vector of standard deviations <code>xs</code>, within the subfunction <code>lstandard1</code>:<br></p><pre><code class=\"no-highlight hljs\">  if(ju(j).eq.0)goto 12561                                             1519\r\n  xm(j)=dot_product(w,x(:,j))                                          1519\r\n  x(:,j)=x(:,j)-xm(j)                                                  1520\r\n  if(isd .le. 0)goto 12581                                             1520\r\n  xs(j)=sqrt(dot_product(w,x(:,j)**2))                                 1520\r\n  x(:,j)=x(:,j)/xs(j)                                                  1520</code></pre></li><li><p>Line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2117\">2117</a>:<br></p><pre><code class=\"no-highlight hljs\">  ca(l,ic,k)=ca(l,ic,k)/xs(ia(l))                                      1499</code></pre></li><li><p>And finally, line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2125\">2125</a>, the intercept is computed (if the flag <code>intr</code> is 1):<br></p><pre><code class=\"no-highlight hljs\">  a0(ic,k)=a0(ic,k)-dot_product(ca(1:nk,ic,k),xm(ia(1:nk)))            1501</code></pre></li></ol>\r\n\r\n<h2>Test</h2>\r\n\r\n<p>I wrote a quick <a href=\"https://htmlpreview.github.io/?https://github.com/antoine-lizee/R-Miscs/blob/adc01ea6d49514efb047c58376126b4480929eeb/Stat-glm_coeffs.html\">R report</a> to test our conclusions on the famous <code>diamonds</code> dataset. </p>\r\n\r\n<hr>\r\n\r\n<p>† It also must be noted that <code>glmnet</code>, being written in fortran, does not make any difference between types of variables. As a result, the categorical and boolean predictor are treated as numeric vectors and standardized accordingly.</p>",
+      "body_md": "## Standardized coefficients & glmnet\r\n\r\nIn the edge prediction problem for _rephetio_, we use the R-package `glmnet` to perform lasso and ridge regression, in order to perform feature selection while fitting the model.\r\n\r\nIn the light of the note above, we wanted to adapt the _Artesi_ standardization to the tools we are using.\r\n\r\n## Summary\r\n\r\n`glmnet`, by default, standardizes the predictor variables **before** fitting the model. After checking in the source code and testing (see below) we came to the conclusion that the computed coefficients were then _reverse_ standardized, with the inverse of the Artesi transformation, in order to report the coefficients in their natural metric †.\r\n\r\nHence, there are three way to use standardization with the `glmnet` package:\r\n\r\n1. **Untransformed variables, specifying `standardize = FALSE`**: this corresponds to taking into account the units of the variables when fitting the regularisation. Because of the nature of regularization, this setting is usually undesirable and should be reserved to specific, well understood use-cases where keeping the variables in their natural metrics is justified. This is the only method where standardization of the coefficients after fitting of the model, as described in the note above, is appropriate.\r\n\r\n2. **Untransformed variables, keeping the default `standardize = TRUE`**: This is the easiest option and advised for quick analysis. In order to get the standardized coefficients that actually were the result of the fitting process, apply the Agresti transformation.\r\n\r\n3. **Standardized variables, with `standardize = FALSE`**: This last method has three key features: (i) it lets the user diagnose the regularisation in the correct units for the coefficients (using, e.g. `glmnet:::plot.glmnet()`); (ii) it lets the user deal differently with boolean or categorical variables if necessary; (iii) it makes obvious that the regularization has been done on transformed variables. The main disadvantage is that one must separately keep record of the scaling coefficients for future use of the model.\r\n\r\n## Proof\r\n\r\nWe needed to understand how were the variables standardized when using the `glmnet` package, and more importantly how were the coefficients transformed back in their natural metric after fitting the model with those standardized variables.\r\n\r\nUnfortunately for our digging purposes (i) the code is written in FORTRAN, which made us nostalgic but required some getting used to; (ii) the code does not live on a source sharing platform, but fortunately has [a mirror on github](https://github.com/cran/glmnet), like all packages published on CRAN.\r\n\r\nEverything we are interested in is in the [fortran source code file](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90), whose [detailed comments](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L280) on the top alieviated the need to reverse-enginner the variable names.\r\n\r\n0. Definition of the `lognet` function (`routine`) starts at line [2032](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2032). We will follow the track of the standardization flag `isd`.\r\n\r\n1. Line [2154-2159](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2154), we withness the centering and standardization of the variable array `x` by the vector of means `xms` and the vector of standard deviations `xs`, within the subfunction `lstandard1`:\r\n```\r\n      if(ju(j).eq.0)goto 12561                                             1519\r\n      xm(j)=dot_product(w,x(:,j))                                          1519\r\n      x(:,j)=x(:,j)-xm(j)                                                  1520\r\n      if(isd .le. 0)goto 12581                                             1520\r\n      xs(j)=sqrt(dot_product(w,x(:,j)**2))                                 1520\r\n      x(:,j)=x(:,j)/xs(j)                                                  1520\r\n```\r\n\r\n2. Line [2117](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2117):\r\n```\r\n      ca(l,ic,k)=ca(l,ic,k)/xs(ia(l))                                      1499\r\n```\r\n\r\n3. And finally, line [2125](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2125), the intercept is computed (if the flag `intr` is 1):\r\n```\r\n      a0(ic,k)=a0(ic,k)-dot_product(ca(1:nk,ic,k),xm(ia(1:nk)))            1501\r\n```\r\ntaking into account the centering of variables. This could be written: $$a_0^* = a_0 + \\sum ca_i \\cdot xm_i$$\r\n\r\n\r\n## Test\r\n\r\nI wrote a quick [R report](https://htmlpreview.github.io/?https://github.com/antoine-lizee/R-Miscs/blob/adc01ea6d49514efb047c58376126b4480929eeb/Stat-glm_coeffs.html) to test our conclusions on the famous `diamonds` dataset. \r\n\r\n---\r\n\r\n† It also must be noted that `glmnet`, being written in fortran, does not make any difference between types of variables. As a result, the categorical and boolean predictor are treated as numeric vectors and standardized accordingly.",
+      "profile": 23,
+      "published": "2016-05-02T20:45:01.106725Z",
+      "thread": 205,
+      "url": "/discussion/computing-standardized-logistic-regression-coefficients/205#5"
+    },
+    {
+      "body_html": "<p>I agree that using the <em>Agresti</em> makes the most sense. Since we're not interested in comparing our logistic models to models created using different regression techniques, I don't think the complexity of meddling with <em>C</em> is justified. Also most modern implementations will be using maximum likelihood estimatation, right <a href=\"/u/alizee\" class=\"username\">@alizee</a>? So of the partial methods, <em>Agresti</em> will create coefficients equivalent to the a logistic model fit on <em>z</em>-score features.</p>\r\n\r\n<p>Regarding the full standardization and the choice of a pseudo R-squared: Would you advise against using the Tjur coefficient of discrimination <span class=\"citation\">[<a href=\"/doi/10.1198/tast.2009.08210\" class=\"citation\" data-key=\"10.1198/tast.2009.08210\">1</a>]</span>? Or would Tjur's statistic also work?</p>\r\n\r\n<blockquote><p>the corresponding intercept should be computed ad hoc</p></blockquote>\r\n\r\n<p>What formula should be used for computing the intercept?</p>",
+      "body_md": "I agree that using the _Agresti_ makes the most sense. Since we're not interested in comparing our logistic models to models created using different regression techniques, I don't think the complexity of meddling with _C_ is justified. Also most modern implementations will be using maximum likelihood estimatation, right @alizee? So of the partial methods, _Agresti_ will create coefficients equivalent to the a logistic model fit on _z_-score features.\r\n\r\nRegarding the full standardization and the choice of a pseudo R-squared: Would you advise against using the Tjur coefficient of discrimination [@10.1198/tast.2009.08210]? Or would Tjur's statistic also work?\r\n\r\n> the corresponding intercept should be computed ad hoc\r\n\r\nWhat formula should be used for computing the intercept?",
+      "profile": 17,
+      "published": "2016-05-02T02:54:32.970448Z",
+      "thread": 205,
+      "url": "/discussion/computing-standardized-logistic-regression-coefficients/205#4"
+    },
+    {
+      "body_html": "<h1>Background</h1>\r\n\r\n<p>This discussion will describe the machine learning pipeline used by Project Rephetio to predict the probability that a compound treats a disease. Our method derives from a 2011 study to predict coauthorship <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">1</a>]</span> and our 2015 study to predict disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">2</a>]</span>. Several months of investigation by <a href=\"/u/alizee\" class=\"username\">@alizee</a>, <a href=\"/u/sergiobaranzini\" class=\"username\">@sergiobaranzini</a>, and I have led to several advances in our algorithm, which we call <em>metapath-based hetnet edge prediction</em> or HNEP for short.</p>\r\n\r\n<p>The founding principal behind HNEP is to identify types of paths (metapaths) that can predict whether two nodes are connected. For Project Rephetio, we are modeling whether a compound (source node) treats (prediction edge) a disease (target node). For each compound–disease pair (observation), we extract the prevalence of specific metapaths from the hetnet using a metric called <em>degree-weighted path count</em> (DWPC). The DWPC quantifies the number of paths between a source and target node, while adjusting for network degree along the path <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">2</a>]</span>. The degree-weighting downweights paths through high-degree nodes, which by their nature tend to be less informative.</p>\r\n\r\n<p>From the hetnet, we extract a feature matrix whose rows represent compound–disease pairs and whose columns represent features (the vast majority of which are DWPCs corresponding to specific metapaths). Some observations are positives (treatments in our case) and some observations are negatives (non-treatments in our case). We fit a logistic regression model that takes features as input and predicts the probability of treatment as output. </p>\r\n\r\n<p>Since we have many features, we use regularization when fitting our regression models, which penalizes complexity to prevent overfitting and accommodate correlations between features. We use two specific cases of elastic net regularization <span class=\"citation\">[<a href=\"/doi/10.1111/j.1467-9868.2005.00503.x\" class=\"citation\" data-key=\"10.1111/j.1467-9868.2005.00503.x\">3</a>]</span>: the ridge and the lasso. Both perform coefficient shrinkage but lasso also performs variable selection. We use the glmnet package in R to fit our models, which implements cross-validation to choose an optimal regularization strength <span class=\"citation\">[<a href=\"/doi/10.18637/jss.v033.i01\" class=\"citation\" data-key=\"10.18637/jss.v033.i01\">4</a>]</span>. The logistic regression model is responsible for learning <em>how</em> to predict treatments from the network-based features. </p>\r\n\r\n<p>Next, we'll describe the detailed machine learning pipeline used in Project Rephetio.</p>",
+      "body_md": "# Background\r\n\r\nThis discussion will describe the machine learning pipeline used by Project Rephetio to predict the probability that a compound treats a disease. Our method derives from a 2011 study to predict coauthorship [@10.1109/ASONAM.2011.112] and our 2015 study to predict disease--gene associations [@10.1371/journal.pcbi.1004259]. Several months of investigation by @alizee, @sergiobaranzini, and I have led to several advances in our algorithm, which we call _metapath-based hetnet edge prediction_ or HNEP for short.\r\n\r\nThe founding principal behind HNEP is to identify types of paths (metapaths) that can predict whether two nodes are connected. For Project Rephetio, we are modeling whether a compound (source node) treats (prediction edge) a disease (target node). For each compound--disease pair (observation), we extract the prevalence of specific metapaths from the hetnet using a metric called _degree-weighted path count_ (DWPC). The DWPC quantifies the number of paths between a source and target node, while adjusting for network degree along the path [@10.1371/journal.pcbi.1004259]. The degree-weighting downweights paths through high-degree nodes, which by their nature tend to be less informative.\r\n\r\nFrom the hetnet, we extract a feature matrix whose rows represent compound--disease pairs and whose columns represent features (the vast majority of which are DWPCs corresponding to specific metapaths). Some observations are positives (treatments in our case) and some observations are negatives (non-treatments in our case). We fit a logistic regression model that takes features as input and predicts the probability of treatment as output. \r\n\r\nSince we have many features, we use regularization when fitting our regression models, which penalizes complexity to prevent overfitting and accommodate correlations between features. We use two specific cases of elastic net regularization [@10.1111/j.1467-9868.2005.00503.x]: the ridge and the lasso. Both perform coefficient shrinkage but lasso also performs variable selection. We use the glmnet package in R to fit our models, which implements cross-validation to choose an optimal regularization strength [@10.18637/jss.v033.i01]. The logistic regression model is responsible for learning _how_ to predict treatments from the network-based features. \r\n\r\nNext, we'll describe the detailed machine learning pipeline used in Project Rephetio.",
+      "profile": 17,
+      "published": "2016-05-04T05:28:16.489552Z",
+      "thread": 210,
+      "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210"
     }
   ],
   "documents": [
@@ -3404,7 +3436,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 821
+      "views": 839
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -4571,6 +4603,14 @@
       "comment": 1269,
       "profile": 17,
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187#note-255"
+    },
+    {
+      "added": "2016-05-02T17:33:02.574555Z",
+      "body_html": "<p>For the intercept, it depends on the way you transform your variables to reflect the changes in the standardized coefficient. For instance, if you center your variable in addition to scaling it by the standard deviation, as your previous post suggest, you get:<br><span class=\"math\">$$ x^* = (x - \\mu_x) / \\sigma_x $$</span><br>and, <span class=\"math\">$$\\mu_x$$</span> referring to the centering parameter (here the mean):<br><span class=\"math\">$$ b_0^* = b_0 + \\sum b_x \\cdot \\mu_x $$</span></p>",
+      "body_md": "For the intercept, it depends on the way you transform your variables to reflect the changes in the standardized coefficient. For instance, if you center your variable in addition to scaling it by the standard deviation, as your previous post suggest, you get:\n$$ x^* = (x - \\mu_x) / \\sigma_x $$\nand, $$\\mu_x$$ referring to the centering parameter (here the mean):\n$$ b_0^* = b_0 + \\sum b_x \\cdot \\mu_x $$",
+      "comment": 1289,
+      "profile": 23,
+      "url": "/discussion/computing-standardized-logistic-regression-coefficients/205#note-256"
     }
   ],
   "profiles": [
@@ -4815,7 +4855,7 @@
       "username": "ostrokach"
     }
   ],
-  "retrieved": "2016-04-26T00:42:28.782606Z",
+  "retrieved": "2016-05-04T18:19:21.207910Z",
   "threads": [
     {
       "document": null,
@@ -4826,7 +4866,7 @@
       "subject": "How should we construct a catalog of drug indications?",
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 313
+      "views": 333
     },
     {
       "document": null,
@@ -4837,7 +4877,7 @@
       "subject": "Suggestions for additional information types?",
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 81
+      "views": 91
     },
     {
       "document": null,
@@ -4848,7 +4888,7 @@
       "subject": "Enabling reproducibility and reuse",
       "topic_field": "Reproducibility",
       "url": "/discussion/enabling-reproducibility-and-reuse/23",
-      "views": 80
+      "views": 85
     },
     {
       "document": null,
@@ -4859,7 +4899,7 @@
       "subject": "Seeking an open source implementation of the Gerstein-Sonnhammer-Chothia Algorithm",
       "topic_field": "Python,R,Algorithms,Computer Science,SIDER,GSC Weighting,Gerstein-Sonnhammer-Chothia,Julia,Open Source Software",
       "url": "/discussion/seeking-an-open-source-implementation-of-the-gerstein-sonnhammer-chothia-algorithm/25",
-      "views": 95
+      "views": 104
     },
     {
       "document": null,
@@ -4870,7 +4910,7 @@
       "subject": "Assessing the quality and applicability of the SIDER 2 resource",
       "topic_field": "SIDER,Indications,NLP,Drugs,Side Effects,Drug Labels",
       "url": "/discussion/assessing-the-quality-and-applicability-of-the-sider-2-resource/30",
-      "views": 92
+      "views": 98
     },
     {
       "document": null,
@@ -4881,7 +4921,7 @@
       "subject": "MEDI indications data — discrepancy in resource-specific counts",
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 51
+      "views": 58
     },
     {
       "document": null,
@@ -4892,7 +4932,7 @@
       "subject": "Using Entrez Gene as our gene vocabulary",
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 107
+      "views": 114
     },
     {
       "document": null,
@@ -4903,7 +4943,7 @@
       "subject": "Compiling Gene Ontology annotations into an easy-to-use format",
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 134
+      "views": 145
     },
     {
       "document": null,
@@ -4914,7 +4954,7 @@
       "subject": "Unifying drug vocabularies",
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 172
+      "views": 184
     },
     {
       "document": null,
@@ -4925,7 +4965,7 @@
       "subject": "Tissue Node",
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 92
+      "views": 97
     },
     {
       "document": null,
@@ -4936,7 +4976,7 @@
       "subject": "Mapping Incomplete Interactome disease names to MeSH",
       "topic_field": "Terminologies,Mapping,Incomplete Interactome,MeSH",
       "url": "/discussion/mapping-incomplete-interactome-disease-names-to-mesh/42",
-      "views": 50
+      "views": 53
     },
     {
       "document": null,
@@ -4947,7 +4987,7 @@
       "subject": "Computing consensus transcriptional profiles for LINCS L1000 perturbations",
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 238
+      "views": 252
     },
     {
       "document": null,
@@ -4958,7 +4998,7 @@
       "subject": "Unifying disease vocabularies",
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 118
+      "views": 132
     },
     {
       "document": null,
@@ -4969,7 +5009,7 @@
       "subject": "Processing LabeledIn to extract indications",
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 56
+      "views": 64
     },
     {
       "document": null,
@@ -4980,7 +5020,7 @@
       "subject": "Evaluation framework",
       "topic_field": "Validation,Evalauation",
       "url": "/discussion/evaluation-framework/47",
-      "views": 32
+      "views": 33
     },
     {
       "document": null,
@@ -4991,7 +5031,7 @@
       "subject": "Text as a resource for network population?",
       "topic_field": "Natural Language Processing,Relation Extraction,Bias,Prior Knowledge",
       "url": "/discussion/text-as-a-resource-for-network-population/48",
-      "views": 51
+      "views": 58
     },
     {
       "document": null,
@@ -5002,7 +5042,7 @@
       "subject": "UniChem Mapping to LINCS Small Molecules",
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 159
+      "views": 172
     },
     {
       "document": null,
@@ -5013,7 +5053,7 @@
       "subject": "Human Symptom Disease Network-MeSH ID Matching",
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 180
+      "views": 200
     },
     {
       "document": null,
@@ -5024,7 +5064,7 @@
       "subject": "Integrating drug target information from BindingDB",
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 139
+      "views": 148
     },
     {
       "document": null,
@@ -5035,7 +5075,7 @@
       "subject": "Selecting informative ERC (evolutionary rate covariation) values between genes",
       "topic_field": "Evolution,Entrez Gene,ERC,UCSC Genome Browser,Evolutionary Rate Covariation",
       "url": "/discussion/selecting-informative-erc-evolutionary-rate-covariation-values-between-genes/57",
-      "views": 51
+      "views": 55
     },
     {
       "document": null,
@@ -5046,7 +5086,7 @@
       "subject": "Retrieving the ingredients in RxNorm concepts",
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 230
+      "views": 248
     },
     {
       "document": null,
@@ -5057,7 +5097,7 @@
       "subject": "Extracting indications from the ehrlink resource",
       "topic_field": "Databases,Indications,Clinical Informatics,EHR,Ehrlink,Medications,Health Records",
       "url": "/discussion/extracting-indications-from-the-ehrlink-resource/62",
-      "views": 51
+      "views": 57
     },
     {
       "document": null,
@@ -5068,7 +5108,7 @@
       "subject": "Protein (target, carrier, transporter, and enzyme) interactions in DrugBank",
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 190
+      "views": 215
     },
     {
       "document": null,
@@ -5079,7 +5119,7 @@
       "subject": "KaBOB Knowledgebase",
       "topic_field": "",
       "url": "/discussion/kabob-knowledgebase/66",
-      "views": 64
+      "views": 68
     },
     {
       "document": null,
@@ -5090,7 +5130,7 @@
       "subject": "Mining knowledge from MEDLINE articles and their indexed MeSH terms",
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 94
+      "views": 98
     },
     {
       "document": null,
@@ -5101,7 +5141,7 @@
       "subject": "Disease Ontology feature requests",
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 42
+      "views": 46
     },
     {
       "document": null,
@@ -5112,7 +5152,7 @@
       "subject": "Calculating molecular similarities between DrugBank compounds",
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 62
+      "views": 69
     },
     {
       "document": null,
@@ -5123,7 +5163,7 @@
       "subject": "Calculating genomic windows for GWAS lead SNPs",
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 220
+      "views": 234
     },
     {
       "document": null,
@@ -5134,7 +5174,7 @@
       "subject": "Adding pathway resources to your network",
       "topic_field": "Databases,Networks,Pathways",
       "url": "/discussion/adding-pathway-resources-to-your-network/72",
-      "views": 70
+      "views": 73
     },
     {
       "document": null,
@@ -5145,7 +5185,7 @@
       "subject": "Extracting disease-gene associations from the GWAS Catalog",
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 112
+      "views": 122
     },
     {
       "document": null,
@@ -5156,7 +5196,7 @@
       "subject": "Tissue-specific gene expression resources",
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 234
+      "views": 244
     },
     {
       "document": null,
@@ -5167,7 +5207,7 @@
       "subject": "Processing GTEx for tissue-specific gene expression",
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 210
+      "views": 228
     },
     {
       "document": null,
@@ -5178,7 +5218,7 @@
       "subject": "R best practices",
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 405
+      "views": 444
     },
     {
       "document": null,
@@ -5189,7 +5229,7 @@
       "subject": "Python for the modern biodata scientist",
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 481
+      "views": 494
     },
     {
       "document": null,
@@ -5200,7 +5240,7 @@
       "subject": "Creating a catalog of protein interactions",
       "topic_field": "Protein Interactions,Interactions,PPI",
       "url": "/discussion/creating-a-catalog-of-protein-interactions/85",
-      "views": 92
+      "views": 102
     },
     {
       "document": null,
@@ -5222,7 +5262,7 @@
       "subject": "Disease similarity from MEDLINE topic cooccurrence",
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 33
+      "views": 35
     },
     {
       "document": null,
@@ -5233,7 +5273,7 @@
       "subject": "Functional disease annotations for genes using DOAF",
       "topic_field": "Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations",
       "url": "/discussion/functional-disease-annotations-for-genes-using-doaf/94",
-      "views": 40
+      "views": 47
     },
     {
       "document": null,
@@ -5244,7 +5284,7 @@
       "subject": "Expert curation of our indication catalog for disease-modifying treatments",
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 131
+      "views": 138
     },
     {
       "document": null,
@@ -5255,7 +5295,7 @@
       "subject": "STARGEO: expression signatures for disease using crowdsourced GEO annotation",
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 151
+      "views": 160
     },
     {
       "document": null,
@@ -5266,7 +5306,7 @@
       "subject": "Extracting side effects from SIDER 4",
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 77
+      "views": 86
     },
     {
       "document": null,
@@ -5277,7 +5317,7 @@
       "subject": "The ADEPTUS resource for expression signatures of disease",
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 66
+      "views": 77
     },
     {
       "document": null,
@@ -5288,7 +5328,7 @@
       "subject": "One network to rule them all",
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 168
+      "views": 177
     },
     {
       "document": null,
@@ -5299,7 +5339,7 @@
       "subject": "Renaming ‘heterogeneous networks’ to a more concise and catchy term",
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 94
+      "views": 100
     },
     {
       "document": null,
@@ -5310,7 +5350,7 @@
       "subject": "Processing DisGeNET for disease-gene relationships",
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 51
+      "views": 67
     },
     {
       "document": null,
@@ -5321,7 +5361,7 @@
       "subject": "Processing the DISEASES resource for disease–gene relationships",
       "topic_field": "Databases,Diseases,Associations",
       "url": "/discussion/processing-the-diseases-resource-for-diseasegene-relationships/106",
-      "views": 40
+      "views": 47
     },
     {
       "document": null,
@@ -5332,7 +5372,7 @@
       "subject": "Integrating resources with disparate licensing into an open network",
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 164
+      "views": 174
     },
     {
       "document": null,
@@ -5343,7 +5383,7 @@
       "subject": "MSigDB licensing",
       "topic_field": "Copyright,Permission,Licensing,MSigDB,MIT",
       "url": "/discussion/msigdb-licensing/108",
-      "views": 71
+      "views": 77
     },
     {
       "document": null,
@@ -5354,7 +5394,7 @@
       "subject": "LINCS L1000 licensing",
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 139
+      "views": 152
     },
     {
       "document": null,
@@ -5365,7 +5405,7 @@
       "subject": "Incomplete Interactome licensing",
       "topic_field": "Incomplete Interactome,Permission,Licensing,Copyright Transfer,Supplement,AAAS",
       "url": "/discussion/incomplete-interactome-licensing/111",
-      "views": 68
+      "views": 74
     },
     {
       "document": null,
@@ -5376,7 +5416,7 @@
       "subject": "Using the neo4j graph database for hetnets",
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 224
+      "views": 240
     },
     {
       "document": null,
@@ -5387,7 +5427,7 @@
       "subject": "Tracking project reuse, citation, and publicity",
       "topic_field": "Citations,Publicity,Media Coverage,Reuse,Attention",
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113",
-      "views": 42
+      "views": 47
     },
     {
       "document": null,
@@ -5398,7 +5438,7 @@
       "subject": "Assessing the informativeness of features",
       "topic_field": "HNEP,Hetnets,Features,Metapaths",
       "url": "/discussion/assessing-the-informativeness-of-features/115",
-      "views": 25
+      "views": 31
     },
     {
       "document": null,
@@ -5409,7 +5449,7 @@
       "subject": "Processing Bgee for tissue-specific gene presence and over/under-expression",
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 56
+      "views": 62
     },
     {
       "document": null,
@@ -5420,7 +5460,7 @@
       "subject": "Licensing neo4j",
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 53
+      "views": 59
     },
     {
       "document": null,
@@ -5431,7 +5471,7 @@
       "subject": "Path exclusion conditions",
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 58
+      "views": 71
     },
     {
       "document": null,
@@ -5442,7 +5482,7 @@
       "subject": "Permuting hetnets and implementing randomized edge swaps in cypher",
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 37
+      "views": 39
     },
     {
       "document": null,
@@ -5453,7 +5493,7 @@
       "subject": "Data nomenclature: naming and abbreviating our network types",
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 46
+      "views": 56
     },
     {
       "document": null,
@@ -5464,7 +5504,7 @@
       "subject": "Positive correlations between knockdown and overexpression profiles from LINCS L1000",
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 91
+      "views": 98
     },
     {
       "document": null,
@@ -5475,7 +5515,7 @@
       "subject": "Assessing the effectiveness of our hetnet permutations",
       "topic_field": "permutation,XSwap,network randomization,hetnets,hetio",
       "url": "/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178",
-      "views": 21
+      "views": 30
     },
     {
       "document": null,
@@ -5486,7 +5526,7 @@
       "subject": "Workshop to analyze LINCS data for the Systems Pharmacology course at UCSF",
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 78
+      "views": 85
     },
     {
       "document": null,
@@ -5497,7 +5537,7 @@
       "subject": "Announcing PharmacotherapyDB: the Open Catalog of Drug Therapies for Disease",
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 104
+      "views": 113
     },
     {
       "document": null,
@@ -5508,7 +5548,7 @@
       "subject": "Assessing the imputation quality of gene expression in LINCS L1000",
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 29
+      "views": 38
     },
     {
       "document": null,
@@ -5519,7 +5559,7 @@
       "subject": "Incorporating DrugCentral data in our network",
       "topic_field": "DrugCentral,pharmacology,Database",
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186",
-      "views": 34
+      "views": 37
     },
     {
       "document": null,
@@ -5530,7 +5570,7 @@
       "subject": "Estimating the complexity of hetnet traversal",
       "topic_field": "complexity,runtime,optimization,Neo4J,join hints",
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187",
-      "views": 27
+      "views": 33
     },
     {
       "document": null,
@@ -5541,7 +5581,7 @@
       "subject": "Transforming DWPCs for hetnet edge prediction",
       "topic_field": "IHS,transformation,DWPC,regression",
       "url": "/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193",
-      "views": 22
+      "views": 26
     },
     {
       "document": null,
@@ -5552,7 +5592,7 @@
       "subject": "Network Edge Prediction: how to deal with self-testing",
       "topic_field": "HNEP,Hetnets,Machine learning,self-testing",
       "url": "/discussion/network-edge-prediction-how-to-deal-with-self-testing/194",
-      "views": 25
+      "views": 30
     },
     {
       "document": null,
@@ -5563,7 +5603,7 @@
       "subject": "Measuring user contribution and content creation",
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 13
+      "views": 16
     },
     {
       "document": null,
@@ -5574,7 +5614,7 @@
       "subject": "Network Edge Prediction: Estimating the prior",
       "topic_field": "Machine learning,Heterogeneous Networks,Hetnets,HNEP,Prior Knowledge",
       "url": "/discussion/network-edge-prediction-estimating-the-prior/201",
-      "views": 17
+      "views": 24
     },
     {
       "document": null,
@@ -5585,7 +5625,7 @@
       "subject": "Describing Hetionet v1.0 through visualization and statistics",
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 25
+      "views": 28
     },
     {
       "document": null,
@@ -5596,7 +5636,18 @@
       "subject": "Computing standardized logistic regression coefficients",
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 14
+      "views": 21
+    },
+    {
+      "document": null,
+      "doi": "10.15363/thinklab.d210",
+      "doi_field": "",
+      "profile": 17,
+      "published": "2016-05-04T05:28:16.441526Z",
+      "subject": "Our hetnet edge prediction methodology: the modeling framework for Project Rephetio",
+      "topic_field": "HNEP,machine learning",
+      "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
+      "views": 10
     }
   ]
 }

@@ -324,7 +324,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/pathways4life/proposal",
-      "views": 289
+      "views": 303
     }
   ],
   "notes": [
@@ -385,7 +385,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-04-26T00:42:10.771254Z",
+  "retrieved": "2016-05-04T18:19:13.317365Z",
   "threads": [
     {
       "document": null,
@@ -396,7 +396,7 @@
       "subject": "Open for Feedback",
       "topic_field": "Citizen Science,Crowdsourcing,Open Sourse,Game Design,Pathways,Image Analysis",
       "url": "/discussion/open-for-feedback/73",
-      "views": 30
+      "views": 35
     },
     {
       "document": null,
@@ -418,7 +418,7 @@
       "subject": "Duplicate pathway detection and resolution",
       "topic_field": "Duplicates,Pathways,Curation",
       "url": "/discussion/duplicate-pathway-detection-and-resolution/76",
-      "views": 22
+      "views": 25
     },
     {
       "document": null,
@@ -429,7 +429,7 @@
       "subject": "Thinklab specific comments",
       "topic_field": "Markdown,ThinkLab,Spelling,Formatting",
       "url": "/discussion/thinklab-specific-comments/77",
-      "views": 33
+      "views": 38
     },
     {
       "document": null,
@@ -451,7 +451,7 @@
       "subject": "Use machine learning to calculate confidence scores for users, snippets, and pathways",
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 41
+      "views": 51
     },
     {
       "document": null,
@@ -462,7 +462,7 @@
       "subject": "Are there significant differences in difficulty between pathway modeling tasks?",
       "topic_field": "Gamification",
       "url": "/discussion/are-there-significant-differences-in-difficulty-between-pathway-modeling-tasks/120",
-      "views": 12
+      "views": 18
     },
     {
       "document": null,
@@ -473,7 +473,7 @@
       "subject": "How about examples of the awesome science that pathway modeling enables?",
       "topic_field": "",
       "url": "/discussion/how-about-examples-of-the-awesome-science-that-pathway-modeling-enables/121",
-      "views": 25
+      "views": 27
     },
     {
       "document": null,
@@ -484,7 +484,7 @@
       "subject": "Clarifying the scope of the challenge",
       "topic_field": "",
       "url": "/discussion/clarifying-the-scope-of-the-challenge/122",
-      "views": 28
+      "views": 30
     },
     {
       "document": null,
@@ -495,7 +495,7 @@
       "subject": "What made previous crowdsourced science games succeed or not?",
       "topic_field": "Crowdsourcing,Gamification,Science Games,Serious Games",
       "url": "/discussion/what-made-previous-crowdsourced-science-games-succeed-or-not/123",
-      "views": 30
+      "views": 33
     }
   ]
 }
