@@ -95,7 +95,7 @@ if __name__ == '__main__':
 
     project_group = parser.add_mutually_exclusive_group(required=True)
     project_group.add_argument('--project', default='rephetio', help='export a specific project given by its project id')
-    project_group.add_argument('--all-projects', action='store_true', help='export all thinklab projects')
+    project_group.add_argument('--all', action='store_true', help='export all thinklab projects')
 
     parser.add_argument('--outputdir', default='json', help='directory to export JSON files')
 
@@ -107,7 +107,7 @@ if __name__ == '__main__':
         username, password = parse_login_json(args.loginfile)
 
     projects = set()
-    if args.all_projects:
+    if args.all:
         for url in project_listing_urls:
             projects.update(retrieve_project_urls(url))
         projects = list(projects)

@@ -5,7 +5,7 @@
 `export.py` is a Python script for retrieving JSON-formatted Thinklab project exports. The exports for all projects can automatically be retrieved using:
 
 ```sh
-python export.py --all-projects
+python export.py --all
 ```
 
 A specific project can be retrieved with:
