@@ -2095,6 +2095,14 @@
       "comment": 1292,
       "profile": 23,
       "url": "/discussion/share-single-posts/209#note-257"
+    },
+    {
+      "added": "2016-05-04T20:19:41.331847Z",
+      "body_html": "<p>I like that the new version removed an unnecessary nesting. However, the primary keys for each item are now missing. Can these be added to an identifier key?</p>",
+      "body_md": "I like that the new version removed an unnecessary nesting. However, the primary keys for each item are now missing. Can these be added to an identifier key?",
+      "comment": 1244,
+      "profile": 17,
+      "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#note-258"
     }
   ],
   "profiles": [
@@ -2189,7 +2197,7 @@
       "username": "pouyakhankhanian"
     }
   ],
-  "retrieved": "2016-05-04T18:19:18.526103Z",
+  "retrieved": "2016-05-05T18:00:09.667264Z",
   "threads": [
     {
       "document": null,
@@ -2211,7 +2219,7 @@
       "subject": "Discussion Ranking and Visibility",
       "topic_field": "ThinkLab,Discussions",
       "url": "/discussion/discussion-ranking-and-visibility/26",
-      "views": 33
+      "views": 34
     },
     {
       "document": null,
@@ -2288,7 +2296,7 @@
       "subject": "Contribution valuation options",
       "topic_field": "ThinkLab,Contributions,Incentives",
       "url": "/discussion/contribution-valuation-options/49",
-      "views": 52
+      "views": 53
     },
     {
       "document": null,
@@ -2321,7 +2329,7 @@
       "subject": "Your comments in ThinkLab Meta are now payment eligible!",
       "topic_field": "",
       "url": "/discussion/your-comments-in-thinklab-meta-are-now-payment-eligible/56",
-      "views": 34
+      "views": 35
     },
     {
       "document": null,
@@ -2354,7 +2362,7 @@
       "subject": "Comments & Notes interface and behaviour - Suggestions",
       "topic_field": "Comments",
       "url": "/discussion/comments-notes-interface-and-behaviour-suggestions/60",
-      "views": 42
+      "views": 44
     },
     {
       "document": null,
@@ -2475,7 +2483,7 @@
       "subject": "ThinkLab needs a story",
       "topic_field": "",
       "url": "/discussion/thinklab-needs-a-story/131",
-      "views": 43
+      "views": 44
     },
     {
       "document": null,
@@ -2541,7 +2549,7 @@
       "subject": "Streamlining access to the common interactions with citations",
       "topic_field": "popover,citation,user experience,Thinklab",
       "url": "/discussion/streamlining-access-to-the-common-interactions-with-citations/188",
-      "views": 15
+      "views": 16
     },
     {
       "document": null,
@@ -2574,7 +2582,7 @@
       "subject": "Discussion summary statistics for illustrating project impact",
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 46
+      "views": 47
     },
     {
       "document": null,
@@ -2585,7 +2593,7 @@
       "subject": "Disambiguating proposal, project, and report titles",
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 22
+      "views": 23
     },
     {
       "document": null,
@@ -2607,7 +2615,7 @@
       "subject": "Automatically insert images",
       "topic_field": "",
       "url": "/discussion/automatically-insert-images/196",
-      "views": 18
+      "views": 19
     },
     {
       "document": null,
@@ -2640,7 +2648,7 @@
       "subject": "Tracking attention through Altmetric integration",
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 8
+      "views": 9
     },
     {
       "document": null,

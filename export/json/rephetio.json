@@ -3423,6 +3423,14 @@
       "published": "2016-05-04T05:28:16.489552Z",
       "thread": 210,
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210"
+    },
+    {
+      "body_html": "<h1>Greene &amp; Voight Review</h1>\r\n\r\n<p><a href=\"/u/caseygreene\" class=\"username\">@caseygreene</a>'s has preprinted his new review titled \"Pathway and network-based strategies to translate genetic discoveries into effective therapies\" <span class=\"citation\">[<a href=\"/doi/10.1101/051524\" class=\"citation\" data-key=\"10.1101/051524\">1</a>]</span>. The review mentions our project:</p>\r\n\r\n<blockquote><p>They use heterogeneous networks that connect genes, diseases, tissues, and other<br>factors <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">2</a>]</span>. They then apply machine learning methods to predict effective drug-disease pairs. The entire process has been visible on an open science platform called Thinklab. The open platform reveals the extensive sets of analyses that lay the groundwork for machine learning applications. Though work is ongoing the initial results are highly promising.</p></blockquote>\r\n\r\n<p>as well as the legal barriers to data reuse that we've encountered:</p>\r\n\r\n<blockquote><p>An often-overlooked aspect of studies that incorporate multiple data types and sources for drug repurposing is licensing and resource accessibility. The manner in which restrictive database licenses have hampered progress by the Himmelstein et al. team <span class=\"citation\">[<a href=\"/p/rephetio\" class=\"citation\" data-key=\"10.15363/thinklab.4\">3</a>]</span> has been instructive <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">4</a>]</span>.</p></blockquote>\r\n\r\n<p>The review mentions the difficulties faced by genetic-association-driven drug development:</p>\r\n\r\n<blockquote><p>There have been a limited number of cases where each required elements falls cleanly into place.</p></blockquote>\r\n\r\n<p>I'm exciting to see if our metapath-based approach can help decode the contexts in which genetic association data is most informative for drug efficacy.</p>",
+      "body_md": "# Greene & Voight Review\r\n\r\n@caseygreene's has preprinted his new review titled \"Pathway and network-based strategies to translate genetic discoveries into effective therapies\" [@10.1101/051524]. The review mentions our project:\r\n\r\n> They use heterogeneous networks that connect genes, diseases, tissues, and other\r\nfactors [@10.1371/journal.pcbi.1004259]. They then apply machine learning methods to predict effective drug-disease pairs. The entire process has been visible on an open science platform called Thinklab. The open platform reveals the extensive sets of analyses that lay the groundwork for machine learning applications. Though work is ongoing the initial results are highly promising.\r\n\r\nas well as the legal barriers to data reuse that we've encountered:\r\n\r\n> An often-overlooked aspect of studies that incorporate multiple data types and sources for drug repurposing is licensing and resource accessibility. The manner in which restrictive database licenses have hampered progress by the Himmelstein et al. team [@10.15363/thinklab.4] has been instructive [@10.15363/thinklab.d107].\r\n\r\nThe review mentions the difficulties faced by genetic-association-driven drug development:\r\n\r\n> There have been a limited number of cases where each required elements falls cleanly into place.\r\n\r\nI'm exciting to see if our metapath-based approach can help decode the contexts in which genetic association data is most informative for drug efficacy.",
+      "profile": 17,
+      "published": "2016-05-04T22:31:58.818987Z",
+      "thread": 113,
+      "url": "/discussion/tracking-project-reuse-citation-and-publicity/113#8"
     }
   ],
   "documents": [
@@ -3436,7 +3444,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 839
+      "views": 842
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -4855,7 +4863,7 @@
       "username": "ostrokach"
     }
   ],
-  "retrieved": "2016-05-04T18:19:21.207910Z",
+  "retrieved": "2016-05-05T18:00:08.021489Z",
   "threads": [
     {
       "document": null,
@@ -4866,7 +4874,7 @@
       "subject": "How should we construct a catalog of drug indications?",
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 333
+      "views": 337
     },
     {
       "document": null,
@@ -4877,7 +4885,7 @@
       "subject": "Suggestions for additional information types?",
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 91
+      "views": 92
     },
     {
       "document": null,
@@ -4899,7 +4907,7 @@
       "subject": "Seeking an open source implementation of the Gerstein-Sonnhammer-Chothia Algorithm",
       "topic_field": "Python,R,Algorithms,Computer Science,SIDER,GSC Weighting,Gerstein-Sonnhammer-Chothia,Julia,Open Source Software",
       "url": "/discussion/seeking-an-open-source-implementation-of-the-gerstein-sonnhammer-chothia-algorithm/25",
-      "views": 104
+      "views": 105
     },
     {
       "document": null,
@@ -4910,7 +4918,7 @@
       "subject": "Assessing the quality and applicability of the SIDER 2 resource",
       "topic_field": "SIDER,Indications,NLP,Drugs,Side Effects,Drug Labels",
       "url": "/discussion/assessing-the-quality-and-applicability-of-the-sider-2-resource/30",
-      "views": 98
+      "views": 99
     },
     {
       "document": null,
@@ -4921,7 +4929,7 @@
       "subject": "MEDI indications data — discrepancy in resource-specific counts",
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 58
+      "views": 59
     },
     {
       "document": null,
@@ -4943,7 +4951,7 @@
       "subject": "Compiling Gene Ontology annotations into an easy-to-use format",
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 145
+      "views": 146
     },
     {
       "document": null,
@@ -4987,7 +4995,7 @@
       "subject": "Computing consensus transcriptional profiles for LINCS L1000 perturbations",
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 252
+      "views": 257
     },
     {
       "document": null,
@@ -5042,7 +5050,7 @@
       "subject": "UniChem Mapping to LINCS Small Molecules",
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 172
+      "views": 175
     },
     {
       "document": null,
@@ -5064,7 +5072,7 @@
       "subject": "Integrating drug target information from BindingDB",
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 148
+      "views": 149
     },
     {
       "document": null,
@@ -5075,7 +5083,7 @@
       "subject": "Selecting informative ERC (evolutionary rate covariation) values between genes",
       "topic_field": "Evolution,Entrez Gene,ERC,UCSC Genome Browser,Evolutionary Rate Covariation",
       "url": "/discussion/selecting-informative-erc-evolutionary-rate-covariation-values-between-genes/57",
-      "views": 55
+      "views": 56
     },
     {
       "document": null,
@@ -5086,7 +5094,7 @@
       "subject": "Retrieving the ingredients in RxNorm concepts",
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 248
+      "views": 249
     },
     {
       "document": null,
@@ -5097,7 +5105,7 @@
       "subject": "Extracting indications from the ehrlink resource",
       "topic_field": "Databases,Indications,Clinical Informatics,EHR,Ehrlink,Medications,Health Records",
       "url": "/discussion/extracting-indications-from-the-ehrlink-resource/62",
-      "views": 57
+      "views": 60
     },
     {
       "document": null,
@@ -5108,7 +5116,7 @@
       "subject": "Protein (target, carrier, transporter, and enzyme) interactions in DrugBank",
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 215
+      "views": 216
     },
     {
       "document": null,
@@ -5141,7 +5149,7 @@
       "subject": "Disease Ontology feature requests",
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 46
+      "views": 47
     },
     {
       "document": null,
@@ -5163,7 +5171,7 @@
       "subject": "Calculating genomic windows for GWAS lead SNPs",
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 234
+      "views": 235
     },
     {
       "document": null,
@@ -5174,7 +5182,7 @@
       "subject": "Adding pathway resources to your network",
       "topic_field": "Databases,Networks,Pathways",
       "url": "/discussion/adding-pathway-resources-to-your-network/72",
-      "views": 73
+      "views": 76
     },
     {
       "document": null,
@@ -5185,7 +5193,7 @@
       "subject": "Extracting disease-gene associations from the GWAS Catalog",
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 122
+      "views": 123
     },
     {
       "document": null,
@@ -5196,7 +5204,7 @@
       "subject": "Tissue-specific gene expression resources",
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 244
+      "views": 247
     },
     {
       "document": null,
@@ -5207,7 +5215,7 @@
       "subject": "Processing GTEx for tissue-specific gene expression",
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 228
+      "views": 229
     },
     {
       "document": null,
@@ -5218,7 +5226,7 @@
       "subject": "R best practices",
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 444
+      "views": 448
     },
     {
       "document": null,
@@ -5229,7 +5237,7 @@
       "subject": "Python for the modern biodata scientist",
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 494
+      "views": 495
     },
     {
       "document": null,
@@ -5273,7 +5281,7 @@
       "subject": "Functional disease annotations for genes using DOAF",
       "topic_field": "Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations",
       "url": "/discussion/functional-disease-annotations-for-genes-using-doaf/94",
-      "views": 47
+      "views": 48
     },
     {
       "document": null,
@@ -5284,7 +5292,7 @@
       "subject": "Expert curation of our indication catalog for disease-modifying treatments",
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 138
+      "views": 139
     },
     {
       "document": null,
@@ -5306,7 +5314,7 @@
       "subject": "Extracting side effects from SIDER 4",
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 86
+      "views": 88
     },
     {
       "document": null,
@@ -5317,7 +5325,7 @@
       "subject": "The ADEPTUS resource for expression signatures of disease",
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 77
+      "views": 78
     },
     {
       "document": null,
@@ -5339,7 +5347,7 @@
       "subject": "Renaming ‘heterogeneous networks’ to a more concise and catchy term",
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 100
+      "views": 101
     },
     {
       "document": null,
@@ -5383,7 +5391,7 @@
       "subject": "MSigDB licensing",
       "topic_field": "Copyright,Permission,Licensing,MSigDB,MIT",
       "url": "/discussion/msigdb-licensing/108",
-      "views": 77
+      "views": 79
     },
     {
       "document": null,
@@ -5394,7 +5402,7 @@
       "subject": "LINCS L1000 licensing",
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 152
+      "views": 155
     },
     {
       "document": null,
@@ -5416,7 +5424,7 @@
       "subject": "Using the neo4j graph database for hetnets",
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 240
+      "views": 242
     },
     {
       "document": null,
@@ -5427,7 +5435,7 @@
       "subject": "Tracking project reuse, citation, and publicity",
       "topic_field": "Citations,Publicity,Media Coverage,Reuse,Attention",
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113",
-      "views": 47
+      "views": 52
     },
     {
       "document": null,
@@ -5438,7 +5446,7 @@
       "subject": "Assessing the informativeness of features",
       "topic_field": "HNEP,Hetnets,Features,Metapaths",
       "url": "/discussion/assessing-the-informativeness-of-features/115",
-      "views": 31
+      "views": 32
     },
     {
       "document": null,
@@ -5449,7 +5457,7 @@
       "subject": "Processing Bgee for tissue-specific gene presence and over/under-expression",
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 62
+      "views": 64
     },
     {
       "document": null,
@@ -5504,7 +5512,7 @@
       "subject": "Positive correlations between knockdown and overexpression profiles from LINCS L1000",
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 98
+      "views": 99
     },
     {
       "document": null,
@@ -5526,7 +5534,7 @@
       "subject": "Workshop to analyze LINCS data for the Systems Pharmacology course at UCSF",
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 85
+      "views": 87
     },
     {
       "document": null,
@@ -5570,7 +5578,7 @@
       "subject": "Estimating the complexity of hetnet traversal",
       "topic_field": "complexity,runtime,optimization,Neo4J,join hints",
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187",
-      "views": 33
+      "views": 34
     },
     {
       "document": null,
@@ -5592,7 +5600,7 @@
       "subject": "Network Edge Prediction: how to deal with self-testing",
       "topic_field": "HNEP,Hetnets,Machine learning,self-testing",
       "url": "/discussion/network-edge-prediction-how-to-deal-with-self-testing/194",
-      "views": 30
+      "views": 32
     },
     {
       "document": null,
@@ -5636,7 +5644,7 @@
       "subject": "Computing standardized logistic regression coefficients",
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 21
+      "views": 23
     },
     {
       "document": null,
@@ -5647,7 +5655,7 @@
       "subject": "Our hetnet edge prediction methodology: the modeling framework for Project Rephetio",
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 10
+      "views": 11
     }
   ]
 }
