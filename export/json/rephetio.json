@@ -777,8 +777,8 @@
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21#21"
     },
     {
-      "body_html": "<h1>Compound Vocabulary</h1>\r\n\r\n<p>We have proceeded with a subset of DrugBank <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkt1068\" class=\"citation\" data-key=\"10.1093/nar/gkt1068\">1</a>]</span> as our compound vocabulary. <a href=\"https://github.com/dhimmel/drugbank/blob/503968ed700257215f7c81137d29f86ab71e7ac4/data/drugbank-slim.tsv\">Included compounds</a> meet the following criteria:</p>\r\n\r\n<ul><li>DrugBank type is <code>small molecule</code></li><li>DrugBank groups includes <code>approved</code></li><li>Have an InChI chemical structure</li></ul>\r\n\r\n<p>Other compound vocabularies are mapped to DrugBank with UniChem <span class=\"citation\">[<a href=\"/doi/10.1186/s13321-014-0043-5\" class=\"citation\" data-key=\"10.1186/s13321-014-0043-5\">2</a>]</span> using the most permissive matching scheme <a href=\"https://www.ebi.ac.uk/unichem/info/widesearchInfo\">available</a> (<code>B = 0</code> and <code>C = 4</code>). <code>B = 0</code> matches compounds using the FIKHB (First InChIKey Hash Block) which is based on atomic connectivity <span class=\"citation\">[<a href=\"/doi/10.1186/1758-2946-5-7\" class=\"citation\" data-key=\"10.1186/1758-2946-5-7\">3</a>]</span>. <code>C = 4</code> matches compounds which share a component with a component of the DrugBank compound, in order to ignore differences based on salts and acids.</p>",
-      "body_md": "# Compound Vocabulary\r\n\r\nWe have proceeded with a subset of DrugBank [@10.1093/nar/gkt1068] as our compound vocabulary. [Included compounds](https://github.com/dhimmel/drugbank/blob/503968ed700257215f7c81137d29f86ab71e7ac4/data/drugbank-slim.tsv) meet the following criteria:\r\n\r\n+ DrugBank type is `small molecule`\r\n+ DrugBank groups includes `approved`\r\n+ Have an InChI chemical structure\r\n\r\nOther compound vocabularies are mapped to DrugBank with UniChem [@10.1186/s13321-014-0043-5] using the most permissive matching scheme [available](https://www.ebi.ac.uk/unichem/info/widesearchInfo) (`B = 0` and `C = 4`). `B = 0` matches compounds using the FIKHB (First InChIKey Hash Block) which is based on atomic connectivity [@10.1186/1758-2946-5-7]. `C = 4` matches compounds which share a component with a component of the DrugBank compound, in order to ignore differences based on salts and acids.",
+      "body_html": "<h1>Compound Vocabulary</h1>\r\n\r\n<p>We have proceeded with a subset of 1,552 terms from DrugBank <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkt1068\" class=\"citation\" data-key=\"10.1093/nar/gkt1068\">1</a>]</span> as our compound vocabulary. <a href=\"https://github.com/dhimmel/drugbank/blob/503968ed700257215f7c81137d29f86ab71e7ac4/data/drugbank-slim.tsv\">Included compounds</a> meet the following criteria:</p>\r\n\r\n<ul><li>DrugBank type is <code>small molecule</code></li><li>DrugBank groups includes <code>approved</code></li><li>Have an InChI chemical structure</li></ul>\r\n\r\n<p>Other compound vocabularies are mapped to DrugBank with UniChem <span class=\"citation\">[<a href=\"/doi/10.1186/s13321-014-0043-5\" class=\"citation\" data-key=\"10.1186/s13321-014-0043-5\">2</a>]</span> using the most permissive matching scheme <a href=\"https://www.ebi.ac.uk/unichem/info/widesearchInfo\">available</a> (<code>B = 0</code> and <code>C = 4</code>). <code>B = 0</code> matches compounds using the FIKHB (First InChIKey Hash Block) which is based on atomic connectivity <span class=\"citation\">[<a href=\"/doi/10.1186/1758-2946-5-7\" class=\"citation\" data-key=\"10.1186/1758-2946-5-7\">3</a>]</span>. <code>C = 4</code> matches compounds which share a component with a component of the DrugBank compound, in order to ignore differences based on salts and acids.</p>",
+      "body_md": "# Compound Vocabulary\r\n\r\nWe have proceeded with a subset of 1,552 terms from DrugBank [@10.1093/nar/gkt1068] as our compound vocabulary. [Included compounds](https://github.com/dhimmel/drugbank/blob/503968ed700257215f7c81137d29f86ab71e7ac4/data/drugbank-slim.tsv) meet the following criteria:\r\n\r\n+ DrugBank type is `small molecule`\r\n+ DrugBank groups includes `approved`\r\n+ Have an InChI chemical structure\r\n\r\nOther compound vocabularies are mapped to DrugBank with UniChem [@10.1186/s13321-014-0043-5] using the most permissive matching scheme [available](https://www.ebi.ac.uk/unichem/info/widesearchInfo) (`B = 0` and `C = 4`). `B = 0` matches compounds using the FIKHB (First InChIKey Hash Block) which is based on atomic connectivity [@10.1186/1758-2946-5-7]. `C = 4` matches compounds which share a component with a component of the DrugBank compound, in order to ignore differences based on salts and acids.",
       "profile": 17,
       "published": "2015-05-05T05:23:16.481212Z",
       "thread": 40,
@@ -3401,8 +3401,8 @@
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205#3"
     },
     {
-      "body_html": "<h2>Standardized coefficients &amp; glmnet</h2>\r\n\r\n<p>In the edge prediction problem for <em>rephetio</em>, we use the R-package <code>glmnet</code> to perform lasso and ridge regression, in order to perform feature selection while fitting the model.</p>\r\n\r\n<p>In the light of the note above, we wanted to adapt the <em>Artesi</em> standardization to the tools we are using.</p>\r\n\r\n<h2>Summary</h2>\r\n\r\n<p><code>glmnet</code>, by default, standardizes the predictor variables <strong>before</strong> fitting the model. After checking in the source code and testing (see below) we came to the conclusion that the computed coefficients were then <em>reverse</em> standardized, with the inverse of the Artesi transformation, in order to report the coefficients in their natural metric †.</p>\r\n\r\n<p>Hence, there are three way to use standardization with the <code>glmnet</code> package:</p>\r\n\r\n<ol><li><p><strong>Untransformed variables, specifying <code>standardize = FALSE</code></strong>: this corresponds to taking into account the units of the variables when fitting the regularisation. Because of the nature of regularization, this setting is usually undesirable and should be reserved to specific, well understood use-cases where keeping the variables in their natural metrics is justified. This is the only method where standardization of the coefficients after fitting of the model, as described in the note above, is appropriate.</p></li><li><p><strong>Untransformed variables, keeping the default <code>standardize = TRUE</code></strong>: This is the easiest option and advised for quick analysis. In order to get the standardized coefficients that actually were the result of the fitting process, apply the Agresti transformation.</p></li><li><p><strong>Standardized variables, with <code>standardize = FALSE</code></strong>: This last method has three key features: (i) it lets the user diagnose the regularisation in the correct units for the coefficients (using, e.g. <code>glmnet:::plot.glmnet()</code>); (ii) it lets the user deal differently with boolean or categorical variables if necessary; (iii) it makes obvious that the regularization has been done on transformed variables. The main disadvantage is that one must separately keep record of the scaling coefficients for future use of the model.</p></li></ol>\r\n\r\n<h2>Proof</h2>\r\n\r\n<p>We needed to understand how were the variables standardized when using the <code>glmnet</code> package, and more importantly how were the coefficients transformed back in their natural metric after fitting the model with those standardized variables.</p>\r\n\r\n<p>Unfortunately for our digging purposes (i) the code is written in FORTRAN, which made us nostalgic but required some getting used to; (ii) the code does not live on a source sharing platform, but fortunately has <a href=\"https://github.com/cran/glmnet\">a mirror on github</a>, like all packages published on CRAN.</p>\r\n\r\n<p>Everything we are interested in is in the <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90\">fortran source code file</a>, whose <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L280\">detailed comments</a> on the top alieviated the need to reverse-enginner the variable names.</p>\r\n\r\n<ol><li><p>Definition of the <code>lognet</code> function (<code>routine</code>) starts at line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2032\">2032</a>. We will follow the track of the standardization flag <code>isd</code>.</p></li><li><p>Line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2154\">2154-2159</a>, we withness the centering and standardization of the variable array <code>x</code> by the vector of means <code>xms</code> and the vector of standard deviations <code>xs</code>, within the subfunction <code>lstandard1</code>:<br></p><pre><code class=\"no-highlight hljs\">  if(ju(j).eq.0)goto 12561                                             1519\r\n  xm(j)=dot_product(w,x(:,j))                                          1519\r\n  x(:,j)=x(:,j)-xm(j)                                                  1520\r\n  if(isd .le. 0)goto 12581                                             1520\r\n  xs(j)=sqrt(dot_product(w,x(:,j)**2))                                 1520\r\n  x(:,j)=x(:,j)/xs(j)                                                  1520</code></pre></li><li><p>Line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2117\">2117</a>:<br></p><pre><code class=\"no-highlight hljs\">  ca(l,ic,k)=ca(l,ic,k)/xs(ia(l))                                      1499</code></pre></li><li><p>And finally, line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2125\">2125</a>, the intercept is computed (if the flag <code>intr</code> is 1):<br></p><pre><code class=\"no-highlight hljs\">  a0(ic,k)=a0(ic,k)-dot_product(ca(1:nk,ic,k),xm(ia(1:nk)))            1501</code></pre></li></ol>\r\n\r\n<h2>Test</h2>\r\n\r\n<p>I wrote a quick <a href=\"https://htmlpreview.github.io/?https://github.com/antoine-lizee/R-Miscs/blob/adc01ea6d49514efb047c58376126b4480929eeb/Stat-glm_coeffs.html\">R report</a> to test our conclusions on the famous <code>diamonds</code> dataset. </p>\r\n\r\n<hr>\r\n\r\n<p>† It also must be noted that <code>glmnet</code>, being written in fortran, does not make any difference between types of variables. As a result, the categorical and boolean predictor are treated as numeric vectors and standardized accordingly.</p>",
-      "body_md": "## Standardized coefficients & glmnet\r\n\r\nIn the edge prediction problem for _rephetio_, we use the R-package `glmnet` to perform lasso and ridge regression, in order to perform feature selection while fitting the model.\r\n\r\nIn the light of the note above, we wanted to adapt the _Artesi_ standardization to the tools we are using.\r\n\r\n## Summary\r\n\r\n`glmnet`, by default, standardizes the predictor variables **before** fitting the model. After checking in the source code and testing (see below) we came to the conclusion that the computed coefficients were then _reverse_ standardized, with the inverse of the Artesi transformation, in order to report the coefficients in their natural metric †.\r\n\r\nHence, there are three way to use standardization with the `glmnet` package:\r\n\r\n1. **Untransformed variables, specifying `standardize = FALSE`**: this corresponds to taking into account the units of the variables when fitting the regularisation. Because of the nature of regularization, this setting is usually undesirable and should be reserved to specific, well understood use-cases where keeping the variables in their natural metrics is justified. This is the only method where standardization of the coefficients after fitting of the model, as described in the note above, is appropriate.\r\n\r\n2. **Untransformed variables, keeping the default `standardize = TRUE`**: This is the easiest option and advised for quick analysis. In order to get the standardized coefficients that actually were the result of the fitting process, apply the Agresti transformation.\r\n\r\n3. **Standardized variables, with `standardize = FALSE`**: This last method has three key features: (i) it lets the user diagnose the regularisation in the correct units for the coefficients (using, e.g. `glmnet:::plot.glmnet()`); (ii) it lets the user deal differently with boolean or categorical variables if necessary; (iii) it makes obvious that the regularization has been done on transformed variables. The main disadvantage is that one must separately keep record of the scaling coefficients for future use of the model.\r\n\r\n## Proof\r\n\r\nWe needed to understand how were the variables standardized when using the `glmnet` package, and more importantly how were the coefficients transformed back in their natural metric after fitting the model with those standardized variables.\r\n\r\nUnfortunately for our digging purposes (i) the code is written in FORTRAN, which made us nostalgic but required some getting used to; (ii) the code does not live on a source sharing platform, but fortunately has [a mirror on github](https://github.com/cran/glmnet), like all packages published on CRAN.\r\n\r\nEverything we are interested in is in the [fortran source code file](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90), whose [detailed comments](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L280) on the top alieviated the need to reverse-enginner the variable names.\r\n\r\n0. Definition of the `lognet` function (`routine`) starts at line [2032](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2032). We will follow the track of the standardization flag `isd`.\r\n\r\n1. Line [2154-2159](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2154), we withness the centering and standardization of the variable array `x` by the vector of means `xms` and the vector of standard deviations `xs`, within the subfunction `lstandard1`:\r\n```\r\n      if(ju(j).eq.0)goto 12561                                             1519\r\n      xm(j)=dot_product(w,x(:,j))                                          1519\r\n      x(:,j)=x(:,j)-xm(j)                                                  1520\r\n      if(isd .le. 0)goto 12581                                             1520\r\n      xs(j)=sqrt(dot_product(w,x(:,j)**2))                                 1520\r\n      x(:,j)=x(:,j)/xs(j)                                                  1520\r\n```\r\n\r\n2. Line [2117](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2117):\r\n```\r\n      ca(l,ic,k)=ca(l,ic,k)/xs(ia(l))                                      1499\r\n```\r\n\r\n3. And finally, line [2125](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2125), the intercept is computed (if the flag `intr` is 1):\r\n```\r\n      a0(ic,k)=a0(ic,k)-dot_product(ca(1:nk,ic,k),xm(ia(1:nk)))            1501\r\n```\r\ntaking into account the centering of variables. This could be written: $$a_0^* = a_0 + \\sum ca_i \\cdot xm_i$$\r\n\r\n\r\n## Test\r\n\r\nI wrote a quick [R report](https://htmlpreview.github.io/?https://github.com/antoine-lizee/R-Miscs/blob/adc01ea6d49514efb047c58376126b4480929eeb/Stat-glm_coeffs.html) to test our conclusions on the famous `diamonds` dataset. \r\n\r\n---\r\n\r\n† It also must be noted that `glmnet`, being written in fortran, does not make any difference between types of variables. As a result, the categorical and boolean predictor are treated as numeric vectors and standardized accordingly.",
+      "body_html": "<h2>Standardized coefficients &amp; glmnet</h2>\r\n\r\n<p>In the edge prediction problem for <em>rephetio</em>, we use the R-package <code>glmnet</code> to perform lasso and ridge regression, in order to perform feature selection while fitting the model.</p>\r\n\r\n<p>In the light of the note above, we wanted to adapt the <em>Artesi</em> standardization to the tools we are using.</p>\r\n\r\n<h2>Summary</h2>\r\n\r\n<p><code>glmnet</code>, by default, standardizes the predictor variables <strong>before</strong> fitting the model. After checking in the source code and testing (see below) we came to the conclusion that the computed coefficients were then <em>reverse</em> standardized, with the inverse of the Artesi transformation, in order to report the coefficients in their natural metric †.</p>\r\n\r\n<p>Hence, there are three way to use standardization with the <code>glmnet</code> package:</p>\r\n\r\n<ol><li><p><strong>Untransformed variables, specifying <code>standardize = FALSE</code></strong>: this corresponds to taking into account the units of the variables when fitting the regularisation. Because of the nature of regularization, this setting is usually undesirable and should be reserved to specific, well understood use-cases where keeping the variables in their natural metrics is justified. This is the only method where standardization of the coefficients after fitting of the model, as described in the note above, is appropriate.</p></li><li><p><strong>Untransformed variables, keeping the default <code>standardize = TRUE</code></strong>: This is the easiest option and advised for quick analysis. In order to get the standardized coefficients that actually were the result of the fitting process, apply the Agresti transformation.</p></li><li><p><strong>Standardized variables, with <code>standardize = FALSE</code></strong>: This last method has three key features: (i) it lets the user diagnose the regularisation in the correct units for the coefficients (using, e.g. <code>glmnet:::plot.glmnet()</code>); (ii) it lets the user deal differently with boolean or categorical variables if necessary; (iii) it makes obvious that the regularization has been done on transformed variables. The main disadvantage is that one must separately keep record of the scaling coefficients for future use of the model. If the variables are each standardized with the standard deviation (eg with <code>scale()</code>), this approach lead to the same <em>model</em> as the previous one.</p></li></ol>\r\n\r\n<h2>Proof</h2>\r\n\r\n<p>We needed to understand how were the variables standardized when using the <code>glmnet</code> package, and more importantly how were the coefficients transformed back in their natural metric after fitting the model with those standardized variables.</p>\r\n\r\n<p>Unfortunately for our digging purposes (i) the code is written in FORTRAN, which made us nostalgic but required some getting used to; (ii) the code does not live on a source sharing platform, but fortunately has <a href=\"https://github.com/cran/glmnet\">a mirror on github</a>, like all packages published on CRAN.</p>\r\n\r\n<p>Everything we are interested in is in the <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90\">fortran source code file</a>, whose <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L280\">detailed comments</a> on the top alieviated the need to reverse-enginner the variable names.</p>\r\n\r\n<ol><li><p>Definition of the <code>lognet</code> function (<code>routine</code>) starts at line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2032\">2032</a>. We will follow the track of the standardization flag <code>isd</code>.</p></li><li><p>Line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2154\">2154-2159</a>, we withness the centering and standardization of the variable array <code>x</code> by the vector of means <code>xms</code> and the vector of standard deviations <code>xs</code>, within the subfunction <code>lstandard1</code>:<br></p><pre><code class=\"no-highlight hljs\">  if(ju(j).eq.0)goto 12561                                             1519\r\n  xm(j)=dot_product(w,x(:,j))                                          1519\r\n  x(:,j)=x(:,j)-xm(j)                                                  1520\r\n  if(isd .le. 0)goto 12581                                             1520\r\n  xs(j)=sqrt(dot_product(w,x(:,j)**2))                                 1520\r\n  x(:,j)=x(:,j)/xs(j)                                                  1520</code></pre></li><li><p>Line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2117\">2117</a>:<br></p><pre><code class=\"no-highlight hljs\">  ca(l,ic,k)=ca(l,ic,k)/xs(ia(l))                                      1499</code></pre></li><li><p>And finally, line <a href=\"https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2125\">2125</a>, the intercept is computed (if the flag <code>intr</code> is 1):<br></p><pre><code class=\"no-highlight hljs\">  a0(ic,k)=a0(ic,k)-dot_product(ca(1:nk,ic,k),xm(ia(1:nk)))            1501</code></pre></li></ol>\r\n\r\n<h2>Test</h2>\r\n\r\n<p>I wrote a quick <a href=\"https://htmlpreview.github.io/?https://github.com/antoine-lizee/R-Miscs/blob/adc01ea6d49514efb047c58376126b4480929eeb/Stat-glm_coeffs.html\">R report</a> to test our conclusions on the famous <code>diamonds</code> dataset. </p>\r\n\r\n<hr>\r\n\r\n<p>† It also must be noted that <code>glmnet</code>, being written in fortran, does not make any difference between types of variables. As a result, the categorical and boolean predictor are treated as numeric vectors and standardized accordingly.</p>",
+      "body_md": "## Standardized coefficients & glmnet\r\n\r\nIn the edge prediction problem for _rephetio_, we use the R-package `glmnet` to perform lasso and ridge regression, in order to perform feature selection while fitting the model.\r\n\r\nIn the light of the note above, we wanted to adapt the _Artesi_ standardization to the tools we are using.\r\n\r\n## Summary\r\n\r\n`glmnet`, by default, standardizes the predictor variables **before** fitting the model. After checking in the source code and testing (see below) we came to the conclusion that the computed coefficients were then _reverse_ standardized, with the inverse of the Artesi transformation, in order to report the coefficients in their natural metric †.\r\n\r\nHence, there are three way to use standardization with the `glmnet` package:\r\n\r\n1. **Untransformed variables, specifying `standardize = FALSE`**: this corresponds to taking into account the units of the variables when fitting the regularisation. Because of the nature of regularization, this setting is usually undesirable and should be reserved to specific, well understood use-cases where keeping the variables in their natural metrics is justified. This is the only method where standardization of the coefficients after fitting of the model, as described in the note above, is appropriate.\r\n\r\n2. **Untransformed variables, keeping the default `standardize = TRUE`**: This is the easiest option and advised for quick analysis. In order to get the standardized coefficients that actually were the result of the fitting process, apply the Agresti transformation.\r\n\r\n3. **Standardized variables, with `standardize = FALSE`**: This last method has three key features: (i) it lets the user diagnose the regularisation in the correct units for the coefficients (using, e.g. `glmnet:::plot.glmnet()`); (ii) it lets the user deal differently with boolean or categorical variables if necessary; (iii) it makes obvious that the regularization has been done on transformed variables. The main disadvantage is that one must separately keep record of the scaling coefficients for future use of the model. If the variables are each standardized with the standard deviation (eg with `scale()`), this approach lead to the same _model_ as the previous one.\r\n\r\n## Proof\r\n\r\nWe needed to understand how were the variables standardized when using the `glmnet` package, and more importantly how were the coefficients transformed back in their natural metric after fitting the model with those standardized variables.\r\n\r\nUnfortunately for our digging purposes (i) the code is written in FORTRAN, which made us nostalgic but required some getting used to; (ii) the code does not live on a source sharing platform, but fortunately has [a mirror on github](https://github.com/cran/glmnet), like all packages published on CRAN.\r\n\r\nEverything we are interested in is in the [fortran source code file](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90), whose [detailed comments](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L280) on the top alieviated the need to reverse-enginner the variable names.\r\n\r\n0. Definition of the `lognet` function (`routine`) starts at line [2032](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2032). We will follow the track of the standardization flag `isd`.\r\n\r\n1. Line [2154-2159](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2154), we withness the centering and standardization of the variable array `x` by the vector of means `xms` and the vector of standard deviations `xs`, within the subfunction `lstandard1`:\r\n```\r\n      if(ju(j).eq.0)goto 12561                                             1519\r\n      xm(j)=dot_product(w,x(:,j))                                          1519\r\n      x(:,j)=x(:,j)-xm(j)                                                  1520\r\n      if(isd .le. 0)goto 12581                                             1520\r\n      xs(j)=sqrt(dot_product(w,x(:,j)**2))                                 1520\r\n      x(:,j)=x(:,j)/xs(j)                                                  1520\r\n```\r\n\r\n2. Line [2117](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2117):\r\n```\r\n      ca(l,ic,k)=ca(l,ic,k)/xs(ia(l))                                      1499\r\n```\r\n\r\n3. And finally, line [2125](https://github.com/cran/glmnet/blob/d80f1b1351ff68c03492aa654d437a99b4de5b49/src/glmnet5.f90#L2125), the intercept is computed (if the flag `intr` is 1):\r\n```\r\n      a0(ic,k)=a0(ic,k)-dot_product(ca(1:nk,ic,k),xm(ia(1:nk)))            1501\r\n```\r\ntaking into account the centering of variables. This could be written: $$a_0^* = a_0 + \\sum ca_i \\cdot xm_i$$\r\n\r\n\r\n## Test\r\n\r\nI wrote a quick [R report](https://htmlpreview.github.io/?https://github.com/antoine-lizee/R-Miscs/blob/adc01ea6d49514efb047c58376126b4480929eeb/Stat-glm_coeffs.html) to test our conclusions on the famous `diamonds` dataset. \r\n\r\n---\r\n\r\n† It also must be noted that `glmnet`, being written in fortran, does not make any difference between types of variables. As a result, the categorical and boolean predictor are treated as numeric vectors and standardized accordingly.",
       "profile": 23,
       "published": "2016-05-02T20:45:01.106725Z",
       "thread": 205,
@@ -3431,6 +3431,62 @@
       "published": "2016-05-04T22:31:58.818987Z",
       "thread": 113,
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113#8"
+    },
+    {
+      "body_html": "<p>We would <a href=\"https://thinklab.com/discussion/evaluation-framework/47\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d47\">like to validate</a> our predictions by assessing whether we highly rank treatments that are under investigation in clinical trial. Clinical trials are generally supporting by a large body of preclinical evidence including animal studies <span class=\"citation\">[<a href=\"/doi/10.1111/bph.12771\" class=\"citation\" data-key=\"10.1111/bph.12771\">1</a>]</span>, which makes them a rich resource of drug efficacy.</p>\r\n\r\n<p>The <a href=\"https://clinicaltrials.gov/\">ClinicalTrials.gov</a> database is a \"registry and results database of publicly and privately supported clinical studies of human participants conducted around the world.\" Previous studies that have computationally predicted pharmacotherapies have used ClinicalTrials.gov to evaluate their performance <span class=\"citation\">[<a href=\"/doi/10.1038/msb.2011.26\" class=\"citation\" data-key=\"10.1038/msb.2011.26\">2</a>, <a href=\"/doi/10.1038/ncomms10331\" class=\"citation\" data-key=\"10.1038/ncomms10331\">3</a>]</span>.</p>\r\n\r\n<p>Several existing studies have investigated the utility of ClinicalTrials.gov data from various angles <span class=\"citation\">[<a href=\"/doi/10.1056/NEJMsa1012065\" class=\"citation\" data-key=\"10.1056/NEJMsa1012065\">4</a>, <a href=\"/doi/10.1371/journal.pone.0101826\" class=\"citation\" data-key=\"10.1371/journal.pone.0101826\">5</a>, <a href=\"/doi/10.1371/journal.pmed.1000144\" class=\"citation\" data-key=\"10.1371/journal.pmed.1000144\">6</a>, <a href=\"/doi/10.1056/NEJMsa053234\" class=\"citation\" data-key=\"10.1056/NEJMsa053234\">7</a>, <a href=\"/doi/10.1136/bmj.d7292\" class=\"citation\" data-key=\"10.1136/bmj.d7292\">8</a>, <a href=\"/doi/10.1001/jama.2012.3424\" class=\"citation\" data-key=\"10.1001/jama.2012.3424\">9</a>, <a href=\"/doi/10.7326/0003-4819-153-3-201008030-00006\" class=\"citation\" data-key=\"10.7326/0003-4819-153-3-201008030-00006\">10</a>]</span>. In this discussion, we will focus on constructing a catalog of potential indications under investigation by clinical trial. Any advice on using analyzing ClinicalTrials.gov data will be appreciated.</p>",
+      "body_md": "We would [like to validate](https://thinklab.com/discussion/evaluation-framework/47) our predictions by assessing whether we highly rank treatments that are under investigation in clinical trial. Clinical trials are generally supporting by a large body of preclinical evidence including animal studies [@10.1111/bph.12771], which makes them a rich resource of drug efficacy.\r\n\r\nThe [ClinicalTrials.gov](https://clinicaltrials.gov/) database is a \"registry and results database of publicly and privately supported clinical studies of human participants conducted around the world.\" Previous studies that have computationally predicted pharmacotherapies have used ClinicalTrials.gov to evaluate their performance [@10.1038/msb.2011.26 @10.1038/ncomms10331].\r\n\r\nSeveral existing studies have investigated the utility of ClinicalTrials.gov data from various angles [@10.1056/NEJMsa1012065 @10.1371/journal.pone.0101826 @10.1371/journal.pmed.1000144 @10.1056/NEJMsa053234 @10.1136/bmj.d7292 @10.1001/jama.2012.3424 @10.7326/0003-4819-153-3-201008030-00006]. In this discussion, we will focus on constructing a catalog of potential indications under investigation by clinical trial. Any advice on using analyzing ClinicalTrials.gov data will be appreciated.",
+      "profile": 17,
+      "published": "2016-05-08T05:00:24.012824Z",
+      "thread": 212,
+      "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212"
+    },
+    {
+      "body_html": "<h1>Initial catalog of drug–disease therapies</h1>\r\n\r\n<p>I created an initial catalog of drug–disease therapies from ClinicalTrials.gov. The process consisted of downloading all study records and extracting the MeSH-coded interventions and conditions (<a href=\"https://github.com/dhimmel/clintrials/blob/7c65dec7b69322ca2f8ba2b170c1b3dbd92ebff8/1.clinical-trials.ipynb\">notebook</a>). Next, I mapped the MeSH diseases to Disease Ontology terms and mapped MeSH compounds to DrugBank via <a href=\"https://thinklab.com/discussion/incorporating-drugcentral-data-in-our-network/186\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d186\">DrugCentral</a> (<a href=\"https://github.com/dhimmel/clintrials/blob/7c65dec7b69322ca2f8ba2b170c1b3dbd92ebff8/2.map.ipynb\">notebook</a>).</p>\r\n\r\n<p>The <a href=\"https://github.com/dhimmel/clintrials/blob/7c65dec7b69322ca2f8ba2b170c1b3dbd92ebff8/data/DrugBank-DO.tsv\">resulting catalog</a> consists of 158,767 trial–drug–disease relationships between 1,181 drugs and 1,617 diseases from 42,826 trials. Note that trials will often assess multiple drug interventions and even conditions, resulting in multiple drug–disease pairs for a single trial. The total number of distinct drug–disease therapies extracted was 33,095.</p>\r\n\r\n<p>Project Rephetio uses a subset of 137 diseases called <a href=\"https://thinklab.com/discussion/unifying-disease-vocabularies/44#6\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d44\">DO Slim</a> and a subset of all drugs called <a href=\"https://thinklab.com/discussion/unifying-drug-vocabularies/40#5\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d40\">DrugBank Slim</a>. Thus, I created a slim trial–drug–disease catalog for use with our project (<a href=\"https://github.com/dhimmel/clintrials/blob/7c65dec7b69322ca2f8ba2b170c1b3dbd92ebff8/data/DrugBank-DO-slim.tsv\">dataset</a>). Transitive closure was used to propagate therapies to DO Slim diseases from their subtypes. The slim clinical trial catalog contains 6,382 drug–disease pairs for 794 compounds and 130 diseases that incorporate 27,240 trials.</p>",
+      "body_md": "# Initial catalog of drug–disease therapies\r\n\r\nI created an initial catalog of drug–disease therapies from ClinicalTrials.gov. The process consisted of downloading all study records and extracting the MeSH-coded interventions and conditions ([notebook](https://github.com/dhimmel/clintrials/blob/7c65dec7b69322ca2f8ba2b170c1b3dbd92ebff8/1.clinical-trials.ipynb)). Next, I mapped the MeSH diseases to Disease Ontology terms and mapped MeSH compounds to DrugBank via [DrugCentral](https://thinklab.com/discussion/incorporating-drugcentral-data-in-our-network/186) ([notebook](https://github.com/dhimmel/clintrials/blob/7c65dec7b69322ca2f8ba2b170c1b3dbd92ebff8/2.map.ipynb)).\r\n\r\nThe [resulting catalog](https://github.com/dhimmel/clintrials/blob/7c65dec7b69322ca2f8ba2b170c1b3dbd92ebff8/data/DrugBank-DO.tsv) consists of 158,767 trial--drug--disease relationships between 1,181 drugs and 1,617 diseases from 42,826 trials. Note that trials will often assess multiple drug interventions and even conditions, resulting in multiple drug--disease pairs for a single trial. The total number of distinct drug--disease therapies extracted was 33,095.\r\n\r\nProject Rephetio uses a subset of 137 diseases called [DO Slim](https://thinklab.com/discussion/unifying-disease-vocabularies/44#6) and a subset of all drugs called [DrugBank Slim](https://thinklab.com/discussion/unifying-drug-vocabularies/40#5). Thus, I created a slim trial--drug--disease catalog for use with our project ([dataset](https://github.com/dhimmel/clintrials/blob/7c65dec7b69322ca2f8ba2b170c1b3dbd92ebff8/data/DrugBank-DO-slim.tsv)). Transitive closure was used to propagate therapies to DO Slim diseases from their subtypes. The slim clinical trial catalog contains 6,382 drug--disease pairs for 794 compounds and 130 diseases that incorporate 27,240 trials.",
+      "profile": 17,
+      "published": "2016-05-08T17:37:10.718986Z",
+      "thread": 212,
+      "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212#2"
+    },
+    {
+      "body_html": "<p><a href=\"http://www.drugbank.ca/\">DrugBank</a> is a database of drugs which includes information on drug biochemistry and pharmacology <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkj067\" class=\"citation\" data-key=\"10.1093/nar/gkj067\">1</a>, <a href=\"/doi/10.1093/nar/gkm958\" class=\"citation\" data-key=\"10.1093/nar/gkm958\">2</a>, <a href=\"/doi/10.1093/nar/gkq1126\" class=\"citation\" data-key=\"10.1093/nar/gkq1126\">3</a>, <a href=\"/doi/10.1093/nar/gkt1068\" class=\"citation\" data-key=\"10.1093/nar/gkt1068\">4</a>]</span>. DrugBank is a publicly-funded resource that is frequently used for biomedical research. Google Scholar <a href=\"https://scholar.google.com/scholar?q=drugbank&amp;hl=en&amp;as_sdt=0%2C5&amp;as_ylo=2006&amp;as_yhi=2015\" title=\"Google Scholar Search for articles mentioning DrugBank from 2006–2015\">returns</a> 8,940 studies which mention \"DrugBank\" during its first decade of existence (2006–2015).</p>\r\n\r\n<p>When we began using DrugBank for Project Rephetio and Hetionet in 2015, DrugBank <a href=\"https://github.com/dhimmel/integrate/blob/7b95bf337d6e43e54457621f39a7341e620138f7/licenses/custom/DrugBank.md\" title=\"Archive of DrugBank's legal statement from 2015-08-20\">had</a> a brief legal statement:</p>\r\n\r\n<blockquote><p>DrugBank is offered to the public as a freely available resource. Use and re-distribution of the data, in whole or in part, for commercial purposes requires explicit permission of the authors and explicit acknowledgment of the source material (DrugBank) and the original publication.</p></blockquote>\r\n\r\n<p>Therefore, in accordance with our <a href=\"https://thinklab.com/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107#14\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d107\">data-licensing compliance strategy</a>, we applied a <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\" title=\"Creative Commons Attribution-NonCommercial 4.0 International\">CC BY-NC</a> license to DrugBank data. The non-commercial stipulation was regrettable because it discriminates against a class of user and precludes the data from being <a href=\"http://opendefinition.org/od/2.1/en/\" title=\"Open Definition 2.1\">open knowledge</a>. Additionally, what qualifies as commercial reuse is unclear and potentially broad making NC stipulations especially toxic <span class=\"citation\">[<a href=\"/doi/10.3897/zookeys.150.2189\" class=\"citation\" data-key=\"10.3897/zookeys.150.2189\">5</a>]</span>.</p>\r\n\r\n<p>Nonetheless, many publicly-funded resources will specify \"academic use only\" by habit, without appreciating the full ramifications of their discrimination. Hence, I assumed that DrugBank was effectively an open resource with a poorly-devised license statement.</p>\r\n\r\n<p>The <a href=\"http://www.drugbank.ca/releases/4-5-0/release_notes\">release</a> of DrugBank 4.5 on April 20, 2016 dispelled my naiveté. DrugBank has been hijacked by the commercial interests of the University of Alberta and OMx. <a href=\"http://omx.io/\" title=\"OMx Personal Health Analytics\">OMx</a> is a company <a href=\"http://entrepreneurship.ualberta.ca/ehub/ehub-startups/omx\" title=\"Entrepreneurship @ UAlberta eHUB Startups Interview\">started</a> in 2012 at the University of Albert, which currently lists DrugBank as their only product. While the University of Alberta asserts to own DrugBank, OMx is responsible for commercial DrugBank licensing.</p>\r\n\r\n<p>Downloading DrugBank now requires registration. To <a href=\"http://www.drugbank.ca/public_users/sign_up\" title=\"Sign up for DrugBank account\">register</a>, users must provide their name, contact information, university/institutional affiliation, and intended use of DrugBank. Additionally, registration is contingent upon entering into the following agreement:</p>\r\n\r\n<blockquote><p>I accept DrugBank's Privacy Policy, Terms of Use, and the above End User License Agreement (required)</p><p>By checking the above box, you are confirming that your use of DrugBank shall not be for commercial purposes. If you wish to use DrugBank for commercial purposes, contact <a href=\"mailto:info@omx.io\">info@omx.io</a> to inquire about a separate agreement with OMx.</p></blockquote>\r\n\r\n<p>My next post will examine how the new <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md\" title=\"Archive of the Privacy Policy from 2016-05-08\">Privacy Policy</a>, <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md\" title=\"Archive of the Terms of Use from 2016-05-08\">Terms of Use</a>, and <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md\" title=\"Archive of the End User License Agreement from 2016-05-08\">License Agreement</a> inhibit reuse of DrugBank. In essence, DrugBank has chosen a path that prioritizes licensing revenue over public reuse. Its heavy-handed legal infrastructure presents a grave barrier to reuse. The academic community must now consider parting ways with what has been a foundational resource.</p>",
+      "body_md": "[DrugBank](http://www.drugbank.ca/) is a database of drugs which includes information on drug biochemistry and pharmacology [@10.1093/nar/gkj067 @10.1093/nar/gkm958 @10.1093/nar/gkq1126 @10.1093/nar/gkt1068]. DrugBank is a publicly-funded resource that is frequently used for biomedical research. Google Scholar [returns](https://scholar.google.com/scholar?q=drugbank&hl=en&as_sdt=0%2C5&as_ylo=2006&as_yhi=2015 \"Google Scholar Search for articles mentioning DrugBank from 2006–2015\") 8,940 studies which mention \"DrugBank\" during its first decade of existence (2006–2015).\r\n\r\nWhen we began using DrugBank for Project Rephetio and Hetionet in 2015, DrugBank [had](https://github.com/dhimmel/integrate/blob/7b95bf337d6e43e54457621f39a7341e620138f7/licenses/custom/DrugBank.md \"Archive of DrugBank's legal statement from 2015-08-20\") a brief legal statement:\r\n\r\n> DrugBank is offered to the public as a freely available resource. Use and re-distribution of the data, in whole or in part, for commercial purposes requires explicit permission of the authors and explicit acknowledgment of the source material (DrugBank) and the original publication.\r\n\r\nTherefore, in accordance with our [data-licensing compliance strategy](https://thinklab.com/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107#14), we applied a [CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/ \"Creative Commons Attribution-NonCommercial 4.0 International\") license to DrugBank data. The non-commercial stipulation was regrettable because it discriminates against a class of user and precludes the data from being [open knowledge](http://opendefinition.org/od/2.1/en/ \"Open Definition 2.1\"). Additionally, what qualifies as commercial reuse is unclear and potentially broad making NC stipulations especially toxic [@10.3897/zookeys.150.2189].\r\n\r\nNonetheless, many publicly-funded resources will specify \"academic use only\" by habit, without appreciating the full ramifications of their discrimination. Hence, I assumed that DrugBank was effectively an open resource with a poorly-devised license statement.\r\n\r\nThe [release](http://www.drugbank.ca/releases/4-5-0/release_notes) of DrugBank 4.5 on April 20, 2016 dispelled my naiveté. DrugBank has been hijacked by the commercial interests of the University of Alberta and OMx. [OMx](http://omx.io/ \"OMx Personal Health Analytics\") is a company [started](http://entrepreneurship.ualberta.ca/ehub/ehub-startups/omx \"Entrepreneurship @ UAlberta eHUB Startups Interview\") in 2012 at the University of Albert, which currently lists DrugBank as their only product. While the University of Alberta asserts to own DrugBank, OMx is responsible for commercial DrugBank licensing.\r\n\r\nDownloading DrugBank now requires registration. To [register](http://www.drugbank.ca/public_users/sign_up \"Sign up for DrugBank account\"), users must provide their name, contact information, university/institutional affiliation, and intended use of DrugBank. Additionally, registration is contingent upon entering into the following agreement:\r\n\r\n> I accept DrugBank's Privacy Policy, Terms of Use, and the above End User License Agreement (required)\r\n\r\n> By checking the above box, you are confirming that your use of DrugBank shall not be for commercial purposes. If you wish to use DrugBank for commercial purposes, contact info@omx.io to inquire about a separate agreement with OMx.\r\n\r\nMy next post will examine how the new [Privacy Policy](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md \"Archive of the Privacy Policy from 2016-05-08\"), [Terms of Use](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md \"Archive of the Terms of Use from 2016-05-08\"), and [License Agreement](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md \"Archive of the End User License Agreement from 2016-05-08\") inhibit reuse of DrugBank. In essence, DrugBank has chosen a path that prioritizes licensing revenue over public reuse. Its heavy-handed legal infrastructure presents a grave barrier to reuse. The academic community must now consider parting ways with what has been a foundational resource.",
+      "profile": 17,
+      "published": "2016-05-08T21:35:21.495978Z",
+      "thread": 213,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213"
+    },
+    {
+      "body_html": "<h1>Funding</h1>\r\n\r\n<p>Ultimately science funders have the most leverage regarding data licensing issues. Public funding agencies and philanthropists are generally interested in making sure the research they fund is shared openly. DrugBank appears to have received both public and private funding. DrugBank has pursued commercial partnerships <a href=\"http://www.bio-itworld.com/issues/2008/feb/drugbank-database.html\" title=\"DrugBank Database in Commercial Partnership\">since at least 2008</a>.</p>\r\n\r\n<h2>Specific grants</h2>\r\n\r\n<p>The database has received at least $1,069,848 CAD from the Canadian Institutes of Health Research (CIHR) from the following two grants:</p>\r\n\r\n<ul><li><a href=\"http://agingportfolio.org/projects/project/CIHR-944397\">$374,128 CAD from 2007–2010</a></li><li>$695,720 CAD from 2011–2016</li></ul>\r\n\r\n<p>Please leave a note if you find specifics on other DrugBank grants.</p>\r\n\r\n<h2>Funding Statements</h2>\r\n\r\n<p>As of May 8, 2016, the <a href=\"http://www.drugbank.ca/\">DrugBank homepage</a> includes the following funding statement:</p>\r\n\r\n<blockquote><p>This project is supported by the <a href=\"http://www.cihr-irsc.gc.ca\">Canadian Institutes of Health Research</a> (award #111062), <a href=\"http://www.aihealthsolutions.ca\">Alberta Innovates - Health Solutions</a>, and by <a href=\"http://www.metabolomicscentre.ca/\">The Metabolomics Innovation Centre (TMIC)</a>, a nationally-funded research and core facility that supports a wide range of cutting-edge metabolomic studies. TMIC is funded by <a href=\"http://www.genomealberta.ca\">Genome Alberta</a>, <a href=\"http://www.genomebc.ca/\">Genome British Columbia</a>, and <a href=\"http://www.genomecanada.ca\">Genome Canada</a>, a not-for-profit organization that is leading Canada's national genomics strategy with $900 million in funding from the federal government. Maintenance, support, and commercial licensing is provided by <a href=\"http://omx.io\">OMx Personal Health Analytics, Inc.</a></p></blockquote>\r\n\r\n<p>The DrugBank publications include the following funding statements:</p>\r\n\r\n<p>From 2006 <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkj067\" class=\"citation\" data-key=\"10.1093/nar/gkj067\">1</a>]</span>:</p>\r\n\r\n<blockquote><p>The authors wish to thank Genome Prairie, a division of Genome Canada for financial support. Funding to pay the Open Access publication charges for this article was provided by Genome Canada.</p></blockquote>\r\n\r\n<p>From 2007 <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkm958\" class=\"citation\" data-key=\"10.1093/nar/gkm958\">2</a>]</span>:</p>\r\n\r\n<blockquote><p>The authors wish to thank the Canadian Institutes for Health Research (CIHR), as well as Genome Alberta and Genome Canada for financial support. We are also indebted to the many users of DrugBank who have provided valuable feedback and suggestions. Funding to pay the Open Access publication charges was provided by Genome Alberta.</p></blockquote>\r\n\r\n<p>From 2010 <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkq1126\" class=\"citation\" data-key=\"10.1093/nar/gkq1126\">3</a>]</span>:</p>\r\n\r\n<blockquote><p>Canadian Institutes of Health Research (CIHR); Genome Alberta; Genome Canada; GenomeQuest Inc. Funding for open access charge: CIHR.</p></blockquote>\r\n\r\n<p>From 2013 <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkt1068\" class=\"citation\" data-key=\"10.1093/nar/gkt1068\">4</a>]</span>:</p>\r\n\r\n<blockquote><p>The authors wish to thank Genome Alberta (a division of Genome Canada), The Canadian Institutes of Health Research (CIHR), and Alberta Innovates Health Solutions (AIHS) for financial support. Funding for open access charge: CIHR.</p></blockquote>",
+      "body_md": "# Funding\r\n\r\nUltimately science funders have the most leverage regarding data licensing issues. Public funding agencies and philanthropists are generally interested in making sure the research they fund is shared openly. DrugBank appears to have received both public and private funding. DrugBank has pursued commercial partnerships [since at least 2008](http://www.bio-itworld.com/issues/2008/feb/drugbank-database.html \"DrugBank Database in Commercial Partnership\").\r\n\r\n## Specific grants\r\n\r\nThe database has received at least $1,069,848 CAD from the Canadian Institutes of Health Research (CIHR) from the following two grants:\r\n\r\n+ [$374,128 CAD from 2007--2010](http://agingportfolio.org/projects/project/CIHR-944397)\r\n+ $695,720 CAD from 2011--2016\r\n\r\nPlease leave a note if you find specifics on other DrugBank grants.\r\n\r\n## Funding Statements\r\n\r\nAs of May 8, 2016, the [DrugBank homepage](http://www.drugbank.ca/) includes the following funding statement:\r\n\r\n> This project is supported by the [Canadian Institutes of Health Research](http://www.cihr-irsc.gc.ca) (award #111062), [Alberta Innovates - Health Solutions](http://www.aihealthsolutions.ca), and by [The Metabolomics Innovation Centre (TMIC)](http://www.metabolomicscentre.ca/), a nationally-funded research and core facility that supports a wide range of cutting-edge metabolomic studies. TMIC is funded by [Genome Alberta](http://www.genomealberta.ca), [Genome British Columbia](http://www.genomebc.ca/), and [Genome Canada](http://www.genomecanada.ca), a not-for-profit organization that is leading Canada's national genomics strategy with $900 million in funding from the federal government. Maintenance, support, and commercial licensing is provided by [OMx Personal Health Analytics, Inc.](http://omx.io)\r\n\r\nThe DrugBank publications include the following funding statements:\r\n\r\nFrom 2006 [@10.1093/nar/gkj067]:\r\n\r\n> The authors wish to thank Genome Prairie, a division of Genome Canada for financial support. Funding to pay the Open Access publication charges for this article was provided by Genome Canada.\r\n\r\nFrom 2007 [@10.1093/nar/gkm958]:\r\n\r\n> The authors wish to thank the Canadian Institutes for Health Research (CIHR), as well as Genome Alberta and Genome Canada for financial support. We are also indebted to the many users of DrugBank who have provided valuable feedback and suggestions. Funding to pay the Open Access publication charges was provided by Genome Alberta.\r\n\r\nFrom 2010 [@10.1093/nar/gkq1126]:\r\n\r\n> Canadian Institutes of Health Research (CIHR); Genome Alberta; Genome Canada; GenomeQuest Inc. Funding for open access charge: CIHR.\r\n\r\nFrom 2013 [@10.1093/nar/gkt1068]:\r\n\r\n> The authors wish to thank Genome Alberta (a division of Genome Canada), The Canadian Institutes of Health Research (CIHR), and Alberta Innovates Health Solutions (AIHS) for financial support. Funding for open access charge: CIHR.",
+      "profile": 17,
+      "published": "2016-05-09T02:11:11.872236Z",
+      "thread": 213,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#3"
+    },
+    {
+      "body_html": "<h1>Decoding the legal texts</h1>\r\n\r\n<p>Researchers looking to use DrugBank now have quite a bit of reading to do. As described in the 1,424-word <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md\">Privacy Policy</a>:</p>\r\n\r\n<blockquote><p>You are prohibited from using the Platform unless you fully understand and agree to the Terms of Use and the [Privacy] Policy.</p></blockquote>\r\n\r\n<h2>Terms of Use</h2>\r\n\r\n<p>Let's start with the 3,529-word <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md\">Terms of Use</a>. Remember that these terms of use claim to govern any use of the Platform, which encompasses the drugbank.ca website. First make sure you understand the terms before using DrugBank:</p>\r\n\r\n<blockquote><p>If you do not agree to or understand all the provisions, terms and conditions set out below, then you may not access the Platform or use any of our services.</p></blockquote>\r\n\r\n<p>Second, it appears that using information from DrugBank in a publication is prohibited:</p>\r\n\r\n<blockquote><p>Users are not permitted to take any information from the site and share it with others ... unless they have obtained OMx’s consent.</p></blockquote>\r\n\r\n<p>In fact, you're not allowed to even copy information:</p>\r\n\r\n<blockquote><p>Users are prohibited from copying, reproducing, downloading, sharing, or storing the Platform, the data contained within DrugBank or any components thereof, to any device or server unless previously authorized to do so by OMx.</p></blockquote>\r\n\r\n<p>Third, it appears that showing a DrugBank page in your presentation is prohibited:</p>\r\n\r\n<blockquote><p>Users are prohibited from providing any display or demonstration of the Platform to others, either publicly or in private, for any purpose whatsoever without the prior express written consent of OMx.</p></blockquote>\r\n\r\n<p>Fourth, users under 18 are denied access:</p>\r\n\r\n<blockquote><p>We do not permit any User under the age of 18 to use our Service or Platform.</p></blockquote>\r\n\r\n<p>Finally, any past permissions you've received are no longer any good:</p>\r\n\r\n<blockquote><p>The Agreement, in combination with all policies and guidelines related thereto (including but not limited to the Privacy Policy), incorporated by reference, constitute the entire agreement between you and OMx and supersede all prior communications, agreements and understandings, written or oral, with respect to the subject matter of the Agreement.</p></blockquote>\r\n\r\n<h2>License Agreement</h2>\r\n\r\n<p>To register with DrugBank, which is necessary for downloading the database, users must agree to a 877-word <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md\">Non-Commercial End User License Agreement</a> (EULA). Specifically, the agreement states:</p>\r\n\r\n<blockquote><p>Your use of DrugBank Database is governed by a legal agreement between you and OMx consisting of this Non-Commercial End User License Agreement, the Terms of Use (the \"Terms\") and the Privacy Policy, which you must accept by checking the box indicating your acceptance of this License, the Terms and the Privacy Policy.</p></blockquote>\r\n\r\n<p>Next, the EULA states:</p>\r\n\r\n<blockquote><p>1.2 Access to DrugBank Database is subject to this standard Non-Commercial End User License Agreement, which is <a href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode\">Creative Common's Attribution-NonCommercial-ShareAlike 4.0 International License</a>. You must accept the license as an integrated part of this Agreement by checking the box indicating your acceptance.</p></blockquote>\r\n\r\n<p>I am confused because Section 1.2 claims that the EULA is a CC BY-NC-SA 4.0 license. However, the EULA also requires agreeing to the Terms of Use and other conditions that impose additional restrictions on top of CC BY-NC-SA 4.0. Is this a <a href=\"https://wiki.creativecommons.org/wiki/Modifying_the_CC_licenses\">modified Creative Commons license</a>? Or does CC BY-NC-SA 4.0 become the only relevant license and terms once the EULA is accepted? <a href=\"/u/katiefortney\" class=\"username\">@katiefortney</a>, what's your take here?</p>\r\n\r\n<p>The EULA reiterates the age discrimination:</p>\r\n\r\n<blockquote><p>In order to use DrugBank Database you must be 18 years of age or older.</p></blockquote>\r\n\r\n<p>Additionally, it's not clear that you can access the DrugBank Database though other channels even though it's supposedly CC BY-NC-SA 4.0:</p>\r\n\r\n<blockquote><p>You agree not to access (or attempt to access) DrugBank Database by any means other than through the interface that is provided by the Platform (as defined in the Terms and Privacy Policy), unless you have been specifically allowed to do so in a separate agreement with OMx.</p></blockquote>\r\n\r\n<p>Posting a disclaimer is required (which is a condition of the CC license):</p>\r\n\r\n<blockquote><p>You warrant that you shall publish the following disclaimer to third parties</p></blockquote>\r\n\r\n<p>Additionally, users are bound by whatever the current License is at the time of use rather than just the one they agreed to:</p>\r\n\r\n<blockquote><p>You understand and agree that if you use DrugBank Database after the date on which this License, the Terms or the Privacy Policy have changed, we will treat your use as acceptance of the updated License, Terms or Privacy Policy</p></blockquote>\r\n\r\n<p>Finally, the EULA includes the CC definition of commercial use:</p>\r\n\r\n<blockquote><p>Commercial use is one primarily intended for commercial advantage or monetary compensation.</p></blockquote>\r\n\r\n<h2>Conclusion</h2>\r\n\r\n<p>The Terms of Use and License Agreement are deeply troubling. Imposing non-commercial share-alike stipulations is already severely limiting and disqualifies reuse in an open resource. However, the Terms of Use and License exceed CC BY-NC-SA. For example, they add age discrimination and the prohibition on displaying the Platform. Finally, the burden to \"fully understand\" 8,000+ words of legalese is placed on the academic user, before they are supposed to even access the Platform.</p>",
+      "body_md": "# Decoding the legal texts\r\n\r\nResearchers looking to use DrugBank now have quite a bit of reading to do. As described in the 1,424-word [Privacy Policy](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md):\r\n\r\n> You are prohibited from using the Platform unless you fully understand and agree to the Terms of Use and the [Privacy] Policy.\r\n\r\n## Terms of Use\r\n\r\nLet's start with the 3,529-word [Terms of Use](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md). Remember that these terms of use claim to govern any use of the Platform, which encompasses the drugbank.ca website. First make sure you understand the terms before using DrugBank:\r\n\r\n> If you do not agree to or understand all the provisions, terms and conditions set out below, then you may not access the Platform or use any of our services.\r\n\r\nSecond, it appears that using information from DrugBank in a publication is prohibited:\r\n\r\n> Users are not permitted to take any information from the site and share it with others ... unless they have obtained OMx’s consent.\r\n\r\nIn fact, you're not allowed to even copy information:\r\n\r\n> Users are prohibited from copying, reproducing, downloading, sharing, or storing the Platform, the data contained within DrugBank or any components thereof, to any device or server unless previously authorized to do so by OMx.\r\n\r\nThird, it appears that showing a DrugBank page in your presentation is prohibited:\r\n\r\n> Users are prohibited from providing any display or demonstration of the Platform to others, either publicly or in private, for any purpose whatsoever without the prior express written consent of OMx.\r\n\r\nFourth, users under 18 are denied access:\r\n\r\n> We do not permit any User under the age of 18 to use our Service or Platform.\r\n\r\nFinally, any past permissions you've received are no longer any good:\r\n\r\n> The Agreement, in combination with all policies and guidelines related thereto (including but not limited to the Privacy Policy), incorporated by reference, constitute the entire agreement between you and OMx and supersede all prior communications, agreements and understandings, written or oral, with respect to the subject matter of the Agreement.\r\n\r\n## License Agreement\r\n\r\nTo register with DrugBank, which is necessary for downloading the database, users must agree to a 877-word [Non-Commercial End User License Agreement](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md) (EULA). Specifically, the agreement states:\r\n\r\n> Your use of DrugBank Database is governed by a legal agreement between you and OMx consisting of this Non-Commercial End User License Agreement, the Terms of Use (the \"Terms\") and the Privacy Policy, which you must accept by checking the box indicating your acceptance of this License, the Terms and the Privacy Policy.\r\n\r\nNext, the EULA states:\r\n\r\n> 1.2 Access to DrugBank Database is subject to this standard Non-Commercial End User License Agreement, which is [Creative Common's Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode). You must accept the license as an integrated part of this Agreement by checking the box indicating your acceptance.\r\n\r\nI am confused because Section 1.2 claims that the EULA is a CC BY-NC-SA 4.0 license. However, the EULA also requires agreeing to the Terms of Use and other conditions that impose additional restrictions on top of CC BY-NC-SA 4.0. Is this a [modified Creative Commons license](https://wiki.creativecommons.org/wiki/Modifying_the_CC_licenses)? Or does CC BY-NC-SA 4.0 become the only relevant license and terms once the EULA is accepted? @katiefortney, what's your take here?\r\n\r\nThe EULA reiterates the age discrimination:\r\n\r\n> In order to use DrugBank Database you must be 18 years of age or older.\r\n\r\nAdditionally, it's not clear that you can access the DrugBank Database though other channels even though it's supposedly CC BY-NC-SA 4.0:\r\n\r\n> You agree not to access (or attempt to access) DrugBank Database by any means other than through the interface that is provided by the Platform (as defined in the Terms and Privacy Policy), unless you have been specifically allowed to do so in a separate agreement with OMx.\r\n\r\nPosting a disclaimer is required (which is a condition of the CC license):\r\n\r\n> You warrant that you shall publish the following disclaimer to third parties\r\n\r\nAdditionally, users are bound by whatever the current License is at the time of use rather than just the one they agreed to:\r\n\r\n> You understand and agree that if you use DrugBank Database after the date on which this License, the Terms or the Privacy Policy have changed, we will treat your use as acceptance of the updated License, Terms or Privacy Policy\r\n\r\nFinally, the EULA includes the CC definition of commercial use:\r\n\r\n> Commercial use is one primarily intended for commercial advantage or monetary compensation.\r\n\r\n## Conclusion\r\n\r\nThe Terms of Use and License Agreement are deeply troubling. Imposing non-commercial share-alike stipulations is already severely limiting and disqualifies reuse in an open resource. However, the Terms of Use and License exceed CC BY-NC-SA. For example, they add age discrimination and the prohibition on displaying the Platform. Finally, the burden to \"fully understand\" 8,000+ words of legalese is placed on the academic user, before they are supposed to even access the Platform.",
+      "profile": 17,
+      "published": "2016-05-09T01:21:16.368177Z",
+      "thread": 213,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#2"
+    },
+    {
+      "body_html": "<h1><em>NAR</em> Database Issue Compliance</h1>\r\n\r\n<p>The last three DrugBank papers have been published in <em>Nucleic Acids Research</em> Database Issue <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkm958\" class=\"citation\" data-key=\"10.1093/nar/gkm958\">1</a>, <a href=\"/doi/10.1093/nar/gkq1126\" class=\"citation\" data-key=\"10.1093/nar/gkq1126\">2</a>, <a href=\"/doi/10.1093/nar/gkt1068\" class=\"citation\" data-key=\"10.1093/nar/gkt1068\">3</a>]</span>. The <em>NAR</em> <a href=\"http://www.oxfordjournals.org/our_journals/nar/for_authors/msprep_database.html\">guidelines for the Database Issue</a> state that:</p>\r\n\r\n<blockquote><p>Databases must be freely available to all via the web without the need to register or login. If any part of the database (e.g. the one that deals with the user-submitted data) needs to be password-protected, only the freely available part will be considered by the reviewers. Authors are encouraged, but not required, to make the contents of their databases freely available as flat or relational files upon request.</p></blockquote>\r\n\r\n<p>Additionally,</p>\r\n\r\n<blockquote><p>All databases published in the NAR Database Issue are expected to be maintained under the same URL for at least 5 years after the publication data. Graduation or retirement of the database developers is not a valid reason for termination of the database.</p></blockquote>\r\n\r\n<p>I interpret the five year window to mean that DrugBank must be \"must be freely available to all via the web without the need to register or login\" through 2018. The age restrictions and registration requirements would therefore violate <em>NAR</em>'s policy.</p>\r\n\r\n<p>Since reviewers are directed to consider \"only the freely available part\", any future submission of DrugBank to the <em>NAR</em> Database Issue should be treated as lacking a bulk database download. Much of the value contributed by of DrugBank depends on high-throughput applications that use the bulk download. Hence, it would be interesting to see how reviewers respond to this feature being effectively removed.</p>",
+      "body_md": "# _NAR_ Database Issue Compliance\r\n\r\nThe last three DrugBank papers have been published in _Nucleic Acids Research_ Database Issue [@10.1093/nar/gkm958 @10.1093/nar/gkq1126 @10.1093/nar/gkt1068]. The _NAR_ [guidelines for the Database Issue](http://www.oxfordjournals.org/our_journals/nar/for_authors/msprep_database.html) state that:\r\n\r\n> Databases must be freely available to all via the web without the need to register or login. If any part of the database (e.g. the one that deals with the user-submitted data) needs to be password-protected, only the freely available part will be considered by the reviewers. Authors are encouraged, but not required, to make the contents of their databases freely available as flat or relational files upon request.\r\n\r\nAdditionally,\r\n\r\n> All databases published in the NAR Database Issue are expected to be maintained under the same URL for at least 5 years after the publication data. Graduation or retirement of the database developers is not a valid reason for termination of the database.\r\n\r\nI interpret the five year window to mean that DrugBank must be \"must be freely available to all via the web without the need to register or login\" through 2018. The age restrictions and registration requirements would therefore violate _NAR_'s policy.\r\n\r\nSince reviewers are directed to consider \"only the freely available part\", any future submission of DrugBank to the _NAR_ Database Issue should be treated as lacking a bulk database download. Much of the value contributed by of DrugBank depends on high-throughput applications that use the bulk download. Hence, it would be interesting to see how reviewers respond to this feature being effectively removed.",
+      "profile": 17,
+      "published": "2016-05-09T02:33:16.706465Z",
+      "thread": 213,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#4"
+    },
+    {
+      "body_html": "<p>I would say it sounds like they don't understand CC licenses. The statement \"Access to DrugBank Database is subject to this standard Non-Commercial End User License Agreement, <strong>which is</strong> Creative Common's Attribution-NonCommercial-ShareAlike 4.0 International License\" is false. It's bad drafting. In a hypothetical universe where someone relied upon the CC BY-NC-SA terms because OMx said their use was subject to the CC license, and then OMx sued them for sharing the database, in such a way that complied with the terms of the CC license but violated OMx's other terms... I don't know. It'd be messy. I think it's most likely the <a href=\"https://en.wikipedia.org/wiki/Contra_proferentem\">bad drafting is construed against the drafter</a>, but it's possible a court could find that OMx's restrictions were valid since <a href=\"http://www.lexology.com/library/detail.aspx?g=3e97d26c-bf45-4358-8106-c8f75840f91c\">they're more specific</a>. And spread among multiple documents.</p>",
+      "body_md": "I would say it sounds like they don't understand CC licenses. The statement \"Access to DrugBank Database is subject to this standard Non-Commercial End User License Agreement, **which is** Creative Common's Attribution-NonCommercial-ShareAlike 4.0 International License\" is false. It's bad drafting. In a hypothetical universe where someone relied upon the CC BY-NC-SA terms because OMx said their use was subject to the CC license, and then OMx sued them for sharing the database, in such a way that complied with the terms of the CC license but violated OMx's other terms... I don't know. It'd be messy. I think it's most likely the [bad drafting is construed against the drafter](https://en.wikipedia.org/wiki/Contra_proferentem), but it's possible a court could find that OMx's restrictions were valid since [they're more specific](http://www.lexology.com/library/detail.aspx?g=3e97d26c-bf45-4358-8106-c8f75840f91c). And spread among multiple documents.",
+      "profile": 137,
+      "published": "2016-05-09T17:50:09.483286Z",
+      "thread": 213,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#5"
     }
   ],
   "documents": [
@@ -3444,7 +3500,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 842
+      "views": 849
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -4619,6 +4675,46 @@
       "comment": 1289,
       "profile": 23,
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205#note-256"
+    },
+    {
+      "added": "2016-05-09T04:36:22.193390Z",
+      "body_html": "<p>As far as I know, the \"freely available to all\" is not about data download. By having their current web interface, which allows anyone to freely search DrugBank, they are in compliance with the NAR Database Issue rules. You are right that the bulk download option should be disregarded by the next reviewers.</p>",
+      "body_md": "As far as I know, the \"freely available to all\" is not about data download. By having their current web interface, which allows anyone to freely search DrugBank, they are in compliance with the NAR Database Issue rules. You are right that the bulk download option should be disregarded by the next reviewers.",
+      "comment": 1303,
+      "profile": 125,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#note-260"
+    },
+    {
+      "added": "2016-05-09T15:45:22.914339Z",
+      "body_html": "<p><a href=\"/u/larsjuhljensen\" class=\"username\">@larsjuhljensen</a>, assuming users abide by the Terms of Use, the current web interface now forbids anyone under 18 from freely searching DrugBank.</p>",
+      "body_md": "@larsjuhljensen, assuming users abide by the Terms of Use, the current web interface now forbids anyone under 18 from freely searching DrugBank.",
+      "comment": 1303,
+      "profile": 17,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#note-261"
+    },
+    {
+      "added": "2016-05-09T17:06:47.264543Z",
+      "body_html": "<p>The 2013 paper mentions a Data Extractor <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkt1068\" class=\"citation\" data-key=\"10.1093/nar/gkt1068\">1</a>]</span>:</p>\n\n<blockquote><p>The new Data Extractor appears in all of DrugBank’s standard browse and search windows, allowing users to easily extract, download and save their current data view at any point.</p></blockquote>\n\n<p>The current <a href=\"http://www.drugbank.ca/about\">about page</a> on the website says:</p>\n\n<blockquote><p>The Data Extractor is the most sophisticated search tool for DrugBank. Users may download selected text components and sequence data from DrugBank and track the latest DrugBank statistics by clicking on the <a href=\"http://www.drugbank.ca/downloads\">Download</a> button.</p></blockquote>\n\n<p>I don't really understand what features the Data Extractor is referring to. However, if the Data Extractor includes the download functionality, I interpret the <em>NAR</em> policies to preclude password-protecting the version 4.0 download until 2018.</p>",
+      "body_md": "The 2013 paper mentions a Data Extractor [@10.1093/nar/gkt1068]:\n\n> The new Data Extractor appears in all of DrugBank’s standard browse and search windows, allowing users to easily extract, download and save their current data view at any point.\n\nThe current [about page](http://www.drugbank.ca/about) on the website says:\n\n> The Data Extractor is the most sophisticated search tool for DrugBank. Users may download selected text components and sequence data from DrugBank and track the latest DrugBank statistics by clicking on the [Download](http://www.drugbank.ca/downloads) button.\n\nI don't really understand what features the Data Extractor is referring to. However, if the Data Extractor includes the download functionality, I interpret the _NAR_ policies to preclude password-protecting the version 4.0 download until 2018.",
+      "comment": 1303,
+      "profile": 17,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#note-262"
+    },
+    {
+      "added": "2016-05-09T17:56:05.729356Z",
+      "body_html": "<p>I completely agree with you that it seems like the people who drafted this license don't understand CC licenses. The license is either CC-BY-NC-SA 4.0 or it is not. The moment you change it in any way, such as adding additional usage restrictions, it is no longer a CC license.</p>",
+      "body_md": "I completely agree with you that it seems like the people who drafted this license don't understand CC licenses. The license is either CC-BY-NC-SA 4.0 or it is not. The moment you change it in any way, such as adding additional usage restrictions, it is no longer a CC license.",
+      "comment": 1304,
+      "profile": 125,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#note-263"
+    },
+    {
+      "added": "2016-05-09T17:57:55.097476Z",
+      "body_html": "<p>You may be right or you may be wrong. You're only asked to accept the terms of use if you sign up for an account to download the files. It is thus unclear to me if the terms of use apply to the download files only or also to the website.</p>",
+      "body_md": "You may be right or you may be wrong. You're only asked to accept the terms of use if you sign up for an account to download the files. It is thus unclear to me if the terms of use apply to the download files only or also to the website.",
+      "comment": 1303,
+      "profile": 125,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#note-264"
     }
   ],
   "profiles": [
@@ -4863,7 +4959,7 @@
       "username": "ostrokach"
     }
   ],
-  "retrieved": "2016-05-05T18:00:08.021489Z",
+  "retrieved": "2016-05-09T18:08:16.193788Z",
   "threads": [
     {
       "document": null,
@@ -4885,7 +4981,7 @@
       "subject": "Suggestions for additional information types?",
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 92
+      "views": 93
     },
     {
       "document": null,
@@ -4896,7 +4992,7 @@
       "subject": "Enabling reproducibility and reuse",
       "topic_field": "Reproducibility",
       "url": "/discussion/enabling-reproducibility-and-reuse/23",
-      "views": 85
+      "views": 86
     },
     {
       "document": null,
@@ -4907,7 +5003,7 @@
       "subject": "Seeking an open source implementation of the Gerstein-Sonnhammer-Chothia Algorithm",
       "topic_field": "Python,R,Algorithms,Computer Science,SIDER,GSC Weighting,Gerstein-Sonnhammer-Chothia,Julia,Open Source Software",
       "url": "/discussion/seeking-an-open-source-implementation-of-the-gerstein-sonnhammer-chothia-algorithm/25",
-      "views": 105
+      "views": 106
     },
     {
       "document": null,
@@ -4918,7 +5014,7 @@
       "subject": "Assessing the quality and applicability of the SIDER 2 resource",
       "topic_field": "SIDER,Indications,NLP,Drugs,Side Effects,Drug Labels",
       "url": "/discussion/assessing-the-quality-and-applicability-of-the-sider-2-resource/30",
-      "views": 99
+      "views": 100
     },
     {
       "document": null,
@@ -4929,7 +5025,7 @@
       "subject": "MEDI indications data — discrepancy in resource-specific counts",
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 59
+      "views": 60
     },
     {
       "document": null,
@@ -4940,7 +5036,7 @@
       "subject": "Using Entrez Gene as our gene vocabulary",
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 114
+      "views": 117
     },
     {
       "document": null,
@@ -4951,7 +5047,7 @@
       "subject": "Compiling Gene Ontology annotations into an easy-to-use format",
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 146
+      "views": 150
     },
     {
       "document": null,
@@ -4962,7 +5058,7 @@
       "subject": "Unifying drug vocabularies",
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 184
+      "views": 185
     },
     {
       "document": null,
@@ -4973,7 +5069,7 @@
       "subject": "Tissue Node",
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 97
+      "views": 99
     },
     {
       "document": null,
@@ -4995,7 +5091,7 @@
       "subject": "Computing consensus transcriptional profiles for LINCS L1000 perturbations",
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 257
+      "views": 264
     },
     {
       "document": null,
@@ -5006,7 +5102,7 @@
       "subject": "Unifying disease vocabularies",
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 132
+      "views": 133
     },
     {
       "document": null,
@@ -5017,7 +5113,7 @@
       "subject": "Processing LabeledIn to extract indications",
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 64
+      "views": 65
     },
     {
       "document": null,
@@ -5039,7 +5135,7 @@
       "subject": "Text as a resource for network population?",
       "topic_field": "Natural Language Processing,Relation Extraction,Bias,Prior Knowledge",
       "url": "/discussion/text-as-a-resource-for-network-population/48",
-      "views": 58
+      "views": 61
     },
     {
       "document": null,
@@ -5050,7 +5146,7 @@
       "subject": "UniChem Mapping to LINCS Small Molecules",
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 175
+      "views": 180
     },
     {
       "document": null,
@@ -5061,7 +5157,7 @@
       "subject": "Human Symptom Disease Network-MeSH ID Matching",
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 200
+      "views": 203
     },
     {
       "document": null,
@@ -5072,7 +5168,7 @@
       "subject": "Integrating drug target information from BindingDB",
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 149
+      "views": 150
     },
     {
       "document": null,
@@ -5083,7 +5179,7 @@
       "subject": "Selecting informative ERC (evolutionary rate covariation) values between genes",
       "topic_field": "Evolution,Entrez Gene,ERC,UCSC Genome Browser,Evolutionary Rate Covariation",
       "url": "/discussion/selecting-informative-erc-evolutionary-rate-covariation-values-between-genes/57",
-      "views": 56
+      "views": 57
     },
     {
       "document": null,
@@ -5094,7 +5190,7 @@
       "subject": "Retrieving the ingredients in RxNorm concepts",
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 249
+      "views": 253
     },
     {
       "document": null,
@@ -5105,7 +5201,7 @@
       "subject": "Extracting indications from the ehrlink resource",
       "topic_field": "Databases,Indications,Clinical Informatics,EHR,Ehrlink,Medications,Health Records",
       "url": "/discussion/extracting-indications-from-the-ehrlink-resource/62",
-      "views": 60
+      "views": 63
     },
     {
       "document": null,
@@ -5116,7 +5212,7 @@
       "subject": "Protein (target, carrier, transporter, and enzyme) interactions in DrugBank",
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 216
+      "views": 224
     },
     {
       "document": null,
@@ -5127,7 +5223,7 @@
       "subject": "KaBOB Knowledgebase",
       "topic_field": "",
       "url": "/discussion/kabob-knowledgebase/66",
-      "views": 68
+      "views": 70
     },
     {
       "document": null,
@@ -5138,7 +5234,7 @@
       "subject": "Mining knowledge from MEDLINE articles and their indexed MeSH terms",
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 98
+      "views": 100
     },
     {
       "document": null,
@@ -5149,7 +5245,7 @@
       "subject": "Disease Ontology feature requests",
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 47
+      "views": 48
     },
     {
       "document": null,
@@ -5160,7 +5256,7 @@
       "subject": "Calculating molecular similarities between DrugBank compounds",
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 69
+      "views": 72
     },
     {
       "document": null,
@@ -5171,7 +5267,7 @@
       "subject": "Calculating genomic windows for GWAS lead SNPs",
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 235
+      "views": 239
     },
     {
       "document": null,
@@ -5182,7 +5278,7 @@
       "subject": "Adding pathway resources to your network",
       "topic_field": "Databases,Networks,Pathways",
       "url": "/discussion/adding-pathway-resources-to-your-network/72",
-      "views": 76
+      "views": 77
     },
     {
       "document": null,
@@ -5193,7 +5289,7 @@
       "subject": "Extracting disease-gene associations from the GWAS Catalog",
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 123
+      "views": 124
     },
     {
       "document": null,
@@ -5204,7 +5300,7 @@
       "subject": "Tissue-specific gene expression resources",
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 247
+      "views": 251
     },
     {
       "document": null,
@@ -5215,7 +5311,7 @@
       "subject": "Processing GTEx for tissue-specific gene expression",
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 229
+      "views": 233
     },
     {
       "document": null,
@@ -5226,7 +5322,7 @@
       "subject": "R best practices",
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 448
+      "views": 451
     },
     {
       "document": null,
@@ -5237,7 +5333,7 @@
       "subject": "Python for the modern biodata scientist",
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 495
+      "views": 506
     },
     {
       "document": null,
@@ -5248,7 +5344,7 @@
       "subject": "Creating a catalog of protein interactions",
       "topic_field": "Protein Interactions,Interactions,PPI",
       "url": "/discussion/creating-a-catalog-of-protein-interactions/85",
-      "views": 102
+      "views": 104
     },
     {
       "document": null,
@@ -5259,7 +5355,7 @@
       "subject": "The TISSUES resource for the tissue-specificity of genes",
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 71
+      "views": 74
     },
     {
       "document": null,
@@ -5281,7 +5377,7 @@
       "subject": "Functional disease annotations for genes using DOAF",
       "topic_field": "Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations",
       "url": "/discussion/functional-disease-annotations-for-genes-using-doaf/94",
-      "views": 48
+      "views": 49
     },
     {
       "document": null,
@@ -5292,7 +5388,7 @@
       "subject": "Expert curation of our indication catalog for disease-modifying treatments",
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 139
+      "views": 141
     },
     {
       "document": null,
@@ -5303,7 +5399,7 @@
       "subject": "STARGEO: expression signatures for disease using crowdsourced GEO annotation",
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 160
+      "views": 165
     },
     {
       "document": null,
@@ -5314,7 +5410,7 @@
       "subject": "Extracting side effects from SIDER 4",
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 88
+      "views": 89
     },
     {
       "document": null,
@@ -5325,7 +5421,7 @@
       "subject": "The ADEPTUS resource for expression signatures of disease",
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 78
+      "views": 79
     },
     {
       "document": null,
@@ -5336,7 +5432,7 @@
       "subject": "One network to rule them all",
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 177
+      "views": 181
     },
     {
       "document": null,
@@ -5347,7 +5443,7 @@
       "subject": "Renaming ‘heterogeneous networks’ to a more concise and catchy term",
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 101
+      "views": 102
     },
     {
       "document": null,
@@ -5358,7 +5454,7 @@
       "subject": "Processing DisGeNET for disease-gene relationships",
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 67
+      "views": 68
     },
     {
       "document": null,
@@ -5369,7 +5465,7 @@
       "subject": "Processing the DISEASES resource for disease–gene relationships",
       "topic_field": "Databases,Diseases,Associations",
       "url": "/discussion/processing-the-diseases-resource-for-diseasegene-relationships/106",
-      "views": 47
+      "views": 51
     },
     {
       "document": null,
@@ -5380,7 +5476,7 @@
       "subject": "Integrating resources with disparate licensing into an open network",
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 174
+      "views": 176
     },
     {
       "document": null,
@@ -5391,7 +5487,7 @@
       "subject": "MSigDB licensing",
       "topic_field": "Copyright,Permission,Licensing,MSigDB,MIT",
       "url": "/discussion/msigdb-licensing/108",
-      "views": 79
+      "views": 81
     },
     {
       "document": null,
@@ -5402,7 +5498,7 @@
       "subject": "LINCS L1000 licensing",
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 155
+      "views": 157
     },
     {
       "document": null,
@@ -5413,7 +5509,7 @@
       "subject": "Incomplete Interactome licensing",
       "topic_field": "Incomplete Interactome,Permission,Licensing,Copyright Transfer,Supplement,AAAS",
       "url": "/discussion/incomplete-interactome-licensing/111",
-      "views": 74
+      "views": 75
     },
     {
       "document": null,
@@ -5424,7 +5520,7 @@
       "subject": "Using the neo4j graph database for hetnets",
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 242
+      "views": 247
     },
     {
       "document": null,
@@ -5435,7 +5531,7 @@
       "subject": "Tracking project reuse, citation, and publicity",
       "topic_field": "Citations,Publicity,Media Coverage,Reuse,Attention",
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113",
-      "views": 52
+      "views": 59
     },
     {
       "document": null,
@@ -5446,7 +5542,7 @@
       "subject": "Assessing the informativeness of features",
       "topic_field": "HNEP,Hetnets,Features,Metapaths",
       "url": "/discussion/assessing-the-informativeness-of-features/115",
-      "views": 32
+      "views": 34
     },
     {
       "document": null,
@@ -5457,7 +5553,7 @@
       "subject": "Processing Bgee for tissue-specific gene presence and over/under-expression",
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 64
+      "views": 65
     },
     {
       "document": null,
@@ -5468,7 +5564,7 @@
       "subject": "Licensing neo4j",
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 59
+      "views": 65
     },
     {
       "document": null,
@@ -5501,7 +5597,7 @@
       "subject": "Data nomenclature: naming and abbreviating our network types",
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 56
+      "views": 57
     },
     {
       "document": null,
@@ -5512,7 +5608,7 @@
       "subject": "Positive correlations between knockdown and overexpression profiles from LINCS L1000",
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 99
+      "views": 101
     },
     {
       "document": null,
@@ -5523,7 +5619,7 @@
       "subject": "Assessing the effectiveness of our hetnet permutations",
       "topic_field": "permutation,XSwap,network randomization,hetnets,hetio",
       "url": "/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178",
-      "views": 30
+      "views": 32
     },
     {
       "document": null,
@@ -5534,7 +5630,7 @@
       "subject": "Workshop to analyze LINCS data for the Systems Pharmacology course at UCSF",
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 87
+      "views": 89
     },
     {
       "document": null,
@@ -5545,7 +5641,7 @@
       "subject": "Announcing PharmacotherapyDB: the Open Catalog of Drug Therapies for Disease",
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 113
+      "views": 115
     },
     {
       "document": null,
@@ -5556,7 +5652,7 @@
       "subject": "Assessing the imputation quality of gene expression in LINCS L1000",
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 38
+      "views": 40
     },
     {
       "document": null,
@@ -5567,7 +5663,7 @@
       "subject": "Incorporating DrugCentral data in our network",
       "topic_field": "DrugCentral,pharmacology,Database",
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186",
-      "views": 37
+      "views": 38
     },
     {
       "document": null,
@@ -5578,7 +5674,7 @@
       "subject": "Estimating the complexity of hetnet traversal",
       "topic_field": "complexity,runtime,optimization,Neo4J,join hints",
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187",
-      "views": 34
+      "views": 35
     },
     {
       "document": null,
@@ -5589,7 +5685,7 @@
       "subject": "Transforming DWPCs for hetnet edge prediction",
       "topic_field": "IHS,transformation,DWPC,regression",
       "url": "/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193",
-      "views": 26
+      "views": 27
     },
     {
       "document": null,
@@ -5600,7 +5696,7 @@
       "subject": "Network Edge Prediction: how to deal with self-testing",
       "topic_field": "HNEP,Hetnets,Machine learning,self-testing",
       "url": "/discussion/network-edge-prediction-how-to-deal-with-self-testing/194",
-      "views": 32
+      "views": 35
     },
     {
       "document": null,
@@ -5611,7 +5707,7 @@
       "subject": "Measuring user contribution and content creation",
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 16
+      "views": 17
     },
     {
       "document": null,
@@ -5622,7 +5718,7 @@
       "subject": "Network Edge Prediction: Estimating the prior",
       "topic_field": "Machine learning,Heterogeneous Networks,Hetnets,HNEP,Prior Knowledge",
       "url": "/discussion/network-edge-prediction-estimating-the-prior/201",
-      "views": 24
+      "views": 27
     },
     {
       "document": null,
@@ -5633,7 +5729,7 @@
       "subject": "Describing Hetionet v1.0 through visualization and statistics",
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 28
+      "views": 30
     },
     {
       "document": null,
@@ -5644,7 +5740,7 @@
       "subject": "Computing standardized logistic regression coefficients",
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 23
+      "views": 27
     },
     {
       "document": null,
@@ -5655,7 +5751,29 @@
       "subject": "Our hetnet edge prediction methodology: the modeling framework for Project Rephetio",
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 11
+      "views": 14
+    },
+    {
+      "document": null,
+      "doi": "10.15363/thinklab.d212",
+      "doi_field": "",
+      "profile": 17,
+      "published": "2016-05-08T05:00:23.976320Z",
+      "subject": "Cataloging drug–disease therapies in the ClinicalTrials.gov database",
+      "topic_field": "clinical trials,ClinicalTrials.gov",
+      "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212",
+      "views": 12
+    },
+    {
+      "document": null,
+      "doi": "10.15363/thinklab.d213",
+      "doi_field": "",
+      "profile": 17,
+      "published": "2016-05-08T21:35:21.435199Z",
+      "subject": "Sounding the alarm on DrugBank’s new license and terms of use",
+      "topic_field": "DrugBank,licensing,legal",
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
+      "views": 125
     }
   ]
 }

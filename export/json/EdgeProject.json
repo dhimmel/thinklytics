@@ -108,7 +108,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/EdgeProject/idea",
-      "views": 88
+      "views": 90
     }
   ],
   "notes": [],
@@ -132,7 +132,7 @@
       "username": "kristinahettne"
     }
   ],
-  "retrieved": "2016-05-05T18:00:03.138083Z",
+  "retrieved": "2016-05-09T18:08:11.610291Z",
   "threads": [
     {
       "document": null,
@@ -143,7 +143,7 @@
       "subject": "dynamic sub-graph assembly versus data warehousing",
       "topic_field": "semantic web,linked data,question answering,workflows",
       "url": "/discussion/dynamic-sub-graph-assembly-versus-data-warehousing/172",
-      "views": 20
+      "views": 21
     },
     {
       "document": 14,

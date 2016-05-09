@@ -2197,7 +2197,7 @@
       "username": "pouyakhankhanian"
     }
   ],
-  "retrieved": "2016-05-05T18:00:09.667264Z",
+  "retrieved": "2016-05-09T18:08:13.113003Z",
   "threads": [
     {
       "document": null,
@@ -2208,7 +2208,7 @@
       "subject": "Add your ThinkLab feedback here in Meta",
       "topic_field": "",
       "url": "/discussion/add-your-thinklab-feedback-here-in-meta/2",
-      "views": 43
+      "views": 44
     },
     {
       "document": null,
@@ -2230,7 +2230,7 @@
       "subject": "File hosting advice",
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 73
+      "views": 76
     },
     {
       "document": null,
@@ -2285,7 +2285,7 @@
       "subject": "New features for tracking ThinkLab citations",
       "topic_field": "Citation",
       "url": "/discussion/new-features-for-tracking-thinklab-citations/45",
-      "views": 35
+      "views": 37
     },
     {
       "document": null,
@@ -2318,7 +2318,7 @@
       "subject": "RSS Feed per project option",
       "topic_field": "RSS Feed,Project Tracking",
       "url": "/discussion/rss-feed-per-project-option/55",
-      "views": 32
+      "views": 33
     },
     {
       "document": null,
@@ -2340,7 +2340,7 @@
       "subject": "ThinkLab as a vetting system for traditional grants",
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 146
+      "views": 150
     },
     {
       "document": null,
@@ -2373,7 +2373,7 @@
       "subject": "Why ThinkLab uses a flat discussion structure (not threaded)",
       "topic_field": "",
       "url": "/discussion/why-thinklab-uses-a-flat-discussion-structure-not-threaded/63",
-      "views": 58
+      "views": 62
     },
     {
       "document": null,
@@ -2395,7 +2395,7 @@
       "subject": "Citing ThinkLab discussions — feedback please",
       "topic_field": "Markdown,Discussions,Citation,DOI",
       "url": "/discussion/citing-thinklab-discussions-feedback-please/69",
-      "views": 32
+      "views": 33
     },
     {
       "document": null,
@@ -2406,7 +2406,7 @@
       "subject": "Reviewers or contributors — what term should we use for ThinkLab participants?",
       "topic_field": "",
       "url": "/discussion/reviewers-or-contributors-what-term-should-we-use-for-thinklab-participants/78",
-      "views": 28
+      "views": 29
     },
     {
       "document": null,
@@ -2417,7 +2417,7 @@
       "subject": "We now have a figures feature",
       "topic_field": "DOI,ThinkLab figures",
       "url": "/discussion/we-now-have-a-figures-feature/79",
-      "views": 37
+      "views": 39
     },
     {
       "document": null,
@@ -2439,7 +2439,7 @@
       "subject": "Impact points and leaderboard demotivating",
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 49
+      "views": 52
     },
     {
       "document": null,
@@ -2450,7 +2450,7 @@
       "subject": "Optional transparency to enable rating analytics",
       "topic_field": "Analytics,Transparency,Identity,Ratings,Rewards",
       "url": "/discussion/optional-transparency-to-enable-rating-analytics/100",
-      "views": 33
+      "views": 34
     },
     {
       "document": null,
@@ -2461,7 +2461,7 @@
       "subject": "Switching DOI links to the preferred format",
       "topic_field": "Standards,DOI,DOI resolution",
       "url": "/discussion/switching-doi-links-to-the-preferred-format/109",
-      "views": 27
+      "views": 32
     },
     {
       "document": null,
@@ -2505,7 +2505,7 @@
       "subject": "LaTeX integration",
       "topic_field": "",
       "url": "/discussion/latex-integration/139",
-      "views": 38
+      "views": 40
     },
     {
       "document": null,
@@ -2549,7 +2549,7 @@
       "subject": "Streamlining access to the common interactions with citations",
       "topic_field": "popover,citation,user experience,Thinklab",
       "url": "/discussion/streamlining-access-to-the-common-interactions-with-citations/188",
-      "views": 16
+      "views": 17
     },
     {
       "document": null,
@@ -2560,7 +2560,7 @@
       "subject": "MathJax Block markers",
       "topic_field": "Technical Issue",
       "url": "/discussion/mathjax-block-markers/189",
-      "views": 15
+      "views": 16
     },
     {
       "document": null,
@@ -2571,7 +2571,7 @@
       "subject": "Hyperlinks inserted when printing Thinklab pages",
       "topic_field": "Thinklab,printing,typesetting",
       "url": "/discussion/hyperlinks-inserted-when-printing-thinklab-pages/190",
-      "views": 18
+      "views": 19
     },
     {
       "document": null,
@@ -2593,7 +2593,7 @@
       "subject": "Disambiguating proposal, project, and report titles",
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 23
+      "views": 24
     },
     {
       "document": null,
@@ -2604,7 +2604,7 @@
       "subject": "Auto-save",
       "topic_field": "",
       "url": "/discussion/auto-save/195",
-      "views": 14
+      "views": 16
     },
     {
       "document": null,
@@ -2615,7 +2615,7 @@
       "subject": "Automatically insert images",
       "topic_field": "",
       "url": "/discussion/automatically-insert-images/196",
-      "views": 19
+      "views": 21
     },
     {
       "document": null,
@@ -2637,7 +2637,7 @@
       "subject": "Improving search engine previewing",
       "topic_field": "SEO,Search Engine Marketing,HMTL,meta,description",
       "url": "/discussion/improving-search-engine-previewing/198",
-      "views": 24
+      "views": 26
     },
     {
       "document": null,
@@ -2648,7 +2648,7 @@
       "subject": "Tracking attention through Altmetric integration",
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 9
+      "views": 10
     },
     {
       "document": null,
