@@ -3,6 +3,7 @@
     {
       "body_html": "<p>Great job so far Holly.</p>\r\n\r\n<p>May I suggest that for the Team &amp; Resources section you play up the fact that your lab has been a leader in the open science movement? If you look at the <a href=\"http://thinklab.com/preview_review/1\">peer review form</a> for the initial proposal you'll see one of the rating criteria is \"Open Collaboration\". If ThinkLab is successful, the fact that Jonathan and the rest of your team have made a proactive effort supporting open science will definitely be a huge advantage for you.</p>\r\n\r\n<p>Also, feel free to add links to the proposal. (For example you might add a link so people can see all the awesome open science related stuff your lab is involved with.) Remember, this system is web-native. Let's take advantage of the medium. Links can be added using <a href=\"http://thinklab.com/help/writing-in-markdown\">markdown</a>. I might create another post with some markdown suggestions.</p>",
       "body_md": "Great job so far Holly.\r\n\r\nMay I suggest that for the Team & Resources section you play up the fact that your lab has been a leader in the open science movement? If you look at the [peer review form](http://thinklab.com/preview_review/1) for the initial proposal you'll see one of the rating criteria is \"Open Collaboration\". If ThinkLab is successful, the fact that Jonathan and the rest of your team have made a proactive effort supporting open science will definitely be a huge advantage for you.\r\n\r\nAlso, feel free to add links to the proposal. (For example you might add a link so people can see all the awesome open science related stuff your lab is involved with.) Remember, this system is web-native. Let's take advantage of the medium. Links can be added using [markdown](http://thinklab.com/help/writing-in-markdown). I might create another post with some markdown suggestions.",
+      "id": 4,
       "profile": 2,
       "published": "2014-06-02T18:11:29.355445Z",
       "thread": 3,
@@ -11,6 +12,7 @@
     {
       "body_html": "<p>I tried to use markdown in my profile but it did not seem to work ...</p>",
       "body_md": "I tried to use markdown in my profile but it did not seem to work ...",
+      "id": 5,
       "profile": 5,
       "published": "2014-06-02T18:41:14.957458Z",
       "thread": 3,
@@ -19,6 +21,7 @@
     {
       "body_html": "<p>As Rachel has mentioned, there are some issues with using ITS primers for fungal characterization. One is that the ITS region does not provide phylogenetic information. As a result analyses need to use other approaches. Another problem is that the PCR products for different taxa differ dramatically in size and will not be sequenced uniformly. Does anyone have any thoughts about this? </p>",
       "body_md": "As Rachel has mentioned, there are some issues with using ITS primers for fungal characterization. One is that the ITS region does not provide phylogenetic information. As a result analyses need to use other approaches. Another problem is that the PCR products for different taxa differ dramatically in size and will not be sequenced uniformly. Does anyone have any thoughts about this? ",
+      "id": 8,
       "profile": 4,
       "published": "2014-06-03T19:42:05.963873Z",
       "thread": 5,
@@ -27,6 +30,7 @@
     {
       "body_html": "<p>From the little data I've seen recently on the size variation in ITS, I can't see how it can work to provide any information about relative abundance if using Illumina sequencing.   Those taxa with small ITS regions will take over the entire flowcell and you'll never even see the taxa with large ITS regions.   This should be fairly easy to confirm however, by size selecting pools of different ITS sizes (on say a Pippin) and then confirming the existence of taxa that don't appear in a pooled run.</p>",
       "body_md": "From the little data I've seen recently on the size variation in ITS, I can't see how it can work to provide any information about relative abundance if using Illumina sequencing.   Those taxa with small ITS regions will take over the entire flowcell and you'll never even see the taxa with large ITS regions.   This should be fairly easy to confirm however, by size selecting pools of different ITS sizes (on say a Pippin) and then confirming the existence of taxa that don't appear in a pooled run.",
+      "id": 9,
       "profile": 6,
       "published": "2014-06-03T19:55:45.644946Z",
       "thread": 5,
@@ -35,6 +39,7 @@
     {
       "body_html": "<p>Maybe other people aren't finding the same size variation in ITS amplicons?</p>",
       "body_md": "Maybe other people aren't finding the same size variation in ITS amplicons?",
+      "id": 10,
       "profile": 4,
       "published": "2014-06-03T22:08:34.061838Z",
       "thread": 5,
@@ -43,6 +48,7 @@
     {
       "body_html": "<p>I'd just like to give a brief introduction to ThinkLab and the pilot that is taking place.</p>\r\n\r\n<h3>ThinkLab introduction</h3>\r\n\r\n<p>I created ThinkLab with the mission to bring about a world in which scientists share their research openly, in real-time, while collaborating with peers worldwide. ThinkLab is an open collaboration platform and it's also a funding platform. It's a funding platform because I believe it had to be in order <a href=\"http://thinklab.com/how-it-works/incentives\">provide incentives</a> for the broader scientific community to participate fully.</p>\r\n\r\n<p>As a starting point I reached out to Jonathan due to his advocacy and involvement with open science. We agreed to do a small-scale pilot. That pilot is Holly's project: <a href=\"http://thinklab.com/MicrobeResist\">Microbial resistance to disinfectants in animal shelters</a>. </p>\r\n\r\n<p>My hope is that we'll be able to get some good conversation happening on the platform and this project can serve as an example for when we launch publicly. All of your comments will remain public and it's very possible the site could receive significant traffic. (At least that will be the idea)</p>\r\n\r\n<h3>Notes on the pilot</h3>\r\n\r\n<h4>Your imagination is required</h4>\r\n\r\n<p>Because this is a pilot there are a few things that make this not quite real. Normally getting funded on the platform is a competitive process. That's why there is a proposal and that's why there is <a href=\"http://thinklab.com/how-it-works/peer_review\">peer review</a>. In this case it's kind of understood that the project will get funded. However, I ask that you please try to imagine that you are competing against other possible projects and that therefore peer review is important.</p>\r\n\r\n<h4>Feel free to invite others</h4>\r\n\r\n<p>If you think of someone that might like to follow along and contribute anything to the project please feel free to invite them. Just send them the URL and username and password:</p>\r\n\r\n<p>user: eisen<br>pass: pilot</p>\r\n\r\n<h4>But, please don't share this publicly</h4>\r\n\r\n<p>As ThinkLab has not launched publicly yet I'd like to ask that everyone please refrain from tweeting/blogging about us. The site is only accessible if you have the password.</p>",
       "body_md": "I'd just like to give a brief introduction to ThinkLab and the pilot that is taking place.\r\n\r\n### ThinkLab introduction\r\n\r\nI created ThinkLab with the mission to bring about a world in which scientists share their research openly, in real-time, while collaborating with peers worldwide. ThinkLab is an open collaboration platform and it's also a funding platform. It's a funding platform because I believe it had to be in order [provide incentives](http://thinklab.com/how-it-works/incentives) for the broader scientific community to participate fully.\r\n\r\nAs a starting point I reached out to Jonathan due to his advocacy and involvement with open science. We agreed to do a small-scale pilot. That pilot is Holly's project: [Microbial resistance to disinfectants in animal shelters](http://thinklab.com/MicrobeResist). \r\n\r\nMy hope is that we'll be able to get some good conversation happening on the platform and this project can serve as an example for when we launch publicly. All of your comments will remain public and it's very possible the site could receive significant traffic. (At least that will be the idea)\r\n\r\n### Notes on the pilot\r\n\r\n#### Your imagination is required\r\n\r\nBecause this is a pilot there are a few things that make this not quite real. Normally getting funded on the platform is a competitive process. That's why there is a proposal and that's why there is [peer review](http://thinklab.com/how-it-works/peer_review). In this case it's kind of understood that the project will get funded. However, I ask that you please try to imagine that you are competing against other possible projects and that therefore peer review is important.\r\n\r\n#### Feel free to invite others\r\n\r\nIf you think of someone that might like to follow along and contribute anything to the project please feel free to invite them. Just send them the URL and username and password:\r\n\r\nuser: eisen\r\npass: pilot\r\n\r\n#### But, please don't share this publicly\r\n\r\nAs ThinkLab has not launched publicly yet I'd like to ask that everyone please refrain from tweeting/blogging about us. The site is only accessible if you have the password.",
+      "id": 11,
       "profile": 2,
       "published": "2014-06-03T23:01:17.524077Z",
       "thread": 6,
@@ -51,6 +57,7 @@
     {
       "body_html": "<p><a href=\"/u/jackgilbert\" class=\"username\">@jackgilbert</a> &amp; <a href=\"/u/adamsri\" class=\"username\">@adamsri</a> –</p>\r\n\r\n<p>Please note that because there will only be a few of us submitting reviews in the pilot the scores you submit will be <em>a lot less</em> secret. This is due to the fact that ThinkLab will publicly display the <em>average</em> scores that the proposal receives.</p>\r\n\r\n<p>This shouldn't be a big deal because for the pilot your scores are inconsequential anyway!</p>\r\n\r\n<p>However, any feedback you have for the team definitely <em>is</em> consequential! Just please note if you have feedback on the research plan it might make sense to wait until <a href=\"http://thinklab.com/how-it-works/projects\">phase 2 of the project</a>. That's when the project will be funded such that collaborators (you) earn money. I'm not sure whether you care about that at all but thought I'd point it out.</p>",
       "body_md": "@jackgilbert & @adamsri --\r\n\r\nPlease note that because there will only be a few of us submitting reviews in the pilot the scores you submit will be *a lot less* secret. This is due to the fact that ThinkLab will publicly display the *average* scores that the proposal receives.\r\n\r\nThis shouldn't be a big deal because for the pilot your scores are inconsequential anyway!\r\n\r\nHowever, any feedback you have for the team definitely *is* consequential! Just please note if you have feedback on the research plan it might make sense to wait until [phase 2 of the project](http://thinklab.com/how-it-works/projects). That's when the project will be funded such that collaborators (you) earn money. I'm not sure whether you care about that at all but thought I'd point it out.",
+      "id": 12,
       "profile": 2,
       "published": "2014-06-09T21:29:24.997479Z",
       "thread": 8,
@@ -59,6 +66,7 @@
     {
       "body_html": "<p>Thanks for the suggestion. I will add some links to our open science effort.</p>",
       "body_md": "Thanks for the suggestion. I will add some links to our open science effort.",
+      "id": 13,
       "profile": 4,
       "published": "2014-06-10T22:45:40.761133Z",
       "thread": 3,
@@ -67,6 +75,7 @@
     {
       "body_html": "<p>I asked a couple of people for feedback on the proposal. Because they didn't post their comments on the site, I thought that I would share what they said here.  </p>\r\n\r\n<p>Colleague 1 (building scientist):</p>\r\n\r\n<p>I took a quick look at the proposal (don't have a ton of time to edit until mid-Jul, unfortunately).  The antibiotic and disinfectant resistance genes are interesting.</p>\r\n\r\n<p>Are there any factors you can think of that you can measure regarding the animals, that could help explain any variability in the data?  Will you focus on animals that have just arrived, or that have been there for a while?  I think there may be a difference…Should document the cleaning practices, how often chemicals are used, how much, what are the ventilation rates, probably best to measure RH near surface and in middle of room after cleaning, what are the exercise practices for the animals?</p>\r\n\r\n<p>That's all I can think of at the moment!  Looks great :-)</p>\r\n\r\n<p>Colleague 2 (veterinarian and expert in shelter animal medicine):</p>\r\n\r\n<p>Suggests change in title to: Characterization of the microbial communities occurring on surfaces in an animal shelter</p>\r\n\r\n<p>Comment 1: Would love to see this take on the additional angle of building/housing design differences.  It's been our experience that once the basics of vaccination and a decent cleaning/disinfection protocol is in place then the greatest differences in population health/ animal well being in animal shelters are due to LOS and housing (housing type and environment (noise/hvac, etc)). </p>\r\n\r\n<p>Comment 2: Disease transmission is a concern more because of the demographics of the population served (naive population etc)  </p>\r\n\r\n<p>Comment 3: Not sure how in depth you want/need  to go on the intro for this pilot project seems broad in scope. </p>\r\n\r\n<p>Comment 4: This is a good descriptive paragraph (final paragraph in introduction).  I don’t know anything about genes that promote persistence in the environment- perhaps more info there. Do you have hypotheses?</p>\r\n\r\n<p>Comment 5 in response to \"This study will help in the development of strategies to manage the development of antimicrobial and antibiotic resistance in an intensive housing environment.\" How?  Unless you were comparing differing strategies- cleaning methods, disinfectant use, housing type etc within the same environment.  This study will help understand the presence or absence  and quantitative information of whatever you are looking for but not sure how much further you can go with this project.</p>",
       "body_md": "I asked a couple of people for feedback on the proposal. Because they didn't post their comments on the site, I thought that I would share what they said here.  \r\n\r\nColleague 1 (building scientist):\r\n\r\nI took a quick look at the proposal (don't have a ton of time to edit until mid-Jul, unfortunately).  The antibiotic and disinfectant resistance genes are interesting.\r\n\r\nAre there any factors you can think of that you can measure regarding the animals, that could help explain any variability in the data?  Will you focus on animals that have just arrived, or that have been there for a while?  I think there may be a difference…Should document the cleaning practices, how often chemicals are used, how much, what are the ventilation rates, probably best to measure RH near surface and in middle of room after cleaning, what are the exercise practices for the animals?\r\n\r\nThat's all I can think of at the moment!  Looks great :-)\r\n\r\nColleague 2 (veterinarian and expert in shelter animal medicine):\r\n\r\nSuggests change in title to: Characterization of the microbial communities occurring on surfaces in an animal shelter\r\n\r\nComment 1: Would love to see this take on the additional angle of building/housing design differences.  It's been our experience that once the basics of vaccination and a decent cleaning/disinfection protocol is in place then the greatest differences in population health/ animal well being in animal shelters are due to LOS and housing (housing type and environment (noise/hvac, etc)). \r\n\r\nComment 2: Disease transmission is a concern more because of the demographics of the population served (naive population etc)  \r\n\r\nComment 3: Not sure how in depth you want/need  to go on the intro for this pilot project seems broad in scope. \r\n\r\nComment 4: This is a good descriptive paragraph (final paragraph in introduction).  I don’t know anything about genes that promote persistence in the environment- perhaps more info there. Do you have hypotheses?\r\n\r\nComment 5 in response to \"This study will help in the development of strategies to manage the development of antimicrobial and antibiotic resistance in an intensive housing environment.\" How?  Unless you were comparing differing strategies- cleaning methods, disinfectant use, housing type etc within the same environment.  This study will help understand the presence or absence  and quantitative information of whatever you are looking for but not sure how much further you can go with this project.",
+      "id": 14,
       "profile": 4,
       "published": "2014-06-10T23:08:38.912822Z",
       "thread": 9,
@@ -75,6 +84,7 @@
     {
       "body_html": "<p>How can I notify our collaborators?</p>",
       "body_md": "How can I notify our collaborators?",
+      "id": 15,
       "profile": 4,
       "published": "2014-06-11T00:02:50.667909Z",
       "thread": 9,
@@ -83,6 +93,7 @@
     {
       "body_html": "<p>For the time being we can notify them like so:</p>\r\n\r\n<p> <a href=\"/u/adamsri\" class=\"username\">@adamsri</a> <a href=\"/u/jackgilbert\" class=\"username\">@jackgilbert</a> <a href=\"/u/jarradmarcell\" class=\"username\">@jarradmarcell</a> </p>\r\n\r\n<p>Could you guys reply to this so we know that you saw this?</p>",
       "body_md": "For the time being we can notify them like so:\r\n\r\n @adamsri @jackgilbert @jarradmarcell \r\n\r\nCould you guys reply to this so we know that you saw this?",
+      "id": 16,
       "profile": 2,
       "published": "2014-06-11T00:51:46.141859Z",
       "thread": 9,
@@ -91,6 +102,7 @@
     {
       "body_html": "<p>I saw it</p>",
       "body_md": "I saw it",
+      "id": 17,
       "profile": 10,
       "published": "2014-06-11T01:03:09.290165Z",
       "thread": 9,
@@ -99,6 +111,7 @@
     {
       "body_html": "<p>I saw it, too. </p>",
       "body_md": "I saw it, too. ",
+      "id": 18,
       "profile": 9,
       "published": "2014-06-11T19:20:09.613077Z",
       "thread": 9,
@@ -107,6 +120,7 @@
     {
       "body_html": "<p>I had similar concerns as offline colleague #2 <a href=\"http://thinklab.com/projects/MicrobeResist/discussion/6\">noted here</a> with regard to the projected outcomes of the project:</p>\r\n\r\n<blockquote><p>in response to \"This study will help in the development of strategies to manage the development of antimicrobial and antibiotic resistance in an intensive housing environment.\" How? Unless you were comparing differing strategies- cleaning methods, disinfectant use, housing type etc within the same environment. This study will help understand the presence or absence and quantitative information of whatever you are looking for but not sure how much further you can go with this project.</p></blockquote>\r\n\r\n<p>I really want us to be clear about exactly what are the positive outcomes (or potential outcomes) of the project and what are not. In addition to the comments above I'll make my own. The proposal says:</p>\r\n\r\n<blockquote><p>By identifying what bacteria and fungi occur here, we can begin to understand sources for these communities (such as animal host, soil, air, water) </p></blockquote>\r\n\r\n<p>I can see that this research will help us understand what microbes are found in an animal shelter versus what microbes are not. But, how does it allow you to tell if the source is animal host, soil, air, or water? Furthermore, why is this useful to know?</p>\r\n\r\n<blockquote><p>and identify potential effects that different environmental factors may have on microbial persistence in these building reservoirs (such as use of disinfectants, proximity to windows, moisture, sunlight). These findings can help to inform practices within animal shelters such as the use of ventilation and disinfectants to protect animal health.</p></blockquote>\r\n\r\n<p>Will there really be a meaningful differentiation between samples in the amount of disinfectants that were used? Wouldn't each kennel basically have the same profile as far as disinfectants, moisture, light, etc? And even if they didn't — do the microbes not move around, from one kennel to another?</p>\r\n\r\n<p>If we were really going to help inform animal shelters on the use of ventilation and disinfectants I'd think we'd have to to characterize the microbial communities across multiple shelters that had varying practices. Either that or setup controlled experiments within one shelter. Right?</p>\r\n\r\n<p>This also implies that certain microbial communities are \"bad\" and certain communities are \"good\". I just want to confirm that there could in fact be a set of results where we could definitively recommend to shelters that they change their practices to X. If that outcome is not possible I don't think it can be claimed that we are helping inform practices within animal shelters.</p>",
       "body_md": "I had similar concerns as offline colleague #2 [noted here](http://thinklab.com/projects/MicrobeResist/discussion/6) with regard to the projected outcomes of the project:\r\n\r\n> in response to \"This study will help in the development of strategies to manage the development of antimicrobial and antibiotic resistance in an intensive housing environment.\" How? Unless you were comparing differing strategies- cleaning methods, disinfectant use, housing type etc within the same environment. This study will help understand the presence or absence and quantitative information of whatever you are looking for but not sure how much further you can go with this project.\r\n\r\nI really want us to be clear about exactly what are the positive outcomes (or potential outcomes) of the project and what are not. In addition to the comments above I'll make my own. The proposal says:\r\n\r\n> By identifying what bacteria and fungi occur here, we can begin to understand sources for these communities (such as animal host, soil, air, water) \r\n\r\nI can see that this research will help us understand what microbes are found in an animal shelter versus what microbes are not. But, how does it allow you to tell if the source is animal host, soil, air, or water? Furthermore, why is this useful to know?\r\n\r\n> and identify potential effects that different environmental factors may have on microbial persistence in these building reservoirs (such as use of disinfectants, proximity to windows, moisture, sunlight). These findings can help to inform practices within animal shelters such as the use of ventilation and disinfectants to protect animal health.\r\n\r\nWill there really be a meaningful differentiation between samples in the amount of disinfectants that were used? Wouldn't each kennel basically have the same profile as far as disinfectants, moisture, light, etc? And even if they didn't -- do the microbes not move around, from one kennel to another?\r\n\r\nIf we were really going to help inform animal shelters on the use of ventilation and disinfectants I'd think we'd have to to characterize the microbial communities across multiple shelters that had varying practices. Either that or setup controlled experiments within one shelter. Right?\r\n\r\nThis also implies that certain microbial communities are \"bad\" and certain communities are \"good\". I just want to confirm that there could in fact be a set of results where we could definitively recommend to shelters that they change their practices to X. If that outcome is not possible I don't think it can be claimed that we are helping inform practices within animal shelters.",
+      "id": 19,
       "profile": 2,
       "published": "2014-06-11T23:59:22.929768Z",
       "thread": 10,
@@ -115,6 +129,7 @@
     {
       "body_html": "<p>Hi Jesse,</p>\r\n\r\n<p>Thanks for reading the proposal and taking the time to comment on it. </p>\r\n\r\n<p>I provided the two offline reviewers' comments in the spirit of openness. Typically I will have several people read a proposal before it is submitted as I did here. In this case, I have provided the initial first draft of the proposal, so there are some simple things that should be corrected. In fact, I have already started to revise the proposal based on these comments. But I'm not sure how to revise it online without changing the original document. It seems like it would be useful to have different versions of the proposal to see how it changes in response to these discussions. Or maybe I am missing how to do this? Also I wasn't sure if I should change it while some of you are reading the current version. So for now I have let the first draft online as it is.</p>\r\n\r\n<p>When I wrote the somewhat careless statement that \"This study will help in the development of strategies to manage the development of antimicrobial and antibiotic resistance in an intensive housing environment,\" this is what I was thinking about. If we find evidence for resistance genes that are associated with disinfectants that are commonly used in the animal shelter environment (and also genes for antibiotic resistance), this background information will be very informative in guiding future studies to develop specific strategies to manage the development of such resistance in bacterial communities that reside on surfaces in animal shelters. I have some specific ideas for this but they are a bit beyond the scope of this project. In any case, I have already revised this statement (and the similar one later in the proposal) offline but await further input before I upload a revised version of the proposal. In addition, it is clarifying for me to see how different people respond to it.</p>\r\n\r\n<p>We can use bacterial source tracking to identify potential sources for some of the surface communities based on the many available reference collections for soil, air, water, human and animal associated communities. I did not propose collecting additional samples for that purpose here due to the limited level of funding for this project. But we can use publicly available data to begin to address potential sources. </p>\r\n\r\n<p>Why do we want to identify the biogeography of bacteria in buildings? This is something that is not always clear to people who are not ecologists. Microbial ecologists believe that we need to understand what is there and how diversity varies across these environments before we can understand how such communities might change in response to environmental variation or potential interventions, such as a new approach to ventilation or disinfection. In addition to who is there, the traits exhibited by these communities can be of interest, i.e., resistance genes.</p>\r\n\r\n<p>This study is not designed to compare different disinfection strategies in the different kennels. Instead it is designed to characterize the communities found living on surfaces in the dog housing area. It is designed to capture the range of variation in the dog kennels, which do differ in amount of light, humidity and proximity to windows and exits. I would also like to use data loggers to measure the amount of variation in temperature and humidity in the kennels.</p>\r\n\r\n<p>This pilot study is not funded at a level to allow for comparisons of multiple shelters with different strategies. It would take something like $25,000 to do such a study (without including salaries). The project proposed here will already cost about twice as much as the current budget so I will probably drop the fungal characterization, depending on the feedback that we get from the community here.</p>\r\n\r\n<p>I didn't mean to imply anything about good or bad microbial communities. What I am thinking about here is managing for the evolution and spread of antibiotic and disinfectant resistance genes in bacterial communities found on surfaces in animal shelters. First we have to start by characterizing who is there and whether they have the traits of interest. </p>\r\n\r\n<p>Thanks for the constructive feedback. I will modify the proposal accordingly. </p>",
       "body_md": "Hi Jesse,\r\n\r\nThanks for reading the proposal and taking the time to comment on it. \r\n\r\nI provided the two offline reviewers' comments in the spirit of openness. Typically I will have several people read a proposal before it is submitted as I did here. In this case, I have provided the initial first draft of the proposal, so there are some simple things that should be corrected. In fact, I have already started to revise the proposal based on these comments. But I'm not sure how to revise it online without changing the original document. It seems like it would be useful to have different versions of the proposal to see how it changes in response to these discussions. Or maybe I am missing how to do this? Also I wasn't sure if I should change it while some of you are reading the current version. So for now I have let the first draft online as it is.\r\n\r\nWhen I wrote the somewhat careless statement that \"This study will help in the development of strategies to manage the development of antimicrobial and antibiotic resistance in an intensive housing environment,\" this is what I was thinking about. If we find evidence for resistance genes that are associated with disinfectants that are commonly used in the animal shelter environment (and also genes for antibiotic resistance), this background information will be very informative in guiding future studies to develop specific strategies to manage the development of such resistance in bacterial communities that reside on surfaces in animal shelters. I have some specific ideas for this but they are a bit beyond the scope of this project. In any case, I have already revised this statement (and the similar one later in the proposal) offline but await further input before I upload a revised version of the proposal. In addition, it is clarifying for me to see how different people respond to it.\r\n\r\nWe can use bacterial source tracking to identify potential sources for some of the surface communities based on the many available reference collections for soil, air, water, human and animal associated communities. I did not propose collecting additional samples for that purpose here due to the limited level of funding for this project. But we can use publicly available data to begin to address potential sources. \r\n\r\nWhy do we want to identify the biogeography of bacteria in buildings? This is something that is not always clear to people who are not ecologists. Microbial ecologists believe that we need to understand what is there and how diversity varies across these environments before we can understand how such communities might change in response to environmental variation or potential interventions, such as a new approach to ventilation or disinfection. In addition to who is there, the traits exhibited by these communities can be of interest, i.e., resistance genes.\r\n\r\nThis study is not designed to compare different disinfection strategies in the different kennels. Instead it is designed to characterize the communities found living on surfaces in the dog housing area. It is designed to capture the range of variation in the dog kennels, which do differ in amount of light, humidity and proximity to windows and exits. I would also like to use data loggers to measure the amount of variation in temperature and humidity in the kennels.\r\n\r\nThis pilot study is not funded at a level to allow for comparisons of multiple shelters with different strategies. It would take something like $25,000 to do such a study (without including salaries). The project proposed here will already cost about twice as much as the current budget so I will probably drop the fungal characterization, depending on the feedback that we get from the community here.\r\n\r\nI didn't mean to imply anything about good or bad microbial communities. What I am thinking about here is managing for the evolution and spread of antibiotic and disinfectant resistance genes in bacterial communities found on surfaces in animal shelters. First we have to start by characterizing who is there and whether they have the traits of interest. \r\n\r\nThanks for the constructive feedback. I will modify the proposal accordingly. \r\n\r\n\r\n",
+      "id": 20,
       "profile": 4,
       "published": "2014-06-12T18:16:30.042115Z",
       "thread": 10,
@@ -123,6 +138,7 @@
     {
       "body_html": "<p>Hi <a href=\"/u/adamsri\" class=\"username\">@adamsri</a> <a href=\"/u/jackgilbert\" class=\"username\">@jackgilbert</a> <a href=\"/u/jarradmarcell\" class=\"username\">@jarradmarcell</a> <br>This discussion might be of interest to you as reviewers.<br>Thanks for your help with this project.</p>",
       "body_md": "Hi @adamsri @jackgilbert @jarradmarcell \r\nThis discussion might be of interest to you as reviewers.\r\nThanks for your help with this project.",
+      "id": 21,
       "profile": 4,
       "published": "2014-06-12T18:21:48.619508Z",
       "thread": 10,
@@ -131,6 +147,7 @@
     {
       "body_html": "<p>I think this is a really interesting proposal, and well thought out. It's great to see the inclusion of metagenomics and antibiotic-resistance targeting. I think this will yield insights about our management of these facilities the way it is designed. Since you have already answered the broader concerns in another comment (<a href=\"http://thinklab.com/MicrobeResist/discussion/7\">Concerns with projected outcomes</a>), I'll focus on a few methods issues that can be clarified or improved.</p>\r\n\r\n<ul><li>You are targeting the 16S V4 region, but with the newest round of Illumina amplicon sequencing, we've begun extending primers from F515-R806 to F319-R806. This still allows some overlap between paired ends and gives a potentially more informative amplicon length. And I might recommend looking into the <a href=\"http://www.microbiomejournal.com/content/2/1/6\">Fadrosh et al. 2014</a> method for adding a spacer to the beginning of the primers - this avoids the wasteful phiX spike necessitated by Illumina clustering algorithms. We've been experimenting with a version of this, and results are good so far. However, if you plan to run the amplicons and metagenomes in the same run, then nevermind - that probably fixes the same problem. </li><li>You are going to use UniFrac for beta-diversity analysis. This is a great idea, and should certainly be part of the workflow. However, keep in mind that UniFrac excels at finding broad, phylogenetically-relevant habitat differences (e.g., acidic vs basic, or gut vs skin). <br>But quite often microbial ecologists miss out on really interesting <em>subtle</em> habitat or source differences by eschewing traditional ecological beta-diversity metrics simply because they are not based in phylogeny. For example, when looking at skin samples from men and women, UniFrac sees very little difference because the same clades are represented in both sets. However, we keep seeing that minor taxonomic swaps hold the key to distinguishing between groups. Men might have one type of <em>Corynebacterium</em> enriched on their skin and women have another <em>Corynebacterium</em>. UniFrac overlooks this (by design, and for good reason), while another metric, like Canberra, will emphasize this difference. That is not to say that you should use one over another, but choose metrics carefully based on the differences you expect to see, or else risk missing out on interesting results. </li><li>Minor point - QIIME is now up to version 1.8 and will likely change again before your sequences come out, so it is probably sufficient to just cite Caporaso et al. 2010, instead of version number. </li><li>Aesthetic markdown point: The markdown editor seems to have hijacked your underscores in the <code>pick_otus_through_otu_table.py</code> description. Put backticks around it to avoid the italics. </li></ul><p>This is a very cool idea, and I'm happy to help out where I can, or review a future version. </p>",
       "body_md": "I think this is a really interesting proposal, and well thought out. It's great to see the inclusion of metagenomics and antibiotic-resistance targeting. I think this will yield insights about our management of these facilities the way it is designed. Since you have already answered the broader concerns in another comment ([Concerns with projected outcomes](http://thinklab.com/MicrobeResist/discussion/7)), I'll focus on a few methods issues that can be clarified or improved.\r\n\r\n*  You are targeting the 16S V4 region, but with the newest round of Illumina amplicon sequencing, we've begun extending primers from F515-R806 to F319-R806. This still allows some overlap between paired ends and gives a potentially more informative amplicon length. And I might recommend looking into the [Fadrosh et al. 2014](http://www.microbiomejournal.com/content/2/1/6) method for adding a spacer to the beginning of the primers - this avoids the wasteful phiX spike necessitated by Illumina clustering algorithms. We've been experimenting with a version of this, and results are good so far. However, if you plan to run the amplicons and metagenomes in the same run, then nevermind - that probably fixes the same problem. \r\n* You are going to use UniFrac for beta-diversity analysis. This is a great idea, and should certainly be part of the workflow. However, keep in mind that UniFrac excels at finding broad, phylogenetically-relevant habitat differences (e.g., acidic vs basic, or gut vs skin). \r\nBut quite often microbial ecologists miss out on really interesting *subtle* habitat or source differences by eschewing traditional ecological beta-diversity metrics simply because they are not based in phylogeny. For example, when looking at skin samples from men and women, UniFrac sees very little difference because the same clades are represented in both sets. However, we keep seeing that minor taxonomic swaps hold the key to distinguishing between groups. Men might have one type of *Corynebacterium* enriched on their skin and women have another *Corynebacterium*. UniFrac overlooks this (by design, and for good reason), while another metric, like Canberra, will emphasize this difference. That is not to say that you should use one over another, but choose metrics carefully based on the differences you expect to see, or else risk missing out on interesting results. \r\n* Minor point - QIIME is now up to version 1.8 and will likely change again before your sequences come out, so it is probably sufficient to just cite Caporaso et al. 2010, instead of version number. \r\n* Aesthetic markdown point: The markdown editor seems to have hijacked your underscores in the `pick_otus_through_otu_table.py` description. Put backticks around it to avoid the italics. \r\n\r\nThis is a very cool idea, and I'm happy to help out where I can, or review a future version. \r\n\r\n",
+      "id": 22,
       "profile": 14,
       "published": "2014-06-12T20:57:58.714828Z",
       "thread": 11,
@@ -139,6 +156,7 @@
     {
       "body_html": "<blockquote><p>I have already started to revise the proposal based on these comments. But I'm not sure how to revise it online without changing the original document. It seems like it would be useful to have different versions of the proposal to see how it changes in response to these discussions.</p></blockquote>\r\n\r\n<p>Thanks. Yes I agree having multiple versions would be useful. We will work on adding it before public launch. For now you'll just have to use whatever strategy you think is best given the limitations of the system.</p>\r\n\r\n<p>With regard to the rest of the comments. I've probably reached my limit in being able to make any useful response without understanding the science.</p>\r\n\r\n<p>I would just say that if any of the outcomes you are talking about refer to future studies that could be based on yours then we should probably describe them as such. We don't want people thinking they are <em>direct</em> outcomes from your study if they are not.</p>",
       "body_md": "> I have already started to revise the proposal based on these comments. But I'm not sure how to revise it online without changing the original document. It seems like it would be useful to have different versions of the proposal to see how it changes in response to these discussions.\r\n\r\nThanks. Yes I agree having multiple versions would be useful. We will work on adding it before public launch. For now you'll just have to use whatever strategy you think is best given the limitations of the system.\r\n\r\nWith regard to the rest of the comments. I've probably reached my limit in being able to make any useful response without understanding the science.\r\n\r\nI would just say that if any of the outcomes you are talking about refer to future studies that could be based on yours then we should probably describe them as such. We don't want people thinking they are *direct* outcomes from your study if they are not.\r\n\r\n\r\n\r\n",
+      "id": 23,
       "profile": 2,
       "published": "2014-06-12T22:06:33.148162Z",
       "thread": 10,
@@ -147,6 +165,7 @@
     {
       "body_html": "<p>All of the proposal sections except for the abstract allow you to write text in markdown. This allows simple formatting such as creating bulleted lists, numbered lists, headings, bold, italics, etc. I suggest you check out <a href=\"https://help.github.com/articles/markdown-basics\">Markdown Basics on GitHub</a> as a guide. Note, that I created that text link using markdown!</p>\r\n\r\n<p>I would suggest that the items under 'Team &amp; Resources' can be converted to lists. I'd also suggest that you add section headings to the research plan. Use your own judgement of course.</p>",
       "body_md": "All of the proposal sections except for the abstract allow you to write text in markdown. This allows simple formatting such as creating bulleted lists, numbered lists, headings, bold, italics, etc. I suggest you check out [Markdown Basics on GitHub](https://help.github.com/articles/markdown-basics) as a guide. Note, that I created that text link using markdown!\r\n\r\nI would suggest that the items under 'Team & Resources' can be converted to lists. I'd also suggest that you add section headings to the research plan. Use your own judgement of course.",
+      "id": 24,
       "profile": 2,
       "published": "2014-09-10T20:33:29.494206Z",
       "thread": 15,
@@ -155,6 +174,7 @@
     {
       "body_html": "<p>It is interesting  to get to practice writing in markdown. I wasn't sure how useful it would be but I can see that it would be useful to add some structure to the proposal. Thanks!</p>",
       "body_md": "It is interesting  to get to practice writing in markdown. I wasn't sure how useful it would be but I can see that it would be useful to add some structure to the proposal. Thanks!",
+      "id": 25,
       "profile": 4,
       "published": "2014-09-10T22:10:22.538691Z",
       "thread": 15,
@@ -163,6 +183,7 @@
     {
       "body_html": "<p>We've been using Markdown in our various Authorea-created publications and while it takes a bit of getting used to, I think it's worth it in the end.</p>",
       "body_md": "We've been using Markdown in our various Authorea-created publications and while it takes a bit of getting used to, I think it's worth it in the end.",
+      "id": 26,
       "profile": 6,
       "published": "2014-09-11T16:31:11.521981Z",
       "thread": 15,
@@ -175,6 +196,7 @@
       "body_md": "# Abstract\r\n\r\nEach year animal shelters provide essential care for millions of animals, many of which enter the shelter without receiving any prior veterinary care. Animal shelter housing typically has high occupancy of highly stressed, potentially immunosuppressed animals. Consequently disease transmission is a major concern. To protect both animal and human health, animals are vaccinated and treated with antibiotics; additionally most animal housing units are cleaned daily with disinfectants. The use of antibiotics and disinfectants may promote the spread of resistance traits in resident bacterial populations. Here we propose a study to characterize bacterial and fungal community composition and the presence of antibiotic and disinfectant resistance genes in the microbiota residing on surfaces in an animal shelter.\r\n\r\n# Objectives\r\n\r\n1. We will use amplicon sequencing to characterize the composition of bacterial and fungal communities occurring on surfaces in an animal shelter. By identifying what bacteria and fungi occur here, we can begin to understand sources for these communities (such as animal host, soil, air, water) and identify potential effects that different environmental factors may have on microbial persistence in these building reservoirs (such as use of disinfectants, proximity to windows, moisture, sunlight). These findings can help to inform practices within animal shelters such as the use of ventilation and disinfectants to protect animal health.\r\n\r\n2. We will use metagenomic sequencing to identify the presence of genes associated with antimicrobial and antibiotic resistance as well as biofilm formation in these communities. This part of the study provides an important link between describing what microbes are present on building surfaces and identifying what traits might help them to persist in such relatively extreme environments. This study will help in the development of strategies to manage the development of antimicrobial and antibiotic resistance in an intensive housing environment.\r\n\r\n# Background\r\n\r\nAnimal shelters house a high density of stressed animals, providing the opportunity for the emergence and transmission of infectious diseases [@10.1177/0300985813511129]. The US Humane Society estimates that between 6 and 8 million companion animals enter animal shelters in the United States each year. Many of these animals have not received any prior veterinary care or vaccination. Numerous pathogens occur in the animal shelter environment, including beta-hemolytic Streptococci, feline herpesvirus I, canine distemper virus, canine influenza virus, feline calicivirus, parvoviruses and feline infectious peritonitis  [@10.1177/0300985813511129]. Fungal infections such as ringworm are also of major concern [@10.1016/j.prevetmed.2010.11.001]. To minimize disease outbreaks in this intensive housing environment, shelter staff use vaccination, antibiotics and disinfectants to protect both animal and human health.\r\n\r\nThe widespread use of antimicrobial products is accelerating the spread of antibiotic and antimicrobial resistance. Drug resistant bacterial strains have been identified in animal shelters: bacteria with multidrug resistance were isolated from both dog kennels [@10.1016/j.theriogenology.2012.05.033] and cat housing areas [@10.1016/j.rvsc.2005.10.004]. Increased biocide resistance may cause increased antibiotic resistance because resistance genes can be located in close proximity and can share common resistance mechanisms (e.g., [@10.1128/AAC.45.2.428-432.2001], [@10.1046/j.1365-2672.92.5s1.4.x], [@10.1016/j.tim.2006.02.006], [@10.1016/j.vetmic.2011.02.014], [@10.1128/AAC.49.1.454-456.2005]). Furthermore, antibiotic resistance can be transmitted from animals treated with antibiotics to humans working in close proximity to them [@10.1089/fpd.2006.0066].  \r\n\r\nShelter animals and staff may acquire drug resistant bacterial strains in shelters and carry them into local communities. According to the ASPCA about 2.7 million companion animals are adopted from shelters each year. Many people live in close contact with their pets; studies of dog owners found that they share both gastrointestinal bacteria [@10.1017/S0022172400064597] and skin bacteria [@10.7554/eLife.00458] with their dogs. Our pets harbor and shed diverse microbial communities that may shape the microbial composition of their human companions [@10.7554/eLife.00458] through both direct and indirect contact. Although most research has focused on the effects of human occupancy in buildings, animal skin, hair, fecal material, saliva and ectoparasites such as fleas and mites are likely to contribute significantly to the microbial communities associated with indoor surfaces and air [@10.1111/j.1365-2222.1994.tb03323.x], [@10.1016/j.jaci.2010.05.042], [@10.1186/gb-2013-14-2-202]. \r\n\r\nHere we propose a pilot study to characterize the microbial communities occurring on surfaces in an animal shelter. First we will use phylogenetically informative markers to characterize the diversity of bacteria and fungi occurring in these samples. Then we will sequence the metagenome for a subset of these samples to identify genes that may promote persistence in this environment, including those that affect the ability to form biofilms to colonize surfaces, such as amyloid fibers called curli promote adhesion on surfaces and human epithelial cells (found in Enterbacteriaceae), as well as resistance to antimicrobial disinfectants and antibiotics. \r\n\r\n# Research Plan\r\n\r\nWe will focus on the holding area for dogs in an open intake municipal animal shelter. The dog holding area contains 52 individual indoor single compartment kennels, 80” long x 40” wide x 80” high. Kennel floors are concrete and walls are ceramic tile covered with concrete block. Kennels are arranged linearly with one central aisle and 2 side aisles. The ventilation system draws air from the outside into the the holding area and exhaust is pulled out by ceiling fans. The kennel also has open windows and doors in summer. Dogs brought into the shelter are subject to a five day holding period and during this period they cannot be walked. Each kennel is cleaned daily to remove animal waste with accelerated hydrogen peroxide sprayed by a pressure washer. \t\r\n\r\nWe will collect surface samples from throughout the dog holding area. Surface samples will be collected from the floors, walls and ledges using a 10cm x 10cm grid and sterile, dry cotton swabs (Puritan brand). We collect three samples from each kennel (52 kennels x 3 surfaces = 156 samples). We will record whether a kennel was currently occupied. We will also collect samples from the walkways, drainage system, window ledges and outside each entrance to the dog holding area. Samples will be stored at -80 °C until DNA is extracted.\r\n\r\nDNA will be extracted using MoBio PowerSoil kits with an additional lysis step to maximize extraction efficiency for low biomass, swab samples. We will use sterile scissors to cut the cotton head of the swab directly into provided PowerBead tubes containing solution C1. The tubes will be incubated at 65 °C for 10 minutes and vortexed horizontally for 10 minutes. Subsequently, we will follow the standard kit protocol. DNA samples will be stored at -80°C prior to preparing Illumina libraries for sequencing. \r\n\r\nDNA isolated from surface samples will be characterized for bacterial diversity based on phylogenetically informative markers in the V4 region of 16S rRNA following the methods of [@10.1038/nmeth.f.303]. Fungal diversity will be characterized using the internal transcribed spacer (ITS) region 1 of the nuclear ribosomal coding cistron [@10.1073/pnas.1117018109]. Samples will be sequenced in multiplexed Illumina MiSeq lanes (using paired-end 250 base pair sequencing). Sequence data will be entered into the standard Quantitative Insights in Microbial Ecology (QIIME 1.5.0) workflow. Each sample will be characterized for taxonomic composition (number and abundance). For presence/absence analyses, representative operational taxonomic units (OTUs) will be clustered at the >97% identity level and an OTU table will be constructed using QIIME’s pick_otus_through_otu_table.py script. We will compare beta diversity using Fast UniFrac scores [@10.1038/ismej.2009.97] visualized with principle coordinates analysis. We will compare the temporal sequence of establishment in each kitten and assess temporal changes in microbiome diversity using various nonparametric multivariate methods, discriminant function analysis and association networks. We will use SourceTracker [@10.1038/nmeth.1650] to identify potential sources of bacteria by comparing bacterial OTUs identified in samples from outside, soil, canine and human. \r\n\r\nWe will sequence the metagenome for a subset of these samples to detect antimicrobial and antibiotic resistance in bacteria occurring on surfaces in the animal shelter environment. Because we expect to have a low amount of input DNA for each sample, we will use the Illumina Nextera XT library preparation kit. We will select, label with barcodes and pool up to 24 samples for sequencing. We will use PhyloSift [@10.7717/peerj.243] to perform phylogeny-driven Bayesian hypothesis tests for the presence of bacteria, fungi, viruses and other organisms occurring in these samples. The BacMet database for antibacterial biocide and metal resistance genes will be used to screen our metagenomic data for resistance genes as well as genes associated with biofilm formation [@10.1093/nar/gkt1252].\r\n\r\n# Team & Resources\r\n\r\nJonathan Eisen, Primary Investigator, is an expert in microbial genomics and an advocate for open science.\r\nHolly Ganz, Project Scientist, is a microbial ecologist, who uses genetic and statistical methods to characterize the diversity of microorganisms that live in the environment and in association with plants and animals. Currently she is leading the Kitten Microbiome Project, a citizen science project on the development of the microbiome in neonatal kittens. \r\nDavid Coil, Project Scientist. mentors undergraduate research projects in microbial ecology and genomics in the Eisen Lab. Co-investigator for Project MERCURRI, a citizen science project focused on bacteria living in the International Space Station. Also performs public outreach in Microbiology through the microBEnet project, which is focused on communication in the context of studies of microbiology of the built environment. \r\nKatherine Dahlhausen, Graduate Student Researcher, Biophysics Program, studies how bacteria tolerate and respond to DNA damage.\r\nRuth Lee and Leesa Li, Undergraduate Student Researchers, will provide laboratory assistance.\r\n\r\nAvailable resources:  1. The UC Davis Genome Center integrates experimental and computational approaches to address key problems at the forefront of genomics. The Center is housed in a new research building with state-of-the-art computational and laboratory facilities. The DNA Technologies Core of the Genome Center provides both high throughput sequencing analysis, including Illumina HiSeq and MiSeq.  2. Dr. Eisen's laboratory occupies roughly 1000 sq. ft. of wet laboratory space in the Genome and Biomedical Sciences Facility. This laboratory includes all the necessary equipment to perform PCR and qPCR, Qubit (for DNA quantification) and microscopy. Dr. Eisen also has office and cubicle space for computational staff, students and postdoctoral fellows that is directly adjacent to the laboratory. The space can comfortably accommodate eight bench scientists and four computational scientists and can accommodate undergraduate researchers.",
       "doc_published": "2014-06-02T01:11:45Z",
       "doi": "10.15363/thinklab.a4",
+      "id": 4,
       "intro_html": "",
       "intro_md": "",
       "title": "",
@@ -189,6 +211,7 @@
       "body_html": "<p>As of this moment it's actually not designed to work there. I think the reason is that I was planning to have that text shortened to X characters with a \"more\" link for people who wanted to read more. Just get's a little tricky if it's in markdown. However, links would be nice so I'll see what can be done.</p>",
       "body_md": "As of this moment it's actually not designed to work there. I think the reason is that I was planning to have that text shortened to X characters with a \"more\" link for people who wanted to read more. Just get's a little tricky if it's in markdown. However, links would be nice so I'll see what can be done.",
       "comment": 5,
+      "id": 2,
       "profile": 2,
       "url": "/discussion/play-up-your-labs-leadership-in-open-science/3#note-2"
     },
@@ -197,6 +220,7 @@
       "body_html": "<p>I just want to note that none of the collaborators on the project received an email notification when you posted this. The post <em>will</em> still appear in their ThinkLab inbox however. I'm still trying to figure out the best system of notifications.</p>",
       "body_md": "I just want to note that none of the collaborators on the project received an email notification when you posted this. The post *will* still appear in their ThinkLab inbox however. I'm still trying to figure out the best system of notifications.",
       "comment": 14,
+      "id": 4,
       "profile": 2,
       "url": "/discussion/offline-feedback-for-the-proposal-from-two-non-ecologists/9#note-4"
     },
@@ -205,6 +229,7 @@
       "body_html": "<p>Just a quick note. We have actually updated the markdown parser so it recognizes under_scores_between_words as not meant to be italic. The next time the proposal is saved this should be corrected automatically. And by the way, if you disagree with any of my <a href=\"http://thinklab.com/MicrobeResist/discussion/7\">concerns</a> please say so. I don't actually understand the science so keep that in mind!</p>",
       "body_md": "Just a quick note. We have actually updated the markdown parser so it recognizes under_scores_between_words as not meant to be italic. The next time the proposal is saved this should be corrected automatically. And by the way, if you disagree with any of my [concerns](http://thinklab.com/MicrobeResist/discussion/7) please say so. I don't actually understand the science so keep that in mind!",
       "comment": 22,
+      "id": 5,
       "profile": 2,
       "url": "/discussion/methods-considerations/11#note-5"
     },
@@ -213,6 +238,7 @@
       "body_html": "<p>Actually, I think your concerns were useful, since it is so important to make sure that non-specialists understand the methods and impact. Holly's answers were well stated, and will add nicely to the proposal! </p>",
       "body_md": "Actually, I think your concerns were useful, since it is so important to make sure that non-specialists understand the methods and impact. Holly's answers were well stated, and will add nicely to the proposal! ",
       "comment": 22,
+      "id": 6,
       "profile": 14,
       "url": "/discussion/methods-considerations/11#note-6"
     },
@@ -221,6 +247,7 @@
       "body_html": "<p>Just FYI - the profile 'about' section will not be markdown for now. I've taken the liberty of removing the markdown you added for you.</p>",
       "body_md": "Just FYI - the profile 'about' section will not be markdown for now. I've taken the liberty of removing the markdown you added for you.",
       "comment": 5,
+      "id": 7,
       "profile": 2,
       "url": "/discussion/play-up-your-labs-leadership-in-open-science/3#note-7"
     },
@@ -229,6 +256,7 @@
       "body_html": "<p>Just FYI - You no longer need to use <a href=\"/username\" class=\"username\">@username</a> to invite people to a discussion. If they are following the project they will be notified of any new comments via a daily or biweekly 'new activity' email. The <a href=\"/username\" class=\"username\">@username</a> feature can be used if you'd like to insure that the user is notified of your comment <em>immediately</em>. Note that users following a discussion thread will typically be notified of new comments in that thread straight away anyway.</p>",
       "body_md": "Just FYI - You no longer need to use @username to invite people to a discussion. If they are following the project they will be notified of any new comments via a daily or biweekly 'new activity' email. The @username feature can be used if you'd like to insure that the user is notified of your comment *immediately*. Note that users following a discussion thread will typically be notified of new comments in that thread straight away anyway.",
       "comment": 21,
+      "id": 8,
       "profile": 2,
       "url": "/discussion/concerns-with-projected-outcomes/10#note-8"
     },
@@ -237,6 +265,7 @@
       "body_html": "<p>ThinkLab now tracks a version history for proposals. If you have a new version of the proposal I suggest you update ThinkLab with it. There will be a page you can link us to that will highlight the differences between the new version and the old version.</p>",
       "body_md": "ThinkLab now tracks a version history for proposals. If you have a new version of the proposal I suggest you update ThinkLab with it. There will be a page you can link us to that will highlight the differences between the new version and the old version.",
       "comment": 20,
+      "id": 9,
       "profile": 2,
       "url": "/discussion/concerns-with-projected-outcomes/10#note-9"
     }
@@ -244,53 +273,61 @@
   "profiles": [
     {
       "first_name": "Jesse",
+      "id": 2,
       "last_name": "Spaulding",
       "url": "/u/jspauld",
       "username": "jspauld"
     },
     {
       "first_name": "Holly",
+      "id": 4,
       "last_name": "Ganz",
       "url": "/u/hollyganz",
       "username": "hollyganz"
     },
     {
       "first_name": "Jonathan",
+      "id": 5,
       "last_name": "Eisen",
       "url": "/u/jonathaneisen",
       "username": "jonathaneisen"
     },
     {
       "first_name": "David",
+      "id": 6,
       "last_name": "Coil",
       "url": "/u/davidcoil",
       "username": "davidcoil"
     },
     {
       "first_name": "Rachel",
+      "id": 9,
       "last_name": "Adams",
       "url": "/u/adamsri",
       "username": "adamsri"
     },
     {
       "first_name": "Jack",
+      "id": 10,
       "last_name": "Gilbert",
       "url": "/u/jackgilbert",
       "username": "jackgilbert"
     },
     {
       "first_name": "James",
+      "id": 14,
       "last_name": "Meadow",
       "url": "/u/JamesMeadow",
       "username": "JamesMeadow"
     }
   ],
-  "retrieved": "2016-05-09T18:08:13.523539Z",
+  "retrieved": "2016-05-09T20:49:08.665412Z",
   "threads": [
     {
       "document": null,
       "doi": "10.15363/thinklab.d3",
       "doi_field": null,
+      "id": 3,
       "profile": 2,
       "published": "2014-06-02T18:11:29.266848Z",
       "subject": "Play up your lab’s leadership in open science!",
@@ -302,6 +339,7 @@
       "document": null,
       "doi": "10.15363/thinklab.d5",
       "doi_field": null,
+      "id": 5,
       "profile": 4,
       "published": "2014-06-03T19:42:05.765710Z",
       "subject": "Fungal diversity characterization using ITS",
@@ -313,6 +351,7 @@
       "document": null,
       "doi": "10.15363/thinklab.d6",
       "doi_field": null,
+      "id": 6,
       "profile": 2,
       "published": "2014-06-03T23:01:17.321755Z",
       "subject": "Introduction to the ThinkLab pilot",
@@ -324,6 +363,7 @@
       "document": null,
       "doi": "10.15363/thinklab.d8",
       "doi_field": null,
+      "id": 8,
       "profile": 2,
       "published": "2014-06-09T21:29:24.734417Z",
       "subject": "Peer review notes for pilot",
@@ -335,6 +375,7 @@
       "document": null,
       "doi": "10.15363/thinklab.d9",
       "doi_field": null,
+      "id": 9,
       "profile": 4,
       "published": "2014-06-10T23:08:38.726946Z",
       "subject": "Offline feedback for the proposal from two non-ecologists",
@@ -346,6 +387,7 @@
       "document": null,
       "doi": "10.15363/thinklab.d10",
       "doi_field": null,
+      "id": 10,
       "profile": 2,
       "published": "2014-06-11T23:59:22.634587Z",
       "subject": "Concerns with projected outcomes",
@@ -357,6 +399,7 @@
       "document": null,
       "doi": "10.15363/thinklab.d11",
       "doi_field": null,
+      "id": 11,
       "profile": 14,
       "published": "2014-06-12T20:57:58.551399Z",
       "subject": "Methods considerations",
@@ -368,6 +411,7 @@
       "document": null,
       "doi": "10.15363/thinklab.d15",
       "doi_field": null,
+      "id": 15,
       "profile": 2,
       "published": "2014-09-10T20:33:29.473571Z",
       "subject": "Markdown text formatting tips for proposal",
