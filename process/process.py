@@ -52,14 +52,11 @@ def get_project_to_export(directory):
         project_to_export[project] = export
     return project_to_export
 
-if __name__ == '__main__':
-    json_dir = os.path.join('..', 'export', 'json')
-    project_to_export = get_project_to_export(json_dir)
-
+def get_key_to_df(project_to_export):
     key_to_df = dict()
     for key in 'notes', 'comments', 'threads', 'profiles', 'documents':
         df = df_from_key(project_to_export, key)
-        df.sort_values(key[:-1] + '_id', inplace=True)
+        df.sort_values(['project', key[:-1] + '_id'], inplace=True)
         key_to_df[key] = df
 
     for key in 'notes', 'comments':
@@ -73,7 +70,15 @@ if __name__ == '__main__':
     document_df['word_count'] = combined_html.map(word_count)
     document_df['character_count'] = combined_html.map(character_count)
     document_df.drop(['intro_html', 'intro_md', 'body_html', 'body_md'], axis='columns', inplace=True)
+    return key_to_df
 
+def write_key_to_df(key_to_df, directory='table'):
     for key, df in key_to_df.items():
-        path = os.path.join('table', key + '.tsv')
+        path = os.path.join(directory, key + '.tsv')
         df.to_csv(path, sep='\t', index=False, float_format='%.0f')
+
+if __name__ == '__main__':
+    json_dir = os.path.join('..', 'export', 'json')
+    project_to_export = get_project_to_export(json_dir)
+    key_to_df = get_key_to_df(project_to_export)
+    write_key_to_df(key_to_df)
