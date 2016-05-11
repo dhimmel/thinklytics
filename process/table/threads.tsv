@@ -1,13 +1,13 @@
 document_id	doi	doi_field	profile_id	published	subject	thread_id	topic_field	url	views	project
-	10.15363/thinklab.d172		48.0	2016-02-23T23:33:01.236093Z	dynamic sub-graph assembly versus data warehousing	172	semantic web,linked data,question answering,workflows	/discussion/dynamic-sub-graph-assembly-versus-data-warehousing/172	23	EdgeProject
-14.0	10.15363/thinklab.d174			2016-02-23T23:33:01.467100Z		174		/doc/14/review	19	EdgeProject
-14.0	10.15363/thinklab.d176		2.0	2016-02-24T02:08:25.801767Z		176		/discussion/review-summary/176	17	EdgeProject
-	10.15363/thinklab.d177		48.0	2016-02-25T21:20:10.261545Z	what to do when you start over	177	ThinkLab,google docs	/discussion/what-to-do-when-you-start-over/177	16	EdgeProject
+	10.15363/thinklab.d172		48	2016-02-23T23:33:01.236093Z	dynamic sub-graph assembly versus data warehousing	172	semantic web,linked data,question answering,workflows	/discussion/dynamic-sub-graph-assembly-versus-data-warehousing/172	23	EdgeProject
+14	10.15363/thinklab.d174			2016-02-23T23:33:01.467100Z		174		/doc/14/review	19	EdgeProject
+14	10.15363/thinklab.d176		2	2016-02-24T02:08:25.801767Z		176		/discussion/review-summary/176	17	EdgeProject
+	10.15363/thinklab.d177		48	2016-02-25T21:20:10.261545Z	what to do when you start over	177	ThinkLab,google docs	/discussion/what-to-do-when-you-start-over/177	16	EdgeProject
 	10.15363/thinklab.d141			2016-01-18T19:48:55.431831Z	Predicting Bcr-Abl targets using a hybrid information extraction system	141	Machine learning,Cancer Biology,Crowdsourcing,Literature Mining,Drug Targets	/doc/11/review	13	HHMI_Bcr_Abl
-	10.15363/thinklab.d142		48.0	2016-01-18T23:51:24.055982Z	Applications of machine learning for aggregating judgments	142	Machine learning,Crowdsourcing	/discussion/applications-of-machine-learning-for-aggregating-judgments/142	22	HHMI_Bcr_Abl
-	10.15363/thinklab.d143		48.0	2016-01-19T16:59:17.873128Z	What lies ‘downstream’ of Bcr-Abl ?	143	Cancer Biology,Pathways,Imatinib Bcr-Abl	/discussion/what-lies-downstream-of-bcr-abl/143	21	HHMI_Bcr_Abl
-	10.15363/thinklab.d154		187.0	2016-01-31T05:30:14.232827Z		154		/discussion/review-summary/154	22	HHMI_Bcr_Abl
-	10.15363/thinklab.d156		17.0	2016-02-05T05:19:40.782715Z		156		/discussion/review-summary/156	25	HHMI_Bcr_Abl
+	10.15363/thinklab.d142		48	2016-01-18T23:51:24.055982Z	Applications of machine learning for aggregating judgments	142	Machine learning,Crowdsourcing	/discussion/applications-of-machine-learning-for-aggregating-judgments/142	22	HHMI_Bcr_Abl
+	10.15363/thinklab.d143		48	2016-01-19T16:59:17.873128Z	What lies ‘downstream’ of Bcr-Abl ?	143	Cancer Biology,Pathways,Imatinib Bcr-Abl	/discussion/what-lies-downstream-of-bcr-abl/143	21	HHMI_Bcr_Abl
+	10.15363/thinklab.d154		187	2016-01-31T05:30:14.232827Z		154		/discussion/review-summary/154	22	HHMI_Bcr_Abl
+	10.15363/thinklab.d156		17	2016-02-05T05:19:40.782715Z		156		/discussion/review-summary/156	25	HHMI_Bcr_Abl
 16	10.15363/thinklab.d180			2016-03-01T04:00:24.065902Z		180		/doc/16/review	17	LWT_FOR_OPEN_SCIENCE
 	10.15363/thinklab.d3		2	2014-06-02T18:11:29.266848Z	Play up your lab’s leadership in open science!	3		/discussion/play-up-your-labs-leadership-in-open-science/3	46	MicrobeResist
 	10.15363/thinklab.d5		4	2014-06-03T19:42:05.765710Z	Fungal diversity characterization using ITS	5	ITS,Fungi	/discussion/fungal-diversity-characterization-using-its/5	27	MicrobeResist
@@ -17,9 +17,9 @@ document_id	doi	doi_field	profile_id	published	subject	thread_id	topic_field	url
 	10.15363/thinklab.d10		2	2014-06-11T23:59:22.634587Z	Concerns with projected outcomes	10		/discussion/concerns-with-projected-outcomes/10	39	MicrobeResist
 	10.15363/thinklab.d11		14	2014-06-12T20:57:58.551399Z	Methods considerations	11		/discussion/methods-considerations/11	34	MicrobeResist
 	10.15363/thinklab.d15		2	2014-09-10T20:33:29.473571Z	Markdown text formatting tips for proposal	15	Markdown	/discussion/markdown-text-formatting-tips-for-proposal/15	48	MicrobeResist
-	10.15363/thinklab.d129		157.0	2015-11-25T14:23:50.090589Z	Reviewer #1	129		/discussion/reviewer-1/129	421	dFoxPoperant
+	10.15363/thinklab.d129		157	2015-11-25T14:23:50.090589Z	Reviewer #1	129		/discussion/reviewer-1/129	421	dFoxPoperant
 	10.15363/thinklab.d132			2015-12-01T17:13:33.160639Z	What is the function of FoxP in operant self-learning?	132	CRISPR/Cas,Learning,FoxP,Neurogenetics,Genome Editing,Language,Behavior,RNAi,Operant Learning,Drosophila,Antibodies,Neurobiology	/doc/8/review	4	dFoxPoperant
-	10.15363/thinklab.d133		2.0	2015-12-01T20:33:03.623767Z	How much expertise is it realistic to expect grant reviewers to have?	133	Peer review,Grant Writing	/discussion/how-much-expertise-is-it-realistic-to-expect-grant-reviewers-to-have/133	61	dFoxPoperant
+	10.15363/thinklab.d133		2	2015-12-01T20:33:03.623767Z	How much expertise is it realistic to expect grant reviewers to have?	133	Peer review,Grant Writing	/discussion/how-much-expertise-is-it-realistic-to-expect-grant-reviewers-to-have/133	61	dFoxPoperant
 17	10.15363/thinklab.d184			2016-03-11T07:45:54.180001Z		184		/doc/17/review	3	issnindiadatabase
 	10.15363/thinklab.d2		2	2015-01-15T23:27:18.322076Z	Add your ThinkLab feedback here in Meta	2		/discussion/add-your-thinklab-feedback-here-in-meta/2	44	meta
 	10.15363/thinklab.d26		17	2015-01-23T22:35:21.795434Z	Discussion Ranking and Visibility	26	ThinkLab,Discussions	/discussion/discussion-ranking-and-visibility/26	35	meta
@@ -63,16 +63,16 @@ document_id	doi	doi_field	profile_id	published	subject	thread_id	topic_field	url
 	10.15363/thinklab.d198		17	2016-04-09T22:54:57.169889Z	Improving search engine previewing	198	SEO,Search Engine Marketing,HMTL,meta,description	/discussion/improving-search-engine-previewing/198	27	meta
 	10.15363/thinklab.d207		17	2016-05-01T19:25:33.441488Z	Tracking attention through Altmetric integration	207	Altmetrics,Altmetric,attention	/discussion/tracking-attention-through-altmetric-integration/207	11	meta
 	10.15363/thinklab.d209		23	2016-05-03T07:47:06.967691Z	Share single posts	209		/discussion/share-single-posts/209	8	meta
-	10.15363/thinklab.d73		104.0	2015-06-09T02:28:14.495546Z	Open for Feedback	73	Citizen Science,Crowdsourcing,Open Sourse,Game Design,Pathways,Image Analysis	/discussion/open-for-feedback/73	39	pathways4life
-	10.15363/thinklab.d75		17.0	2015-06-10T23:17:15.323621Z	Pathway novelty based on unique relationships rather than genes	75	Gene Relationships,Gene Interactions,Interactions,Pathways,Gene Sets	/discussion/pathway-novelty-based-on-unique-relationships-rather-than-genes/75	31	pathways4life
-	10.15363/thinklab.d76		17.0	2015-06-10T23:23:57.865673Z	Duplicate pathway detection and resolution	76	Duplicates,Pathways,Curation	/discussion/duplicate-pathway-detection-and-resolution/76	25	pathways4life
-	10.15363/thinklab.d77		17.0	2015-06-10T23:34:36.664789Z	Thinklab specific comments	77	Markdown,ThinkLab,Spelling,Formatting	/discussion/thinklab-specific-comments/77	40	pathways4life
+	10.15363/thinklab.d73		104	2015-06-09T02:28:14.495546Z	Open for Feedback	73	Citizen Science,Crowdsourcing,Open Sourse,Game Design,Pathways,Image Analysis	/discussion/open-for-feedback/73	39	pathways4life
+	10.15363/thinklab.d75		17	2015-06-10T23:17:15.323621Z	Pathway novelty based on unique relationships rather than genes	75	Gene Relationships,Gene Interactions,Interactions,Pathways,Gene Sets	/discussion/pathway-novelty-based-on-unique-relationships-rather-than-genes/75	31	pathways4life
+	10.15363/thinklab.d76		17	2015-06-10T23:23:57.865673Z	Duplicate pathway detection and resolution	76	Duplicates,Pathways,Curation	/discussion/duplicate-pathway-detection-and-resolution/76	25	pathways4life
+	10.15363/thinklab.d77		17	2015-06-10T23:34:36.664789Z	Thinklab specific comments	77	Markdown,ThinkLab,Spelling,Formatting	/discussion/thinklab-specific-comments/77	40	pathways4life
 	10.15363/thinklab.d117			2015-10-09T21:05:26.485680Z	Pathways4Life: Crowdsourcing Pathway Modeling from Published Figures	117	Crowdsourcing,Game Design,Pathways,Image Analysis	/doc/3/review	15	pathways4life
-	10.15363/thinklab.d119		2.0	2015-10-30T23:15:04.302204Z	Use machine learning to calculate confidence scores for users, snippets, and pathways	119	Machine learning	/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119	53	pathways4life
-	10.15363/thinklab.d120		2.0	2015-10-30T23:49:10.382918Z	Are there significant differences in difficulty between pathway modeling tasks?	120	Gamification	/discussion/are-there-significant-differences-in-difficulty-between-pathway-modeling-tasks/120	20	pathways4life
-	10.15363/thinklab.d121		2.0	2015-10-31T00:11:28.596713Z	How about examples of the awesome science that pathway modeling enables?	121		/discussion/how-about-examples-of-the-awesome-science-that-pathway-modeling-enables/121	29	pathways4life
-	10.15363/thinklab.d122		2.0	2015-10-31T00:29:30.890698Z	Clarifying the scope of the challenge	122		/discussion/clarifying-the-scope-of-the-challenge/122	30	pathways4life
-	10.15363/thinklab.d123		2.0	2015-10-31T00:48:03.240373Z	What made previous crowdsourced science games succeed or not?	123	Crowdsourcing,Gamification,Science Games,Serious Games	/discussion/what-made-previous-crowdsourced-science-games-succeed-or-not/123	34	pathways4life
+	10.15363/thinklab.d119		2	2015-10-30T23:15:04.302204Z	Use machine learning to calculate confidence scores for users, snippets, and pathways	119	Machine learning	/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119	53	pathways4life
+	10.15363/thinklab.d120		2	2015-10-30T23:49:10.382918Z	Are there significant differences in difficulty between pathway modeling tasks?	120	Gamification	/discussion/are-there-significant-differences-in-difficulty-between-pathway-modeling-tasks/120	20	pathways4life
+	10.15363/thinklab.d121		2	2015-10-31T00:11:28.596713Z	How about examples of the awesome science that pathway modeling enables?	121		/discussion/how-about-examples-of-the-awesome-science-that-pathway-modeling-enables/121	29	pathways4life
+	10.15363/thinklab.d122		2	2015-10-31T00:29:30.890698Z	Clarifying the scope of the challenge	122		/discussion/clarifying-the-scope-of-the-challenge/122	30	pathways4life
+	10.15363/thinklab.d123		2	2015-10-31T00:48:03.240373Z	What made previous crowdsourced science games succeed or not?	123	Crowdsourcing,Gamification,Science Games,Serious Games	/discussion/what-made-previous-crowdsourced-science-games-succeed-or-not/123	34	pathways4life
 	10.15363/thinklab.d21		17	2015-01-14T05:55:24.808111Z	How should we construct a catalog of drug indications?	21	Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology	/discussion/how-should-we-construct-a-catalog-of-drug-indications/21	344	rephetio
 	10.15363/thinklab.d22		17	2015-01-16T00:46:28.770398Z	Suggestions for additional information types?	22	Bioinformatics,Chemoinformatics,Databases	/discussion/suggestions-for-additional-information-types/22	93	rephetio
 	10.15363/thinklab.d23		2	2015-01-16T10:18:57.231835Z	Enabling reproducibility and reuse	23	Reproducibility	/discussion/enabling-reproducibility-and-reuse/23	90	rephetio
@@ -147,12 +147,12 @@ document_id	doi	doi_field	profile_id	published	subject	thread_id	topic_field	url
 	10.15363/thinklab.d210		17	2016-05-04T05:28:16.441526Z	Our hetnet edge prediction methodology: the modeling framework for Project Rephetio	210	HNEP,machine learning	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210	14	rephetio
 	10.15363/thinklab.d212		17	2016-05-08T05:00:23.976320Z	Cataloging drug–disease therapies in the ClinicalTrials.gov database	212	clinical trials,ClinicalTrials.gov	/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212	17	rephetio
 	10.15363/thinklab.d213		17	2016-05-08T21:35:21.435199Z	Sounding the alarm on DrugBank’s new license and terms of use	213	DrugBank,licensing,legal	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213	191	rephetio
-12.0	10.15363/thinklab.d158			2016-02-15T16:34:22.887147Z		158	Open science,Peer review,Science Funding,Grant Writing,Grantmaking,Open Notebook Science	/doc/12/review	47	thinklabOSP
-	10.15363/thinklab.d160		17.0	2016-02-19T06:41:11.751024Z	Highlighting the immediacy of Thinklab	160	ASAPbio,Delays,Publishing,Preprints	/discussion/highlighting-the-immediacy-of-thinklab/160	13	thinklabOSP
-	10.15363/thinklab.d161		125.0	2016-02-16T12:50:44.652992Z	How to address the risk of stealing ideas	161		/discussion/how-to-address-the-risk-of-stealing-ideas/161	51	thinklabOSP
-12.0	10.15363/thinklab.d164		17.0	2016-02-19T06:04:20.499953Z		164		/discussion/review-summary/164	22	thinklabOSP
-	10.15363/thinklab.d165		17.0	2016-02-19T06:44:20.761176Z	Using the prize money for integrating with the larger internet movement in science	165	Indexing,Altmetrics,Integration	/discussion/using-the-prize-money-for-integrating-with-the-larger-internet-movement-in-science/165	20	thinklabOSP
-12.0	10.15363/thinklab.d166		125.0	2016-02-19T15:23:58.915605Z		166		/discussion/review-summary/166	16	thinklabOSP
-12.0	10.15363/thinklab.d168		22.0	2016-02-22T18:39:50.971295Z		168		/discussion/review-summary/168	19	thinklabOSP
-	10.15363/thinklab.d170		2.0	2016-02-22T22:19:23.706089Z	Has our scientific system been optimized by an evolutionary process?	170	Open science,Incentives	/discussion/has-our-scientific-system-been-optimized-by-an-evolutionary-process/170	30	thinklabOSP
-12.0	10.15363/thinklab.d175		25.0	2016-02-24T02:03:23.183594Z		175		/discussion/review-summary/175	13	thinklabOSP
+12	10.15363/thinklab.d158			2016-02-15T16:34:22.887147Z		158	Open science,Peer review,Science Funding,Grant Writing,Grantmaking,Open Notebook Science	/doc/12/review	47	thinklabOSP
+	10.15363/thinklab.d160		17	2016-02-19T06:41:11.751024Z	Highlighting the immediacy of Thinklab	160	ASAPbio,Delays,Publishing,Preprints	/discussion/highlighting-the-immediacy-of-thinklab/160	13	thinklabOSP
+	10.15363/thinklab.d161		125	2016-02-16T12:50:44.652992Z	How to address the risk of stealing ideas	161		/discussion/how-to-address-the-risk-of-stealing-ideas/161	51	thinklabOSP
+12	10.15363/thinklab.d164		17	2016-02-19T06:04:20.499953Z		164		/discussion/review-summary/164	22	thinklabOSP
+	10.15363/thinklab.d165		17	2016-02-19T06:44:20.761176Z	Using the prize money for integrating with the larger internet movement in science	165	Indexing,Altmetrics,Integration	/discussion/using-the-prize-money-for-integrating-with-the-larger-internet-movement-in-science/165	20	thinklabOSP
+12	10.15363/thinklab.d166		125	2016-02-19T15:23:58.915605Z		166		/discussion/review-summary/166	16	thinklabOSP
+12	10.15363/thinklab.d168		22	2016-02-22T18:39:50.971295Z		168		/discussion/review-summary/168	19	thinklabOSP
+	10.15363/thinklab.d170		2	2016-02-22T22:19:23.706089Z	Has our scientific system been optimized by an evolutionary process?	170	Open science,Incentives	/discussion/has-our-scientific-system-been-optimized-by-an-evolutionary-process/170	30	thinklabOSP
+12	10.15363/thinklab.d175		25	2016-02-24T02:03:23.183594Z		175		/discussion/review-summary/175	13	thinklabOSP

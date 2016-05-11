@@ -101,8 +101,11 @@ def write_key_to_df(key_to_df, directory='table'):
     drop_keys = {'intro_html', 'intro_md', 'body_html', 'body_md'}
     for key, df in key_to_df.items():
         df = df.drop(drop_keys & set(df.columns), axis='columns')
+        for col in df.columns:
+            if col.endswith('_id'):
+                df[col] = df[col].map(lambda x: '' if pandas.isnull(x) else '{:.0f}'.format(x))
         path = os.path.join(directory, key + '.tsv')
-        df.to_csv(path, sep='\t', index=False, float_format='%.0f')
+        df.to_csv(path, sep='\t', index=False)
 
 def summarize_content_df(df, prepend):
     summary = pandas.Series()
