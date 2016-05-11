@@ -2474,7 +2474,7 @@
       "username": "pouyakhankhanian"
     }
   ],
-  "retrieved": "2016-05-10T20:09:59.879478Z",
+  "retrieved": "2016-05-11T19:10:26.060016Z",
   "threads": [
     {
       "document_id": null,
@@ -2630,7 +2630,7 @@
       "thread_id": 58,
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 150
+      "views": 151
     },
     {
       "document_id": null,
@@ -2714,7 +2714,7 @@
       "thread_id": 79,
       "topic_field": "DOI,ThinkLab figures",
       "url": "/discussion/we-now-have-a-figures-feature/79",
-      "views": 39
+      "views": 40
     },
     {
       "document_id": null,
@@ -2774,7 +2774,7 @@
       "thread_id": 114,
       "topic_field": "Markdown,TLFM,Inline Math,Inline Code",
       "url": "/discussion/heading-style-not-applied-to-inline-code-or-math/114",
-      "views": 29
+      "views": 30
     },
     {
       "document_id": null,
@@ -2834,7 +2834,7 @@
       "thread_id": 163,
       "topic_field": "Markdown,TLFM,Bug",
       "url": "/discussion/markdown-bug-hyperlink-with-title-attribute-causes-excision/163",
-      "views": 15
+      "views": 16
     },
     {
       "document_id": null,
@@ -2858,7 +2858,7 @@
       "thread_id": 188,
       "topic_field": "popover,citation,user experience,Thinklab",
       "url": "/discussion/streamlining-access-to-the-common-interactions-with-citations/188",
-      "views": 17
+      "views": 18
     },
     {
       "document_id": null,
@@ -2894,7 +2894,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 48
+      "views": 49
     },
     {
       "document_id": null,
@@ -2966,7 +2966,7 @@
       "thread_id": 207,
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 10
+      "views": 11
     },
     {
       "document_id": null,
