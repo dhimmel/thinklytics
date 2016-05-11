@@ -112,6 +112,10 @@ def summarize_content_df(df, prepend):
     return summary
 
 def get_citation_counts(texts):
+    """
+    Return a counter of DOI to number of citations across a corpus of HTML-
+    formatted texts.
+    """
     doi_counter = collections.Counter()
     for text in texts:
         doi_citations = get_cited_dois(text)
@@ -126,7 +130,8 @@ def summarize_projects(key_to_df):
     dfs.append(df)
 
     project_to_texts = dict()
-    for key in 'comments', 'notes', 'documents':
+    content_cols = 'comments', 'notes', 'documents'
+    for key in content_cols:
         groups = key_to_df[key].groupby('project')
         df = groups.apply(summarize_content_df, prepend=key[:-1])
         dfs.append(df)
@@ -147,6 +152,9 @@ def summarize_projects(key_to_df):
     summary_df = pandas.concat(dfs, axis='columns').fillna(0).astype(int)
     summary_df.index.name = 'project'
     summary_df.reset_index(inplace=True)
+
+    for kind in '_word_count', '_character_count':
+        summary_df['total' + kind] = summary_df[[col[:-1] + kind for col in content_cols]].sum(axis='columns')
 
     return summary_df, citation_df
 
