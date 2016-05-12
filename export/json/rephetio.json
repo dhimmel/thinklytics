@@ -3853,6 +3853,15 @@
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210"
     },
     {
+      "body_html": "<p><em><strong>This post is a work in progress. Expect clarifications, updates, and refactoring until this notice is removed.</strong></em></p>\r\n\r\n<h1>Machine learning pipeline</h1>\r\n\r\n<p><strong>Observations.</strong> We identified all compounds and diseases that are connected by at least one edge resulting in <a href=\"https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/compounds.tsv\">1,538 compounds</a> and <a href=\"https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/diseases.tsv\">136 diseases</a>. Hence, we have 209,168 possible compound–disease pairs. 755 or 0.36% of these pairs are treatments and 390 or 0.19% are palliative (see <a href=\"https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/indications.tsv\">indications</a>).</p>\r\n\r\n<p><strong>Features.</strong> We have three types of features:</p>\r\n\r\n<ol><li><strong>The prior</strong> is a single feature equal to the logit-transformed <a href=\"https://thinklab.com/discussion/network-edge-prediction-estimating-the-prior/201#2\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d201\">prior probability of treatment</a>. The prior incorporates the probability that a compound treats a disease based only on their treatment degrees.</li><li><strong>Degree features</strong> correspond to each metaedge that connects either a compound or disease. In total we have 16 degree features, 8 for compound degrees and 8 for disease degrees. Degree features count either the compound or disease degree for a given metaedge and thus only depend on either the source or target node. Degree features are <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">IHS transformed</a>.</li><li><strong>DWPCs</strong> make up the vast majority of features. Each DWPC corresponds to a metapath. We consider the 1,206 metapaths that traverse from compound to disease and have lengths 2–4. We use <em>w</em> = 0.4 as the damping exponent when computing DWPCs. DWPCs are <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">mean scaled and IHS transformed</a>.</li></ol>\r\n\r\n<p><strong>Stages.</strong> The DWPC features are computed by querying the Neo4j graph database. The queries are computationally intensive. Thus far, our runtime bottleneck has been <a href=\"https://thinklab.com/discussion/estimating-the-complexity-of-hetnet-traversal/187\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d187\">network traversal</a>. Computing all 252,256,608 DWPC queries (209,168 observations × 1,206 DWPCs) is impractical. Accordingly, we adopted a shortcut by splitting the machine learning process into two stages: the all-features stage and the all-observations stage.</p>\r\n\r\n<h2>Stage 1: all features</h2>\r\n\r\n<p>The purpose of the all-features stage is to assess feature performance and perform feature selection. For this stage, we include all 755 positives but randomly select 3,020 negatives (4 × the # of positives).</p>\r\n\r\n<p>In addition to the unpermuted hetnet, we compute DWPCs on 5 permuted hetnets. For each permuted hetnet, we compute features for the 755 positives and 3,020 random negatives corresponding to that permutation (referred to as primary observations). We also compute DWPCs for any observations that were assessed on the unpermuted network but were not primary observations for a given permuted hetnet.</p>\r\n\r\n<p>In total, we computed 46,867,572 DWPCs for the all-features stage. Computing these DWPCs took 4 days and 11 hours using a multithreading approach to perform up to 12 queries in parallel (<a href=\"https://github.com/dhimmel/learn/blob/6ffd61f209a182d89c5becd96203850f3c5e13e3/all-features/3-extract.ipynb\">notebook</a>).</p>\r\n\r\n<p>On the all features dataset, we identified <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">how to transform DWPCs</a> to address their highly skewed distribution. We also <a href=\"https://thinklab.com/discussion/network-edge-prediction-how-to-deal-with-self-testing/194\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d194\">learned how</a> the prior probability of treatment affects model performance. This investigation led us to include the <code>prior_logit</code> feature mentioned above.</p>\r\n\r\n<p>For each feature, we computed several measures of performance. We'll update the <a href=\"https://thinklab.com/discussion/assessing-the-informativeness-of-features/115\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d115\">assessing features discussion</a> with a more detailed explanation. These feature-specific performance measures indicate whether the DWPCs for a given metapath reliably discriminate whether a drug treats a disease. We use this information to filter the majority of DWPC features, which are not predictive or suffer from an edge-dropout contamination issue. The DWPCs from permuted hetnets are used here as baseline measures to assess the contribution of edge specificity.</p>\r\n\r\n<h2>Stage 2: all observations</h2>\r\n\r\n<p>Proceeding with the metapaths selected in Stage 1, we compute DWPCs for all 209,168 observations on the unpermuted hetnet. After transforming the degree and DWPC features, we <a href=\"https://thinklab.com/discussion/computing-standardized-logistic-regression-coefficients/205\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d205\">standardize</a> all variables besides the prior. Standardization allows us to decompose the linear predictor to assess each feature's contribution to a prediction compared to its mean.</p>\r\n\r\n<p>We fit a logistic regression model with the prior, the degree features, and the selected DWPC features. However, this model is fit only on the 29,799 observations with a non-zero prior. From this model, we predict the probability of treatment for all observations. We enable predictions for zero priors by setting the prior for every observation equal to the mean prevalence of positives. Hence, it's important that the model assigns a coefficient near 1.0 to the <code>prior_logit</code> feature. In essence, we're erasing the effect of how many treatments each compound and disease have, since this knowledge is otherwise overpowering. The end result is a treatment-degree-naive prediction of whether each compound treats each disease.</p>",
+      "body_md": "_**This post is a work in progress. Expect clarifications, updates, and refactoring until this notice is removed.**_\r\n\r\n# Machine learning pipeline\r\n\r\n**Observations.** We identified all compounds and diseases that are connected by at least one edge resulting in [1,538 compounds](https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/compounds.tsv) and [136 diseases](https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/diseases.tsv). Hence, we have 209,168 possible compound--disease pairs. 755 or 0.36% of these pairs are treatments and 390 or 0.19% are palliative (see [indications](https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/indications.tsv)).\r\n\r\n**Features.** We have three types of features:\r\n\r\n1. **The prior** is a single feature equal to the logit-transformed [prior probability of treatment](https://thinklab.com/discussion/network-edge-prediction-estimating-the-prior/201#2). The prior incorporates the probability that a compound treats a disease based only on their treatment degrees.\r\n2. **Degree features** correspond to each metaedge that connects either a compound or disease. In total we have 16 degree features, 8 for compound degrees and 8 for disease degrees. Degree features count either the compound or disease degree for a given metaedge and thus only depend on either the source or target node. Degree features are [IHS transformed](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6).\r\n3. **DWPCs** make up the vast majority of features. Each DWPC corresponds to a metapath. We consider the 1,206 metapaths that traverse from compound to disease and have lengths 2--4. We use _w_ = 0.4 as the damping exponent when computing DWPCs. DWPCs are [mean scaled and IHS transformed](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6).\r\n\r\n**Stages.** The DWPC features are computed by querying the Neo4j graph database. The queries are computationally intensive. Thus far, our runtime bottleneck has been [network traversal](https://thinklab.com/discussion/estimating-the-complexity-of-hetnet-traversal/187). Computing all 252,256,608 DWPC queries (209,168 observations × 1,206 DWPCs) is impractical. Accordingly, we adopted a shortcut by splitting the machine learning process into two stages: the all-features stage and the all-observations stage.\r\n\r\n## Stage 1: all features\r\n\r\nThe purpose of the all-features stage is to assess feature performance and perform feature selection. For this stage, we include all 755 positives but randomly select 3,020 negatives (4 × the # of positives).\r\n\r\nIn addition to the unpermuted hetnet, we compute DWPCs on 5 permuted hetnets. For each permuted hetnet, we compute features for the 755 positives and 3,020 random negatives corresponding to that permutation (referred to as primary observations). We also compute DWPCs for any observations that were assessed on the unpermuted network but were not primary observations for a given permuted hetnet.\r\n\r\nIn total, we computed 46,867,572 DWPCs for the all-features stage. Computing these DWPCs took 4 days and 11 hours using a multithreading approach to perform up to 12 queries in parallel ([notebook](https://github.com/dhimmel/learn/blob/6ffd61f209a182d89c5becd96203850f3c5e13e3/all-features/3-extract.ipynb)).\r\n\r\nOn the all features dataset, we identified [how to transform DWPCs](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193) to address their highly skewed distribution. We also [learned how](https://thinklab.com/discussion/network-edge-prediction-how-to-deal-with-self-testing/194) the prior probability of treatment affects model performance. This investigation led us to include the `prior_logit` feature mentioned above.\r\n\r\nFor each feature, we computed several measures of performance. We'll update the [assessing features discussion](https://thinklab.com/discussion/assessing-the-informativeness-of-features/115) with a more detailed explanation. These feature-specific performance measures indicate whether the DWPCs for a given metapath reliably discriminate whether a drug treats a disease. We use this information to filter the majority of DWPC features, which are not predictive or suffer from an edge-dropout contamination issue. The DWPCs from permuted hetnets are used here as baseline measures to assess the contribution of edge specificity.\r\n\r\n## Stage 2: all observations\r\n\r\nProceeding with the metapaths selected in Stage 1, we compute DWPCs for all 209,168 observations on the unpermuted hetnet. After transforming the degree and DWPC features, we [standardize](https://thinklab.com/discussion/computing-standardized-logistic-regression-coefficients/205) all variables besides the prior. Standardization allows us to decompose the linear predictor to assess each feature's contribution to a prediction compared to its mean.\r\n\r\nWe fit a logistic regression model with the prior, the degree features, and the selected DWPC features. However, this model is fit only on the 29,799 observations with a non-zero prior. From this model, we predict the probability of treatment for all observations. We enable predictions for zero priors by setting the prior for every observation equal to the mean prevalence of positives. Hence, it's important that the model assigns a coefficient near 1.0 to the `prior_logit` feature. In essence, we're erasing the effect of how many treatments each compound and disease have, since this knowledge is otherwise overpowering. The end result is a treatment-degree-naive prediction of whether each compound treats each disease.",
+      "comment_id": 1294,
+      "profile_id": 17,
+      "published": "2016-05-12T02:23:47.232670Z",
+      "thread_id": 210,
+      "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#2"
+    },
+    {
       "body_html": "<h1>Greene &amp; Voight Review</h1>\r\n\r\n<p><a href=\"/u/caseygreene\" class=\"username\">@caseygreene</a>'s has preprinted his new review titled \"Pathway and network-based strategies to translate genetic discoveries into effective therapies\" <span class=\"citation\">[<a href=\"/doi/10.1101/051524\" class=\"citation\" data-key=\"10.1101/051524\">1</a>]</span>. The review mentions our project:</p>\r\n\r\n<blockquote><p>They use heterogeneous networks that connect genes, diseases, tissues, and other<br>factors <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">2</a>]</span>. They then apply machine learning methods to predict effective drug-disease pairs. The entire process has been visible on an open science platform called Thinklab. The open platform reveals the extensive sets of analyses that lay the groundwork for machine learning applications. Though work is ongoing the initial results are highly promising.</p></blockquote>\r\n\r\n<p>as well as the legal barriers to data reuse that we've encountered:</p>\r\n\r\n<blockquote><p>An often-overlooked aspect of studies that incorporate multiple data types and sources for drug repurposing is licensing and resource accessibility. The manner in which restrictive database licenses have hampered progress by the Himmelstein et al. team <span class=\"citation\">[<a href=\"/p/rephetio\" class=\"citation\" data-key=\"10.15363/thinklab.4\">3</a>]</span> has been instructive <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">4</a>]</span>.</p></blockquote>\r\n\r\n<p>The review mentions the difficulties faced by genetic-association-driven drug development:</p>\r\n\r\n<blockquote><p>There have been a limited number of cases where each required elements falls cleanly into place.</p></blockquote>\r\n\r\n<p>I'm exciting to see if our metapath-based approach can help decode the contexts in which genetic association data is most informative for drug efficacy.</p>",
       "body_md": "# Greene & Voight Review\r\n\r\n@caseygreene's has preprinted his new review titled \"Pathway and network-based strategies to translate genetic discoveries into effective therapies\" [@10.1101/051524]. The review mentions our project:\r\n\r\n> They use heterogeneous networks that connect genes, diseases, tissues, and other\r\nfactors [@10.1371/journal.pcbi.1004259]. They then apply machine learning methods to predict effective drug-disease pairs. The entire process has been visible on an open science platform called Thinklab. The open platform reveals the extensive sets of analyses that lay the groundwork for machine learning applications. Though work is ongoing the initial results are highly promising.\r\n\r\nas well as the legal barriers to data reuse that we've encountered:\r\n\r\n> An often-overlooked aspect of studies that incorporate multiple data types and sources for drug repurposing is licensing and resource accessibility. The manner in which restrictive database licenses have hampered progress by the Himmelstein et al. team [@10.15363/thinklab.4] has been instructive [@10.15363/thinklab.d107].\r\n\r\nThe review mentions the difficulties faced by genetic-association-driven drug development:\r\n\r\n> There have been a limited number of cases where each required elements falls cleanly into place.\r\n\r\nI'm exciting to see if our metapath-based approach can help decode the contexts in which genetic association data is most informative for drug efficacy.",
       "comment_id": 1295,
@@ -3880,8 +3889,8 @@
       "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212#2"
     },
     {
-      "body_html": "<p><a href=\"http://www.drugbank.ca/\">DrugBank</a> is a database of drugs which includes information on drug biochemistry and pharmacology <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkj067\" class=\"citation\" data-key=\"10.1093/nar/gkj067\">1</a>, <a href=\"/doi/10.1093/nar/gkm958\" class=\"citation\" data-key=\"10.1093/nar/gkm958\">2</a>, <a href=\"/doi/10.1093/nar/gkq1126\" class=\"citation\" data-key=\"10.1093/nar/gkq1126\">3</a>, <a href=\"/doi/10.1093/nar/gkt1068\" class=\"citation\" data-key=\"10.1093/nar/gkt1068\">4</a>]</span>. DrugBank is a publicly-funded resource that is frequently used for biomedical research. Google Scholar <a href=\"https://scholar.google.com/scholar?q=drugbank&amp;hl=en&amp;as_sdt=0%2C5&amp;as_ylo=2006&amp;as_yhi=2015\" title=\"Google Scholar Search for articles mentioning DrugBank from 2006–2015\">returns</a> 8,940 studies which mention \"DrugBank\" during its first decade of existence (2006–2015).</p>\r\n\r\n<p>When we began using DrugBank for Project Rephetio and Hetionet in 2015, DrugBank <a href=\"https://github.com/dhimmel/integrate/blob/7b95bf337d6e43e54457621f39a7341e620138f7/licenses/custom/DrugBank.md\" title=\"Archive of DrugBank's legal statement from 2015-08-20\">had</a> a brief legal statement:</p>\r\n\r\n<blockquote><p>DrugBank is offered to the public as a freely available resource. Use and re-distribution of the data, in whole or in part, for commercial purposes requires explicit permission of the authors and explicit acknowledgment of the source material (DrugBank) and the original publication.</p></blockquote>\r\n\r\n<p>Therefore, in accordance with our <a href=\"https://thinklab.com/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107#14\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d107\">data-licensing compliance strategy</a>, we applied a <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\" title=\"Creative Commons Attribution-NonCommercial 4.0 International\">CC BY-NC</a> license to DrugBank data. The non-commercial stipulation was regrettable because it discriminates against a class of user and precludes the data from being <a href=\"http://opendefinition.org/od/2.1/en/\" title=\"Open Definition 2.1\">open knowledge</a>. Additionally, what qualifies as commercial reuse is unclear and potentially broad making NC stipulations especially toxic <span class=\"citation\">[<a href=\"/doi/10.3897/zookeys.150.2189\" class=\"citation\" data-key=\"10.3897/zookeys.150.2189\">5</a>]</span>.</p>\r\n\r\n<p>Nonetheless, many publicly-funded resources will specify \"academic use only\" by habit, without appreciating the full ramifications of their discrimination. Hence, I assumed that DrugBank was effectively an open resource with a poorly-devised license statement.</p>\r\n\r\n<p>The <a href=\"http://www.drugbank.ca/releases/4-5-0/release_notes\">release</a> of DrugBank 4.5 on April 20, 2016 dispelled my naiveté. DrugBank has been hijacked by the commercial interests of the University of Alberta and OMx. <a href=\"http://omx.io/\" title=\"OMx Personal Health Analytics\">OMx</a> is a company <a href=\"http://entrepreneurship.ualberta.ca/ehub/ehub-startups/omx\" title=\"Entrepreneurship @ UAlberta eHUB Startups Interview\">started</a> in 2012 at the University of Alberta, which currently lists DrugBank as their only product. While the University of Alberta asserts to own DrugBank, OMx is responsible for commercial DrugBank licensing.</p>\r\n\r\n<p>Downloading DrugBank now requires registration. To <a href=\"http://www.drugbank.ca/public_users/sign_up\" title=\"Sign up for DrugBank account\">register</a>, users must provide their name, contact information, university/institutional affiliation, and intended use of DrugBank. Additionally, registration is contingent upon entering into the following agreement:</p>\r\n\r\n<blockquote><p>I accept DrugBank's Privacy Policy, Terms of Use, and the above End User License Agreement (required)</p><p>By checking the above box, you are confirming that your use of DrugBank shall not be for commercial purposes. If you wish to use DrugBank for commercial purposes, contact <a href=\"mailto:info@omx.io\">info@omx.io</a> to inquire about a separate agreement with OMx.</p></blockquote>\r\n\r\n<p>My next post will examine how the new <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md\" title=\"Archive of the Privacy Policy from 2016-05-08\">Privacy Policy</a>, <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md\" title=\"Archive of the Terms of Use from 2016-05-08\">Terms of Use</a>, and <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md\" title=\"Archive of the End User License Agreement from 2016-05-08\">License Agreement</a> inhibit reuse of DrugBank. In essence, DrugBank has chosen a path that prioritizes licensing revenue over public reuse. Its heavy-handed legal infrastructure presents a grave barrier to reuse. The academic community must now consider parting ways with what has been a foundational resource.</p>",
-      "body_md": "[DrugBank](http://www.drugbank.ca/) is a database of drugs which includes information on drug biochemistry and pharmacology [@10.1093/nar/gkj067 @10.1093/nar/gkm958 @10.1093/nar/gkq1126 @10.1093/nar/gkt1068]. DrugBank is a publicly-funded resource that is frequently used for biomedical research. Google Scholar [returns](https://scholar.google.com/scholar?q=drugbank&hl=en&as_sdt=0%2C5&as_ylo=2006&as_yhi=2015 \"Google Scholar Search for articles mentioning DrugBank from 2006–2015\") 8,940 studies which mention \"DrugBank\" during its first decade of existence (2006–2015).\r\n\r\nWhen we began using DrugBank for Project Rephetio and Hetionet in 2015, DrugBank [had](https://github.com/dhimmel/integrate/blob/7b95bf337d6e43e54457621f39a7341e620138f7/licenses/custom/DrugBank.md \"Archive of DrugBank's legal statement from 2015-08-20\") a brief legal statement:\r\n\r\n> DrugBank is offered to the public as a freely available resource. Use and re-distribution of the data, in whole or in part, for commercial purposes requires explicit permission of the authors and explicit acknowledgment of the source material (DrugBank) and the original publication.\r\n\r\nTherefore, in accordance with our [data-licensing compliance strategy](https://thinklab.com/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107#14), we applied a [CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/ \"Creative Commons Attribution-NonCommercial 4.0 International\") license to DrugBank data. The non-commercial stipulation was regrettable because it discriminates against a class of user and precludes the data from being [open knowledge](http://opendefinition.org/od/2.1/en/ \"Open Definition 2.1\"). Additionally, what qualifies as commercial reuse is unclear and potentially broad making NC stipulations especially toxic [@10.3897/zookeys.150.2189].\r\n\r\nNonetheless, many publicly-funded resources will specify \"academic use only\" by habit, without appreciating the full ramifications of their discrimination. Hence, I assumed that DrugBank was effectively an open resource with a poorly-devised license statement.\r\n\r\nThe [release](http://www.drugbank.ca/releases/4-5-0/release_notes) of DrugBank 4.5 on April 20, 2016 dispelled my naiveté. DrugBank has been hijacked by the commercial interests of the University of Alberta and OMx. [OMx](http://omx.io/ \"OMx Personal Health Analytics\") is a company [started](http://entrepreneurship.ualberta.ca/ehub/ehub-startups/omx \"Entrepreneurship @ UAlberta eHUB Startups Interview\") in 2012 at the University of Alberta, which currently lists DrugBank as their only product. While the University of Alberta asserts to own DrugBank, OMx is responsible for commercial DrugBank licensing.\r\n\r\nDownloading DrugBank now requires registration. To [register](http://www.drugbank.ca/public_users/sign_up \"Sign up for DrugBank account\"), users must provide their name, contact information, university/institutional affiliation, and intended use of DrugBank. Additionally, registration is contingent upon entering into the following agreement:\r\n\r\n> I accept DrugBank's Privacy Policy, Terms of Use, and the above End User License Agreement (required)\r\n\r\n> By checking the above box, you are confirming that your use of DrugBank shall not be for commercial purposes. If you wish to use DrugBank for commercial purposes, contact info@omx.io to inquire about a separate agreement with OMx.\r\n\r\nMy next post will examine how the new [Privacy Policy](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md \"Archive of the Privacy Policy from 2016-05-08\"), [Terms of Use](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md \"Archive of the Terms of Use from 2016-05-08\"), and [License Agreement](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md \"Archive of the End User License Agreement from 2016-05-08\") inhibit reuse of DrugBank. In essence, DrugBank has chosen a path that prioritizes licensing revenue over public reuse. Its heavy-handed legal infrastructure presents a grave barrier to reuse. The academic community must now consider parting ways with what has been a foundational resource.",
+      "body_html": "<p><strong>Update on 2015-05-11:</strong> The OMx team in charge of DrugBank's licensing has been highly responsive and is working to address many of the issues we've raised (see below). We'll update this discussion with progress.</p>\r\n\r\n<hr>\r\n\r\n<p><a href=\"http://www.drugbank.ca/\">DrugBank</a> is a database of drugs which includes information on drug biochemistry and pharmacology <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkj067\" class=\"citation\" data-key=\"10.1093/nar/gkj067\">1</a>, <a href=\"/doi/10.1093/nar/gkm958\" class=\"citation\" data-key=\"10.1093/nar/gkm958\">2</a>, <a href=\"/doi/10.1093/nar/gkq1126\" class=\"citation\" data-key=\"10.1093/nar/gkq1126\">3</a>, <a href=\"/doi/10.1093/nar/gkt1068\" class=\"citation\" data-key=\"10.1093/nar/gkt1068\">4</a>]</span>. DrugBank is a publicly-funded resource that is frequently used for biomedical research. Google Scholar <a href=\"https://scholar.google.com/scholar?q=drugbank&amp;hl=en&amp;as_sdt=0%2C5&amp;as_ylo=2006&amp;as_yhi=2015\" title=\"Google Scholar Search for articles mentioning DrugBank from 2006–2015\">returns</a> 8,940 studies which mention \"DrugBank\" during its first decade of existence (2006–2015).</p>\r\n\r\n<p>When we began using DrugBank for Project Rephetio and Hetionet in 2015, DrugBank <a href=\"https://github.com/dhimmel/integrate/blob/7b95bf337d6e43e54457621f39a7341e620138f7/licenses/custom/DrugBank.md\" title=\"Archive of DrugBank's legal statement from 2015-08-20\">had</a> a brief legal statement:</p>\r\n\r\n<blockquote><p>DrugBank is offered to the public as a freely available resource. Use and re-distribution of the data, in whole or in part, for commercial purposes requires explicit permission of the authors and explicit acknowledgment of the source material (DrugBank) and the original publication.</p></blockquote>\r\n\r\n<p>Therefore, in accordance with our <a href=\"https://thinklab.com/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107#14\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d107\">data-licensing compliance strategy</a>, we applied a <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\" title=\"Creative Commons Attribution-NonCommercial 4.0 International\">CC BY-NC</a> license to DrugBank data. The non-commercial stipulation was regrettable because it discriminates against a class of user and precludes the data from being <a href=\"http://opendefinition.org/od/2.1/en/\" title=\"Open Definition 2.1\">open knowledge</a>. Additionally, what qualifies as commercial reuse is unclear and potentially broad making NC stipulations especially toxic <span class=\"citation\">[<a href=\"/doi/10.3897/zookeys.150.2189\" class=\"citation\" data-key=\"10.3897/zookeys.150.2189\">5</a>]</span>.</p>\r\n\r\n<p>Nonetheless, many publicly-funded resources will specify \"academic use only\" by habit, without appreciating the full ramifications of their discrimination. Hence, I assumed that DrugBank was effectively an open resource with a poorly-devised license statement.</p>\r\n\r\n<p>The <a href=\"http://www.drugbank.ca/releases/4-5-0/release_notes\">release</a> of DrugBank 4.5 on April 20, 2016 dispelled my naiveté. DrugBank has been hijacked by the commercial interests of the University of Alberta and OMx. <a href=\"http://omx.io/\" title=\"OMx Personal Health Analytics\">OMx</a> is a company <a href=\"http://entrepreneurship.ualberta.ca/ehub/ehub-startups/omx\" title=\"Entrepreneurship @ UAlberta eHUB Startups Interview\">started</a> in 2012 at the University of Alberta, which currently lists DrugBank as their only product. While the University of Alberta asserts to own DrugBank, OMx is responsible for commercial DrugBank licensing.</p>\r\n\r\n<p>Downloading DrugBank now requires registration. To <a href=\"http://www.drugbank.ca/public_users/sign_up\" title=\"Sign up for DrugBank account\">register</a>, users must provide their name, contact information, university/institutional affiliation, and intended use of DrugBank. Additionally, registration is contingent upon entering into the following agreement:</p>\r\n\r\n<blockquote><p>I accept DrugBank's Privacy Policy, Terms of Use, and the above End User License Agreement (required)</p><p>By checking the above box, you are confirming that your use of DrugBank shall not be for commercial purposes. If you wish to use DrugBank for commercial purposes, contact <a href=\"mailto:info@omx.io\">info@omx.io</a> to inquire about a separate agreement with OMx.</p></blockquote>\r\n\r\n<p>My next post will examine how the new <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md\" title=\"Archive of the Privacy Policy from 2016-05-08\">Privacy Policy</a>, <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md\" title=\"Archive of the Terms of Use from 2016-05-08\">Terms of Use</a>, and <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md\" title=\"Archive of the End User License Agreement from 2016-05-08\">License Agreement</a> inhibit reuse of DrugBank. In essence, DrugBank has chosen a path that prioritizes licensing revenue over public reuse. Its heavy-handed legal infrastructure presents a grave barrier to reuse. The academic community must now consider parting ways with what has been a foundational resource.</p>",
+      "body_md": "**Update on 2015-05-11:** The OMx team in charge of DrugBank's licensing has been highly responsive and is working to address many of the issues we've raised (see below). We'll update this discussion with progress.\r\n\r\n***\r\n\r\n[DrugBank](http://www.drugbank.ca/) is a database of drugs which includes information on drug biochemistry and pharmacology [@10.1093/nar/gkj067 @10.1093/nar/gkm958 @10.1093/nar/gkq1126 @10.1093/nar/gkt1068]. DrugBank is a publicly-funded resource that is frequently used for biomedical research. Google Scholar [returns](https://scholar.google.com/scholar?q=drugbank&hl=en&as_sdt=0%2C5&as_ylo=2006&as_yhi=2015 \"Google Scholar Search for articles mentioning DrugBank from 2006–2015\") 8,940 studies which mention \"DrugBank\" during its first decade of existence (2006–2015).\r\n\r\nWhen we began using DrugBank for Project Rephetio and Hetionet in 2015, DrugBank [had](https://github.com/dhimmel/integrate/blob/7b95bf337d6e43e54457621f39a7341e620138f7/licenses/custom/DrugBank.md \"Archive of DrugBank's legal statement from 2015-08-20\") a brief legal statement:\r\n\r\n> DrugBank is offered to the public as a freely available resource. Use and re-distribution of the data, in whole or in part, for commercial purposes requires explicit permission of the authors and explicit acknowledgment of the source material (DrugBank) and the original publication.\r\n\r\nTherefore, in accordance with our [data-licensing compliance strategy](https://thinklab.com/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107#14), we applied a [CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/ \"Creative Commons Attribution-NonCommercial 4.0 International\") license to DrugBank data. The non-commercial stipulation was regrettable because it discriminates against a class of user and precludes the data from being [open knowledge](http://opendefinition.org/od/2.1/en/ \"Open Definition 2.1\"). Additionally, what qualifies as commercial reuse is unclear and potentially broad making NC stipulations especially toxic [@10.3897/zookeys.150.2189].\r\n\r\nNonetheless, many publicly-funded resources will specify \"academic use only\" by habit, without appreciating the full ramifications of their discrimination. Hence, I assumed that DrugBank was effectively an open resource with a poorly-devised license statement.\r\n\r\nThe [release](http://www.drugbank.ca/releases/4-5-0/release_notes) of DrugBank 4.5 on April 20, 2016 dispelled my naiveté. DrugBank has been hijacked by the commercial interests of the University of Alberta and OMx. [OMx](http://omx.io/ \"OMx Personal Health Analytics\") is a company [started](http://entrepreneurship.ualberta.ca/ehub/ehub-startups/omx \"Entrepreneurship @ UAlberta eHUB Startups Interview\") in 2012 at the University of Alberta, which currently lists DrugBank as their only product. While the University of Alberta asserts to own DrugBank, OMx is responsible for commercial DrugBank licensing.\r\n\r\nDownloading DrugBank now requires registration. To [register](http://www.drugbank.ca/public_users/sign_up \"Sign up for DrugBank account\"), users must provide their name, contact information, university/institutional affiliation, and intended use of DrugBank. Additionally, registration is contingent upon entering into the following agreement:\r\n\r\n> I accept DrugBank's Privacy Policy, Terms of Use, and the above End User License Agreement (required)\r\n\r\n> By checking the above box, you are confirming that your use of DrugBank shall not be for commercial purposes. If you wish to use DrugBank for commercial purposes, contact info@omx.io to inquire about a separate agreement with OMx.\r\n\r\nMy next post will examine how the new [Privacy Policy](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md \"Archive of the Privacy Policy from 2016-05-08\"), [Terms of Use](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md \"Archive of the Terms of Use from 2016-05-08\"), and [License Agreement](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md \"Archive of the End User License Agreement from 2016-05-08\") inhibit reuse of DrugBank. In essence, DrugBank has chosen a path that prioritizes licensing revenue over public reuse. Its heavy-handed legal infrastructure presents a grave barrier to reuse. The academic community must now consider parting ways with what has been a foundational resource.",
       "comment_id": 1300,
       "profile_id": 17,
       "published": "2016-05-08T21:35:21.495978Z",
@@ -3991,7 +4000,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 854
+      "views": 856
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -5680,7 +5689,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-05-11T19:10:23.471452Z",
+  "retrieved": "2016-05-12T21:42:37.324252Z",
   "threads": [
     {
       "document_id": null,
@@ -5692,7 +5701,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 344
+      "views": 346
     },
     {
       "document_id": null,
@@ -5704,7 +5713,7 @@
       "thread_id": 22,
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 93
+      "views": 96
     },
     {
       "document_id": null,
@@ -5728,7 +5737,7 @@
       "thread_id": 25,
       "topic_field": "Python,R,Algorithms,Computer Science,SIDER,GSC Weighting,Gerstein-Sonnhammer-Chothia,Julia,Open Source Software",
       "url": "/discussion/seeking-an-open-source-implementation-of-the-gerstein-sonnhammer-chothia-algorithm/25",
-      "views": 107
+      "views": 108
     },
     {
       "document_id": null,
@@ -5740,7 +5749,7 @@
       "thread_id": 30,
       "topic_field": "SIDER,Indications,NLP,Drugs,Side Effects,Drug Labels",
       "url": "/discussion/assessing-the-quality-and-applicability-of-the-sider-2-resource/30",
-      "views": 101
+      "views": 102
     },
     {
       "document_id": null,
@@ -5800,7 +5809,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 99
+      "views": 100
     },
     {
       "document_id": null,
@@ -5836,7 +5845,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 133
+      "views": 137
     },
     {
       "document_id": null,
@@ -5848,7 +5857,7 @@
       "thread_id": 46,
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -5884,7 +5893,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 182
+      "views": 183
     },
     {
       "document_id": null,
@@ -5920,7 +5929,7 @@
       "thread_id": 57,
       "topic_field": "Evolution,Entrez Gene,ERC,UCSC Genome Browser,Evolutionary Rate Covariation",
       "url": "/discussion/selecting-informative-erc-evolutionary-rate-covariation-values-between-genes/57",
-      "views": 57
+      "views": 58
     },
     {
       "document_id": null,
@@ -5968,7 +5977,7 @@
       "thread_id": 66,
       "topic_field": "",
       "url": "/discussion/kabob-knowledgebase/66",
-      "views": 70
+      "views": 72
     },
     {
       "document_id": null,
@@ -5980,7 +5989,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 100
+      "views": 101
     },
     {
       "document_id": null,
@@ -5992,7 +6001,7 @@
       "thread_id": 68,
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 49
+      "views": 51
     },
     {
       "document_id": null,
@@ -6040,7 +6049,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 125
+      "views": 130
     },
     {
       "document_id": null,
@@ -6064,7 +6073,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 237
+      "views": 238
     },
     {
       "document_id": null,
@@ -6076,7 +6085,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 454
+      "views": 457
     },
     {
       "document_id": null,
@@ -6112,7 +6121,7 @@
       "thread_id": 91,
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 75
+      "views": 76
     },
     {
       "document_id": null,
@@ -6124,7 +6133,7 @@
       "thread_id": 93,
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,
@@ -6136,7 +6145,7 @@
       "thread_id": 94,
       "topic_field": "Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations",
       "url": "/discussion/functional-disease-annotations-for-genes-using-doaf/94",
-      "views": 49
+      "views": 50
     },
     {
       "document_id": null,
@@ -6160,7 +6169,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 167
+      "views": 168
     },
     {
       "document_id": null,
@@ -6172,7 +6181,7 @@
       "thread_id": 97,
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 89
+      "views": 90
     },
     {
       "document_id": null,
@@ -6208,7 +6217,7 @@
       "thread_id": 104,
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 103
+      "views": 106
     },
     {
       "document_id": null,
@@ -6220,7 +6229,7 @@
       "thread_id": 105,
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 69
+      "views": 71
     },
     {
       "document_id": null,
@@ -6244,7 +6253,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 177
+      "views": 180
     },
     {
       "document_id": null,
@@ -6256,7 +6265,7 @@
       "thread_id": 108,
       "topic_field": "Copyright,Permission,Licensing,MSigDB,MIT",
       "url": "/discussion/msigdb-licensing/108",
-      "views": 83
+      "views": 84
     },
     {
       "document_id": null,
@@ -6268,7 +6277,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 157
+      "views": 161
     },
     {
       "document_id": null,
@@ -6292,7 +6301,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 251
+      "views": 253
     },
     {
       "document_id": null,
@@ -6340,7 +6349,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 68
+      "views": 70
     },
     {
       "document_id": null,
@@ -6388,7 +6397,7 @@
       "thread_id": 171,
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 101
+      "views": 102
     },
     {
       "document_id": null,
@@ -6412,7 +6421,7 @@
       "thread_id": 181,
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 89
+      "views": 91
     },
     {
       "document_id": null,
@@ -6448,7 +6457,7 @@
       "thread_id": 186,
       "topic_field": "DrugCentral,pharmacology,Database",
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186",
-      "views": 46
+      "views": 48
     },
     {
       "document_id": null,
@@ -6496,7 +6505,7 @@
       "thread_id": 200,
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 17
+      "views": 19
     },
     {
       "document_id": null,
@@ -6508,7 +6517,7 @@
       "thread_id": 201,
       "topic_field": "Machine learning,Heterogeneous Networks,Hetnets,HNEP,Prior Knowledge",
       "url": "/discussion/network-edge-prediction-estimating-the-prior/201",
-      "views": 27
+      "views": 28
     },
     {
       "document_id": null,
@@ -6520,7 +6529,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 33
+      "views": 34
     },
     {
       "document_id": null,
@@ -6532,7 +6541,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 33
+      "views": 36
     },
     {
       "document_id": null,
@@ -6544,7 +6553,7 @@
       "thread_id": 210,
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 14
+      "views": 17
     },
     {
       "document_id": null,
@@ -6568,7 +6577,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 191
+      "views": 198
     }
   ]
 }

@@ -2474,7 +2474,7 @@
       "username": "pouyakhankhanian"
     }
   ],
-  "retrieved": "2016-05-11T19:10:26.060016Z",
+  "retrieved": "2016-05-12T21:42:32.070132Z",
   "threads": [
     {
       "document_id": null,
@@ -2822,7 +2822,7 @@
       "thread_id": 144,
       "topic_field": "Review Process",
       "url": "/discussion/whole-proposal-reviewer-synopsis-fund-or-no-fund/144",
-      "views": 40
+      "views": 41
     },
     {
       "document_id": null,
@@ -2894,7 +2894,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 49
+      "views": 51
     },
     {
       "document_id": null,
@@ -2906,7 +2906,7 @@
       "thread_id": 192,
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 24
+      "views": 25
     },
     {
       "document_id": null,
@@ -2918,7 +2918,7 @@
       "thread_id": 195,
       "topic_field": "",
       "url": "/discussion/auto-save/195",
-      "views": 16
+      "views": 17
     },
     {
       "document_id": null,
@@ -2942,7 +2942,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 18
+      "views": 19
     },
     {
       "document_id": null,
@@ -2966,7 +2966,7 @@
       "thread_id": 207,
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 11
+      "views": 12
     },
     {
       "document_id": null,
