@@ -2474,7 +2474,7 @@
       "username": "pouyakhankhanian"
     }
   ],
-  "retrieved": "2016-05-12T21:42:32.070132Z",
+  "retrieved": "2016-05-14T04:46:47.766294Z",
   "threads": [
     {
       "document_id": null,
@@ -2486,7 +2486,7 @@
       "thread_id": 2,
       "topic_field": "",
       "url": "/discussion/add-your-thinklab-feedback-here-in-meta/2",
-      "views": 44
+      "views": 45
     },
     {
       "document_id": null,
@@ -2510,7 +2510,7 @@
       "thread_id": 27,
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 76
+      "views": 77
     },
     {
       "document_id": null,
@@ -2546,7 +2546,7 @@
       "thread_id": 33,
       "topic_field": "Privacy,IT,Google Analytics,Piwik,Sysadmin,Analytics",
       "url": "/discussion/web-analytics-platform/33",
-      "views": 55
+      "views": 58
     },
     {
       "document_id": null,
@@ -2606,7 +2606,7 @@
       "thread_id": 55,
       "topic_field": "RSS Feed,Project Tracking",
       "url": "/discussion/rss-feed-per-project-option/55",
-      "views": 33
+      "views": 34
     },
     {
       "document_id": null,
@@ -2618,7 +2618,7 @@
       "thread_id": 56,
       "topic_field": "",
       "url": "/discussion/your-comments-in-thinklab-meta-are-now-payment-eligible/56",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,
@@ -2642,7 +2642,7 @@
       "thread_id": 59,
       "topic_field": "Markdown,TLFM,Editor",
       "url": "/discussion/thinklab-editor-and-markdown-suggestions/59",
-      "views": 42
+      "views": 43
     },
     {
       "document_id": null,
@@ -2690,7 +2690,7 @@
       "thread_id": 69,
       "topic_field": "Markdown,Discussions,Citation,DOI",
       "url": "/discussion/citing-thinklab-discussions-feedback-please/69",
-      "views": 34
+      "views": 35
     },
     {
       "document_id": null,
@@ -2774,7 +2774,7 @@
       "thread_id": 114,
       "topic_field": "Markdown,TLFM,Inline Math,Inline Code",
       "url": "/discussion/heading-style-not-applied-to-inline-code-or-math/114",
-      "views": 30
+      "views": 31
     },
     {
       "document_id": null,
@@ -2786,7 +2786,7 @@
       "thread_id": 131,
       "topic_field": "",
       "url": "/discussion/thinklab-needs-a-story/131",
-      "views": 44
+      "views": 45
     },
     {
       "document_id": null,
@@ -2798,7 +2798,7 @@
       "thread_id": 138,
       "topic_field": "",
       "url": "/discussion/a-pdf-upload-option-for-proposal-creation/138",
-      "views": 27
+      "views": 29
     },
     {
       "document_id": null,
@@ -2810,7 +2810,7 @@
       "thread_id": 139,
       "topic_field": "",
       "url": "/discussion/latex-integration/139",
-      "views": 40
+      "views": 41
     },
     {
       "document_id": null,
@@ -2846,7 +2846,7 @@
       "thread_id": 167,
       "topic_field": "Hypothesis,hypothes.is,typos,annotations",
       "url": "/discussion/hypothesis-for-alerting-authors-of-writing-errors-in-discussion-posts/167",
-      "views": 24
+      "views": 26
     },
     {
       "document_id": null,
@@ -2966,7 +2966,7 @@
       "thread_id": 207,
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 12
+      "views": 14
     },
     {
       "document_id": null,

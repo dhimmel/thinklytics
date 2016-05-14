@@ -202,7 +202,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/MicrobeResist/proposal",
-      "views": 363
+      "views": 365
     }
   ],
   "notes": [
@@ -321,7 +321,7 @@
       "username": "JamesMeadow"
     }
   ],
-  "retrieved": "2016-05-12T21:42:37.894326Z",
+  "retrieved": "2016-05-14T04:46:49.235205Z",
   "threads": [
     {
       "document_id": null,
@@ -393,7 +393,7 @@
       "thread_id": 10,
       "topic_field": "",
       "url": "/discussion/concerns-with-projected-outcomes/10",
-      "views": 39
+      "views": 40
     },
     {
       "document_id": null,
@@ -405,7 +405,7 @@
       "thread_id": 11,
       "topic_field": "",
       "url": "/discussion/methods-considerations/11",
-      "views": 34
+      "views": 35
     },
     {
       "document_id": null,
@@ -417,7 +417,7 @@
       "thread_id": 15,
       "topic_field": "Markdown",
       "url": "/discussion/markdown-text-formatting-tips-for-proposal/15",
-      "views": 48
+      "views": 49
     }
   ]
 }
