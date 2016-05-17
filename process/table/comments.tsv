@@ -800,6 +800,10 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1308	17	rephetio	2016-05-09T20:43:38.200217Z	186	/discussion/incorporating-drugcentral-data-in-our-network/186#6	134	847
 1309	17	rephetio	2016-05-09T22:18:07.810525Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#8	510	3097
 1310	248	rephetio	2016-05-11T07:08:13.439456Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#9	30	171
+1311	17	rephetio	2016-05-15T06:08:00.181046Z	115	/discussion/assessing-the-informativeness-of-features/115#3	371	2456
+1312	17	rephetio	2016-05-16T18:32:57.242798Z	214	/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214	418	2514
+1313	17	rephetio	2016-05-16T19:54:45.696710Z	214	/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214#2	202	1229
+1314	17	rephetio	2016-05-16T20:03:59.583717Z	215	/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215	366	2339
 799	17	thinklabOSP	2016-02-19T06:41:11.813300Z	160	/discussion/highlighting-the-immediacy-of-thinklab/160	158	1008
 800	125	thinklabOSP	2016-02-16T12:50:44.682536Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161	186	1007
 801	2	thinklabOSP	2016-02-16T18:06:25.264019Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161#2	209	1169

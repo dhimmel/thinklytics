@@ -2474,7 +2474,7 @@
       "username": "pouyakhankhanian"
     }
   ],
-  "retrieved": "2016-05-14T04:46:47.766294Z",
+  "retrieved": "2016-05-17T00:18:05.852748Z",
   "threads": [
     {
       "document_id": null,
@@ -2498,7 +2498,7 @@
       "thread_id": 26,
       "topic_field": "ThinkLab,Discussions",
       "url": "/discussion/discussion-ranking-and-visibility/26",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,
@@ -2510,7 +2510,7 @@
       "thread_id": 27,
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 77
+      "views": 80
     },
     {
       "document_id": null,
@@ -2606,7 +2606,7 @@
       "thread_id": 55,
       "topic_field": "RSS Feed,Project Tracking",
       "url": "/discussion/rss-feed-per-project-option/55",
-      "views": 34
+      "views": 35
     },
     {
       "document_id": null,
@@ -2630,7 +2630,7 @@
       "thread_id": 58,
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 151
+      "views": 152
     },
     {
       "document_id": null,
@@ -2678,7 +2678,7 @@
       "thread_id": 64,
       "topic_field": "",
       "url": "/discussion/should-we-aim-to-keep-discussions-narrowly-focused/64",
-      "views": 46
+      "views": 49
     },
     {
       "document_id": null,
@@ -2738,7 +2738,7 @@
       "thread_id": 98,
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 53
+      "views": 54
     },
     {
       "document_id": null,
@@ -2762,7 +2762,7 @@
       "thread_id": 109,
       "topic_field": "Standards,DOI,DOI resolution",
       "url": "/discussion/switching-doi-links-to-the-preferred-format/109",
-      "views": 33
+      "views": 34
     },
     {
       "document_id": null,
@@ -2798,7 +2798,7 @@
       "thread_id": 138,
       "topic_field": "",
       "url": "/discussion/a-pdf-upload-option-for-proposal-creation/138",
-      "views": 29
+      "views": 31
     },
     {
       "document_id": null,
@@ -2846,7 +2846,7 @@
       "thread_id": 167,
       "topic_field": "Hypothesis,hypothes.is,typos,annotations",
       "url": "/discussion/hypothesis-for-alerting-authors-of-writing-errors-in-discussion-posts/167",
-      "views": 26
+      "views": 27
     },
     {
       "document_id": null,
@@ -2858,7 +2858,7 @@
       "thread_id": 188,
       "topic_field": "popover,citation,user experience,Thinklab",
       "url": "/discussion/streamlining-access-to-the-common-interactions-with-citations/188",
-      "views": 18
+      "views": 19
     },
     {
       "document_id": null,
@@ -2870,7 +2870,7 @@
       "thread_id": 189,
       "topic_field": "Technical Issue",
       "url": "/discussion/mathjax-block-markers/189",
-      "views": 16
+      "views": 19
     },
     {
       "document_id": null,
@@ -2894,7 +2894,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 51
+      "views": 52
     },
     {
       "document_id": null,
@@ -2906,7 +2906,7 @@
       "thread_id": 192,
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 25
+      "views": 27
     },
     {
       "document_id": null,
@@ -2918,7 +2918,7 @@
       "thread_id": 195,
       "topic_field": "",
       "url": "/discussion/auto-save/195",
-      "views": 17
+      "views": 18
     },
     {
       "document_id": null,
@@ -2942,7 +2942,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 19
+      "views": 21
     },
     {
       "document_id": null,
@@ -2954,7 +2954,7 @@
       "thread_id": 198,
       "topic_field": "SEO,Search Engine Marketing,HMTL,meta,description",
       "url": "/discussion/improving-search-engine-previewing/198",
-      "views": 27
+      "views": 28
     },
     {
       "document_id": null,
@@ -2966,7 +2966,7 @@
       "thread_id": 207,
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 14
+      "views": 17
     },
     {
       "document_id": null,
@@ -2978,7 +2978,7 @@
       "thread_id": 209,
       "topic_field": "",
       "url": "/discussion/share-single-posts/209",
-      "views": 8
+      "views": 9
     }
   ]
 }

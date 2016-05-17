@@ -3790,8 +3790,8 @@
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113#7"
     },
     {
-      "body_html": "<p>How about this?<br>Just tweaking settings in Cytoscape <br><img src=\"https://cloud.githubusercontent.com/assets/10460059/14691039/f3e51d8a-0703-11e6-8985-5323a0b45c70.png\" alt=\"daniel_net\"></p>",
-      "body_md": "How about this?\r\nJust tweaking settings in Cytoscape \r\n![daniel_net](https://cloud.githubusercontent.com/assets/10460059/14691039/f3e51d8a-0703-11e6-8985-5323a0b45c70.png)",
+      "body_html": "<p>How about this?<br>Just tweaking settings in Cytoscape <br><img src=\"https://raw.githubusercontent.com/dhimmel/integrate/f11d7ce796c5805457fd7b729c91326d93881eee/viz/network-lines.png\" alt=\"daniel_net\"></p>",
+      "body_md": "How about this?\r\nJust tweaking settings in Cytoscape \r\n![daniel_net](https://raw.githubusercontent.com/dhimmel/integrate/f11d7ce796c5805457fd7b729c91326d93881eee/viz/network-lines.png)",
       "comment_id": 1282,
       "profile_id": 20,
       "published": "2016-04-20T18:56:49.207861Z",
@@ -3853,8 +3853,8 @@
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210"
     },
     {
-      "body_html": "<p><em><strong>This post is a work in progress. Expect clarifications, updates, and refactoring until this notice is removed.</strong></em></p>\r\n\r\n<h1>Machine learning pipeline</h1>\r\n\r\n<p><strong>Observations.</strong> We identified all compounds and diseases that are connected by at least one edge resulting in <a href=\"https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/compounds.tsv\">1,538 compounds</a> and <a href=\"https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/diseases.tsv\">136 diseases</a>. Hence, we have 209,168 possible compound–disease pairs. 755 or 0.36% of these pairs are treatments and 390 or 0.19% are palliative (see <a href=\"https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/indications.tsv\">indications</a>).</p>\r\n\r\n<p><strong>Features.</strong> We have three types of features:</p>\r\n\r\n<ol><li><strong>The prior</strong> is a single feature equal to the logit-transformed <a href=\"https://thinklab.com/discussion/network-edge-prediction-estimating-the-prior/201#2\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d201\">prior probability of treatment</a>. The prior incorporates the probability that a compound treats a disease based only on their treatment degrees.</li><li><strong>Degree features</strong> correspond to each metaedge that connects either a compound or disease. In total we have 16 degree features, 8 for compound degrees and 8 for disease degrees. Degree features count either the compound or disease degree for a given metaedge and thus only depend on either the source or target node. Degree features are <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">IHS transformed</a>.</li><li><strong>DWPCs</strong> make up the vast majority of features. Each DWPC corresponds to a metapath. We consider the 1,206 metapaths that traverse from compound to disease and have lengths 2–4. We use <em>w</em> = 0.4 as the damping exponent when computing DWPCs. DWPCs are <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">mean scaled and IHS transformed</a>.</li></ol>\r\n\r\n<p><strong>Stages.</strong> The DWPC features are computed by querying the Neo4j graph database. The queries are computationally intensive. Thus far, our runtime bottleneck has been <a href=\"https://thinklab.com/discussion/estimating-the-complexity-of-hetnet-traversal/187\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d187\">network traversal</a>. Computing all 252,256,608 DWPC queries (209,168 observations × 1,206 DWPCs) is impractical. Accordingly, we adopted a shortcut by splitting the machine learning process into two stages: the all-features stage and the all-observations stage.</p>\r\n\r\n<h2>Stage 1: all features</h2>\r\n\r\n<p>The purpose of the all-features stage is to assess feature performance and perform feature selection. For this stage, we include all 755 positives but randomly select 3,020 negatives (4 × the # of positives).</p>\r\n\r\n<p>In addition to the unpermuted hetnet, we compute DWPCs on 5 permuted hetnets. For each permuted hetnet, we compute features for the 755 positives and 3,020 random negatives corresponding to that permutation (referred to as primary observations). We also compute DWPCs for any observations that were assessed on the unpermuted network but were not primary observations for a given permuted hetnet.</p>\r\n\r\n<p>In total, we computed 46,867,572 DWPCs for the all-features stage. Computing these DWPCs took 4 days and 11 hours using a multithreading approach to perform up to 12 queries in parallel (<a href=\"https://github.com/dhimmel/learn/blob/6ffd61f209a182d89c5becd96203850f3c5e13e3/all-features/3-extract.ipynb\">notebook</a>).</p>\r\n\r\n<p>On the all features dataset, we identified <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">how to transform DWPCs</a> to address their highly skewed distribution. We also <a href=\"https://thinklab.com/discussion/network-edge-prediction-how-to-deal-with-self-testing/194\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d194\">learned how</a> the prior probability of treatment affects model performance. This investigation led us to include the <code>prior_logit</code> feature mentioned above.</p>\r\n\r\n<p>For each feature, we computed several measures of performance. We'll update the <a href=\"https://thinklab.com/discussion/assessing-the-informativeness-of-features/115\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d115\">assessing features discussion</a> with a more detailed explanation. These feature-specific performance measures indicate whether the DWPCs for a given metapath reliably discriminate whether a drug treats a disease. We use this information to filter the majority of DWPC features, which are not predictive or suffer from an edge-dropout contamination issue. The DWPCs from permuted hetnets are used here as baseline measures to assess the contribution of edge specificity.</p>\r\n\r\n<h2>Stage 2: all observations</h2>\r\n\r\n<p>Proceeding with the metapaths selected in Stage 1, we compute DWPCs for all 209,168 observations on the unpermuted hetnet. After transforming the degree and DWPC features, we <a href=\"https://thinklab.com/discussion/computing-standardized-logistic-regression-coefficients/205\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d205\">standardize</a> all variables besides the prior. Standardization allows us to decompose the linear predictor to assess each feature's contribution to a prediction compared to its mean.</p>\r\n\r\n<p>We fit a logistic regression model with the prior, the degree features, and the selected DWPC features. However, this model is fit only on the 29,799 observations with a non-zero prior. From this model, we predict the probability of treatment for all observations. We enable predictions for zero priors by setting the prior for every observation equal to the mean prevalence of positives. Hence, it's important that the model assigns a coefficient near 1.0 to the <code>prior_logit</code> feature. In essence, we're erasing the effect of how many treatments each compound and disease have, since this knowledge is otherwise overpowering. The end result is a treatment-degree-naive prediction of whether each compound treats each disease.</p>",
-      "body_md": "_**This post is a work in progress. Expect clarifications, updates, and refactoring until this notice is removed.**_\r\n\r\n# Machine learning pipeline\r\n\r\n**Observations.** We identified all compounds and diseases that are connected by at least one edge resulting in [1,538 compounds](https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/compounds.tsv) and [136 diseases](https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/diseases.tsv). Hence, we have 209,168 possible compound--disease pairs. 755 or 0.36% of these pairs are treatments and 390 or 0.19% are palliative (see [indications](https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/indications.tsv)).\r\n\r\n**Features.** We have three types of features:\r\n\r\n1. **The prior** is a single feature equal to the logit-transformed [prior probability of treatment](https://thinklab.com/discussion/network-edge-prediction-estimating-the-prior/201#2). The prior incorporates the probability that a compound treats a disease based only on their treatment degrees.\r\n2. **Degree features** correspond to each metaedge that connects either a compound or disease. In total we have 16 degree features, 8 for compound degrees and 8 for disease degrees. Degree features count either the compound or disease degree for a given metaedge and thus only depend on either the source or target node. Degree features are [IHS transformed](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6).\r\n3. **DWPCs** make up the vast majority of features. Each DWPC corresponds to a metapath. We consider the 1,206 metapaths that traverse from compound to disease and have lengths 2--4. We use _w_ = 0.4 as the damping exponent when computing DWPCs. DWPCs are [mean scaled and IHS transformed](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6).\r\n\r\n**Stages.** The DWPC features are computed by querying the Neo4j graph database. The queries are computationally intensive. Thus far, our runtime bottleneck has been [network traversal](https://thinklab.com/discussion/estimating-the-complexity-of-hetnet-traversal/187). Computing all 252,256,608 DWPC queries (209,168 observations × 1,206 DWPCs) is impractical. Accordingly, we adopted a shortcut by splitting the machine learning process into two stages: the all-features stage and the all-observations stage.\r\n\r\n## Stage 1: all features\r\n\r\nThe purpose of the all-features stage is to assess feature performance and perform feature selection. For this stage, we include all 755 positives but randomly select 3,020 negatives (4 × the # of positives).\r\n\r\nIn addition to the unpermuted hetnet, we compute DWPCs on 5 permuted hetnets. For each permuted hetnet, we compute features for the 755 positives and 3,020 random negatives corresponding to that permutation (referred to as primary observations). We also compute DWPCs for any observations that were assessed on the unpermuted network but were not primary observations for a given permuted hetnet.\r\n\r\nIn total, we computed 46,867,572 DWPCs for the all-features stage. Computing these DWPCs took 4 days and 11 hours using a multithreading approach to perform up to 12 queries in parallel ([notebook](https://github.com/dhimmel/learn/blob/6ffd61f209a182d89c5becd96203850f3c5e13e3/all-features/3-extract.ipynb)).\r\n\r\nOn the all features dataset, we identified [how to transform DWPCs](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193) to address their highly skewed distribution. We also [learned how](https://thinklab.com/discussion/network-edge-prediction-how-to-deal-with-self-testing/194) the prior probability of treatment affects model performance. This investigation led us to include the `prior_logit` feature mentioned above.\r\n\r\nFor each feature, we computed several measures of performance. We'll update the [assessing features discussion](https://thinklab.com/discussion/assessing-the-informativeness-of-features/115) with a more detailed explanation. These feature-specific performance measures indicate whether the DWPCs for a given metapath reliably discriminate whether a drug treats a disease. We use this information to filter the majority of DWPC features, which are not predictive or suffer from an edge-dropout contamination issue. The DWPCs from permuted hetnets are used here as baseline measures to assess the contribution of edge specificity.\r\n\r\n## Stage 2: all observations\r\n\r\nProceeding with the metapaths selected in Stage 1, we compute DWPCs for all 209,168 observations on the unpermuted hetnet. After transforming the degree and DWPC features, we [standardize](https://thinklab.com/discussion/computing-standardized-logistic-regression-coefficients/205) all variables besides the prior. Standardization allows us to decompose the linear predictor to assess each feature's contribution to a prediction compared to its mean.\r\n\r\nWe fit a logistic regression model with the prior, the degree features, and the selected DWPC features. However, this model is fit only on the 29,799 observations with a non-zero prior. From this model, we predict the probability of treatment for all observations. We enable predictions for zero priors by setting the prior for every observation equal to the mean prevalence of positives. Hence, it's important that the model assigns a coefficient near 1.0 to the `prior_logit` feature. In essence, we're erasing the effect of how many treatments each compound and disease have, since this knowledge is otherwise overpowering. The end result is a treatment-degree-naive prediction of whether each compound treats each disease.",
+      "body_html": "<p><em><strong>This post is a work in progress. Expect clarifications, updates, and refactoring until this notice is removed.</strong></em></p>\r\n\r\n<h1>Machine learning pipeline</h1>\r\n\r\n<p><strong>Observations.</strong> We identified all compounds and diseases that are connected by at least one edge resulting in <a href=\"https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/compounds.tsv\">1,538 compounds</a> and <a href=\"https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/diseases.tsv\">136 diseases</a>. Hence, we have 209,168 possible compound–disease pairs. 755 or 0.36% of these pairs are treatments and 390 or 0.19% are palliative (see <a href=\"https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/indications.tsv\">indications</a>).</p>\r\n\r\n<p><strong>Features.</strong> We have three types of features:</p>\r\n\r\n<ol><li><strong>The prior</strong> is a single feature equal to the logit-transformed <a href=\"https://thinklab.com/discussion/network-edge-prediction-estimating-the-prior/201#2\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d201\">prior probability of treatment</a>. The prior incorporates the probability that a compound treats a disease based only on their treatment degrees.</li><li><strong>Degree features</strong> correspond to each metaedge that connects either a compound or disease. In total we have 16 degree features, 8 for compound degrees and 8 for disease degrees. Degree features count either the compound or disease degree for a given metaedge and thus only depend on either the source or target node. Degree features are <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">IHS transformed</a>.</li><li><strong>DWPCs</strong> make up the vast majority of features. Each DWPC corresponds to a metapath. We consider the 1,206 metapaths that traverse from compound to disease and have lengths 2–4. We use <em>w</em> = 0.4 as the damping exponent when computing DWPCs. DWPCs are <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">mean scaled and IHS transformed</a>.</li></ol>\r\n\r\n<p><strong>Stages.</strong> The DWPC features are computed by querying the Neo4j graph database. The queries are computationally intensive. Thus far, our runtime bottleneck has been <a href=\"https://thinklab.com/discussion/estimating-the-complexity-of-hetnet-traversal/187\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d187\">network traversal</a>. Computing all 252,256,608 DWPC queries (209,168 observations × 1,206 DWPCs) is impractical. Accordingly, we adopted a shortcut by splitting the machine learning process into two stages: the all-features stage and the all-observations stage.</p>\r\n\r\n<h2>Stage 1: all features</h2>\r\n\r\n<p>The purpose of the all-features stage is to assess feature performance and perform feature selection. For this stage, we include all 755 positives but randomly select 3,020 negatives (4 × the # of positives).</p>\r\n\r\n<p>In addition to the unpermuted hetnet, we compute DWPCs on 5 permuted hetnets. For each permuted hetnet, we compute features for the 755 positives and 3,020 random negatives corresponding to that permutation (referred to as primary observations). We also compute DWPCs for any observations that were assessed on the unpermuted network but were not primary observations for a given permuted hetnet.</p>\r\n\r\n<p>In total, we computed 46,867,572 DWPCs for the all-features stage. Computing these DWPCs took 4 days and 11 hours using a multithreading approach to perform up to 12 queries in parallel (<a href=\"https://github.com/dhimmel/learn/blob/6ffd61f209a182d89c5becd96203850f3c5e13e3/all-features/3-extract.ipynb\">notebook</a>).</p>\r\n\r\n<p>On the all features dataset, we identified <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">how to transform DWPCs</a> to address their highly skewed distribution. We also <a href=\"https://thinklab.com/discussion/network-edge-prediction-how-to-deal-with-self-testing/194\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d194\">learned how</a> the prior probability of treatment affects model performance. This investigation led us to include the <code>prior_logit</code> feature mentioned above.</p>\r\n\r\n<p>For each feature, we computed several measures of performance. We'll update the <a href=\"https://thinklab.com/discussion/assessing-the-informativeness-of-features/115\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d115\">assessing features discussion</a> with a more detailed explanation. These feature-specific performance measures indicate whether the DWPCs for a given metapath reliably discriminate whether a drug treats a disease. We use this information to filter the majority of DWPC features, which are not predictive or suffer from an <a href=\"https://thinklab.com/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d215\">edge-dropout contamination issue</a>. The DWPCs from permuted hetnets are used here as baseline measures to assess the contribution of edge specificity.</p>\r\n\r\n<h2>Stage 2: all observations</h2>\r\n\r\n<p>Proceeding with the metapaths selected in Stage 1, we compute DWPCs for all 209,168 observations on the unpermuted hetnet. After transforming the degree and DWPC features, we <a href=\"https://thinklab.com/discussion/computing-standardized-logistic-regression-coefficients/205\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d205\">standardize</a> all variables besides the prior. Standardization allows us to decompose the linear predictor to assess each feature's contribution to a prediction compared to its mean.</p>\r\n\r\n<p>We fit a logistic regression model with the prior, the degree features, and the selected DWPC features. However, this model is fit only on the 29,799 observations with a non-zero prior. From this model, we predict the probability of treatment for all observations. We enable predictions for zero priors by setting the prior for every observation equal to the mean prevalence of positives. Hence, it's important that the model assigns a coefficient near 1.0 to the <code>prior_logit</code> feature. In essence, we're erasing the effect of how many treatments each compound and disease have, since this knowledge is otherwise overpowering. The end result is a treatment-degree-naive prediction of whether each compound treats each disease.</p>",
+      "body_md": "_**This post is a work in progress. Expect clarifications, updates, and refactoring until this notice is removed.**_\r\n\r\n# Machine learning pipeline\r\n\r\n**Observations.** We identified all compounds and diseases that are connected by at least one edge resulting in [1,538 compounds](https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/compounds.tsv) and [136 diseases](https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/diseases.tsv). Hence, we have 209,168 possible compound--disease pairs. 755 or 0.36% of these pairs are treatments and 390 or 0.19% are palliative (see [indications](https://github.com/dhimmel/learn/blob/5e61aed9789913d5b3525bb83eba80e0fcc060a4/summary/indications.tsv)).\r\n\r\n**Features.** We have three types of features:\r\n\r\n1. **The prior** is a single feature equal to the logit-transformed [prior probability of treatment](https://thinklab.com/discussion/network-edge-prediction-estimating-the-prior/201#2). The prior incorporates the probability that a compound treats a disease based only on their treatment degrees.\r\n2. **Degree features** correspond to each metaedge that connects either a compound or disease. In total we have 16 degree features, 8 for compound degrees and 8 for disease degrees. Degree features count either the compound or disease degree for a given metaedge and thus only depend on either the source or target node. Degree features are [IHS transformed](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6).\r\n3. **DWPCs** make up the vast majority of features. Each DWPC corresponds to a metapath. We consider the 1,206 metapaths that traverse from compound to disease and have lengths 2--4. We use _w_ = 0.4 as the damping exponent when computing DWPCs. DWPCs are [mean scaled and IHS transformed](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6).\r\n\r\n**Stages.** The DWPC features are computed by querying the Neo4j graph database. The queries are computationally intensive. Thus far, our runtime bottleneck has been [network traversal](https://thinklab.com/discussion/estimating-the-complexity-of-hetnet-traversal/187). Computing all 252,256,608 DWPC queries (209,168 observations × 1,206 DWPCs) is impractical. Accordingly, we adopted a shortcut by splitting the machine learning process into two stages: the all-features stage and the all-observations stage.\r\n\r\n## Stage 1: all features\r\n\r\nThe purpose of the all-features stage is to assess feature performance and perform feature selection. For this stage, we include all 755 positives but randomly select 3,020 negatives (4 × the # of positives).\r\n\r\nIn addition to the unpermuted hetnet, we compute DWPCs on 5 permuted hetnets. For each permuted hetnet, we compute features for the 755 positives and 3,020 random negatives corresponding to that permutation (referred to as primary observations). We also compute DWPCs for any observations that were assessed on the unpermuted network but were not primary observations for a given permuted hetnet.\r\n\r\nIn total, we computed 46,867,572 DWPCs for the all-features stage. Computing these DWPCs took 4 days and 11 hours using a multithreading approach to perform up to 12 queries in parallel ([notebook](https://github.com/dhimmel/learn/blob/6ffd61f209a182d89c5becd96203850f3c5e13e3/all-features/3-extract.ipynb)).\r\n\r\nOn the all features dataset, we identified [how to transform DWPCs](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193) to address their highly skewed distribution. We also [learned how](https://thinklab.com/discussion/network-edge-prediction-how-to-deal-with-self-testing/194) the prior probability of treatment affects model performance. This investigation led us to include the `prior_logit` feature mentioned above.\r\n\r\nFor each feature, we computed several measures of performance. We'll update the [assessing features discussion](https://thinklab.com/discussion/assessing-the-informativeness-of-features/115) with a more detailed explanation. These feature-specific performance measures indicate whether the DWPCs for a given metapath reliably discriminate whether a drug treats a disease. We use this information to filter the majority of DWPC features, which are not predictive or suffer from an [edge-dropout contamination issue](https://thinklab.com/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215). The DWPCs from permuted hetnets are used here as baseline measures to assess the contribution of edge specificity.\r\n\r\n## Stage 2: all observations\r\n\r\nProceeding with the metapaths selected in Stage 1, we compute DWPCs for all 209,168 observations on the unpermuted hetnet. After transforming the degree and DWPC features, we [standardize](https://thinklab.com/discussion/computing-standardized-logistic-regression-coefficients/205) all variables besides the prior. Standardization allows us to decompose the linear predictor to assess each feature's contribution to a prediction compared to its mean.\r\n\r\nWe fit a logistic regression model with the prior, the degree features, and the selected DWPC features. However, this model is fit only on the 29,799 observations with a non-zero prior. From this model, we predict the probability of treatment for all observations. We enable predictions for zero priors by setting the prior for every observation equal to the mean prevalence of positives. Hence, it's important that the model assigns a coefficient near 1.0 to the `prior_logit` feature. In essence, we're erasing the effect of how many treatments each compound and disease have, since this knowledge is otherwise overpowering. The end result is a treatment-degree-naive prediction of whether each compound treats each disease.",
       "comment_id": 1294,
       "profile_id": 17,
       "published": "2016-05-12T02:23:47.232670Z",
@@ -3986,6 +3986,42 @@
       "published": "2016-05-11T07:08:13.439456Z",
       "thread_id": 213,
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#9"
+    },
+    {
+      "body_html": "<h2>Feature improvements</h2>\r\n\r\n<p>We've made several improvements that affect our features. Compared to the <a href=\"#3\">previous post</a> the following updates were made:</p>\r\n\r\n<ol><li>We completed the first production version of our hetnet named Hetionet v1.0. See <a href=\"https://thinklab.com/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162#8\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d162\">this post</a> for the updated metagraph and type abbreviations.</li><li>We <a href=\"https://thinklab.com/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d182\">created PharamacotherapyDB</a> which refined our indication catalog to differentiate between disease modifying and symptomatic indications. Now disease modifying indications (called treatments or <code>DM</code>) are positives and all other compound–disease pairs (observations) are negatives.</li><li>We <a href=\"https://thinklab.com/discussion/using-the-neo4j-graph-database-for-hetnets/112#4\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d112\">switched</a> from using our pure python toolset (<a href=\"https://github.com/dhimmel/hetio/blob/2c135fcd32616d6979972105ba60b003d65c98bd/hetio/pathtools.py\"><code>hetio.pathtools</code></a>) to Neo4j for computing network-based features. While we maintained the <a href=\"https://thinklab.com/discussion/path-exclusion-conditions/134\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d134\">duplicate node exclusion</a> for path traversal, there are some minor differences in the Cypher and <code>hetio.pathtools</code> DWPC algorithms.</li><li>We <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">identified a transformation</a> to make DWPCs distributions more appropriate for modeling.</li><li>We computed DWPCs for all 1,206 metapaths with lengths 2–4.</li><li>We computed DWPCs on five <a href=\"https://thinklab.com/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d178\">permuted networks</a>.</li><li>We invented a DWPC derivative called <em>residual DWPC</em> (R-DWPC), which is the difference between DWPC and average permuted DWPC for an observation.</li></ol>\r\n\r\n<h2>AUROC-based metrics for assessing DWPC features</h2>\r\n\r\n<p>The performance for each of 1,206 DWPC features is now available (<a href=\"https://github.com/dhimmel/learn/blob/e1c46ddc7e04a3d3eac6b907298c58db1d32a95b/all-features/data/feature-performance/auroc.tsv\">dataset</a>). The dataset consists of the following AUROC-based performance metrics:</p>\r\n\r\n<ul><li><code>dwpc_auroc</code>: the AUROC of a DWPC</li><li><code>pdwpc_auroc</code>: the average AUROC of a DWPC across permuted networks but computed on the positives and negatives corresponding to the unpermuted network</li><li><code>rdwpc_auroc</code>: the AUROC of a residual DWPC</li><li><code>pdwpc_primary_auroc</code>: the average AUROC of a DWPC across permuted networks. This AUROC uses reassigned positives and negatives based on the specific treatment edges in each permuted network</li><li><code>delta_auroc</code>: the <code>dwpc_auroc</code> minus the <code>pdwpc_primary_auroc</code> for a metapath</li><li><code>pval_delta_auroc</code>: the p-value from a t-test of the difference between the <code>dwpc_auroc</code> and the five corresponding primary permuted AUROCs.</li></ul>\r\n\r\n<p>We're adopting the Δ AUROC (<code>delta_auroc</code>) as our main assessment of feature informativeness. The Δ AUROC is preferable to the plain DWPC AUROC because it assesses whether the specific edges of a metapath are predictive. Otherwise predictiveness may be dominated by node degree effects — an often overlooked shortcoming of many network analyses <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pone.0017258\" class=\"citation\" data-key=\"10.1371/journal.pone.0017258\">1</a>, <a href=\"/doi/10.1161/CIRCGENETICS.115.001181\" class=\"citation\" data-key=\"10.1161/CIRCGENETICS.115.001181\">2</a>]</span>. The R-DWPC AUROC (<code>rdwpc_auroc</code>) is a promising metric for the future but currently suffers from an <a href=\"https://thinklab.com/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d215\">edge-dropout contamination issue</a>.</p>",
+      "body_md": "## Feature improvements\r\n\r\nWe've made several improvements that affect our features. Compared to the [previous post](#3) the following updates were made:\r\n\r\n1. We completed the first production version of our hetnet named Hetionet v1.0. See [this post](https://thinklab.com/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162#8) for the updated metagraph and type abbreviations.\r\n+ We [created PharamacotherapyDB](https://thinklab.com/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182) which refined our indication catalog to differentiate between disease modifying and symptomatic indications. Now disease modifying indications (called treatments or `DM`) are positives and all other compound--disease pairs (observations) are negatives.\r\n+ We [switched](https://thinklab.com/discussion/using-the-neo4j-graph-database-for-hetnets/112#4) from using our pure python toolset ([`hetio.pathtools`](https://github.com/dhimmel/hetio/blob/2c135fcd32616d6979972105ba60b003d65c98bd/hetio/pathtools.py)) to Neo4j for computing network-based features. While we maintained the [duplicate node exclusion](https://thinklab.com/discussion/path-exclusion-conditions/134) for path traversal, there are some minor differences in the Cypher and `hetio.pathtools` DWPC algorithms.\r\n+ We [identified a transformation](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6) to make DWPCs distributions more appropriate for modeling.\r\n+ We computed DWPCs for all 1,206 metapaths with lengths 2--4.\r\n+ We computed DWPCs on five [permuted networks](https://thinklab.com/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178).\r\n+ We invented a DWPC derivative called _residual DWPC_ (R-DWPC), which is the difference between DWPC and average permuted DWPC for an observation.\r\n\r\n## AUROC-based metrics for assessing DWPC features\r\n\r\nThe performance for each of 1,206 DWPC features is now available ([dataset](https://github.com/dhimmel/learn/blob/e1c46ddc7e04a3d3eac6b907298c58db1d32a95b/all-features/data/feature-performance/auroc.tsv)). The dataset consists of the following AUROC-based performance metrics:\r\n\r\n+ `dwpc_auroc`: the AUROC of a DWPC\r\n+ `pdwpc_auroc`: the average AUROC of a DWPC across permuted networks but computed on the positives and negatives corresponding to the unpermuted network\r\n+ `rdwpc_auroc`: the AUROC of a residual DWPC\r\n+ `pdwpc_primary_auroc`: the average AUROC of a DWPC across permuted networks. This AUROC uses reassigned positives and negatives based on the specific treatment edges in each permuted network\r\n+ `delta_auroc`: the `dwpc_auroc` minus the `pdwpc_primary_auroc` for a metapath\r\n+ `pval_delta_auroc`: the p-value from a t-test of the difference between the `dwpc_auroc` and the five corresponding primary permuted AUROCs.\r\n\r\nWe're adopting the Δ AUROC (`delta_auroc`) as our main assessment of feature informativeness. The Δ AUROC is preferable to the plain DWPC AUROC because it assesses whether the specific edges of a metapath are predictive. Otherwise predictiveness may be dominated by node degree effects -- an often overlooked shortcoming of many network analyses [@10.1371/journal.pone.0017258 @10.1161/CIRCGENETICS.115.001181]. The R-DWPC AUROC (`rdwpc_auroc`) is a promising metric for the future but currently suffers from an [edge-dropout contamination issue](https://thinklab.com/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215).",
+      "comment_id": 1311,
+      "profile_id": 17,
+      "published": "2016-05-15T06:08:00.181046Z",
+      "thread_id": 115,
+      "url": "/discussion/assessing-the-informativeness-of-features/115#3"
+    },
+    {
+      "body_html": "<p>The degree-weighted path count (DWPC) is the metric we use to assess the prevalence of a specific type of path between two nodes <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">1</a>]</span>. The DWPC assesses the number of paths between a source and target node for a given metapath while weighting the connectivity (node degrees) along the path.</p>\r\n\r\n<p>Despite the degree weighting, DWPCs are highly dependent on the source and target node degrees. For a given observation (compound–disease pair in our application) and metapath, the majority of a DWPC often reflects the source and target node degrees rather than the specific relationship between the source and target.</p>\r\n\r\n<p>The residual DWPC or R-DWPC is a metric invented by <a href=\"/u/alizee\" class=\"username\">@alizee</a> and I to measure the specific connectivity between two nodes after adjusting for general effects of node degree. The definition is, for a given observation and metapath, the R-DWPC equals the DWPC minus the P-DWPC. The P-DWPC is the average DWPC for an observation across <a href=\"https://thinklab.com/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d178\">permuted hetnets</a>. Hence, the P-DWPC captures general effects of node degree but does not capture specific edge effects.</p>\r\n\r\n<p>In summary, we've developed a method for splitting a DWPC into permuted (degree specific) and residual (edge specific) components. I see the R-DWPC as part of a larger movement to disentangle degree and edge effects in network analysis. As past research has shown <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">1</a>, <a href=\"/doi/10.1371/journal.pone.0017258\" class=\"citation\" data-key=\"10.1371/journal.pone.0017258\">2</a>, <a href=\"/doi/10.1161/CIRCGENETICS.115.001181\" class=\"citation\" data-key=\"10.1161/CIRCGENETICS.115.001181\">3</a>, <a href=\"/discussion/network-edge-prediction-estimating-the-prior/201\" class=\"citation\" data-key=\"10.15363/thinklab.d201\">4</a>]</span>, network degree can be highly predictive without drawing any insight from the relationship between entities. While a good modeling approach should incorporate degree effects, it could aid interpretation to separately model degree and edge effects.</p>\r\n\r\n<h2>Transformation and the R-DWPC</h2>\r\n\r\n<p>We <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">identified a transformation</a> for DWPCs to make their distribution more suitable for modeling. The transformation scales DWPCs by their mean and then applies the IHS function. When computing P-DWPCs and R-DWPCs <a href=\"/u/alizee\" class=\"username\">@alizee</a> and I decided on the following pipeline:</p>\r\n\r\n<ol><li>Compute DWPCs for the selected observations on the unpermuted and permuted hetnets.</li><li>Identify the mean DWPCs for each metapath on the unpermuted network.</li><li>Transform DWPCs for the unpermuted and permuted networsk using the scaling factor identified in 2.</li><li>Average the DWPCs on the permuted networks to get the P-DWPC.</li><li>Subtract the P-DWPC from the unpermuted-hetnet DWPC to get the R-DWPC.</li></ol>\r\n\r\n<p>We chose to base the R-DWPC on a difference rather than a quotient. Additionally, we chose one of many ways to incorporate transformation. Future research that makes use of R-DWPCs may want to reevaluate these decisions under a performance-driven approach.</p>",
+      "body_md": "The degree-weighted path count (DWPC) is the metric we use to assess the prevalence of a specific type of path between two nodes [@10.1371/journal.pcbi.1004259]. The DWPC assesses the number of paths between a source and target node for a given metapath while weighting the connectivity (node degrees) along the path.\r\n\r\nDespite the degree weighting, DWPCs are highly dependent on the source and target node degrees. For a given observation (compound--disease pair in our application) and metapath, the majority of a DWPC often reflects the source and target node degrees rather than the specific relationship between the source and target.\r\n\r\nThe residual DWPC or R-DWPC is a metric invented by @alizee and I to measure the specific connectivity between two nodes after adjusting for general effects of node degree. The definition is, for a given observation and metapath, the R-DWPC equals the DWPC minus the P-DWPC. The P-DWPC is the average DWPC for an observation across [permuted hetnets](https://thinklab.com/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178). Hence, the P-DWPC captures general effects of node degree but does not capture specific edge effects.\r\n\r\nIn summary, we've developed a method for splitting a DWPC into permuted (degree specific) and residual (edge specific) components. I see the R-DWPC as part of a larger movement to disentangle degree and edge effects in network analysis. As past research has shown [@10.1371/journal.pcbi.1004259 @10.1371/journal.pone.0017258 @10.1161/CIRCGENETICS.115.001181 @10.15363/thinklab.d201], network degree can be highly predictive without drawing any insight from the relationship between entities. While a good modeling approach should incorporate degree effects, it could aid interpretation to separately model degree and edge effects.\r\n\r\n## Transformation and the R-DWPC\r\n\r\nWe [identified a transformation](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6) for DWPCs to make their distribution more suitable for modeling. The transformation scales DWPCs by their mean and then applies the IHS function. When computing P-DWPCs and R-DWPCs @alizee and I decided on the following pipeline:\r\n\r\n1. Compute DWPCs for the selected observations on the unpermuted and permuted hetnets.\r\n2. Identify the mean DWPCs for each metapath on the unpermuted network.\r\n3. Transform DWPCs for the unpermuted and permuted networsk using the scaling factor identified in 2.\r\n4. Average the DWPCs on the permuted networks to get the P-DWPC.\r\n5. Subtract the P-DWPC from the unpermuted-hetnet DWPC to get the R-DWPC.\r\n\r\nWe chose to base the R-DWPC on a difference rather than a quotient. Additionally, we chose one of many ways to incorporate transformation. Future research that makes use of R-DWPCs may want to reevaluate these decisions under a performance-driven approach.",
+      "comment_id": 1312,
+      "profile_id": 17,
+      "published": "2016-05-16T18:32:57.242798Z",
+      "thread_id": 214,
+      "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214"
+    },
+    {
+      "body_html": "<h1>Assessing the performance of R-DWPCs</h1>\r\n\r\n<p>We assessed the performance of several DWPC-derived measures in predicting when a compound treats a disease. The analysis was based on <a href=\"https://thinklab.com/discussion/assessing-the-informativeness-of-features/115#3\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d115\">our features</a> extracted from Hetionet v1.0. Metapaths with a <em>treats</em> or <em>palliates</em> metaedge were excluded to remove any <a href=\"https://thinklab.com/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d215\">prediction-edge-dropout contamination</a>. Models included <a href=\"https://thinklab.com/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#2\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d210\">prior, degree, and DWPC features</a>. However, different models were fit for each of five DWPC feature sets (<a href=\"http://nbviewer.jupyter.org/github/dhimmel/learn/blob/e1c46ddc7e04a3d3eac6b907298c58db1d32a95b/all-features/5.6-model.ipynb\">notebook</a>):</p>\r\n\r\n<ol><li>DPWCs</li><li>P-DWPCs</li><li>R-DWPCs</li><li>P-DWPCs &amp; R-DWPCs</li><li>DPWCs, P-DWPCs &amp; R-DWPCs</li></ol>\r\n\r\n<p>Model 2 (P-DWPCs) was the worst performer, with only the <code>prior_logit</code> feature being selected by a cross-validated lasso. Model 1 performed the best (AUROC = 91.2%). Model 4, for which we had the highest hopes, had (AUROC = 91.0%). I was surprised that splitting the DWPC into permuted and residual components did not improve performance. The split didn't seem to majorly change predictions, with the predicted probabilities from Models 1 and 4 having a correlation of 87.0%.</p>\r\n\r\n<p>Given that the P/R-DWPC separation adds complexity without improving performance, we plan to continue primarily with DWPCs for Project Rephetio. However, I do hope to explore per-observation permutation adjustment again in the future.</p>",
+      "body_md": "# Assessing the performance of R-DWPCs\r\n\r\nWe assessed the performance of several DWPC-derived measures in predicting when a compound treats a disease. The analysis was based on [our features](https://thinklab.com/discussion/assessing-the-informativeness-of-features/115#3) extracted from Hetionet v1.0. Metapaths with a _treats_ or _palliates_ metaedge were excluded to remove any [prediction-edge-dropout contamination](https://thinklab.com/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215). Models included [prior, degree, and DWPC features](https://thinklab.com/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#2). However, different models were fit for each of five DWPC feature sets ([notebook](http://nbviewer.jupyter.org/github/dhimmel/learn/blob/e1c46ddc7e04a3d3eac6b907298c58db1d32a95b/all-features/5.6-model.ipynb)):\r\n\r\n1. DPWCs\r\n2. P-DWPCs\r\n3. R-DWPCs\r\n4. P-DWPCs & R-DWPCs\r\n5. DPWCs, P-DWPCs & R-DWPCs\r\n\r\nModel 2 (P-DWPCs) was the worst performer, with only the `prior_logit` feature being selected by a cross-validated lasso. Model 1 performed the best (AUROC = 91.2%). Model 4, for which we had the highest hopes, had (AUROC = 91.0%). I was surprised that splitting the DWPC into permuted and residual components did not improve performance. The split didn't seem to majorly change predictions, with the predicted probabilities from Models 1 and 4 having a correlation of 87.0%.\r\n\r\nGiven that the P/R-DWPC separation adds complexity without improving performance, we plan to continue primarily with DWPCs for Project Rephetio. However, I do hope to explore per-observation permutation adjustment again in the future.",
+      "comment_id": 1313,
+      "profile_id": 17,
+      "published": "2016-05-16T19:54:45.696710Z",
+      "thread_id": 214,
+      "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214#2"
+    },
+    {
+      "body_html": "<p>Our current approach revolves around modeling treatments that are included in the hetnet as <em>treats</em> edges. We've previously discussed and dealt with some implications of this <a href=\"https://thinklab.com/discussion/network-edge-prediction-how-to-deal-with-self-testing/194\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d194\">self-testing methodology</a>. This post will introduce another issue related to modeling edges that are part of the hetnet used to extract features.</p>\r\n\r\n<p>Previously, we looked into whether paths with duplicate nodes should be excluded. Without the duplicate node exclusion, we were allowing paths that directly contained the prediction edge (the prediction edge refers to the compound–disease pair that a feature describes). We <a href=\"https://thinklab.com/discussion/path-exclusion-conditions/134#4\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d134\">found that</a>:</p>\r\n\r\n<blockquote><p>paths including the prediction edge cause overfitting by incorporating the outcome (indication status) into the predictor (DWPC)</p></blockquote>\r\n\r\n<p>Now we have identified another contamination vector by which the presence of the prediction edge can seep into DWPCs. In the previous example of contamination, the DWPC of positives is <em>inflated </em> relative to negatives. With edge dropout contamination, the DWPC of positives is <em>deflated </em> relative to negatives. Here's why: if the prediction edge is an actual treatment, a treatment edge is effectively masked from the hetnet. However, if the prediction edge is not a treatment, no treatment edges are masked from the hetnet.</p>\r\n\r\n<p>Let's imagine that Compound <code>C1</code> treats only Disease <code>D1</code>. We'll consider the <em>CtDlAlD</em> metapath (<em>Compound–treats–Disease–localizes–Anatomy–localizes–Disease</em>). First note that Disease–localizes–Anatomy edges are common. Therefore, two random diseases likely colocalize to several anatomies. In other words, there will almost always be paths for the <em>DlAlD</em> portion of the metapath. When the prediction edge is <code>C1</code>–<code>D1</code>, the DWPC will be zero because <code>C1</code>–treats–<code>D1</code> is masked due to the duplicate node exclusion. However, for other diseases (<code>D2</code>, <code>D3</code>, …), the <code>C1</code>–treats–<code>D1</code> edge is available for traversal. Thus the path count (and hence the DWPC) will generally be nonzero between <code>C1</code> and all other diseases besides <code>D1</code>. In this hypothetical example, edge dropout contamination could lead to spurious negative association between the DWPC for the <em>CtDlAlD</em> metapath and the presence of treatment edges.</p>\r\n\r\n<p>The specific issue we describe here could more precisely be called \"prediction-edge dropout contamination\". It's possible that edge dropout raises problems for a broad spectrum of network approaches.</p>",
+      "body_md": "Our current approach revolves around modeling treatments that are included in the hetnet as _treats_ edges. We've previously discussed and dealt with some implications of this [self-testing methodology](https://thinklab.com/discussion/network-edge-prediction-how-to-deal-with-self-testing/194). This post will introduce another issue related to modeling edges that are part of the hetnet used to extract features.\r\n\r\nPreviously, we looked into whether paths with duplicate nodes should be excluded. Without the duplicate node exclusion, we were allowing paths that directly contained the prediction edge (the prediction edge refers to the compound--disease pair that a feature describes). We [found that](https://thinklab.com/discussion/path-exclusion-conditions/134#4):\r\n\r\n> paths including the prediction edge cause overfitting by incorporating the outcome (indication status) into the predictor (DWPC)\r\n\r\nNow we have identified another contamination vector by which the presence of the prediction edge can seep into DWPCs. In the previous example of contamination, the DWPC of positives is _inflated _ relative to negatives. With edge dropout contamination, the DWPC of positives is _deflated _ relative to negatives. Here's why: if the prediction edge is an actual treatment, a treatment edge is effectively masked from the hetnet. However, if the prediction edge is not a treatment, no treatment edges are masked from the hetnet.\r\n\r\nLet's imagine that Compound `C1` treats only Disease `D1`. We'll consider the _CtDlAlD_ metapath (_Compound--treats--Disease--localizes--Anatomy--localizes--Disease_). First note that Disease--localizes--Anatomy edges are common. Therefore, two random diseases likely colocalize to several anatomies. In other words, there will almost always be paths for the _DlAlD_ portion of the metapath. When the prediction edge is `C1`--`D1`, the DWPC will be zero because `C1`--treats--`D1` is masked due to the duplicate node exclusion. However, for other diseases (`D2`, `D3`, …), the `C1`--treats--`D1` edge is available for traversal. Thus the path count (and hence the DWPC) will generally be nonzero between `C1` and all other diseases besides `D1`. In this hypothetical example, edge dropout contamination could lead to spurious negative association between the DWPC for the _CtDlAlD_ metapath and the presence of treatment edges.\r\n\r\nThe specific issue we describe here could more precisely be called \"prediction-edge dropout contamination\". It's possible that edge dropout raises problems for a broad spectrum of network approaches.",
+      "comment_id": 1314,
+      "profile_id": 17,
+      "published": "2016-05-16T20:03:59.583717Z",
+      "thread_id": 215,
+      "url": "/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215"
     }
   ],
   "documents": [
@@ -4000,7 +4036,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 856
+      "views": 858
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -5689,7 +5725,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-05-14T04:46:43.004730Z",
+  "retrieved": "2016-05-17T00:18:14.087567Z",
   "threads": [
     {
       "document_id": null,
@@ -5701,7 +5737,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 347
+      "views": 351
     },
     {
       "document_id": null,
@@ -5713,7 +5749,7 @@
       "thread_id": 22,
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 97
+      "views": 98
     },
     {
       "document_id": null,
@@ -5725,7 +5761,7 @@
       "thread_id": 23,
       "topic_field": "Reproducibility",
       "url": "/discussion/enabling-reproducibility-and-reuse/23",
-      "views": 90
+      "views": 91
     },
     {
       "document_id": null,
@@ -5737,7 +5773,7 @@
       "thread_id": 25,
       "topic_field": "Python,R,Algorithms,Computer Science,SIDER,GSC Weighting,Gerstein-Sonnhammer-Chothia,Julia,Open Source Software",
       "url": "/discussion/seeking-an-open-source-implementation-of-the-gerstein-sonnhammer-chothia-algorithm/25",
-      "views": 108
+      "views": 110
     },
     {
       "document_id": null,
@@ -5773,7 +5809,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 117
+      "views": 119
     },
     {
       "document_id": null,
@@ -5785,7 +5821,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 151
+      "views": 154
     },
     {
       "document_id": null,
@@ -5797,7 +5833,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 188
+      "views": 191
     },
     {
       "document_id": null,
@@ -5809,7 +5845,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 101
+      "views": 104
     },
     {
       "document_id": null,
@@ -5833,7 +5869,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 266
+      "views": 269
     },
     {
       "document_id": null,
@@ -5845,7 +5881,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 138
+      "views": 139
     },
     {
       "document_id": null,
@@ -5857,7 +5893,7 @@
       "thread_id": 46,
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 66
+      "views": 68
     },
     {
       "document_id": null,
@@ -5869,7 +5905,7 @@
       "thread_id": 47,
       "topic_field": "Validation,Evalauation",
       "url": "/discussion/evaluation-framework/47",
-      "views": 33
+      "views": 34
     },
     {
       "document_id": null,
@@ -5893,7 +5929,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 185
+      "views": 188
     },
     {
       "document_id": null,
@@ -5905,7 +5941,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 205
+      "views": 209
     },
     {
       "document_id": null,
@@ -5917,7 +5953,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 151
+      "views": 155
     },
     {
       "document_id": null,
@@ -5929,7 +5965,7 @@
       "thread_id": 57,
       "topic_field": "Evolution,Entrez Gene,ERC,UCSC Genome Browser,Evolutionary Rate Covariation",
       "url": "/discussion/selecting-informative-erc-evolutionary-rate-covariation-values-between-genes/57",
-      "views": 58
+      "views": 59
     },
     {
       "document_id": null,
@@ -5941,7 +5977,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 258
+      "views": 262
     },
     {
       "document_id": null,
@@ -5953,7 +5989,7 @@
       "thread_id": 62,
       "topic_field": "Databases,Indications,Clinical Informatics,EHR,Ehrlink,Medications,Health Records",
       "url": "/discussion/extracting-indications-from-the-ehrlink-resource/62",
-      "views": 64
+      "views": 66
     },
     {
       "document_id": null,
@@ -5965,7 +6001,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 231
+      "views": 233
     },
     {
       "document_id": null,
@@ -5977,7 +6013,7 @@
       "thread_id": 66,
       "topic_field": "",
       "url": "/discussion/kabob-knowledgebase/66",
-      "views": 73
+      "views": 76
     },
     {
       "document_id": null,
@@ -5989,7 +6025,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 101
+      "views": 104
     },
     {
       "document_id": null,
@@ -6013,7 +6049,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 72
+      "views": 74
     },
     {
       "document_id": null,
@@ -6025,7 +6061,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 243
+      "views": 247
     },
     {
       "document_id": null,
@@ -6049,7 +6085,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 131
+      "views": 132
     },
     {
       "document_id": null,
@@ -6061,7 +6097,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 256
+      "views": 261
     },
     {
       "document_id": null,
@@ -6073,7 +6109,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 239
+      "views": 247
     },
     {
       "document_id": null,
@@ -6085,7 +6121,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 457
+      "views": 468
     },
     {
       "document_id": null,
@@ -6097,7 +6133,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 515
+      "views": 518
     },
     {
       "document_id": null,
@@ -6109,7 +6145,7 @@
       "thread_id": 85,
       "topic_field": "Protein Interactions,Interactions,PPI",
       "url": "/discussion/creating-a-catalog-of-protein-interactions/85",
-      "views": 105
+      "views": 107
     },
     {
       "document_id": null,
@@ -6121,7 +6157,7 @@
       "thread_id": 91,
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 76
+      "views": 78
     },
     {
       "document_id": null,
@@ -6133,7 +6169,7 @@
       "thread_id": 93,
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
@@ -6157,7 +6193,7 @@
       "thread_id": 95,
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 144
+      "views": 147
     },
     {
       "document_id": null,
@@ -6169,7 +6205,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 169
+      "views": 172
     },
     {
       "document_id": null,
@@ -6181,7 +6217,7 @@
       "thread_id": 97,
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 91
+      "views": 94
     },
     {
       "document_id": null,
@@ -6193,7 +6229,7 @@
       "thread_id": 101,
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 80
+      "views": 82
     },
     {
       "document_id": null,
@@ -6205,7 +6241,7 @@
       "thread_id": 102,
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 182
+      "views": 184
     },
     {
       "document_id": null,
@@ -6217,7 +6253,7 @@
       "thread_id": 104,
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 108
+      "views": 111
     },
     {
       "document_id": null,
@@ -6229,7 +6265,7 @@
       "thread_id": 105,
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 73
+      "views": 74
     },
     {
       "document_id": null,
@@ -6253,7 +6289,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 180
+      "views": 185
     },
     {
       "document_id": null,
@@ -6277,7 +6313,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 161
+      "views": 164
     },
     {
       "document_id": null,
@@ -6289,7 +6325,7 @@
       "thread_id": 111,
       "topic_field": "Incomplete Interactome,Permission,Licensing,Copyright Transfer,Supplement,AAAS",
       "url": "/discussion/incomplete-interactome-licensing/111",
-      "views": 77
+      "views": 79
     },
     {
       "document_id": null,
@@ -6301,7 +6337,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 254
+      "views": 257
     },
     {
       "document_id": null,
@@ -6313,7 +6349,7 @@
       "thread_id": 113,
       "topic_field": "Citations,Publicity,Media Coverage,Reuse,Attention",
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113",
-      "views": 60
+      "views": 63
     },
     {
       "document_id": null,
@@ -6325,7 +6361,7 @@
       "thread_id": 115,
       "topic_field": "HNEP,Hetnets,Features,Metapaths",
       "url": "/discussion/assessing-the-informativeness-of-features/115",
-      "views": 34
+      "views": 40
     },
     {
       "document_id": null,
@@ -6337,7 +6373,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 66
+      "views": 68
     },
     {
       "document_id": null,
@@ -6349,7 +6385,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 71
+      "views": 74
     },
     {
       "document_id": null,
@@ -6361,7 +6397,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 71
+      "views": 76
     },
     {
       "document_id": null,
@@ -6373,7 +6409,7 @@
       "thread_id": 136,
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 43
+      "views": 45
     },
     {
       "document_id": null,
@@ -6385,7 +6421,7 @@
       "thread_id": 162,
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 60
+      "views": 61
     },
     {
       "document_id": null,
@@ -6421,7 +6457,7 @@
       "thread_id": 181,
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 94
+      "views": 96
     },
     {
       "document_id": null,
@@ -6433,7 +6469,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 122
+      "views": 126
     },
     {
       "document_id": null,
@@ -6445,7 +6481,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 41
+      "views": 42
     },
     {
       "document_id": null,
@@ -6457,7 +6493,7 @@
       "thread_id": 186,
       "topic_field": "DrugCentral,pharmacology,Database",
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186",
-      "views": 48
+      "views": 50
     },
     {
       "document_id": null,
@@ -6469,7 +6505,7 @@
       "thread_id": 187,
       "topic_field": "complexity,runtime,optimization,Neo4J,join hints",
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187",
-      "views": 36
+      "views": 38
     },
     {
       "document_id": null,
@@ -6481,7 +6517,7 @@
       "thread_id": 193,
       "topic_field": "IHS,transformation,DWPC,regression",
       "url": "/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193",
-      "views": 27
+      "views": 30
     },
     {
       "document_id": null,
@@ -6493,7 +6529,7 @@
       "thread_id": 194,
       "topic_field": "HNEP,Hetnets,Machine learning,self-testing",
       "url": "/discussion/network-edge-prediction-how-to-deal-with-self-testing/194",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,
@@ -6505,7 +6541,7 @@
       "thread_id": 200,
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 19
+      "views": 20
     },
     {
       "document_id": null,
@@ -6517,7 +6553,7 @@
       "thread_id": 201,
       "topic_field": "Machine learning,Heterogeneous Networks,Hetnets,HNEP,Prior Knowledge",
       "url": "/discussion/network-edge-prediction-estimating-the-prior/201",
-      "views": 28
+      "views": 30
     },
     {
       "document_id": null,
@@ -6529,7 +6565,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 36
+      "views": 40
     },
     {
       "document_id": null,
@@ -6541,7 +6577,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 40
+      "views": 44
     },
     {
       "document_id": null,
@@ -6553,7 +6589,7 @@
       "thread_id": 210,
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 17
+      "views": 19
     },
     {
       "document_id": null,
@@ -6565,7 +6601,7 @@
       "thread_id": 212,
       "topic_field": "clinical trials,ClinicalTrials.gov",
       "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212",
-      "views": 17
+      "views": 18
     },
     {
       "document_id": null,
@@ -6577,7 +6613,31 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 202
+      "views": 215
+    },
+    {
+      "document_id": null,
+      "doi": "10.15363/thinklab.d214",
+      "doi_field": "",
+      "profile_id": 17,
+      "published": "2016-05-16T18:32:57.157163Z",
+      "subject": "Introducing the Residual Degree Weighted Path Count (R-DWPC)",
+      "thread_id": 214,
+      "topic_field": "DWPC,HNEP,Residual DWPC,R-DWPC,permutation,hetnet,algorithms",
+      "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214",
+      "views": 3
+    },
+    {
+      "document_id": null,
+      "doi": "10.15363/thinklab.d215",
+      "doi_field": "",
+      "profile_id": 17,
+      "published": "2016-05-16T20:03:59.544024Z",
+      "subject": "Edge dropout contamination in hetnet edge prediction",
+      "thread_id": 215,
+      "topic_field": "HNEP,dropout contamination,overfitting",
+      "url": "/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215",
+      "views": 3
     }
   ]
 }

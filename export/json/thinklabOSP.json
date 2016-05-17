@@ -1606,7 +1606,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/thinklabOSP/proposal",
-      "views": 202
+      "views": 203
     }
   ],
   "notes": [
@@ -1664,7 +1664,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2016-05-14T04:46:45.505093Z",
+  "retrieved": "2016-05-17T00:18:08.810463Z",
   "threads": [
     {
       "document_id": 12,
@@ -1676,7 +1676,7 @@
       "thread_id": 158,
       "topic_field": "Open science,Peer review,Science Funding,Grant Writing,Grantmaking,Open Notebook Science",
       "url": "/doc/12/review",
-      "views": 47
+      "views": 48
     },
     {
       "document_id": null,
@@ -1688,7 +1688,7 @@
       "thread_id": 160,
       "topic_field": "ASAPbio,Delays,Publishing,Preprints",
       "url": "/discussion/highlighting-the-immediacy-of-thinklab/160",
-      "views": 15
+      "views": 16
     },
     {
       "document_id": null,
@@ -1700,7 +1700,7 @@
       "thread_id": 161,
       "topic_field": "",
       "url": "/discussion/how-to-address-the-risk-of-stealing-ideas/161",
-      "views": 53
+      "views": 56
     },
     {
       "document_id": 12,
@@ -1712,7 +1712,7 @@
       "thread_id": 164,
       "topic_field": "",
       "url": "/discussion/review-summary/164",
-      "views": 22
+      "views": 23
     },
     {
       "document_id": null,
@@ -1760,7 +1760,7 @@
       "thread_id": 170,
       "topic_field": "Open science,Incentives",
       "url": "/discussion/has-our-scientific-system-been-optimized-by-an-evolutionary-process/170",
-      "views": 30
+      "views": 31
     },
     {
       "document_id": 12,
