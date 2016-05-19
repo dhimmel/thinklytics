@@ -886,7 +886,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/HHMI_Bcr_Abl/proposal",
-      "views": 220
+      "views": 222
     }
   ],
   "notes": [],
@@ -934,7 +934,7 @@
       "username": "obigriffith"
     }
   ],
-  "retrieved": "2016-05-17T00:18:03.203127Z",
+  "retrieved": "2016-05-19T04:56:01.974650Z",
   "threads": [
     {
       "document_id": null,
@@ -958,7 +958,7 @@
       "thread_id": 142,
       "topic_field": "Machine learning,Crowdsourcing",
       "url": "/discussion/applications-of-machine-learning-for-aggregating-judgments/142",
-      "views": 25
+      "views": 26
     },
     {
       "document_id": null,

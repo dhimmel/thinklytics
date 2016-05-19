@@ -1630,6 +1630,15 @@
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197#15"
     },
     {
+      "body_html": "<p>Lot's of exciting activity is occurring in the open science space. I thought it would be valuable to compile a catalog of open realtime science platforms. I'm thinking a list of platforms that provide services similar to <em>Thinklab</em>. This will give us places to look for inspiration and help bring the community together.</p>\r\n\r\n<p>So here's an initial list:</p>\r\n\r\n<ul><li><a href=\"https://osf.io/\">Open Science Framework</a></li><li><a href=\"https://sciencematters.io\">Sciencematters</a></li><li><a href=\"http://riojournal.com\">Research Ideas and Outcomes</a></li><li><a href=\"https://www.empiri.co\">Empiri</a></li><li><a href=\"http://www.sjscience.org\">The Self-Journal of Science</a></li></ul>\r\n\r\n<p>Feel free to add additional platforms. In the future, we could even create a feature comparison chart.</p>",
+      "body_md": "Lot's of exciting activity is occurring in the open science space. I thought it would be valuable to compile a catalog of open realtime science platforms. I'm thinking a list of platforms that provide services similar to _Thinklab_. This will give us places to look for inspiration and help bring the community together.\r\n\r\nSo here's an initial list:\r\n\r\n+ [Open Science Framework](https://osf.io/)\r\n+ [Sciencematters](https://sciencematters.io)\r\n+ [Research Ideas and Outcomes](http://riojournal.com)\r\n+ [Empiri](https://www.empiri.co)\r\n+ [The Self-Journal of Science](http://www.sjscience.org)\r\n\r\nFeel free to add additional platforms. In the future, we could even create a feature comparison chart.",
+      "comment_id": 1285,
+      "profile_id": 17,
+      "published": "2016-05-18T19:16:01.595955Z",
+      "thread_id": 206,
+      "url": "/discussion/open-realtime-science-platforms/206"
+    },
+    {
       "body_html": "<p>Integrating with <a href=\"https://www.altmetric.com/\">Altmetric</a> will help track project attention, as we've <a href=\"https://thinklab.com/discussion/tracking-project-reuse-citation-and-publicity/113\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d113\">been doing manually</a> for Project Rephetio. Altmetric is becoming core infrastructure with <a href=\"https://impactstory.org/u/0000-0002-3012-7446\">Impactstory</a> now being built on top of it.</p>\r\n\r\n<p>There are two sides to Altmetric integration.</p>\r\n\r\n<h2>1. Altmetric tracking</h2>\r\n\r\n<p>The first step is making sure all Thinklab pages with a DOI are tracked by Altmetric. Thinklab discussions are already tracked, but some Thinklab pages like projects don't provide the necessary identifying metadata.</p>\r\n\r\n<h2>2. Embedded badges</h2>\r\n\r\n<p>Second, it would be nice to report Altmetric scores for Thinklab content. For example, you could embed badges into discussion and project pages. It's unclear whether embedding the badges would be free. The <a href=\"https://api.altmetric.com/embeds.html\" title=\"Embeddable badges\">API documentation</a> states:</p>\r\n\r\n<blockquote><p>The badges are free to use for academic repositories and individual researchers. If you're an organisation or publisher and would like to use these badges, please get in touch to discuss implementation.</p></blockquote>\r\n\r\n<p>However, a more recent <a href=\"https://help.altmetric.com/support/solutions/articles/6000086842-getting-started-with-altmetric-on-your-journal-or-institutional-repository\" title=\"Getting started with Altmetric on your journal or institutional repository\">blog post</a> doesn't mention any restrictions and states:</p>\r\n\r\n<blockquote><p>Altmetric.com embeds allow you to add new social metrics and data to your content with a minimum of fuss and technical effort</p></blockquote>\r\n\r\n<p>So perhaps the right approach would be to see if Thinklab qualifies for free badges. If so, I think they'd be a worthwhile addition.</p>",
       "body_md": "Integrating with [Altmetric](https://www.altmetric.com/) will help track project attention, as we've [been doing manually](https://thinklab.com/discussion/tracking-project-reuse-citation-and-publicity/113) for Project Rephetio. Altmetric is becoming core infrastructure with [Impactstory](https://impactstory.org/u/0000-0002-3012-7446) now being built on top of it.\r\n\r\nThere are two sides to Altmetric integration.\r\n\r\n## 1. Altmetric tracking\r\n\r\nThe first step is making sure all Thinklab pages with a DOI are tracked by Altmetric. Thinklab discussions are already tracked, but some Thinklab pages like projects don't provide the necessary identifying metadata.\r\n\r\n## 2. Embedded badges\r\n\r\nSecond, it would be nice to report Altmetric scores for Thinklab content. For example, you could embed badges into discussion and project pages. It's unclear whether embedding the badges would be free. The [API documentation](https://api.altmetric.com/embeds.html \"Embeddable badges\") states:\r\n\r\n> The badges are free to use for academic repositories and individual researchers. If you're an organisation or publisher and would like to use these badges, please get in touch to discuss implementation.\r\n\r\nHowever, a more recent [blog post](https://help.altmetric.com/support/solutions/articles/6000086842-getting-started-with-altmetric-on-your-journal-or-institutional-repository \"Getting started with Altmetric on your journal or institutional repository\") doesn't mention any restrictions and states:\r\n\r\n> Altmetric.com embeds allow you to add new social metrics and data to your content with a minimum of fuss and technical effort\r\n\r\nSo perhaps the right approach would be to see if Thinklab qualifies for free badges. If so, I think they'd be a worthwhile addition.",
       "comment_id": 1288,
@@ -2474,7 +2483,7 @@
       "username": "pouyakhankhanian"
     }
   ],
-  "retrieved": "2016-05-17T00:18:05.852748Z",
+  "retrieved": "2016-05-19T04:56:06.796626Z",
   "threads": [
     {
       "document_id": null,
@@ -2678,7 +2687,7 @@
       "thread_id": 64,
       "topic_field": "",
       "url": "/discussion/should-we-aim-to-keep-discussions-narrowly-focused/64",
-      "views": 49
+      "views": 50
     },
     {
       "document_id": null,
@@ -2738,7 +2747,7 @@
       "thread_id": 98,
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 54
+      "views": 55
     },
     {
       "document_id": null,
@@ -2762,7 +2771,7 @@
       "thread_id": 109,
       "topic_field": "Standards,DOI,DOI resolution",
       "url": "/discussion/switching-doi-links-to-the-preferred-format/109",
-      "views": 34
+      "views": 35
     },
     {
       "document_id": null,
@@ -2798,7 +2807,7 @@
       "thread_id": 138,
       "topic_field": "",
       "url": "/discussion/a-pdf-upload-option-for-proposal-creation/138",
-      "views": 31
+      "views": 32
     },
     {
       "document_id": null,
@@ -2858,7 +2867,7 @@
       "thread_id": 188,
       "topic_field": "popover,citation,user experience,Thinklab",
       "url": "/discussion/streamlining-access-to-the-common-interactions-with-citations/188",
-      "views": 19
+      "views": 21
     },
     {
       "document_id": null,
@@ -2894,7 +2903,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 52
+      "views": 54
     },
     {
       "document_id": null,
@@ -2906,7 +2915,7 @@
       "thread_id": 192,
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 27
+      "views": 28
     },
     {
       "document_id": null,
@@ -2958,6 +2967,18 @@
     },
     {
       "document_id": null,
+      "doi": "10.15363/thinklab.d206",
+      "doi_field": "",
+      "profile_id": 17,
+      "published": "2016-05-18T19:16:01.540383Z",
+      "subject": "Open realtime science platforms",
+      "thread_id": 206,
+      "topic_field": "open science,platforms",
+      "url": "/discussion/open-realtime-science-platforms/206",
+      "views": 3
+    },
+    {
+      "document_id": null,
       "doi": "10.15363/thinklab.d207",
       "doi_field": "",
       "profile_id": 17,
@@ -2978,7 +2999,7 @@
       "thread_id": 209,
       "topic_field": "",
       "url": "/discussion/share-single-posts/209",
-      "views": 9
+      "views": 10
     }
   ]
 }

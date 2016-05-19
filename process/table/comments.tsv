@@ -315,6 +315,7 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1261	2	meta	2016-04-14T04:47:44.043815Z	197	/discussion/support-and-enforce-ssl-connections-to-thinklab/197#13	54	269
 1262	2	meta	2016-04-14T22:27:52.379021Z	197	/discussion/support-and-enforce-ssl-connections-to-thinklab/197#14	26	141
 1263	23	meta	2016-04-15T00:10:54.681807Z	197	/discussion/support-and-enforce-ssl-connections-to-thinklab/197#15	34	184
+1285	17	meta	2016-05-18T19:16:01.595955Z	206	/discussion/open-realtime-science-platforms/206	92	545
 1288	17	meta	2016-05-01T19:25:33.494514Z	207	/discussion/tracking-attention-through-altmetric-integration/207	209	1276
 1290	2	meta	2016-05-02T16:58:15.175110Z	207	/discussion/tracking-attention-through-altmetric-integration/207#2	86	669
 1292	23	meta	2016-05-03T07:47:07.001905Z	209	/discussion/share-single-posts/209	68	372
@@ -772,10 +773,12 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1270	17	rephetio	2016-04-16T17:46:03.774230Z	193	/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6	177	1122
 1271	17	rephetio	2016-04-16T21:39:16.725202Z	202	/discussion/describing-hetionet-v10-through-visualization-and-statistics/202	99	584
 1272	17	rephetio	2016-04-18T13:24:16.554453Z	202	/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#2	64	379
+1273	17	rephetio	2016-05-17T18:29:23.509801Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203	350	2239
 1275	17	rephetio	2016-04-18T14:00:26.867435Z	202	/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#3	243	1502
 1276	17	rephetio	2016-04-18T14:09:45.060264Z	202	/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#4	78	454
 1277	17	rephetio	2016-04-18T14:30:25.332207Z	202	/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#5	143	853
 1278	17	rephetio	2016-04-18T14:43:43.077703Z	202	/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#6	65	384
+1279	17	rephetio	2016-05-17T02:22:19.104756Z	115	/discussion/assessing-the-informativeness-of-features/115#4	87	563
 1280	17	rephetio	2016-04-18T17:02:02.916266Z	162	/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162#8	153	1053
 1281	17	rephetio	2016-04-20T15:03:59.767935Z	113	/discussion/tracking-project-reuse-citation-and-publicity/113#7	146	966
 1282	20	rephetio	2016-04-20T18:56:49.207861Z	202	/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#7	8	51
@@ -785,9 +788,9 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1287	23	rephetio	2016-05-02T20:45:01.106725Z	205	/discussion/computing-standardized-logistic-regression-coefficients/205#5	633	4161
 1289	17	rephetio	2016-05-02T02:54:32.970448Z	205	/discussion/computing-standardized-logistic-regression-coefficients/205#4	118	742
 1293	17	rephetio	2016-05-04T05:28:16.489552Z	210	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210	344	2259
-1294	17	rephetio	2016-05-12T02:23:47.232670Z	210	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#2	718	4477
+1294	17	rephetio	2016-05-12T02:23:47.232670Z	210	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#2	692	4304
 1295	17	rephetio	2016-05-04T22:31:58.818987Z	113	/discussion/tracking-project-reuse-citation-and-publicity/113#8	203	1338
-1297	17	rephetio	2016-05-08T05:00:24.012824Z	212	/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212	137	933
+1297	17	rephetio	2016-05-08T05:00:24.012824Z	212	/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212	138	937
 1298	17	rephetio	2016-05-08T17:37:10.718986Z	212	/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212#2	182	1146
 1300	17	rephetio	2016-05-08T21:35:21.495978Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213	456	2936
 1301	17	rephetio	2016-05-09T02:11:11.872236Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#3	357	2344
@@ -800,10 +803,13 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1308	17	rephetio	2016-05-09T20:43:38.200217Z	186	/discussion/incorporating-drugcentral-data-in-our-network/186#6	134	847
 1309	17	rephetio	2016-05-09T22:18:07.810525Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#8	510	3097
 1310	248	rephetio	2016-05-11T07:08:13.439456Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#9	30	171
-1311	17	rephetio	2016-05-15T06:08:00.181046Z	115	/discussion/assessing-the-informativeness-of-features/115#3	371	2456
+1311	17	rephetio	2016-05-15T06:08:00.181046Z	115	/discussion/assessing-the-informativeness-of-features/115#3	379	2494
 1312	17	rephetio	2016-05-16T18:32:57.242798Z	214	/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214	418	2514
 1313	17	rephetio	2016-05-16T19:54:45.696710Z	214	/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214#2	202	1229
 1314	17	rephetio	2016-05-16T20:03:59.583717Z	215	/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215	366	2339
+1317	17	rephetio	2016-05-17T16:22:15.920779Z	210	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#3	362	2229
+1318	17	rephetio	2016-05-17T17:19:43.123603Z	210	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4	379	2410
+1319	17	rephetio	2016-05-17T21:48:48.143975Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#2	249	1697
 799	17	thinklabOSP	2016-02-19T06:41:11.813300Z	160	/discussion/highlighting-the-immediacy-of-thinklab/160	158	1008
 800	125	thinklabOSP	2016-02-16T12:50:44.682536Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161	186	1007
 801	2	thinklabOSP	2016-02-16T18:06:25.264019Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161#2	209	1169
