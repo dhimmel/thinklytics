@@ -58,7 +58,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/dFoxPoperant/proposal",
-      "views": 429
+      "views": 442
     }
   ],
   "notes": [],
@@ -78,7 +78,7 @@
       "username": "brembs"
     }
   ],
-  "retrieved": "2016-06-02T00:05:18.048080Z",
+  "retrieved": "2016-06-18T23:20:07.793404Z",
   "threads": [
     {
       "document_id": null,
@@ -90,7 +90,7 @@
       "thread_id": 129,
       "topic_field": "",
       "url": "/discussion/reviewer-1/129",
-      "views": 425
+      "views": 428
     },
     {
       "document_id": null,
@@ -114,7 +114,7 @@
       "thread_id": 133,
       "topic_field": "Peer review,Grant Writing",
       "url": "/discussion/how-much-expertise-is-it-realistic-to-expect-grant-reviewers-to-have/133",
-      "views": 65
+      "views": 66
     }
   ]
 }
