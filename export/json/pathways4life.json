@@ -364,7 +364,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/pathways4life/proposal",
-      "views": 335
+      "views": 339
     }
   ],
   "notes": [
@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-06-18T23:19:57.800602Z",
+  "retrieved": "2016-06-24T20:38:37.540769Z",
   "threads": [
     {
       "document_id": null,
@@ -445,7 +445,7 @@
       "thread_id": 73,
       "topic_field": "Citizen Science,Crowdsourcing,Open Sourse,Game Design,Pathways,Image Analysis",
       "url": "/discussion/open-for-feedback/73",
-      "views": 39
+      "views": 41
     },
     {
       "document_id": null,
@@ -493,7 +493,7 @@
       "thread_id": 117,
       "topic_field": "Crowdsourcing,Game Design,Pathways,Image Analysis",
       "url": "/doc/3/review",
-      "views": 22
+      "views": 24
     },
     {
       "document_id": null,
@@ -505,7 +505,7 @@
       "thread_id": 119,
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 63
+      "views": 65
     },
     {
       "document_id": null,
@@ -517,7 +517,7 @@
       "thread_id": 120,
       "topic_field": "Gamification",
       "url": "/discussion/are-there-significant-differences-in-difficulty-between-pathway-modeling-tasks/120",
-      "views": 22
+      "views": 24
     },
     {
       "document_id": null,
@@ -529,7 +529,7 @@
       "thread_id": 121,
       "topic_field": "",
       "url": "/discussion/how-about-examples-of-the-awesome-science-that-pathway-modeling-enables/121",
-      "views": 32
+      "views": 33
     },
     {
       "document_id": null,
@@ -553,7 +553,7 @@
       "thread_id": 123,
       "topic_field": "Crowdsourcing,Gamification,Science Games,Serious Games",
       "url": "/discussion/what-made-previous-crowdsourced-science-games-succeed-or-not/123",
-      "views": 37
+      "views": 39
     }
   ]
 }

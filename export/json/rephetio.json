@@ -3736,8 +3736,8 @@
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#2"
     },
     {
-      "body_html": "<p>Project Rephetio has finally reached its prediction stage. A brief recap, we created <a href=\"https://github.com/dhimmel/hetionet\" title=\"Hetionet on GitHub\">Hetionet v1.0</a> — an integrative network with 2,250,197 relationships of 24 types. Then we extracted features from the network to quantify the prevalence of specific path types between each compound and disease. Finally, we <a href=\"https://thinklab.com/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d210\">fit a model</a> to translate from network-based features to a probability of treatment for a given compound–disease pair.</p>\r\n\r\n<p>In total, we make predictions for 209,168 compound–disease pairs between 1,538 approved small molecule compounds and 136 complex diseases. Our model was trained on 755 disease-modifying indications (treatments) from <a href=\"https://thinklab.com/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d182\">PharmacotherapyDB v1.0</a>. Hence, our predicted probabilities assume a true prevalence of treatment of 0.36%. Note that in reality the prevalence of treatment is higher and thus are predicted probabilities are on the low side.</p>\r\n\r\n<p><strong>Our top predictions (probability &gt; 1%) are available in this <a href=\"https://docs.zoho.com/sheet/published.do?rid=e69hz753221749d71463d874d3cb7eeed03c6\" title=\"Project Rephetio Top Predictions\">online spreadsheet</a>.</strong> The full set of predictions is available as <a href=\"https://github.com/dhimmel/learn/blob/a7766ea00da67f5cf03bd77e6e613a262918f1b8/prediction/predictions/probabilities.tsv\" title=\"probabilities.tsv on GitHub\">TSV file</a>.</p>\r\n\r\n<p>Our model relied heavily on the following features which positively influence the prediction. Each feature corresponds to a type of path:</p>\r\n\r\n<ul><li><strong>CbGbCtD</strong>: whether the compound binds to the same genes as compounds which treat the disease</li><li><strong>CbGaD</strong>: whether the compound binds to genes that are associated with the disease</li><li><strong>CiPCiCtD</strong>: whether the compound belongs to the same pharmacologic classes as compounds that treat the disease</li><li><strong>CrCtD</strong>: whether the compound chemically resembles compounds that treat the disease</li><li><strong>CtDrD</strong>: whether the compound treats diseases which resemble the disease</li><li><strong>CrCrCtD</strong>: whether the compound resembles compounds that resemble compounds that treat the disease.</li><li><strong>CcSEcCtD</strong>: whether the compound causes the same side effects as compounds that treat the disease</li><li><strong>CpDpCtD</strong>: whether the compound palliates the same diseases as compounds that treat the disease</li><li><strong>CbGpPWpGaD</strong>: whether the compound binds to genes that participate in the same pathways as genes associated with the disease</li><li><strong>CbGeAlD</strong>: whether the compound binds to genes that are expressed in the anatomies affected by the disease</li></ul>\r\n\r\n<p>We are working on a method for investigating the specific network paths supporting each prediction. Stay tuned and let us know what you think of the predictions.</p>",
-      "body_md": "Project Rephetio has finally reached its prediction stage. A brief recap, we created [Hetionet v1.0](https://github.com/dhimmel/hetionet \"Hetionet on GitHub\") -- an integrative network with 2,250,197 relationships of 24 types. Then we extracted features from the network to quantify the prevalence of specific path types between each compound and disease. Finally, we [fit a model](https://thinklab.com/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4) to translate from network-based features to a probability of treatment for a given compound--disease pair.\r\n\r\nIn total, we make predictions for 209,168 compound--disease pairs between 1,538 approved small molecule compounds and 136 complex diseases. Our model was trained on 755 disease-modifying indications (treatments) from [PharmacotherapyDB v1.0](https://thinklab.com/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182). Hence, our predicted probabilities assume a true prevalence of treatment of 0.36%. Note that in reality the prevalence of treatment is higher and thus are predicted probabilities are on the low side.\r\n\r\n**Our top predictions (probability > 1%) are available in this [online spreadsheet](https://docs.zoho.com/sheet/published.do?rid=e69hz753221749d71463d874d3cb7eeed03c6 \"Project Rephetio Top Predictions\").** The full set of predictions is available as [TSV file](https://github.com/dhimmel/learn/blob/a7766ea00da67f5cf03bd77e6e613a262918f1b8/prediction/predictions/probabilities.tsv \"probabilities.tsv on GitHub\").\r\n\r\nOur model relied heavily on the following features which positively influence the prediction. Each feature corresponds to a type of path:\r\n\r\n+ **CbGbCtD**: whether the compound binds to the same genes as compounds which treat the disease\r\n+ **CbGaD**: whether the compound binds to genes that are associated with the disease\r\n+ **CiPCiCtD**: whether the compound belongs to the same pharmacologic classes as compounds that treat the disease\r\n+ **CrCtD**: whether the compound chemically resembles compounds that treat the disease\r\n+ **CtDrD**: whether the compound treats diseases which resemble the disease\r\n+ **CrCrCtD**: whether the compound resembles compounds that resemble compounds that treat the disease.\r\n+ **CcSEcCtD**: whether the compound causes the same side effects as compounds that treat the disease\r\n+ **CpDpCtD**: whether the compound palliates the same diseases as compounds that treat the disease\r\n+ **CbGpPWpGaD**: whether the compound binds to genes that participate in the same pathways as genes associated with the disease\r\n+ **CbGeAlD**: whether the compound binds to genes that are expressed in the anatomies affected by the disease\r\n\r\nWe are working on a method for investigating the specific network paths supporting each prediction. Stay tuned and let us know what you think of the predictions.",
+      "body_html": "<p>Project Rephetio has finally reached its prediction stage. A brief recap, we created <a href=\"https://github.com/dhimmel/hetionet\" title=\"Hetionet on GitHub\">Hetionet v1.0</a> — an integrative network with 2,250,197 relationships of 24 types. Then we extracted features from the network to quantify the prevalence of specific path types between each compound and disease. Finally, we <a href=\"https://thinklab.com/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d210\">fit a model</a> to translate from network-based features to a probability of treatment for a given compound–disease pair.</p>\r\n\r\n<p>In total, we make predictions for 209,168 compound–disease pairs between 1,538 approved small molecule compounds and 136 complex diseases. Our model was trained on 755 disease-modifying indications (treatments) from <a href=\"https://thinklab.com/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d182\">PharmacotherapyDB v1.0</a>. Hence, our predicted probabilities assume a true prevalence of treatment of 0.36%. Note that in reality the prevalence of treatment is higher and thus are predicted probabilities are on the low side.</p>\r\n\r\n<p>Our top predictions (probability &gt; 1%) are available in this <a href=\"https://docs.zoho.com/sheet/published.do?rid=e69hz753221749d71463d874d3cb7eeed03c6\" title=\"Project Rephetio Top Predictions\">online spreadsheet</a>. The full set of predictions is available as <a href=\"https://github.com/dhimmel/learn/blob/a7766ea00da67f5cf03bd77e6e613a262918f1b8/prediction/predictions/probabilities.tsv\" title=\"probabilities.tsv on GitHub\">TSV file</a>.</p>\r\n\r\n<p>Our model relied heavily on the following features which positively influence the prediction. Each feature corresponds to a type of path:</p>\r\n\r\n<ul><li><strong>CbGbCtD</strong>: whether the compound binds to the same genes as compounds which treat the disease</li><li><strong>CbGaD</strong>: whether the compound binds to genes that are associated with the disease</li><li><strong>CiPCiCtD</strong>: whether the compound belongs to the same pharmacologic classes as compounds that treat the disease</li><li><strong>CrCtD</strong>: whether the compound chemically resembles compounds that treat the disease</li><li><strong>CtDrD</strong>: whether the compound treats diseases which resemble the disease</li><li><strong>CrCrCtD</strong>: whether the compound resembles compounds that resemble compounds that treat the disease.</li><li><strong>CcSEcCtD</strong>: whether the compound causes the same side effects as compounds that treat the disease</li><li><strong>CpDpCtD</strong>: whether the compound palliates the same diseases as compounds that treat the disease</li><li><strong>CbGpPWpGaD</strong>: whether the compound binds to genes that participate in the same pathways as genes associated with the disease</li><li><strong>CbGeAlD</strong>: whether the compound binds to genes that are expressed in the anatomies affected by the disease</li></ul>\r\n\r\n<p>We are working on a method for investigating the specific network paths supporting each prediction. Stay tuned and let us know what you think of the predictions.</p>",
+      "body_md": "Project Rephetio has finally reached its prediction stage. A brief recap, we created [Hetionet v1.0](https://github.com/dhimmel/hetionet \"Hetionet on GitHub\") -- an integrative network with 2,250,197 relationships of 24 types. Then we extracted features from the network to quantify the prevalence of specific path types between each compound and disease. Finally, we [fit a model](https://thinklab.com/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4) to translate from network-based features to a probability of treatment for a given compound--disease pair.\r\n\r\nIn total, we make predictions for 209,168 compound--disease pairs between 1,538 approved small molecule compounds and 136 complex diseases. Our model was trained on 755 disease-modifying indications (treatments) from [PharmacotherapyDB v1.0](https://thinklab.com/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182). Hence, our predicted probabilities assume a true prevalence of treatment of 0.36%. Note that in reality the prevalence of treatment is higher and thus are predicted probabilities are on the low side.\r\n\r\nOur top predictions (probability > 1%) are available in this [online spreadsheet](https://docs.zoho.com/sheet/published.do?rid=e69hz753221749d71463d874d3cb7eeed03c6 \"Project Rephetio Top Predictions\"). The full set of predictions is available as [TSV file](https://github.com/dhimmel/learn/blob/a7766ea00da67f5cf03bd77e6e613a262918f1b8/prediction/predictions/probabilities.tsv \"probabilities.tsv on GitHub\").\r\n\r\nOur model relied heavily on the following features which positively influence the prediction. Each feature corresponds to a type of path:\r\n\r\n+ **CbGbCtD**: whether the compound binds to the same genes as compounds which treat the disease\r\n+ **CbGaD**: whether the compound binds to genes that are associated with the disease\r\n+ **CiPCiCtD**: whether the compound belongs to the same pharmacologic classes as compounds that treat the disease\r\n+ **CrCtD**: whether the compound chemically resembles compounds that treat the disease\r\n+ **CtDrD**: whether the compound treats diseases which resemble the disease\r\n+ **CrCrCtD**: whether the compound resembles compounds that resemble compounds that treat the disease.\r\n+ **CcSEcCtD**: whether the compound causes the same side effects as compounds that treat the disease\r\n+ **CpDpCtD**: whether the compound palliates the same diseases as compounds that treat the disease\r\n+ **CbGpPWpGaD**: whether the compound binds to genes that participate in the same pathways as genes associated with the disease\r\n+ **CbGeAlD**: whether the compound binds to genes that are expressed in the anatomies affected by the disease\r\n\r\nWe are working on a method for investigating the specific network paths supporting each prediction. Stay tuned and let us know what you think of the predictions.",
       "comment_id": 1273,
       "profile_id": 17,
       "published": "2016-05-17T18:29:23.509801Z",
@@ -3907,8 +3907,8 @@
       "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212#2"
     },
     {
-      "body_html": "<p><strong>Update on 2015-05-11:</strong> The OMx team in charge of DrugBank's licensing has been highly responsive and is working to address many of the issues we've raised (see below). We'll update this discussion with progress.</p>\r\n\r\n<hr>\r\n\r\n<p><a href=\"http://www.drugbank.ca/\">DrugBank</a> is a database of drugs which includes information on drug biochemistry and pharmacology <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkj067\" class=\"citation\" data-key=\"10.1093/nar/gkj067\">1</a>, <a href=\"/doi/10.1093/nar/gkm958\" class=\"citation\" data-key=\"10.1093/nar/gkm958\">2</a>, <a href=\"/doi/10.1093/nar/gkq1126\" class=\"citation\" data-key=\"10.1093/nar/gkq1126\">3</a>, <a href=\"/doi/10.1093/nar/gkt1068\" class=\"citation\" data-key=\"10.1093/nar/gkt1068\">4</a>]</span>. DrugBank is a publicly-funded resource that is frequently used for biomedical research. Google Scholar <a href=\"https://scholar.google.com/scholar?q=drugbank&amp;hl=en&amp;as_sdt=0%2C5&amp;as_ylo=2006&amp;as_yhi=2015\" title=\"Google Scholar Search for articles mentioning DrugBank from 2006–2015\">returns</a> 8,940 studies which mention \"DrugBank\" during its first decade of existence (2006–2015).</p>\r\n\r\n<p>When we began using DrugBank for Project Rephetio and Hetionet in 2015, DrugBank <a href=\"https://github.com/dhimmel/integrate/blob/7b95bf337d6e43e54457621f39a7341e620138f7/licenses/custom/DrugBank.md\" title=\"Archive of DrugBank's legal statement from 2015-08-20\">had</a> a brief legal statement:</p>\r\n\r\n<blockquote><p>DrugBank is offered to the public as a freely available resource. Use and re-distribution of the data, in whole or in part, for commercial purposes requires explicit permission of the authors and explicit acknowledgment of the source material (DrugBank) and the original publication.</p></blockquote>\r\n\r\n<p>Therefore, in accordance with our <a href=\"https://thinklab.com/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107#14\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d107\">data-licensing compliance strategy</a>, we applied a <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\" title=\"Creative Commons Attribution-NonCommercial 4.0 International\">CC BY-NC</a> license to DrugBank data. The non-commercial stipulation was regrettable because it discriminates against a class of user and precludes the data from being <a href=\"http://opendefinition.org/od/2.1/en/\" title=\"Open Definition 2.1\">open knowledge</a>. Additionally, what qualifies as commercial reuse is unclear and potentially broad making NC stipulations especially toxic <span class=\"citation\">[<a href=\"/doi/10.3897/zookeys.150.2189\" class=\"citation\" data-key=\"10.3897/zookeys.150.2189\">5</a>]</span>.</p>\r\n\r\n<p>Nonetheless, many publicly-funded resources will specify \"academic use only\" by habit, without appreciating the full ramifications of their discrimination. Hence, I assumed that DrugBank was effectively an open resource with a poorly-devised license statement.</p>\r\n\r\n<p>The <a href=\"http://www.drugbank.ca/releases/4-5-0/release_notes\">release</a> of DrugBank 4.5 on April 20, 2016 dispelled my naiveté. DrugBank has been hijacked by the commercial interests of the University of Alberta and OMx. <a href=\"http://omx.io/\" title=\"OMx Personal Health Analytics\">OMx</a> is a company <a href=\"http://entrepreneurship.ualberta.ca/ehub/ehub-startups/omx\" title=\"Entrepreneurship @ UAlberta eHUB Startups Interview\">started</a> in 2012 at the University of Alberta, which currently lists DrugBank as their only product. While the University of Alberta asserts to own DrugBank, OMx is responsible for commercial DrugBank licensing.</p>\r\n\r\n<p>Downloading DrugBank now requires registration. To <a href=\"http://www.drugbank.ca/public_users/sign_up\" title=\"Sign up for DrugBank account\">register</a>, users must provide their name, contact information, university/institutional affiliation, and intended use of DrugBank. Additionally, registration is contingent upon entering into the following agreement:</p>\r\n\r\n<blockquote><p>I accept DrugBank's Privacy Policy, Terms of Use, and the above End User License Agreement (required)</p><p>By checking the above box, you are confirming that your use of DrugBank shall not be for commercial purposes. If you wish to use DrugBank for commercial purposes, contact <a href=\"mailto:info@omx.io\">info@omx.io</a> to inquire about a separate agreement with OMx.</p></blockquote>\r\n\r\n<p>My next post will examine how the new <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md\" title=\"Archive of the Privacy Policy from 2016-05-08\">Privacy Policy</a>, <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md\" title=\"Archive of the Terms of Use from 2016-05-08\">Terms of Use</a>, and <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md\" title=\"Archive of the End User License Agreement from 2016-05-08\">License Agreement</a> inhibit reuse of DrugBank. In essence, DrugBank has chosen a path that prioritizes licensing revenue over public reuse. Its heavy-handed legal infrastructure presents a grave barrier to reuse. The academic community must now consider parting ways with what has been a foundational resource.</p>",
-      "body_md": "**Update on 2015-05-11:** The OMx team in charge of DrugBank's licensing has been highly responsive and is working to address many of the issues we've raised (see below). We'll update this discussion with progress.\r\n\r\n***\r\n\r\n[DrugBank](http://www.drugbank.ca/) is a database of drugs which includes information on drug biochemistry and pharmacology [@10.1093/nar/gkj067 @10.1093/nar/gkm958 @10.1093/nar/gkq1126 @10.1093/nar/gkt1068]. DrugBank is a publicly-funded resource that is frequently used for biomedical research. Google Scholar [returns](https://scholar.google.com/scholar?q=drugbank&hl=en&as_sdt=0%2C5&as_ylo=2006&as_yhi=2015 \"Google Scholar Search for articles mentioning DrugBank from 2006–2015\") 8,940 studies which mention \"DrugBank\" during its first decade of existence (2006–2015).\r\n\r\nWhen we began using DrugBank for Project Rephetio and Hetionet in 2015, DrugBank [had](https://github.com/dhimmel/integrate/blob/7b95bf337d6e43e54457621f39a7341e620138f7/licenses/custom/DrugBank.md \"Archive of DrugBank's legal statement from 2015-08-20\") a brief legal statement:\r\n\r\n> DrugBank is offered to the public as a freely available resource. Use and re-distribution of the data, in whole or in part, for commercial purposes requires explicit permission of the authors and explicit acknowledgment of the source material (DrugBank) and the original publication.\r\n\r\nTherefore, in accordance with our [data-licensing compliance strategy](https://thinklab.com/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107#14), we applied a [CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/ \"Creative Commons Attribution-NonCommercial 4.0 International\") license to DrugBank data. The non-commercial stipulation was regrettable because it discriminates against a class of user and precludes the data from being [open knowledge](http://opendefinition.org/od/2.1/en/ \"Open Definition 2.1\"). Additionally, what qualifies as commercial reuse is unclear and potentially broad making NC stipulations especially toxic [@10.3897/zookeys.150.2189].\r\n\r\nNonetheless, many publicly-funded resources will specify \"academic use only\" by habit, without appreciating the full ramifications of their discrimination. Hence, I assumed that DrugBank was effectively an open resource with a poorly-devised license statement.\r\n\r\nThe [release](http://www.drugbank.ca/releases/4-5-0/release_notes) of DrugBank 4.5 on April 20, 2016 dispelled my naiveté. DrugBank has been hijacked by the commercial interests of the University of Alberta and OMx. [OMx](http://omx.io/ \"OMx Personal Health Analytics\") is a company [started](http://entrepreneurship.ualberta.ca/ehub/ehub-startups/omx \"Entrepreneurship @ UAlberta eHUB Startups Interview\") in 2012 at the University of Alberta, which currently lists DrugBank as their only product. While the University of Alberta asserts to own DrugBank, OMx is responsible for commercial DrugBank licensing.\r\n\r\nDownloading DrugBank now requires registration. To [register](http://www.drugbank.ca/public_users/sign_up \"Sign up for DrugBank account\"), users must provide their name, contact information, university/institutional affiliation, and intended use of DrugBank. Additionally, registration is contingent upon entering into the following agreement:\r\n\r\n> I accept DrugBank's Privacy Policy, Terms of Use, and the above End User License Agreement (required)\r\n\r\n> By checking the above box, you are confirming that your use of DrugBank shall not be for commercial purposes. If you wish to use DrugBank for commercial purposes, contact info@omx.io to inquire about a separate agreement with OMx.\r\n\r\nMy next post will examine how the new [Privacy Policy](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md \"Archive of the Privacy Policy from 2016-05-08\"), [Terms of Use](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md \"Archive of the Terms of Use from 2016-05-08\"), and [License Agreement](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md \"Archive of the End User License Agreement from 2016-05-08\") inhibit reuse of DrugBank. In essence, DrugBank has chosen a path that prioritizes licensing revenue over public reuse. Its heavy-handed legal infrastructure presents a grave barrier to reuse. The academic community must now consider parting ways with what has been a foundational resource.",
+      "body_html": "<p><strong>Update on 2016-06-21:</strong> The OMx team in charge of DrugBank's licensing was highly responsive and thoroughly addressed the issues I raised. See <a href=\"/u/cknoxrun\" class=\"username\">@cknoxrun</a>'s <a href=\"#10\">description below</a> of the revised DrugBank licensing.</p>\r\n\r\n<hr>\r\n\r\n<p><a href=\"http://www.drugbank.ca/\">DrugBank</a> is a database of drugs which includes information on drug biochemistry and pharmacology <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkj067\" class=\"citation\" data-key=\"10.1093/nar/gkj067\">1</a>, <a href=\"/doi/10.1093/nar/gkm958\" class=\"citation\" data-key=\"10.1093/nar/gkm958\">2</a>, <a href=\"/doi/10.1093/nar/gkq1126\" class=\"citation\" data-key=\"10.1093/nar/gkq1126\">3</a>, <a href=\"/doi/10.1093/nar/gkt1068\" class=\"citation\" data-key=\"10.1093/nar/gkt1068\">4</a>]</span>. DrugBank is a publicly-funded resource that is frequently used for biomedical research. Google Scholar <a href=\"https://scholar.google.com/scholar?q=drugbank&amp;hl=en&amp;as_sdt=0%2C5&amp;as_ylo=2006&amp;as_yhi=2015\" title=\"Google Scholar Search for articles mentioning DrugBank from 2006–2015\">returns</a> 8,940 studies which mention \"DrugBank\" during its first decade of existence (2006–2015).</p>\r\n\r\n<p>When we began using DrugBank for Project Rephetio and Hetionet in 2015, DrugBank <a href=\"https://github.com/dhimmel/integrate/blob/7b95bf337d6e43e54457621f39a7341e620138f7/licenses/custom/DrugBank.md\" title=\"Archive of DrugBank's legal statement from 2015-08-20\">had</a> a brief legal statement:</p>\r\n\r\n<blockquote><p>DrugBank is offered to the public as a freely available resource. Use and re-distribution of the data, in whole or in part, for commercial purposes requires explicit permission of the authors and explicit acknowledgment of the source material (DrugBank) and the original publication.</p></blockquote>\r\n\r\n<p>Therefore, in accordance with our <a href=\"https://thinklab.com/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107#14\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d107\">data-licensing compliance strategy</a>, we applied a <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\" title=\"Creative Commons Attribution-NonCommercial 4.0 International\">CC BY-NC</a> license to DrugBank data. The non-commercial stipulation was regrettable because it discriminates against a class of user and precludes the data from being <a href=\"http://opendefinition.org/od/2.1/en/\" title=\"Open Definition 2.1\">open knowledge</a>. Additionally, what qualifies as commercial reuse is unclear and potentially broad making NC stipulations especially toxic <span class=\"citation\">[<a href=\"/doi/10.3897/zookeys.150.2189\" class=\"citation\" data-key=\"10.3897/zookeys.150.2189\">5</a>]</span>.</p>\r\n\r\n<p>Nonetheless, many publicly-funded resources will specify \"academic use only\" by habit, without appreciating the full ramifications of their discrimination. Hence, I assumed that DrugBank was effectively an open resource with a poorly-devised license statement.</p>\r\n\r\n<p>The <a href=\"http://www.drugbank.ca/releases/4-5-0/release_notes\">release</a> of DrugBank 4.5 on April 20, 2016 dispelled my naiveté. DrugBank has been hijacked by the commercial interests of the University of Alberta and OMx. <a href=\"http://omx.io/\" title=\"OMx Personal Health Analytics\">OMx</a> is a company <a href=\"http://entrepreneurship.ualberta.ca/ehub/ehub-startups/omx\" title=\"Entrepreneurship @ UAlberta eHUB Startups Interview\">started</a> in 2012 at the University of Alberta, which currently lists DrugBank as their only product. While the University of Alberta asserts to own DrugBank, OMx is responsible for commercial DrugBank licensing.</p>\r\n\r\n<p>Downloading DrugBank now requires registration. To <a href=\"http://www.drugbank.ca/public_users/sign_up\" title=\"Sign up for DrugBank account\">register</a>, users must provide their name, contact information, university/institutional affiliation, and intended use of DrugBank. Additionally, registration is contingent upon entering into the following agreement:</p>\r\n\r\n<blockquote><p>I accept DrugBank's Privacy Policy, Terms of Use, and the above End User License Agreement (required)</p><p>By checking the above box, you are confirming that your use of DrugBank shall not be for commercial purposes. If you wish to use DrugBank for commercial purposes, contact <a href=\"mailto:info@omx.io\">info@omx.io</a> to inquire about a separate agreement with OMx.</p></blockquote>\r\n\r\n<p>My next post will examine how the new <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md\" title=\"Archive of the Privacy Policy from 2016-05-08\">Privacy Policy</a>, <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md\" title=\"Archive of the Terms of Use from 2016-05-08\">Terms of Use</a>, and <a href=\"https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md\" title=\"Archive of the End User License Agreement from 2016-05-08\">License Agreement</a> inhibit reuse of DrugBank. In essence, DrugBank has chosen a path that prioritizes licensing revenue over public reuse. Its heavy-handed legal infrastructure presents a grave barrier to reuse. The academic community must now consider parting ways with what has been a foundational resource.</p>",
+      "body_md": "**Update on 2016-06-21:** The OMx team in charge of DrugBank's licensing was highly responsive and thoroughly addressed the issues I raised. See @cknoxrun's [description below](#10) of the revised DrugBank licensing.\r\n\r\n***\r\n\r\n[DrugBank](http://www.drugbank.ca/) is a database of drugs which includes information on drug biochemistry and pharmacology [@10.1093/nar/gkj067 @10.1093/nar/gkm958 @10.1093/nar/gkq1126 @10.1093/nar/gkt1068]. DrugBank is a publicly-funded resource that is frequently used for biomedical research. Google Scholar [returns](https://scholar.google.com/scholar?q=drugbank&hl=en&as_sdt=0%2C5&as_ylo=2006&as_yhi=2015 \"Google Scholar Search for articles mentioning DrugBank from 2006–2015\") 8,940 studies which mention \"DrugBank\" during its first decade of existence (2006–2015).\r\n\r\nWhen we began using DrugBank for Project Rephetio and Hetionet in 2015, DrugBank [had](https://github.com/dhimmel/integrate/blob/7b95bf337d6e43e54457621f39a7341e620138f7/licenses/custom/DrugBank.md \"Archive of DrugBank's legal statement from 2015-08-20\") a brief legal statement:\r\n\r\n> DrugBank is offered to the public as a freely available resource. Use and re-distribution of the data, in whole or in part, for commercial purposes requires explicit permission of the authors and explicit acknowledgment of the source material (DrugBank) and the original publication.\r\n\r\nTherefore, in accordance with our [data-licensing compliance strategy](https://thinklab.com/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107#14), we applied a [CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/ \"Creative Commons Attribution-NonCommercial 4.0 International\") license to DrugBank data. The non-commercial stipulation was regrettable because it discriminates against a class of user and precludes the data from being [open knowledge](http://opendefinition.org/od/2.1/en/ \"Open Definition 2.1\"). Additionally, what qualifies as commercial reuse is unclear and potentially broad making NC stipulations especially toxic [@10.3897/zookeys.150.2189].\r\n\r\nNonetheless, many publicly-funded resources will specify \"academic use only\" by habit, without appreciating the full ramifications of their discrimination. Hence, I assumed that DrugBank was effectively an open resource with a poorly-devised license statement.\r\n\r\nThe [release](http://www.drugbank.ca/releases/4-5-0/release_notes) of DrugBank 4.5 on April 20, 2016 dispelled my naiveté. DrugBank has been hijacked by the commercial interests of the University of Alberta and OMx. [OMx](http://omx.io/ \"OMx Personal Health Analytics\") is a company [started](http://entrepreneurship.ualberta.ca/ehub/ehub-startups/omx \"Entrepreneurship @ UAlberta eHUB Startups Interview\") in 2012 at the University of Alberta, which currently lists DrugBank as their only product. While the University of Alberta asserts to own DrugBank, OMx is responsible for commercial DrugBank licensing.\r\n\r\nDownloading DrugBank now requires registration. To [register](http://www.drugbank.ca/public_users/sign_up \"Sign up for DrugBank account\"), users must provide their name, contact information, university/institutional affiliation, and intended use of DrugBank. Additionally, registration is contingent upon entering into the following agreement:\r\n\r\n> I accept DrugBank's Privacy Policy, Terms of Use, and the above End User License Agreement (required)\r\n\r\n> By checking the above box, you are confirming that your use of DrugBank shall not be for commercial purposes. If you wish to use DrugBank for commercial purposes, contact info@omx.io to inquire about a separate agreement with OMx.\r\n\r\nMy next post will examine how the new [Privacy Policy](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/privacy.md \"Archive of the Privacy Policy from 2016-05-08\"), [Terms of Use](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/terms.md \"Archive of the Terms of Use from 2016-05-08\"), and [License Agreement](https://github.com/dhimmel/drugbank/blob/27ca084815803dff5d8c2ee3a7e85b7ef5cf23a1/legal/EULA.md \"Archive of the End User License Agreement from 2016-05-08\") inhibit reuse of DrugBank. In essence, DrugBank has chosen a path that prioritizes licensing revenue over public reuse. Its heavy-handed legal infrastructure presents a grave barrier to reuse. The academic community must now consider parting ways with what has been a foundational resource.",
       "comment_id": 1300,
       "profile_id": 17,
       "published": "2016-05-08T21:35:21.495978Z",
@@ -4067,6 +4067,78 @@
       "published": "2016-05-17T21:48:48.143975Z",
       "thread_id": 203,
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#2"
+    },
+    {
+      "body_html": "<p>One month ago, I asked a <a href=\"http://stackoverflow.com/q/37370820/4651668\">Stack Overflow question</a> on how to host a public (read only) Neo4j instance in the cloud. Now, our Neo4j instance is up and running, serving Hetionet over the World Wide Web at <strong><a href=\"https://neo4j.het.io\" title=\"Hetionet Neo4j Browser\">neo4j.het.io</a></strong>. Below is a screenshot of what the Neo4j Browser looks like:</p>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/16320501/216f2626-3966-11e6-8a0d-215f70b44be2.png\" alt=\"neo4j-browser\"></p>\r\n\r\n<p>The public browser let's anyone immediately interact with Hetionet. Since most potential users may not know the Cypher query language, we created a guide to help bring users up to speed. In addition to accessing Hetionet through the Neo4j Browser, users can programmatically query the Neo4j server using one of the <a href=\"https://neo4j.com/developer/language-guides/\" title=\"Neo4j Language Guides\">many supported languages</a>.</p>\r\n\r\n<h2>Technical details</h2>\r\n\r\n<p>Creating a public Hetionet instance using Neo4j was gratifying because it reinforced the benefits of migrating our hetnet infrastructure to Neo4j <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">1</a>]</span>. We're promptly leveraging advanced Neo4j capabilities that would have been impractical to develop in house. In fact, we really pushed Neo4j to its limits and submitted several help/feature requests and bug reports. Many of the features we're using just became available in Neo4j 3.0 released on April 26, 2016. Currently, our server runs Neo4j 3.0.2.</p>\r\n\r\n<p>Many of the issues we faced had to do with Neo4j Browser Guides. We use guides to provide documentation, examples, and explanations from within the Neo4j Browser. For example, in the screenshot above, the \"Hetionet in Neo4j\" frame is a guide. Hosting the HTML guides in a way that the Neo4j Browser could access was difficult. We ran into <a href=\"https://github.com/neo4j/neo4j-browser/issues/170\" title=\"neo4j/neo4j-browser Issue on GitHub: Playing guides from URL fails despite CORS being enabled\">CORS issues</a> but were eventually able to use the <a href=\"https://github.com/jexp/neo4j-guides/tree/master/guide-extension\"><code>guide-extension</code></a> to serve files from within the Neo4j instance (see issues <a href=\"https://github.com/jexp/neo4j-guides/issues/2\">a</a>, <a href=\"https://github.com/jexp/neo4j-guides/issues/4\">b</a>, <a href=\"https://github.com/jexp/neo4j-guides/issues/5\">c</a>) and circumvent the CORS problems.</p>\r\n\r\n<p>We also made several tweaks to make our Neo4j server appropriate for public access. We disabled authentication, set a <a href=\"http://stackoverflow.com/a/37425223/4651668\">query execution timeout</a>, created a <a href=\"http://stackoverflow.com/questions/37446895/configuring-a-neo4j-instance-to-use-a-default-grass-style\">GRASS style</a>, and enabled <a href=\"http://stackoverflow.com/questions/38015637/inserting-a-javascript-web-analytics-client-into-a-neo4j-browser\">web analytics</a>. As far as I'm aware, there are not many other groups hosting public Neo4j instances. I did draw inspiration from <a href=\"https://github.com/ryguyrg/panama-neo4j\"><code>ryguyrg/panama-neo4j</code></a> which makes it easy for users to create a Neo4j server containing the <a href=\"https://neo4j.com/blog/analyzing-panama-papers-neo4j/\">Panama Papers Hetnet</a>. However, users still have to host the server locally. Despite being uncommon, there shouldn't be any licensing issues with hosting a public server <span class=\"citation\">[<a href=\"/discussion/licensing-neo4j/130\" class=\"citation\" data-key=\"10.15363/thinklab.d130\">2</a>]</span>.</p>\r\n\r\n<p><a href=\"https://github.com/jexp\">Michael Hunger</a>, <a href=\"https://github.com/oskarhane\">Oskar Hane</a>, <a href=\"https://github.com/ikwattro\">Christophe Willemsen</a>, and <a href=\"https://stackoverflow.com/users/4989460/stdob\">stdob</a> were super helpful — thanks! During the process we suggested several enhancements including <a href=\"https://github.com/neo4j/neo4j-browser/issues/172\">multiple post-connect commands</a>, <a href=\"https://github.com/neo4j/neo4j-browser/issues/181\">setting AUTO-COMPLETE to OFF by default</a>, <a href=\"https://github.com/neo4j/neo4j-browser/issues/184\">play-topic support for URLs with capitalized characters</a>, and <a href=\"https://github.com/jexp/neo4j-guides/issues/9\">relative path support for playing guides</a>.</p>\r\n\r\n<h3>Cloud hosting</h3>\r\n\r\n<p>We used <a href=\"https://www.digitalocean.com/\">DigitalOcean</a> for our cloud hosting. They have a Ubuntu 14.04 Droplet with Docker 1.11.1 preconfigured, which reduced setup to a minimum. We went with a 2 GB Memory / 40 GB Disk Droplet that costs $20 a month and is located in a datacenter near New York City. DigitalOcean compared favorably to AWS in terms of price–performance ratio and user interface.</p>\r\n\r\n<h3>HTTPS</h3>\r\n\r\n<p>I added HTTPS/TLS support using <a href=\"https://letsencrypt.org/\">Let's Encrypt</a>, which <a href=\"/u/alizee\" class=\"username\">@alizee</a> previously recommended <span class=\"citation\">[<a href=\"/discussion/support-and-enforce-ssl-connections-to-thinklab/197\" class=\"citation\" data-key=\"10.15363/thinklab.d197\">3</a>]</span>. The <code>certbot</code> python package made obtaining the certificates easier than I expected (<a href=\"https://github.com/dhimmel/hetionet/blob/1ee2479b2d98de331dedce600ce08fca43d3395b/hetnet/neo4j/docker/ssl/install.sh\">code</a>). The one potential downside to Let's Encrypt is that I had to schedule a <code>cron</code> job to shutdown the Neo4j server and attempt certificate renewal on a weekly basis. This will result in short service outages. One advantage of enabling encryption is that users do not have to accept a self-signed certificate to use Bolt from within the Neo4j Browser. Bolt is the <a href=\"https://neo4j.com/blog/neo4j-3-0-massive-scale-developer-productivity/\">new binary protocol</a> to enable more efficient communication with the Neo4j server.</p>\r\n\r\n<h3>Docker</h3>\r\n\r\n<p>We created a Docker image (<a href=\"https://hub.docker.com/r/dhimmel/hetionet/\" title=\"dhimmel/hetionet on Docker Hub\"><code>dhimmel/hetionet</code></a>) for running the Hetionet Neo4j server. Our docker extends the <a href=\"https://hub.docker.com/_/neo4j/\">official Neo4j docker</a> and automatically downloads and configures the Hetionet database and guides. In addition to making deployment automatable and reliable, Docker promises to improve the reproducibility of computation <span class=\"citation\">[<a href=\"/doi/10.1101/056473\" class=\"citation\" data-key=\"10.1101/056473\">4</a>, <a href=\"/doi/10.1186/s13742-015-0087-0\" class=\"citation\" data-key=\"10.1186/s13742-015-0087-0\">5</a>, <a href=\"/doi/10.7717/peerj.1273\" class=\"citation\" data-key=\"10.7717/peerj.1273\">6</a>]</span>.</p>\r\n\r\n<h2>Suggestions</h2>\r\n\r\n<p>If you have suggestions on how to improve our Neo4j Browser or questions on how to use it, please don't by shy.</p>",
+      "body_md": "One month ago, I asked a [Stack Overflow question](http://stackoverflow.com/q/37370820/4651668) on how to host a public (read only) Neo4j instance in the cloud. Now, our Neo4j instance is up and running, serving Hetionet over the World Wide Web at **[neo4j.het.io](https://neo4j.het.io \"Hetionet Neo4j Browser\")**. Below is a screenshot of what the Neo4j Browser looks like:\r\n\r\n![neo4j-browser](https://cloud.githubusercontent.com/assets/1117703/16320501/216f2626-3966-11e6-8a0d-215f70b44be2.png)\r\n\r\nThe public browser let's anyone immediately interact with Hetionet. Since most potential users may not know the Cypher query language, we created a guide to help bring users up to speed. In addition to accessing Hetionet through the Neo4j Browser, users can programmatically query the Neo4j server using one of the [many supported languages](https://neo4j.com/developer/language-guides/ \"Neo4j Language Guides\").\r\n\r\n## Technical details\r\n\r\nCreating a public Hetionet instance using Neo4j was gratifying because it reinforced the benefits of migrating our hetnet infrastructure to Neo4j [@10.15363/thinklab.d112]. We're promptly leveraging advanced Neo4j capabilities that would have been impractical to develop in house. In fact, we really pushed Neo4j to its limits and submitted several help/feature requests and bug reports. Many of the features we're using just became available in Neo4j 3.0 released on April 26, 2016. Currently, our server runs Neo4j 3.0.2.\r\n\r\nMany of the issues we faced had to do with Neo4j Browser Guides. We use guides to provide documentation, examples, and explanations from within the Neo4j Browser. For example, in the screenshot above, the \"Hetionet in Neo4j\" frame is a guide. Hosting the HTML guides in a way that the Neo4j Browser could access was difficult. We ran into [CORS issues](https://github.com/neo4j/neo4j-browser/issues/170 \"neo4j/neo4j-browser Issue on GitHub: Playing guides from URL fails despite CORS being enabled\") but were eventually able to use the [`guide-extension`](https://github.com/jexp/neo4j-guides/tree/master/guide-extension) to serve files from within the Neo4j instance (see issues [a](https://github.com/jexp/neo4j-guides/issues/2), [b](https://github.com/jexp/neo4j-guides/issues/4), [c](https://github.com/jexp/neo4j-guides/issues/5)) and circumvent the CORS problems.\r\n\r\nWe also made several tweaks to make our Neo4j server appropriate for public access. We disabled authentication, set a [query execution timeout](http://stackoverflow.com/a/37425223/4651668), created a [GRASS style](http://stackoverflow.com/questions/37446895/configuring-a-neo4j-instance-to-use-a-default-grass-style), and enabled [web analytics](http://stackoverflow.com/questions/38015637/inserting-a-javascript-web-analytics-client-into-a-neo4j-browser). As far as I'm aware, there are not many other groups hosting public Neo4j instances. I did draw inspiration from [`ryguyrg/panama-neo4j`](https://github.com/ryguyrg/panama-neo4j) which makes it easy for users to create a Neo4j server containing the [Panama Papers Hetnet](https://neo4j.com/blog/analyzing-panama-papers-neo4j/). However, users still have to host the server locally. Despite being uncommon, there shouldn't be any licensing issues with hosting a public server [@10.15363/thinklab.d130].\r\n\r\n[Michael Hunger](https://github.com/jexp), [Oskar Hane](https://github.com/oskarhane), [Christophe Willemsen](https://github.com/ikwattro), and [stdob](https://stackoverflow.com/users/4989460/stdob) were super helpful -- thanks! During the process we suggested several enhancements including [multiple post-connect commands](https://github.com/neo4j/neo4j-browser/issues/172), [setting AUTO-COMPLETE to OFF by default](https://github.com/neo4j/neo4j-browser/issues/181), [play-topic support for URLs with capitalized characters](https://github.com/neo4j/neo4j-browser/issues/184), and [relative path support for playing guides](https://github.com/jexp/neo4j-guides/issues/9).\r\n\r\n### Cloud hosting\r\n\r\nWe used [DigitalOcean](https://www.digitalocean.com/) for our cloud hosting. They have a Ubuntu 14.04 Droplet with Docker 1.11.1 preconfigured, which reduced setup to a minimum. We went with a 2 GB Memory / 40 GB Disk Droplet that costs $20 a month and is located in a datacenter near New York City. DigitalOcean compared favorably to AWS in terms of price–performance ratio and user interface.\r\n\r\n### HTTPS\r\n\r\nI added HTTPS/TLS support using [Let's Encrypt](https://letsencrypt.org/), which @alizee previously recommended [@10.15363/thinklab.d197]. The `certbot` python package made obtaining the certificates easier than I expected ([code](https://github.com/dhimmel/hetionet/blob/1ee2479b2d98de331dedce600ce08fca43d3395b/hetnet/neo4j/docker/ssl/install.sh)). The one potential downside to Let's Encrypt is that I had to schedule a `cron` job to shutdown the Neo4j server and attempt certificate renewal on a weekly basis. This will result in short service outages. One advantage of enabling encryption is that users do not have to accept a self-signed certificate to use Bolt from within the Neo4j Browser. Bolt is the [new binary protocol](https://neo4j.com/blog/neo4j-3-0-massive-scale-developer-productivity/) to enable more efficient communication with the Neo4j server.\r\n\r\n### Docker\r\n\r\nWe created a Docker image ([`dhimmel/hetionet`](https://hub.docker.com/r/dhimmel/hetionet/ \"dhimmel/hetionet on Docker Hub\")) for running the Hetionet Neo4j server. Our docker extends the [official Neo4j docker](https://hub.docker.com/_/neo4j/) and automatically downloads and configures the Hetionet database and guides. In addition to making deployment automatable and reliable, Docker promises to improve the reproducibility of computation [@10.1101/056473 @10.1186/s13742-015-0087-0 @10.7717/peerj.1273].\r\n\r\n## Suggestions\r\n\r\nIf you have suggestions on how to improve our Neo4j Browser or questions on how to use it, please don't by shy.",
+      "comment_id": 1320,
+      "profile_id": 17,
+      "published": "2016-06-23T23:20:21.127421Z",
+      "thread_id": 216,
+      "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216"
+    },
+    {
+      "body_html": "<p>Hi Everyone,</p>\r\n\r\n<p>We've done a bunch of work on improving DrugBank's terms of use, license, and privacy policy. It's taken us a little longer to release than we had hoped, but has now been released as version 5.0.0 (http://www.drugbank.ca/releases/latest).</p>\r\n\r\n<p>If you click on Downloads the first thing you will notice is that you aren't hit with a login screen. Here are some of the additional steps we've taken:</p>\r\n\r\n<ol><li><p>The licensing is now more clear, the downloads that require an account to access are all released under a straightforward Creative Common’s Attribution-NonCommercial 4.0 International License. The blurb you now agree to when signing up makes this clear (see <a href=\"http://drugbank.ca/public_users/sign_up\">http://drugbank.ca/public_users/sign_up</a>). The blurb is now just there to provide a bit of extra context and disclaimers to warn against using DrugBank data as medical advice, as well as providing a better definition of what 'Non-commercial' means.</p></li><li><p>We have created a new 'Open Data' tab. The data here is released under a Creative Common’s CC0 International License, which is public domain. We have 2 datasets here and are working on more. 1) The DrugBank vocabulary which includes DrugBank IDs, names, UNIIs, CAS, InChI Key; 2) all DrugBank structures in SDF format. You do not have to create an account to download this data. We plan on adding more open datasets soon and on a regular basis.</p></li><li><p>Our terms of use have been updated to make it clear that the data on the DrugBank website can be freely copied and shared (in publications, presentations, documents, etc.)</p></li><li><p>Additionally the requirement for users being 18 or older has been changed to permit younger users (with parental consent). However, users are still required to be 13 or older.</p></li><li><p>We have tried to improve our definitions for 'Commercial Use' - we are expanding our FAQ to include more questions people might have about this. We will probably setup a dedicated page with different use cases very soon.</p></li></ol>\r\n\r\n<p>I hope this addresses everyone's concerns. We have a few more datasets that we will be putting in the Open Data section very soon, and hope to continue to push new datasets there regularly. Thanks for your patience and input (especially Daniel and Egon!). If you have any more questions or issues please don't hesitate to comment on here or email me directly at <a href=\"mailto:craig@omx.io\">craig@omx.io</a>.</p>\r\n\r\n<p>Thanks,<br>Craig, Mike, and the rest of the OMx/DrugBank team</p>",
+      "body_md": "Hi Everyone,\r\n\r\nWe've done a bunch of work on improving DrugBank's terms of use, license, and privacy policy. It's taken us a little longer to release than we had hoped, but has now been released as version 5.0.0 (http://www.drugbank.ca/releases/latest).\r\n\r\nIf you click on Downloads the first thing you will notice is that you aren't hit with a login screen. Here are some of the additional steps we've taken:\r\n\r\n1. The licensing is now more clear, the downloads that require an account to access are all released under a straightforward Creative Common’s Attribution-NonCommercial 4.0 International License. The blurb you now agree to when signing up makes this clear (see http://drugbank.ca/public_users/sign_up). The blurb is now just there to provide a bit of extra context and disclaimers to warn against using DrugBank data as medical advice, as well as providing a better definition of what 'Non-commercial' means.\r\n\r\n2. We have created a new 'Open Data' tab. The data here is released under a Creative Common’s CC0 International License, which is public domain. We have 2 datasets here and are working on more. 1) The DrugBank vocabulary which includes DrugBank IDs, names, UNIIs, CAS, InChI Key; 2) all DrugBank structures in SDF format. You do not have to create an account to download this data. We plan on adding more open datasets soon and on a regular basis.\r\n\r\n3. Our terms of use have been updated to make it clear that the data on the DrugBank website can be freely copied and shared (in publications, presentations, documents, etc.)\r\n\r\n4. Additionally the requirement for users being 18 or older has been changed to permit younger users (with parental consent). However, users are still required to be 13 or older.\r\n\r\n5. We have tried to improve our definitions for 'Commercial Use' - we are expanding our FAQ to include more questions people might have about this. We will probably setup a dedicated page with different use cases very soon.\r\n\r\nI hope this addresses everyone's concerns. We have a few more datasets that we will be putting in the Open Data section very soon, and hope to continue to push new datasets there regularly. Thanks for your patience and input (especially Daniel and Egon!). If you have any more questions or issues please don't hesitate to comment on here or email me directly at craig@omx.io.\r\n\r\nThanks,\r\nCraig, Mike, and the rest of the OMx/DrugBank team",
+      "comment_id": 1324,
+      "profile_id": 241,
+      "published": "2016-06-21T20:49:20.454745Z",
+      "thread_id": 213,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#10"
+    },
+    {
+      "body_html": "<h1>Announcing Prediction Browsing and Visualization</h1>\r\n\r\n<p>The Project Rephetio Browser is live at <a href=\"http://het.io/repurpose/\"><strong>het.io/repurpose</strong></a> letting you browse 209,168 drug repurposing predictions. Users can navigate by compound or by disease. Each prediction can be investigated in the Hetionet Browser — a read only Neo4j database available at <a href=\"https://neo4j.het.io/browser/\">neo4j.het.io</a> that we <a href=\"https://thinklab.com/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d216\">just released</a>.</p>\r\n\r\n<p>For each prediction, we created a guide for the Neo4j Browser to provide additional information. Details include a query to visualize the top ten paths contributing to a prediction as well as links to clinical trials investigating a compound–disease pair.</p>\r\n\r\n<h2>Seeking feedback</h2>\r\n\r\n<p>We'd love to hear what people think about our predictions. Are they reasonable? Are they interesting? Where do we do well? Where do we do poorly?</p>\r\n\r\n<p>We're especially interested in a few examples that showcase our approach. So please share any compound–disease pairs where our approach did a good job capturing the relevant pharmacology and disease pathophysiology.</p>\r\n\r\n<p>Paging our contributors with clinical or pharmacological expertise: <a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a> <a href=\"/u/chrissyhessler\" class=\"username\">@chrissyhessler</a> <a href=\"/u/TIOprea\" class=\"username\">@TIOprea</a> <a href=\"/u/cknoxrun\" class=\"username\">@cknoxrun</a> <a href=\"/u/mkgilson\" class=\"username\">@mkgilson</a> <a href=\"/u/alexanderpico\" class=\"username\">@alexanderpico</a> <a href=\"/u/allisonmccoy\" class=\"username\">@allisonmccoy</a> <a href=\"/u/ritukhare\" class=\"username\">@ritukhare</a>. All feedback is welcome!</p>",
+      "body_md": "# Announcing Prediction Browsing and Visualization\r\n\r\nThe Project Rephetio Browser is live at [**het.io/repurpose**](http://het.io/repurpose/) letting you browse 209,168 drug repurposing predictions. Users can navigate by compound or by disease. Each prediction can be investigated in the Hetionet Browser -- a read only Neo4j database available at [neo4j.het.io](https://neo4j.het.io/browser/) that we [just released](https://thinklab.com/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216).\r\n\r\nFor each prediction, we created a guide for the Neo4j Browser to provide additional information. Details include a query to visualize the top ten paths contributing to a prediction as well as links to clinical trials investigating a compound--disease pair.\r\n\r\n## Seeking feedback\r\n\r\nWe'd love to hear what people think about our predictions. Are they reasonable? Are they interesting? Where do we do well? Where do we do poorly?\r\n\r\nWe're especially interested in a few examples that showcase our approach. So please share any compound--disease pairs where our approach did a good job capturing the relevant pharmacology and disease pathophysiology.\r\n\r\nPaging our contributors with clinical or pharmacological expertise: @pouyakhankhanian @chrissyhessler @TIOprea @cknoxrun @mkgilson @alexanderpico @allisonmccoy @ritukhare. All feedback is welcome!",
+      "comment_id": 1325,
+      "profile_id": 17,
+      "published": "2016-06-23T23:59:22.582723Z",
+      "thread_id": 203,
+      "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#3"
+    },
+    {
+      "body_html": "<h1>Closing remarks</h1>\r\n\r\n<p>Thanks Craig, Mike, and the rest of the OMx/DrugBank team. I really appreciate your commendable communication, dedication to your userbase, and expediency addressing these issues. You've set a high bar for other resources to strive towards. While the overall process took 44 days, the changes were substantial, and it sounds like University approval took a large chunk of the time. In other words, when dealing with major licensing changes, I expect very few prominent resources will deliver in under 44 days.</p>\r\n\r\n<p>I am particularly excited about the CC0 subset that includes basic drug information. From an adoption and marketing standpoint, I think this makes sense. For someone who wants to use DrugBank identifiers and not worry about licensing, the change is huge. I'm hopeful that DrugBank taking this major step will motivate other biodata resources (even CC BY ones) to release essential components under CC0.</p>\r\n\r\n<p>Also I'm glad you removed the share-alike stipulation. Our experience suggests that license compatibility is a major obstacle to data integration <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">1</a>]</span>. Hence, applying share alike should be subject to strict scrutiny.</p>\r\n\r\n<p>The new licensing arrangement does a good job of balancing free public usage and commercial revenue generation. While for some applications, we may avoid using data with a non-commercial stipulation, it's nice to have the option of NC usage.</p>",
+      "body_md": "# Closing remarks\r\n\r\nThanks Craig, Mike, and the rest of the OMx/DrugBank team. I really appreciate your commendable communication, dedication to your userbase, and expediency addressing these issues. You've set a high bar for other resources to strive towards. While the overall process took 44 days, the changes were substantial, and it sounds like University approval took a large chunk of the time. In other words, when dealing with major licensing changes, I expect very few prominent resources will deliver in under 44 days.\r\n\r\nI am particularly excited about the CC0 subset that includes basic drug information. From an adoption and marketing standpoint, I think this makes sense. For someone who wants to use DrugBank identifiers and not worry about licensing, the change is huge. I'm hopeful that DrugBank taking this major step will motivate other biodata resources (even CC BY ones) to release essential components under CC0.\r\n\r\nAlso I'm glad you removed the share-alike stipulation. Our experience suggests that license compatibility is a major obstacle to data integration [@10.15363/thinklab.d107]. Hence, applying share alike should be subject to strict scrutiny.\r\n\r\nThe new licensing arrangement does a good job of balancing free public usage and commercial revenue generation. While for some applications, we may avoid using data with a non-commercial stipulation, it's nice to have the option of NC usage.",
+      "comment_id": 1326,
+      "profile_id": 17,
+      "published": "2016-06-24T16:50:52.603123Z",
+      "thread_id": 213,
+      "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#11"
+    },
+    {
+      "body_html": "<p>Great work! I have just started familiarizing myself with this database so I apologize if I misunderstand the terminology. </p>\r\n\r\n<p>I notice that in migraine, amitriptyline does not have a high predicted probability of treating migraine (0.013).  Yet this is a medication often used for migraine, similar to nortriptyline, which scores higher (0.086).</p>\r\n\r\n<p> Am I understanding this correctly? If so, why does amitriptyline not score highly?</p>",
+      "body_md": "Great work! I have just started familiarizing myself with this database so I apologize if I misunderstand the terminology. \r\n\r\nI notice that in migraine, amitriptyline does not have a high predicted probability of treating migraine (0.013).  Yet this is a medication often used for migraine, similar to nortriptyline, which scores higher (0.086).\r\n\r\n Am I understanding this correctly? If so, why does amitriptyline not score highly?",
+      "comment_id": 1327,
+      "profile_id": 172,
+      "published": "2016-06-24T17:23:18.354058Z",
+      "thread_id": 203,
+      "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#4"
+    },
+    {
+      "body_html": "<p>A small point- i think we should use the term \"epilepsy\" rather than \"epilepsy syndrome\"- the word syndrome implies that the epilepsy is part of a constellation of associated features. Perhaps Ari and Pouya can weigh in. </p>",
+      "body_md": "A small point- i think we should use the term \"epilepsy\" rather than \"epilepsy syndrome\"- the word syndrome implies that the epilepsy is part of a constellation of associated features. Perhaps Ari and Pouya can weigh in.",
+      "comment_id": 1328,
+      "profile_id": 172,
+      "published": "2016-06-24T17:37:55.436453Z",
+      "thread_id": 203,
+      "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#5"
+    },
+    {
+      "body_html": "<blockquote><p>I think we should use the term \"epilepsy\" rather than \"epilepsy syndrome\"</p></blockquote>\r\n\r\n<p>We rely on the <a href=\"http://disease-ontology.org/\">Disease Ontology</a> for coding diseases <span class=\"citation\">[<a href=\"/discussion/unifying-disease-vocabularies/44\" class=\"citation\" data-key=\"10.15363/thinklab.d44\">1</a>, <a href=\"/doi/10.1093/nar/gku1011\" class=\"citation\" data-key=\"10.1093/nar/gku1011\">2</a>]</span>. I'm hesitant to deviate from the Disease Ontology names because it adds an extra layer of complexity and upkeep. Instead, I relayed your request to the <a href=\"https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/159\" title=\"DiseaseOntology/HumanDiseaseOntology#159 on GitHub: Renaming epilepsy syndrome to epilepsy\">DO Issue Tracker</a>, as we've done in the past <span class=\"citation\">[<a href=\"/discussion/disease-ontology-feature-requests/68\" class=\"citation\" data-key=\"10.15363/thinklab.d68\">3</a>]</span>.</p>\r\n\r\n<p>Presently, we also have issues with some compound names that are ALL CAPS due to upstream issues in DrugBank. If many people feel strongly about these names, I'll reconsider fixing them on our end.</p>",
+      "body_md": "> I think we should use the term \"epilepsy\" rather than \"epilepsy syndrome\"\r\n\r\nWe rely on the [Disease Ontology](http://disease-ontology.org/) for coding diseases [@10.15363/thinklab.d44 @10.1093/nar/gku1011]. I'm hesitant to deviate from the Disease Ontology names because it adds an extra layer of complexity and upkeep. Instead, I relayed your request to the [DO Issue Tracker](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/159 \"DiseaseOntology/HumanDiseaseOntology#159 on GitHub: Renaming epilepsy syndrome to epilepsy\"), as we've done in the past [@10.15363/thinklab.d68].\r\n\r\nPresently, we also have issues with some compound names that are ALL CAPS due to upstream issues in DrugBank. If many people feel strongly about these names, I'll reconsider fixing them on our end.",
+      "comment_id": 1329,
+      "profile_id": 17,
+      "published": "2016-06-24T18:52:02.049295Z",
+      "thread_id": 203,
+      "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#6"
+    },
+    {
+      "body_html": "<h1>Amitriptyline versus nortriptyline for treating migraine</h1>\r\n\r\n<blockquote><p>I notice that in migraine, amitriptyline does not have a high predicted probability of treating migraine (0.013). Yet this is a medication often used for migraine, similar to nortriptyline, which scores higher (0.086).</p></blockquote>\r\n\r\n<p><a href=\"/u/chrissyhessler\" class=\"username\">@chrissyhessler</a>, great question regarding our <a href=\"http://het.io/repurpose/browse.html?id=DOID_6364\" title=\"Browse Project Rephetio predictions for migraine\">migraine predictions</a>.</p>\r\n\r\n<h2>Amitriptyline</h2>\r\n\r\n<p>We can use the Neo4j Browser to investigate the amitriptyline–migraine prediction (<a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB00321/DOID_6364.html\">follow this link</a> and press the play button). I've copied the first paragraph of the guide:</p>\r\n\r\n<blockquote><p>Project Rephetio predicted a <strong>probability of 1.390%</strong> that Amitriptyline (<a href=\"http://www.drugbank.ca/drugs/DB00321\"><code>DB00321</code></a>) treats migraine (<a href=\"http://www.disease-ontology.org/?id=DOID:6364\"><code>DOID:6364</code></a>). This probability represents a 2.85-fold enrichment over the background prevalence of treatment. This prediction is in the 97.8th percentile for Amitriptyline and the 93.9th percentile for migraine.</p></blockquote>\r\n\r\n<p>So one thing to note is that while the probability is low, amitriptyline comparatively scores highly. Our algorithm bases its probabilities around a positive prevalence of 0.36%, since there are 755 known treatments out of 209,168 possible compound–disease pairs. Therefore, while 1.39% sounds low, it's actually a 2.85-fold enrichment. Now let's look into the top 10 paths supporting that amitriptyline treats migraine (by executing the Cypher query in the guide):</p>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/16347762/6f9e5c7a-3a1c-11e6-8f3d-4d8abf81e2c0.png\" alt=\"Does Amitriptyline treat migraine?\"></p>\r\n\r\n<p>Amitriptyline–migraine is actually a cool example because it's not overwhelmingly supported by a single path. The 10th most influential path above (<em>amitriptyline–binds–HTR1A–associates–migraine</em>) still provides 3.53% of the total support (as shown in the second slide of the guide). <br>29.7% of the support is due to <em>CpDpCtD</em> paths (as shown in the third slide), which means amitriptyline palliates the same diseases as compounds that treat migraine. 29.0% of the support is due to <em>CbGaD</em> paths: amitriptyline binds to migraine-associated proteins. 16.7% of support is due to <em>CbGbCtD</em> paths: amitriptyline binds to similar proteins as compounds that treat migraine. 9.1% of support is due to <em>CrCrCtD</em> paths: amitriptyline is chemically similar to a compound that is chemical similar to a migraine treatment. The list goes on with support due to pathways (<em>CbGpPWpGaD</em>), side effects (<em>CcSEcCtD</em>), and tissue specificity (<em>CbGeAlD</em>).</p>\r\n\r\n<h2>Nortriptyline</h2>\r\n\r\n<p>If you already have the Neo4j Browser open, you can play the nortriptyline–migraine guide by running <code>:play https://neo4j.het.io/guides/rep/DB00540/DOID_6364.html</code>. The overview and 10 most supportive paths are copied below:</p>\r\n\r\n<blockquote><p>Project Rephetio predicted a <strong>probability of 8.615%</strong> that Nortriptyline (<a href=\"http://www.drugbank.ca/drugs/DB00540\"><code>DB00540</code></a>) treats migraine (<a href=\"http://www.disease-ontology.org/?id=DOID:6364\"><code>DOID:6364</code></a>). This probability represents a 22.86-fold enrichment over the background prevalence of treatment. This prediction is in the 100.0th percentile for Nortriptyline and the 99.4th percentile for migraine.</p></blockquote>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/16348316/c1a5ef12-3a1f-11e6-8d00-c44609f3e7fb.png\" alt=\"Does Nortriptyline treat migraine?\"></p>\r\n\r\n<p>Notice that many paths are the same for nortriptyline and amitriptyline. Both compounds target serotonin receptors that are associated with migraine. Both compounds share symptomatic uses that support their efficacy against migraine. Now the one major difference is the <em>nortriptyline–resembles–amitriptyline–treats–migraine</em> path, which provides 24.2% of the total support for the nortriptyline prediction.</p>\r\n\r\n<p>Why doesn't amitriptyline draw support from a <em>amitriptyline–resembles–nortriptyline–treats–migraine</em> path? <a href=\"https://thinklab.com/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d182\">PharmacotherapyDB</a> <strong>doesn't</strong> contain an indication between nortriptyline and migraine but <strong>does</strong> contain an indication between amitriptyline and migraine. While <a href=\"https://thinklab.com/discussion/path-exclusion-conditions/134#4\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d134\">we ignore</a> the amitriptyline–migraine treatment when extracting paths for the amitriptyline–migraine prediction, we do not ignore this treatment when extracting paths for the nortriptyline–migraine prediction.</p>\r\n\r\n<p>Hence, <a href=\"/u/chrissyhessler\" class=\"username\">@chrissyhessler</a> stumbled upon an interesting example of how missing knowledge in Hetionet combines with our machine learning approach to mediate predictions.</p>",
+      "body_md": "# Amitriptyline versus nortriptyline for treating migraine\r\n\r\n> I notice that in migraine, amitriptyline does not have a high predicted probability of treating migraine (0.013). Yet this is a medication often used for migraine, similar to nortriptyline, which scores higher (0.086).\r\n\r\n@chrissyhessler, great question regarding our [migraine predictions](http://het.io/repurpose/browse.html?id=DOID_6364 \"Browse Project Rephetio predictions for migraine\").\r\n\r\n## Amitriptyline\r\n\r\nWe can use the Neo4j Browser to investigate the amitriptyline--migraine prediction ([follow this link](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB00321/DOID_6364.html) and press the play button). I've copied the first paragraph of the guide:\r\n\r\n> Project Rephetio predicted a **probability of 1.390%** that Amitriptyline ([`DB00321`](http://www.drugbank.ca/drugs/DB00321)) treats migraine ([`DOID:6364`](http://www.disease-ontology.org/?id=DOID:6364)). This probability represents a 2.85-fold enrichment over the background prevalence of treatment. This prediction is in the 97.8th percentile for Amitriptyline and the 93.9th percentile for migraine.\r\n\r\nSo one thing to note is that while the probability is low, amitriptyline comparatively scores highly. Our algorithm bases its probabilities around a positive prevalence of 0.36%, since there are 755 known treatments out of 209,168 possible compound--disease pairs. Therefore, while 1.39% sounds low, it's actually a 2.85-fold enrichment. Now let's look into the top 10 paths supporting that amitriptyline treats migraine (by executing the Cypher query in the guide):\r\n\r\n![Does Amitriptyline treat migraine?](https://cloud.githubusercontent.com/assets/1117703/16347762/6f9e5c7a-3a1c-11e6-8f3d-4d8abf81e2c0.png)\r\n\r\nAmitriptyline--migraine is actually a cool example because it's not overwhelmingly supported by a single path. The 10th most influential path above (_amitriptyline--binds--HTR1A--associates--migraine_) still provides 3.53% of the total support (as shown in the second slide of the guide). \r\n29.7% of the support is due to _CpDpCtD_ paths (as shown in the third slide), which means amitriptyline palliates the same diseases as compounds that treat migraine. 29.0% of the support is due to _CbGaD_ paths: amitriptyline binds to migraine-associated proteins. 16.7% of support is due to _CbGbCtD_ paths: amitriptyline binds to similar proteins as compounds that treat migraine. 9.1% of support is due to _CrCrCtD_ paths: amitriptyline is chemically similar to a compound that is chemical similar to a migraine treatment. The list goes on with support due to pathways (_CbGpPWpGaD_), side effects (_CcSEcCtD_), and tissue specificity (_CbGeAlD_).\r\n\r\n## Nortriptyline\r\n\r\nIf you already have the Neo4j Browser open, you can play the nortriptyline--migraine guide by running `:play https://neo4j.het.io/guides/rep/DB00540/DOID_6364.html`. The overview and 10 most supportive paths are copied below:\r\n\r\n> Project Rephetio predicted a **probability of 8.615%** that Nortriptyline ([`DB00540`](http://www.drugbank.ca/drugs/DB00540)) treats migraine ([`DOID:6364`](http://www.disease-ontology.org/?id=DOID:6364)). This probability represents a 22.86-fold enrichment over the background prevalence of treatment. This prediction is in the 100.0th percentile for Nortriptyline and the 99.4th percentile for migraine.\r\n\r\n![Does Nortriptyline treat migraine?](https://cloud.githubusercontent.com/assets/1117703/16348316/c1a5ef12-3a1f-11e6-8d00-c44609f3e7fb.png)\r\n\r\nNotice that many paths are the same for nortriptyline and amitriptyline. Both compounds target serotonin receptors that are associated with migraine. Both compounds share symptomatic uses that support their efficacy against migraine. Now the one major difference is the _nortriptyline--resembles--amitriptyline--treats--migraine_ path, which provides 24.2% of the total support for the nortriptyline prediction.\r\n\r\nWhy doesn't amitriptyline draw support from a _amitriptyline--resembles--nortriptyline--treats--migraine_ path? [PharmacotherapyDB](https://thinklab.com/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182) **doesn't** contain an indication between nortriptyline and migraine but **does** contain an indication between amitriptyline and migraine. While [we ignore](https://thinklab.com/discussion/path-exclusion-conditions/134#4) the amitriptyline--migraine treatment when extracting paths for the amitriptyline--migraine prediction, we do not ignore this treatment when extracting paths for the nortriptyline--migraine prediction.\r\n\r\nHence, @chrissyhessler stumbled upon an interesting example of how missing knowledge in Hetionet combines with our machine learning approach to mediate predictions.",
+      "comment_id": 1330,
+      "profile_id": 17,
+      "published": "2016-06-24T20:35:03.139109Z",
+      "thread_id": 203,
+      "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#7"
     }
   ],
   "documents": [
@@ -4081,7 +4153,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 891
+      "views": 898
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -5770,7 +5842,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-06-18T23:20:02.643547Z",
+  "retrieved": "2016-06-24T20:38:35.120765Z",
   "threads": [
     {
       "document_id": null,
@@ -5782,7 +5854,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 398
+      "views": 402
     },
     {
       "document_id": null,
@@ -5794,7 +5866,7 @@
       "thread_id": 22,
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 106
+      "views": 107
     },
     {
       "document_id": null,
@@ -5806,7 +5878,7 @@
       "thread_id": 23,
       "topic_field": "Reproducibility",
       "url": "/discussion/enabling-reproducibility-and-reuse/23",
-      "views": 95
+      "views": 97
     },
     {
       "document_id": null,
@@ -5818,7 +5890,7 @@
       "thread_id": 25,
       "topic_field": "Python,R,Algorithms,Computer Science,SIDER,GSC Weighting,Gerstein-Sonnhammer-Chothia,Julia,Open Source Software",
       "url": "/discussion/seeking-an-open-source-implementation-of-the-gerstein-sonnhammer-chothia-algorithm/25",
-      "views": 119
+      "views": 120
     },
     {
       "document_id": null,
@@ -5842,7 +5914,7 @@
       "thread_id": 31,
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 66
+      "views": 69
     },
     {
       "document_id": null,
@@ -5854,7 +5926,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 126
+      "views": 127
     },
     {
       "document_id": null,
@@ -5866,7 +5938,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 184
+      "views": 185
     },
     {
       "document_id": null,
@@ -5878,7 +5950,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 222
+      "views": 228
     },
     {
       "document_id": null,
@@ -5890,7 +5962,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 112
+      "views": 113
     },
     {
       "document_id": null,
@@ -5914,7 +5986,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 324
+      "views": 327
     },
     {
       "document_id": null,
@@ -5926,7 +5998,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 157
+      "views": 161
     },
     {
       "document_id": null,
@@ -5938,7 +6010,7 @@
       "thread_id": 46,
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 76
+      "views": 77
     },
     {
       "document_id": null,
@@ -5962,7 +6034,7 @@
       "thread_id": 48,
       "topic_field": "Natural Language Processing,Relation Extraction,Bias,Prior Knowledge",
       "url": "/discussion/text-as-a-resource-for-network-population/48",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -5974,7 +6046,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 228
+      "views": 234
     },
     {
       "document_id": null,
@@ -5986,7 +6058,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 232
+      "views": 234
     },
     {
       "document_id": null,
@@ -5998,7 +6070,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 174
+      "views": 175
     },
     {
       "document_id": null,
@@ -6010,7 +6082,7 @@
       "thread_id": 57,
       "topic_field": "Evolution,Entrez Gene,ERC,UCSC Genome Browser,Evolutionary Rate Covariation",
       "url": "/discussion/selecting-informative-erc-evolutionary-rate-covariation-values-between-genes/57",
-      "views": 63
+      "views": 64
     },
     {
       "document_id": null,
@@ -6022,7 +6094,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 302
+      "views": 310
     },
     {
       "document_id": null,
@@ -6046,7 +6118,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 269
+      "views": 276
     },
     {
       "document_id": null,
@@ -6058,7 +6130,7 @@
       "thread_id": 66,
       "topic_field": "",
       "url": "/discussion/kabob-knowledgebase/66",
-      "views": 80
+      "views": 81
     },
     {
       "document_id": null,
@@ -6070,7 +6142,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 115
+      "views": 117
     },
     {
       "document_id": null,
@@ -6082,7 +6154,7 @@
       "thread_id": 68,
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 54
+      "views": 56
     },
     {
       "document_id": null,
@@ -6094,7 +6166,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 85
+      "views": 87
     },
     {
       "document_id": null,
@@ -6106,7 +6178,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 287
+      "views": 291
     },
     {
       "document_id": null,
@@ -6118,7 +6190,7 @@
       "thread_id": 72,
       "topic_field": "Databases,Networks,Pathways",
       "url": "/discussion/adding-pathway-resources-to-your-network/72",
-      "views": 87
+      "views": 88
     },
     {
       "document_id": null,
@@ -6130,7 +6202,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 156
+      "views": 158
     },
     {
       "document_id": null,
@@ -6142,7 +6214,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 300
+      "views": 307
     },
     {
       "document_id": null,
@@ -6154,7 +6226,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 279
+      "views": 283
     },
     {
       "document_id": null,
@@ -6166,7 +6238,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 565
+      "views": 582
     },
     {
       "document_id": null,
@@ -6178,7 +6250,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 580
+      "views": 587
     },
     {
       "document_id": null,
@@ -6190,7 +6262,7 @@
       "thread_id": 85,
       "topic_field": "Protein Interactions,Interactions,PPI",
       "url": "/discussion/creating-a-catalog-of-protein-interactions/85",
-      "views": 116
+      "views": 118
     },
     {
       "document_id": null,
@@ -6202,7 +6274,7 @@
       "thread_id": 91,
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 90
+      "views": 91
     },
     {
       "document_id": null,
@@ -6214,7 +6286,7 @@
       "thread_id": 93,
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 46
+      "views": 47
     },
     {
       "document_id": null,
@@ -6226,7 +6298,7 @@
       "thread_id": 94,
       "topic_field": "Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations",
       "url": "/discussion/functional-disease-annotations-for-genes-using-doaf/94",
-      "views": 53
+      "views": 55
     },
     {
       "document_id": null,
@@ -6238,7 +6310,7 @@
       "thread_id": 95,
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 171
+      "views": 177
     },
     {
       "document_id": null,
@@ -6250,7 +6322,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 185
+      "views": 190
     },
     {
       "document_id": null,
@@ -6262,7 +6334,7 @@
       "thread_id": 97,
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 107
+      "views": 109
     },
     {
       "document_id": null,
@@ -6274,7 +6346,7 @@
       "thread_id": 101,
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 89
+      "views": 90
     },
     {
       "document_id": null,
@@ -6286,7 +6358,7 @@
       "thread_id": 102,
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 202
+      "views": 204
     },
     {
       "document_id": null,
@@ -6310,7 +6382,7 @@
       "thread_id": 105,
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 82
+      "views": 84
     },
     {
       "document_id": null,
@@ -6322,7 +6394,7 @@
       "thread_id": 106,
       "topic_field": "Databases,Diseases,Associations",
       "url": "/discussion/processing-the-diseases-resource-for-diseasegene-relationships/106",
-      "views": 56
+      "views": 58
     },
     {
       "document_id": null,
@@ -6334,7 +6406,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 220
+      "views": 228
     },
     {
       "document_id": null,
@@ -6346,7 +6418,7 @@
       "thread_id": 108,
       "topic_field": "Copyright,Permission,Licensing,MSigDB,MIT",
       "url": "/discussion/msigdb-licensing/108",
-      "views": 101
+      "views": 103
     },
     {
       "document_id": null,
@@ -6358,7 +6430,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 195
+      "views": 200
     },
     {
       "document_id": null,
@@ -6370,7 +6442,7 @@
       "thread_id": 111,
       "topic_field": "Incomplete Interactome,Permission,Licensing,Copyright Transfer,Supplement,AAAS",
       "url": "/discussion/incomplete-interactome-licensing/111",
-      "views": 86
+      "views": 88
     },
     {
       "document_id": null,
@@ -6382,7 +6454,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 299
+      "views": 306
     },
     {
       "document_id": null,
@@ -6394,7 +6466,7 @@
       "thread_id": 113,
       "topic_field": "Citations,Publicity,Media Coverage,Reuse,Attention",
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113",
-      "views": 70
+      "views": 72
     },
     {
       "document_id": null,
@@ -6418,7 +6490,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 74
+      "views": 75
     },
     {
       "document_id": null,
@@ -6430,7 +6502,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 89
+      "views": 90
     },
     {
       "document_id": null,
@@ -6442,7 +6514,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 97
+      "views": 102
     },
     {
       "document_id": null,
@@ -6454,7 +6526,7 @@
       "thread_id": 136,
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 55
+      "views": 56
     },
     {
       "document_id": null,
@@ -6466,7 +6538,7 @@
       "thread_id": 162,
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 76
+      "views": 80
     },
     {
       "document_id": null,
@@ -6478,7 +6550,7 @@
       "thread_id": 171,
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 120
+      "views": 123
     },
     {
       "document_id": null,
@@ -6490,7 +6562,7 @@
       "thread_id": 178,
       "topic_field": "permutation,XSwap,network randomization,hetnets,hetio",
       "url": "/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178",
-      "views": 40
+      "views": 41
     },
     {
       "document_id": null,
@@ -6502,7 +6574,7 @@
       "thread_id": 181,
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 112
+      "views": 115
     },
     {
       "document_id": null,
@@ -6514,7 +6586,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 146
+      "views": 151
     },
     {
       "document_id": null,
@@ -6526,7 +6598,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 50
+      "views": 54
     },
     {
       "document_id": null,
@@ -6538,7 +6610,7 @@
       "thread_id": 186,
       "topic_field": "DrugCentral,pharmacology,Database",
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186",
-      "views": 61
+      "views": 64
     },
     {
       "document_id": null,
@@ -6550,7 +6622,7 @@
       "thread_id": 187,
       "topic_field": "complexity,runtime,optimization,Neo4J,join hints",
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187",
-      "views": 40
+      "views": 42
     },
     {
       "document_id": null,
@@ -6562,7 +6634,7 @@
       "thread_id": 193,
       "topic_field": "IHS,transformation,DWPC,regression",
       "url": "/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193",
-      "views": 37
+      "views": 39
     },
     {
       "document_id": null,
@@ -6574,7 +6646,7 @@
       "thread_id": 194,
       "topic_field": "HNEP,Hetnets,Machine learning,self-testing",
       "url": "/discussion/network-edge-prediction-how-to-deal-with-self-testing/194",
-      "views": 39
+      "views": 40
     },
     {
       "document_id": null,
@@ -6586,7 +6658,7 @@
       "thread_id": 200,
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 24
+      "views": 26
     },
     {
       "document_id": null,
@@ -6598,7 +6670,7 @@
       "thread_id": 201,
       "topic_field": "Machine learning,Heterogeneous Networks,Hetnets,HNEP,Prior Knowledge",
       "url": "/discussion/network-edge-prediction-estimating-the-prior/201",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
@@ -6610,7 +6682,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 55
+      "views": 57
     },
     {
       "document_id": null,
@@ -6622,7 +6694,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 50
+      "views": 64
     },
     {
       "document_id": null,
@@ -6634,7 +6706,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 110
+      "views": 126
     },
     {
       "document_id": null,
@@ -6646,7 +6718,7 @@
       "thread_id": 210,
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 40
+      "views": 44
     },
     {
       "document_id": null,
@@ -6658,7 +6730,7 @@
       "thread_id": 212,
       "topic_field": "clinical trials,ClinicalTrials.gov",
       "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212",
-      "views": 32
+      "views": 37
     },
     {
       "document_id": null,
@@ -6670,7 +6742,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 263
+      "views": 292
     },
     {
       "document_id": null,
@@ -6682,7 +6754,7 @@
       "thread_id": 214,
       "topic_field": "DWPC,HNEP,Residual DWPC,R-DWPC,permutation,hetnet,algorithms",
       "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214",
-      "views": 19
+      "views": 22
     },
     {
       "document_id": null,
@@ -6695,6 +6767,18 @@
       "topic_field": "HNEP,dropout contamination,overfitting",
       "url": "/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215",
       "views": 14
+    },
+    {
+      "document_id": null,
+      "doi": "10.15363/thinklab.d216",
+      "doi_field": "",
+      "profile_id": 17,
+      "published": "2016-06-23T23:20:21.033963Z",
+      "subject": "Hosting Hetionet in the cloud: creating a public Neo4j instance",
+      "thread_id": 216,
+      "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
+      "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
+      "views": 7
     }
   ]
 }

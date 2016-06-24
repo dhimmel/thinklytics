@@ -792,7 +792,7 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1295	17	rephetio	2016-05-04T22:31:58.818987Z	113	/discussion/tracking-project-reuse-citation-and-publicity/113#8	203	1338
 1297	17	rephetio	2016-05-08T05:00:24.012824Z	212	/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212	138	937
 1298	17	rephetio	2016-05-08T17:37:10.718986Z	212	/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212#2	182	1146
-1300	17	rephetio	2016-05-08T21:35:21.495978Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213	456	2936
+1300	17	rephetio	2016-05-08T21:35:21.495978Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213	451	2931
 1301	17	rephetio	2016-05-09T02:11:11.872236Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#3	357	2344
 1302	17	rephetio	2016-05-09T01:21:16.368177Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#2	834	4950
 1303	17	rephetio	2016-05-09T02:33:16.706465Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#4	252	1528
@@ -810,6 +810,14 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1317	17	rephetio	2016-05-17T16:22:15.920779Z	210	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#3	362	2229
 1318	17	rephetio	2016-05-17T17:19:43.123603Z	210	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4	379	2410
 1319	17	rephetio	2016-05-17T21:48:48.143975Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#2	249	1697
+1320	17	rephetio	2016-06-23T23:20:21.127421Z	216	/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216	668	4009
+1324	241	rephetio	2016-06-21T20:49:20.454745Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#10	418	2354
+1325	17	rephetio	2016-06-23T23:59:22.582723Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#3	177	1178
+1326	17	rephetio	2016-06-24T16:50:52.603123Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#11	225	1387
+1327	172	rephetio	2016-06-24T17:23:18.354058Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#4	67	427
+1328	172	rephetio	2016-06-24T17:37:55.436453Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#5	37	221
+1329	17	rephetio	2016-06-24T18:52:02.049295Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#6	96	532
+1330	17	rephetio	2016-06-24T20:35:03.139109Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#7	576	3813
 799	17	thinklabOSP	2016-02-19T06:41:11.813300Z	160	/discussion/highlighting-the-immediacy-of-thinklab/160	158	1008
 800	125	thinklabOSP	2016-02-16T12:50:44.682536Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161	186	1007
 801	2	thinklabOSP	2016-02-16T18:06:25.264019Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161#2	209	1169

@@ -121,7 +121,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/EdgeProject/idea",
-      "views": 102
+      "views": 103
     }
   ],
   "notes": [],
@@ -148,7 +148,7 @@
       "username": "kristinahettne"
     }
   ],
-  "retrieved": "2016-06-18T23:19:57.994239Z",
+  "retrieved": "2016-06-24T20:38:38.087134Z",
   "threads": [
     {
       "document_id": null,
@@ -160,7 +160,7 @@
       "thread_id": 172,
       "topic_field": "semantic web,linked data,question answering,workflows",
       "url": "/discussion/dynamic-sub-graph-assembly-versus-data-warehousing/172",
-      "views": 28
+      "views": 29
     },
     {
       "document_id": 14,
@@ -196,7 +196,7 @@
       "thread_id": 177,
       "topic_field": "ThinkLab,google docs",
       "url": "/discussion/what-to-do-when-you-start-over/177",
-      "views": 20
+      "views": 21
     }
   ]
 }

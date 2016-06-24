@@ -2483,7 +2483,7 @@
       "username": "pouyakhankhanian"
     }
   ],
-  "retrieved": "2016-06-18T23:20:07.513251Z",
+  "retrieved": "2016-06-24T20:38:36.897906Z",
   "threads": [
     {
       "document_id": null,
@@ -2495,7 +2495,7 @@
       "thread_id": 2,
       "topic_field": "",
       "url": "/discussion/add-your-thinklab-feedback-here-in-meta/2",
-      "views": 45
+      "views": 47
     },
     {
       "document_id": null,
@@ -2507,7 +2507,7 @@
       "thread_id": 26,
       "topic_field": "ThinkLab,Discussions",
       "url": "/discussion/discussion-ranking-and-visibility/26",
-      "views": 36
+      "views": 37
     },
     {
       "document_id": null,
@@ -2519,7 +2519,7 @@
       "thread_id": 27,
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 83
+      "views": 86
     },
     {
       "document_id": null,
@@ -2543,7 +2543,7 @@
       "thread_id": 32,
       "topic_field": "Markdown,TLFM",
       "url": "/discussion/markdown-feedback-bugs-and-suggestions/32",
-      "views": 66
+      "views": 69
     },
     {
       "document_id": null,
@@ -2591,7 +2591,7 @@
       "thread_id": 49,
       "topic_field": "ThinkLab,Contributions,Incentives",
       "url": "/discussion/contribution-valuation-options/49",
-      "views": 53
+      "views": 55
     },
     {
       "document_id": null,
@@ -2627,7 +2627,7 @@
       "thread_id": 56,
       "topic_field": "",
       "url": "/discussion/your-comments-in-thinklab-meta-are-now-payment-eligible/56",
-      "views": 37
+      "views": 39
     },
     {
       "document_id": null,
@@ -2651,7 +2651,7 @@
       "thread_id": 59,
       "topic_field": "Markdown,TLFM,Editor",
       "url": "/discussion/thinklab-editor-and-markdown-suggestions/59",
-      "views": 46
+      "views": 48
     },
     {
       "document_id": null,
@@ -2675,7 +2675,7 @@
       "thread_id": 63,
       "topic_field": "",
       "url": "/discussion/why-thinklab-uses-a-flat-discussion-structure-not-threaded/63",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -2687,7 +2687,7 @@
       "thread_id": 64,
       "topic_field": "",
       "url": "/discussion/should-we-aim-to-keep-discussions-narrowly-focused/64",
-      "views": 53
+      "views": 54
     },
     {
       "document_id": null,
@@ -2711,7 +2711,7 @@
       "thread_id": 78,
       "topic_field": "",
       "url": "/discussion/reviewers-or-contributors-what-term-should-we-use-for-thinklab-participants/78",
-      "views": 31
+      "views": 32
     },
     {
       "document_id": null,
@@ -2723,7 +2723,7 @@
       "thread_id": 79,
       "topic_field": "DOI,ThinkLab figures",
       "url": "/discussion/we-now-have-a-figures-feature/79",
-      "views": 40
+      "views": 42
     },
     {
       "document_id": null,
@@ -2747,7 +2747,7 @@
       "thread_id": 98,
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 57
+      "views": 58
     },
     {
       "document_id": null,
@@ -2831,7 +2831,7 @@
       "thread_id": 144,
       "topic_field": "Review Process",
       "url": "/discussion/whole-proposal-reviewer-synopsis-fund-or-no-fund/144",
-      "views": 45
+      "views": 47
     },
     {
       "document_id": null,
@@ -2879,7 +2879,7 @@
       "thread_id": 189,
       "topic_field": "Technical Issue",
       "url": "/discussion/mathjax-block-markers/189",
-      "views": 21
+      "views": 23
     },
     {
       "document_id": null,
@@ -2903,7 +2903,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 62
+      "views": 64
     },
     {
       "document_id": null,
@@ -2915,7 +2915,7 @@
       "thread_id": 192,
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 30
+      "views": 31
     },
     {
       "document_id": null,
@@ -2939,7 +2939,7 @@
       "thread_id": 196,
       "topic_field": "",
       "url": "/discussion/automatically-insert-images/196",
-      "views": 24
+      "views": 26
     },
     {
       "document_id": null,
@@ -2951,7 +2951,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 23
+      "views": 25
     },
     {
       "document_id": null,
@@ -2975,7 +2975,7 @@
       "thread_id": 206,
       "topic_field": "open science,platforms",
       "url": "/discussion/open-realtime-science-platforms/206",
-      "views": 20
+      "views": 24
     },
     {
       "document_id": null,
@@ -2987,7 +2987,7 @@
       "thread_id": 207,
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 25
+      "views": 28
     },
     {
       "document_id": null,
@@ -2999,7 +2999,7 @@
       "thread_id": 209,
       "topic_field": "",
       "url": "/discussion/share-single-posts/209",
-      "views": 15
+      "views": 17
     }
   ]
 }
