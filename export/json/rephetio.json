@@ -3385,8 +3385,8 @@
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21#24"
     },
     {
-      "body_html": "<h1>Therapeutic Target Database</h1>\r\n\r\n<p>The Therapeutic Target Database (<a href=\"http://bidd.nus.edu.sg/group/cjttd/\" title=\"Therapeutic Target Database Homepage\">TTD</a>) is a target focused resource with pharmacological relationships. <a href=\"/u/janispi\" class=\"username\">@janispi</a> <a href=\"https://twitter.com/Janis3_14159/status/709844572600475648\" title=\"Twitter\">suggested</a> we check out TTD as a source of drug–disease therapies.</p>\r\n\r\n<p>Specifically, TTD has a dataset of indications, which range from approved to investigational, available online (<a href=\"http://database.idrb.cqu.edu.cn/TTD/download/drug-disease_TTD2016.txt\"><code>drug-disease_TTD2016.txt</code></a>). I couldn't find how these indications were constructed from their publications <span class=\"citation\">[<a href=\"/doi/10.1093/nar/30.1.412\" class=\"citation\" data-key=\"10.1093/nar/30.1.412\">1</a>, <a href=\"/doi/10.1093/nar/gkp1014\" class=\"citation\" data-key=\"10.1093/nar/gkp1014\">2</a>, <a href=\"/doi/10.1093/nar/gkr797\" class=\"citation\" data-key=\"10.1093/nar/gkr797\">3</a>, <a href=\"/doi/10.1093/nar/gkt1129\" class=\"citation\" data-key=\"10.1093/nar/gkt1129\">4</a>, <a href=\"/doi/10.1093/nar/gkv1230\" class=\"citation\" data-key=\"10.1093/nar/gkv1230\">5</a>]</span>, although I may have missed it. I emailed Professor Yu Zong (<code>csccyz@nus.edu.sg</code>), who indicated their drug-disease relationships were human curated.</p>\r\n\r\n<p>Just wanted to note this information, so we remember to keep TTD in mind.</p>",
-      "body_md": "# Therapeutic Target Database\r\n\r\nThe Therapeutic Target Database ([TTD](http://bidd.nus.edu.sg/group/cjttd/ \"Therapeutic Target Database Homepage\")) is a target focused resource with pharmacological relationships. @janispi [suggested](https://twitter.com/Janis3_14159/status/709844572600475648 \"Twitter\") we check out TTD as a source of drug--disease therapies.\r\n\r\nSpecifically, TTD has a dataset of indications, which range from approved to investigational, available online ([`drug-disease_TTD2016.txt`](http://database.idrb.cqu.edu.cn/TTD/download/drug-disease_TTD2016.txt)). I couldn't find how these indications were constructed from their publications [@10.1093/nar/30.1.412 @10.1093/nar/gkp1014 @10.1093/nar/gkr797 @10.1093/nar/gkt1129 @10.1093/nar/gkv1230], although I may have missed it. I emailed Professor Yu Zong (`csccyz@nus.edu.sg`), who indicated their drug-disease relationships were human curated.\r\n\r\nJust wanted to note this information, so we remember to keep TTD in mind.",
+      "body_html": "<h1>Therapeutic Target Database</h1>\r\n\r\n<p>The Therapeutic Target Database (<a href=\"http://bidd.nus.edu.sg/group/cjttd/\" title=\"Therapeutic Target Database Homepage\">TTD</a>) is a target focused resource with pharmacological relationships. <a href=\"/u/janispi\" class=\"username\">@janispi</a> <a href=\"https://twitter.com/Janis3_14159/status/709844572600475648\" title=\"Twitter\">suggested</a> we check out TTD as a source of drug–disease therapies.</p>\r\n\r\n<p>Specifically, TTD has a dataset of indications, which range from approved to investigational, available online (<a href=\"http://database.idrb.cqu.edu.cn/TTD/download/drug-disease_TTD2016.txt\"><code>drug-disease_TTD2016.txt</code></a>). I couldn't find how these indications were constructed from their publications <span class=\"citation\">[<a href=\"/doi/10.1093/nar/30.1.412\" class=\"citation\" data-key=\"10.1093/nar/30.1.412\">1</a>, <a href=\"/doi/10.1093/nar/gkp1014\" class=\"citation\" data-key=\"10.1093/nar/gkp1014\">2</a>, <a href=\"/doi/10.1093/nar/gkr797\" class=\"citation\" data-key=\"10.1093/nar/gkr797\">3</a>, <a href=\"/doi/10.1093/nar/gkt1129\" class=\"citation\" data-key=\"10.1093/nar/gkt1129\">4</a>, <a href=\"/doi/10.1093/nar/gkv1230\" class=\"citation\" data-key=\"10.1093/nar/gkv1230\">5</a>]</span>, although I may have missed it. I emailed Professor Yu Zong (<code>csccyz@nus.edu.sg</code>), who indicated their drug-disease relationships were human curated.</p>\r\n\r\n<p>Just wanted to note this information, so we remember to keep TTD in mind.</p>\r\n\r\n<p><strong>Update July 16, 2016</strong>: Qin Chu provided me the following additional information via email: </p>\r\n\r\n<blockquote><p>The mapping between diseases and drugs were done manually. We searched different sources of literature such as pharmacology textbooks, review articles and research papers. The methods to extract the related drug target and disease information from literature were described in the 2012 version of TTD update paper <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkr797\" class=\"citation\" data-key=\"10.1093/nar/gkr797\">3</a>]</span>. We mapped the disease information to ICD code in the 2014 update of TTD <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkt1129\" class=\"citation\" data-key=\"10.1093/nar/gkt1129\">4</a>]</span>.</p></blockquote>",
+      "body_md": "# Therapeutic Target Database\r\n\r\nThe Therapeutic Target Database ([TTD](http://bidd.nus.edu.sg/group/cjttd/ \"Therapeutic Target Database Homepage\")) is a target focused resource with pharmacological relationships. @janispi [suggested](https://twitter.com/Janis3_14159/status/709844572600475648 \"Twitter\") we check out TTD as a source of drug--disease therapies.\r\n\r\nSpecifically, TTD has a dataset of indications, which range from approved to investigational, available online ([`drug-disease_TTD2016.txt`](http://database.idrb.cqu.edu.cn/TTD/download/drug-disease_TTD2016.txt)). I couldn't find how these indications were constructed from their publications [@10.1093/nar/30.1.412 @10.1093/nar/gkp1014 @10.1093/nar/gkr797 @10.1093/nar/gkt1129 @10.1093/nar/gkv1230], although I may have missed it. I emailed Professor Yu Zong (`csccyz@nus.edu.sg`), who indicated their drug-disease relationships were human curated.\r\n\r\nJust wanted to note this information, so we remember to keep TTD in mind.\r\n\r\n**Update July 16, 2016**: Qin Chu provided me the following additional information via email: \r\n\r\n> The mapping between diseases and drugs were done manually. We searched different sources of literature such as pharmacology textbooks, review articles and research papers. The methods to extract the related drug target and disease information from literature were described in the 2012 version of TTD update paper [@10.1093/nar/gkr797]. We mapped the disease information to ICD code in the 2014 update of TTD [@10.1093/nar/gkt1129].",
       "comment_id": 1180,
       "profile_id": 17,
       "published": "2016-03-16T22:14:15.042713Z",
@@ -4069,8 +4069,8 @@
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#2"
     },
     {
-      "body_html": "<p>One month ago, I asked a <a href=\"http://stackoverflow.com/q/37370820/4651668\">Stack Overflow question</a> on how to host a public (read only) Neo4j instance in the cloud. Now, our Neo4j instance is up and running, serving Hetionet over the World Wide Web at <strong><a href=\"https://neo4j.het.io\" title=\"Hetionet Neo4j Browser\">neo4j.het.io</a></strong>. Below is a screenshot of what the Neo4j Browser looks like:</p>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/16320501/216f2626-3966-11e6-8a0d-215f70b44be2.png\" alt=\"neo4j-browser\"></p>\r\n\r\n<p>The public browser let's anyone immediately interact with Hetionet. Since most potential users may not know the Cypher query language, we created a guide to help bring users up to speed. In addition to accessing Hetionet through the Neo4j Browser, users can programmatically query the Neo4j server using one of the <a href=\"https://neo4j.com/developer/language-guides/\" title=\"Neo4j Language Guides\">many supported languages</a>.</p>\r\n\r\n<h2>Technical details</h2>\r\n\r\n<p>Creating a public Hetionet instance using Neo4j was gratifying because it reinforced the benefits of migrating our hetnet infrastructure to Neo4j <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">1</a>]</span>. We're promptly leveraging advanced Neo4j capabilities that would have been impractical to develop in house. In fact, we really pushed Neo4j to its limits and submitted several help/feature requests and bug reports. Many of the features we're using just became available in Neo4j 3.0 released on April 26, 2016. Currently, our server runs Neo4j 3.0.2.</p>\r\n\r\n<p>Many of the issues we faced had to do with Neo4j Browser Guides. We use guides to provide documentation, examples, and explanations from within the Neo4j Browser. For example, in the screenshot above, the \"Hetionet in Neo4j\" frame is a guide. Hosting the HTML guides in a way that the Neo4j Browser could access was difficult. We ran into <a href=\"https://github.com/neo4j/neo4j-browser/issues/170\" title=\"neo4j/neo4j-browser Issue on GitHub: Playing guides from URL fails despite CORS being enabled\">CORS issues</a> but were eventually able to use the <a href=\"https://github.com/jexp/neo4j-guides/tree/master/guide-extension\"><code>guide-extension</code></a> to serve files from within the Neo4j instance (see issues <a href=\"https://github.com/jexp/neo4j-guides/issues/2\">a</a>, <a href=\"https://github.com/jexp/neo4j-guides/issues/4\">b</a>, <a href=\"https://github.com/jexp/neo4j-guides/issues/5\">c</a>) and circumvent the CORS problems.</p>\r\n\r\n<p>We also made several tweaks to make our Neo4j server appropriate for public access. We disabled authentication, set a <a href=\"http://stackoverflow.com/a/37425223/4651668\">query execution timeout</a>, created a <a href=\"http://stackoverflow.com/questions/37446895/configuring-a-neo4j-instance-to-use-a-default-grass-style\">GRASS style</a>, and enabled <a href=\"http://stackoverflow.com/questions/38015637/inserting-a-javascript-web-analytics-client-into-a-neo4j-browser\">web analytics</a>. As far as I'm aware, there are not many other groups hosting public Neo4j instances. I did draw inspiration from <a href=\"https://github.com/ryguyrg/panama-neo4j\"><code>ryguyrg/panama-neo4j</code></a> which makes it easy for users to create a Neo4j server containing the <a href=\"https://neo4j.com/blog/analyzing-panama-papers-neo4j/\">Panama Papers Hetnet</a>. However, users still have to host the server locally. Despite being uncommon, there shouldn't be any licensing issues with hosting a public server <span class=\"citation\">[<a href=\"/discussion/licensing-neo4j/130\" class=\"citation\" data-key=\"10.15363/thinklab.d130\">2</a>]</span>.</p>\r\n\r\n<p><a href=\"https://github.com/jexp\">Michael Hunger</a>, <a href=\"https://github.com/oskarhane\">Oskar Hane</a>, <a href=\"https://github.com/ikwattro\">Christophe Willemsen</a>, and <a href=\"https://stackoverflow.com/users/4989460/stdob\">stdob</a> were super helpful — thanks! During the process we suggested several enhancements including <a href=\"https://github.com/neo4j/neo4j-browser/issues/172\">multiple post-connect commands</a>, <a href=\"https://github.com/neo4j/neo4j-browser/issues/181\">setting AUTO-COMPLETE to OFF by default</a>, <a href=\"https://github.com/neo4j/neo4j-browser/issues/184\">play-topic support for URLs with capitalized characters</a>, and <a href=\"https://github.com/jexp/neo4j-guides/issues/9\">relative path support for playing guides</a>.</p>\r\n\r\n<h3>Cloud hosting</h3>\r\n\r\n<p>We used <a href=\"https://www.digitalocean.com/\">DigitalOcean</a> for our cloud hosting. They have a Ubuntu 14.04 Droplet with Docker 1.11.1 preconfigured, which reduced setup to a minimum. We went with a 2 GB Memory / 40 GB Disk Droplet that costs $20 a month and is located in a datacenter near New York City. DigitalOcean compared favorably to AWS in terms of price–performance ratio and user interface.</p>\r\n\r\n<h3>HTTPS</h3>\r\n\r\n<p>I added HTTPS/TLS support using <a href=\"https://letsencrypt.org/\">Let's Encrypt</a>, which <a href=\"/u/alizee\" class=\"username\">@alizee</a> previously recommended <span class=\"citation\">[<a href=\"/discussion/support-and-enforce-ssl-connections-to-thinklab/197\" class=\"citation\" data-key=\"10.15363/thinklab.d197\">3</a>]</span>. The <code>certbot</code> python package made obtaining the certificates easier than I expected (<a href=\"https://github.com/dhimmel/hetionet/blob/1ee2479b2d98de331dedce600ce08fca43d3395b/hetnet/neo4j/docker/ssl/install.sh\">code</a>). The one potential downside to Let's Encrypt is that I had to schedule a <code>cron</code> job to shutdown the Neo4j server and attempt certificate renewal on a weekly basis. This will result in short service outages. One advantage of enabling encryption is that users do not have to accept a self-signed certificate to use Bolt from within the Neo4j Browser. Bolt is the <a href=\"https://neo4j.com/blog/neo4j-3-0-massive-scale-developer-productivity/\">new binary protocol</a> to enable more efficient communication with the Neo4j server.</p>\r\n\r\n<h3>Docker</h3>\r\n\r\n<p>We created a Docker image (<a href=\"https://hub.docker.com/r/dhimmel/hetionet/\" title=\"dhimmel/hetionet on Docker Hub\"><code>dhimmel/hetionet</code></a>) for running the Hetionet Neo4j server. Our docker extends the <a href=\"https://hub.docker.com/_/neo4j/\">official Neo4j docker</a> and automatically downloads and configures the Hetionet database and guides. In addition to making deployment automatable and reliable, Docker promises to improve the reproducibility of computation <span class=\"citation\">[<a href=\"/doi/10.1101/056473\" class=\"citation\" data-key=\"10.1101/056473\">4</a>, <a href=\"/doi/10.1186/s13742-015-0087-0\" class=\"citation\" data-key=\"10.1186/s13742-015-0087-0\">5</a>, <a href=\"/doi/10.7717/peerj.1273\" class=\"citation\" data-key=\"10.7717/peerj.1273\">6</a>]</span>.</p>\r\n\r\n<h2>Suggestions</h2>\r\n\r\n<p>If you have suggestions on how to improve our Neo4j Browser or questions on how to use it, please don't by shy.</p>",
-      "body_md": "One month ago, I asked a [Stack Overflow question](http://stackoverflow.com/q/37370820/4651668) on how to host a public (read only) Neo4j instance in the cloud. Now, our Neo4j instance is up and running, serving Hetionet over the World Wide Web at **[neo4j.het.io](https://neo4j.het.io \"Hetionet Neo4j Browser\")**. Below is a screenshot of what the Neo4j Browser looks like:\r\n\r\n![neo4j-browser](https://cloud.githubusercontent.com/assets/1117703/16320501/216f2626-3966-11e6-8a0d-215f70b44be2.png)\r\n\r\nThe public browser let's anyone immediately interact with Hetionet. Since most potential users may not know the Cypher query language, we created a guide to help bring users up to speed. In addition to accessing Hetionet through the Neo4j Browser, users can programmatically query the Neo4j server using one of the [many supported languages](https://neo4j.com/developer/language-guides/ \"Neo4j Language Guides\").\r\n\r\n## Technical details\r\n\r\nCreating a public Hetionet instance using Neo4j was gratifying because it reinforced the benefits of migrating our hetnet infrastructure to Neo4j [@10.15363/thinklab.d112]. We're promptly leveraging advanced Neo4j capabilities that would have been impractical to develop in house. In fact, we really pushed Neo4j to its limits and submitted several help/feature requests and bug reports. Many of the features we're using just became available in Neo4j 3.0 released on April 26, 2016. Currently, our server runs Neo4j 3.0.2.\r\n\r\nMany of the issues we faced had to do with Neo4j Browser Guides. We use guides to provide documentation, examples, and explanations from within the Neo4j Browser. For example, in the screenshot above, the \"Hetionet in Neo4j\" frame is a guide. Hosting the HTML guides in a way that the Neo4j Browser could access was difficult. We ran into [CORS issues](https://github.com/neo4j/neo4j-browser/issues/170 \"neo4j/neo4j-browser Issue on GitHub: Playing guides from URL fails despite CORS being enabled\") but were eventually able to use the [`guide-extension`](https://github.com/jexp/neo4j-guides/tree/master/guide-extension) to serve files from within the Neo4j instance (see issues [a](https://github.com/jexp/neo4j-guides/issues/2), [b](https://github.com/jexp/neo4j-guides/issues/4), [c](https://github.com/jexp/neo4j-guides/issues/5)) and circumvent the CORS problems.\r\n\r\nWe also made several tweaks to make our Neo4j server appropriate for public access. We disabled authentication, set a [query execution timeout](http://stackoverflow.com/a/37425223/4651668), created a [GRASS style](http://stackoverflow.com/questions/37446895/configuring-a-neo4j-instance-to-use-a-default-grass-style), and enabled [web analytics](http://stackoverflow.com/questions/38015637/inserting-a-javascript-web-analytics-client-into-a-neo4j-browser). As far as I'm aware, there are not many other groups hosting public Neo4j instances. I did draw inspiration from [`ryguyrg/panama-neo4j`](https://github.com/ryguyrg/panama-neo4j) which makes it easy for users to create a Neo4j server containing the [Panama Papers Hetnet](https://neo4j.com/blog/analyzing-panama-papers-neo4j/). However, users still have to host the server locally. Despite being uncommon, there shouldn't be any licensing issues with hosting a public server [@10.15363/thinklab.d130].\r\n\r\n[Michael Hunger](https://github.com/jexp), [Oskar Hane](https://github.com/oskarhane), [Christophe Willemsen](https://github.com/ikwattro), and [stdob](https://stackoverflow.com/users/4989460/stdob) were super helpful -- thanks! During the process we suggested several enhancements including [multiple post-connect commands](https://github.com/neo4j/neo4j-browser/issues/172), [setting AUTO-COMPLETE to OFF by default](https://github.com/neo4j/neo4j-browser/issues/181), [play-topic support for URLs with capitalized characters](https://github.com/neo4j/neo4j-browser/issues/184), and [relative path support for playing guides](https://github.com/jexp/neo4j-guides/issues/9).\r\n\r\n### Cloud hosting\r\n\r\nWe used [DigitalOcean](https://www.digitalocean.com/) for our cloud hosting. They have a Ubuntu 14.04 Droplet with Docker 1.11.1 preconfigured, which reduced setup to a minimum. We went with a 2 GB Memory / 40 GB Disk Droplet that costs $20 a month and is located in a datacenter near New York City. DigitalOcean compared favorably to AWS in terms of price–performance ratio and user interface.\r\n\r\n### HTTPS\r\n\r\nI added HTTPS/TLS support using [Let's Encrypt](https://letsencrypt.org/), which @alizee previously recommended [@10.15363/thinklab.d197]. The `certbot` python package made obtaining the certificates easier than I expected ([code](https://github.com/dhimmel/hetionet/blob/1ee2479b2d98de331dedce600ce08fca43d3395b/hetnet/neo4j/docker/ssl/install.sh)). The one potential downside to Let's Encrypt is that I had to schedule a `cron` job to shutdown the Neo4j server and attempt certificate renewal on a weekly basis. This will result in short service outages. One advantage of enabling encryption is that users do not have to accept a self-signed certificate to use Bolt from within the Neo4j Browser. Bolt is the [new binary protocol](https://neo4j.com/blog/neo4j-3-0-massive-scale-developer-productivity/) to enable more efficient communication with the Neo4j server.\r\n\r\n### Docker\r\n\r\nWe created a Docker image ([`dhimmel/hetionet`](https://hub.docker.com/r/dhimmel/hetionet/ \"dhimmel/hetionet on Docker Hub\")) for running the Hetionet Neo4j server. Our docker extends the [official Neo4j docker](https://hub.docker.com/_/neo4j/) and automatically downloads and configures the Hetionet database and guides. In addition to making deployment automatable and reliable, Docker promises to improve the reproducibility of computation [@10.1101/056473 @10.1186/s13742-015-0087-0 @10.7717/peerj.1273].\r\n\r\n## Suggestions\r\n\r\nIf you have suggestions on how to improve our Neo4j Browser or questions on how to use it, please don't by shy.",
+      "body_html": "<p>One month ago, I asked a <a href=\"http://stackoverflow.com/q/37370820/4651668\">Stack Overflow question</a> on how to host a public (read only) Neo4j instance in the cloud. Now, our Neo4j instance is up and running, serving Hetionet over the World Wide Web at <strong><a href=\"https://neo4j.het.io\" title=\"Hetionet Neo4j Browser\">neo4j.het.io</a></strong>. Below is a screenshot of what the Neo4j Browser looks like:</p>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/16320501/216f2626-3966-11e6-8a0d-215f70b44be2.png\" alt=\"neo4j-browser\"></p>\r\n\r\n<p>The public browser let's anyone immediately interact with Hetionet. Since most potential users may not know the Cypher query language, we created a guide to help bring users up to speed. In addition to accessing Hetionet through the Neo4j Browser, users can programmatically query the Neo4j server using one of the <a href=\"https://neo4j.com/developer/language-guides/\" title=\"Neo4j Language Guides\">many supported languages</a>.</p>\r\n\r\n<h2>Technical details</h2>\r\n\r\n<p>Creating a public Hetionet instance using Neo4j was gratifying because it reinforced the benefits of migrating our hetnet infrastructure to Neo4j <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">1</a>]</span>. We're promptly leveraging advanced Neo4j capabilities that would have been impractical to develop in house. In fact, we really pushed Neo4j to its limits and submitted several help/feature requests and bug reports. Many of the features we're using just became available in Neo4j 3.0 released on April 26, 2016. Currently, our server runs Neo4j 3.0.2.</p>\r\n\r\n<p>Many of the issues we faced had to do with Neo4j Browser Guides. We use guides to provide documentation, examples, and explanations from within the Neo4j Browser. For example, in the screenshot above, the \"Hetionet in Neo4j\" frame is a guide. We wrote our guides in asciidoc and converted them to HTML <a href=\"https://github.com/dhimmel/het.io-rep-guides\">using <code>jexp/neo4j-guides</code></a>.</p>\r\n\r\n<p>Hosting the HTML guides in a way that the Neo4j Browser could access was difficult. We ran into <a href=\"https://github.com/neo4j/neo4j-browser/issues/170\" title=\"neo4j/neo4j-browser Issue on GitHub: Playing guides from URL fails despite CORS being enabled\">CORS issues</a> but were eventually able to use the <a href=\"https://github.com/jexp/neo4j-guides/tree/master/guide-extension\"><code>guide-extension</code></a> to serve files from within the Neo4j instance (see issues <a href=\"https://github.com/jexp/neo4j-guides/issues/2\">a</a>, <a href=\"https://github.com/jexp/neo4j-guides/issues/4\">b</a>, <a href=\"https://github.com/jexp/neo4j-guides/issues/5\">c</a>) and circumvent the CORS problems.</p>\r\n\r\n<p>We also made several tweaks to make our Neo4j server appropriate for public access. We disabled authentication, set a <a href=\"http://stackoverflow.com/a/37425223/4651668\">query execution timeout</a>, created a <a href=\"http://stackoverflow.com/questions/37446895/configuring-a-neo4j-instance-to-use-a-default-grass-style\">GRASS style</a>, and enabled <a href=\"http://stackoverflow.com/a/38056689/4651668\">web analytics</a>. As far as I'm aware, there are not many other groups hosting public Neo4j instances. I did draw inspiration from <a href=\"https://github.com/ryguyrg/panama-neo4j\"><code>ryguyrg/panama-neo4j</code></a> which makes it easy for users to create a Neo4j server containing the <a href=\"https://neo4j.com/blog/analyzing-panama-papers-neo4j/\">Panama Papers Hetnet</a>. However, users still have to host the server locally. Despite being uncommon, there shouldn't be any licensing issues with hosting a public server <span class=\"citation\">[<a href=\"/discussion/licensing-neo4j/130\" class=\"citation\" data-key=\"10.15363/thinklab.d130\">2</a>]</span>.</p>\r\n\r\n<p><a href=\"https://github.com/jexp\">Michael Hunger</a>, <a href=\"https://github.com/oskarhane\">Oskar Hane</a>, <a href=\"https://github.com/ikwattro\">Christophe Willemsen</a>, and <a href=\"https://stackoverflow.com/users/4989460/stdob\">stdob</a> were super helpful — thanks! During the process we suggested several enhancements including <a href=\"https://github.com/neo4j/neo4j-browser/issues/172\">multiple post-connect commands</a>, <a href=\"https://github.com/neo4j/neo4j-browser/issues/181\">setting AUTO-COMPLETE to OFF by default</a>, <a href=\"https://github.com/neo4j/neo4j-browser/issues/184\">play-topic support for URLs with capitalized characters</a>, and <a href=\"https://github.com/jexp/neo4j-guides/issues/9\">relative path support for playing guides</a>.</p>\r\n\r\n<h3>Cloud hosting</h3>\r\n\r\n<p>We used <a href=\"https://www.digitalocean.com/\">DigitalOcean</a> for our cloud hosting. They have a Ubuntu 14.04 Droplet with Docker 1.11.1 preconfigured, which reduced setup to a minimum. We went with a 2 GB Memory / 40 GB Disk Droplet that costs $20 a month and is located in a datacenter near New York City. DigitalOcean compared favorably to AWS in terms of price–performance ratio and user interface.</p>\r\n\r\n<h3>HTTPS</h3>\r\n\r\n<p>I added HTTPS/TLS support using <a href=\"https://letsencrypt.org/\">Let's Encrypt</a>, which <a href=\"/u/alizee\" class=\"username\">@alizee</a> previously recommended <span class=\"citation\">[<a href=\"/discussion/support-and-enforce-ssl-connections-to-thinklab/197\" class=\"citation\" data-key=\"10.15363/thinklab.d197\">3</a>]</span>. The <code>certbot</code> python package made obtaining the certificates easier than I expected (<a href=\"https://github.com/dhimmel/hetionet/blob/1ee2479b2d98de331dedce600ce08fca43d3395b/hetnet/neo4j/docker/ssl/install.sh\">code</a>). The one potential downside to Let's Encrypt is that I had to schedule a <code>cron</code> job to shutdown the Neo4j server and attempt certificate renewal on a weekly basis. This will result in short service outages. One advantage of enabling encryption is that users do not have to accept a self-signed certificate to use Bolt from within the Neo4j Browser. Bolt is the <a href=\"https://neo4j.com/blog/neo4j-3-0-massive-scale-developer-productivity/\">new binary protocol</a> to enable more efficient communication with the Neo4j server.</p>\r\n\r\n<h3>Docker</h3>\r\n\r\n<p>We created a Docker image (<a href=\"https://hub.docker.com/r/dhimmel/hetionet/\" title=\"dhimmel/hetionet on Docker Hub\"><code>dhimmel/hetionet</code></a>) for running the Hetionet Neo4j server. Our docker extends the <a href=\"https://hub.docker.com/_/neo4j/\">official Neo4j docker</a> and automatically downloads and configures the Hetionet database and guides. In addition to making deployment automatable and reliable, Docker promises to improve the reproducibility of computation <span class=\"citation\">[<a href=\"/doi/10.1101/056473\" class=\"citation\" data-key=\"10.1101/056473\">4</a>, <a href=\"/doi/10.1186/s13742-015-0087-0\" class=\"citation\" data-key=\"10.1186/s13742-015-0087-0\">5</a>, <a href=\"/doi/10.7717/peerj.1273\" class=\"citation\" data-key=\"10.7717/peerj.1273\">6</a>]</span>.</p>\r\n\r\n<h2>Suggestions</h2>\r\n\r\n<p>If you have suggestions on how to improve our Neo4j Browser or questions on how to use it, please don't by shy.</p>",
+      "body_md": "One month ago, I asked a [Stack Overflow question](http://stackoverflow.com/q/37370820/4651668) on how to host a public (read only) Neo4j instance in the cloud. Now, our Neo4j instance is up and running, serving Hetionet over the World Wide Web at **[neo4j.het.io](https://neo4j.het.io \"Hetionet Neo4j Browser\")**. Below is a screenshot of what the Neo4j Browser looks like:\r\n\r\n![neo4j-browser](https://cloud.githubusercontent.com/assets/1117703/16320501/216f2626-3966-11e6-8a0d-215f70b44be2.png)\r\n\r\nThe public browser let's anyone immediately interact with Hetionet. Since most potential users may not know the Cypher query language, we created a guide to help bring users up to speed. In addition to accessing Hetionet through the Neo4j Browser, users can programmatically query the Neo4j server using one of the [many supported languages](https://neo4j.com/developer/language-guides/ \"Neo4j Language Guides\").\r\n\r\n## Technical details\r\n\r\nCreating a public Hetionet instance using Neo4j was gratifying because it reinforced the benefits of migrating our hetnet infrastructure to Neo4j [@10.15363/thinklab.d112]. We're promptly leveraging advanced Neo4j capabilities that would have been impractical to develop in house. In fact, we really pushed Neo4j to its limits and submitted several help/feature requests and bug reports. Many of the features we're using just became available in Neo4j 3.0 released on April 26, 2016. Currently, our server runs Neo4j 3.0.2.\r\n\r\nMany of the issues we faced had to do with Neo4j Browser Guides. We use guides to provide documentation, examples, and explanations from within the Neo4j Browser. For example, in the screenshot above, the \"Hetionet in Neo4j\" frame is a guide. We wrote our guides in asciidoc and converted them to HTML [using `jexp/neo4j-guides`](https://github.com/dhimmel/het.io-rep-guides).\r\n\r\nHosting the HTML guides in a way that the Neo4j Browser could access was difficult. We ran into [CORS issues](https://github.com/neo4j/neo4j-browser/issues/170 \"neo4j/neo4j-browser Issue on GitHub: Playing guides from URL fails despite CORS being enabled\") but were eventually able to use the [`guide-extension`](https://github.com/jexp/neo4j-guides/tree/master/guide-extension) to serve files from within the Neo4j instance (see issues [a](https://github.com/jexp/neo4j-guides/issues/2), [b](https://github.com/jexp/neo4j-guides/issues/4), [c](https://github.com/jexp/neo4j-guides/issues/5)) and circumvent the CORS problems.\r\n\r\nWe also made several tweaks to make our Neo4j server appropriate for public access. We disabled authentication, set a [query execution timeout](http://stackoverflow.com/a/37425223/4651668), created a [GRASS style](http://stackoverflow.com/questions/37446895/configuring-a-neo4j-instance-to-use-a-default-grass-style), and enabled [web analytics](http://stackoverflow.com/a/38056689/4651668). As far as I'm aware, there are not many other groups hosting public Neo4j instances. I did draw inspiration from [`ryguyrg/panama-neo4j`](https://github.com/ryguyrg/panama-neo4j) which makes it easy for users to create a Neo4j server containing the [Panama Papers Hetnet](https://neo4j.com/blog/analyzing-panama-papers-neo4j/). However, users still have to host the server locally. Despite being uncommon, there shouldn't be any licensing issues with hosting a public server [@10.15363/thinklab.d130].\r\n\r\n[Michael Hunger](https://github.com/jexp), [Oskar Hane](https://github.com/oskarhane), [Christophe Willemsen](https://github.com/ikwattro), and [stdob](https://stackoverflow.com/users/4989460/stdob) were super helpful -- thanks! During the process we suggested several enhancements including [multiple post-connect commands](https://github.com/neo4j/neo4j-browser/issues/172), [setting AUTO-COMPLETE to OFF by default](https://github.com/neo4j/neo4j-browser/issues/181), [play-topic support for URLs with capitalized characters](https://github.com/neo4j/neo4j-browser/issues/184), and [relative path support for playing guides](https://github.com/jexp/neo4j-guides/issues/9).\r\n\r\n### Cloud hosting\r\n\r\nWe used [DigitalOcean](https://www.digitalocean.com/) for our cloud hosting. They have a Ubuntu 14.04 Droplet with Docker 1.11.1 preconfigured, which reduced setup to a minimum. We went with a 2 GB Memory / 40 GB Disk Droplet that costs $20 a month and is located in a datacenter near New York City. DigitalOcean compared favorably to AWS in terms of price–performance ratio and user interface.\r\n\r\n### HTTPS\r\n\r\nI added HTTPS/TLS support using [Let's Encrypt](https://letsencrypt.org/), which @alizee previously recommended [@10.15363/thinklab.d197]. The `certbot` python package made obtaining the certificates easier than I expected ([code](https://github.com/dhimmel/hetionet/blob/1ee2479b2d98de331dedce600ce08fca43d3395b/hetnet/neo4j/docker/ssl/install.sh)). The one potential downside to Let's Encrypt is that I had to schedule a `cron` job to shutdown the Neo4j server and attempt certificate renewal on a weekly basis. This will result in short service outages. One advantage of enabling encryption is that users do not have to accept a self-signed certificate to use Bolt from within the Neo4j Browser. Bolt is the [new binary protocol](https://neo4j.com/blog/neo4j-3-0-massive-scale-developer-productivity/) to enable more efficient communication with the Neo4j server.\r\n\r\n### Docker\r\n\r\nWe created a Docker image ([`dhimmel/hetionet`](https://hub.docker.com/r/dhimmel/hetionet/ \"dhimmel/hetionet on Docker Hub\")) for running the Hetionet Neo4j server. Our docker extends the [official Neo4j docker](https://hub.docker.com/_/neo4j/) and automatically downloads and configures the Hetionet database and guides. In addition to making deployment automatable and reliable, Docker promises to improve the reproducibility of computation [@10.1101/056473 @10.1186/s13742-015-0087-0 @10.7717/peerj.1273].\r\n\r\n## Suggestions\r\n\r\nIf you have suggestions on how to improve our Neo4j Browser or questions on how to use it, please don't by shy.",
       "comment_id": 1320,
       "profile_id": 17,
       "published": "2016-06-23T23:20:21.127421Z",
@@ -4139,6 +4139,69 @@
       "published": "2016-06-24T20:35:03.139109Z",
       "thread_id": 203,
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#7"
+    },
+    {
+      "body_html": "<p>Hetionet v1.0 is <a href=\"https://thinklab.com/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d216\">now available online</a> as a Neo4j database at <a href=\"https://neo4j.het.io\">https://neo4j.het.io</a>. While Project Rephetio is focusing primarily on drug repurposing, we'd like to illustrate the versatility of Hetionet for answering a broad range of biomedical questions. We want to exhibit that hetnets aren't vaporware. We want to exhibit that a dozen lines of Cypher code in Hetionet can immediately perform analyses that previously would have taken months to implement.</p>\r\n\r\n<p>If you're a biologist and have interesting questions that Hetionet may know about, ask away. If you think you have an interesting query, please share.</p>",
+      "body_md": "Hetionet v1.0 is [now available online](https://thinklab.com/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216) as a Neo4j database at https://neo4j.het.io. While Project Rephetio is focusing primarily on drug repurposing, we'd like to illustrate the versatility of Hetionet for answering a broad range of biomedical questions. We want to exhibit that hetnets aren't vaporware. We want to exhibit that a dozen lines of Cypher code in Hetionet can immediately perform analyses that previously would have taken months to implement.\r\n\r\nIf you're a biologist and have interesting questions that Hetionet may know about, ask away. If you think you have an interesting query, please share.",
+      "comment_id": 1331,
+      "profile_id": 17,
+      "published": "2016-06-25T18:21:47.903005Z",
+      "thread_id": 220,
+      "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220"
+    },
+    {
+      "body_html": "<h1>GO Process enrichment for migraine genes</h1>\r\n\r\n<p>Here we'll show a query for identifying prominent GO Processes in a set of disease-associated genes. We'll use migraine as an example disease. First, we can see the 46 genes associated with migraine by querying <code>MATCH (:Disease {name: 'migraine'})-[rel:ASSOCIATES_DaG]-() RETURN rel</code>. Now we'll compute the DWPC (degree-weighted path count) between migraine and each GO Process. We'll restrict our results to processes with at least 5 participating genes (of which two or more are migraine-associated). Here's the Cypher:</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">// Search for DaGpBP paths starting with migraine\r\nMATCH path = (n0:Disease)-[:ASSOCIATES_DaG]-(n1)-[:PARTICIPATES_GpBP]-(n2:BiologicalProcess)\r\nWHERE n0.name = 'migraine'\r\n// Implement the DWPC to adjust for node degree along paths\r\nWITH\r\n[\r\n  size((n0)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpBP]-()),\r\n  size(()-[:PARTICIPATES_GpBP]-(n2))\r\n] AS degrees, path, n2\r\nWITH\r\n  // Return the GO Process ID and name\r\n  n2.identifier AS go_id,\r\n  n2.name AS go_name,\r\n  count(path) AS PC,\r\n  // Compute the DWPC\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4)) AS DWPC,\r\n  // Count the number of genes in the GO Process\r\n  size((n2)-[:PARTICIPATES_GpBP]-()) AS n_genes\r\n  WHERE n_genes &gt;= 5 AND PC &gt;= 2\r\nRETURN\r\n  go_id, go_name, PC, DWPC, n_genes\r\nORDER BY DWPC DESC\r\nLIMIT 5</code></pre>\r\n\r\n<p>The query took less than half of a second and performed 60,183 database hits. It returned the following top 5 GO Processes:</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>go_id</th><th>go_name</th><th>PC</th><th>DWPC</th><th>n_genes</th></tr></thead><tbody><tr><td>GO:0007210</td><td>serotonin receptor signaling pathway</td><td>8</td><td>0.061</td><td>18</td></tr><tr><td>GO:0050884</td><td>neuromuscular process controlling posture</td><td>2</td><td>0.048</td><td>15</td></tr><tr><td>GO:0042310</td><td>vasoconstriction</td><td>8</td><td>0.043</td><td>28</td></tr><tr><td>GO:0006812</td><td>cation transport</td><td>16</td><td>0.033</td><td>781</td></tr><tr><td>GO:0014821</td><td>phasic smooth muscle contraction</td><td>3</td><td>0.033</td><td>17</td></tr></tbody></table>\r\n\r\n<p>Next, we'll look bolster the query by adding protein interaction relationships.</p>",
+      "body_md": "# GO Process enrichment for migraine genes\r\n\r\nHere we'll show a query for identifying prominent GO Processes in a set of disease-associated genes. We'll use migraine as an example disease. First, we can see the 46 genes associated with migraine by querying `MATCH (:Disease {name: 'migraine'})-[rel:ASSOCIATES_DaG]-() RETURN rel`. Now we'll compute the DWPC (degree-weighted path count) between migraine and each GO Process. We'll restrict our results to processes with at least 5 participating genes (of which two or more are migraine-associated). Here's the Cypher:\r\n \r\n```cypher\r\n// Search for DaGpBP paths starting with migraine\r\nMATCH path = (n0:Disease)-[:ASSOCIATES_DaG]-(n1)-[:PARTICIPATES_GpBP]-(n2:BiologicalProcess)\r\nWHERE n0.name = 'migraine'\r\n// Implement the DWPC to adjust for node degree along paths\r\nWITH\r\n[\r\n  size((n0)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpBP]-()),\r\n  size(()-[:PARTICIPATES_GpBP]-(n2))\r\n] AS degrees, path, n2\r\nWITH\r\n  // Return the GO Process ID and name\r\n  n2.identifier AS go_id,\r\n  n2.name AS go_name,\r\n  count(path) AS PC,\r\n  // Compute the DWPC\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4)) AS DWPC,\r\n  // Count the number of genes in the GO Process\r\n  size((n2)-[:PARTICIPATES_GpBP]-()) AS n_genes\r\n  WHERE n_genes >= 5 AND PC >= 2\r\nRETURN\r\n  go_id, go_name, PC, DWPC, n_genes\r\nORDER BY DWPC DESC\r\nLIMIT 5\r\n```\r\n\r\nThe query took less than half of a second and performed 60,183 database hits. It returned the following top 5 GO Processes:\r\n\r\n| go_id | go_name | PC | DWPC | n_genes |\r\n|------------|-------------------------------------------|----|-------|---------|\r\n| GO:0007210 | serotonin receptor signaling pathway | 8 | 0.061 | 18 |\r\n| GO:0050884 | neuromuscular process controlling posture | 2 | 0.048 | 15 |\r\n| GO:0042310 | vasoconstriction | 8 | 0.043 | 28 |\r\n| GO:0006812 | cation transport | 16 | 0.033 | 781 |\r\n| GO:0014821 | phasic smooth muscle contraction | 3 | 0.033 | 17 |\r\n\r\nNext, we'll look bolster the query by adding protein interaction relationships.",
+      "comment_id": 1332,
+      "profile_id": 17,
+      "published": "2016-06-25T19:09:02.506504Z",
+      "thread_id": 220,
+      "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220#2"
+    },
+    {
+      "body_html": "<h1>Tissue-specific interactomics: GO Process enrichment for multiple sclerosis</h1>\r\n\r\n<p>The following query performs a more advanced GO Process enrichment analysis for multiple sclerosis (MS) genes. First, we restrict to GWAS-associated genes, which have the advantage of being less biased by existing knowledge. Second, we add a protein interaction relationship to identify genes in the MS neighborhood of the interactome. However thirdly, we require that these genes are upregulated in an MS-affected tissue (anatomy). Therefore, we can hopefully capture some of the benefits of tissue-specific gene networks <span class=\"citation\">[<a href=\"/doi/10.1038/ng.3259\" class=\"citation\" data-key=\"10.1038/ng.3259\">1</a>]</span> on our anatomy-agnostic interactome.</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH path = (n0:Disease)-[e1:ASSOCIATES_DaG]-(n1)-[:INTERACTS_GiG]-(n2)-[:PARTICIPATES_GpBP]-(n3:BiologicalProcess)\r\nWHERE n0.name = 'multiple sclerosis'\r\n  AND 'GWAS Catalog' in e1.sources\r\n  AND exists((n0)-[:LOCALIZES_DlA]-()-[:UPREGULATES_AuG]-(n2))\r\nWITH\r\n[\r\n  size((n0)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n1)),\r\n  size((n1)-[:INTERACTS_GiG]-()),\r\n  size(()-[:INTERACTS_GiG]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpBP]-()),\r\n  size(()-[:PARTICIPATES_GpBP]-(n3))\r\n] AS degrees, path, n3 as target\r\nWITH\r\n  target.identifier AS go_id,\r\n  target.name AS go_name,\r\n  count(path) AS PC,\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.7)) AS DWPC,\r\n  size((target)-[:PARTICIPATES_GpBP]-()) AS n_genes\r\n  WHERE 5 &lt;= n_genes &lt;= 100 AND PC &gt;= 2\r\nRETURN\r\n  go_id, go_name, PC, DWPC, n_genes\r\nORDER BY DWPC DESC\r\nLIMIT 5</code></pre>\r\n\r\n<p>The query took under 5 seconds and required 1,420,721 database hits.</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>go_id</th><th>go_name</th><th>PC</th><th>DWPC</th><th>n_genes</th></tr></thead><tbody><tr><td>GO:0045347</td><td>negative regulation of MHC class II biosynthetic process</td><td>3</td><td>0.00006</td><td>6</td></tr><tr><td>GO:0010842</td><td>retina layer formation</td><td>3</td><td>0.00006</td><td>22</td></tr><tr><td>GO:0045346</td><td>regulation of MHC class II biosynthetic process</td><td>3</td><td>0.00004</td><td>13</td></tr><tr><td>GO:0060042</td><td>retina morphogenesis in camera-type eye</td><td>4</td><td>0.00003</td><td>54</td></tr><tr><td>GO:0003407</td><td>neural retina development</td><td>4</td><td>0.00003</td><td>55</td></tr></tbody></table>\r\n\r\n<p>Interestingly three of the processes involve the retina. Note that the terms are not independent: \"retina layer formation\" is a subprocess of \"retina morphogenesis in camera-type eye\" and \"retina layer formation\". If we're interested more in the MS–\"retina layer formation\" relationship, we can retrieve the paths behind the DWPC:</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH path = (n0:Disease)-[e1:ASSOCIATES_DaG]-(n1)-[:INTERACTS_GiG]-(n2)-[:PARTICIPATES_GpBP]-(n3:BiologicalProcess)\r\nWHERE n0.name = 'multiple sclerosis'\r\n  AND n3.name = 'retina layer formation'\r\n  AND 'GWAS Catalog' in e1.sources\r\n  AND exists((n0)-[:LOCALIZES_DlA]-()-[:UPREGULATES_AuG]-(n2))\r\nRETURN path</code></pre>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/16359510/2ff3a870-3b05-11e6-8e3f-b9b50bf1e937.png\" alt=\"multiple sclerosis paths to retina layer formation\"></p>",
+      "body_md": "# Tissue-specific interactomics: GO Process enrichment for multiple sclerosis\r\n\r\nThe following query performs a more advanced GO Process enrichment analysis for multiple sclerosis (MS) genes. First, we restrict to GWAS-associated genes, which have the advantage of being less biased by existing knowledge. Second, we add a protein interaction relationship to identify genes in the MS neighborhood of the interactome. However thirdly, we require that these genes are upregulated in an MS-affected tissue (anatomy). Therefore, we can hopefully capture some of the benefits of tissue-specific gene networks [@10.1038/ng.3259] on our anatomy-agnostic interactome.\r\n\r\n```\r\nMATCH path = (n0:Disease)-[e1:ASSOCIATES_DaG]-(n1)-[:INTERACTS_GiG]-(n2)-[:PARTICIPATES_GpBP]-(n3:BiologicalProcess)\r\nWHERE n0.name = 'multiple sclerosis'\r\n  AND 'GWAS Catalog' in e1.sources\r\n  AND exists((n0)-[:LOCALIZES_DlA]-()-[:UPREGULATES_AuG]-(n2))\r\nWITH\r\n[\r\n  size((n0)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n1)),\r\n  size((n1)-[:INTERACTS_GiG]-()),\r\n  size(()-[:INTERACTS_GiG]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpBP]-()),\r\n  size(()-[:PARTICIPATES_GpBP]-(n3))\r\n] AS degrees, path, n3 as target\r\nWITH\r\n  target.identifier AS go_id,\r\n  target.name AS go_name,\r\n  count(path) AS PC,\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.7)) AS DWPC,\r\n  size((target)-[:PARTICIPATES_GpBP]-()) AS n_genes\r\n  WHERE 5 <= n_genes <= 100 AND PC >= 2\r\nRETURN\r\n  go_id, go_name, PC, DWPC, n_genes\r\nORDER BY DWPC DESC\r\nLIMIT 5\r\n```\r\n\r\nThe query took under 5 seconds and required 1,420,721 database hits.\r\n\r\n| go_id | go_name | PC | DWPC | n_genes |\r\n|------------|----------------------------------------------------------|----|---------|---------|\r\n| GO:0045347 | negative regulation of MHC class II biosynthetic process | 3 | 0.00006 | 6 |\r\n| GO:0010842 | retina layer formation | 3 | 0.00006 | 22 |\r\n| GO:0045346 | regulation of MHC class II biosynthetic process | 3 | 0.00004 | 13 |\r\n| GO:0060042 | retina morphogenesis in camera-type eye | 4 | 0.00003 | 54 |\r\n| GO:0003407 | neural retina development | 4 | 0.00003 | 55 |\r\n\r\nInterestingly three of the processes involve the retina. Note that the terms are not independent: \"retina layer formation\" is a subprocess of \"retina morphogenesis in camera-type eye\" and \"retina layer formation\". If we're interested more in the MS--\"retina layer formation\" relationship, we can retrieve the paths behind the DWPC:\r\n\r\n```cyp\r\nMATCH path = (n0:Disease)-[e1:ASSOCIATES_DaG]-(n1)-[:INTERACTS_GiG]-(n2)-[:PARTICIPATES_GpBP]-(n3:BiologicalProcess)\r\nWHERE n0.name = 'multiple sclerosis'\r\n  AND n3.name = 'retina layer formation'\r\n  AND 'GWAS Catalog' in e1.sources\r\n  AND exists((n0)-[:LOCALIZES_DlA]-()-[:UPREGULATES_AuG]-(n2))\r\nRETURN path\r\n```\r\n\r\n![multiple sclerosis paths to retina layer formation](https://cloud.githubusercontent.com/assets/1117703/16359510/2ff3a870-3b05-11e6-8e3f-b9b50bf1e937.png)",
+      "comment_id": 1333,
+      "profile_id": 17,
+      "published": "2016-06-25T20:03:54.062157Z",
+      "thread_id": 220,
+      "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220#3"
+    },
+    {
+      "body_html": "<h1>Which anatomies express migraine-associated genes</h1>\r\n\r\n<p>The following query looks for anatomies (tissues) which express the genes associated with migraine.</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH path = (n0:Disease)-[:ASSOCIATES_DaG]-(n1)-[:EXPRESSES_AeG]-(n2:Anatomy)\r\nWHERE n0.name = 'migraine'\r\nWITH\r\n[\r\n  size((n0)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n1)),\r\n  size((n1)-[:EXPRESSES_AeG]-()),\r\n  size(()-[:EXPRESSES_AeG]-(n2))\r\n] AS degrees, path, n2 as target\r\nRETURN\r\n  target.identifier AS anatomy_id,\r\n  target.name AS anatomy_name,\r\n  count(path) AS PC,\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.5)) AS DWPC,\r\n  size((target)-[:EXPRESSES_AeG]-()) AS n_genes\r\nORDER BY DWPC DESC\r\nLIMIT 5</code></pre>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>anatomy_id</th><th>anatomy_name</th><th>PC</th><th>DWPC</th><th>n_genes</th></tr></thead><tbody><tr><td>UBERON:0001645</td><td>trigeminal nerve</td><td>7</td><td>0.022</td><td>36</td></tr><tr><td>UBERON:0001785</td><td>cranial nerve</td><td>10</td><td>0.020</td><td>66</td></tr><tr><td>UBERON:0002363</td><td>dura mater</td><td>2</td><td>0.017</td><td>4</td></tr><tr><td>UBERON:0002925</td><td>trigeminal nucleus</td><td>4</td><td>0.016</td><td>7</td></tr><tr><td>UBERON:0002360</td><td>meninx</td><td>1</td><td>0.012</td><td>3</td></tr></tbody></table>\r\n\r\n<p>The query does a good job identifying migraine-relevant tissues. However, notice that the expression profiles for the retrieved tissues are not very comprehensive: only four genes are known to be expressed in the dura mater, two of which are migraine associated. Therefore, these results are dependent on our gene expression catalog <span class=\"citation\">[<a href=\"/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124\" class=\"citation\" data-key=\"10.15363/thinklab.d124\">1</a>]</span>, which varies considerably in comprehension by tissue.</p>",
+      "body_md": "# Which anatomies express migraine-associated genes\r\n\r\nThe following query looks for anatomies (tissues) which express the genes associated with migraine.\r\n\r\n```cyp\r\nMATCH path = (n0:Disease)-[:ASSOCIATES_DaG]-(n1)-[:EXPRESSES_AeG]-(n2:Anatomy)\r\nWHERE n0.name = 'migraine'\r\nWITH\r\n[\r\n  size((n0)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n1)),\r\n  size((n1)-[:EXPRESSES_AeG]-()),\r\n  size(()-[:EXPRESSES_AeG]-(n2))\r\n] AS degrees, path, n2 as target\r\nRETURN\r\n  target.identifier AS anatomy_id,\r\n  target.name AS anatomy_name,\r\n  count(path) AS PC,\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.5)) AS DWPC,\r\n  size((target)-[:EXPRESSES_AeG]-()) AS n_genes\r\nORDER BY DWPC DESC\r\nLIMIT 5\r\n```\r\n\r\n| anatomy_id | anatomy_name | PC | DWPC | n_genes |\r\n|----------|-----------|----|-------|---------|\r\n| UBERON:0001645 | trigeminal nerve | 7 | 0.022 | 36 |\r\n| UBERON:0001785 | cranial nerve | 10 | 0.020 | 66 |\r\n| UBERON:0002363 | dura mater | 2 | 0.017 | 4 |\r\n| UBERON:0002925 | trigeminal nucleus | 4 | 0.016 | 7 |\r\n| UBERON:0002360 | meninx | 1 | 0.012 | 3 |\r\n\r\nThe query does a good job identifying migraine-relevant tissues. However, notice that the expression profiles for the retrieved tissues are not very comprehensive: only four genes are known to be expressed in the dura mater, two of which are migraine associated. Therefore, these results are dependent on our gene expression catalog [@10.15363/thinklab.d124], which varies considerably in comprehension by tissue.",
+      "comment_id": 1334,
+      "profile_id": 17,
+      "published": "2016-06-27T15:35:45.650562Z",
+      "thread_id": 220,
+      "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220#4"
+    },
+    {
+      "body_html": "<h1>Compounds that target genes involved in myelation</h1>\r\n\r\n<p>Demyelination is the cause of much disability in multiple sclerosis patients. Below is a simple query to find all compounds that bind to proteins whose genes are involved in myelination:</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH path = (n0:BiologicalProcess)-[:PARTICIPATES_GpBP]-(n1)-[:BINDS_CbG]-(n2:Compound)\r\nWHERE n0.name = 'myelination'\r\nRETURN path</code></pre>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/16385926/c77bec90-3c5c-11e6-88b3-1c6d01725086.png\" alt=\"myelination-compounds\"></p>\r\n\r\n<p>The query identifies 8 myelination-involved genes that are targeted by 33 compounds. To retrieve these counts yourself, change the last line of the query to <code>RETURN count(DISTINCT n1) AS targets,  count(DISTINCT n2) AS compounds</code>. If you're interested in myelination, see <a href=\"https://github.com/dhimmel/myelinet\" title=\"dhimmel/myelinet on GitHub\"><code>dhimmel/myelinet</code></a> for additional queries.</p>\r\n\r\n<p>We can modify the above query to find compounds that upregulate rather than bind a myelination gene/protein. <em>Compound–upregulates–Gene</em> relationships in Hetionet are from LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">1</a>]</span>. Here we set an extreme <code>z_score</code> threshold to thin the results:</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH path = (n0:BiologicalProcess)-[:PARTICIPATES_GpBP]-(n1)-[e2:UPREGULATES_CuG]-(n2:Compound)\r\nWHERE n0.name = 'myelination' AND\r\ne2.z_score &gt; 12\r\nRETURN path</code></pre>",
+      "body_md": "# Compounds that target genes involved in myelation\r\n\r\nDemyelination is the cause of much disability in multiple sclerosis patients. Below is a simple query to find all compounds that bind to proteins whose genes are involved in myelination:\r\n\r\n```cypher\r\nMATCH path = (n0:BiologicalProcess)-[:PARTICIPATES_GpBP]-(n1)-[:BINDS_CbG]-(n2:Compound)\r\nWHERE n0.name = 'myelination'\r\nRETURN path\r\n```\r\n\r\n![myelination-compounds](https://cloud.githubusercontent.com/assets/1117703/16385926/c77bec90-3c5c-11e6-88b3-1c6d01725086.png)\r\n\r\nThe query identifies 8 myelination-involved genes that are targeted by 33 compounds. To retrieve these counts yourself, change the last line of the query to `RETURN count(DISTINCT n1) AS targets,  count(DISTINCT n2) AS compounds`. If you're interested in myelination, see [`dhimmel/myelinet`](https://github.com/dhimmel/myelinet \"dhimmel/myelinet on GitHub\") for additional queries.\r\n\r\nWe can modify the above query to find compounds that upregulate rather than bind a myelination gene/protein. _Compound--upregulates--Gene_ relationships in Hetionet are from LINCS L1000 [@10.15363/thinklab.d43]. Here we set an extreme `z_score` threshold to thin the results:\r\n\r\n```cypher\r\nMATCH path = (n0:BiologicalProcess)-[:PARTICIPATES_GpBP]-(n1)-[e2:UPREGULATES_CuG]-(n2:Compound)\r\nWHERE n0.name = 'myelination' AND\r\ne2.z_score > 12\r\nRETURN path\r\n```",
+      "comment_id": 1335,
+      "profile_id": 17,
+      "published": "2016-06-27T15:51:29.762113Z",
+      "thread_id": 220,
+      "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220#5"
+    },
+    {
+      "body_html": "<h1>Bupropion for nicotine dependence</h1>\r\n\r\n<p>I was looking into several historical instances of repurposing (<a href=\"https://github.com/dhimmel/learn/blob/e5e7459532944cafcf542ef6ddfe9184548224d9/validate/repurposing-examples.tsv\">compiled from</a> a 2013 article <span class=\"citation\">[<a href=\"/doi/10.1016/j.tips.2013.03.004\" class=\"citation\" data-key=\"10.1016/j.tips.2013.03.004\">1</a>]</span>). One example that caught my eye was bupropion for nicotine dependence. Here's some historical context from a 2008 review <span class=\"citation\">[<a href=\"/doi/10.2147/COPD.S1121\" class=\"citation\" data-key=\"10.2147/COPD.S1121\">2</a>]</span>:</p>\r\n\r\n<blockquote><p>Bupropion was developed as an antidepressant for the treatment of major depressive disorder in 1989 as a thrice-daily immediate release formulation <span class=\"citation\">[<a href=\"/doi/10.4088/pcc.v07n0305\" class=\"citation\" data-key=\"10.4088/pcc.v07n0305\">3</a>]</span>. In 1996 a twice daily sustained release (SR) formulation was produced and, in 1997 the smoking cessation properties were first noticed in the United States of America (US) <span class=\"citation\">[<a href=\"/doi/10.1385/comp:32:1:26\" class=\"citation\" data-key=\"10.1385/comp:32:1:26\">4</a>]</span>. Following evaluation as an anti-smoking agent <span class=\"citation\">[<a href=\"/doi/10.1056/nejm199710233371703\" class=\"citation\" data-key=\"10.1056/nejm199710233371703\">5</a>]</span>, it became licensed as an aid to smoking cessation and is now a recognised first line antismoking agent in both the UK and US.</p></blockquote>\r\n\r\n<p>The following quote from a 2012 article speaks to the serendipity of this repurposing <span class=\"citation\">[<a href=\"/doi/10.1093/ntr/nts201\" class=\"citation\" data-key=\"10.1093/ntr/nts201\">6</a>]</span>:</p>\r\n\r\n<blockquote><p>The ability of bupropion to facilitate smoking cessation was discovered serendipitously when it was shown to decrease cigarette consumption in depressed patients. The precise mechanism through which bupropion facilitates abstinence is unclear but nevertheless raises the intriguing possibility that other FDA-approved medications could likewise facilitate smoking cessation through novel mechanisms of action.</p></blockquote>\r\n\r\n<p>I looked into our prediction for bupropion and nicotine dependence (<a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB01156/DOID_0050742.html\">see in browser</a>):</p>\r\n\r\n<blockquote><p>Project Rephetio predicted a probability of 1.265% that Bupropion (<a href=\"http://www.drugbank.ca/drugs/DB01156\"><code>DB01156</code></a>) treats nicotine dependence (<a href=\"http://www.disease-ontology.org/?id=DOID:0050742\"><code>DOID:0050742</code></a>). This probability represents a 2.50-fold enrichment over the background prevalance of treatment. This prediction is in the 96.3th percentile for Bupropion and the 99.5th percentile for nicotine dependence.</p></blockquote>\r\n\r\n<p>While the predicted probability is not exceptional, bupropion was in the top 99.5th percentile (<a href=\"http://het.io/repurpose/browse.html?id=DOID_0050742\">ranked 9th</a>) for nicotine dependence. The following diagram shows the 10 paths providing the most support for this prediction:</p>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/16503512/5d56d140-3ee1-11e6-9522-e820c30f67fd.png\" alt=\"bupropion-nicotine\"></p>\r\n\r\n<p>Our approach picks up that bupropion causes terminal insomnia as does varenicline — the only other FDA-approved smoking cessation compound. Indeed, insomnia is one of the primary side effects of bupropion <span class=\"citation\">[<a href=\"/doi/10.1007/s00228-003-0693-0\" class=\"citation\" data-key=\"10.1007/s00228-003-0693-0\">7</a>, <a href=\"/doi/10.2147/COPD.S1121\" class=\"citation\" data-key=\"10.2147/COPD.S1121\">2</a>]</span> and is also a documented side effect of varenicline <span class=\"citation\">[<a href=\"/doi/10.1016/j.amjmed.2008.01.017\" class=\"citation\" data-key=\"10.1016/j.amjmed.2008.01.017\">8</a>]</span>. This shared side effect could underlie a common mechanism of action.</p>\r\n\r\n<h2>Top predictions for nicotine dependence</h2>\r\n\r\n<p>Our top 3 predictions for treating nicotine dependence (or smoking cessation) are nicotine, cytisine, and galantamine. Nicotine is included in PharmacotherapyDB as a symptomatic indication and matched 86 clinical trials. Cytisine is an encouraging prediction because it's shown efficacy in trial <span class=\"citation\">[<a href=\"/doi/10.1056/NEJMoa1102035\" class=\"citation\" data-key=\"10.1056/NEJMoa1102035\">9</a>, <a href=\"/doi/10.1056/NEJMoa1407764\" class=\"citation\" data-key=\"10.1056/NEJMoa1407764\">10</a>]</span> and has been used by smokers for decades as a well-tolerated and low-cost cessation therapy <span class=\"citation\">[<a href=\"/doi/10.1002/14651858.CD006103.pub7\" class=\"citation\" data-key=\"10.1002/14651858.CD006103.pub7\">11</a>]</span>. There is currently an ongoing <a href=\"https://clinicaltrials.gov/ct2/show/NCT01669538\" title=\"Effect of Galantamine on Short-term Abstinence (GAL-K)\">clinical trial</a> at the University of Pennsylvania for galantamine and quitting smoking. The trial has recently shown positive early results <span class=\"citation\">[<a href=\"/doi/10.1038/tp.2015.209\" class=\"citation\" data-key=\"10.1038/tp.2015.209\">12</a>]</span>.</p>",
+      "body_md": "# Bupropion for nicotine dependence\r\n\r\nI was looking into several historical instances of repurposing ([compiled from](https://github.com/dhimmel/learn/blob/e5e7459532944cafcf542ef6ddfe9184548224d9/validate/repurposing-examples.tsv) a 2013 article [@10.1016/j.tips.2013.03.004]). One example that caught my eye was bupropion for nicotine dependence. Here's some historical context from a 2008 review [@10.2147/COPD.S1121]:\r\n\r\n> Bupropion was developed as an antidepressant for the treatment of major depressive disorder in 1989 as a thrice-daily immediate release formulation [@10.4088/pcc.v07n0305]. In 1996 a twice daily sustained release (SR) formulation was produced and, in 1997 the smoking cessation properties were first noticed in the United States of America (US) [@10.1385/comp:32:1:26]. Following evaluation as an anti-smoking agent [@10.1056/nejm199710233371703], it became licensed as an aid to smoking cessation and is now a recognised first line antismoking agent in both the UK and US.\r\n\r\nThe following quote from a 2012 article speaks to the serendipity of this repurposing [@10.1093/ntr/nts201]:\r\n\r\n> The ability of bupropion to facilitate smoking cessation was discovered serendipitously when it was shown to decrease cigarette consumption in depressed patients. The precise mechanism through which bupropion facilitates abstinence is unclear but nevertheless raises the intriguing possibility that other FDA-approved medications could likewise facilitate smoking cessation through novel mechanisms of action.\r\n\r\nI looked into our prediction for bupropion and nicotine dependence ([see in browser](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB01156/DOID_0050742.html)):\r\n\r\n> Project Rephetio predicted a probability of 1.265% that Bupropion ([`DB01156`](http://www.drugbank.ca/drugs/DB01156)) treats nicotine dependence ([`DOID:0050742`](http://www.disease-ontology.org/?id=DOID:0050742)). This probability represents a 2.50-fold enrichment over the background prevalance of treatment. This prediction is in the 96.3th percentile for Bupropion and the 99.5th percentile for nicotine dependence.\r\n\r\nWhile the predicted probability is not exceptional, bupropion was in the top 99.5th percentile ([ranked 9th](http://het.io/repurpose/browse.html?id=DOID_0050742)) for nicotine dependence. The following diagram shows the 10 paths providing the most support for this prediction:\r\n\r\n![bupropion-nicotine](https://cloud.githubusercontent.com/assets/1117703/16503512/5d56d140-3ee1-11e6-9522-e820c30f67fd.png)\r\n\r\nOur approach picks up that bupropion causes terminal insomnia as does varenicline -- the only other FDA-approved smoking cessation compound. Indeed, insomnia is one of the primary side effects of bupropion [@10.1007/s00228-003-0693-0 @10.2147/COPD.S1121] and is also a documented side effect of varenicline [@10.1016/j.amjmed.2008.01.017]. This shared side effect could underlie a common mechanism of action.\r\n\r\n## Top predictions for nicotine dependence \r\n\r\nOur top 3 predictions for treating nicotine dependence (or smoking cessation) are nicotine, cytisine, and galantamine. Nicotine is included in PharmacotherapyDB as a symptomatic indication and matched 86 clinical trials. Cytisine is an encouraging prediction because it's shown efficacy in trial [@10.1056/NEJMoa1102035 @10.1056/NEJMoa1407764] and has been used by smokers for decades as a well-tolerated and low-cost cessation therapy [@10.1002/14651858.CD006103.pub7]. There is currently an ongoing [clinical trial](https://clinicaltrials.gov/ct2/show/NCT01669538 \"Effect of Galantamine on Short-term Abstinence (GAL-K)\") at the University of Pennsylvania for galantamine and quitting smoking. The trial has recently shown positive early results [@10.1038/tp.2015.209].",
+      "comment_id": 1336,
+      "profile_id": 17,
+      "published": "2016-06-30T21:37:46.968684Z",
+      "thread_id": 203,
+      "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#8"
+    },
+    {
+      "body_html": "<h1>Data copyright article in <em>Nature News</em></h1>\r\n\r\n<p>Simon Oxenham wrote a story titled <a href=\"http://www.nature.com/news/legal-confusion-threatens-to-slow-data-science-1.20359\" title=\"Nature News: Researcher who spent months chasing permission to republish online data sets urges others to read up on the law.\">Legal confusion threatens to slow data science</a>, which was published in <em>Nature News</em> today <span class=\"citation\">[<a href=\"/doi/10.1038/536016a\" class=\"citation\" data-key=\"10.1038/536016a\">1</a>]</span>. The story covers our experience with data copyright and seeking permission to reuse publicly-funded research.</p>\r\n\r\n<p>The article begins with:</p>\r\n\r\n<blockquote><p>Knowledge from millions of biological studies encoded into one network — that is Daniel Himmelstein’s alluring description of <a href=\"https://neo4j.het.io/browser/\">Hetionet</a>, a free online resource that melds data from 28 public sources on links between drugs, genes and diseases. But for a product built on public information, obtaining legal permissions has been surprisingly tough.</p></blockquote>\r\n\r\n<p>Thanks to everyone who contributed on our data licensing discussions. This post wouldn't be here if it weren't for you!</p>",
+      "body_md": "# Data copyright article in _Nature News_\r\n\r\nSimon Oxenham wrote a story titled [Legal confusion threatens to slow data science](http://www.nature.com/news/legal-confusion-threatens-to-slow-data-science-1.20359 \"Nature News: Researcher who spent months chasing permission to republish online data sets urges others to read up on the law.\"), which was published in _Nature News_ today [@10.1038/536016a]. The story covers our experience with data copyright and seeking permission to reuse publicly-funded research.\r\n\r\nThe article begins with:\r\n\r\n> Knowledge from millions of biological studies encoded into one network — that is Daniel Himmelstein’s alluring description of [Hetionet](https://neo4j.het.io/browser/), a free online resource that melds data from 28 public sources on links between drugs, genes and diseases. But for a product built on public information, obtaining legal permissions has been surprisingly tough.\r\n\r\nThanks to everyone who contributed on our data licensing discussions. This post wouldn't be here if it weren't for you!",
+      "comment_id": 1341,
+      "profile_id": 17,
+      "published": "2016-08-03T14:20:42.552142Z",
+      "thread_id": 113,
+      "url": "/discussion/tracking-project-reuse-citation-and-publicity/113#9"
     }
   ],
   "documents": [
@@ -4153,7 +4216,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 898
+      "views": 952
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -5537,6 +5600,15 @@
       "note_id": 266,
       "profile_id": 17,
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#note-266"
+    },
+    {
+      "added": "2016-06-25T17:47:10.298339Z",
+      "body_html": "<p>The review was published on June 23, 2016 in <em>Human Molecular Genetics</em> <span class=\"citation\">[<a href=\"/doi/10.1093/hmg/ddw160\" class=\"citation\" data-key=\"10.1093/hmg/ddw160\">1</a>]</span>.</p>",
+      "body_md": "The review was published on June 23, 2016 in _Human Molecular Genetics_ [@10.1093/hmg/ddw160].",
+      "comment_id": 1295,
+      "note_id": 267,
+      "profile_id": 17,
+      "url": "/discussion/tracking-project-reuse-citation-and-publicity/113#note-267"
     }
   ],
   "profiles": [
@@ -5842,7 +5914,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-06-24T20:38:35.120765Z",
+  "retrieved": "2016-08-06T16:33:28.936444Z",
   "threads": [
     {
       "document_id": null,
@@ -5854,7 +5926,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 402
+      "views": 465
     },
     {
       "document_id": null,
@@ -5866,7 +5938,7 @@
       "thread_id": 22,
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 107
+      "views": 125
     },
     {
       "document_id": null,
@@ -5878,7 +5950,7 @@
       "thread_id": 23,
       "topic_field": "Reproducibility",
       "url": "/discussion/enabling-reproducibility-and-reuse/23",
-      "views": 97
+      "views": 108
     },
     {
       "document_id": null,
@@ -5890,7 +5962,7 @@
       "thread_id": 25,
       "topic_field": "Python,R,Algorithms,Computer Science,SIDER,GSC Weighting,Gerstein-Sonnhammer-Chothia,Julia,Open Source Software",
       "url": "/discussion/seeking-an-open-source-implementation-of-the-gerstein-sonnhammer-chothia-algorithm/25",
-      "views": 120
+      "views": 133
     },
     {
       "document_id": null,
@@ -5902,7 +5974,7 @@
       "thread_id": 30,
       "topic_field": "SIDER,Indications,NLP,Drugs,Side Effects,Drug Labels",
       "url": "/discussion/assessing-the-quality-and-applicability-of-the-sider-2-resource/30",
-      "views": 111
+      "views": 127
     },
     {
       "document_id": null,
@@ -5914,7 +5986,7 @@
       "thread_id": 31,
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 69
+      "views": 77
     },
     {
       "document_id": null,
@@ -5926,7 +5998,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 127
+      "views": 147
     },
     {
       "document_id": null,
@@ -5938,7 +6010,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 185
+      "views": 214
     },
     {
       "document_id": null,
@@ -5950,7 +6022,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 228
+      "views": 253
     },
     {
       "document_id": null,
@@ -5962,7 +6034,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 113
+      "views": 123
     },
     {
       "document_id": null,
@@ -5974,7 +6046,7 @@
       "thread_id": 42,
       "topic_field": "Terminologies,Mapping,Incomplete Interactome,MeSH",
       "url": "/discussion/mapping-incomplete-interactome-disease-names-to-mesh/42",
-      "views": 57
+      "views": 63
     },
     {
       "document_id": null,
@@ -5986,7 +6058,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 327
+      "views": 382
     },
     {
       "document_id": null,
@@ -5998,7 +6070,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 161
+      "views": 180
     },
     {
       "document_id": null,
@@ -6010,7 +6082,7 @@
       "thread_id": 46,
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 77
+      "views": 88
     },
     {
       "document_id": null,
@@ -6022,7 +6094,7 @@
       "thread_id": 47,
       "topic_field": "Validation,Evalauation",
       "url": "/discussion/evaluation-framework/47",
-      "views": 39
+      "views": 42
     },
     {
       "document_id": null,
@@ -6034,7 +6106,7 @@
       "thread_id": 48,
       "topic_field": "Natural Language Processing,Relation Extraction,Bias,Prior Knowledge",
       "url": "/discussion/text-as-a-resource-for-network-population/48",
-      "views": 66
+      "views": 74
     },
     {
       "document_id": null,
@@ -6046,7 +6118,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 234
+      "views": 264
     },
     {
       "document_id": null,
@@ -6058,7 +6130,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 234
+      "views": 257
     },
     {
       "document_id": null,
@@ -6070,7 +6142,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 175
+      "views": 192
     },
     {
       "document_id": null,
@@ -6082,7 +6154,7 @@
       "thread_id": 57,
       "topic_field": "Evolution,Entrez Gene,ERC,UCSC Genome Browser,Evolutionary Rate Covariation",
       "url": "/discussion/selecting-informative-erc-evolutionary-rate-covariation-values-between-genes/57",
-      "views": 64
+      "views": 76
     },
     {
       "document_id": null,
@@ -6094,7 +6166,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 310
+      "views": 356
     },
     {
       "document_id": null,
@@ -6106,7 +6178,7 @@
       "thread_id": 62,
       "topic_field": "Databases,Indications,Clinical Informatics,EHR,Ehrlink,Medications,Health Records",
       "url": "/discussion/extracting-indications-from-the-ehrlink-resource/62",
-      "views": 72
+      "views": 82
     },
     {
       "document_id": null,
@@ -6118,7 +6190,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 276
+      "views": 315
     },
     {
       "document_id": null,
@@ -6130,7 +6202,7 @@
       "thread_id": 66,
       "topic_field": "",
       "url": "/discussion/kabob-knowledgebase/66",
-      "views": 81
+      "views": 90
     },
     {
       "document_id": null,
@@ -6142,7 +6214,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 117
+      "views": 126
     },
     {
       "document_id": null,
@@ -6154,7 +6226,7 @@
       "thread_id": 68,
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 56
+      "views": 67
     },
     {
       "document_id": null,
@@ -6166,7 +6238,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 87
+      "views": 101
     },
     {
       "document_id": null,
@@ -6178,7 +6250,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 291
+      "views": 339
     },
     {
       "document_id": null,
@@ -6190,7 +6262,7 @@
       "thread_id": 72,
       "topic_field": "Databases,Networks,Pathways",
       "url": "/discussion/adding-pathway-resources-to-your-network/72",
-      "views": 88
+      "views": 107
     },
     {
       "document_id": null,
@@ -6202,7 +6274,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 158
+      "views": 180
     },
     {
       "document_id": null,
@@ -6214,7 +6286,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 307
+      "views": 358
     },
     {
       "document_id": null,
@@ -6226,7 +6298,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 283
+      "views": 331
     },
     {
       "document_id": null,
@@ -6238,7 +6310,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 582
+      "views": 663
     },
     {
       "document_id": null,
@@ -6250,7 +6322,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 587
+      "views": 663
     },
     {
       "document_id": null,
@@ -6262,7 +6334,7 @@
       "thread_id": 85,
       "topic_field": "Protein Interactions,Interactions,PPI",
       "url": "/discussion/creating-a-catalog-of-protein-interactions/85",
-      "views": 118
+      "views": 133
     },
     {
       "document_id": null,
@@ -6274,7 +6346,7 @@
       "thread_id": 91,
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 91
+      "views": 97
     },
     {
       "document_id": null,
@@ -6286,7 +6358,7 @@
       "thread_id": 93,
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 47
+      "views": 53
     },
     {
       "document_id": null,
@@ -6298,7 +6370,7 @@
       "thread_id": 94,
       "topic_field": "Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations",
       "url": "/discussion/functional-disease-annotations-for-genes-using-doaf/94",
-      "views": 55
+      "views": 63
     },
     {
       "document_id": null,
@@ -6310,7 +6382,7 @@
       "thread_id": 95,
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 177
+      "views": 200
     },
     {
       "document_id": null,
@@ -6322,7 +6394,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 190
+      "views": 220
     },
     {
       "document_id": null,
@@ -6334,7 +6406,7 @@
       "thread_id": 97,
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 109
+      "views": 123
     },
     {
       "document_id": null,
@@ -6346,7 +6418,7 @@
       "thread_id": 101,
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 90
+      "views": 104
     },
     {
       "document_id": null,
@@ -6358,7 +6430,7 @@
       "thread_id": 102,
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 204
+      "views": 230
     },
     {
       "document_id": null,
@@ -6370,7 +6442,7 @@
       "thread_id": 104,
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 128
+      "views": 149
     },
     {
       "document_id": null,
@@ -6382,7 +6454,7 @@
       "thread_id": 105,
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 84
+      "views": 96
     },
     {
       "document_id": null,
@@ -6394,7 +6466,7 @@
       "thread_id": 106,
       "topic_field": "Databases,Diseases,Associations",
       "url": "/discussion/processing-the-diseases-resource-for-diseasegene-relationships/106",
-      "views": 58
+      "views": 63
     },
     {
       "document_id": null,
@@ -6406,7 +6478,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 228
+      "views": 328
     },
     {
       "document_id": null,
@@ -6418,7 +6490,7 @@
       "thread_id": 108,
       "topic_field": "Copyright,Permission,Licensing,MSigDB,MIT",
       "url": "/discussion/msigdb-licensing/108",
-      "views": 103
+      "views": 127
     },
     {
       "document_id": null,
@@ -6430,7 +6502,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 200
+      "views": 227
     },
     {
       "document_id": null,
@@ -6442,7 +6514,7 @@
       "thread_id": 111,
       "topic_field": "Incomplete Interactome,Permission,Licensing,Copyright Transfer,Supplement,AAAS",
       "url": "/discussion/incomplete-interactome-licensing/111",
-      "views": 88
+      "views": 95
     },
     {
       "document_id": null,
@@ -6454,7 +6526,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 306
+      "views": 340
     },
     {
       "document_id": null,
@@ -6466,7 +6538,7 @@
       "thread_id": 113,
       "topic_field": "Citations,Publicity,Media Coverage,Reuse,Attention",
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113",
-      "views": 72
+      "views": 106
     },
     {
       "document_id": null,
@@ -6478,7 +6550,7 @@
       "thread_id": 115,
       "topic_field": "HNEP,Hetnets,Features,Metapaths",
       "url": "/discussion/assessing-the-informativeness-of-features/115",
-      "views": 55
+      "views": 66
     },
     {
       "document_id": null,
@@ -6490,7 +6562,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 75
+      "views": 93
     },
     {
       "document_id": null,
@@ -6502,7 +6574,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 90
+      "views": 119
     },
     {
       "document_id": null,
@@ -6514,7 +6586,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 102
+      "views": 132
     },
     {
       "document_id": null,
@@ -6526,7 +6598,7 @@
       "thread_id": 136,
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 56
+      "views": 66
     },
     {
       "document_id": null,
@@ -6538,7 +6610,7 @@
       "thread_id": 162,
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 80
+      "views": 98
     },
     {
       "document_id": null,
@@ -6550,7 +6622,7 @@
       "thread_id": 171,
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 123
+      "views": 150
     },
     {
       "document_id": null,
@@ -6562,7 +6634,7 @@
       "thread_id": 178,
       "topic_field": "permutation,XSwap,network randomization,hetnets,hetio",
       "url": "/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178",
-      "views": 41
+      "views": 50
     },
     {
       "document_id": null,
@@ -6574,7 +6646,7 @@
       "thread_id": 181,
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 115
+      "views": 127
     },
     {
       "document_id": null,
@@ -6586,7 +6658,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 151
+      "views": 181
     },
     {
       "document_id": null,
@@ -6598,7 +6670,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 54
+      "views": 75
     },
     {
       "document_id": null,
@@ -6610,7 +6682,7 @@
       "thread_id": 186,
       "topic_field": "DrugCentral,pharmacology,Database",
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186",
-      "views": 64
+      "views": 79
     },
     {
       "document_id": null,
@@ -6622,7 +6694,7 @@
       "thread_id": 187,
       "topic_field": "complexity,runtime,optimization,Neo4J,join hints",
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187",
-      "views": 42
+      "views": 50
     },
     {
       "document_id": null,
@@ -6634,7 +6706,7 @@
       "thread_id": 193,
       "topic_field": "IHS,transformation,DWPC,regression",
       "url": "/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193",
-      "views": 39
+      "views": 50
     },
     {
       "document_id": null,
@@ -6646,7 +6718,7 @@
       "thread_id": 194,
       "topic_field": "HNEP,Hetnets,Machine learning,self-testing",
       "url": "/discussion/network-edge-prediction-how-to-deal-with-self-testing/194",
-      "views": 40
+      "views": 49
     },
     {
       "document_id": null,
@@ -6658,7 +6730,7 @@
       "thread_id": 200,
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 26
+      "views": 33
     },
     {
       "document_id": null,
@@ -6670,7 +6742,7 @@
       "thread_id": 201,
       "topic_field": "Machine learning,Heterogeneous Networks,Hetnets,HNEP,Prior Knowledge",
       "url": "/discussion/network-edge-prediction-estimating-the-prior/201",
-      "views": 38
+      "views": 48
     },
     {
       "document_id": null,
@@ -6682,7 +6754,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 57
+      "views": 89
     },
     {
       "document_id": null,
@@ -6694,7 +6766,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 64
+      "views": 143
     },
     {
       "document_id": null,
@@ -6706,7 +6778,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 126
+      "views": 226
     },
     {
       "document_id": null,
@@ -6718,7 +6790,7 @@
       "thread_id": 210,
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 44
+      "views": 67
     },
     {
       "document_id": null,
@@ -6730,7 +6802,7 @@
       "thread_id": 212,
       "topic_field": "clinical trials,ClinicalTrials.gov",
       "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212",
-      "views": 37
+      "views": 46
     },
     {
       "document_id": null,
@@ -6742,7 +6814,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 292
+      "views": 335
     },
     {
       "document_id": null,
@@ -6754,7 +6826,7 @@
       "thread_id": 214,
       "topic_field": "DWPC,HNEP,Residual DWPC,R-DWPC,permutation,hetnet,algorithms",
       "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214",
-      "views": 22
+      "views": 33
     },
     {
       "document_id": null,
@@ -6766,7 +6838,7 @@
       "thread_id": 215,
       "topic_field": "HNEP,dropout contamination,overfitting",
       "url": "/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215",
-      "views": 14
+      "views": 23
     },
     {
       "document_id": null,
@@ -6778,7 +6850,19 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 7
+      "views": 88
+    },
+    {
+      "document_id": null,
+      "doi": "10.15363/thinklab.d220",
+      "doi_field": "",
+      "profile_id": 17,
+      "published": "2016-06-25T18:21:47.830304Z",
+      "subject": "Exploring the power of Hetionet: a Cypher query depot",
+      "thread_id": 220,
+      "topic_field": "Hetionet,Neo4j,Cypher,Network Biology",
+      "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220",
+      "views": 49
     }
   ]
 }

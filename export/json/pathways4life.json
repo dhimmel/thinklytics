@@ -364,7 +364,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/pathways4life/proposal",
-      "views": 339
+      "views": 365
     }
   ],
   "notes": [
@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-06-24T20:38:37.540769Z",
+  "retrieved": "2016-08-06T16:33:29.523442Z",
   "threads": [
     {
       "document_id": null,
@@ -457,7 +457,7 @@
       "thread_id": 75,
       "topic_field": "Gene Relationships,Gene Interactions,Interactions,Pathways,Gene Sets",
       "url": "/discussion/pathway-novelty-based-on-unique-relationships-rather-than-genes/75",
-      "views": 35
+      "views": 42
     },
     {
       "document_id": null,
@@ -469,7 +469,7 @@
       "thread_id": 76,
       "topic_field": "Duplicates,Pathways,Curation",
       "url": "/discussion/duplicate-pathway-detection-and-resolution/76",
-      "views": 27
+      "views": 31
     },
     {
       "document_id": null,
@@ -493,7 +493,7 @@
       "thread_id": 117,
       "topic_field": "Crowdsourcing,Game Design,Pathways,Image Analysis",
       "url": "/doc/3/review",
-      "views": 24
+      "views": 29
     },
     {
       "document_id": null,
@@ -505,7 +505,7 @@
       "thread_id": 119,
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 65
+      "views": 80
     },
     {
       "document_id": null,
@@ -517,7 +517,7 @@
       "thread_id": 120,
       "topic_field": "Gamification",
       "url": "/discussion/are-there-significant-differences-in-difficulty-between-pathway-modeling-tasks/120",
-      "views": 24
+      "views": 26
     },
     {
       "document_id": null,
@@ -529,7 +529,7 @@
       "thread_id": 121,
       "topic_field": "",
       "url": "/discussion/how-about-examples-of-the-awesome-science-that-pathway-modeling-enables/121",
-      "views": 33
+      "views": 40
     },
     {
       "document_id": null,
@@ -541,7 +541,7 @@
       "thread_id": 122,
       "topic_field": "",
       "url": "/discussion/clarifying-the-scope-of-the-challenge/122",
-      "views": 32
+      "views": 37
     },
     {
       "document_id": null,
@@ -553,7 +553,7 @@
       "thread_id": 123,
       "topic_field": "Crowdsourcing,Gamification,Science Games,Serious Games",
       "url": "/discussion/what-made-previous-crowdsourced-science-games-succeed-or-not/123",
-      "views": 39
+      "views": 42
     }
   ]
 }

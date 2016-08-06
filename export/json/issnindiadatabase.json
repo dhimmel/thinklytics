@@ -1,5 +1,24 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "body_html": "<p>This is an amazing initiative and i believe the authors took in mind the context of availing the centralised journal ready for a mobile app.</p>",
+      "body_md": "This is an amazing initiative and i believe the authors took in mind the context of availing the centralised journal ready for a mobile app.",
+      "comment_id": 1338,
+      "profile_id": 261,
+      "published": "2016-07-12T03:04:24.431484Z",
+      "thread_id": 221,
+      "url": "/discussion/review-summary/221"
+    },
+    {
+      "body_html": "<p>Thank you Bisaso Samuel for the kind comment. Yes, we should be working for app as well.</p>",
+      "body_md": "Thank you Bisaso Samuel for the kind comment. Yes, we should be working for app as well.",
+      "comment_id": 1340,
+      "profile_id": 189,
+      "published": "2016-07-12T04:23:58.937943Z",
+      "thread_id": 221,
+      "url": "/discussion/review-summary/221#2"
+    }
+  ],
   "documents": [
     {
       "body_html": "<p>Crowdsource project on Building Indian Journals Database of  Access Policies</p>\r\n\r\n<p>The aim of this project is to develop a database having all the ISSN Journals from India. The NISCAIR assigns ISSN number to all the journals in India and the list that is uploaded on their site at <a href=\"http://nsl.niscair.res.in/issn.jsp\">http://nsl.niscair.res.in/issn.jsp</a> would be used for the database development. All the information related to the journals viz., year of start, language, place (city), publishers, print only, closed access, open access, license, urls, etc which are required to make it a robust database would be collected and collated and made available. It is also planned  to integrate the database with Sherpa/RoMEO which keeps the record of publishers copyright policies. The list of ISSN Journals can be accessed at the link <a href=\"https://goo.gl/CGck6B\">https://goo.gl/CGck6B</a></p>\r\n\r\n<p>Note: If anyone wish to be part of this project, he/she may add details at the link <a href=\"https://goo.gl/QZd2Y6\">https://goo.gl/QZd2Y6</a></p>",
@@ -12,12 +31,27 @@
       "title": "",
       "topic_field": "",
       "url": "/p/issnindiadatabase/proposal",
-      "views": 73
+      "views": 95
     }
   ],
   "notes": [],
-  "profiles": [],
-  "retrieved": "2016-06-24T20:38:36.989547Z",
+  "profiles": [
+    {
+      "first_name": "Sridhar",
+      "last_name": "Gutam",
+      "profile_id": 189,
+      "url": "/u/sridhargutam",
+      "username": "sridhargutam"
+    },
+    {
+      "first_name": "Bisaso",
+      "last_name": "Samuel",
+      "profile_id": 261,
+      "url": "/u/bisasosamuel",
+      "username": "bisasosamuel"
+    }
+  ],
+  "retrieved": "2016-08-06T16:33:32.732458Z",
   "threads": [
     {
       "document_id": 17,
@@ -29,7 +63,19 @@
       "thread_id": 184,
       "topic_field": "",
       "url": "/doc/17/review",
-      "views": 3
+      "views": 4
+    },
+    {
+      "document_id": 17,
+      "doi": "10.15363/thinklab.d221",
+      "doi_field": null,
+      "profile_id": 261,
+      "published": "2016-07-12T03:04:24.404885Z",
+      "subject": "",
+      "thread_id": 221,
+      "topic_field": "",
+      "url": "/discussion/review-summary/221",
+      "views": 15
     }
   ]
 }

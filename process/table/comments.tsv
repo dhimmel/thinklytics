@@ -134,6 +134,8 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 562	2	dFoxPoperant	2015-12-01T20:33:03.696749Z	133	/discussion/how-much-expertise-is-it-realistic-to-expect-grant-reviewers-to-have/133	245	1442
 563	2	dFoxPoperant	2015-12-01T21:45:44.099773Z	129	/discussion/reviewer-1/129#3	144	758
 564	157	dFoxPoperant	2015-12-02T08:29:38.091934Z	133	/discussion/how-much-expertise-is-it-realistic-to-expect-grant-reviewers-to-have/133#2	269	1505
+1338	261	issnindiadatabase	2016-07-12T03:04:24.431484Z	221	/discussion/review-summary/221	25	140
+1340	189	issnindiadatabase	2016-07-12T04:23:58.937943Z	221	/discussion/review-summary/221#2	17	88
 3	2	meta	2015-01-15T23:27:18.340697Z	2	/discussion/add-your-thinklab-feedback-here-in-meta/2	77	423
 36	23	meta	2015-01-23T01:59:47.859625Z	2	/discussion/add-your-thinklab-feedback-here-in-meta/2#2	122	577
 37	23	meta	2015-01-23T02:02:46.776345Z	2	/discussion/add-your-thinklab-feedback-here-in-meta/2#3	47	271
@@ -319,6 +321,7 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1288	17	meta	2016-05-01T19:25:33.494514Z	207	/discussion/tracking-attention-through-altmetric-integration/207	209	1276
 1290	2	meta	2016-05-02T16:58:15.175110Z	207	/discussion/tracking-attention-through-altmetric-integration/207#2	86	669
 1292	23	meta	2016-05-03T07:47:07.001905Z	209	/discussion/share-single-posts/209	68	372
+1339	261	meta	2016-07-12T03:13:37.302383Z	206	/discussion/open-realtime-science-platforms/206#2	33	190
 243	104	pathways4life	2015-06-09T02:28:14.517031Z	73	/discussion/open-for-feedback/73	81	505
 248	17	pathways4life	2015-06-10T23:17:15.345426Z	75	/discussion/pathway-novelty-based-on-unique-relationships-rather-than-genes/75	209	1258
 249	17	pathways4life	2015-06-10T23:23:57.888448Z	76	/discussion/duplicate-pathway-detection-and-resolution/76	83	491
@@ -734,7 +737,7 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1177	17	rephetio	2016-03-15T05:25:20.118976Z	182	/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182#2	253	1334
 1178	17	rephetio	2016-03-15T23:58:06.449545Z	113	/discussion/tracking-project-reuse-citation-and-publicity/113#6	48	308
 1179	17	rephetio	2016-03-16T21:56:38.375668Z	21	/discussion/how-should-we-construct-a-catalog-of-drug-indications/21#24	57	415
-1180	17	rephetio	2016-03-16T22:14:15.042713Z	21	/discussion/how-should-we-construct-a-catalog-of-drug-indications/21#25	102	661
+1180	17	rephetio	2016-03-16T22:14:15.042713Z	21	/discussion/how-should-we-construct-a-catalog-of-drug-indications/21#25	179	1148
 1182	17	rephetio	2016-03-20T16:41:10.716611Z	186	/discussion/incorporating-drugcentral-data-in-our-network/186	141	907
 1183	17	rephetio	2016-03-20T17:21:28.930112Z	186	/discussion/incorporating-drugcentral-data-in-our-network/186#2	197	1413
 1184	17	rephetio	2016-03-20T19:18:45.927561Z	186	/discussion/incorporating-drugcentral-data-in-our-network/186#3	329	2131
@@ -810,7 +813,7 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1317	17	rephetio	2016-05-17T16:22:15.920779Z	210	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#3	362	2229
 1318	17	rephetio	2016-05-17T17:19:43.123603Z	210	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4	379	2410
 1319	17	rephetio	2016-05-17T21:48:48.143975Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#2	249	1697
-1320	17	rephetio	2016-06-23T23:20:21.127421Z	216	/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216	668	4009
+1320	17	rephetio	2016-06-23T23:20:21.127421Z	216	/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216	683	4093
 1324	241	rephetio	2016-06-21T20:49:20.454745Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#10	418	2354
 1325	17	rephetio	2016-06-23T23:59:22.582723Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#3	177	1178
 1326	17	rephetio	2016-06-24T16:50:52.603123Z	213	/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213#11	225	1387
@@ -818,6 +821,13 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1328	172	rephetio	2016-06-24T17:37:55.436453Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#5	37	221
 1329	17	rephetio	2016-06-24T18:52:02.049295Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#6	96	532
 1330	17	rephetio	2016-06-24T20:35:03.139109Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#7	576	3813
+1331	17	rephetio	2016-06-25T18:21:47.903005Z	220	/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220	102	606
+1332	17	rephetio	2016-06-25T19:09:02.506504Z	220	/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220#2	294	1851
+1333	17	rephetio	2016-06-25T20:03:54.062157Z	220	/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220#3	364	2500
+1334	17	rephetio	2016-06-27T15:35:45.650562Z	220	/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220#4	194	1280
+1335	17	rephetio	2016-06-27T15:51:29.762113Z	220	/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220#5	161	1092
+1336	17	rephetio	2016-06-30T21:37:46.968684Z	203	/discussion/predictions-of-whether-a-compound-treats-a-disease/203#8	434	2852
+1341	17	rephetio	2016-08-03T14:20:42.552142Z	113	/discussion/tracking-project-reuse-citation-and-publicity/113#9	121	767
 799	17	thinklabOSP	2016-02-19T06:41:11.813300Z	160	/discussion/highlighting-the-immediacy-of-thinklab/160	158	1008
 800	125	thinklabOSP	2016-02-16T12:50:44.682536Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161	186	1007
 801	2	thinklabOSP	2016-02-16T18:06:25.264019Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161#2	209	1169
