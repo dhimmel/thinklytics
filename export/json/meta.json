@@ -1673,6 +1673,15 @@
       "published": "2016-07-12T03:13:37.302383Z",
       "thread_id": 206,
       "url": "/discussion/open-realtime-science-platforms/206#2"
+    },
+    {
+      "body_html": "<h1>Updated Project Rephetio contribution plot</h1>\r\n\r\n<p>I updated <a href=\"/u/alizee\" class=\"username\">@alizee</a>'s user contribution plot <a href=\"#11\">above</a> with the latest data and some small modifications (<a href=\"https://github.com/dhimmel/thinklytics/blob/3014f3372b32150ab661e03e613b35d6a5000438/viz/rephetio-rviz.ipynb\" title=\"R Notebook in dhimmel/thinklytics at viz/rephetio-rviz.ipynb\">notebook</a>):</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/thinklytics/raw/3014f3372b32150ab661e03e613b35d6a5000438/viz/rephetio-contribution.png\" alt=\"Contributions per user\"></p>\r\n\r\n<p>The plot shows cumulative contribution per user over time. Contribution is measured as the square root of the total characters in comments and notes by a user in Project Rephetio up to a given date. The data is smoothed so it's easier on the eyes (less jagged). Unlike <a href=\"/u/alizee\" class=\"username\">@alizee</a>'s plot, all contributors are included (no 500 character minimum). The names of users who contributed over 4,000 characters are noted.</p>",
+      "body_md": "# Updated Project Rephetio contribution plot\r\n\r\nI updated @alizee's user contribution plot [above](#11) with the latest data and some small modifications ([notebook](https://github.com/dhimmel/thinklytics/blob/3014f3372b32150ab661e03e613b35d6a5000438/viz/rephetio-rviz.ipynb \"R Notebook in dhimmel/thinklytics at viz/rephetio-rviz.ipynb\")):\r\n\r\n![Contributions per user](https://github.com/dhimmel/thinklytics/raw/3014f3372b32150ab661e03e613b35d6a5000438/viz/rephetio-contribution.png)\r\n\r\nThe plot shows cumulative contribution per user over time. Contribution is measured as the square root of the total characters in comments and notes by a user in Project Rephetio up to a given date. The data is smoothed so it's easier on the eyes (less jagged). Unlike @alizee's plot, all contributors are included (no 500 character minimum). The names of users who contributed over 4,000 characters are noted.",
+      "comment_id": 1342,
+      "profile_id": 17,
+      "published": "2016-08-07T01:49:22.136530Z",
+      "thread_id": 191,
+      "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#15"
     }
   ],
   "documents": [
@@ -2499,7 +2508,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-08-06T16:33:25.013975Z",
+  "retrieved": "2016-08-08T19:46:53.807103Z",
   "threads": [
     {
       "document_id": null,
@@ -2535,7 +2544,7 @@
       "thread_id": 27,
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 91
+      "views": 92
     },
     {
       "document_id": null,
@@ -2559,7 +2568,7 @@
       "thread_id": 32,
       "topic_field": "Markdown,TLFM",
       "url": "/discussion/markdown-feedback-bugs-and-suggestions/32",
-      "views": 78
+      "views": 79
     },
     {
       "document_id": null,
@@ -2571,7 +2580,7 @@
       "thread_id": 33,
       "topic_field": "Privacy,IT,Google Analytics,Piwik,Sysadmin,Analytics",
       "url": "/discussion/web-analytics-platform/33",
-      "views": 67
+      "views": 68
     },
     {
       "document_id": null,
@@ -2919,7 +2928,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 80
+      "views": 86
     },
     {
       "document_id": null,
