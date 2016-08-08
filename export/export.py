@@ -54,7 +54,12 @@ def retrieve_project_export(project, session):
     export_url = 'https://thinklab.com/p/{}/export.json'.format(project)
     payload = base_payload(session)
     response = session.post(export_url, data=payload, headers=headers)
-    export = response.json()
+    try:
+        export = response.json()
+    except ValueError as error:
+        print('\nError parsing {} JSON payload:'.format(project))
+        print(response.text)
+        raise error
     export['retrieved'] = datetime.datetime.utcnow().isoformat() + 'Z'
     return export
 
