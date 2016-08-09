@@ -5914,7 +5914,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-08-09T19:14:17.708640Z",
+  "retrieved": "2016-08-09T21:46:59.439776Z",
   "threads": [
     {
       "document_id": null,
@@ -6070,7 +6070,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 181
+      "views": 182
     },
     {
       "document_id": null,
@@ -6142,7 +6142,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 192
+      "views": 193
     },
     {
       "document_id": null,
@@ -6310,7 +6310,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 673
+      "views": 674
     },
     {
       "document_id": null,
@@ -6502,7 +6502,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 229
+      "views": 230
     },
     {
       "document_id": null,
@@ -6598,7 +6598,7 @@
       "thread_id": 136,
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 67
+      "views": 68
     },
     {
       "document_id": null,
@@ -6778,7 +6778,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 234
+      "views": 235
     },
     {
       "document_id": null,
