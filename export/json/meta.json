@@ -1682,6 +1682,15 @@
       "published": "2016-08-07T01:49:22.136530Z",
       "thread_id": 191,
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#15"
+    },
+    {
+      "body_html": "<h1>Error retrieving the JSON export</h1>\r\n\r\n<p>I'm configuring <a href=\"https://github.com/dhimmel/thinklytics\" title=\"Thinklab project exports and analytics on GitHub\"><code>dhimmel/thinklytics</code></a> to use continuous integration with a set environment managed by docker <span class=\"citation\">[<a href=\"/doi/10.1101/056473\" class=\"citation\" data-key=\"10.1101/056473\">1</a>]</span>. Unfortunately, I've been getting an error exporting the rephetio project to JSON. The error returns an HTML page rather than JSON for <code>https://thinklab.com/p/rephetio/export.json</code>. Highlights of the HTML response include (<a href=\"https://travis-ci.org/dhimmel/thinklytics/builds/150759922#L275\">see full log</a>):</p>\r\n\r\n<ul><li>Host Error</li><li>What happened? The web server reported a bad gateway error.</li><li>What can I do? Please try again in a few minutes.</li></ul>\r\n\r\n<p>I've verified happens locally as well as Travis CI, although it's occurrence isn't guaranteed. I wonder if the error is caused by the larger size of Project Rephetio compared to other projects. <a href=\"/u/jspauld\" class=\"username\">@jspauld</a> can you look into this?</p>",
+      "body_md": "# Error retrieving the JSON export\r\n\r\nI'm configuring [`dhimmel/thinklytics`](https://github.com/dhimmel/thinklytics \"Thinklab project exports and analytics on GitHub\") to use continuous integration with a set environment managed by docker [@10.1101/056473]. Unfortunately, I've been getting an error exporting the rephetio project to JSON. The error returns an HTML page rather than JSON for `https://thinklab.com/p/rephetio/export.json`. Highlights of the HTML response include ([see full log](https://travis-ci.org/dhimmel/thinklytics/builds/150759922#L275)):\r\n\r\n+ Host Error\r\n+ What happened? The web server reported a bad gateway error.\r\n+ What can I do? Please try again in a few minutes.\r\n\r\nI've verified happens locally as well as Travis CI, although it's occurrence isn't guaranteed. I wonder if the error is caused by the larger size of Project Rephetio compared to other projects. @jspauld can you look into this?",
+      "comment_id": 1343,
+      "profile_id": 17,
+      "published": "2016-08-08T21:31:14.161840Z",
+      "thread_id": 191,
+      "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#16"
     }
   ],
   "documents": [
@@ -2392,6 +2401,24 @@
       "note_id": 258,
       "profile_id": 17,
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#note-258"
+    },
+    {
+      "added": "2016-08-09T15:47:35.700491Z",
+      "body_html": "<p>Hm, it's still working in the browser for me. Is it for you? Is the problem intermittent? Also, keep in mind the export requires a logged in user.</p>",
+      "body_md": "Hm, it's still working in the browser for me. Is it for you? Is the problem intermittent? Also, keep in mind the export requires a logged in user.",
+      "comment_id": 1343,
+      "note_id": 268,
+      "profile_id": 2,
+      "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#note-268"
+    },
+    {
+      "added": "2016-08-09T18:00:06.040511Z",
+      "body_html": "<p>The problem is intermittent, but when exporting all projects, the chance of not having any failures is low. The issue affects many projects not just <code>rephetio</code>: i.e. several projects can export properly before an arbitrary project fails. The error has happened to me in the browser (see <a href=\"https://cloud.githubusercontent.com/assets/1117703/17527200/64ffde5c-5e38-11e6-8035-ff675c6e89ac.png\">screenshot</a>), on Travis, and locally. However, on occasion all projects will export successfully on Travis (<a href=\"https://travis-ci.org/dhimmel/thinklytics/jobs/150960842\">example</a>) and locally. <a href=\"https://github.com/dhimmel/thinklytics/blob/2478182da2bea95876a4393b720e15d4b4ccc33f/export/export.py#L46\">Here's the code</a> for automatically exporting a project, which creates a session and logs in.</p>",
+      "body_md": "The problem is intermittent, but when exporting all projects, the chance of not having any failures is low. The issue affects many projects not just `rephetio`: i.e. several projects can export properly before an arbitrary project fails. The error has happened to me in the browser (see [screenshot](https://cloud.githubusercontent.com/assets/1117703/17527200/64ffde5c-5e38-11e6-8035-ff675c6e89ac.png)), on Travis, and locally. However, on occasion all projects will export successfully on Travis ([example](https://travis-ci.org/dhimmel/thinklytics/jobs/150960842)) and locally. [Here's the code](https://github.com/dhimmel/thinklytics/blob/2478182da2bea95876a4393b720e15d4b4ccc33f/export/export.py#L46) for automatically exporting a project, which creates a session and logs in.\n\n",
+      "comment_id": 1343,
+      "note_id": 269,
+      "profile_id": 17,
+      "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#note-269"
     }
   ],
   "profiles": [
@@ -2508,7 +2535,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-08-08T19:46:53.807103Z",
+  "retrieved": "2016-08-09T19:10:47.349070Z",
   "threads": [
     {
       "document_id": null,
@@ -2532,7 +2559,7 @@
       "thread_id": 26,
       "topic_field": "ThinkLab,Discussions",
       "url": "/discussion/discussion-ranking-and-visibility/26",
-      "views": 38
+      "views": 39
     },
     {
       "document_id": null,
@@ -2928,7 +2955,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 86
+      "views": 90
     },
     {
       "document_id": null,
@@ -2940,7 +2967,7 @@
       "thread_id": 192,
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 36
+      "views": 37
     },
     {
       "document_id": null,
@@ -3000,7 +3027,7 @@
       "thread_id": 206,
       "topic_field": "open science,platforms",
       "url": "/discussion/open-realtime-science-platforms/206",
-      "views": 46
+      "views": 48
     },
     {
       "document_id": null,
@@ -3024,7 +3051,7 @@
       "thread_id": 209,
       "topic_field": "",
       "url": "/discussion/share-single-posts/209",
-      "views": 21
+      "views": 22
     }
   ]
 }
