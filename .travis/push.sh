@@ -9,6 +9,8 @@ git add export process
 git commit --message "Auto-export all projects on `date --iso-8601 --universal`
 
 Travis build $TRAVIS_BUILD_NUMBER.
-Committed on `date --iso-8601=seconds --universal`."
+Committed on `date --iso-8601=seconds --universal`.
+
+[skip ci]"
 git remote set-url origin https://${GH_TOKEN}@github.com/dhimmel/thinklytics.git
 git push --set-upstream origin $TRAVIS_BRANCH
