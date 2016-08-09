@@ -4,6 +4,7 @@ set -o errexit
 git config --global push.default simple
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
+git checkout $TRAVIS_BRANCH
 git add export process
 git commit --message "Retrieve all projects on `date --iso-8601 --universal`\n\nTravis build $TRAVIS_BUILD_NUMBER committed on `date --iso-8601=seconds --universal`."
 git remote set-url origin https://${GH_TOKEN}@github.com/dhimmel/thinklytics.git
