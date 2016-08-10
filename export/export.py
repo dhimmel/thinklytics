@@ -116,15 +116,15 @@ if __name__ == '__main__':
     if args.all:
         for url in project_listing_urls:
             projects.update(retrieve_project_urls(url))
-        projects = list(projects)
     else:
         projects.add(args.project)
+    projects = sorted(projects)
 
     session = start_session(username, password)
     for project in projects:
-        print('Getting project {}'.format(project))
         while True:
             try:
+                print('Getting project {}'.format(project))
                 export = retrieve_project_export(project, session)
                 break
             except ValueError:
