@@ -4195,6 +4195,15 @@
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#8"
     },
     {
+      "body_html": "<p>There are some additional Disease Ontology feature requests I created on GitHub Issues but didn't get around to posting here until now:</p>\r\n\r\n<p><strong>Resolved</strong>:</p>\r\n\r\n<ul><li><a href=\"https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/161\">Rename/synonym request: \"chronic kidney failure\" to \"chronic kidney disease\"</a></li><li><a href=\"https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/162\">Inaccurate cross-references for coronary artery disease</a></li></ul>\r\n\r\n<p><strong>Ongoing</strong>:</p>\r\n\r\n<ul><li><a href=\"https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/160\">Improving the the depression hierarchy</a></li></ul>",
+      "body_md": "There are some additional Disease Ontology feature requests I created on GitHub Issues but didn't get around to posting here until now:\r\n\r\n**Resolved**:\r\n\r\n+ [Rename/synonym request: \"chronic kidney failure\" to \"chronic kidney disease\"](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/161)\r\n+ [Inaccurate cross-references for coronary artery disease](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/162)\r\n\r\n**Ongoing**:\r\n\r\n+ [Improving the the depression hierarchy](https://github.com/DiseaseOntology/HumanDiseaseOntology/issues/160)",
+      "comment_id": 1337,
+      "profile_id": 17,
+      "published": "2016-08-10T17:00:38.109556Z",
+      "thread_id": 68,
+      "url": "/discussion/disease-ontology-feature-requests/68#5"
+    },
+    {
       "body_html": "<h1>Data copyright article in <em>Nature News</em></h1>\r\n\r\n<p>Simon Oxenham wrote a story titled <a href=\"http://www.nature.com/news/legal-confusion-threatens-to-slow-data-science-1.20359\" title=\"Nature News: Researcher who spent months chasing permission to republish online data sets urges others to read up on the law.\">Legal confusion threatens to slow data science</a>, which was published in <em>Nature News</em> today <span class=\"citation\">[<a href=\"/doi/10.1038/536016a\" class=\"citation\" data-key=\"10.1038/536016a\">1</a>]</span>. The story covers our experience with data copyright and seeking permission to reuse publicly-funded research.</p>\r\n\r\n<p>The article begins with:</p>\r\n\r\n<blockquote><p>Knowledge from millions of biological studies encoded into one network — that is Daniel Himmelstein’s alluring description of <a href=\"https://neo4j.het.io/browser/\">Hetionet</a>, a free online resource that melds data from 28 public sources on links between drugs, genes and diseases. But for a product built on public information, obtaining legal permissions has been surprisingly tough.</p></blockquote>\r\n\r\n<p>Thanks to everyone who contributed on our data licensing discussions. This post wouldn't be here if it weren't for you!</p>",
       "body_md": "# Data copyright article in _Nature News_\r\n\r\nSimon Oxenham wrote a story titled [Legal confusion threatens to slow data science](http://www.nature.com/news/legal-confusion-threatens-to-slow-data-science-1.20359 \"Nature News: Researcher who spent months chasing permission to republish online data sets urges others to read up on the law.\"), which was published in _Nature News_ today [@10.1038/536016a]. The story covers our experience with data copyright and seeking permission to reuse publicly-funded research.\r\n\r\nThe article begins with:\r\n\r\n> Knowledge from millions of biological studies encoded into one network — that is Daniel Himmelstein’s alluring description of [Hetionet](https://neo4j.het.io/browser/), a free online resource that melds data from 28 public sources on links between drugs, genes and diseases. But for a product built on public information, obtaining legal permissions has been surprisingly tough.\r\n\r\nThanks to everyone who contributed on our data licensing discussions. This post wouldn't be here if it weren't for you!",
       "comment_id": 1341,
@@ -5914,7 +5923,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-08-10T15:59:45.896500Z",
+  "retrieved": "2016-08-10T21:05:17.321339Z",
   "threads": [
     {
       "document_id": null,
@@ -6022,7 +6031,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 257
+      "views": 258
     },
     {
       "document_id": null,
@@ -6142,7 +6151,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 196
+      "views": 197
     },
     {
       "document_id": null,
@@ -6166,7 +6175,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 360
+      "views": 361
     },
     {
       "document_id": null,
@@ -6190,7 +6199,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 321
+      "views": 322
     },
     {
       "document_id": null,
@@ -6286,7 +6295,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 362
+      "views": 363
     },
     {
       "document_id": null,
@@ -6478,7 +6487,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 339
+      "views": 340
     },
     {
       "document_id": null,
@@ -6502,7 +6511,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 233
+      "views": 234
     },
     {
       "document_id": null,
@@ -6754,7 +6763,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 98
+      "views": 100
     },
     {
       "document_id": null,
@@ -6778,7 +6787,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 241
+      "views": 242
     },
     {
       "document_id": null,

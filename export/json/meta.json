@@ -2419,6 +2419,15 @@
       "note_id": 269,
       "profile_id": 17,
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#note-269"
+    },
+    {
+      "added": "2016-08-10T19:35:31.676226Z",
+      "body_html": "<p>I <a href=\"https://github.com/dhimmel/thinklytics/commit/f0d44cb18108e018498aea6a943863a05f520f37\" title=\"Commit for dhimmel/thinklytics on GitHub\">modified</a> our exporter to continually retry failing exports until they succeed. So now our continuous integrations have begun to succeed, although they must first endure several failures (<a href=\"https://travis-ci.org/dhimmel/thinklytics/builds/151256822\" title=\"dhimmel/thinklytics build #27 on Travis CI\">example</a>).</p>",
+      "body_md": "I [modified](https://github.com/dhimmel/thinklytics/commit/f0d44cb18108e018498aea6a943863a05f520f37 \"Commit for dhimmel/thinklytics on GitHub\") our exporter to continually retry failing exports until they succeed. So now our continuous integrations have begun to succeed, although they must first endure several failures ([example](https://travis-ci.org/dhimmel/thinklytics/builds/151256822 \"dhimmel/thinklytics build #27 on Travis CI\")).",
+      "comment_id": 1343,
+      "note_id": 270,
+      "profile_id": 17,
+      "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191#note-270"
     }
   ],
   "profiles": [
@@ -2535,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-08-10T15:58:54.128425Z",
+  "retrieved": "2016-08-10T21:05:12.471292Z",
   "threads": [
     {
       "document_id": null,
@@ -3039,7 +3048,7 @@
       "thread_id": 207,
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
