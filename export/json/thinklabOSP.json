@@ -1664,7 +1664,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2016-08-10T02:01:36.461101Z",
+  "retrieved": "2016-08-10T15:29:13.356652Z",
   "threads": [
     {
       "document_id": 12,
@@ -1676,7 +1676,7 @@
       "thread_id": 158,
       "topic_field": "Open science,Peer review,Science Funding,Grant Writing,Grantmaking,Open Notebook Science",
       "url": "/doc/12/review",
-      "views": 70
+      "views": 71
     },
     {
       "document_id": null,
@@ -1700,7 +1700,7 @@
       "thread_id": 161,
       "topic_field": "",
       "url": "/discussion/how-to-address-the-risk-of-stealing-ideas/161",
-      "views": 93
+      "views": 95
     },
     {
       "document_id": 12,
