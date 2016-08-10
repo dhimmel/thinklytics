@@ -2,6 +2,7 @@ import argparse
 import json
 import datetime
 import os
+import time
 
 import requests
 from bs4 import BeautifulSoup as bfs
@@ -122,7 +123,12 @@ if __name__ == '__main__':
     session = start_session(username, password)
     for project in projects:
         print('Getting project {}'.format(project))
-        export = retrieve_project_export(project, session)
+        while True:
+            try:
+                export = retrieve_project_export(project, session)
+                break
+            except ValueError:
+                time.sleep(10)
         save_export(export, project, args.outputdir)
 
     session.close()
