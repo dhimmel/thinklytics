@@ -12,4 +12,4 @@ Travis build $TRAVIS_BUILD_NUMBER.
 Committed on `date --iso-8601=seconds --universal`.
 "
 git remote set-url origin https://${GH_TOKEN}@github.com/dhimmel/thinklytics.git
-git push --set-upstream origin $TRAVIS_BRANCH
+git push --quiet --set-upstream origin $TRAVIS_BRANCH
