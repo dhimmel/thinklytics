@@ -5,6 +5,9 @@ language: generic
 services:
   - docker
 
+git:
+  depth: 1
+
 before_install:
   - openssl aes-256-cbc -K $encrypted_40e932f81a14_key -iv $encrypted_40e932f81a14_iv -in .travis/login.json.enc -out export/login.json -d
   - docker pull dhimmel/thinklytics
