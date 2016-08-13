@@ -5923,7 +5923,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-08-12T21:04:24.299729Z",
+  "retrieved": "2016-08-13T21:02:58.957404Z",
   "threads": [
     {
       "document_id": null,
@@ -5971,7 +5971,7 @@
       "thread_id": 25,
       "topic_field": "Python,R,Algorithms,Computer Science,SIDER,GSC Weighting,Gerstein-Sonnhammer-Chothia,Julia,Open Source Software",
       "url": "/discussion/seeking-an-open-source-implementation-of-the-gerstein-sonnhammer-chothia-algorithm/25",
-      "views": 134
+      "views": 135
     },
     {
       "document_id": null,
@@ -6043,7 +6043,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 127
+      "views": 128
     },
     {
       "document_id": null,
@@ -6067,7 +6067,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 391
+      "views": 392
     },
     {
       "document_id": null,
@@ -6079,7 +6079,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 184
+      "views": 186
     },
     {
       "document_id": null,
@@ -6175,7 +6175,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 365
+      "views": 369
     },
     {
       "document_id": null,
@@ -6235,7 +6235,7 @@
       "thread_id": 68,
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 74
+      "views": 75
     },
     {
       "document_id": null,
@@ -6283,7 +6283,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 183
+      "views": 184
     },
     {
       "document_id": null,
@@ -6295,7 +6295,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 367
+      "views": 368
     },
     {
       "document_id": null,
@@ -6307,7 +6307,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 341
+      "views": 342
     },
     {
       "document_id": null,
@@ -6319,7 +6319,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 678
+      "views": 681
     },
     {
       "document_id": null,
@@ -6331,7 +6331,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 675
+      "views": 676
     },
     {
       "document_id": null,
@@ -6391,7 +6391,7 @@
       "thread_id": 95,
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 204
+      "views": 205
     },
     {
       "document_id": null,
@@ -6403,7 +6403,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 226
+      "views": 227
     },
     {
       "document_id": null,
@@ -6427,7 +6427,7 @@
       "thread_id": 101,
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 107
+      "views": 108
     },
     {
       "document_id": null,
@@ -6451,7 +6451,7 @@
       "thread_id": 104,
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 151
+      "views": 154
     },
     {
       "document_id": null,
@@ -6487,7 +6487,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 343
+      "views": 344
     },
     {
       "document_id": null,
@@ -6535,7 +6535,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 347
+      "views": 349
     },
     {
       "document_id": null,
@@ -6595,7 +6595,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 138
+      "views": 139
     },
     {
       "document_id": null,
@@ -6655,7 +6655,7 @@
       "thread_id": 181,
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 130
+      "views": 131
     },
     {
       "document_id": null,
@@ -6763,7 +6763,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 104
+      "views": 105
     },
     {
       "document_id": null,
