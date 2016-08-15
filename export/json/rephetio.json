@@ -5923,7 +5923,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-08-14T21:03:29.176786Z",
+  "retrieved": "2016-08-15T21:04:31.748631Z",
   "threads": [
     {
       "document_id": null,
@@ -5935,7 +5935,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 475
+      "views": 476
     },
     {
       "document_id": null,
@@ -6043,7 +6043,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 128
+      "views": 129
     },
     {
       "document_id": null,
@@ -6067,7 +6067,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 393
+      "views": 394
     },
     {
       "document_id": null,
@@ -6079,7 +6079,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 186
+      "views": 187
     },
     {
       "document_id": null,
@@ -6127,7 +6127,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 273
+      "views": 274
     },
     {
       "document_id": null,
@@ -6139,7 +6139,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 263
+      "views": 265
     },
     {
       "document_id": null,
@@ -6151,7 +6151,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 197
+      "views": 198
     },
     {
       "document_id": null,
@@ -6235,7 +6235,7 @@
       "thread_id": 68,
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 76
+      "views": 78
     },
     {
       "document_id": null,
@@ -6247,7 +6247,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 105
+      "views": 106
     },
     {
       "document_id": null,
@@ -6259,7 +6259,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 344
+      "views": 345
     },
     {
       "document_id": null,
@@ -6307,7 +6307,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 343
+      "views": 344
     },
     {
       "document_id": null,
@@ -6319,7 +6319,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 685
+      "views": 688
     },
     {
       "document_id": null,
@@ -6331,7 +6331,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 679
+      "views": 684
     },
     {
       "document_id": null,
@@ -6439,7 +6439,7 @@
       "thread_id": 102,
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 238
+      "views": 239
     },
     {
       "document_id": null,
@@ -6451,7 +6451,7 @@
       "thread_id": 104,
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 156
+      "views": 157
     },
     {
       "document_id": null,
@@ -6487,7 +6487,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 344
+      "views": 346
     },
     {
       "document_id": null,
@@ -6499,7 +6499,7 @@
       "thread_id": 108,
       "topic_field": "Copyright,Permission,Licensing,MSigDB,MIT",
       "url": "/discussion/msigdb-licensing/108",
-      "views": 128
+      "views": 129
     },
     {
       "document_id": null,
@@ -6535,7 +6535,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 350
+      "views": 351
     },
     {
       "document_id": null,
@@ -6547,7 +6547,7 @@
       "thread_id": 113,
       "topic_field": "Citations,Publicity,Media Coverage,Reuse,Attention",
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113",
-      "views": 108
+      "views": 109
     },
     {
       "document_id": null,
@@ -6595,7 +6595,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 139
+      "views": 140
     },
     {
       "document_id": null,
@@ -6607,7 +6607,7 @@
       "thread_id": 136,
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 69
+      "views": 70
     },
     {
       "document_id": null,
@@ -6655,7 +6655,7 @@
       "thread_id": 181,
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 131
+      "views": 132
     },
     {
       "document_id": null,
@@ -6667,7 +6667,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 185
+      "views": 186
     },
     {
       "document_id": null,
@@ -6679,7 +6679,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 77
+      "views": 80
     },
     {
       "document_id": null,
@@ -6763,7 +6763,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 106
+      "views": 107
     },
     {
       "document_id": null,
@@ -6787,7 +6787,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 249
+      "views": 252
     },
     {
       "document_id": null,
@@ -6823,7 +6823,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 345
+      "views": 348
     },
     {
       "document_id": null,
@@ -6835,7 +6835,7 @@
       "thread_id": 214,
       "topic_field": "DWPC,HNEP,Residual DWPC,R-DWPC,permutation,hetnet,algorithms",
       "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214",
-      "views": 33
+      "views": 34
     },
     {
       "document_id": null,
@@ -6859,7 +6859,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 97
+      "views": 99
     },
     {
       "document_id": null,
