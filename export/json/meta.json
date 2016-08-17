@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-08-16T21:03:12.368010Z",
+  "retrieved": "2016-08-17T21:03:08.883135Z",
   "threads": [
     {
       "document_id": null,
@@ -3012,7 +3012,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 29
+      "views": 30
     },
     {
       "document_id": null,
@@ -3024,7 +3024,7 @@
       "thread_id": 198,
       "topic_field": "SEO,Search Engine Marketing,HMTL,meta,description",
       "url": "/discussion/improving-search-engine-previewing/198",
-      "views": 39
+      "views": 40
     },
     {
       "document_id": null,
