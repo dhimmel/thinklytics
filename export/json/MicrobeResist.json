@@ -202,7 +202,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/MicrobeResist/proposal",
-      "views": 429
+      "views": 430
     }
   ],
   "notes": [
@@ -321,7 +321,7 @@
       "username": "JamesMeadow"
     }
   ],
-  "retrieved": "2016-08-17T21:03:06.687240Z",
+  "retrieved": "2016-08-18T21:03:18.866945Z",
   "threads": [
     {
       "document_id": null,
@@ -345,7 +345,7 @@
       "thread_id": 5,
       "topic_field": "ITS,Fungi",
       "url": "/discussion/fungal-diversity-characterization-using-its/5",
-      "views": 32
+      "views": 33
     },
     {
       "document_id": null,
@@ -357,7 +357,7 @@
       "thread_id": 6,
       "topic_field": "ThinkLab,Meta",
       "url": "/discussion/introduction-to-the-thinklab-pilot/6",
-      "views": 18
+      "views": 19
     },
     {
       "document_id": null,
@@ -369,7 +369,7 @@
       "thread_id": 8,
       "topic_field": "",
       "url": "/discussion/peer-review-notes-for-pilot/8",
-      "views": 31
+      "views": 32
     },
     {
       "document_id": null,
@@ -381,7 +381,7 @@
       "thread_id": 9,
       "topic_field": "Feedback",
       "url": "/discussion/offline-feedback-for-the-proposal-from-two-non-ecologists/9",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,
@@ -393,7 +393,7 @@
       "thread_id": 10,
       "topic_field": "",
       "url": "/discussion/concerns-with-projected-outcomes/10",
-      "views": 50
+      "views": 51
     },
     {
       "document_id": null,
