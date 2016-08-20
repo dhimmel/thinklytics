@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-08-19T21:05:31.685045Z",
+  "retrieved": "2016-08-20T21:05:09.984928Z",
   "threads": [
     {
       "document_id": null,
@@ -2784,7 +2784,7 @@
       "thread_id": 79,
       "topic_field": "DOI,ThinkLab figures",
       "url": "/discussion/we-now-have-a-figures-feature/79",
-      "views": 45
+      "views": 46
     },
     {
       "document_id": null,
@@ -2796,7 +2796,7 @@
       "thread_id": 86,
       "topic_field": "Metadata,Citation,Citations,DOI,References,CrossRef",
       "url": "/discussion/citation-metadata-refreshing/86",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 98
+      "views": 99
     },
     {
       "document_id": null,
@@ -3000,7 +3000,7 @@
       "thread_id": 196,
       "topic_field": "",
       "url": "/discussion/automatically-insert-images/196",
-      "views": 30
+      "views": 31
     },
     {
       "document_id": null,

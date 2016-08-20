@@ -5923,7 +5923,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-08-19T21:05:36.413564Z",
+  "retrieved": "2016-08-20T21:05:14.727943Z",
   "threads": [
     {
       "document_id": null,
@@ -6067,7 +6067,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 397
+      "views": 400
     },
     {
       "document_id": null,
@@ -6079,7 +6079,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 189
+      "views": 190
     },
     {
       "document_id": null,
@@ -6187,7 +6187,7 @@
       "thread_id": 62,
       "topic_field": "Databases,Indications,Clinical Informatics,EHR,Ehrlink,Medications,Health Records",
       "url": "/discussion/extracting-indications-from-the-ehrlink-resource/62",
-      "views": 83
+      "views": 84
     },
     {
       "document_id": null,
@@ -6259,7 +6259,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 348
+      "views": 349
     },
     {
       "document_id": null,
@@ -6307,7 +6307,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 349
+      "views": 350
     },
     {
       "document_id": null,
@@ -6319,7 +6319,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 698
+      "views": 699
     },
     {
       "document_id": null,
@@ -6331,7 +6331,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 698
+      "views": 700
     },
     {
       "document_id": null,
@@ -6367,7 +6367,7 @@
       "thread_id": 93,
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 56
+      "views": 57
     },
     {
       "document_id": null,
@@ -6391,7 +6391,7 @@
       "thread_id": 95,
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 207
+      "views": 208
     },
     {
       "document_id": null,
@@ -6739,7 +6739,7 @@
       "thread_id": 200,
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,
@@ -6763,7 +6763,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 112
+      "views": 113
     },
     {
       "document_id": null,
@@ -6787,7 +6787,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 260
+      "views": 261
     },
     {
       "document_id": null,
@@ -6823,7 +6823,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 352
+      "views": 354
     },
     {
       "document_id": null,
