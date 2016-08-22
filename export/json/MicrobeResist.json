@@ -202,7 +202,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/MicrobeResist/proposal",
-      "views": 432
+      "views": 434
     }
   ],
   "notes": [
@@ -321,7 +321,7 @@
       "username": "JamesMeadow"
     }
   ],
-  "retrieved": "2016-08-21T21:04:19.539944Z",
+  "retrieved": "2016-08-22T21:05:05.048065Z",
   "threads": [
     {
       "document_id": null,
@@ -369,7 +369,7 @@
       "thread_id": 8,
       "topic_field": "",
       "url": "/discussion/peer-review-notes-for-pilot/8",
-      "views": 32
+      "views": 33
     },
     {
       "document_id": null,
@@ -381,7 +381,7 @@
       "thread_id": 9,
       "topic_field": "Feedback",
       "url": "/discussion/offline-feedback-for-the-proposal-from-two-non-ecologists/9",
-      "views": 36
+      "views": 37
     },
     {
       "document_id": null,
@@ -393,7 +393,7 @@
       "thread_id": 10,
       "topic_field": "",
       "url": "/discussion/concerns-with-projected-outcomes/10",
-      "views": 51
+      "views": 52
     },
     {
       "document_id": null,
@@ -405,7 +405,7 @@
       "thread_id": 11,
       "topic_field": "",
       "url": "/discussion/methods-considerations/11",
-      "views": 43
+      "views": 44
     },
     {
       "document_id": null,
@@ -417,7 +417,7 @@
       "thread_id": 15,
       "topic_field": "Markdown",
       "url": "/discussion/markdown-text-formatting-tips-for-proposal/15",
-      "views": 54
+      "views": 55
     }
   ]
 }
