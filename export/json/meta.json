@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-08-24T21:03:17.084207Z",
+  "retrieved": "2016-08-25T21:04:00.246270Z",
   "threads": [
     {
       "document_id": null,
@@ -2748,7 +2748,7 @@
       "thread_id": 64,
       "topic_field": "",
       "url": "/discussion/should-we-aim-to-keep-discussions-narrowly-focused/64",
-      "views": 63
+      "views": 64
     },
     {
       "document_id": null,
@@ -2808,7 +2808,7 @@
       "thread_id": 98,
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 63
+      "views": 64
     },
     {
       "document_id": null,
@@ -2880,7 +2880,7 @@
       "thread_id": 139,
       "topic_field": "",
       "url": "/discussion/latex-integration/139",
-      "views": 51
+      "views": 52
     },
     {
       "document_id": null,
