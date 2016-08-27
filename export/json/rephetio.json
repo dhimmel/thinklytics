@@ -5923,7 +5923,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-08-26T21:03:08.432408Z",
+  "retrieved": "2016-08-27T21:03:09.341587Z",
   "threads": [
     {
       "document_id": null,
@@ -5935,7 +5935,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 490
+      "views": 492
     },
     {
       "document_id": null,
@@ -5983,7 +5983,7 @@
       "thread_id": 30,
       "topic_field": "SIDER,Indications,NLP,Drugs,Side Effects,Drug Labels",
       "url": "/discussion/assessing-the-quality-and-applicability-of-the-sider-2-resource/30",
-      "views": 132
+      "views": 133
     },
     {
       "document_id": null,
@@ -6091,7 +6091,7 @@
       "thread_id": 46,
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 94
+      "views": 95
     },
     {
       "document_id": null,
@@ -6259,7 +6259,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 355
+      "views": 356
     },
     {
       "document_id": null,
@@ -6283,7 +6283,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 188
+      "views": 190
     },
     {
       "document_id": null,
@@ -6307,7 +6307,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 356
+      "views": 357
     },
     {
       "document_id": null,
@@ -6319,7 +6319,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 711
+      "views": 712
     },
     {
       "document_id": null,
@@ -6331,7 +6331,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 711
+      "views": 712
     },
     {
       "document_id": null,
@@ -6379,7 +6379,7 @@
       "thread_id": 94,
       "topic_field": "Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations",
       "url": "/discussion/functional-disease-annotations-for-genes-using-doaf/94",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -6439,7 +6439,7 @@
       "thread_id": 102,
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 240
+      "views": 241
     },
     {
       "document_id": null,
@@ -6487,7 +6487,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 356
+      "views": 357
     },
     {
       "document_id": null,
@@ -6535,7 +6535,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 360
+      "views": 362
     },
     {
       "document_id": null,
@@ -6571,7 +6571,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 95
+      "views": 96
     },
     {
       "document_id": null,
@@ -6619,7 +6619,7 @@
       "thread_id": 162,
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 102
+      "views": 103
     },
     {
       "document_id": null,
@@ -6787,7 +6787,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 271
+      "views": 273
     },
     {
       "document_id": null,
@@ -6823,7 +6823,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 360
+      "views": 363
     },
     {
       "document_id": null,
