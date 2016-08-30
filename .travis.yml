@@ -9,15 +9,15 @@ git:
   depth: 1
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_40e932f81a14_key -iv $encrypted_40e932f81a14_iv -in .travis/login.json.enc -out export/login.json -d
+  - openssl aes-256-cbc -K $encrypted_40e932f81a14_key -iv $encrypted_40e932f81a14_iv
+    -in .travis/login.json.enc -out export/login.json -d
+  - openssl aes-256-cbc -K $encrypted_a6d31e15473c_key -iv $encrypted_a6d31e15473c_iv
+    -in .travis/deploy_key.enc -out .travis/deploy_key -d
   - docker pull dhimmel/thinklytics
 
 script:
-  - docker run --volume `pwd`:/thinklytics --workdir /thinklytics dhimmel/thinklytics sh run.sh
+  - docker run --volume `pwd`:/thinklytics --workdir /thinklytics dhimmel/thinklytics
+    sh run.sh
 
 after_success:
   - sh .travis/push.sh
-
-env:
-  global:
-    secure: fKagLoGUa9fxhzUDfXsMOrS0zq6VFcjB1lniR7r6sk8HR4tY09zFOpeo1KYe8s9j03nClgBllZEBRwxRHIWobjZakB2IwbhgU5EVWVTPWIt/iFu8/GxiQSvEsBrl052qGl841G8nQCLKxnBzl2E5S1NapSzTo9TPqDYm9Q4SCtb4zh6l9Zs4YgUeCWsSKh8BTyT1fKtEnWrcR7QyojZ5qX6kY2hJQK9gw6xzaEBoqnzv+2c9msTPm5gA2bfBDzsTYSSfHdbnxatQO8w7CazYL7kjiacFNHvf8T5gCjycqtkXwKArUrp3SoZKW0pbn29W359KTM/h8kfR/S34DRkJoebBCPrUV7QJbXEbWXnWerYOxt6dvX1dvIIZ17aB5L4KxviXXoXtI4iyXbpjOD+jAtPjvOCCjnvT7Ka2kVqsiKneytIpbts/hdY1Bo2MOdDYF3XeXUuXJkUV/asIRlz6BayYc887/WLRUdh9X6a6AZUXIovRvuyoGtRIqEDiAhDRVq7Svje0k6gpqTrp1ruvrvwkb+nwmtNkBmsu4p5XlWfvZ4tQ4L96TLJz2oEc3fxpZ9q+0H08F9Iwedew2bWyKVDwaLeMOT3gxZSenj3vpDd7XkV78AV82/SEOykGEgMDUYv+rQsfL65Ne25LxlHH2kzVl6BfBPz5i5KaWnjjZwo=

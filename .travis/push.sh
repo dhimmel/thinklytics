@@ -14,5 +14,8 @@ https://travis-ci.org/dhimmel/thinklytics/jobs/$TRAVIS_JOB_ID
 
 Committed on `date --iso-8601=seconds --universal`.
 "
-git remote set-url origin https://${GH_TOKEN}@github.com/dhimmel/thinklytics.git
-git push --quiet --set-upstream origin $TRAVIS_BRANCH
+eval `ssh-agent -s`
+chmod 600 .travis/deploy_key
+ssh-add .travis/deploy_key
+git remote set-url origin git@github.com:dhimmel/thinklytics.git
+git push --set-upstream origin $TRAVIS_BRANCH
