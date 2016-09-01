@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-08-31T21:04:10.357459Z",
+  "retrieved": "2016-09-01T21:05:11.418044Z",
   "threads": [
     {
       "document_id": null,
@@ -2604,7 +2604,7 @@
       "thread_id": 32,
       "topic_field": "Markdown,TLFM",
       "url": "/discussion/markdown-feedback-bugs-and-suggestions/32",
-      "views": 83
+      "views": 84
     },
     {
       "document_id": null,
@@ -2700,7 +2700,7 @@
       "thread_id": 58,
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 181
+      "views": 183
     },
     {
       "document_id": null,
@@ -2736,7 +2736,7 @@
       "thread_id": 63,
       "topic_field": "",
       "url": "/discussion/why-thinklab-uses-a-flat-discussion-structure-not-threaded/63",
-      "views": 74
+      "views": 75
     },
     {
       "document_id": null,
@@ -2784,7 +2784,7 @@
       "thread_id": 79,
       "topic_field": "DOI,ThinkLab figures",
       "url": "/discussion/we-now-have-a-figures-feature/79",
-      "views": 46
+      "views": 47
     },
     {
       "document_id": null,
@@ -2880,7 +2880,7 @@
       "thread_id": 139,
       "topic_field": "",
       "url": "/discussion/latex-integration/139",
-      "views": 54
+      "views": 55
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 108
+      "views": 109
     },
     {
       "document_id": null,
@@ -3000,7 +3000,7 @@
       "thread_id": 196,
       "topic_field": "",
       "url": "/discussion/automatically-insert-images/196",
-      "views": 31
+      "views": 32
     },
     {
       "document_id": null,
