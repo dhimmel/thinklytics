@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-09-01T21:05:11.418044Z",
+  "retrieved": "2016-09-02T21:09:25.894100Z",
   "threads": [
     {
       "document_id": null,
@@ -2808,7 +2808,7 @@
       "thread_id": 98,
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 64
+      "views": 65
     },
     {
       "document_id": null,
@@ -3012,7 +3012,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 31
+      "views": 32
     },
     {
       "document_id": null,
