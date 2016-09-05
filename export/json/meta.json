@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-09-04T21:03:02.466982Z",
+  "retrieved": "2016-09-05T21:02:54.110475Z",
   "threads": [
     {
       "document_id": null,
@@ -2700,7 +2700,7 @@
       "thread_id": 58,
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 184
+      "views": 186
     },
     {
       "document_id": null,
@@ -3012,7 +3012,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 32
+      "views": 33
     },
     {
       "document_id": null,
