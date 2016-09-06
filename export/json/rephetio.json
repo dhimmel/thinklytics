@@ -4256,6 +4256,15 @@
       "published": "2016-09-05T17:21:56.009814Z",
       "thread_id": 203,
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#11"
+    },
+    {
+      "body_html": "<h1>Epilepsy</h1>\r\n\r\n<p><a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a>, that's exciting to hear our top <a href=\"http://het.io/repurpose/browse.html?id=DOID_1826\" title=\"Project Rephetio Predictions for epilepsy\">epilepsy predictions</a> (above 10%) had a precision of 95.5% (43 / 45). Epilepsy seems to be an interesting disease because despite the many established therapies, there's still a large portion of patients  with seizures that are uncontrolled by current medications <span class=\"citation\">[<a href=\"/doi/10.1038/nrd4126\" class=\"citation\" data-key=\"10.1038/nrd4126\">1</a>]</span>.</p>\r\n\r\n<h2>Tiagabine–Epilepsy</h2>\r\n\r\n<p>Tiagabine was classified as a non-indication in PharmacotherapyDB v1.0, but is used to treat epilepsy <span class=\"citation\">[<a href=\"/doi/10.2147/NDT.S833\" class=\"citation\" data-key=\"10.2147/NDT.S833\">2</a>]</span>. However, in some settings tiagabine may also trigger seizures <span class=\"citation\">[<a href=\"/doi/10.1056/NEJMc055301\" class=\"citation\" data-key=\"10.1056/NEJMc055301\">3</a>]</span>. This example brings up an interesting consideration: many anti-epileptic drugs may also be epileptogenic (epilepsy inducing) depending on the context <span class=\"citation\">[<a href=\"/doi/10.1016/S0387-7604(99)00113-8\" class=\"citation\" data-key=\"10.1016/S0387-7604(99)00113-8\">4</a>]</span>.</p>\r\n\r\n<h2>Amitriptyline–Epilepsy</h2>\r\n\r\n<p><a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a> brought up that amitriptyline is contraindicated for epilepsy. Accordingly, several studies suggest that amitriptyline causes seizures <span class=\"citation\">[<a href=\"/doi/10.1016/S0140-6736(68)91356-1\" class=\"citation\" data-key=\"10.1016/S0140-6736(68)91356-1\">5</a>, <a href=\"/doi/10.1191/0960327106ht511oa\" class=\"citation\" data-key=\"10.1191/0960327106ht511oa\">6</a>, <a href=\"/doi/10.1176/ajp.137.11.1461\" class=\"citation\" data-key=\"10.1176/ajp.137.11.1461\">7</a>]</span>. Our approach found the following <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB00321/DOID_1826.html\" title=\"Hetionet Browser: amitriptyline--epilepsy prediction\">support for</a> amitriptyline treating epilepsy:</p>\r\n\r\n<ul><li>21.5% of the prediction resulted from: Amitriptyline–treats–Migraine–resembles–Epilepsy</li><li>15.2% of the Amitriptyline–resembles–Oxcarbazepine–treats–Epilepsy</li><li>Many other paths of the following metapaths also contributed: CbGaD, CpDpCtD, CrCrCtD, CbGbCtD</li></ul>\r\n\r\n<p>It's likely that our method cannot fully differentiate between indications and contraindications. In other words, certain paths may increase the probability of indication and contraindication similarly and our predictions may also enrich for detrimental therapies.</p>\r\n\r\n<h2>Sevoflurane–Epilepsy</h2>\r\n\r\n<p>Regarding the <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB01236/DOID_1826.html\" title=\"Hetionet Browser: sevoflurane--epilepsy prediction\">prediction</a> that sevoflurane treats epilepsy, this is the top <a href=\"http://het.io/repurpose/browse.html?id=DB01236\">prediction for sevoflurane</a> and is in the 97.3rd percentile for epilepsy. Here are the top ten paths supporting this prediction:</p>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/18256790/2c9d1312-7388-11e6-8c33-873058fc4965.png\" alt=\"sevoflurane-epilepsy\"></p>\r\n\r\n<p>However contrary to our prediction, I did find some evidence that sevoflurane could be epileptogenic <span class=\"citation\">[<a href=\"/doi/10.1111/j.1460-9592.2004.01538.x\" class=\"citation\" data-key=\"10.1111/j.1460-9592.2004.01538.x\">8</a>, <a href=\"/doi/10.1097/00000539-200010000-00041\" class=\"citation\" data-key=\"10.1097/00000539-200010000-00041\">9</a>, <a href=\"/doi/10.1093/bja/aes027\" class=\"citation\" data-key=\"10.1093/bja/aes027\">10</a>]</span>. However, potentially a bigger concern is whether sevoflurane has appropriate pharmacokinetics for epilepsy. According to DrugBank (<a href=\"http://www.drugbank.ca/drugs/DB01236\"><code>DB01236</code></a>), sevoflurane does cross the blood–brain barrier which is important. However, sevoflurane is volatile and administered via inhalation. Now, this may not always be a disqualifying factor. For example, some pharmaceutical companies are more interested in \"drug repositioning aided by reformulation\" than solely repositioning <span class=\"citation\">[<a href=\"/doi/10.3402/jmahp.v1i0.21131\" class=\"citation\" data-key=\"10.3402/jmahp.v1i0.21131\">11</a>]</span>. However, in this case, I just don't know.</p>",
+      "body_md": "# Epilepsy\r\n\r\n@pouyakhankhanian, that's exciting to hear our top [epilepsy predictions](http://het.io/repurpose/browse.html?id=DOID_1826 \"Project Rephetio Predictions for epilepsy\") (above 10%) had a precision of 95.5% (43 / 45). Epilepsy seems to be an interesting disease because despite the many established therapies, there's still a large portion of patients  with seizures that are uncontrolled by current medications [@10.1038/nrd4126].\r\n\r\n## Tiagabine--Epilepsy\r\n\r\nTiagabine was classified as a non-indication in PharmacotherapyDB v1.0, but is used to treat epilepsy [@10.2147/NDT.S833]. However, in some settings tiagabine may also trigger seizures [@10.1056/NEJMc055301]. This example brings up an interesting consideration: many anti-epileptic drugs may also be epileptogenic (epilepsy inducing) depending on the context [@10.1016/S0387-7604(99)00113-8].\r\n\r\n## Amitriptyline--Epilepsy\r\n\r\n@pouyakhankhanian brought up that amitriptyline is contraindicated for epilepsy. Accordingly, several studies suggest that amitriptyline causes seizures [@10.1016/S0140-6736(68)91356-1 @10.1191/0960327106ht511oa @10.1176/ajp.137.11.1461]. Our approach found the following [support for](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB00321/DOID_1826.html \"Hetionet Browser: amitriptyline--epilepsy prediction\") amitriptyline treating epilepsy:\r\n\r\n+ 21.5% of the prediction resulted from: Amitriptyline--treats--Migraine--resembles--Epilepsy\r\n+ 15.2% of the Amitriptyline--resembles--Oxcarbazepine--treats--Epilepsy\r\n+ Many other paths of the following metapaths also contributed: CbGaD, CpDpCtD, CrCrCtD, CbGbCtD\r\n\r\nIt's likely that our method cannot fully differentiate between indications and contraindications. In other words, certain paths may increase the probability of indication and contraindication similarly and our predictions may also enrich for detrimental therapies.\r\n\r\n## Sevoflurane--Epilepsy\r\n\r\nRegarding the [prediction](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB01236/DOID_1826.html \"Hetionet Browser: sevoflurane--epilepsy prediction\") that sevoflurane treats epilepsy, this is the top [prediction for sevoflurane](http://het.io/repurpose/browse.html?id=DB01236) and is in the 97.3rd percentile for epilepsy. Here are the top ten paths supporting this prediction:\r\n\r\n![sevoflurane-epilepsy](https://cloud.githubusercontent.com/assets/1117703/18256790/2c9d1312-7388-11e6-8c33-873058fc4965.png)\r\n\r\nHowever contrary to our prediction, I did find some evidence that sevoflurane could be epileptogenic [@10.1111/j.1460-9592.2004.01538.x @10.1097/00000539-200010000-00041 @10.1093/bja/aes027]. However, potentially a bigger concern is whether sevoflurane has appropriate pharmacokinetics for epilepsy. According to DrugBank ([`DB01236`](http://www.drugbank.ca/drugs/DB01236)), sevoflurane does cross the blood–brain barrier which is important. However, sevoflurane is volatile and administered via inhalation. Now, this may not always be a disqualifying factor. For example, some pharmaceutical companies are more interested in \"drug repositioning aided by reformulation\" than solely repositioning [@10.3402/jmahp.v1i0.21131]. However, in this case, I just don't know.",
+      "comment_id": 1351,
+      "profile_id": 17,
+      "published": "2016-09-06T19:31:34.269795Z",
+      "thread_id": 203,
+      "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#12"
     }
   ],
   "documents": [
@@ -4270,7 +4279,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 979
+      "views": 983
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -5968,7 +5977,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-09-05T21:02:58.643503Z",
+  "retrieved": "2016-09-06T21:04:32.546016Z",
   "threads": [
     {
       "document_id": null,
@@ -5980,7 +5989,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 508
+      "views": 509
     },
     {
       "document_id": null,
@@ -6052,7 +6061,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 155
+      "views": 156
     },
     {
       "document_id": null,
@@ -6088,7 +6097,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 135
+      "views": 136
     },
     {
       "document_id": null,
@@ -6112,7 +6121,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 433
+      "views": 434
     },
     {
       "document_id": null,
@@ -6172,7 +6181,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 286
+      "views": 287
     },
     {
       "document_id": null,
@@ -6220,7 +6229,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 384
+      "views": 385
     },
     {
       "document_id": null,
@@ -6280,7 +6289,7 @@
       "thread_id": 68,
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 98
+      "views": 99
     },
     {
       "document_id": null,
@@ -6304,7 +6313,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 374
+      "views": 375
     },
     {
       "document_id": null,
@@ -6316,7 +6325,7 @@
       "thread_id": 72,
       "topic_field": "Databases,Networks,Pathways",
       "url": "/discussion/adding-pathway-resources-to-your-network/72",
-      "views": 112
+      "views": 113
     },
     {
       "document_id": null,
@@ -6328,7 +6337,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 194
+      "views": 196
     },
     {
       "document_id": null,
@@ -6340,7 +6349,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 407
+      "views": 409
     },
     {
       "document_id": null,
@@ -6364,7 +6373,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 734
+      "views": 735
     },
     {
       "document_id": null,
@@ -6388,7 +6397,7 @@
       "thread_id": 85,
       "topic_field": "Protein Interactions,Interactions,PPI",
       "url": "/discussion/creating-a-catalog-of-protein-interactions/85",
-      "views": 143
+      "views": 145
     },
     {
       "document_id": null,
@@ -6448,7 +6457,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 238
+      "views": 240
     },
     {
       "document_id": null,
@@ -6472,7 +6481,7 @@
       "thread_id": 101,
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 111
+      "views": 112
     },
     {
       "document_id": null,
@@ -6496,7 +6505,7 @@
       "thread_id": 104,
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 161
+      "views": 162
     },
     {
       "document_id": null,
@@ -6520,7 +6529,7 @@
       "thread_id": 106,
       "topic_field": "Databases,Diseases,Associations",
       "url": "/discussion/processing-the-diseases-resource-for-diseasegene-relationships/106",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -6640,7 +6649,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 155
+      "views": 156
     },
     {
       "document_id": null,
@@ -6676,7 +6685,7 @@
       "thread_id": 171,
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 164
+      "views": 165
     },
     {
       "document_id": null,
@@ -6700,7 +6709,7 @@
       "thread_id": 181,
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 135
+      "views": 136
     },
     {
       "document_id": null,
@@ -6724,7 +6733,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 114
+      "views": 115
     },
     {
       "document_id": null,
@@ -6808,7 +6817,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 122
+      "views": 123
     },
     {
       "document_id": null,
@@ -6820,7 +6829,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 166
+      "views": 168
     },
     {
       "document_id": null,
@@ -6832,7 +6841,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 297
+      "views": 299
     },
     {
       "document_id": null,
@@ -6844,7 +6853,7 @@
       "thread_id": 210,
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 76
+      "views": 77
     },
     {
       "document_id": null,
