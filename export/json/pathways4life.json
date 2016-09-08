@@ -364,7 +364,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/pathways4life/proposal",
-      "views": 380
+      "views": 381
     }
   ],
   "notes": [
@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-09-07T21:03:01.936678Z",
+  "retrieved": "2016-09-08T21:04:07.791911Z",
   "threads": [
     {
       "document_id": null,
@@ -505,7 +505,7 @@
       "thread_id": 119,
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 94
+      "views": 95
     },
     {
       "document_id": null,
