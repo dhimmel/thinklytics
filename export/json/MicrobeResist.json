@@ -321,7 +321,7 @@
       "username": "JamesMeadow"
     }
   ],
-  "retrieved": "2016-09-08T21:04:05.065627Z",
+  "retrieved": "2016-09-09T21:03:42.371999Z",
   "threads": [
     {
       "document_id": null,
@@ -345,7 +345,7 @@
       "thread_id": 5,
       "topic_field": "ITS,Fungi",
       "url": "/discussion/fungal-diversity-characterization-using-its/5",
-      "views": 33
+      "views": 34
     },
     {
       "document_id": null,
@@ -405,7 +405,7 @@
       "thread_id": 11,
       "topic_field": "",
       "url": "/discussion/methods-considerations/11",
-      "views": 46
+      "views": 47
     },
     {
       "document_id": null,

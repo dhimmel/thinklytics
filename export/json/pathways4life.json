@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-09-08T21:04:07.791911Z",
+  "retrieved": "2016-09-09T21:03:45.349783Z",
   "threads": [
     {
       "document_id": null,
@@ -553,7 +553,7 @@
       "thread_id": 123,
       "topic_field": "Crowdsourcing,Gamification,Science Games,Serious Games",
       "url": "/discussion/what-made-previous-crowdsourced-science-games-succeed-or-not/123",
-      "views": 45
+      "views": 46
     }
   ]
 }
