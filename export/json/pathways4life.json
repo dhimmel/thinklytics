@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-09-10T21:03:56.651492Z",
+  "retrieved": "2016-09-11T21:03:38.031493Z",
   "threads": [
     {
       "document_id": null,
@@ -457,7 +457,7 @@
       "thread_id": 75,
       "topic_field": "Gene Relationships,Gene Interactions,Interactions,Pathways,Gene Sets",
       "url": "/discussion/pathway-novelty-based-on-unique-relationships-rather-than-genes/75",
-      "views": 43
+      "views": 44
     },
     {
       "document_id": null,
