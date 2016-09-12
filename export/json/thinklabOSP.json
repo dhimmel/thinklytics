@@ -1664,7 +1664,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2016-09-11T21:03:44.072350Z",
+  "retrieved": "2016-09-12T21:04:20.514424Z",
   "threads": [
     {
       "document_id": 12,
@@ -1676,7 +1676,7 @@
       "thread_id": 158,
       "topic_field": "Open science,Peer review,Science Funding,Grant Writing,Grantmaking,Open Notebook Science",
       "url": "/doc/12/review",
-      "views": 74
+      "views": 75
     },
     {
       "document_id": null,
@@ -1724,7 +1724,7 @@
       "thread_id": 165,
       "topic_field": "Indexing,Altmetrics,Integration",
       "url": "/discussion/using-the-prize-money-for-integrating-with-the-larger-internet-movement-in-science/165",
-      "views": 24
+      "views": 25
     },
     {
       "document_id": 12,
