@@ -934,7 +934,7 @@
       "username": "obigriffith"
     }
   ],
-  "retrieved": "2016-09-15T21:03:06.748692Z",
+  "retrieved": "2016-09-16T21:03:21.688362Z",
   "threads": [
     {
       "document_id": null,
@@ -958,7 +958,7 @@
       "thread_id": 142,
       "topic_field": "Machine learning,Crowdsourcing",
       "url": "/discussion/applications-of-machine-learning-for-aggregating-judgments/142",
-      "views": 33
+      "views": 35
     },
     {
       "document_id": null,
