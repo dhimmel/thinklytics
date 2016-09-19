@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-09-16T21:03:24.335236Z",
+  "retrieved": "2016-09-19T21:12:28.104593Z",
   "threads": [
     {
       "document_id": null,
@@ -2580,7 +2580,7 @@
       "thread_id": 27,
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 97
+      "views": 98
     },
     {
       "document_id": null,
@@ -2616,7 +2616,7 @@
       "thread_id": 33,
       "topic_field": "Privacy,IT,Google Analytics,Piwik,Sysadmin,Analytics",
       "url": "/discussion/web-analytics-platform/33",
-      "views": 68
+      "views": 69
     },
     {
       "document_id": null,
@@ -2676,7 +2676,7 @@
       "thread_id": 55,
       "topic_field": "RSS Feed,Project Tracking",
       "url": "/discussion/rss-feed-per-project-option/55",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
@@ -2700,7 +2700,7 @@
       "thread_id": 58,
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 189
+      "views": 190
     },
     {
       "document_id": null,
@@ -2784,7 +2784,7 @@
       "thread_id": 79,
       "topic_field": "DOI,ThinkLab figures",
       "url": "/discussion/we-now-have-a-figures-feature/79",
-      "views": 47
+      "views": 48
     },
     {
       "document_id": null,
@@ -2820,7 +2820,7 @@
       "thread_id": 100,
       "topic_field": "Analytics,Transparency,Identity,Ratings,Rewards",
       "url": "/discussion/optional-transparency-to-enable-rating-analytics/100",
-      "views": 38
+      "views": 39
     },
     {
       "document_id": null,
@@ -2868,7 +2868,7 @@
       "thread_id": 138,
       "topic_field": "",
       "url": "/discussion/a-pdf-upload-option-for-proposal-creation/138",
-      "views": 40
+      "views": 42
     },
     {
       "document_id": null,
@@ -2880,7 +2880,7 @@
       "thread_id": 139,
       "topic_field": "",
       "url": "/discussion/latex-integration/139",
-      "views": 57
+      "views": 58
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 112
+      "views": 113
     },
     {
       "document_id": null,
@@ -2976,7 +2976,7 @@
       "thread_id": 192,
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 38
+      "views": 39
     },
     {
       "document_id": null,
@@ -2988,7 +2988,7 @@
       "thread_id": 195,
       "topic_field": "",
       "url": "/discussion/auto-save/195",
-      "views": 26
+      "views": 27
     },
     {
       "document_id": null,
@@ -3036,7 +3036,7 @@
       "thread_id": 206,
       "topic_field": "open science,platforms",
       "url": "/discussion/open-realtime-science-platforms/206",
-      "views": 53
+      "views": 54
     },
     {
       "document_id": null,

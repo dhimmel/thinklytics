@@ -149,9 +149,11 @@ rephetio	10.1186/s13321-014-0043-5	4
 rephetio	10.1371/journal.pbio.0060184	4
 rephetio	10.1371/journal.pone.0049686	4
 rephetio	10.1016/0022-2836	3
+rephetio	10.1016/j.bcp.2009.06.094	3
 rephetio	10.1016/j.cell.2005.08.029	3
 rephetio	10.1021/ci100050t	3
 rephetio	10.1038/ng.3259	3
+rephetio	10.1056/NEJMoa0902533	3
 rephetio	10.1093/bioinformatics/btp193	3
 rephetio	10.1093/comnet/cnu016	3
 rephetio	10.1093/database/bav028	3
@@ -163,6 +165,7 @@ rephetio	10.1126/science.1158140	3
 rephetio	10.1136/amiajnl-2014-002954	3
 rephetio	10.1137/1.9781611972795.67	3
 rephetio	10.1161/CIRCGENETICS.115.001181	3
+rephetio	10.1177/1756285610379885	3
 rephetio	10.1371/journal.pcbi.1000353	3
 rephetio	10.1371/journal.pcbi.1003285	3
 rephetio	10.1371/journal.pgen.1004967	3
@@ -171,6 +174,7 @@ rephetio	10.5281/zenodo.47223	3
 rephetio	10.6084/m9.figshare.3085426	3
 rephetio	10.6084/m9.figshare.3103054	3
 rephetio	10.1001/jama.1994.03510380059038	2
+rephetio	10.1002/14651858.CD003982.pub2	2
 rephetio	10.1007/11564126_44	2
 rephetio	10.1007/978-981-287-077-3_63	2
 rephetio	10.1016/j.ddtec.2015.01.005	2
@@ -178,9 +182,9 @@ rephetio	10.1016/j.ymeth.2014.11.020	2
 rephetio	10.1038/ncomms10331	2
 rephetio	10.1038/ncomms5074	2
 rephetio	10.1038/nrd1468	2
+rephetio	10.1038/nrd2055	2
 rephetio	10.1038/nrg2363	2
 rephetio	10.1038/sdata.2014.32	2
-rephetio	10.1056/NEJMoa0902533	2
 rephetio	10.1063/1.4818544	2
 rephetio	10.1073/pnas.1110586109	2
 rephetio	10.1093/bioinformatics/btq140	2
@@ -235,7 +239,6 @@ rephetio	10.1002/0470114754	1
 rephetio	10.1002/0471142905.hg1011s57	1
 rephetio	10.1002/14651858.CD003208.pub2	1
 rephetio	10.1002/14651858.CD003256.pub2	1
-rephetio	10.1002/14651858.CD003982.pub2	1
 rephetio	10.1002/14651858.CD006103.pub7	1
 rephetio	10.1002/9780470114759.ch4	1
 rephetio	10.1002/asi.20438	1
@@ -259,7 +262,6 @@ rephetio	10.1016/S0387-7604(99)00113-8	1
 rephetio	10.1016/S0888-7543	1
 rephetio	10.1016/j.ajhg.2015.05.020	1
 rephetio	10.1016/j.amjmed.2008.01.017	1
-rephetio	10.1016/j.bcp.2009.06.094	1
 rephetio	10.1016/j.cell.2006.03.032	1
 rephetio	10.1016/j.critrevonc.2016.05.015	1
 rephetio	10.1016/j.ctrv.2015.06.001	1
@@ -308,7 +310,6 @@ rephetio	10.1038/nmeth.2561	1
 rephetio	10.1038/nphys2727	1
 rephetio	10.1038/nrclinonc.2014.51	1
 rephetio	10.1038/nrd1346	1
-rephetio	10.1038/nrd2055	1
 rephetio	10.1038/nrd3480	1
 rephetio	10.1038/nrd4126	1
 rephetio	10.1038/nrg1768	1
@@ -466,7 +467,6 @@ rephetio	10.11613/BM.2012.031	1
 rephetio	10.1176/ajp.137.11.1461	1
 rephetio	10.1177/001316446002000104	1
 rephetio	10.1177/1087057114522514	1
-rephetio	10.1177/1756285610379885	1
 rephetio	10.1177/1756285615626049	1
 rephetio	10.1182/blood-2003-06-2122	1
 rephetio	10.1182/blood-2010-01-263855	1

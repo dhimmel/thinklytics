@@ -4283,6 +4283,33 @@
       "published": "2016-09-10T18:06:26.163486Z",
       "thread_id": 203,
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#14"
+    },
+    {
+      "body_html": "<p>A branch of the discussion of predictions of hetnet.</p>",
+      "body_md": "A branch of the discussion of predictions of hetnet.",
+      "comment_id": 1355,
+      "profile_id": 188,
+      "published": "2016-09-19T04:35:42.366864Z",
+      "thread_id": 224,
+      "url": "/discussion/prediction-in-epilepsy/224"
+    },
+    {
+      "body_html": "<p>can I post?</p>",
+      "body_md": "can I post?",
+      "comment_id": 1356,
+      "profile_id": 188,
+      "published": "2016-09-19T04:37:17.411448Z",
+      "thread_id": 224,
+      "url": "/discussion/prediction-in-epilepsy/224#2"
+    },
+    {
+      "body_html": "<h1>Clofarabine Synopsis</h1>\r\n\r\n<p>Above, <a href=\"#13\">I discussed</a> our clofarabine predictions. I created a summary of those findings for our project report. However, in private communications <a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a> noted:</p>\r\n\r\n<blockquote><p>Regarding clofarabine, my only issue is that it's very obvious. I suspect that if you ask ten clinicians about using clofarabine in MS, I suspect most would guess that clofarabine would work in MS patients. Perhaps you are looking for something obvious in order to validate your approach. But it's not something that will ever result in someone repurposing a drug based on your predictions.</p></blockquote>\r\n\r\n<p>Therefore, we've decided to remove this example from the draft report. To preserve the content, I will post it here.</p>\r\n\r\n<hr>\r\n\r\n<p>Clofarabine is an FDA-approved treatment for certain cases of acute lymphoblastic leukemia (ALL) <span class=\"citation\">[<a href=\"/doi/10.1038/nrd2055\" class=\"citation\" data-key=\"10.1038/nrd2055\">1</a>]</span>. Our top <a href=\"http://het.io/repurpose/browse.html?id=DB00631\" title=\"Project Rephetio predictions for clofarabine (DB00631)\">prediction for clofarabine</a> was hematologic cancer (50.27-fold over null), which is a supertype of ALL and listed as a disease-modifying indication in PharacotherapyDB. Second was lymphatic system cancer (27.14-fold), which matched 14 clinical trials. Third was multiple sclerosis (MS, 23.37-fold). Notably, MS was the only non-cancer in the top 10 predictions for clofarabine, and clofarabine was in the 99.8th percentile of MS predictions. As shown in <a href=\"#clofarabine_ms_figure\">Figure 5</a>, our approach based this prediction on the successful repurposing of other chemotherapeutics for MS <span class=\"citation\">[<a href=\"/doi/10.1177/1756285610379885\" class=\"citation\" data-key=\"10.1177/1756285610379885\">2</a>]</span> — particularly cladribine <span class=\"citation\">[<a href=\"/doi/10.1056/NEJMoa0902533\" class=\"citation\" data-key=\"10.1056/NEJMoa0902533\">3</a>]</span> and azathioprine <span class=\"citation\">[<a href=\"/doi/10.1002/14651858.CD003982.pub2\" class=\"citation\" data-key=\"10.1002/14651858.CD003982.pub2\">4</a>]</span>. Besides <a href=\"https://www.google.com/patents/US7772206\" title=\"US Patent 7772206: Methods and compositions for the treatment of autoimmune disorders using clofarabine. 2010\">a patent</a> that encompasses treating MS with clofarabine, there is little literature on this potential repurposing, despite the favorable pharmacological properties of clofarabine compared to cladribine <span class=\"citation\">[<a href=\"/doi/10.1016/j.bcp.2009.06.094\" class=\"citation\" data-key=\"10.1016/j.bcp.2009.06.094\">5</a>]</span>.</p>\r\n\r\n<h3>Figure</h3>\r\n\r\n<p><em>Legend for <a href=\"#13\">figure above</a></em>:</p>\r\n\r\n<p><strong>Evidence supporting the repurposing of clofarabine for multiple sclerosis.</strong> In total, 769 paths of 10 types provided positive <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB00631/DOID_2377.html\" title=\"Hetionet Browser for the prediction that clofarabine treats multiple sclerosis\">support for repurposing</a> clofarabine for MS. The ten most supportive paths are visualized. Several important aspects of clofarabine's pharmacology are illustrated. Clofarabine is a hybrid of cladribine and fludarabine and relies on deoxycytidine kinase (<em>DCK</em>) for phosphorylation into its active form <span class=\"citation\">[<a href=\"/doi/10.1016/j.bcp.2009.06.094\" class=\"citation\" data-key=\"10.1016/j.bcp.2009.06.094\">5</a>]</span>. Ultimately, the purine-analog-metabolites of clofarabine, cladribine, and azathioprine inhibit nucleic acid synthesis. Since the resulting cytoxicity is pronounced in lymphocytes, these compounds are attractive MS therapeutics <span class=\"citation\">[<a href=\"/doi/10.1177/1756285610379885\" class=\"citation\" data-key=\"10.1177/1756285610379885\">2</a>]</span>.</p>",
+      "body_md": "# Clofarabine Synopsis\r\n\r\nAbove, [I discussed](#13) our clofarabine predictions. I created a summary of those findings for our project report. However, in private communications @pouyakhankhanian noted:\r\n\r\n> Regarding clofarabine, my only issue is that it's very obvious. I suspect that if you ask ten clinicians about using clofarabine in MS, I suspect most would guess that clofarabine would work in MS patients. Perhaps you are looking for something obvious in order to validate your approach. But it's not something that will ever result in someone repurposing a drug based on your predictions.\r\n\r\nTherefore, we've decided to remove this example from the draft report. To preserve the content, I will post it here.\r\n\r\n***\r\n\r\nClofarabine is an FDA-approved treatment for certain cases of acute lymphoblastic leukemia (ALL) [@10.1038/nrd2055]. Our top [prediction for clofarabine](http://het.io/repurpose/browse.html?id=DB00631 \"Project Rephetio predictions for clofarabine (DB00631)\") was hematologic cancer (50.27-fold over null), which is a supertype of ALL and listed as a disease-modifying indication in PharacotherapyDB. Second was lymphatic system cancer (27.14-fold), which matched 14 clinical trials. Third was multiple sclerosis (MS, 23.37-fold). Notably, MS was the only non-cancer in the top 10 predictions for clofarabine, and clofarabine was in the 99.8th percentile of MS predictions. As shown in [Figure 5](#clofarabine_ms_figure), our approach based this prediction on the successful repurposing of other chemotherapeutics for MS [@10.1177/1756285610379885] -- particularly cladribine [@10.1056/NEJMoa0902533] and azathioprine [@10.1002/14651858.CD003982.pub2]. Besides [a patent](https://www.google.com/patents/US7772206 \"US Patent 7772206: Methods and compositions for the treatment of autoimmune disorders using clofarabine. 2010\") that encompasses treating MS with clofarabine, there is little literature on this potential repurposing, despite the favorable pharmacological properties of clofarabine compared to cladribine [@10.1016/j.bcp.2009.06.094].\r\n\r\n### Figure\r\n\r\n_Legend for [figure above](#13)_:\r\n\r\n**Evidence supporting the repurposing of clofarabine for multiple sclerosis.** In total, 769 paths of 10 types provided positive [support for repurposing](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB00631/DOID_2377.html \"Hetionet Browser for the prediction that clofarabine treats multiple sclerosis\") clofarabine for MS. The ten most supportive paths are visualized. Several important aspects of clofarabine's pharmacology are illustrated. Clofarabine is a hybrid of cladribine and fludarabine and relies on deoxycytidine kinase (_DCK_) for phosphorylation into its active form [@10.1016/j.bcp.2009.06.094]. Ultimately, the purine-analog-metabolites of clofarabine, cladribine, and azathioprine inhibit nucleic acid synthesis. Since the resulting cytoxicity is pronounced in lymphocytes, these compounds are attractive MS therapeutics [@10.1177/1756285610379885].",
+      "comment_id": 1359,
+      "profile_id": 17,
+      "published": "2016-09-19T17:28:29.579442Z",
+      "thread_id": 203,
+      "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203#16"
     }
   ],
   "documents": [
@@ -4297,7 +4324,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 992
+      "views": 994
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -5995,7 +6022,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-09-16T21:03:28.935078Z",
+  "retrieved": "2016-09-19T21:12:32.960211Z",
   "threads": [
     {
       "document_id": null,
@@ -6007,7 +6034,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 526
+      "views": 529
     },
     {
       "document_id": null,
@@ -6019,7 +6046,7 @@
       "thread_id": 22,
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 132
+      "views": 134
     },
     {
       "document_id": null,
@@ -6067,7 +6094,7 @@
       "thread_id": 31,
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 78
+      "views": 79
     },
     {
       "document_id": null,
@@ -6079,7 +6106,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 160
+      "views": 161
     },
     {
       "document_id": null,
@@ -6091,7 +6118,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 243
+      "views": 246
     },
     {
       "document_id": null,
@@ -6103,7 +6130,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 279
+      "views": 281
     },
     {
       "document_id": null,
@@ -6115,7 +6142,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 138
+      "views": 139
     },
     {
       "document_id": null,
@@ -6139,7 +6166,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 445
+      "views": 447
     },
     {
       "document_id": null,
@@ -6151,7 +6178,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 199
+      "views": 201
     },
     {
       "document_id": null,
@@ -6163,7 +6190,7 @@
       "thread_id": 46,
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 99
+      "views": 100
     },
     {
       "document_id": null,
@@ -6199,7 +6226,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 291
+      "views": 293
     },
     {
       "document_id": null,
@@ -6211,7 +6238,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 283
+      "views": 284
     },
     {
       "document_id": null,
@@ -6223,7 +6250,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 213
+      "views": 215
     },
     {
       "document_id": null,
@@ -6235,7 +6262,7 @@
       "thread_id": 57,
       "topic_field": "Evolution,Entrez Gene,ERC,UCSC Genome Browser,Evolutionary Rate Covariation",
       "url": "/discussion/selecting-informative-erc-evolutionary-rate-covariation-values-between-genes/57",
-      "views": 78
+      "views": 79
     },
     {
       "document_id": null,
@@ -6247,7 +6274,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 398
+      "views": 403
     },
     {
       "document_id": null,
@@ -6271,7 +6298,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 377
+      "views": 381
     },
     {
       "document_id": null,
@@ -6307,7 +6334,7 @@
       "thread_id": 68,
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 102
+      "views": 103
     },
     {
       "document_id": null,
@@ -6319,7 +6346,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 115
+      "views": 117
     },
     {
       "document_id": null,
@@ -6331,7 +6358,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 384
+      "views": 386
     },
     {
       "document_id": null,
@@ -6343,7 +6370,7 @@
       "thread_id": 72,
       "topic_field": "Databases,Networks,Pathways",
       "url": "/discussion/adding-pathway-resources-to-your-network/72",
-      "views": 116
+      "views": 117
     },
     {
       "document_id": null,
@@ -6355,7 +6382,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 196
+      "views": 198
     },
     {
       "document_id": null,
@@ -6367,7 +6394,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 417
+      "views": 423
     },
     {
       "document_id": null,
@@ -6379,7 +6406,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 375
+      "views": 378
     },
     {
       "document_id": null,
@@ -6391,7 +6418,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 759
+      "views": 767
     },
     {
       "document_id": null,
@@ -6403,7 +6430,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 741
+      "views": 745
     },
     {
       "document_id": null,
@@ -6427,7 +6454,7 @@
       "thread_id": 91,
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 102
+      "views": 104
     },
     {
       "document_id": null,
@@ -6439,7 +6466,7 @@
       "thread_id": 93,
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 61
+      "views": 62
     },
     {
       "document_id": null,
@@ -6475,7 +6502,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 243
+      "views": 244
     },
     {
       "document_id": null,
@@ -6487,7 +6514,7 @@
       "thread_id": 97,
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 128
+      "views": 129
     },
     {
       "document_id": null,
@@ -6535,7 +6562,7 @@
       "thread_id": 105,
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 111
+      "views": 113
     },
     {
       "document_id": null,
@@ -6559,7 +6586,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 372
+      "views": 377
     },
     {
       "document_id": null,
@@ -6571,7 +6598,7 @@
       "thread_id": 108,
       "topic_field": "Copyright,Permission,Licensing,MSigDB,MIT",
       "url": "/discussion/msigdb-licensing/108",
-      "views": 134
+      "views": 135
     },
     {
       "document_id": null,
@@ -6583,7 +6610,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 255
+      "views": 261
     },
     {
       "document_id": null,
@@ -6607,7 +6634,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 384
+      "views": 385
     },
     {
       "document_id": null,
@@ -6619,7 +6646,7 @@
       "thread_id": 113,
       "topic_field": "Citations,Publicity,Media Coverage,Reuse,Attention",
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113",
-      "views": 121
+      "views": 122
     },
     {
       "document_id": null,
@@ -6655,7 +6682,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 149
+      "views": 151
     },
     {
       "document_id": null,
@@ -6667,7 +6694,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 164
+      "views": 166
     },
     {
       "document_id": null,
@@ -6679,7 +6706,7 @@
       "thread_id": 136,
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 77
+      "views": 78
     },
     {
       "document_id": null,
@@ -6715,7 +6742,7 @@
       "thread_id": 178,
       "topic_field": "permutation,XSwap,network randomization,hetnets,hetio",
       "url": "/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178",
-      "views": 53
+      "views": 54
     },
     {
       "document_id": null,
@@ -6727,7 +6754,7 @@
       "thread_id": 181,
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 136
+      "views": 137
     },
     {
       "document_id": null,
@@ -6739,7 +6766,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 208
+      "views": 210
     },
     {
       "document_id": null,
@@ -6751,7 +6778,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 124
+      "views": 125
     },
     {
       "document_id": null,
@@ -6763,7 +6790,7 @@
       "thread_id": 186,
       "topic_field": "DrugCentral,pharmacology,Database",
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186",
-      "views": 88
+      "views": 89
     },
     {
       "document_id": null,
@@ -6775,7 +6802,7 @@
       "thread_id": 187,
       "topic_field": "complexity,runtime,optimization,Neo4J,join hints",
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187",
-      "views": 50
+      "views": 51
     },
     {
       "document_id": null,
@@ -6787,7 +6814,7 @@
       "thread_id": 193,
       "topic_field": "IHS,transformation,DWPC,regression",
       "url": "/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193",
-      "views": 52
+      "views": 53
     },
     {
       "document_id": null,
@@ -6811,7 +6838,7 @@
       "thread_id": 200,
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
@@ -6835,7 +6862,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 134
+      "views": 135
     },
     {
       "document_id": null,
@@ -6847,7 +6874,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 190
+      "views": 198
     },
     {
       "document_id": null,
@@ -6859,7 +6886,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 327
+      "views": 334
     },
     {
       "document_id": null,
@@ -6895,7 +6922,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 384
+      "views": 388
     },
     {
       "document_id": null,
@@ -6907,7 +6934,7 @@
       "thread_id": 214,
       "topic_field": "DWPC,HNEP,Residual DWPC,R-DWPC,permutation,hetnet,algorithms",
       "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214",
-      "views": 39
+      "views": 40
     },
     {
       "document_id": null,
@@ -6931,7 +6958,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 121
+      "views": 123
     },
     {
       "document_id": null,
@@ -6943,7 +6970,19 @@
       "thread_id": 220,
       "topic_field": "Hetionet,Neo4j,Cypher,Network Biology",
       "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220",
-      "views": 75
+      "views": 78
+    },
+    {
+      "document_id": null,
+      "doi": "10.15363/thinklab.d224",
+      "doi_field": "",
+      "profile_id": 188,
+      "published": "2016-09-19T04:35:42.315453Z",
+      "subject": "prediction in epilepsy",
+      "thread_id": 224,
+      "topic_field": "epilepsy,Hetionet",
+      "url": "/discussion/prediction-in-epilepsy/224",
+      "views": 4
     }
   ]
 }
