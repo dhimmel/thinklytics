@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-09-20T21:09:55.280468Z",
+  "retrieved": "2016-09-21T21:03:13.765886Z",
   "threads": [
     {
       "document_id": null,
@@ -2844,7 +2844,7 @@
       "thread_id": 114,
       "topic_field": "Markdown,TLFM,Inline Math,Inline Code",
       "url": "/discussion/heading-style-not-applied-to-inline-code-or-math/114",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,

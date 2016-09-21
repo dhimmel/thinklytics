@@ -364,7 +364,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/pathways4life/proposal",
-      "views": 386
+      "views": 388
     }
   ],
   "notes": [
@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-09-20T21:09:55.849311Z",
+  "retrieved": "2016-09-21T21:03:14.398543Z",
   "threads": [
     {
       "document_id": null,
@@ -457,7 +457,7 @@
       "thread_id": 75,
       "topic_field": "Gene Relationships,Gene Interactions,Interactions,Pathways,Gene Sets",
       "url": "/discussion/pathway-novelty-based-on-unique-relationships-rather-than-genes/75",
-      "views": 45
+      "views": 46
     },
     {
       "document_id": null,
@@ -493,7 +493,7 @@
       "thread_id": 117,
       "topic_field": "Crowdsourcing,Game Design,Pathways,Image Analysis",
       "url": "/doc/3/review",
-      "views": 36
+      "views": 37
     },
     {
       "document_id": null,
