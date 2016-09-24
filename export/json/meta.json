@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-09-23T21:02:50.981556Z",
+  "retrieved": "2016-09-24T21:02:58.399912Z",
   "threads": [
     {
       "document_id": null,
@@ -2712,7 +2712,7 @@
       "thread_id": 59,
       "topic_field": "Markdown,TLFM,Editor",
       "url": "/discussion/thinklab-editor-and-markdown-suggestions/59",
-      "views": 55
+      "views": 56
     },
     {
       "document_id": null,
@@ -2760,7 +2760,7 @@
       "thread_id": 69,
       "topic_field": "Markdown,Discussions,Citation,DOI",
       "url": "/discussion/citing-thinklab-discussions-feedback-please/69",
-      "views": 38
+      "views": 39
     },
     {
       "document_id": null,
@@ -2880,7 +2880,7 @@
       "thread_id": 139,
       "topic_field": "",
       "url": "/discussion/latex-integration/139",
-      "views": 58
+      "views": 59
     },
     {
       "document_id": null,
@@ -2928,7 +2928,7 @@
       "thread_id": 188,
       "topic_field": "popover,citation,user experience,Thinklab",
       "url": "/discussion/streamlining-access-to-the-common-interactions-with-citations/188",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,
@@ -3000,7 +3000,7 @@
       "thread_id": 196,
       "topic_field": "",
       "url": "/discussion/automatically-insert-images/196",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,
@@ -3012,7 +3012,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
