@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-09-24T21:02:58.399912Z",
+  "retrieved": "2016-09-25T21:03:27.171307Z",
   "threads": [
     {
       "document_id": null,
@@ -2604,7 +2604,7 @@
       "thread_id": 32,
       "topic_field": "Markdown,TLFM",
       "url": "/discussion/markdown-feedback-bugs-and-suggestions/32",
-      "views": 87
+      "views": 88
     },
     {
       "document_id": null,
@@ -2628,7 +2628,7 @@
       "thread_id": 37,
       "topic_field": "ThinkLab,Discussions,Draft",
       "url": "/discussion/draft-mode-for-new-discussions/37",
-      "views": 26
+      "views": 27
     },
     {
       "document_id": null,
@@ -2700,7 +2700,7 @@
       "thread_id": 58,
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 190
+      "views": 191
     },
     {
       "document_id": null,
@@ -2772,7 +2772,7 @@
       "thread_id": 78,
       "topic_field": "",
       "url": "/discussion/reviewers-or-contributors-what-term-should-we-use-for-thinklab-participants/78",
-      "views": 36
+      "views": 37
     },
     {
       "document_id": null,
@@ -2832,7 +2832,7 @@
       "thread_id": 109,
       "topic_field": "Standards,DOI,DOI resolution",
       "url": "/discussion/switching-doi-links-to-the-preferred-format/109",
-      "views": 45
+      "views": 46
     },
     {
       "document_id": null,
@@ -2916,7 +2916,7 @@
       "thread_id": 167,
       "topic_field": "Hypothesis,hypothes.is,typos,annotations",
       "url": "/discussion/hypothesis-for-alerting-authors-of-writing-errors-in-discussion-posts/167",
-      "views": 40
+      "views": 41
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 113
+      "views": 114
     },
     {
       "document_id": null,
@@ -2988,7 +2988,7 @@
       "thread_id": 195,
       "topic_field": "",
       "url": "/discussion/auto-save/195",
-      "views": 28
+      "views": 29
     },
     {
       "document_id": null,
