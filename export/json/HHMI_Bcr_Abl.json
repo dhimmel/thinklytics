@@ -886,7 +886,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/HHMI_Bcr_Abl/proposal",
-      "views": 296
+      "views": 298
     }
   ],
   "notes": [],
@@ -934,7 +934,7 @@
       "username": "obigriffith"
     }
   ],
-  "retrieved": "2016-09-28T21:03:18.663509Z",
+  "retrieved": "2016-09-29T21:03:59.640500Z",
   "threads": [
     {
       "document_id": null,
@@ -946,7 +946,7 @@
       "thread_id": 141,
       "topic_field": "Machine learning,Cancer Biology,Crowdsourcing,Literature Mining,Drug Targets",
       "url": "/doc/11/review",
-      "views": 28
+      "views": 29
     },
     {
       "document_id": null,
@@ -970,7 +970,7 @@
       "thread_id": 143,
       "topic_field": "Cancer Biology,Pathways,Imatinib Bcr-Abl",
       "url": "/discussion/what-lies-downstream-of-bcr-abl/143",
-      "views": 30
+      "views": 31
     },
     {
       "document_id": null,
