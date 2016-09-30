@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-09-29T21:04:02.798557Z",
+  "retrieved": "2016-09-30T21:04:08.422238Z",
   "threads": [
     {
       "document_id": null,
@@ -2568,7 +2568,7 @@
       "thread_id": 26,
       "topic_field": "ThinkLab,Discussions",
       "url": "/discussion/discussion-ranking-and-visibility/26",
-      "views": 39
+      "views": 40
     },
     {
       "document_id": null,
@@ -2892,7 +2892,7 @@
       "thread_id": 144,
       "topic_field": "Review Process",
       "url": "/discussion/whole-proposal-reviewer-synopsis-fund-or-no-fund/144",
-      "views": 50
+      "views": 52
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 116
+      "views": 117
     },
     {
       "document_id": null,
@@ -2976,7 +2976,7 @@
       "thread_id": 192,
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 39
+      "views": 40
     },
     {
       "document_id": null,
@@ -3060,7 +3060,7 @@
       "thread_id": 209,
       "topic_field": "",
       "url": "/discussion/share-single-posts/209",
-      "views": 23
+      "views": 24
     }
   ]
 }
