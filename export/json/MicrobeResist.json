@@ -202,7 +202,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/MicrobeResist/proposal",
-      "views": 451
+      "views": 453
     }
   ],
   "notes": [
@@ -321,7 +321,7 @@
       "username": "JamesMeadow"
     }
   ],
-  "retrieved": "2016-10-02T21:02:42.621137Z",
+  "retrieved": "2016-10-03T21:03:21.753297Z",
   "threads": [
     {
       "document_id": null,
@@ -357,7 +357,7 @@
       "thread_id": 6,
       "topic_field": "ThinkLab,Meta",
       "url": "/discussion/introduction-to-the-thinklab-pilot/6",
-      "views": 20
+      "views": 21
     },
     {
       "document_id": null,
@@ -405,7 +405,7 @@
       "thread_id": 11,
       "topic_field": "",
       "url": "/discussion/methods-considerations/11",
-      "views": 48
+      "views": 49
     },
     {
       "document_id": null,
