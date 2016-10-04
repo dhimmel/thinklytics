@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-10-03T21:03:23.958960Z",
+  "retrieved": "2016-10-04T21:03:36.080080Z",
   "threads": [
     {
       "document_id": null,
@@ -2580,7 +2580,7 @@
       "thread_id": 27,
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 100
+      "views": 101
     },
     {
       "document_id": null,
@@ -2652,7 +2652,7 @@
       "thread_id": 49,
       "topic_field": "ThinkLab,Contributions,Incentives",
       "url": "/discussion/contribution-valuation-options/49",
-      "views": 58
+      "views": 59
     },
     {
       "document_id": null,
@@ -2772,7 +2772,7 @@
       "thread_id": 78,
       "topic_field": "",
       "url": "/discussion/reviewers-or-contributors-what-term-should-we-use-for-thinklab-participants/78",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
