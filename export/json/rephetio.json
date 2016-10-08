@@ -6047,7 +6047,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-10-07T21:03:25.686513Z",
+  "retrieved": "2016-10-08T21:03:27.442896Z",
   "threads": [
     {
       "document_id": null,
@@ -6059,7 +6059,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 553
+      "views": 554
     },
     {
       "document_id": null,
@@ -6131,7 +6131,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 169
+      "views": 170
     },
     {
       "document_id": null,
@@ -6143,7 +6143,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 257
+      "views": 259
     },
     {
       "document_id": null,
@@ -6383,7 +6383,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 409
+      "views": 410
     },
     {
       "document_id": null,
@@ -6419,7 +6419,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 457
+      "views": 458
     },
     {
       "document_id": null,
@@ -6443,7 +6443,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 802
+      "views": 804
     },
     {
       "document_id": null,
@@ -6455,7 +6455,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 784
+      "views": 786
     },
     {
       "document_id": null,
@@ -6539,7 +6539,7 @@
       "thread_id": 97,
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 132
+      "views": 133
     },
     {
       "document_id": null,
@@ -6563,7 +6563,7 @@
       "thread_id": 102,
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 253
+      "views": 254
     },
     {
       "document_id": null,
@@ -6635,7 +6635,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 273
+      "views": 275
     },
     {
       "document_id": null,
@@ -6659,7 +6659,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 403
+      "views": 404
     },
     {
       "document_id": null,
@@ -6695,7 +6695,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 100
+      "views": 101
     },
     {
       "document_id": null,
@@ -6743,7 +6743,7 @@
       "thread_id": 162,
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 113
+      "views": 114
     },
     {
       "document_id": null,
@@ -6911,7 +6911,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 393
+      "views": 395
     },
     {
       "document_id": null,
@@ -6923,7 +6923,7 @@
       "thread_id": 210,
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 82
+      "views": 83
     },
     {
       "document_id": null,
@@ -6983,7 +6983,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 131
+      "views": 132
     },
     {
       "document_id": null,

@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-10-07T21:03:21.058201Z",
+  "retrieved": "2016-10-08T21:03:22.674533Z",
   "threads": [
     {
       "document_id": null,
@@ -2616,7 +2616,7 @@
       "thread_id": 33,
       "topic_field": "Privacy,IT,Google Analytics,Piwik,Sysadmin,Analytics",
       "url": "/discussion/web-analytics-platform/33",
-      "views": 70
+      "views": 71
     },
     {
       "document_id": null,
@@ -2628,7 +2628,7 @@
       "thread_id": 37,
       "topic_field": "ThinkLab,Discussions,Draft",
       "url": "/discussion/draft-mode-for-new-discussions/37",
-      "views": 27
+      "views": 28
     },
     {
       "document_id": null,
@@ -2808,7 +2808,7 @@
       "thread_id": 98,
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 66
+      "views": 67
     },
     {
       "document_id": null,
