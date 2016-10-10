@@ -1664,7 +1664,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2016-10-09T21:03:20.904017Z",
+  "retrieved": "2016-10-10T21:03:22.948072Z",
   "threads": [
     {
       "document_id": 12,
@@ -1688,7 +1688,7 @@
       "thread_id": 160,
       "topic_field": "ASAPbio,Delays,Publishing,Preprints",
       "url": "/discussion/highlighting-the-immediacy-of-thinklab/160",
-      "views": 25
+      "views": 26
     },
     {
       "document_id": null,
@@ -1760,7 +1760,7 @@
       "thread_id": 170,
       "topic_field": "Open science,Incentives",
       "url": "/discussion/has-our-scientific-system-been-optimized-by-an-evolutionary-process/170",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": 12,
