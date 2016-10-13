@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-10-12T21:03:33.262727Z",
+  "retrieved": "2016-10-13T21:02:53.227062Z",
   "threads": [
     {
       "document_id": null,
@@ -2604,7 +2604,7 @@
       "thread_id": 32,
       "topic_field": "Markdown,TLFM",
       "url": "/discussion/markdown-feedback-bugs-and-suggestions/32",
-      "views": 91
+      "views": 92
     },
     {
       "document_id": null,
@@ -2724,7 +2724,7 @@
       "thread_id": 60,
       "topic_field": "Comments",
       "url": "/discussion/comments-notes-interface-and-behaviour-suggestions/60",
-      "views": 59
+      "views": 60
     },
     {
       "document_id": null,
@@ -2748,7 +2748,7 @@
       "thread_id": 64,
       "topic_field": "",
       "url": "/discussion/should-we-aim-to-keep-discussions-narrowly-focused/64",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -2832,7 +2832,7 @@
       "thread_id": 109,
       "topic_field": "Standards,DOI,DOI resolution",
       "url": "/discussion/switching-doi-links-to-the-preferred-format/109",
-      "views": 48
+      "views": 49
     },
     {
       "document_id": null,
@@ -2904,7 +2904,7 @@
       "thread_id": 163,
       "topic_field": "Markdown,TLFM,Bug",
       "url": "/discussion/markdown-bug-hyperlink-with-title-attribute-causes-excision/163",
-      "views": 26
+      "views": 27
     },
     {
       "document_id": null,
@@ -3036,7 +3036,7 @@
       "thread_id": 206,
       "topic_field": "open science,platforms",
       "url": "/discussion/open-realtime-science-platforms/206",
-      "views": 58
+      "views": 59
     },
     {
       "document_id": null,
