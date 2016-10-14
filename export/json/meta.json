@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-10-13T21:02:53.227062Z",
+  "retrieved": "2016-10-14T21:03:09.005989Z",
   "threads": [
     {
       "document_id": null,
@@ -2604,7 +2604,7 @@
       "thread_id": 32,
       "topic_field": "Markdown,TLFM",
       "url": "/discussion/markdown-feedback-bugs-and-suggestions/32",
-      "views": 92
+      "views": 94
     },
     {
       "document_id": null,
@@ -2736,7 +2736,7 @@
       "thread_id": 63,
       "topic_field": "",
       "url": "/discussion/why-thinklab-uses-a-flat-discussion-structure-not-threaded/63",
-      "views": 79
+      "views": 80
     },
     {
       "document_id": null,
@@ -2772,7 +2772,7 @@
       "thread_id": 78,
       "topic_field": "",
       "url": "/discussion/reviewers-or-contributors-what-term-should-we-use-for-thinklab-participants/78",
-      "views": 38
+      "views": 39
     },
     {
       "document_id": null,
@@ -2784,7 +2784,7 @@
       "thread_id": 79,
       "topic_field": "DOI,ThinkLab figures",
       "url": "/discussion/we-now-have-a-figures-feature/79",
-      "views": 49
+      "views": 50
     },
     {
       "document_id": null,
@@ -2808,7 +2808,7 @@
       "thread_id": 98,
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 67
+      "views": 68
     },
     {
       "document_id": null,
@@ -2844,7 +2844,7 @@
       "thread_id": 114,
       "topic_field": "Markdown,TLFM,Inline Math,Inline Code",
       "url": "/discussion/heading-style-not-applied-to-inline-code-or-math/114",
-      "views": 38
+      "views": 39
     },
     {
       "document_id": null,
@@ -2916,7 +2916,7 @@
       "thread_id": 167,
       "topic_field": "Hypothesis,hypothes.is,typos,annotations",
       "url": "/discussion/hypothesis-for-alerting-authors-of-writing-errors-in-discussion-posts/167",
-      "views": 41
+      "views": 43
     },
     {
       "document_id": null,
@@ -3012,7 +3012,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 39
+      "views": 40
     },
     {
       "document_id": null,
