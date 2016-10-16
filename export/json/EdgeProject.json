@@ -148,7 +148,7 @@
       "username": "kristinahettne"
     }
   ],
-  "retrieved": "2016-10-15T21:02:36.130963Z",
+  "retrieved": "2016-10-16T21:02:30.131207Z",
   "threads": [
     {
       "document_id": null,
@@ -172,7 +172,7 @@
       "thread_id": 174,
       "topic_field": "",
       "url": "/doc/14/review",
-      "views": 29
+      "views": 30
     },
     {
       "document_id": 14,
@@ -196,7 +196,7 @@
       "thread_id": 177,
       "topic_field": "ThinkLab,google docs",
       "url": "/discussion/what-to-do-when-you-start-over/177",
-      "views": 27
+      "views": 29
     }
   ]
 }

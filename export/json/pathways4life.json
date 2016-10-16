@@ -364,7 +364,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/pathways4life/proposal",
-      "views": 395
+      "views": 396
     }
   ],
   "notes": [
@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-10-15T21:02:40.431392Z",
+  "retrieved": "2016-10-16T21:02:34.316914Z",
   "threads": [
     {
       "document_id": null,
@@ -505,7 +505,7 @@
       "thread_id": 119,
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 102
+      "views": 103
     },
     {
       "document_id": null,
@@ -517,7 +517,7 @@
       "thread_id": 120,
       "topic_field": "Gamification",
       "url": "/discussion/are-there-significant-differences-in-difficulty-between-pathway-modeling-tasks/120",
-      "views": 32
+      "views": 33
     },
     {
       "document_id": null,

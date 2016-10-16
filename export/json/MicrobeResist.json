@@ -202,7 +202,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/MicrobeResist/proposal",
-      "views": 464
+      "views": 465
     }
   ],
   "notes": [
@@ -321,7 +321,7 @@
       "username": "JamesMeadow"
     }
   ],
-  "retrieved": "2016-10-15T21:02:37.585545Z",
+  "retrieved": "2016-10-16T21:02:31.607544Z",
   "threads": [
     {
       "document_id": null,
@@ -333,7 +333,7 @@
       "thread_id": 3,
       "topic_field": "",
       "url": "/discussion/play-up-your-labs-leadership-in-open-science/3",
-      "views": 52
+      "views": 53
     },
     {
       "document_id": null,
@@ -417,7 +417,7 @@
       "thread_id": 15,
       "topic_field": "Markdown",
       "url": "/discussion/markdown-text-formatting-tips-for-proposal/15",
-      "views": 58
+      "views": 59
     }
   ]
 }
