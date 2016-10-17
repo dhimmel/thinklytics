@@ -4355,6 +4355,33 @@
       "published": "2016-10-16T17:14:19.888465Z",
       "thread_id": 224,
       "url": "/discussion/prediction-in-epilepsy/224#4"
+    },
+    {
+      "body_html": "<h1>Visualizing the top epilepsy predictions</h1>\r\n\r\n<p><a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a> completed his curation of the top 100 epilepsy predictions (excluding <a href=\"https://www.drugbank.ca/drugs/DB01346\">quinidine barbiurate</a> since it's a combination drug). As <a href=\"#4\">explained above</a>, the classifications were:</p>\r\n\r\n<ul><li>AIGD for anti-ictogenic drug</li><li>UNKD for drug with an unknown effect on ictogenesis</li><li>IGD for ictogenic drug</li></ul>\r\n\r\n<p>His classifications are available as a <a href=\"https://github.com/dhimmel/rephetio/blob/127b094076684b40ea35f6e42aca8967afdb9f56/epilepsy/data/PK-curation.tsv\">TSV on GitHub</a> (versioned link) and on <a href=\"https://docs.google.com/spreadsheets/d/1GJvqWp7WkMyboJ49Hts4eSOQCdJc_rcQenmqPLk6Bsw\">Google Sheets</a> (unversioned link).</p>\r\n\r\n<p>Of the top epilepsy predictions, 77 were AIGDs, 8 were UNKDs, and 15 were IGDs (<a href=\"https://github.com/dhimmel/rephetio/blob/127b094076684b40ea35f6e42aca8967afdb9f56/epilepsy/epylepsy.ipynb\">notebook</a>). Of the 25 disease-modifying epilepsy drugs in PharmacotherapyDB, 23 were in the top predictions. Propofol and vigabatrin were the two that did not make the top 100 predictions and were respectively in the 90.6th and 83.7th percentile for epilepsy predictions.</p>\r\n\r\n<p>I created the following visualizations of the top predictions. First, the plot of predicted probability versus compound's rank (ignoring quinidine barbiurate):</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/raw/127b094076684b40ea35f6e42aca8967afdb9f56/epilepsy/figure/epilepsy-labeled.png\" alt=\"Project Rephetio Top Epilepsy Predictions with Compounds Labeled\" title=\"AIGD stands for anti-ictogenic drug; UNKD stands for drug with an unknown effect on ictogenesis; IGD stands for ictogenic drug\"></p>\r\n\r\n<p>Here is a more complex version of the above plot which uses a sliding window that looks 7 predictions ahead/behind to compute category frequency within the window. The plot shows that top predictions are primarily AIGDs with some UNKDs and IGDs creeping in for lower predictions.</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/raw/127b094076684b40ea35f6e42aca8967afdb9f56/epilepsy/figure/epilepsy-windows.png\" alt=\"Project Rephetio Top Epilepsy Prediction Windows\" title=\"AIGD stands for anti-ictogenic drug; UNKD stands for drug with an unknown effect on ictogenesis; IGD stands for ictogenic drug\"></p>",
+      "body_md": "# Visualizing the top epilepsy predictions\r\n\r\n@pouyakhankhanian completed his curation of the top 100 epilepsy predictions (excluding [quinidine barbiurate](https://www.drugbank.ca/drugs/DB01346) since it's a combination drug). As [explained above](#4), the classifications were:\r\n\r\n+ AIGD for anti-ictogenic drug\r\n+ UNKD for drug with an unknown effect on ictogenesis\r\n+ IGD for ictogenic drug\r\n\r\nHis classifications are available as a [TSV on GitHub](https://github.com/dhimmel/rephetio/blob/127b094076684b40ea35f6e42aca8967afdb9f56/epilepsy/data/PK-curation.tsv) (versioned link) and on [Google Sheets](https://docs.google.com/spreadsheets/d/1GJvqWp7WkMyboJ49Hts4eSOQCdJc_rcQenmqPLk6Bsw) (unversioned link).\r\n\r\nOf the top epilepsy predictions, 77 were AIGDs, 8 were UNKDs, and 15 were IGDs ([notebook](https://github.com/dhimmel/rephetio/blob/127b094076684b40ea35f6e42aca8967afdb9f56/epilepsy/epylepsy.ipynb)). Of the 25 disease-modifying epilepsy drugs in PharmacotherapyDB, 23 were in the top predictions. Propofol and vigabatrin were the two that did not make the top 100 predictions and were respectively in the 90.6th and 83.7th percentile for epilepsy predictions.\r\n\r\nI created the following visualizations of the top predictions. First, the plot of predicted probability versus compound's rank (ignoring quinidine barbiurate):\r\n\r\n![Project Rephetio Top Epilepsy Predictions with Compounds Labeled](https://github.com/dhimmel/rephetio/raw/127b094076684b40ea35f6e42aca8967afdb9f56/epilepsy/figure/epilepsy-labeled.png \"AIGD stands for anti-ictogenic drug; UNKD stands for drug with an unknown effect on ictogenesis; IGD stands for ictogenic drug\")\r\n\r\nHere is a more complex version of the above plot which uses a sliding window that looks 7 predictions ahead/behind to compute category frequency within the window. The plot shows that top predictions are primarily AIGDs with some UNKDs and IGDs creeping in for lower predictions.\r\n\r\n![Project Rephetio Top Epilepsy Prediction Windows](https://github.com/dhimmel/rephetio/raw/127b094076684b40ea35f6e42aca8967afdb9f56/epilepsy/figure/epilepsy-windows.png \"AIGD stands for anti-ictogenic drug; UNKD stands for drug with an unknown effect on ictogenesis; IGD stands for ictogenic drug\")",
+      "comment_id": 1367,
+      "profile_id": 17,
+      "published": "2016-10-17T15:02:59.921143Z",
+      "thread_id": 224,
+      "url": "/discussion/prediction-in-epilepsy/224#5"
+    },
+    {
+      "body_html": "<p><a href=\"/u/sergiobaranzini\" class=\"username\">@sergiobaranzini</a>, very nice. Arranging compounds and diseases in a line helps communicate our application of Hetionet to predict drug efficacy. Below is a labeled, landscape version:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/raw/127b094076684b40ea35f6e42aca8967afdb9f56/figure/hetionet-v1.0-labeled-landscape.png\" alt=\"hetionet v1.0 labeled landscape\" title=\"Hetionet 1.0: The hetnet visualized. Nodes are drawn as dots and laid out orbitally, thus forming circles. Edges are colored by type.\"></p>",
+      "body_md": "@sergiobaranzini, very nice. Arranging compounds and diseases in a line helps communicate our application of Hetionet to predict drug efficacy. Below is a labeled, landscape version:\r\n\r\n![hetionet v1.0 labeled landscape](https://github.com/dhimmel/rephetio/raw/127b094076684b40ea35f6e42aca8967afdb9f56/figure/hetionet-v1.0-labeled-landscape.png \"Hetionet 1.0: The hetnet visualized. Nodes are drawn as dots and laid out orbitally, thus forming circles. Edges are colored by type.\")",
+      "comment_id": 1368,
+      "profile_id": 17,
+      "published": "2016-10-17T16:25:27.513603Z",
+      "thread_id": 202,
+      "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#8"
+    },
+    {
+      "body_html": "<h1>Enflurane has established ictogenic properties?</h1>\r\n\r\n<p><a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a>, I was looking into enflurane and <a href=\"http://www.epilepsy.com/information/professionals/diagnosis-treatment/procedures-epilepsy-patients/general-anesthetics-6\" title=\"Information For Health Care Professionals: Enflurane\">found the following material</a> from the Epilepsy Foundation. The website says the material was adapted from the book <a href=\"http://www.isbnsearch.org/isbn/9780750672412\"><em>Managing epilepsy and co-existing disorders</em></a> from 2002 and was reviewed in 2004.</p>\r\n\r\n<blockquote><p>Enflurane is the inhalation agent that anesthesiologists most often avoid when caring for patients with epilepsy, because it lowers seizure threshold. In children and adults with no history of epilepsy, enflurane can cause epileptiform activity with concomitant facial or appendicular myoclonus or generalized tonic-clonic movements <span class=\"citation\">[<a href=\"/doi/10.1213/00000539-197707000-00010\" class=\"citation\" data-key=\"10.1213/00000539-197707000-00010\">1</a>, <a href=\"/doi/10.1212/wnl.38.6.924\" class=\"citation\" data-key=\"10.1212/wnl.38.6.924\">2</a>, <a href=\"/doi/10.1213/00000539-197001000-00001\" class=\"citation\" data-key=\"10.1213/00000539-197001000-00001\">3</a>]</span>. In epilepsy patients, the extent but not the frequency of spike activity on the electrocorticogram is increased <span class=\"citation\">[<a href=\"/doi/10.1212/wnl.38.6.924\" class=\"citation\" data-key=\"10.1212/wnl.38.6.924\">2</a>]</span>. Epileptogenic foci may be activated during epilepsy surgery <span class=\"citation\">[<a href=\"/doi/10.1213/00000539-199004000-00016\" class=\"citation\" data-key=\"10.1213/00000539-199004000-00016\">4</a>, <a href=\"/doi/10.1097/00000542-198005000-00010\" class=\"citation\" data-key=\"10.1097/00000542-198005000-00010\">5</a>]</span>. As the depth of anesthesia is increased with enflurane, the EEG demonstrates high-voltage spikes and spike and slow-wave complexes, the spikes with burst suppression.</p><p>The mechanism of enflurane-induced hyperexcitability in humans is unclear. In animals, enflurane inhibits synapses and stimulates excitatory neuronal transmission in cortical and subcortical areas <span class=\"citation\">[<a href=\"/doi/10.1016/0013-4694(75)90199-6\" class=\"citation\" data-key=\"10.1016/0013-4694(75)90199-6\">6</a>]</span> (page 555).</p><p>Although low enflurane concentrations (1.0–1.5%) administered to a normocarbic patient (arterial partial pressure of carbon dioxide [PaCO2] equals 40 mm Hg) are not frequently associated with seizure activity <span class=\"citation\">[<a href=\"/doi/10.1097/00000542-197111000-00006\" class=\"citation\" data-key=\"10.1097/00000542-197111000-00006\">7</a>]</span>, increasing enflurane concentrations (2–3%) or hyperventilating an anesthetized patient enhances seizure activity. Hyperventilation to a PaCO2 of 20 mm Hg from 40 mm Hg is associated with seizure activity at a 1% lower enflurane concentration. Because hyperventilation is frequently used by neuroanesthesiologists to decrease cerebral blood flow and intracranial pressure, enflurane is avoided when hyperventilation is indicated. An increase in PaCO2 from 40 mm Hg to 60 mm Hg increases the minimum enflurane concentration at which seizures occur by 1% <span class=\"citation\">[<a href=\"/doi/10.1016/0013-4694(75)90199-6\" class=\"citation\" data-key=\"10.1016/0013-4694(75)90199-6\">6</a>]</span>.</p><p>Generalized tonic-clonic and myoclonic seizures can occur within the immediate postoperative period and, potentially, for a few days after enflurane anesthesia. The role of other CNS-active drugs remains uncertain in these cases <span class=\"citation\">[<a href=\"/doi/10.1097/00000542-197503000-00026\" class=\"citation\" data-key=\"10.1097/00000542-197503000-00026\">8</a>]</span>. The convulsant effects may result from enflurane's organic and inorganic nonvolatile fluorinated metabolites <span class=\"citation\">[<a href=\"/doi/10.1097/00000542-197109000-00007\" class=\"citation\" data-key=\"10.1097/00000542-197109000-00007\">9</a>]</span>.</p><p>Although anesthesiologists consider diazepam and thiopental to be anticonvulsants and use them extensively to treat seizure activity, there is some evidence that these drugs may potentiate enflurane-related epileptiform activity in humans <span class=\"citation\">[<a href=\"/doi/10.1007/bf03006812\" class=\"citation\" data-key=\"10.1007/bf03006812\">10</a>]</span>. Nitrous oxide (N2O) does not alter epileptiform activity induced by enflurane <span class=\"citation\">[<a href=\"/doi/10.1097/00000542-197111000-00006\" class=\"citation\" data-key=\"10.1097/00000542-197111000-00006\">7</a>]</span>.</p></blockquote>\r\n\r\n<p><a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a> do you think this is sufficient evidence to classify enflurane as a IGD? It's likely this information was overlooked due to the poor discoverability of these old studies.</p>",
+      "body_md": "# Enflurane has established ictogenic properties?\r\n\r\n@pouyakhankhanian, I was looking into enflurane and [found the following material](http://www.epilepsy.com/information/professionals/diagnosis-treatment/procedures-epilepsy-patients/general-anesthetics-6 \"Information For Health Care Professionals: Enflurane\") from the Epilepsy Foundation. The website says the material was adapted from the book [_Managing epilepsy and co-existing disorders_](http://www.isbnsearch.org/isbn/9780750672412) from 2002 and was reviewed in 2004.\r\n\r\n> Enflurane is the inhalation agent that anesthesiologists most often avoid when caring for patients with epilepsy, because it lowers seizure threshold. In children and adults with no history of epilepsy, enflurane can cause epileptiform activity with concomitant facial or appendicular myoclonus or generalized tonic-clonic movements [@10.1213/00000539-197707000-00010 @10.1212/wnl.38.6.924 @10.1213/00000539-197001000-00001]. In epilepsy patients, the extent but not the frequency of spike activity on the electrocorticogram is increased [@10.1212/wnl.38.6.924]. Epileptogenic foci may be activated during epilepsy surgery [@10.1213/00000539-199004000-00016 @10.1097/00000542-198005000-00010]. As the depth of anesthesia is increased with enflurane, the EEG demonstrates high-voltage spikes and spike and slow-wave complexes, the spikes with burst suppression.\r\n\r\n> The mechanism of enflurane-induced hyperexcitability in humans is unclear. In animals, enflurane inhibits synapses and stimulates excitatory neuronal transmission in cortical and subcortical areas [@10.1016/0013-4694(75)90199-6] (page 555).\r\n\r\n> Although low enflurane concentrations (1.0–1.5%) administered to a normocarbic patient (arterial partial pressure of carbon dioxide [PaCO2] equals 40 mm Hg) are not frequently associated with seizure activity [@10.1097/00000542-197111000-00006], increasing enflurane concentrations (2–3%) or hyperventilating an anesthetized patient enhances seizure activity. Hyperventilation to a PaCO2 of 20 mm Hg from 40 mm Hg is associated with seizure activity at a 1% lower enflurane concentration. Because hyperventilation is frequently used by neuroanesthesiologists to decrease cerebral blood flow and intracranial pressure, enflurane is avoided when hyperventilation is indicated. An increase in PaCO2 from 40 mm Hg to 60 mm Hg increases the minimum enflurane concentration at which seizures occur by 1% [@10.1016/0013-4694(75)90199-6].\r\n\r\n> Generalized tonic-clonic and myoclonic seizures can occur within the immediate postoperative period and, potentially, for a few days after enflurane anesthesia. The role of other CNS-active drugs remains uncertain in these cases [@10.1097/00000542-197503000-00026]. The convulsant effects may result from enflurane's organic and inorganic nonvolatile fluorinated metabolites [@10.1097/00000542-197109000-00007].\r\n\r\n> Although anesthesiologists consider diazepam and thiopental to be anticonvulsants and use them extensively to treat seizure activity, there is some evidence that these drugs may potentiate enflurane-related epileptiform activity in humans [@10.1007/bf03006812]. Nitrous oxide (N2O) does not alter epileptiform activity induced by enflurane [@10.1097/00000542-197111000-00006].\r\n\r\n@pouyakhankhanian do you think this is sufficient evidence to classify enflurane as a IGD? It's likely this information was overlooked due to the poor discoverability of these old studies.",
+      "comment_id": 1369,
+      "profile_id": 17,
+      "published": "2016-10-17T20:02:21.351172Z",
+      "thread_id": 224,
+      "url": "/discussion/prediction-in-epilepsy/224#6"
     }
   ],
   "documents": [
@@ -4369,7 +4396,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/proposal",
-      "views": 1025
+      "views": 1027
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -6083,7 +6110,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-10-16T21:02:38.378161Z",
+  "retrieved": "2016-10-17T21:03:56.874830Z",
   "threads": [
     {
       "document_id": null,
@@ -6095,7 +6122,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 563
+      "views": 565
     },
     {
       "document_id": null,
@@ -6107,7 +6134,7 @@
       "thread_id": 22,
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 144
+      "views": 145
     },
     {
       "document_id": null,
@@ -6167,7 +6194,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 175
+      "views": 176
     },
     {
       "document_id": null,
@@ -6179,7 +6206,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 266
+      "views": 267
     },
     {
       "document_id": null,
@@ -6191,7 +6218,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 297
+      "views": 298
     },
     {
       "document_id": null,
@@ -6203,7 +6230,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 145
+      "views": 146
     },
     {
       "document_id": null,
@@ -6215,7 +6242,7 @@
       "thread_id": 42,
       "topic_field": "Terminologies,Mapping,Incomplete Interactome,MeSH",
       "url": "/discussion/mapping-incomplete-interactome-disease-names-to-mesh/42",
-      "views": 66
+      "views": 67
     },
     {
       "document_id": null,
@@ -6227,7 +6254,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 482
+      "views": 484
     },
     {
       "document_id": null,
@@ -6239,7 +6266,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 232
+      "views": 235
     },
     {
       "document_id": null,
@@ -6263,7 +6290,7 @@
       "thread_id": 47,
       "topic_field": "Validation,Evalauation",
       "url": "/discussion/evaluation-framework/47",
-      "views": 50
+      "views": 51
     },
     {
       "document_id": null,
@@ -6287,7 +6314,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 317
+      "views": 318
     },
     {
       "document_id": null,
@@ -6335,7 +6362,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 420
+      "views": 424
     },
     {
       "document_id": null,
@@ -6359,7 +6386,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 438
+      "views": 441
     },
     {
       "document_id": null,
@@ -6395,7 +6422,7 @@
       "thread_id": 68,
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 111
+      "views": 112
     },
     {
       "document_id": null,
@@ -6407,7 +6434,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 128
+      "views": 129
     },
     {
       "document_id": null,
@@ -6419,7 +6446,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 418
+      "views": 422
     },
     {
       "document_id": null,
@@ -6455,7 +6482,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 464
+      "views": 465
     },
     {
       "document_id": null,
@@ -6467,7 +6494,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 402
+      "views": 404
     },
     {
       "document_id": null,
@@ -6479,7 +6506,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 814
+      "views": 816
     },
     {
       "document_id": null,
@@ -6491,7 +6518,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 799
+      "views": 800
     },
     {
       "document_id": null,
@@ -6551,7 +6578,7 @@
       "thread_id": 95,
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 230
+      "views": 231
     },
     {
       "document_id": null,
@@ -6563,7 +6590,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 257
+      "views": 259
     },
     {
       "document_id": null,
@@ -6599,7 +6626,7 @@
       "thread_id": 102,
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 258
+      "views": 259
     },
     {
       "document_id": null,
@@ -6647,7 +6674,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 395
+      "views": 396
     },
     {
       "document_id": null,
@@ -6671,7 +6698,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 279
+      "views": 281
     },
     {
       "document_id": null,
@@ -6683,7 +6710,7 @@
       "thread_id": 111,
       "topic_field": "Incomplete Interactome,Permission,Licensing,Copyright Transfer,Supplement,AAAS",
       "url": "/discussion/incomplete-interactome-licensing/111",
-      "views": 101
+      "views": 102
     },
     {
       "document_id": null,
@@ -6695,7 +6722,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 409
+      "views": 412
     },
     {
       "document_id": null,
@@ -6707,7 +6734,7 @@
       "thread_id": 113,
       "topic_field": "Citations,Publicity,Media Coverage,Reuse,Attention",
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113",
-      "views": 131
+      "views": 132
     },
     {
       "document_id": null,
@@ -6779,7 +6806,7 @@
       "thread_id": 162,
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 115
+      "views": 116
     },
     {
       "document_id": null,
@@ -6791,7 +6818,7 @@
       "thread_id": 171,
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 183
+      "views": 184
     },
     {
       "document_id": null,
@@ -6851,7 +6878,7 @@
       "thread_id": 186,
       "topic_field": "DrugCentral,pharmacology,Database",
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186",
-      "views": 95
+      "views": 96
     },
     {
       "document_id": null,
@@ -6923,7 +6950,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 145
+      "views": 148
     },
     {
       "document_id": null,
@@ -6935,7 +6962,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 219
+      "views": 222
     },
     {
       "document_id": null,
@@ -6947,7 +6974,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 415
+      "views": 420
     },
     {
       "document_id": null,
@@ -7019,7 +7046,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 140
+      "views": 141
     },
     {
       "document_id": null,
@@ -7031,7 +7058,7 @@
       "thread_id": 220,
       "topic_field": "Hetionet,Neo4j,Cypher,Network Biology",
       "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220",
-      "views": 93
+      "views": 95
     },
     {
       "document_id": null,
@@ -7043,7 +7070,7 @@
       "thread_id": 224,
       "topic_field": "epilepsy,Hetionet",
       "url": "/discussion/prediction-in-epilepsy/224",
-      "views": 25
+      "views": 27
     }
   ]
 }
