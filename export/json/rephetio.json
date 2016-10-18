@@ -4382,6 +4382,15 @@
       "published": "2016-10-17T20:02:21.351172Z",
       "thread_id": 224,
       "url": "/discussion/prediction-in-epilepsy/224#6"
+    },
+    {
+      "body_html": "<p>I wanted a black background version of the figures, so I quickly color rotated and inverted the images. I couldn't figure out how to upload figures on thinklab - perhaps I don't have access to the project manager. In any case, you can generate them yourself easily with this command:</p>\r\n\r\n<p><code>convert hetionet-v1.0-labeled-landscape.png -modulate 100,100,0 -negate hetionet-v1.0-labeled-landscape-invertcr.png</code></p>\r\n\r\n<p>Thanks to <a href=\"/u/dhimmel\" class=\"username\">@dhimmel</a>'s note below:</p>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/542643/19480670/41b61926-9519-11e6-8db3-126980293bcb.png\" alt=\"hetionet-v1 0-labeled-landscape-invertcr\"></p>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/542643/19480669/41b30d8a-9519-11e6-84d2-721f5d0aeece.png\" alt=\"hetionet-v1 0-labeled-invertcr\"></p>",
+      "body_md": "I wanted a black background version of the figures, so I quickly color rotated and inverted the images. I couldn't figure out how to upload figures on thinklab - perhaps I don't have access to the project manager. In any case, you can generate them yourself easily with this command:\r\n\r\n`convert hetionet-v1.0-labeled-landscape.png -modulate 100,100,0 -negate hetionet-v1.0-labeled-landscape-invertcr.png`\r\n\r\nThanks to @dhimmel's note below:\r\n\r\n![hetionet-v1 0-labeled-landscape-invertcr](https://cloud.githubusercontent.com/assets/542643/19480670/41b61926-9519-11e6-8db3-126980293bcb.png)\r\n\r\n![hetionet-v1 0-labeled-invertcr](https://cloud.githubusercontent.com/assets/542643/19480669/41b30d8a-9519-11e6-84d2-721f5d0aeece.png)",
+      "comment_id": 1371,
+      "profile_id": 22,
+      "published": "2016-10-18T12:20:45.079385Z",
+      "thread_id": 202,
+      "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#9"
     }
   ],
   "documents": [
@@ -5798,6 +5807,60 @@
       "note_id": 271,
       "profile_id": 17,
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112#note-271"
+    },
+    {
+      "added": "2016-10-18T12:23:42.994110Z",
+      "body_html": "<p>The axes in this figure are unnatural to me. If you rotated this it would be much easier for me to naturally interpret.</p>",
+      "body_md": "The axes in this figure are unnatural to me. If you rotated this it would be much easier for me to naturally interpret.",
+      "comment_id": 1367,
+      "note_id": 272,
+      "profile_id": 22,
+      "url": "/discussion/prediction-in-epilepsy/224#note-272"
+    },
+    {
+      "added": "2016-10-18T13:43:00.390257Z",
+      "body_html": "<p><a href=\"/u/caseygreene\" class=\"username\">@caseygreene</a> we've been using a bit of a hack to host images for discussions. We use GitHub's drag-and-drop <a href=\"https://github.com/dhimmel/rephetio/issues/1\">image hosting in this issue</a>. Then you just take the markdown embed code that's generated and use it here.</p>",
+      "body_md": "@caseygreene we've been using a bit of a hack to host images for discussions. We use GitHub's drag-and-drop [image hosting in this issue](https://github.com/dhimmel/rephetio/issues/1). Then you just take the markdown embed code that's generated and use it here.",
+      "comment_id": 1371,
+      "note_id": 273,
+      "profile_id": 17,
+      "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#note-273"
+    },
+    {
+      "added": "2016-10-18T13:46:35.362256Z",
+      "body_html": "<p><a href=\"/u/caseygreene\" class=\"username\">@caseygreene</a>, I suspect you're talking about the second (two panel) figure. I agree. Additionally, the second figure adds great complexity with no more information compared to the first. I posted it here, but plan to proceed with only a <a href=\"https://github.com/dhimmel/rephetio/blob/127b094076684b40ea35f6e42aca8967afdb9f56/epilepsy/figure/epilepsy.png\" title=\"epilepsy.png on dhimmel/rephetio\">version of the first image</a> with compound labels removed..</p>",
+      "body_md": "@caseygreene, I suspect you're talking about the second (two panel) figure. I agree. Additionally, the second figure adds great complexity with no more information compared to the first. I posted it here, but plan to proceed with only a [version of the first image](https://github.com/dhimmel/rephetio/blob/127b094076684b40ea35f6e42aca8967afdb9f56/epilepsy/figure/epilepsy.png \"epilepsy.png on dhimmel/rephetio\") with compound labels removed..",
+      "comment_id": 1367,
+      "note_id": 274,
+      "profile_id": 17,
+      "url": "/discussion/prediction-in-epilepsy/224#note-274"
+    },
+    {
+      "added": "2016-10-18T13:57:16.253106Z",
+      "body_html": "<p>Yes - the second portion. I think that it could be interpretable with predicted prob on the y-axis. I do agree that the first is much clearer.</p>",
+      "body_md": "Yes - the second portion. I think that it could be interpretable with predicted prob on the y-axis. I do agree that the first is much clearer.",
+      "comment_id": 1367,
+      "note_id": 275,
+      "profile_id": 22,
+      "url": "/discussion/prediction-in-epilepsy/224#note-275"
+    },
+    {
+      "added": "2016-10-18T13:59:29.861861Z",
+      "body_html": "<p><a href=\"/u/dhimmel\" class=\"username\">@dhimmel</a> : Gotcha! Edited post.</p>",
+      "body_md": "@dhimmel : Gotcha! Edited post.",
+      "comment_id": 1371,
+      "note_id": 276,
+      "profile_id": 22,
+      "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#note-276"
+    },
+    {
+      "added": "2016-10-18T16:28:03.598817Z",
+      "body_html": "<p>I like the black background!<br>Actually, this was the original color, but we decided to make it white for the paper. </p>",
+      "body_md": "I like the black background!\nActually, this was the original color, but we decided to make it white for the paper. ",
+      "comment_id": 1371,
+      "note_id": 277,
+      "profile_id": 20,
+      "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#note-277"
     }
   ],
   "profiles": [
@@ -6110,7 +6173,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-10-17T21:03:56.874830Z",
+  "retrieved": "2016-10-18T21:03:05.233264Z",
   "threads": [
     {
       "document_id": null,
@@ -6170,7 +6233,7 @@
       "thread_id": 30,
       "topic_field": "SIDER,Indications,NLP,Drugs,Side Effects,Drug Labels",
       "url": "/discussion/assessing-the-quality-and-applicability-of-the-sider-2-resource/30",
-      "views": 147
+      "views": 148
     },
     {
       "document_id": null,
@@ -6194,7 +6257,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 176
+      "views": 177
     },
     {
       "document_id": null,
@@ -6218,7 +6281,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 298
+      "views": 300
     },
     {
       "document_id": null,
@@ -6254,7 +6317,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 484
+      "views": 487
     },
     {
       "document_id": null,
@@ -6266,7 +6329,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 235
+      "views": 236
     },
     {
       "document_id": null,
@@ -6314,7 +6377,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 318
+      "views": 319
     },
     {
       "document_id": null,
@@ -6326,7 +6389,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 291
+      "views": 292
     },
     {
       "document_id": null,
@@ -6338,7 +6401,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 228
+      "views": 229
     },
     {
       "document_id": null,
@@ -6386,7 +6449,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 441
+      "views": 444
     },
     {
       "document_id": null,
@@ -6410,7 +6473,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 169
+      "views": 170
     },
     {
       "document_id": null,
@@ -6470,7 +6533,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 212
+      "views": 213
     },
     {
       "document_id": null,
@@ -6482,7 +6545,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 465
+      "views": 467
     },
     {
       "document_id": null,
@@ -6506,7 +6569,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 816
+      "views": 820
     },
     {
       "document_id": null,
@@ -6518,7 +6581,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 800
+      "views": 802
     },
     {
       "document_id": null,
@@ -6554,7 +6617,7 @@
       "thread_id": 93,
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 68
+      "views": 69
     },
     {
       "document_id": null,
@@ -6590,7 +6653,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 259
+      "views": 262
     },
     {
       "document_id": null,
@@ -6638,7 +6701,7 @@
       "thread_id": 104,
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 172
+      "views": 173
     },
     {
       "document_id": null,
@@ -6650,7 +6713,7 @@
       "thread_id": 105,
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 118
+      "views": 119
     },
     {
       "document_id": null,
@@ -6698,7 +6761,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 281
+      "views": 282
     },
     {
       "document_id": null,
@@ -6782,7 +6845,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 182
+      "views": 184
     },
     {
       "document_id": null,
@@ -6806,7 +6869,7 @@
       "thread_id": 162,
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 116
+      "views": 118
     },
     {
       "document_id": null,
@@ -6854,7 +6917,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 228
+      "views": 230
     },
     {
       "document_id": null,
@@ -6866,7 +6929,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 138
+      "views": 139
     },
     {
       "document_id": null,
@@ -6950,7 +7013,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 148
+      "views": 152
     },
     {
       "document_id": null,
@@ -6962,7 +7025,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 222
+      "views": 223
     },
     {
       "document_id": null,
@@ -6974,7 +7037,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 420
+      "views": 424
     },
     {
       "document_id": null,
@@ -7046,7 +7109,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 141
+      "views": 142
     },
     {
       "document_id": null,
@@ -7058,7 +7121,7 @@
       "thread_id": 220,
       "topic_field": "Hetionet,Neo4j,Cypher,Network Biology",
       "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220",
-      "views": 95
+      "views": 96
     },
     {
       "document_id": null,
@@ -7070,7 +7133,7 @@
       "thread_id": 224,
       "topic_field": "epilepsy,Hetionet",
       "url": "/discussion/prediction-in-epilepsy/224",
-      "views": 27
+      "views": 28
     }
   ]
 }
