@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-10-20T21:03:06.011163Z",
+  "retrieved": "2016-10-21T21:03:31.934859Z",
   "threads": [
     {
       "document_id": null,
@@ -505,7 +505,7 @@
       "thread_id": 119,
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 105
+      "views": 108
     },
     {
       "document_id": null,
@@ -529,7 +529,7 @@
       "thread_id": 121,
       "topic_field": "",
       "url": "/discussion/how-about-examples-of-the-awesome-science-that-pathway-modeling-enables/121",
-      "views": 44
+      "views": 45
     },
     {
       "document_id": null,
