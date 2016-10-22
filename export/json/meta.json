@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-10-21T21:03:31.302810Z",
+  "retrieved": "2016-10-22T21:03:36.674759Z",
   "threads": [
     {
       "document_id": null,
@@ -2952,7 +2952,7 @@
       "thread_id": 190,
       "topic_field": "Thinklab,printing,typesetting",
       "url": "/discussion/hyperlinks-inserted-when-printing-thinklab-pages/190",
-      "views": 29
+      "views": 31
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 123
+      "views": 124
     },
     {
       "document_id": null,
@@ -3000,7 +3000,7 @@
       "thread_id": 196,
       "topic_field": "",
       "url": "/discussion/automatically-insert-images/196",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
@@ -3048,7 +3048,7 @@
       "thread_id": 207,
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 42
+      "views": 43
     },
     {
       "document_id": null,
@@ -3060,7 +3060,7 @@
       "thread_id": 209,
       "topic_field": "",
       "url": "/discussion/share-single-posts/209",
-      "views": 25
+      "views": 26
     }
   ]
 }

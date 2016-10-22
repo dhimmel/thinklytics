@@ -6182,7 +6182,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-10-21T21:03:36.154604Z",
+  "retrieved": "2016-10-22T21:03:41.390351Z",
   "threads": [
     {
       "document_id": null,
@@ -6194,7 +6194,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 573
+      "views": 575
     },
     {
       "document_id": null,
@@ -6206,7 +6206,7 @@
       "thread_id": 22,
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 146
+      "views": 147
     },
     {
       "document_id": null,
@@ -6278,7 +6278,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 271
+      "views": 274
     },
     {
       "document_id": null,
@@ -6290,7 +6290,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 301
+      "views": 302
     },
     {
       "document_id": null,
@@ -6302,7 +6302,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 147
+      "views": 149
     },
     {
       "document_id": null,
@@ -6326,7 +6326,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 490
+      "views": 492
     },
     {
       "document_id": null,
@@ -6386,7 +6386,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 322
+      "views": 324
     },
     {
       "document_id": null,
@@ -6398,7 +6398,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 292
+      "views": 293
     },
     {
       "document_id": null,
@@ -6410,7 +6410,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 231
+      "views": 232
     },
     {
       "document_id": null,
@@ -6434,7 +6434,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 426
+      "views": 428
     },
     {
       "document_id": null,
@@ -6458,7 +6458,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 451
+      "views": 453
     },
     {
       "document_id": null,
@@ -6482,7 +6482,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 171
+      "views": 173
     },
     {
       "document_id": null,
@@ -6518,7 +6518,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 422
+      "views": 424
     },
     {
       "document_id": null,
@@ -6554,7 +6554,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 469
+      "views": 471
     },
     {
       "document_id": null,
@@ -6566,7 +6566,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 409
+      "views": 411
     },
     {
       "document_id": null,
@@ -6578,7 +6578,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 822
+      "views": 824
     },
     {
       "document_id": null,
@@ -6590,7 +6590,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 807
+      "views": 808
     },
     {
       "document_id": null,
@@ -6662,7 +6662,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 264
+      "views": 265
     },
     {
       "document_id": null,
@@ -6674,7 +6674,7 @@
       "thread_id": 97,
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 137
+      "views": 139
     },
     {
       "document_id": null,
@@ -6746,7 +6746,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 399
+      "views": 400
     },
     {
       "document_id": null,
@@ -6770,7 +6770,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 283
+      "views": 285
     },
     {
       "document_id": null,
@@ -6794,7 +6794,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 415
+      "views": 416
     },
     {
       "document_id": null,
@@ -6854,7 +6854,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 186
+      "views": 188
     },
     {
       "document_id": null,
@@ -6890,7 +6890,7 @@
       "thread_id": 171,
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 184
+      "views": 185
     },
     {
       "document_id": null,
@@ -6938,7 +6938,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 141
+      "views": 142
     },
     {
       "document_id": null,
@@ -6998,7 +6998,7 @@
       "thread_id": 200,
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 44
+      "views": 46
     },
     {
       "document_id": null,
@@ -7022,7 +7022,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 159
+      "views": 161
     },
     {
       "document_id": null,
@@ -7046,7 +7046,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 430
+      "views": 432
     },
     {
       "document_id": null,
@@ -7070,7 +7070,7 @@
       "thread_id": 212,
       "topic_field": "clinical trials,ClinicalTrials.gov",
       "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212",
-      "views": 66
+      "views": 67
     },
     {
       "document_id": null,
@@ -7082,7 +7082,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 414
+      "views": 416
     },
     {
       "document_id": null,
@@ -7094,7 +7094,7 @@
       "thread_id": 214,
       "topic_field": "DWPC,HNEP,Residual DWPC,R-DWPC,permutation,hetnet,algorithms",
       "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214",
-      "views": 45
+      "views": 47
     },
     {
       "document_id": null,
@@ -7118,7 +7118,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 143
+      "views": 145
     },
     {
       "document_id": null,
