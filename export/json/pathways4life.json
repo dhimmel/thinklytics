@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-10-23T21:02:49.440244Z",
+  "retrieved": "2016-10-24T21:03:33.896296Z",
   "threads": [
     {
       "document_id": null,
@@ -469,7 +469,7 @@
       "thread_id": 76,
       "topic_field": "Duplicates,Pathways,Curation",
       "url": "/discussion/duplicate-pathway-detection-and-resolution/76",
-      "views": 33
+      "views": 34
     },
     {
       "document_id": null,
@@ -505,7 +505,7 @@
       "thread_id": 119,
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 108
+      "views": 109
     },
     {
       "document_id": null,
