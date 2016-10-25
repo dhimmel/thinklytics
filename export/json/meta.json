@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-10-24T21:03:33.256725Z",
+  "retrieved": "2016-10-25T21:03:41.701021Z",
   "threads": [
     {
       "document_id": null,
@@ -2604,7 +2604,7 @@
       "thread_id": 32,
       "topic_field": "Markdown,TLFM",
       "url": "/discussion/markdown-feedback-bugs-and-suggestions/32",
-      "views": 98
+      "views": 100
     },
     {
       "document_id": null,
@@ -2892,7 +2892,7 @@
       "thread_id": 144,
       "topic_field": "Review Process",
       "url": "/discussion/whole-proposal-reviewer-synopsis-fund-or-no-fund/144",
-      "views": 53
+      "views": 54
     },
     {
       "document_id": null,
@@ -2916,7 +2916,7 @@
       "thread_id": 167,
       "topic_field": "Hypothesis,hypothes.is,typos,annotations",
       "url": "/discussion/hypothesis-for-alerting-authors-of-writing-errors-in-discussion-posts/167",
-      "views": 44
+      "views": 45
     },
     {
       "document_id": null,
@@ -2952,7 +2952,7 @@
       "thread_id": 190,
       "topic_field": "Thinklab,printing,typesetting",
       "url": "/discussion/hyperlinks-inserted-when-printing-thinklab-pages/190",
-      "views": 31
+      "views": 32
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 124
+      "views": 125
     },
     {
       "document_id": null,
@@ -2976,7 +2976,7 @@
       "thread_id": 192,
       "topic_field": "titles,disambiguation",
       "url": "/discussion/disambiguating-proposal-project-and-report-titles/192",
-      "views": 41
+      "views": 42
     },
     {
       "document_id": null,
@@ -3036,7 +3036,7 @@
       "thread_id": 206,
       "topic_field": "open science,platforms",
       "url": "/discussion/open-realtime-science-platforms/206",
-      "views": 61
+      "views": 62
     },
     {
       "document_id": null,
