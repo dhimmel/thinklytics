@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-10-29T21:04:00.674059Z",
+  "retrieved": "2016-10-30T21:03:06.008902Z",
   "threads": [
     {
       "document_id": null,
@@ -2580,7 +2580,7 @@
       "thread_id": 27,
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 104
+      "views": 106
     },
     {
       "document_id": null,
@@ -2700,7 +2700,7 @@
       "thread_id": 58,
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 198
+      "views": 199
     },
     {
       "document_id": null,
@@ -2868,7 +2868,7 @@
       "thread_id": 138,
       "topic_field": "",
       "url": "/discussion/a-pdf-upload-option-for-proposal-creation/138",
-      "views": 42
+      "views": 43
     },
     {
       "document_id": null,
