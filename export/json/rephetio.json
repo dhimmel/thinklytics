@@ -4391,6 +4391,15 @@
       "published": "2016-10-18T12:20:45.079385Z",
       "thread_id": 202,
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202#9"
+    },
+    {
+      "body_html": "<h1>Updated contribution stats &amp; visualization</h1>\r\n\r\n<p>I updated <a href=\"/u/alizee\" class=\"username\">@alizee</a>'s <a href=\"#2\">contribution plot</a> with contribution data up to 2016-10-18:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/thinklytics/raw/d0be2252f7c21da2489e97f5105a9c6c8bf15100/viz/rephetio-contribution.png\" alt=\"rephetio contribution\" title=\"The growth the Project Rephetio corpus on Thinklab over time\"></p>\r\n\r\n<p>The figure caption from our forthcoming project report is:</p>\r\n\r\n<blockquote><p>This figure shows Project Rephetio contributions by user over time. Each band represented the cumulative contribution of a Thinklab user to discussions in the Rephetio project. Users are ordered by date of first contribution. Users who contributed over 4,000 characters are named. The square root transformation of characters written per user accentuates the activity of new contributors, thereby emphasizing collaboration and diverse input.</p></blockquote>\r\n\r\n<p>The <a href=\"https://github.com/dhimmel/thinklytics/blob/d0be2252f7c21da2489e97f5105a9c6c8bf15100/viz/rephetio-rviz.ipynb\">notebook that creates the visualization</a> also contains project contribution stats across all Rephetio discussions, which at time of writing total:</p>\r\n\r\n<ul><li>80 discussions</li><li>488 comments</li><li>161 notes</li><li>44 contributors, 36 of which were from the community (non-team members)</li><li>680,121 characters</li><li>108,699 words (equivalent in volume to ~15.53 journal publications, based on <a href=\"http://academia.stackexchange.com/q/35133\" title=\"Academia StackExchange: How many words is a typical scientific publication (particularly in biology)?\">an estimate</a> of 7,000 words per publication)</li></ul>\r\n\r\n<p>If in addition to discussions, <a href=\"https://github.com/dhimmel/thinklytics/blob/d0be2252f7c21da2489e97f5105a9c6c8bf15100/process/table/summaries.tsv#L10\">the stats</a> include project documents — which at the moment only includes the proposal <span class=\"citation\">[<a href=\"/p/rephetio/proposal\" class=\"citation\" data-key=\"10.15363/thinklab.a5\">1</a>]</span>, but will include the report once published — the summary is:</p>\r\n\r\n<ul><li>445 total cited DOIs</li><li>698,830 total characters</li><li>111,425 total words (equivalent in volume to ~15.92 journal publications)</li></ul>",
+      "body_md": "# Updated contribution stats & visualization\r\n\r\nI updated @alizee's [contribution plot](#2) with contribution data up to 2016-10-18:\r\n\r\n![rephetio contribution](https://github.com/dhimmel/thinklytics/raw/d0be2252f7c21da2489e97f5105a9c6c8bf15100/viz/rephetio-contribution.png \"The growth the Project Rephetio corpus on Thinklab over time\")\r\n\r\nThe figure caption from our forthcoming project report is:\r\n\r\n> This figure shows Project Rephetio contributions by user over time. Each band represented the cumulative contribution of a Thinklab user to discussions in the Rephetio project. Users are ordered by date of first contribution. Users who contributed over 4,000 characters are named. The square root transformation of characters written per user accentuates the activity of new contributors, thereby emphasizing collaboration and diverse input.\r\n\r\nThe [notebook that creates the visualization](https://github.com/dhimmel/thinklytics/blob/d0be2252f7c21da2489e97f5105a9c6c8bf15100/viz/rephetio-rviz.ipynb) also contains project contribution stats across all Rephetio discussions, which at time of writing total:\r\n\r\n+ 80 discussions\r\n+ 488 comments\r\n+ 161 notes\r\n+ 44 contributors, 36 of which were from the community (non-team members)\r\n+ 680,121 characters\r\n+ 108,699 words (equivalent in volume to ~15.53 journal publications, based on [an estimate](http://academia.stackexchange.com/q/35133 \"Academia StackExchange: How many words is a typical scientific publication (particularly in biology)?\") of 7,000 words per publication)\r\n\r\nIf in addition to discussions, [the stats](https://github.com/dhimmel/thinklytics/blob/d0be2252f7c21da2489e97f5105a9c6c8bf15100/process/table/summaries.tsv#L10) include project documents -- which at the moment only includes the proposal [@10.15363/thinklab.a5], but will include the report once published -- the summary is:\r\n\r\n+ 445 total cited DOIs\r\n+ 698,830 total characters\r\n+ 111,425 total words (equivalent in volume to ~15.92 journal publications)",
+      "comment_id": 1372,
+      "profile_id": 17,
+      "published": "2016-10-31T20:47:53.133611Z",
+      "thread_id": 200,
+      "url": "/discussion/measuring-user-contribution-and-content-creation/200#4"
     }
   ],
   "documents": [
@@ -6182,7 +6191,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-10-30T21:03:11.653512Z",
+  "retrieved": "2016-10-31T21:03:11.624486Z",
   "threads": [
     {
       "document_id": null,
@@ -6218,7 +6227,7 @@
       "thread_id": 23,
       "topic_field": "Reproducibility",
       "url": "/discussion/enabling-reproducibility-and-reuse/23",
-      "views": 122
+      "views": 123
     },
     {
       "document_id": null,
@@ -6254,7 +6263,7 @@
       "thread_id": 31,
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 86
+      "views": 87
     },
     {
       "document_id": null,
@@ -6290,7 +6299,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 306
+      "views": 310
     },
     {
       "document_id": null,
@@ -6326,7 +6335,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 498
+      "views": 499
     },
     {
       "document_id": null,
@@ -6338,7 +6347,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 242
+      "views": 243
     },
     {
       "document_id": null,
@@ -6434,7 +6443,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 435
+      "views": 436
     },
     {
       "document_id": null,
@@ -6458,7 +6467,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 471
+      "views": 473
     },
     {
       "document_id": null,
@@ -6470,7 +6479,7 @@
       "thread_id": 66,
       "topic_field": "",
       "url": "/discussion/kabob-knowledgebase/66",
-      "views": 103
+      "views": 104
     },
     {
       "document_id": null,
@@ -6506,7 +6515,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 133
+      "views": 134
     },
     {
       "document_id": null,
@@ -6518,7 +6527,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 428
+      "views": 429
     },
     {
       "document_id": null,
@@ -6578,7 +6587,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 839
+      "views": 841
     },
     {
       "document_id": null,
@@ -6602,7 +6611,7 @@
       "thread_id": 85,
       "topic_field": "Protein Interactions,Interactions,PPI",
       "url": "/discussion/creating-a-catalog-of-protein-interactions/85",
-      "views": 157
+      "views": 158
     },
     {
       "document_id": null,
@@ -6614,7 +6623,7 @@
       "thread_id": 91,
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 106
+      "views": 107
     },
     {
       "document_id": null,
@@ -6626,7 +6635,7 @@
       "thread_id": 93,
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 71
+      "views": 72
     },
     {
       "document_id": null,
@@ -6650,7 +6659,7 @@
       "thread_id": 95,
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 233
+      "views": 234
     },
     {
       "document_id": null,
@@ -6710,7 +6719,7 @@
       "thread_id": 104,
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 174
+      "views": 175
     },
     {
       "document_id": null,
@@ -6722,7 +6731,7 @@
       "thread_id": 105,
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 122
+      "views": 123
     },
     {
       "document_id": null,
@@ -6746,7 +6755,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 406
+      "views": 408
     },
     {
       "document_id": null,
@@ -6782,7 +6791,7 @@
       "thread_id": 111,
       "topic_field": "Incomplete Interactome,Permission,Licensing,Copyright Transfer,Supplement,AAAS",
       "url": "/discussion/incomplete-interactome-licensing/111",
-      "views": 102
+      "views": 105
     },
     {
       "document_id": null,
@@ -6794,7 +6803,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 422
+      "views": 423
     },
     {
       "document_id": null,
@@ -6830,7 +6839,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 105
+      "views": 106
     },
     {
       "document_id": null,
@@ -6866,7 +6875,7 @@
       "thread_id": 136,
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 83
+      "views": 84
     },
     {
       "document_id": null,
@@ -7046,7 +7055,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 460
+      "views": 464
     },
     {
       "document_id": null,
@@ -7070,7 +7079,7 @@
       "thread_id": 212,
       "topic_field": "clinical trials,ClinicalTrials.gov",
       "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212",
-      "views": 69
+      "views": 70
     },
     {
       "document_id": null,
