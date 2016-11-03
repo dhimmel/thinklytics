@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-11-02T21:03:50.186895Z",
+  "retrieved": "2016-11-03T21:04:12.303755Z",
   "threads": [
     {
       "document_id": null,
@@ -2556,7 +2556,7 @@
       "thread_id": 2,
       "topic_field": "",
       "url": "/discussion/add-your-thinklab-feedback-here-in-meta/2",
-      "views": 51
+      "views": 52
     },
     {
       "document_id": null,
@@ -2640,7 +2640,7 @@
       "thread_id": 45,
       "topic_field": "Citation",
       "url": "/discussion/new-features-for-tracking-thinklab-citations/45",
-      "views": 41
+      "views": 43
     },
     {
       "document_id": null,
@@ -2688,7 +2688,7 @@
       "thread_id": 56,
       "topic_field": "",
       "url": "/discussion/your-comments-in-thinklab-meta-are-now-payment-eligible/56",
-      "views": 41
+      "views": 42
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 128
+      "views": 129
     },
     {
       "document_id": null,
