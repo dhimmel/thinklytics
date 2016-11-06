@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-11-05T21:03:47.324433Z",
+  "retrieved": "2016-11-06T21:03:14.374485Z",
   "threads": [
     {
       "document_id": null,
@@ -469,7 +469,7 @@
       "thread_id": 76,
       "topic_field": "Duplicates,Pathways,Curation",
       "url": "/discussion/duplicate-pathway-detection-and-resolution/76",
-      "views": 34
+      "views": 35
     },
     {
       "document_id": null,

@@ -6200,7 +6200,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-11-05T21:03:51.387658Z",
+  "retrieved": "2016-11-06T21:03:18.573766Z",
   "threads": [
     {
       "document_id": null,
@@ -6284,7 +6284,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 182
+      "views": 183
     },
     {
       "document_id": null,
@@ -6356,7 +6356,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 246
+      "views": 247
     },
     {
       "document_id": null,
@@ -6404,7 +6404,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 330
+      "views": 331
     },
     {
       "document_id": null,
@@ -6416,7 +6416,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 296
+      "views": 297
     },
     {
       "document_id": null,
@@ -6452,7 +6452,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 442
+      "views": 443
     },
     {
       "document_id": null,
@@ -6476,7 +6476,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 481
+      "views": 483
     },
     {
       "document_id": null,
@@ -6500,7 +6500,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 177
+      "views": 178
     },
     {
       "document_id": null,
@@ -6596,7 +6596,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 852
+      "views": 853
     },
     {
       "document_id": null,
@@ -7064,7 +7064,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 481
+      "views": 484
     },
     {
       "document_id": null,
