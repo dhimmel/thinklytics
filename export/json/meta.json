@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-11-08T21:03:35.462322Z",
+  "retrieved": "2016-11-09T21:03:47.256697Z",
   "threads": [
     {
       "document_id": null,
@@ -2640,7 +2640,7 @@
       "thread_id": 45,
       "topic_field": "Citation",
       "url": "/discussion/new-features-for-tracking-thinklab-citations/45",
-      "views": 43
+      "views": 44
     },
     {
       "document_id": null,
@@ -3012,7 +3012,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 42
+      "views": 43
     },
     {
       "document_id": null,
