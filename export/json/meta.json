@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-11-10T21:03:58.997992Z",
+  "retrieved": "2016-11-11T21:03:57.032687Z",
   "threads": [
     {
       "document_id": null,
@@ -2724,7 +2724,7 @@
       "thread_id": 60,
       "topic_field": "Comments",
       "url": "/discussion/comments-notes-interface-and-behaviour-suggestions/60",
-      "views": 62
+      "views": 63
     },
     {
       "document_id": null,
@@ -2808,7 +2808,7 @@
       "thread_id": 98,
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 70
+      "views": 71
     },
     {
       "document_id": null,
