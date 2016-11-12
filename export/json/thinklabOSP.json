@@ -1664,7 +1664,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2016-11-11T21:04:49.261933Z",
+  "retrieved": "2016-11-12T21:05:12.228032Z",
   "threads": [
     {
       "document_id": 12,
@@ -1676,7 +1676,7 @@
       "thread_id": 158,
       "topic_field": "Open science,Peer review,Science Funding,Grant Writing,Grantmaking,Open Notebook Science",
       "url": "/doc/12/review",
-      "views": 84
+      "views": 85
     },
     {
       "document_id": null,
