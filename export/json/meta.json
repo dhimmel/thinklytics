@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-11-14T21:07:50.599399Z",
+  "retrieved": "2016-11-15T21:03:35.432404Z",
   "threads": [
     {
       "document_id": null,
@@ -2580,7 +2580,7 @@
       "thread_id": 27,
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 107
+      "views": 108
     },
     {
       "document_id": null,
@@ -2808,7 +2808,7 @@
       "thread_id": 98,
       "topic_field": "Impact points,Motivation,Leaderboard",
       "url": "/discussion/impact-points-and-leaderboard-demotivating/98",
-      "views": 71
+      "views": 72
     },
     {
       "document_id": null,
@@ -2868,7 +2868,7 @@
       "thread_id": 138,
       "topic_field": "",
       "url": "/discussion/a-pdf-upload-option-for-proposal-creation/138",
-      "views": 43
+      "views": 44
     },
     {
       "document_id": null,
@@ -3036,7 +3036,7 @@
       "thread_id": 206,
       "topic_field": "open science,platforms",
       "url": "/discussion/open-realtime-science-platforms/206",
-      "views": 62
+      "views": 63
     },
     {
       "document_id": null,
