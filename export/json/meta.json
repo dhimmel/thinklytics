@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-11-15T21:03:35.432404Z",
+  "retrieved": "2016-11-16T21:08:18.155806Z",
   "threads": [
     {
       "document_id": null,
@@ -2676,7 +2676,7 @@
       "thread_id": 55,
       "topic_field": "RSS Feed,Project Tracking",
       "url": "/discussion/rss-feed-per-project-option/55",
-      "views": 39
+      "views": 40
     },
     {
       "document_id": null,
@@ -2748,7 +2748,7 @@
       "thread_id": 64,
       "topic_field": "",
       "url": "/discussion/should-we-aim-to-keep-discussions-narrowly-focused/64",
-      "views": 67
+      "views": 70
     },
     {
       "document_id": null,
@@ -2880,7 +2880,7 @@
       "thread_id": 139,
       "topic_field": "",
       "url": "/discussion/latex-integration/139",
-      "views": 63
+      "views": 64
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 129
+      "views": 131
     },
     {
       "document_id": null,

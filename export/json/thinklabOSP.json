@@ -1664,7 +1664,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2016-11-15T21:03:42.143646Z",
+  "retrieved": "2016-11-16T21:08:25.669962Z",
   "threads": [
     {
       "document_id": 12,
@@ -1712,7 +1712,7 @@
       "thread_id": 164,
       "topic_field": "",
       "url": "/discussion/review-summary/164",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
@@ -1724,7 +1724,7 @@
       "thread_id": 165,
       "topic_field": "Indexing,Altmetrics,Integration",
       "url": "/discussion/using-the-prize-money-for-integrating-with-the-larger-internet-movement-in-science/165",
-      "views": 26
+      "views": 27
     },
     {
       "document_id": 12,
@@ -1760,7 +1760,7 @@
       "thread_id": 170,
       "topic_field": "Open science,Incentives",
       "url": "/discussion/has-our-scientific-system-been-optimized-by-an-evolutionary-process/170",
-      "views": 40
+      "views": 41
     },
     {
       "document_id": 12,

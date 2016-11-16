@@ -148,7 +148,7 @@
       "username": "kristinahettne"
     }
   ],
-  "retrieved": "2016-11-15T21:03:31.751016Z",
+  "retrieved": "2016-11-16T21:08:14.393051Z",
   "threads": [
     {
       "document_id": null,
@@ -160,7 +160,7 @@
       "thread_id": 172,
       "topic_field": "semantic web,linked data,question answering,workflows",
       "url": "/discussion/dynamic-sub-graph-assembly-versus-data-warehousing/172",
-      "views": 41
+      "views": 42
     },
     {
       "document_id": 14,
