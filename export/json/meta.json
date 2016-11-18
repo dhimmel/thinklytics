@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-11-17T21:03:17.709246Z",
+  "retrieved": "2016-11-18T21:04:21.725342Z",
   "threads": [
     {
       "document_id": null,
@@ -2748,7 +2748,7 @@
       "thread_id": 64,
       "topic_field": "",
       "url": "/discussion/should-we-aim-to-keep-discussions-narrowly-focused/64",
-      "views": 70
+      "views": 71
     },
     {
       "document_id": null,
@@ -2892,7 +2892,7 @@
       "thread_id": 144,
       "topic_field": "Review Process",
       "url": "/discussion/whole-proposal-reviewer-synopsis-fund-or-no-fund/144",
-      "views": 55
+      "views": 56
     },
     {
       "document_id": null,
@@ -2928,7 +2928,7 @@
       "thread_id": 188,
       "topic_field": "popover,citation,user experience,Thinklab",
       "url": "/discussion/streamlining-access-to-the-common-interactions-with-citations/188",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
@@ -3048,7 +3048,7 @@
       "thread_id": 207,
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 46
+      "views": 47
     },
     {
       "document_id": null,
