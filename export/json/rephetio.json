@@ -4454,6 +4454,33 @@
       "published": "2016-11-19T15:16:40.378617Z",
       "thread_id": 113,
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113#13"
+    },
+    {
+      "body_html": "<p>Last Friday, in an <a href=\"http://greenelab-onboarding.readthedocs.io/en/latest/communication.html#meetings\" title=\"Greene Lab Onboarding: Meetings\">applied imagination</a> meeting for the <a href=\"/u/caseygreene\" class=\"username\">@caseygreene</a> lab, we brainstormed future directions for Hetionet. The timing worked out well as we had just released our <a href=\"https://thinklab.com/p/rephetio/report\">initial report</a> <span class=\"citation\">[<a href=\"/p/rephetio/report\" class=\"citation\" data-key=\"10.15363/thinklab.a7\">1</a>, <a href=\"/doi/10.1101/087619\" class=\"citation\" data-key=\"10.1101/087619\">2</a>]</span>.</p>\r\n\r\n<p><strong>The following modifications to Hetionet were brought up:</strong></p>\r\n\r\n<ul><li>Adding biologic drugs, e.g. antibodies, since Hetionet v1.0 <a href=\"https://thinklab.com/discussion/unifying-drug-vocabularies/40#5\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d40\">only includes</a> approved small molecules. In previous private communications, <a href=\"/u/sergiobaranzini\" class=\"username\">@sergiobaranzini</a> has also strongly supported adding biologics as well as a more comprehensive set of small molecules.</li><li>Adding metabolites since the efficacy of many small molecules results from metabolites.</li><li>Updating Hetionet continuously in an automated fashion. Versioning could enable updates, using a scheme similar to API versioning. For example, we could use versioned URLs for our Neo4j Browser, such as <code>v1.het.io</code>.</li><li>Adding microbiome information, such as microbial communities and drug-microbe interactions.</li><li>Create the network by <a href=\"https://github.com/HazyResearch/snorkel\">snorkeling</a> the literature. Hetionet v1.0 could be used as the \"ground truth\" to extract labeling functions. We alluded to data programming techniques in the report, writing \"Going forward, advances in automated mining of the scientific literature could enable extraction of precise relationship types at omics scale <span class=\"citation\">[<a href=\"/doi/10.1145/2939502.2939515\" class=\"citation\" data-key=\"10.1145/2939502.2939515\">3</a>]</span>.\"</li><li>Adding SNPs, potentially using <a href=\"http://exac.broadinstitute.org/\">ExAC</a> <span class=\"citation\">[<a href=\"/doi/10.1038/nature19057\" class=\"citation\" data-key=\"10.1038/nature19057\">4</a>]</span> for allele frequencies.</li><li>Adding a discovery date property to relationships. Year of earliest publication could provide a proxy for some relationship types with source publication metadata. This could allow us to see if we can predict future knowledge from past knowledge and help address <a href=\"https://thinklab.com/discussion/text-as-a-resource-for-network-population/48#2\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d48\">knowledge biases</a>.</li><li>Incorporating universal edge weights representing confidence in a relationship. In the past, <a href=\"/u/larsjuhljensen\" class=\"username\">@larsjuhljensen</a> has also <a href=\"https://thinklab.com/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91#3\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d91\">strongly advocated</a> against our binarization of uncertain relationships.</li><li>Supporting the addition of user-supplied relationships</li><li>Adopting more ontologies. Perform propagation during query-time. See <a href=\"https://github.com/greenelab/hetontology\">Hetontology</a> which aims to host all openly-licensed OBOFoundry ontologies in a public Neo4j instance.</li></ul>\r\n\r\n<p><strong>The following modifications to Project Rephetio were brought up:</strong></p>\r\n\r\n<ul><li>Quantifying the significance of a predication. Showing enrichment over null rather than probability of treatment to provide more context.</li><li>Algorithms that account for relationship weight/confidence when measuring path prevalence for a given metapath between two nodes.</li><li>Focusing on drugs and diseases as perturbations to biological systems/pathways.</li><li>Better capturing tissue specific effects. Accounting for which tissues/anatomies drug efficacy occurs in for a specific compound and disease. How do drugs work in a specific tissue?</li><li>Queries that leverage metapatterns, rather than just metapaths. Metapatterns encompass queries that search for more than just a simple path. Metapatterns could help create tissue-specific aware features and drill down on the mechanisms of drug efficacy. Currently, we identify when a drug will work, but not necessarily why a drug will work (mechanisms).</li></ul>\r\n\r\n<p><strong>The following new applications of Hetionet were discussed:</strong></p>\r\n\r\n<ul><li>Predicting drug-drug interactions.</li><li>Allowing users to provide their own gene sets. Enabling some sort of gene set enrichment queries. For example, what drugs interact with a given gene set?</li><li>When multiple drugs are available for a disease, what are the differences and which drug should be used for a given patient?</li><li>Clustering nodes, such as extracting gene modules.</li></ul>\r\n\r\n<p>Thanks to everyone who participated: <a href=\"/u/caseygreene\" class=\"username\">@caseygreene</a>, Jaclyn Taroni, Jie Tan 💻, <a href=\"/u/gregway\" class=\"username\">@gregway</a>, Brett Beaulieu-Jones, René Zelaya, Matt Huyck 💻, Dongbo Hu, Amy Campbell, Kathy Chen, Timothy Chang, Linda Zhou, and Stephen Woloszynek (💻 denotes virtual participation). There're clearly more ideas than time, which is why these discussions are important — so we pursue only the best!</p>",
+      "body_md": "Last Friday, in an [applied imagination](http://greenelab-onboarding.readthedocs.io/en/latest/communication.html#meetings \"Greene Lab Onboarding: Meetings\") meeting for the @caseygreene lab, we brainstormed future directions for Hetionet. The timing worked out well as we had just released our [initial report](https://thinklab.com/p/rephetio/report) [@10.15363/thinklab.a7 @10.1101/087619].\r\n\r\n**The following modifications to Hetionet were brought up:**\r\n\r\n+ Adding biologic drugs, e.g. antibodies, since Hetionet v1.0 [only includes](https://thinklab.com/discussion/unifying-drug-vocabularies/40#5) approved small molecules. In previous private communications, @sergiobaranzini has also strongly supported adding biologics as well as a more comprehensive set of small molecules.\r\n+ Adding metabolites since the efficacy of many small molecules results from metabolites.\r\n+ Updating Hetionet continuously in an automated fashion. Versioning could enable updates, using a scheme similar to API versioning. For example, we could use versioned URLs for our Neo4j Browser, such as `v1.het.io`.\r\n+ Adding microbiome information, such as microbial communities and drug-microbe interactions.\r\n+ Create the network by [snorkeling](https://github.com/HazyResearch/snorkel) the literature. Hetionet v1.0 could be used as the \"ground truth\" to extract labeling functions. We alluded to data programming techniques in the report, writing \"Going forward, advances in automated mining of the scientific literature could enable extraction of precise relationship types at omics scale [@10.1145/2939502.2939515].\"\r\n+ Adding SNPs, potentially using [ExAC](http://exac.broadinstitute.org/) [@10.1038/nature19057] for allele frequencies.\r\n+ Adding a discovery date property to relationships. Year of earliest publication could provide a proxy for some relationship types with source publication metadata. This could allow us to see if we can predict future knowledge from past knowledge and help address [knowledge biases](https://thinklab.com/discussion/text-as-a-resource-for-network-population/48#2).\r\n+ Incorporating universal edge weights representing confidence in a relationship. In the past, @larsjuhljensen has also [strongly advocated](https://thinklab.com/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91#3) against our binarization of uncertain relationships.\r\n+ Supporting the addition of user-supplied relationships\r\n+ Adopting more ontologies. Perform propagation during query-time. See [Hetontology](https://github.com/greenelab/hetontology) which aims to host all openly-licensed OBOFoundry ontologies in a public Neo4j instance.\r\n\r\n**The following modifications to Project Rephetio were brought up:**\r\n\r\n+ Quantifying the significance of a predication. Showing enrichment over null rather than probability of treatment to provide more context.\r\n+ Algorithms that account for relationship weight/confidence when measuring path prevalence for a given metapath between two nodes.\r\n+ Focusing on drugs and diseases as perturbations to biological systems/pathways.\r\n+ Better capturing tissue specific effects. Accounting for which tissues/anatomies drug efficacy occurs in for a specific compound and disease. How do drugs work in a specific tissue?\r\n+ Queries that leverage metapatterns, rather than just metapaths. Metapatterns encompass queries that search for more than just a simple path. Metapatterns could help create tissue-specific aware features and drill down on the mechanisms of drug efficacy. Currently, we identify when a drug will work, but not necessarily why a drug will work (mechanisms).\r\n\r\n**The following new applications of Hetionet were discussed:**\r\n\r\n+ Predicting drug-drug interactions.\r\n+ Allowing users to provide their own gene sets. Enabling some sort of gene set enrichment queries. For example, what drugs interact with a given gene set?\r\n+ When multiple drugs are available for a disease, what are the differences and which drug should be used for a given patient?\r\n+ Clustering nodes, such as extracting gene modules.\r\n\r\nThanks to everyone who participated: @caseygreene, Jaclyn Taroni, Jie Tan 💻, @gregway, Brett Beaulieu-Jones, René Zelaya, Matt Huyck 💻, Dongbo Hu, Amy Campbell, Kathy Chen, Timothy Chang, Linda Zhou, and Stephen Woloszynek (💻 denotes virtual participation). There're clearly more ideas than time, which is why these discussions are important -- so we pursue only the best!",
+      "comment_id": 1380,
+      "profile_id": 17,
+      "published": "2016-11-19T22:35:44.035074Z",
+      "thread_id": 227,
+      "url": "/discussion/brainstorming-future-directions-for-hetionet/227"
+    },
+    {
+      "body_html": "<p>Building on <strong>Adopting more ontologies. Perform propagation during query-time</strong>, here is text I had sitting in a draft:</p>\r\n\r\n<blockquote><p>Currently, we don't include ontological edges. For example, there is no <em>myelination→is_a→axon ensheathment</em> relationship despite its presence in the Gene Ontology. We omitted this information because we didn't have a query framework that accommodated its complexity. However, Neo4j supports <a href=\"https://neo4j.com/docs/developer-manual/3.0/cypher/#_variable_length\">variable-length pattern matching</a>, which will make realtime transitive closure feasible.</p></blockquote>",
+      "body_md": "Building on **Adopting more ontologies. Perform propagation during query-time**, here is text I had sitting in a draft:\r\n\r\n> Currently, we don't include ontological edges. For example, there is no _myelination→is_a→axon ensheathment_ relationship despite its presence in the Gene Ontology. We omitted this information because we didn't have a query framework that accommodated its complexity. However, Neo4j supports [variable-length pattern matching](https://neo4j.com/docs/developer-manual/3.0/cypher/#_variable_length), which will make realtime transitive closure feasible.",
+      "comment_id": 1381,
+      "profile_id": 17,
+      "published": "2016-11-19T23:49:53.908355Z",
+      "thread_id": 227,
+      "url": "/discussion/brainstorming-future-directions-for-hetionet/227#2"
+    },
+    {
+      "body_html": "<h1>Noting MRCOC</h1>\r\n\r\n<p>Head this through a <a href=\"https://twitter.com/bgood/status/800130613076336640\">Tweet</a> by <a href=\"/u/b_good\" class=\"username\">@b_good</a>. It appears that the National Library of Medicine precomputes literature co-occurrences for MeSH terms. See the page <a href=\"https://ii.nlm.nih.gov/MRCOC.shtml\">MEDLINE Co-Occurrences (MRCOC) Files</a>.</p>\r\n\r\n<p>This could replace some or all functionality of <a href=\"https://github.com/dhimmel/medline\"><code>dhimmel/medline</code></a> — however, I haven't actually looked into whether it's a user friendly substitute. Just wanted to take note.</p>",
+      "body_md": "# Noting MRCOC\r\n\r\nHead this through a [Tweet](https://twitter.com/bgood/status/800130613076336640) by @b_good. It appears that the National Library of Medicine precomputes literature co-occurrences for MeSH terms. See the page [MEDLINE Co-Occurrences (MRCOC) Files](https://ii.nlm.nih.gov/MRCOC.shtml).\r\n\r\nThis could replace some or all functionality of [`dhimmel/medline`](https://github.com/dhimmel/medline) -- however, I haven't actually looked into whether it's a user friendly substitute. Just wanted to take note.",
+      "comment_id": 1382,
+      "profile_id": 17,
+      "published": "2016-11-20T16:40:30.508850Z",
+      "thread_id": 67,
+      "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67#7"
     }
   ],
   "documents": [
@@ -4481,7 +4508,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/report",
-      "views": 89
+      "views": 90
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -6258,7 +6285,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-11-19T21:03:35.778901Z",
+  "retrieved": "2016-11-20T21:03:50.467440Z",
   "threads": [
     {
       "document_id": null,
@@ -6270,7 +6297,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 611
+      "views": 613
     },
     {
       "document_id": null,
@@ -6294,7 +6321,7 @@
       "thread_id": 23,
       "topic_field": "Reproducibility",
       "url": "/discussion/enabling-reproducibility-and-reuse/23",
-      "views": 127
+      "views": 128
     },
     {
       "document_id": null,
@@ -6402,7 +6429,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 520
+      "views": 521
     },
     {
       "document_id": null,
@@ -6426,7 +6453,7 @@
       "thread_id": 46,
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 118
+      "views": 119
     },
     {
       "document_id": null,
@@ -6534,7 +6561,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 507
+      "views": 509
     },
     {
       "document_id": null,
@@ -6558,7 +6585,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 180
+      "views": 181
     },
     {
       "document_id": null,
@@ -6630,7 +6657,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 501
+      "views": 502
     },
     {
       "document_id": null,
@@ -6642,7 +6669,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 436
+      "views": 437
     },
     {
       "document_id": null,
@@ -6654,7 +6681,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 872
+      "views": 873
     },
     {
       "document_id": null,
@@ -6666,7 +6693,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 835
+      "views": 837
     },
     {
       "document_id": null,
@@ -6846,7 +6873,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 299
+      "views": 300
     },
     {
       "document_id": null,
@@ -6870,7 +6897,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 432
+      "views": 433
     },
     {
       "document_id": null,
@@ -6930,7 +6957,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 209
+      "views": 210
     },
     {
       "document_id": null,
@@ -7014,7 +7041,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 150
+      "views": 151
     },
     {
       "document_id": null,
@@ -7122,7 +7149,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 525
+      "views": 526
     },
     {
       "document_id": null,
@@ -7231,6 +7258,18 @@
       "topic_field": "",
       "url": "/doc/7/review",
       "views": 1
+    },
+    {
+      "document_id": null,
+      "doi": "10.15363/thinklab.d227",
+      "doi_field": "",
+      "profile_id": 17,
+      "published": "2016-11-19T22:35:43.933077Z",
+      "subject": "Brainstorming future directions for Hetionet",
+      "thread_id": 227,
+      "topic_field": "applied imagination,Hetionet,hetnets,future,planning",
+      "url": "/discussion/brainstorming-future-directions-for-hetionet/227",
+      "views": 8
     }
   ]
 }
