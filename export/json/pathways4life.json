@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-11-21T21:06:44.564299Z",
+  "retrieved": "2016-11-22T21:07:06.131203Z",
   "threads": [
     {
       "document_id": null,
@@ -505,7 +505,7 @@
       "thread_id": 119,
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 117
+      "views": 118
     },
     {
       "document_id": null,
