@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-11-23T21:08:58.140598Z",
+  "retrieved": "2016-11-24T21:07:52.624782Z",
   "threads": [
     {
       "document_id": null,
@@ -2748,7 +2748,7 @@
       "thread_id": 64,
       "topic_field": "",
       "url": "/discussion/should-we-aim-to-keep-discussions-narrowly-focused/64",
-      "views": 71
+      "views": 72
     },
     {
       "document_id": null,
@@ -2796,7 +2796,7 @@
       "thread_id": 86,
       "topic_field": "Metadata,Citation,Citations,DOI,References,CrossRef",
       "url": "/discussion/citation-metadata-refreshing/86",
-      "views": 45
+      "views": 46
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 132
+      "views": 133
     },
     {
       "document_id": null,
