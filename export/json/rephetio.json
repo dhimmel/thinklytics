@@ -4553,6 +4553,60 @@
       "published": "2016-11-28T21:41:43.231266Z",
       "thread_id": 226,
       "url": "/doc/7/review#4"
+    },
+    {
+      "body_html": "<blockquote><p>The idea of automated continuous updating is very cool, but seems like a ton of workhours to maintain long term.</p></blockquote>\r\n\r\n<p><a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a>, if we move to more automated techniques on more standardized inputs, I thinks it's possible to entirely automate updates. One area of interest in my current lab, the <a href=\"http://www.greenelab.com/\">Greene Lab</a>, is automation <span class=\"citation\">[<a href=\"/doi/10.1101/056473\" class=\"citation\" data-key=\"10.1101/056473\">1</a>]</span>. As a simple example, see <a href=\"https://github.com/dhimmel/thinklytics\"><code>dhimmel/thinklytics</code></a> which automatically backs up and analyzes <em>Thinklab</em> content on a daily basis. Obviously, building Hetionet is much more complex, which means automation will be more difficult but also more valuable.</p>\r\n\r\n<blockquote><p>Drug-drug interactions can easily be tested against a \"gold standard\" database. I'm guessing it's relatively cheap (in work hours) for you to re-write the code to create drug-drug matches?</p></blockquote>\r\n\r\n<p>Yeah that wouldn't be too bad. I'd probably rework some of the current analysis pipeline to be more reproducible and automatable. Currently, it's difficult for others to re-execute and extend our computations — see for example, <a href=\"https://github.com/dhimmel/integrate/issues/9\">this issue</a> by <a href=\"/u/tongli\" class=\"username\">@tongli</a>.</p>",
+      "body_md": "> The idea of automated continuous updating is very cool, but seems like a ton of workhours to maintain long term.\r\n\r\n@pouyakhankhanian, if we move to more automated techniques on more standardized inputs, I thinks it's possible to entirely automate updates. One area of interest in my current lab, the [Greene Lab](http://www.greenelab.com/), is automation [@10.1101/056473]. As a simple example, see [`dhimmel/thinklytics`](https://github.com/dhimmel/thinklytics) which automatically backs up and analyzes _Thinklab_ content on a daily basis. Obviously, building Hetionet is much more complex, which means automation will be more difficult but also more valuable.\r\n\r\n> Drug-drug interactions can easily be tested against a \"gold standard\" database. I'm guessing it's relatively cheap (in work hours) for you to re-write the code to create drug-drug matches?\r\n\r\nYeah that wouldn't be too bad. I'd probably rework some of the current analysis pipeline to be more reproducible and automatable. Currently, it's difficult for others to re-execute and extend our computations -- see for example, [this issue](https://github.com/dhimmel/integrate/issues/9) by @tongli.",
+      "comment_id": 1391,
+      "profile_id": 17,
+      "published": "2016-11-30T18:33:04.938499Z",
+      "thread_id": 227,
+      "url": "/discussion/brainstorming-future-directions-for-hetionet/227#6"
+    },
+    {
+      "body_html": "<blockquote><p><a href=\"/u/dhimmel\" class=\"username\">@dhimmel</a> I would really like to find a way to collaborate more directly. We have two PhD students and a postdoc all working on extensions to the hetionet project - thanks entirely to your efforts to be open here on ThinkLab.</p></blockquote>\r\n\r\n<p><a href=\"/u/b_good\" class=\"username\">@b_good</a> definitely. First, let me say that it's been super encouraging to see your team extend Hetionet / Rephetio. I'm not entirely sure what extensions you're working on, but the GitHub Issues opened have helped me see the sticking points of my old workflows.</p>\r\n\r\n<p>From your comment, I think we're all thinking along the same lines. All biomedical knowledge should be mined from the literature into a hetnet. The hetnet should be stored in Neo4j. Nodes should be from ontologies and standardized vocabularies that can be automatically maintained. Curation should be fully outsourced or, if necessary, crowdsourced. Layers on top of the Neo4j database will likely be needed to provide biologists with user-friendly interfaces for domain-specific functionality.</p>\r\n\r\n<p>I think that we're at a point where we can achieve the above objectives. One outstanding issue that I'd love input on is how to deal with context-specific relationships. For example, protein interactions that only exist in a certain tissue <span class=\"citation\">[<a href=\"/doi/10.1186/s13059-016-0913-4\" class=\"citation\" data-key=\"10.1186/s13059-016-0913-4\">1</a>]</span>. I don't think my conception of hetnets or Neo4j's graph model are well-suited for this task.</p>\r\n\r\n<p>But to the point, let's not duplicate efforts. I'm hoping that everyone who shares our vision can join forces into a collaborative open source development community. There's lot's of overlap with the NCATS Biomedical Translator Program, which funded <a href=\"https://ncats.nih.gov/translator/projects\">investigators from 11 Universities</a>. <a href=\"/u/b_good\" class=\"username\">@b_good</a> are you affiliated with any of these projects and are they something we could also leverage — i.e. will their development be open source and are they pursuing related or complementary approaches to what we've outlined?</p>\r\n\r\n<p>So any suggestions on how best to structure collaboration? I personally think open source GitHub repos that operate on a pull request model are ideal. The difficultly will be coordination, recruitment, and providing an incentive structure that rewards collaboration.</p>",
+      "body_md": "> @dhimmel I would really like to find a way to collaborate more directly. We have two PhD students and a postdoc all working on extensions to the hetionet project - thanks entirely to your efforts to be open here on ThinkLab.\r\n\r\n@b_good definitely. First, let me say that it's been super encouraging to see your team extend Hetionet / Rephetio. I'm not entirely sure what extensions you're working on, but the GitHub Issues opened have helped me see the sticking points of my old workflows.\r\n\r\nFrom your comment, I think we're all thinking along the same lines. All biomedical knowledge should be mined from the literature into a hetnet. The hetnet should be stored in Neo4j. Nodes should be from ontologies and standardized vocabularies that can be automatically maintained. Curation should be fully outsourced or, if necessary, crowdsourced. Layers on top of the Neo4j database will likely be needed to provide biologists with user-friendly interfaces for domain-specific functionality.\r\n\r\nI think that we're at a point where we can achieve the above objectives. One outstanding issue that I'd love input on is how to deal with context-specific relationships. For example, protein interactions that only exist in a certain tissue [@10.1186/s13059-016-0913-4]. I don't think my conception of hetnets or Neo4j's graph model are well-suited for this task.\r\n\r\nBut to the point, let's not duplicate efforts. I'm hoping that everyone who shares our vision can join forces into a collaborative open source development community. There's lot's of overlap with the NCATS Biomedical Translator Program, which funded [investigators from 11 Universities](https://ncats.nih.gov/translator/projects). @b_good are you affiliated with any of these projects and are they something we could also leverage -- i.e. will their development be open source and are they pursuing related or complementary approaches to what we've outlined?\r\n\r\nSo any suggestions on how best to structure collaboration? I personally think open source GitHub repos that operate on a pull request model are ideal. The difficultly will be coordination, recruitment, and providing an incentive structure that rewards collaboration.",
+      "comment_id": 1392,
+      "profile_id": 17,
+      "published": "2016-11-30T19:02:35.375518Z",
+      "thread_id": 227,
+      "url": "/discussion/brainstorming-future-directions-for-hetionet/227#7"
+    },
+    {
+      "body_html": "<h1>Mining knowledge from the literature</h1>\r\n\r\n<p>In the early days of Project Rephetio, <a href=\"/u/b_good\" class=\"username\">@b_good</a> <a href=\"https://thinklab.com/discussion/text-as-a-resource-for-network-population/48\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d48\">suggested</a> mining text to populate our network. We didn't end up doing much text mining to construct Hetionet v1.0. We did indirectly use relationships extracted from the literature, though <a href=\"https://thinklab.com/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d67\">MEDLINE term co-occurrence</a> and <a href=\"https://thinklab.com/d/48#3\">resources</a> that curated literature.</p>\r\n\r\n<p>In general, we were more excited about \"edges from systematic technologies that are not subject to knowledge biases\" and invested our time in integrating resources such as <a href=\"https://thinklab.com/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d43\">LINCS L1000</a> and <a href=\"https://thinklab.com/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d96\">STARGEO</a>. Our hope was to leverage systematic high-throughput technologies to make novel and insightful drug repurposing predictions. However, as we discuss in our report <span class=\"citation\">[<a href=\"/p/rephetio/report\" class=\"citation\" data-key=\"10.15363/thinklab.a7\">1</a>]</span>:</p>\r\n\r\n<blockquote><p>Ideally, different data types would provide orthogonal information. However, our model for whether a compound treats a disease focused on 11 metapaths — a small portion of the hundreds of metapaths available. While parsimony aids interpretation, our model did not draw on the weakly-predictive high-throughput data types — which are intriguing for their novelty, scalability, and cost-effectiveness — as much as we had hypothesized. Instead our model selected types of information traditionally considered in pharmacology. </p></blockquote>\r\n\r\n<p>I think increasing our number of positives and fixing <a href=\"https://thinklab.com/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d215\">edge dropout contamination</a> — for example by training on novel <a href=\"https://thinklab.com/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d212\">clinical trail indications</a> — could help incorporate weakly predictive metapaths into our models. However, the findings of Project Rephetio suggest that we should redirect focus to incorporating established knowledge embedded in the literature.</p>\r\n\r\n<p><a href=\"/u/b_good\" class=\"username\">@b_good</a>, I saw that <a href=\"http://knowledge.bio\">knowledge.bio</a> <span class=\"citation\">[<a href=\"/doi/10.1101/055525\" class=\"citation\" data-key=\"10.1101/055525\">2</a>]</span> uses the <a href=\"https://skr3.nlm.nih.gov/SemMedDB/\">Semantic MEDLINE Database</a> (SemMedDB) <span class=\"citation\">[<a href=\"/doi/10.1093/bioinformatics/bts591\" class=\"citation\" data-key=\"10.1093/bioinformatics/bts591\">3</a>]</span>. How good is SemMedDB? Unfortunately, SemMedDB appears to have troubling terms &amp; conditions despite being a US government work and primarily factual. I know <a href=\"/u/andrewsu\" class=\"username\">@andrewsu</a> is in communication with the National Library of Medicine to fix these legal impediments to reuse. In my next post, I'll discuss Snorkel — the question being whether implementing Snorkel will provide sufficient advantages over existing databases, such as SemMedDB.</p>",
+      "body_md": "# Mining knowledge from the literature\r\n\r\nIn the early days of Project Rephetio, @b_good [suggested](https://thinklab.com/discussion/text-as-a-resource-for-network-population/48) mining text to populate our network. We didn't end up doing much text mining to construct Hetionet v1.0. We did indirectly use relationships extracted from the literature, though [MEDLINE term co-occurrence](https://thinklab.com/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67) and [resources](https://thinklab.com/d/48#3) that curated literature.\r\n\r\nIn general, we were more excited about \"edges from systematic technologies that are not subject to knowledge biases\" and invested our time in integrating resources such as [LINCS L1000](https://thinklab.com/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43) and [STARGEO](https://thinklab.com/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96). Our hope was to leverage systematic high-throughput technologies to make novel and insightful drug repurposing predictions. However, as we discuss in our report [@10.15363/thinklab.a7]:\r\n\r\n> Ideally, different data types would provide orthogonal information. However, our model for whether a compound treats a disease focused on 11 metapaths — a small portion of the hundreds of metapaths available. While parsimony aids interpretation, our model did not draw on the weakly-predictive high-throughput data types — which are intriguing for their novelty, scalability, and cost-effectiveness — as much as we had hypothesized. Instead our model selected types of information traditionally considered in pharmacology. \r\n\r\nI think increasing our number of positives and fixing [edge dropout contamination](https://thinklab.com/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215) -- for example by training on novel [clinical trail indications](https://thinklab.com/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212) -- could help incorporate weakly predictive metapaths into our models. However, the findings of Project Rephetio suggest that we should redirect focus to incorporating established knowledge embedded in the literature.\r\n\r\n@b_good, I saw that [knowledge.bio](http://knowledge.bio) [@10.1101/055525] uses the [Semantic MEDLINE Database](https://skr3.nlm.nih.gov/SemMedDB/) (SemMedDB) [@10.1093/bioinformatics/bts591]. How good is SemMedDB? Unfortunately, SemMedDB appears to have troubling terms & conditions despite being a US government work and primarily factual. I know @andrewsu is in communication with the National Library of Medicine to fix these legal impediments to reuse. In my next post, I'll discuss Snorkel -- the question being whether implementing Snorkel will provide sufficient advantages over existing databases, such as SemMedDB.",
+      "comment_id": 1393,
+      "profile_id": 17,
+      "published": "2016-11-30T20:15:37.965819Z",
+      "thread_id": 227,
+      "url": "/discussion/brainstorming-future-directions-for-hetionet/227#8"
+    },
+    {
+      "body_html": "<h1>DrugCentral now published</h1>\r\n\r\n<p>DrugCentral is now available at <a href=\"http://drugcentral.org/\">http://drugcentral.org/</a> and published in <a href=\"https://doi.org/10.1093/nar/gkw993\"><em>Nucleic Acids Research</em></a> <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkw993\" class=\"citation\" data-key=\"10.1093/nar/gkw993\">1</a>]</span>.</p>\r\n\r\n<p>According to the <a href=\"http://drugcentral.org/privacy\">website</a>, the resource is available under a <a href=\"https://creativecommons.org/licenses/by-sa/4.0/legalcode\">CC BY-SA 4.0 License</a>.</p>",
+      "body_md": "# DrugCentral now published\r\n\r\nDrugCentral is now available at http://drugcentral.org/ and published in [_Nucleic Acids Research_](https://doi.org/10.1093/nar/gkw993) [@10.1093/nar/gkw993].\r\n\r\nAccording to the [website](http://drugcentral.org/privacy), the resource is available under a [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/legalcode).",
+      "comment_id": 1394,
+      "profile_id": 17,
+      "published": "2016-11-30T19:50:34.568867Z",
+      "thread_id": 186,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#7"
+    },
+    {
+      "body_html": "<p>Add citation to <code>10.1093/nar/gkw993</code> <span class=\"citation\">[<a href=\"/doi/10.1093/nar/gkw993\" class=\"citation\" data-key=\"10.1093/nar/gkw993\">1</a>]</span>.</p>",
+      "body_md": "Add citation to `10.1093/nar/gkw993` [@10.1093/nar/gkw993].",
+      "comment_id": 1395,
+      "profile_id": 17,
+      "published": "2016-11-30T19:53:35.487626Z",
+      "thread_id": 226,
+      "url": "/doc/7/review#5"
+    },
+    {
+      "body_html": "<p>Link to <a href=\"http://het.io/repurpose/metapaths.html\">http://het.io/repurpose/metapaths.html</a>.</p>",
+      "body_md": "Link to http://het.io/repurpose/metapaths.html.",
+      "comment_id": 1396,
+      "profile_id": 17,
+      "published": "2016-11-30T20:00:46.030699Z",
+      "thread_id": 226,
+      "url": "/doc/7/review#6"
     }
   ],
   "documents": [
@@ -4580,7 +4634,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/report",
-      "views": 133
+      "views": 139
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -6045,6 +6099,15 @@
       "note_id": 278,
       "profile_id": 188,
       "url": "/discussion/prediction-in-epilepsy/224#note-278"
+    },
+    {
+      "added": "2016-11-30T20:09:58.118792Z",
+      "body_html": "<p>I'm generally happy to contribute - let me know if there are any holes that need to be plugged, and I'll let you know if I have anything or know who does. Also, whereas I'm not part of the NCATS Biomedical Translator, I am part of the NIH funded IDG Knowledge Management Central, which would be another public source of already integrated data.</p>",
+      "body_md": "I'm generally happy to contribute - let me know if there are any holes that need to be plugged, and I'll let you know if I have anything or know who does. Also, whereas I'm not part of the NCATS Biomedical Translator, I am part of the NIH funded IDG Knowledge Management Central, which would be another public source of already integrated data.",
+      "comment_id": 1392,
+      "note_id": 279,
+      "profile_id": 125,
+      "url": "/discussion/brainstorming-future-directions-for-hetionet/227#note-279"
     }
   ],
   "profiles": [
@@ -6357,7 +6420,7 @@
       "username": "christophersouthan"
     }
   ],
-  "retrieved": "2016-11-29T21:10:31.419801Z",
+  "retrieved": "2016-11-30T21:10:57.304612Z",
   "threads": [
     {
       "document_id": null,
@@ -6381,7 +6444,7 @@
       "thread_id": 22,
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 153
+      "views": 154
     },
     {
       "document_id": null,
@@ -6465,7 +6528,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 324
+      "views": 325
     },
     {
       "document_id": null,
@@ -6501,7 +6564,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 535
+      "views": 536
     },
     {
       "document_id": null,
@@ -6537,7 +6600,7 @@
       "thread_id": 47,
       "topic_field": "Validation,Evalauation",
       "url": "/discussion/evaluation-framework/47",
-      "views": 61
+      "views": 62
     },
     {
       "document_id": null,
@@ -6561,7 +6624,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 344
+      "views": 347
     },
     {
       "document_id": null,
@@ -6585,7 +6648,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 243
+      "views": 244
     },
     {
       "document_id": null,
@@ -6609,7 +6672,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 463
+      "views": 464
     },
     {
       "document_id": null,
@@ -6633,7 +6696,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 522
+      "views": 524
     },
     {
       "document_id": null,
@@ -6657,7 +6720,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 187
+      "views": 188
     },
     {
       "document_id": null,
@@ -6693,7 +6756,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 458
+      "views": 459
     },
     {
       "document_id": null,
@@ -6741,7 +6804,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 445
+      "views": 446
     },
     {
       "document_id": null,
@@ -6753,7 +6816,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 883
+      "views": 884
     },
     {
       "document_id": null,
@@ -6813,7 +6876,7 @@
       "thread_id": 94,
       "topic_field": "Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations",
       "url": "/discussion/functional-disease-annotations-for-genes-using-doaf/94",
-      "views": 72
+      "views": 73
     },
     {
       "document_id": null,
@@ -6885,7 +6948,7 @@
       "thread_id": 104,
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 181
+      "views": 182
     },
     {
       "document_id": null,
@@ -6945,7 +7008,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 304
+      "views": 306
     },
     {
       "document_id": null,
@@ -6969,7 +7032,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 440
+      "views": 441
     },
     {
       "document_id": null,
@@ -7089,7 +7152,7 @@
       "thread_id": 181,
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 148
+      "views": 150
     },
     {
       "document_id": null,
@@ -7209,7 +7272,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 252
+      "views": 253
     },
     {
       "document_id": null,
@@ -7221,7 +7284,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 556
+      "views": 559
     },
     {
       "document_id": null,
@@ -7257,7 +7320,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 449
+      "views": 451
     },
     {
       "document_id": null,
@@ -7293,7 +7356,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 157
+      "views": 158
     },
     {
       "document_id": null,
@@ -7341,7 +7404,7 @@
       "thread_id": 227,
       "topic_field": "applied imagination,Hetionet,hetnets,future,planning",
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227",
-      "views": 30
+      "views": 31
     }
   ]
 }
