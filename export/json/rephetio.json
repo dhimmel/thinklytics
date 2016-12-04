@@ -4679,6 +4679,60 @@
       "published": "2016-12-02T17:01:27.650719Z",
       "thread_id": 186,
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#13"
+    },
+    {
+      "body_html": "<p>Though I cannot speak for the other curators, my own clinical suspicion was call atorvastatin as NOT for hypertension (HTN), because, for example, the other two statins in our curation database are also listed as NOT for HTN. As the only curator who was not blind to the other two curators' selections, I saw the choice of DM by the other two reviewers and therefore did a cursory round of research, found <span class=\"citation\">[<a href=\"/doi/10.3109/08037050903576726\" class=\"citation\" data-key=\"10.3109/08037050903576726\">1</a>]</span>, which is specific for atorvastatin, and therefore agreed with the other reviewers. Upon more detailed review of this, my thoughts below.</p>\r\n\r\n<p>Hyperlipidema (HLD) is treated with an HMG-COARi (the 'statins', such as atorvastatin, simvastatin, lovastatin). The decision to treat HLD with a statin, and the strength of statin to use, is a decision guided by a \"risk factor\" score which predicts poor cardiovascular outcomes, the ASCVD score is the latest in use in the last few years. The ASCVD risk score and many other scoring systems use your blood pressure as a major factor in determining if and how much statin you get for your HLD.</p>\r\n\r\n<p>HTN is treated with antihypertensives, commonly guided by the JNC8 paradigm <span class=\"citation\">[<a href=\"/doi/10.1001/jama.2013.284427\" class=\"citation\" data-key=\"10.1001/jama.2013.284427\">2</a>]</span>. The decision to treat HTN and the aggressiveness of therapy is also guided toward reducing poor cardiovascular outcomes.</p>\r\n\r\n<p>Therefore, in clinical practice, the treatment of HTN and HLD is generally thought to be really two parts of the same battle, with the goal being to decrease the number of poor cardiovascular outcomes (death or major disability from MI or stroke or PVD). And the latest trend is combination treatments which include statins and antihypertensives such as <span class=\"citation\">[<a href=\"/doi/10.1016/j.clinthera.2016.09.005\" class=\"citation\" data-key=\"10.1016/j.clinthera.2016.09.005\">3</a>]</span>.</p>\r\n\r\n<p>Given that clinically we are moving toward the use of mixing antihypertensive drugs with statins in clinical practice, I'm not sure we will have more evidence in the future as to the efficacy of a statin alone (in the absence of antihypertensive use) on hypertension alone (in the absence of hyperlipidemia). For example, note the possibility of confounding between HTN and HLD in the articles referenced by Daniel above. Therefore, the best evidence we have would be <span class=\"citation\">[<a href=\"/doi/10.3109/08037050903576726\" class=\"citation\" data-key=\"10.3109/08037050903576726\">1</a>]</span>. In that case, I suppose one could say atorvastatin is DM for HTN, but I wouldn't disagree with calling it NOT for HTN. Furthermore, one could make a case that all three statins should be DM if one of them is DM, but I would personally think that's too much of a stretch. Here is the list of how the all of the statins were designated by the three curators. You will note the lack of completeness of the PharmacotherapyDB list (every statin not listed for every indication), and I would say this was quite usual other drug classes in the database as well.</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>drug</th><th>disease</th><th>CSH</th><th>AJG</th><th>PK</th></tr></thead><tbody><tr><td>Lovastatin</td><td>atherosclerosis</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Pravastatin</td><td>atherosclerosis</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Rosuvastatin</td><td>atherosclerosis</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Simvastatin</td><td>atherosclerosis</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Atorvastatin</td><td>coronary artery disease</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Lovastatin</td><td>coronary artery disease</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Pitavastatin</td><td>coronary artery disease</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Pravastatin</td><td>coronary artery disease</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Rosuvastatin</td><td>coronary artery disease</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Simvastatin</td><td>coronary artery disease</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Atorvastatin</td><td>hypertension</td><td>DM</td><td>DM</td><td>DM</td></tr><tr><td>Lovastatin</td><td>hypertension</td><td>NOT</td><td>NOT</td><td>NOT</td></tr><tr><td>Simvastatin</td><td>hypertension</td><td>NOT</td><td>NOT</td><td>NOT</td></tr><tr><td>Pravastatin</td><td>prostate cancer</td><td>NOT</td><td>DM</td><td>NOT</td></tr><tr><td>Atorvastatin</td><td>type 2 diabetes mellitus</td><td>NOT</td><td>NOT</td><td>NOT</td></tr><tr><td>Simvastatin</td><td>type 2 diabetes mellitus</td><td>NOT</td><td>NOT</td><td>NOT</td></tr></tbody></table>\r\n\r\n<p>Also of interest is how the statins were ranked to help in each disease.</p>",
+      "body_md": "Though I cannot speak for the other curators, my own clinical suspicion was call atorvastatin as NOT for hypertension (HTN), because, for example, the other two statins in our curation database are also listed as NOT for HTN. As the only curator who was not blind to the other two curators' selections, I saw the choice of DM by the other two reviewers and therefore did a cursory round of research, found [@10.3109/08037050903576726], which is specific for atorvastatin, and therefore agreed with the other reviewers. Upon more detailed review of this, my thoughts below.\r\n\r\nHyperlipidema (HLD) is treated with an HMG-COARi (the 'statins', such as atorvastatin, simvastatin, lovastatin). The decision to treat HLD with a statin, and the strength of statin to use, is a decision guided by a \"risk factor\" score which predicts poor cardiovascular outcomes, the ASCVD score is the latest in use in the last few years. The ASCVD risk score and many other scoring systems use your blood pressure as a major factor in determining if and how much statin you get for your HLD.\r\n\r\nHTN is treated with antihypertensives, commonly guided by the JNC8 paradigm [@10.1001/jama.2013.284427]. The decision to treat HTN and the aggressiveness of therapy is also guided toward reducing poor cardiovascular outcomes.\r\n\r\nTherefore, in clinical practice, the treatment of HTN and HLD is generally thought to be really two parts of the same battle, with the goal being to decrease the number of poor cardiovascular outcomes (death or major disability from MI or stroke or PVD). And the latest trend is combination treatments which include statins and antihypertensives such as [@10.1016/j.clinthera.2016.09.005].\r\n\r\nGiven that clinically we are moving toward the use of mixing antihypertensive drugs with statins in clinical practice, I'm not sure we will have more evidence in the future as to the efficacy of a statin alone (in the absence of antihypertensive use) on hypertension alone (in the absence of hyperlipidemia). For example, note the possibility of confounding between HTN and HLD in the articles referenced by Daniel above. Therefore, the best evidence we have would be [@10.3109/08037050903576726]. In that case, I suppose one could say atorvastatin is DM for HTN, but I wouldn't disagree with calling it NOT for HTN. Furthermore, one could make a case that all three statins should be DM if one of them is DM, but I would personally think that's too much of a stretch. Here is the list of how the all of the statins were designated by the three curators. You will note the lack of completeness of the PharmacotherapyDB list (every statin not listed for every indication), and I would say this was quite usual other drug classes in the database as well.\r\n\r\n| drug | disease | CSH | AJG | PK |\r\n|------|---------|-----|-----|----|\r\n| Lovastatin | atherosclerosis | DM | DM | DM |\r\n| Pravastatin | atherosclerosis | DM | DM | DM |\r\n| Rosuvastatin | atherosclerosis | DM | DM | DM |\r\n| Simvastatin | atherosclerosis | DM | DM | DM |\r\n| Atorvastatin | coronary artery disease | DM | DM | DM |\r\n| Lovastatin | coronary artery disease | DM | DM | DM |\r\n| Pitavastatin | coronary artery disease | DM | DM | DM |\r\n| Pravastatin | coronary artery disease | DM | DM | DM |\r\n| Rosuvastatin | coronary artery disease | DM | DM | DM |\r\n| Simvastatin | coronary artery disease | DM | DM | DM |\r\n| Atorvastatin | hypertension | DM | DM | DM |\r\n| Lovastatin | hypertension | NOT | NOT | NOT |\r\n| Simvastatin | hypertension | NOT | NOT | NOT |\r\n| Pravastatin | prostate cancer | NOT | DM | NOT |\r\n| Atorvastatin | type 2 diabetes mellitus | NOT | NOT | NOT |\r\n| Simvastatin | type 2 diabetes mellitus | NOT | NOT | NOT |\r\n\r\nAlso of interest is how the statins were ranked to help in each disease.",
+      "comment_id": 1405,
+      "profile_id": 188,
+      "published": "2016-12-04T16:46:44.482568Z",
+      "thread_id": 186,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#14"
+    },
+    {
+      "body_html": "<p>The algorithm predicts hypertension fairly highly for some of the other statins as well. Here are the top predictions of the algorithm for any statin:</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>compound_name</th><th>disease_name</th><th>category</th><th>prediction</th><th>disease_percentile</th></tr></thead><tbody><tr><td>Lovastatin</td><td>atherosclerosis</td><td>DM</td><td>28.4%</td><td>100.0%</td></tr><tr><td>Simvastatin</td><td>atherosclerosis</td><td>DM</td><td>23.6%</td><td>99.9%</td></tr><tr><td>Pravastatin</td><td>atherosclerosis</td><td>DM</td><td>20.2%</td><td>99.9%</td></tr><tr><td>Simvastatin</td><td>coronary artery disease</td><td>DM</td><td>19.0%</td><td>99.5%</td></tr><tr><td>Pitavastatin</td><td>atherosclerosis</td><td></td><td>17.1%</td><td>99.8%</td></tr><tr><td>Lovastatin</td><td>coronary artery disease</td><td>DM</td><td>16.9%</td><td>99.4%</td></tr><tr><td>Pravastatin</td><td>coronary artery disease</td><td>DM</td><td>14.8%</td><td>99.3%</td></tr><tr><td>Rosuvastatin</td><td>coronary artery disease</td><td>DM</td><td>13.2%</td><td>99.0%</td></tr><tr><td>Fluvastatin</td><td>coronary artery disease</td><td></td><td>6.7%</td><td>98.4%</td></tr><tr><td>Fluvastatin</td><td>atherosclerosis</td><td></td><td>6.2%</td><td>99.7%</td></tr><tr><td>Pitavastatin</td><td>coronary artery disease</td><td>DM</td><td>4.8%</td><td>97.4%</td></tr><tr><td>Atorvastatin</td><td>atherosclerosis</td><td></td><td>3.4%</td><td>99.7%</td></tr><tr><td>Atorvastatin</td><td>coronary artery disease</td><td>DM</td><td>3.2%</td><td>96.7%</td></tr><tr><td>Fluvastatin</td><td>hypertension</td><td></td><td>3.1%</td><td>92.0%</td></tr><tr><td>Pitavastatin</td><td>hypertension</td><td></td><td>2.6%</td><td>91.0%</td></tr><tr><td>Simvastatin</td><td>type 2 diabetes mellitus</td><td>NOT</td><td>1.6%</td><td>95.4%</td></tr><tr><td>Rosuvastatin</td><td>atherosclerosis</td><td>DM</td><td>1.4%</td><td>98.7%</td></tr><tr><td>Pravastatin</td><td>type 2 diabetes mellitus</td><td></td><td>1.3%</td><td>94.5%</td></tr><tr><td>Lovastatin</td><td>type 2 diabetes mellitus</td><td></td><td>1.3%</td><td>94.4%</td></tr><tr><td>Rosuvastatin</td><td>type 2 diabetes mellitus</td><td></td><td>1.3%</td><td>94.3%</td></tr><tr><td>Pitavastatin</td><td>type 2 diabetes mellitus</td><td></td><td>1.2%</td><td>93.6%</td></tr><tr><td>Atorvastatin</td><td>type 2 diabetes mellitus</td><td>NOT</td><td>1.1%</td><td>93.1%</td></tr><tr><td>Rosuvastatin</td><td>hypertension</td><td></td><td>1.0%</td><td>79.5%</td></tr></tbody></table>\r\n\r\n<p>It appears above the algorithm likes some of the other statins more than atorvastatin for hypertension. Here are the top <a href=\"http://het.io/repurpose/browse.html?id=DB01076\">results for atorvastatin</a>:</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>compound_name</th><th>disease_name</th><th>category</th><th>prediction</th><th>compound_percentile</th><th>disease_percentile</th></tr></thead><tbody><tr><td>Atorvastatin</td><td>atherosclerosis</td><td></td><td>3.39%</td><td>100.00%</td><td>99.67%</td></tr><tr><td>Atorvastatin</td><td>coronary artery disease</td><td>DM</td><td>3.23%</td><td>99.26%</td><td>96.75%</td></tr><tr><td>Atorvastatin</td><td>type 2 diabetes mellitus</td><td>NOT</td><td>1.09%</td><td>98.53%</td><td>93.11%</td></tr><tr><td>Atorvastatin</td><td>obesity</td><td></td><td>0.46%</td><td>97.79%</td><td>76.20%</td></tr><tr><td>Atorvastatin</td><td>chronic kidney failure</td><td></td><td>0.42%</td><td>97.06%</td><td>95.45%</td></tr><tr><td>Atorvastatin</td><td>metabolic syndrome X</td><td></td><td>0.42%</td><td>96.32%</td><td>95.77%</td></tr><tr><td>Atorvastatin</td><td>epilepsy syndrome</td><td></td><td>0.36%</td><td>95.59%</td><td>53.38%</td></tr><tr><td>Atorvastatin</td><td>Kawasaki disease</td><td></td><td>0.36%</td><td>94.85%</td><td>95.12%</td></tr><tr><td>Atorvastatin</td><td>hypertension</td><td>DM</td><td>0.35%</td><td>94.12%</td><td>45.64%</td></tr><tr><td>Atorvastatin</td><td>focal segmental glomerulosclerosis</td><td></td><td>0.33%</td><td>93.38%</td><td>93.89%</td></tr><tr><td>Atorvastatin</td><td>primary biliary cirrhosis</td><td></td><td>0.32%</td><td>92.65%</td><td>87.78%</td></tr><tr><td>Atorvastatin</td><td>prostate cancer</td><td></td><td>0.32%</td><td>91.91%</td><td>66.38%</td></tr><tr><td>Atorvastatin</td><td>acquired immunodeficiency syndrome</td><td></td><td>0.30%</td><td>91.18%</td><td>62.74%</td></tr><tr><td>Atorvastatin</td><td>rheumatoid arthritis</td><td></td><td>0.29%</td><td>90.44%</td><td>79.00%</td></tr><tr><td>Atorvastatin</td><td>breast cancer</td><td></td><td>0.28%</td><td>89.71%</td><td>58.13%</td></tr><tr><td>Atorvastatin</td><td>pancreatic cancer</td><td></td><td>0.27%</td><td>88.97%</td><td>80.17%</td></tr><tr><td>Atorvastatin</td><td>lung cancer</td><td></td><td>0.27%</td><td>88.24%</td><td>73.02%</td></tr></tbody></table>\r\n\r\n<p>Hypertension is highly ranked for atorvastatin, but atorvastatin is not highly ranked for hypertension.</p>",
+      "body_md": "The algorithm predicts hypertension fairly highly for some of the other statins as well. Here are the top predictions of the algorithm for any statin:\r\n\r\n| compound_name | disease_name | category | prediction | disease_percentile |\r\n|---------------|--------------|----------|------------|----------|\r\n| Lovastatin | atherosclerosis | DM | 28.4% | 100.0% |\r\n| Simvastatin | atherosclerosis | DM | 23.6% | 99.9% |\r\n| Pravastatin | atherosclerosis | DM | 20.2% | 99.9% |\r\n| Simvastatin | coronary artery disease | DM | 19.0% | 99.5% |\r\n| Pitavastatin | atherosclerosis |  | 17.1% | 99.8% |\r\n| Lovastatin | coronary artery disease | DM | 16.9% | 99.4% |\r\n| Pravastatin | coronary artery disease | DM | 14.8% | 99.3% |\r\n| Rosuvastatin | coronary artery disease | DM | 13.2% | 99.0% |\r\n| Fluvastatin | coronary artery disease |  | 6.7% | 98.4% |\r\n| Fluvastatin | atherosclerosis |  | 6.2% | 99.7% |\r\n| Pitavastatin | coronary artery disease | DM | 4.8% | 97.4% |\r\n| Atorvastatin | atherosclerosis |  | 3.4% | 99.7% |\r\n| Atorvastatin | coronary artery disease | DM | 3.2% | 96.7% |\r\n| Fluvastatin | hypertension |  | 3.1% | 92.0% |\r\n| Pitavastatin | hypertension |  | 2.6% | 91.0% |\r\n| Simvastatin | type 2 diabetes mellitus | NOT | 1.6% | 95.4% |\r\n| Rosuvastatin | atherosclerosis | DM | 1.4% | 98.7% |\r\n| Pravastatin | type 2 diabetes mellitus |  | 1.3% | 94.5% |\r\n| Lovastatin | type 2 diabetes mellitus |  | 1.3% | 94.4% |\r\n| Rosuvastatin | type 2 diabetes mellitus |  | 1.3% | 94.3% |\r\n| Pitavastatin | type 2 diabetes mellitus |  | 1.2% | 93.6% |\r\n| Atorvastatin | type 2 diabetes mellitus | NOT | 1.1% | 93.1% |\r\n| Rosuvastatin | hypertension |  | 1.0% | 79.5% |\r\n\r\nIt appears above the algorithm likes some of the other statins more than atorvastatin for hypertension. Here are the top [results for atorvastatin](http://het.io/repurpose/browse.html?id=DB01076):\r\n\r\n| compound_name | disease_name | category | prediction | compound_percentile | disease_percentile |\r\n|---------------|-----------------|----------|------------|-------------|--------------|\r\n| Atorvastatin | atherosclerosis |  | 3.39% | 100.00% | 99.67% |\r\n| Atorvastatin | coronary artery disease | DM | 3.23% | 99.26% | 96.75% |\r\n| Atorvastatin | type 2 diabetes mellitus | NOT | 1.09% | 98.53% | 93.11% |\r\n| Atorvastatin | obesity |  | 0.46% | 97.79% | 76.20% |\r\n| Atorvastatin | chronic kidney failure |  | 0.42% | 97.06% | 95.45% |\r\n| Atorvastatin | metabolic syndrome X |  | 0.42% | 96.32% | 95.77% |\r\n| Atorvastatin | epilepsy syndrome |  | 0.36% | 95.59% | 53.38% |\r\n| Atorvastatin | Kawasaki disease |  | 0.36% | 94.85% | 95.12% |\r\n| Atorvastatin | hypertension | DM | 0.35% | 94.12% | 45.64% |\r\n| Atorvastatin | focal segmental glomerulosclerosis |  | 0.33% | 93.38% | 93.89% |\r\n| Atorvastatin | primary biliary cirrhosis |  | 0.32% | 92.65% | 87.78% |\r\n| Atorvastatin | prostate cancer |  | 0.32% | 91.91% | 66.38% |\r\n| Atorvastatin | acquired immunodeficiency syndrome |  | 0.30% | 91.18% | 62.74% |\r\n| Atorvastatin | rheumatoid arthritis |  | 0.29% | 90.44% | 79.00% |\r\n| Atorvastatin | breast cancer |  | 0.28% | 89.71% | 58.13% |\r\n| Atorvastatin | pancreatic cancer |  | 0.27% | 88.97% | 80.17% |\r\n| Atorvastatin | lung cancer |  | 0.27% | 88.24% | 73.02% |\r\n\r\nHypertension is highly ranked for atorvastatin, but atorvastatin is not highly ranked for hypertension.",
+      "comment_id": 1406,
+      "profile_id": 188,
+      "published": "2016-12-04T17:01:44.203055Z",
+      "thread_id": 186,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#15"
+    },
+    {
+      "body_html": "<p>Thanks, this is very informative!  I agree that treatment of HTN and HLD are two parts of the same battle — reduction of cardiovascular risk — but this in itself would not be a good rationale for saying atorvastatin is indicated for HTN; only that elevated cardiovscular risk may be viewed as an indication for both statins and antihypertensives.  If being two parts of the same battle were valid, then one would, by the same token, say that hypercholesterolemia is an indication for antihypertensives!</p>\r\n\r\n<p>As to the literature regarding antihypertensive effects of statins– I'm skeptical that any physician would regard HTN as an off-label indication for a statin. I wonder if there is a way to find out...</p>",
+      "body_md": "Thanks, this is very informative!  I agree that treatment of HTN and HLD are two parts of the same battle -- reduction of cardiovascular risk -- but this in itself would not be a good rationale for saying atorvastatin is indicated for HTN; only that elevated cardiovscular risk may be viewed as an indication for both statins and antihypertensives.  If being two parts of the same battle were valid, then one would, by the same token, say that hypercholesterolemia is an indication for antihypertensives!\r\n\r\nAs to the literature regarding antihypertensive effects of statins-- I'm skeptical that any physician would regard HTN as an off-label indication for a statin. I wonder if there is a way to find out...",
+      "comment_id": 1407,
+      "profile_id": 80,
+      "published": "2016-12-04T17:25:34.285701Z",
+      "thread_id": 186,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#16"
+    },
+    {
+      "body_html": "<p>Thanks again.  What exactly does DM mean?</p>",
+      "body_md": "Thanks again.  What exactly does DM mean?",
+      "comment_id": 1408,
+      "profile_id": 80,
+      "published": "2016-12-04T17:49:34.042657Z",
+      "thread_id": 186,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#17"
+    },
+    {
+      "body_html": "<p>Interesting classification. So for HTN, are all drugs either DM or NOT, given that HTN is typically asymptomatic?</p>",
+      "body_md": "Interesting classification. So for HTN, are all drugs either DM or NOT, given that HTN is typically asymptomatic?",
+      "comment_id": 1409,
+      "profile_id": 80,
+      "published": "2016-12-04T17:59:13.135204Z",
+      "thread_id": 186,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#18"
+    },
+    {
+      "body_html": "<p>I can relate to the challenge of arriving at hard definitions for concepts in biology and medicine that turn out to be complicated and case-dependent!  </p>\r\n\r\n<p>One thing that comes to mind is that, in medicine, a \"symptom\" is something a patient experiences. Thus,  HTN is not a symptom. Instead, it is a \"sign\", something the physician may observe.  There's the further complexity that essential HTN is probably best regarded as its own disease, whereas secondary HTN (e.g. due to renal artery stenosis), might not be best to regard as its own disease. </p>",
+      "body_md": "I can relate to the challenge of arriving at hard definitions for concepts in biology and medicine that turn out to be complicated and case-dependent!  \r\n\r\nOne thing that comes to mind is that, in medicine, a \"symptom\" is something a patient experiences. Thus,  HTN is not a symptom. Instead, it is a \"sign\", something the physician may observe.  There's the further complexity that essential HTN is probably best regarded as its own disease, whereas secondary HTN (e.g. due to renal artery stenosis), might not be best to regard as its own disease.",
+      "comment_id": 1410,
+      "profile_id": 80,
+      "published": "2016-12-04T18:11:10.507927Z",
+      "thread_id": 186,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#19"
     }
   ],
   "documents": [
@@ -4706,7 +4760,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/report",
-      "views": 155
+      "views": 157
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -6225,6 +6279,69 @@
       "note_id": 284,
       "profile_id": 313,
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227#note-284"
+    },
+    {
+      "added": "2016-12-04T16:46:01.268531Z",
+      "body_html": "<p>answer in post below</p>",
+      "body_md": "answer in post below",
+      "comment_id": 1400,
+      "note_id": 285,
+      "profile_id": 188,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#note-285"
+    },
+    {
+      "added": "2016-12-04T17:45:31.609180Z",
+      "body_html": "<p>agree that this is not a rationale for saying atorva it is indicated in htn. i present this as a rationale for why we may never know the true answer.</p>\n\n<p>i also wholly agree that physicians do not regard HTN as an off-label indication for a statin. (note that this is not how \"DM\" was defined).</p>",
+      "body_md": "agree that this is not a rationale for saying atorva it is indicated in htn. i present this as a rationale for why we may never know the true answer.\n\ni also wholly agree that physicians do not regard HTN as an off-label indication for a statin. (note that this is not how \"DM\" was defined).",
+      "comment_id": 1407,
+      "note_id": 286,
+      "profile_id": 188,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#note-286"
+    },
+    {
+      "added": "2016-12-04T17:53:24.376376Z",
+      "body_html": "<p>It's a shorthand for disease-modifying indication. In <a href=\"https://thinklab.com/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d182\">PharmacotherapyDB</a>, the three physicians classified each indication as disease modifying (DM), symptomatic (SYM), or non-indication (NOT).</p>",
+      "body_md": "It's a shorthand for disease-modifying indication. In [PharmacotherapyDB](https://thinklab.com/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182), the three physicians classified each indication as disease modifying (DM), symptomatic (SYM), or non-indication (NOT).",
+      "comment_id": 1408,
+      "note_id": 287,
+      "profile_id": 17,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#note-287"
+    },
+    {
+      "added": "2016-12-04T17:55:33.124230Z",
+      "body_html": "<p><a href=\"/u/mkgilson\" class=\"username\">@mkgilson</a> Would you be interested in doing a case study of hypertension predictions by this algorithm? For example, a case study similar to the case study done for epilepsy here (https://thinklab.com/p/rephetio). The algorithm made a great number of high probability predictions for hypertension (there can be a link to a file in thinklab here), as it did for epilepsy. We chose to do a case study of epilepsy in part because our three physician curators were all neurologists. It would be great to get input from someone who is more experienced in general internal medicine to evaluate the predictions for hypertension.</p>",
+      "body_md": "@mkgilson Would you be interested in doing a case study of hypertension predictions by this algorithm? For example, a case study similar to the case study done for epilepsy here (https://thinklab.com/p/rephetio). The algorithm made a great number of high probability predictions for hypertension (there can be a link to a file in thinklab here), as it did for epilepsy. We chose to do a case study of epilepsy in part because our three physician curators were all neurologists. It would be great to get input from someone who is more experienced in general internal medicine to evaluate the predictions for hypertension.",
+      "comment_id": 1399,
+      "note_id": 288,
+      "profile_id": 188,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#note-288"
+    },
+    {
+      "added": "2016-12-04T17:56:49.030240Z",
+      "body_html": "<p>note, my filter above also included pentostatin as a statin. I manually removed this in a re-post</p>",
+      "body_md": "note, my filter above also included pentostatin as a statin. I manually removed this in a re-post",
+      "comment_id": 1406,
+      "note_id": 289,
+      "profile_id": 188,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#note-289"
+    },
+    {
+      "added": "2016-12-04T18:03:04.659493Z",
+      "body_html": "<p>The definition of DM was a subject of great debate, and was finally defined in this discussion (https://thinklab.com/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95)</p>\n\n<p>Abstracted from that discussion:<br>Definitions:</p>\n\n<p>disease modifying (DM) — a drug that therapeutically changes the underlying or downstream biology of the disease<br>symptomatic (SYM) — a drug that treats a significant symptom of the disease<br>non-indication (NOT) — a drug that neither therapeutically changes the underlying or downstream biology nor treats a significant symptom of the disease<br>Guidelines:</p>\n\n<p>reasonable evidence of efficacy is required to be classified as disease modifying or symptomatic. This includes off-label use.<br>if no classification accurately describes an indication, the most appropriate (although imperfect) classification should be chosen</p>\n\n<p>Amendment 1: if a drug was previously indicated, but is no longer used due to side effects, or because there are better drugs, it is still considered DM<br>Amendment 2: it doesn't matter whether it is first line or fifth line, it's still considered DM<br>Assumptions:</p>\n\n<p>Assumption 1: DM trumps SYM. If a drug is clearly both disease modifying and also treats symptoms, then I will call it disease modifying. This is because most disease modifying drugs also treat symptoms.</p>\n\n<p>Assumption 2: SYM trumps NOT. If a drug is clearly symptomatic treatment, but can actually exacerbate the downstream biology of disease, then I chose SYM. I made this choice because this was the choice I saw most often made by AJG and CSH</p>",
+      "body_md": "The definition of DM was a subject of great debate, and was finally defined in this discussion (https://thinklab.com/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95)\n\nAbstracted from that discussion:\nDefinitions:\n\ndisease modifying (DM) — a drug that therapeutically changes the underlying or downstream biology of the disease\nsymptomatic (SYM) — a drug that treats a significant symptom of the disease\nnon-indication (NOT) — a drug that neither therapeutically changes the underlying or downstream biology nor treats a significant symptom of the disease\nGuidelines:\n\nreasonable evidence of efficacy is required to be classified as disease modifying or symptomatic. This includes off-label use.\nif no classification accurately describes an indication, the most appropriate (although imperfect) classification should be chosen\n\nAmendment 1: if a drug was previously indicated, but is no longer used due to side effects, or because there are better drugs, it is still considered DM\nAmendment 2: it doesn't matter whether it is first line or fifth line, it's still considered DM\nAssumptions:\n\nAssumption 1: DM trumps SYM. If a drug is clearly both disease modifying and also treats symptoms, then I will call it disease modifying. This is because most disease modifying drugs also treat symptoms.\n\nAssumption 2: SYM trumps NOT. If a drug is clearly symptomatic treatment, but can actually exacerbate the downstream biology of disease, then I chose SYM. I made this choice because this was the choice I saw most often made by AJG and CSH",
+      "comment_id": 1408,
+      "note_id": 290,
+      "profile_id": 188,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#note-290"
+    },
+    {
+      "added": "2016-12-04T19:43:02.610909Z",
+      "body_html": "<p>I'd love to contribute, but don't have time, and also am probably too far from clinical practice these days. I'll bet someone at Stanford could look at this with you, though!</p>",
+      "body_md": "I'd love to contribute, but don't have time, and also am probably too far from clinical practice these days. I'll bet someone at Stanford could look at this with you, though!",
+      "comment_id": 1399,
+      "note_id": 291,
+      "profile_id": 80,
+      "url": "/discussion/incorporating-drugcentral-data-in-our-network/186#note-291"
     }
   ],
   "profiles": [
@@ -6544,7 +6661,7 @@
       "username": "alexratner"
     }
   ],
-  "retrieved": "2016-12-03T21:11:50.983638Z",
+  "retrieved": "2016-12-04T21:12:39.534864Z",
   "threads": [
     {
       "document_id": null,
@@ -6820,7 +6937,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 533
+      "views": 536
     },
     {
       "document_id": null,
@@ -6868,7 +6985,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 148
+      "views": 149
     },
     {
       "document_id": null,
@@ -6916,7 +7033,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 527
+      "views": 530
     },
     {
       "document_id": null,
@@ -6940,7 +7057,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 888
+      "views": 889
     },
     {
       "document_id": null,
@@ -6952,7 +7069,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 841
+      "views": 844
     },
     {
       "document_id": null,
@@ -7000,7 +7117,7 @@
       "thread_id": 94,
       "topic_field": "Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations",
       "url": "/discussion/functional-disease-annotations-for-genes-using-doaf/94",
-      "views": 73
+      "views": 74
     },
     {
       "document_id": null,
@@ -7012,7 +7129,7 @@
       "thread_id": 95,
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 242
+      "views": 243
     },
     {
       "document_id": null,
@@ -7180,7 +7297,7 @@
       "thread_id": 115,
       "topic_field": "HNEP,Hetnets,Features,Metapaths",
       "url": "/discussion/assessing-the-informativeness-of-features/115",
-      "views": 94
+      "views": 95
     },
     {
       "document_id": null,
@@ -7216,7 +7333,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 222
+      "views": 224
     },
     {
       "document_id": null,
@@ -7288,7 +7405,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 247
+      "views": 249
     },
     {
       "document_id": null,
@@ -7312,7 +7429,7 @@
       "thread_id": 186,
       "topic_field": "DrugCentral,pharmacology,Database",
       "url": "/discussion/incorporating-drugcentral-data-in-our-network/186",
-      "views": 112
+      "views": 113
     },
     {
       "document_id": null,
@@ -7348,7 +7465,7 @@
       "thread_id": 194,
       "topic_field": "HNEP,Hetnets,Machine learning,self-testing",
       "url": "/discussion/network-edge-prediction-how-to-deal-with-self-testing/194",
-      "views": 61
+      "views": 62
     },
     {
       "document_id": null,
@@ -7372,7 +7489,7 @@
       "thread_id": 201,
       "topic_field": "Machine learning,Heterogeneous Networks,Hetnets,HNEP,Prior Knowledge",
       "url": "/discussion/network-edge-prediction-estimating-the-prior/201",
-      "views": 64
+      "views": 65
     },
     {
       "document_id": null,
@@ -7384,7 +7501,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 177
+      "views": 178
     },
     {
       "document_id": null,
@@ -7408,7 +7525,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 570
+      "views": 572
     },
     {
       "document_id": null,
@@ -7444,7 +7561,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 453
+      "views": 454
     },
     {
       "document_id": null,
@@ -7456,7 +7573,7 @@
       "thread_id": 214,
       "topic_field": "DWPC,HNEP,Residual DWPC,R-DWPC,permutation,hetnet,algorithms",
       "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214",
-      "views": 56
+      "views": 57
     },
     {
       "document_id": null,
@@ -7528,7 +7645,7 @@
       "thread_id": 227,
       "topic_field": "applied imagination,Hetionet,hetnets,future,planning",
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227",
-      "views": 42
+      "views": 43
     }
   ]
 }
