@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-12-06T21:14:24.945789Z",
+  "retrieved": "2016-12-07T21:15:17.988066Z",
   "threads": [
     {
       "document_id": null,
@@ -2616,7 +2616,7 @@
       "thread_id": 33,
       "topic_field": "Privacy,IT,Google Analytics,Piwik,Sysadmin,Analytics",
       "url": "/discussion/web-analytics-platform/33",
-      "views": 71
+      "views": 72
     },
     {
       "document_id": null,
@@ -2640,7 +2640,7 @@
       "thread_id": 45,
       "topic_field": "Citation",
       "url": "/discussion/new-features-for-tracking-thinklab-citations/45",
-      "views": 44
+      "views": 45
     },
     {
       "document_id": null,
@@ -2700,7 +2700,7 @@
       "thread_id": 58,
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 202
+      "views": 203
     },
     {
       "document_id": null,
@@ -2796,7 +2796,7 @@
       "thread_id": 86,
       "topic_field": "Metadata,Citation,Citations,DOI,References,CrossRef",
       "url": "/discussion/citation-metadata-refreshing/86",
-      "views": 46
+      "views": 47
     },
     {
       "document_id": null,
@@ -3048,7 +3048,7 @@
       "thread_id": 207,
       "topic_field": "Altmetrics,Altmetric,attention",
       "url": "/discussion/tracking-attention-through-altmetric-integration/207",
-      "views": 48
+      "views": 49
     },
     {
       "document_id": null,
