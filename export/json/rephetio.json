@@ -4861,8 +4861,8 @@
       "url": "/doc/7/review#9"
     },
     {
-      "body_html": "<p>Why are these meta paths different to those in Fig 1?</p>",
-      "body_md": "Why are these meta paths different to those in Fig 1?",
+      "body_html": "<p>Why are these meta paths different to those in Fig 2B?</p>",
+      "body_md": "Why are these meta paths different to those in Fig 2B?",
       "comment_id": 1426,
       "profile_id": 315,
       "published": "2016-12-15T04:18:13.552137Z",
@@ -5041,8 +5041,8 @@
       "url": "/discussion/decomposing-the-dwpc-to-assess-intermediate-node-contributions/228"
     },
     {
-      "body_html": "<h1>Enalapril for coronary artery disease example</h1>\r\n\r\n<p>Enalapril treats coronary artery disease (CAD) by inhibiting angiotensin-converting enzyme (ACE) <span class=\"citation\">[<a href=\"/doi/10.1001/archinte.166.7.787\" class=\"citation\" data-key=\"10.1001/archinte.166.7.787\">1</a>]</span>. Traditionally, if we were interested in potential pathways contributing to drug efficacy we may search for <em>CbGpPWpGaD</em> paths between enalapril and CAD. Below is the Cypher query to return all paths, ranked by PDP (run the query at <a href=\"https://neo4j.het.io\">https://neo4j.het.io</a>):</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH path = (n0:Compound)-[:BINDS_CbG]-(n1)-[:PARTICIPATES_GpPW]-\r\n  (n2)-[:PARTICIPATES_GpPW]-(n3)-[:ASSOCIATES_DaG]-(n4:Disease)\r\nUSING JOIN ON n2\r\nWHERE n0.name = 'Enalapril'\r\n  AND n4.name = 'coronary artery disease'\r\n  AND n1 &lt;&gt; n3\r\nWITH\r\n  path,\r\n[\r\n  size((n0)-[:BINDS_CbG]-()),\r\n  size(()-[:BINDS_CbG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n3)),\r\n  size((n3)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n4))\r\n] AS degrees\r\nRETURN\r\n  substring(reduce(s = '', node IN nodes(path)| s + '–' + node.name), 1) AS nodes,\r\n  reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4) AS PDP\r\nORDER BY PDP DESC</code></pre>\r\n\r\n<p>Overall, 757 paths were returned. The top 3 paths are:</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>nodes</th><th>PDP</th></tr></thead><tbody><tr><td>Enalapril–ACE–Metabolism of Angiotensinogen to Angiotensins–ACE2–coronary artery disease</td><td>0.000258</td></tr><tr><td>Enalapril–ACE–ACE Inhibitor Pathway–NR3C2–coronary artery disease</td><td>0.000252</td></tr><tr><td>Enalapril–ACE–ACE Inhibitor Pathway–ACE2–coronary artery disease</td><td>0.000245</td></tr></tbody></table>\r\n\r\n<p>Now let's assume we're more interested in the contributions of specific pathway nodes rather than specific paths. In other words, we don't really care what genes got us to a pathway, we just want an overal score per pathway. In this case, we can select <code>n2</code> as the position. Now we're computing a DWPC for <em>Enalapril</em>–binds–Gene–participates–<strong>Pathway</strong>–participates–Gene–associates–<em>coronary artery disease</em>, where bold indicates position. The query becomes:</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH path = (n0:Compound)-[:BINDS_CbG]-(n1)-[:PARTICIPATES_GpPW]-\r\n  (n2)-[:PARTICIPATES_GpPW]-(n3)-[:ASSOCIATES_DaG]-(n4:Disease)\r\nUSING JOIN ON n2\r\nWHERE n0.name = 'Enalapril'\r\n  AND n4.name = 'coronary artery disease'\r\n  AND n1 &lt;&gt; n3\r\nWITH\r\n  path,\r\n  n2 AS pathway,\r\n[\r\n  size((n0)-[:BINDS_CbG]-()),\r\n  size(()-[:BINDS_CbG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n3)),\r\n  size((n3)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n4))\r\n] AS degrees\r\nRETURN\r\n  pathway.identifier AS pathway_id,\r\n  pathway.name AS pathway_name,\r\n  count(*) AS PC,\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4)) AS DWPC\r\nORDER BY DWPC DESC, pathway_name</code></pre>\r\n\r\n<p>40 pathways are returned, of which the top 5 are displayed below:</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>pathway_id</th><th>pathway_name</th><th>PC</th><th>DWPC</th></tr></thead><tbody><tr><td>WP554_r84372</td><td>ACE Inhibitor Pathway</td><td>11</td><td>0.0015</td></tr><tr><td>PC7_8339</td><td>Transmembrane transport of small molecules</td><td>150</td><td>0.0008</td></tr><tr><td>PC7_5323</td><td>Metabolism of Angiotensinogen to Angiotensins</td><td>3</td><td>0.0005</td></tr><tr><td>PC7_7290</td><td>SLC-mediated transmembrane transport</td><td>40</td><td>0.0004</td></tr><tr><td>PC7_5322</td><td>Metabolism</td><td>309</td><td>0.0004</td></tr></tbody></table>\r\n\r\n<p>As shown, we now have a ranking of pathways based on their contribution to the overall <em>CbGpPWpGaD</em> metapath. Currently, I don't see a huge role for this approach for feature extraction, but think it's useful for following up on specific predictions and highlighting mechanisms of drug efficacy.</p>",
-      "body_md": "# Enalapril for coronary artery disease example\r\n\r\nEnalapril treats coronary artery disease (CAD) by inhibiting angiotensin-converting enzyme (ACE) [@10.1001/archinte.166.7.787]. Traditionally, if we were interested in potential pathways contributing to drug efficacy we may search for _CbGpPWpGaD_ paths between enalapril and CAD. Below is the Cypher query to return all paths, ranked by PDP (run the query at https://neo4j.het.io):\r\n\r\n```cypher\r\nMATCH path = (n0:Compound)-[:BINDS_CbG]-(n1)-[:PARTICIPATES_GpPW]-\r\n  (n2)-[:PARTICIPATES_GpPW]-(n3)-[:ASSOCIATES_DaG]-(n4:Disease)\r\nUSING JOIN ON n2\r\nWHERE n0.name = 'Enalapril'\r\n  AND n4.name = 'coronary artery disease'\r\n  AND n1 <> n3\r\nWITH\r\n  path,\r\n[\r\n  size((n0)-[:BINDS_CbG]-()),\r\n  size(()-[:BINDS_CbG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n3)),\r\n  size((n3)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n4))\r\n] AS degrees\r\nRETURN\r\n  substring(reduce(s = '', node IN nodes(path)| s + '–' + node.name), 1) AS nodes,\r\n  reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4) AS PDP\r\nORDER BY PDP DESC\r\n```\r\n\r\nOverall, 757 paths were returned. The top 3 paths are:\r\n\r\n| nodes | PDP |\r\n|-----------------|----------|\r\n| Enalapril–ACE–Metabolism of Angiotensinogen to Angiotensins–ACE2–coronary artery disease | 0.000258 |\r\n| Enalapril–ACE–ACE Inhibitor Pathway–NR3C2–coronary artery disease | 0.000252 |\r\n| Enalapril–ACE–ACE Inhibitor Pathway–ACE2–coronary artery disease | 0.000245 |\r\n\r\nNow let's assume we're more interested in the contributions of specific pathway nodes rather than specific paths. In other words, we don't really care what genes got us to a pathway, we just want an overal score per pathway. In this case, we can select `n2` as the position. Now we're computing a DWPC for *Enalapril*–binds–Gene–participates–**Pathway**–participates–Gene–associates–*coronary artery disease*, where bold indicates position. The query becomes:\r\n\r\n```cypher\r\nMATCH path = (n0:Compound)-[:BINDS_CbG]-(n1)-[:PARTICIPATES_GpPW]-\r\n  (n2)-[:PARTICIPATES_GpPW]-(n3)-[:ASSOCIATES_DaG]-(n4:Disease)\r\nUSING JOIN ON n2\r\nWHERE n0.name = 'Enalapril'\r\n  AND n4.name = 'coronary artery disease'\r\n  AND n1 <> n3\r\nWITH\r\n  path,\r\n  n2 AS pathway,\r\n[\r\n  size((n0)-[:BINDS_CbG]-()),\r\n  size(()-[:BINDS_CbG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n3)),\r\n  size((n3)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n4))\r\n] AS degrees\r\nRETURN\r\n  pathway.identifier AS pathway_id,\r\n  pathway.name AS pathway_name,\r\n  count(*) AS PC,\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4)) AS DWPC\r\nORDER BY DWPC DESC, pathway_name\r\n```\r\n\r\n40 pathways are returned, of which the top 5 are displayed below:\r\n\r\n| pathway_id | pathway_name | PC | DWPC |\r\n|--------------|-----------------------------------------------|-----|--------|\r\n| WP554_r84372 | ACE Inhibitor Pathway | 11 | 0.0015 |\r\n| PC7_8339 | Transmembrane transport of small molecules | 150 | 0.0008 |\r\n| PC7_5323 | Metabolism of Angiotensinogen to Angiotensins | 3 | 0.0005 |\r\n| PC7_7290 | SLC-mediated transmembrane transport | 40 | 0.0004 |\r\n| PC7_5322 | Metabolism | 309 | 0.0004 |\r\n\r\nAs shown, we now have a ranking of pathways based on their contribution to the overall _CbGpPWpGaD_ metapath. Currently, I don't see a huge role for this approach for feature extraction, but think it's useful for following up on specific predictions and highlighting mechanisms of drug efficacy.",
+      "body_html": "<h1>Enalapril for coronary artery disease example</h1>\r\n\r\n<p><strong>Prelude:</strong> I recently helped <a href=\"/u/cgreene\" class=\"username\">@cgreene</a> with a grant proposal titled \"Network-based algorithms for drug discovery from genetic associations\" (application <code>1R01HG009516-01A1</code>). For this proposal, we wanted to show an example where considering the tissue-specificity of paths helped identify the mechanisms of drug efficacy. In the course of this analysis, we came up with the partial DWPC method and the following example (the tissue-specific additions are <em>not</em> included below).</p>\r\n\r\n<hr>\r\n\r\n<p>Enalapril treats coronary artery disease (CAD) by inhibiting angiotensin-converting enzyme (ACE) <span class=\"citation\">[<a href=\"/doi/10.1001/archinte.166.7.787\" class=\"citation\" data-key=\"10.1001/archinte.166.7.787\">1</a>]</span>. Traditionally, if we were interested in potential pathways contributing to drug efficacy we may search for <em>CbGpPWpGaD</em> paths between enalapril and CAD. Below is the Cypher query to return all paths, ranked by PDP (run the query at <a href=\"https://neo4j.het.io\">https://neo4j.het.io</a>):</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH path = (n0:Compound)-[:BINDS_CbG]-(n1)-[:PARTICIPATES_GpPW]-\r\n  (n2)-[:PARTICIPATES_GpPW]-(n3)-[:ASSOCIATES_DaG]-(n4:Disease)\r\nUSING JOIN ON n2\r\nWHERE n0.name = 'Enalapril'\r\n  AND n4.name = 'coronary artery disease'\r\n  AND n1 &lt;&gt; n3\r\nWITH\r\n  path,\r\n[\r\n  size((n0)-[:BINDS_CbG]-()),\r\n  size(()-[:BINDS_CbG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n3)),\r\n  size((n3)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n4))\r\n] AS degrees\r\nRETURN\r\n  substring(reduce(s = '', node IN nodes(path)| s + '–' + node.name), 1) AS nodes,\r\n  reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4) AS PDP\r\nORDER BY PDP DESC</code></pre>\r\n\r\n<p>Overall, 757 paths were returned. The top 3 paths are:</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>nodes</th><th>PDP</th></tr></thead><tbody><tr><td>Enalapril–ACE–Metabolism of Angiotensinogen to Angiotensins–ACE2–coronary artery disease</td><td>0.000258</td></tr><tr><td>Enalapril–ACE–ACE Inhibitor Pathway–NR3C2–coronary artery disease</td><td>0.000252</td></tr><tr><td>Enalapril–ACE–ACE Inhibitor Pathway–ACE2–coronary artery disease</td><td>0.000245</td></tr></tbody></table>\r\n\r\n<p>Now let's assume we're more interested in the contributions of specific pathway nodes rather than specific paths. In other words, we don't really care what genes got us to a pathway, we just want an overal score per pathway. In this case, we can select <code>n2</code> as the position. Now we're computing a DWPC for <em>Enalapril</em>–binds–Gene–participates–<strong>Pathway</strong>–participates–Gene–associates–<em>coronary artery disease</em>, where bold indicates position. The query becomes:</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH path = (n0:Compound)-[:BINDS_CbG]-(n1)-[:PARTICIPATES_GpPW]-\r\n  (n2)-[:PARTICIPATES_GpPW]-(n3)-[:ASSOCIATES_DaG]-(n4:Disease)\r\nUSING JOIN ON n2\r\nWHERE n0.name = 'Enalapril'\r\n  AND n4.name = 'coronary artery disease'\r\n  AND n1 &lt;&gt; n3\r\nWITH\r\n  path,\r\n  n2 AS pathway,\r\n[\r\n  size((n0)-[:BINDS_CbG]-()),\r\n  size(()-[:BINDS_CbG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n3)),\r\n  size((n3)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n4))\r\n] AS degrees\r\nRETURN\r\n  pathway.identifier AS pathway_id,\r\n  pathway.name AS pathway_name,\r\n  count(*) AS PC,\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4)) AS DWPC\r\nORDER BY DWPC DESC, pathway_name</code></pre>\r\n\r\n<p>40 pathways are returned, of which the top 5 are displayed below:</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>pathway_id</th><th>pathway_name</th><th>PC</th><th>DWPC</th></tr></thead><tbody><tr><td>WP554_r84372</td><td>ACE Inhibitor Pathway</td><td>11</td><td>0.0015</td></tr><tr><td>PC7_8339</td><td>Transmembrane transport of small molecules</td><td>150</td><td>0.0008</td></tr><tr><td>PC7_5323</td><td>Metabolism of Angiotensinogen to Angiotensins</td><td>3</td><td>0.0005</td></tr><tr><td>PC7_7290</td><td>SLC-mediated transmembrane transport</td><td>40</td><td>0.0004</td></tr><tr><td>PC7_5322</td><td>Metabolism</td><td>309</td><td>0.0004</td></tr></tbody></table>\r\n\r\n<p>As shown, we now have a ranking of pathways based on their contribution to the overall <em>CbGpPWpGaD</em> metapath. Currently, I don't see a huge role for this approach for feature extraction, but think it's useful for following up on specific predictions and highlighting mechanisms of drug efficacy.</p>",
+      "body_md": "# Enalapril for coronary artery disease example\r\n\r\n**Prelude:** I recently helped @cgreene with a grant proposal titled \"Network-based algorithms for drug discovery from genetic associations\" (application `1R01HG009516-01A1`). For this proposal, we wanted to show an example where considering the tissue-specificity of paths helped identify the mechanisms of drug efficacy. In the course of this analysis, we came up with the partial DWPC method and the following example (the tissue-specific additions are _not_ included below).\r\n\r\n***\r\n\r\nEnalapril treats coronary artery disease (CAD) by inhibiting angiotensin-converting enzyme (ACE) [@10.1001/archinte.166.7.787]. Traditionally, if we were interested in potential pathways contributing to drug efficacy we may search for _CbGpPWpGaD_ paths between enalapril and CAD. Below is the Cypher query to return all paths, ranked by PDP (run the query at https://neo4j.het.io):\r\n\r\n```cypher\r\nMATCH path = (n0:Compound)-[:BINDS_CbG]-(n1)-[:PARTICIPATES_GpPW]-\r\n  (n2)-[:PARTICIPATES_GpPW]-(n3)-[:ASSOCIATES_DaG]-(n4:Disease)\r\nUSING JOIN ON n2\r\nWHERE n0.name = 'Enalapril'\r\n  AND n4.name = 'coronary artery disease'\r\n  AND n1 <> n3\r\nWITH\r\n  path,\r\n[\r\n  size((n0)-[:BINDS_CbG]-()),\r\n  size(()-[:BINDS_CbG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n3)),\r\n  size((n3)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n4))\r\n] AS degrees\r\nRETURN\r\n  substring(reduce(s = '', node IN nodes(path)| s + '–' + node.name), 1) AS nodes,\r\n  reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4) AS PDP\r\nORDER BY PDP DESC\r\n```\r\n\r\nOverall, 757 paths were returned. The top 3 paths are:\r\n\r\n| nodes | PDP |\r\n|-----------------|----------|\r\n| Enalapril–ACE–Metabolism of Angiotensinogen to Angiotensins–ACE2–coronary artery disease | 0.000258 |\r\n| Enalapril–ACE–ACE Inhibitor Pathway–NR3C2–coronary artery disease | 0.000252 |\r\n| Enalapril–ACE–ACE Inhibitor Pathway–ACE2–coronary artery disease | 0.000245 |\r\n\r\nNow let's assume we're more interested in the contributions of specific pathway nodes rather than specific paths. In other words, we don't really care what genes got us to a pathway, we just want an overal score per pathway. In this case, we can select `n2` as the position. Now we're computing a DWPC for *Enalapril*–binds–Gene–participates–**Pathway**–participates–Gene–associates–*coronary artery disease*, where bold indicates position. The query becomes:\r\n\r\n```cypher\r\nMATCH path = (n0:Compound)-[:BINDS_CbG]-(n1)-[:PARTICIPATES_GpPW]-\r\n  (n2)-[:PARTICIPATES_GpPW]-(n3)-[:ASSOCIATES_DaG]-(n4:Disease)\r\nUSING JOIN ON n2\r\nWHERE n0.name = 'Enalapril'\r\n  AND n4.name = 'coronary artery disease'\r\n  AND n1 <> n3\r\nWITH\r\n  path,\r\n  n2 AS pathway,\r\n[\r\n  size((n0)-[:BINDS_CbG]-()),\r\n  size(()-[:BINDS_CbG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n3)),\r\n  size((n3)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n4))\r\n] AS degrees\r\nRETURN\r\n  pathway.identifier AS pathway_id,\r\n  pathway.name AS pathway_name,\r\n  count(*) AS PC,\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4)) AS DWPC\r\nORDER BY DWPC DESC, pathway_name\r\n```\r\n\r\n40 pathways are returned, of which the top 5 are displayed below:\r\n\r\n| pathway_id | pathway_name | PC | DWPC |\r\n|--------------|-----------------------------------------------|-----|--------|\r\n| WP554_r84372 | ACE Inhibitor Pathway | 11 | 0.0015 |\r\n| PC7_8339 | Transmembrane transport of small molecules | 150 | 0.0008 |\r\n| PC7_5323 | Metabolism of Angiotensinogen to Angiotensins | 3 | 0.0005 |\r\n| PC7_7290 | SLC-mediated transmembrane transport | 40 | 0.0004 |\r\n| PC7_5322 | Metabolism | 309 | 0.0004 |\r\n\r\nAs shown, we now have a ranking of pathways based on their contribution to the overall _CbGpPWpGaD_ metapath. Currently, I don't see a huge role for this approach for feature extraction, but think it's useful for following up on specific predictions and highlighting mechanisms of drug efficacy.",
       "comment_id": 1446,
       "profile_id": 17,
       "published": "2016-12-15T21:41:18.549540Z",
@@ -5075,6 +5075,42 @@
       "published": "2016-12-19T15:37:26.501858Z",
       "thread_id": 226,
       "url": "/doc/7/review#31"
+    },
+    {
+      "body_html": "<p>The result of Project Rephetio is <a href=\"https://thinklab.com/discussion/predictions-of-whether-a-compound-treats-a-disease/203\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d203\">predicted probabilities of treatment</a> for 209,168 compound–disease pairs. In addition to providing the predictions, we provide Neo4j browser guides with details for each individual prediction.</p>\r\n\r\n<p>The guides include the following:</p>\r\n\r\n<ul><li>a table of metapaths supporting the prediction</li><li>a table of the top 25 paths supporting the prediction</li><li>a visualization of the top 10 network paths supporting the prediction</li></ul>\r\n\r\n<p>As an example, see the guide for the prediction that <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB01156/DOID_0050742.html\" title=\"Hetionet v1.0 Neo4j Browser\">bupropion treats nicotine dependence</a> (you've got to click play to show the guide). This discussion will go over how we assign contribution scores to specific metapaths and paths.</p>",
+      "body_md": "The result of Project Rephetio is [predicted probabilities of treatment](https://thinklab.com/discussion/predictions-of-whether-a-compound-treats-a-disease/203) for 209,168 compound–disease pairs. In addition to providing the predictions, we provide Neo4j browser guides with details for each individual prediction.\r\n\r\nThe guides include the following:\r\n\r\n+ a table of metapaths supporting the prediction\r\n+ a table of the top 25 paths supporting the prediction\r\n+ a visualization of the top 10 network paths supporting the prediction\r\n\r\nAs an example, see the guide for the prediction that [bupropion treats nicotine dependence](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB01156/DOID_0050742.html \"Hetionet v1.0 Neo4j Browser\") (you've got to click play to show the guide). This discussion will go over how we assign contribution scores to specific metapaths and paths.",
+      "comment_id": 1451,
+      "profile_id": 17,
+      "published": "2016-12-21T22:32:28.054612Z",
+      "thread_id": 229,
+      "url": "/discussion/decomposing-predictions-into-their-network-support/229"
+    },
+    {
+      "body_html": "<h1>Calculating metapath and path contributions</h1>\r\n\r\n<p>The computation of contribution stats for each prediction occurs in <a href=\"https://github.com/dhimmel/learn/blob/0fbb1a533d378da6fbc213682e7b7e11c582aa98/prediction/5-contribution.ipynb\">this notebook</a>. The code is rather gnarly, so I'm going to describe the method by example. Specifically, what specific network evidence do we observe for bupropion treating nicotine dependence, something we've <a href=\"https://thinklab.com/discussion/predictions-of-whether-a-compound-treats-a-disease/203#8\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d203\">discussed before</a>.</p>\r\n\r\n<p>The first step is to compile the list of metapaths that provide support for the prediction. Our <a href=\"https://thinklab.com/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d210\">logistic regression model</a> assigned positive coefficients to 12 DWPC features. Going forward, we only consider these 12 metapaths. A metapath is considered to positively contribute if its logistic regression term is positive. The following table shows the process:</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>Metapath</th><th>Path Count</th><th>DWPC</th><th>Transformed DWPC</th><th>Coefficient</th><th>Term</th><th>Contribution</th></tr></thead><tbody><tr><td>CbGaD</td><td>1</td><td>0.0261</td><td>3.859</td><td>0.198</td><td>0.765</td><td>41.26%</td></tr><tr><td>CbGbCtD</td><td>1</td><td>0.0287</td><td>3.201</td><td>0.223</td><td>0.713</td><td>38.48%</td></tr><tr><td>CcSEcCtD</td><td>208</td><td>0.0371</td><td>2.360</td><td>0.081</td><td>0.192</td><td>10.36%</td></tr><tr><td>CbGpPWpGaD</td><td>142</td><td>0.0329</td><td>3.211</td><td>0.055</td><td>0.176</td><td>9.47%</td></tr><tr><td>CbGeAlD</td><td>13</td><td>0.0019</td><td>0.211</td><td>0.037</td><td>0.008</td><td>0.42%</td></tr></tbody></table>\r\n\r\n<p>The table shows that there are 5 metapaths providing positive support. The metapath's Transformed DWPC (which has been <a href=\"https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d193\">IHS-transformed</a> and standardized) is multiplied by the logistic regression coefficient to compute the Term. Only metapaths with positive terms retrained. So for example, if a specific compound-disease pair has a negative Transformed DWPC, it is not considered to contribute. In reality a lack of paths of the given type is negatively contributing to the prediction — but this effect cannot be decomposed to specific paths, so we ignore it. Finally, all of the terms can be scaled to sum to one, yielding Contribution — the proportion of the total support provided by a specific metapath.</p>\r\n\r\n<p>Once we know the contribution of a metapath, it's easy to calculate the contribution of a specific path, since we know how much each path contributes to the untransformed DWPC. To compute the contribution of a path, we multiply its metapath's contribution by its contribution to that metapath. For the bupropion example, we can calculate the overall contribution of each CbGpPWpGaD path, using the DWPC and Contribution values from the above table:</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH path = (n0:Compound)-[:BINDS_CbG]-(n1)-[:PARTICIPATES_GpPW]-(n2)-[:PARTICIPATES_GpPW]-(n3)-[:ASSOCIATES_DaG]-(n4:Disease)\r\n  USING JOIN ON n2\r\nWHERE n0.name = 'Bupropion'\r\n  AND n4.name = 'nicotine dependence'\r\n  AND n1 &lt;&gt; n3\r\nWITH\r\n[\r\n  size((n0)-[:BINDS_CbG]-()),\r\n  size(()-[:BINDS_CbG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n3)),\r\n  size((n3)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n4))\r\n] AS degrees, path\r\nWITH\r\n  extract(n in nodes(path)| n.name) AS nodes,\r\n  // Input the untransformed DWPC in the next line\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4)) / 0.03288 AS dwpc_contribution\r\nWITH\r\n  nodes,\r\n  dwpc_contribution, // Contribution of the PDP to the DWPC\r\n  // Input the metapath contribution in the next line\r\n  dwpc_contribution * 0.0947 AS contribution // Contribution of the PDP to the overall prediction\r\nRETURN nodes, dwpc_contribution, contribution\r\nORDER BY contribution DESC</code></pre>\r\n\r\n<p>The contribution values returned by this query equal the values in the path table of the <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB01156/DOID_0050742.html\">browser guide</a> (copied below).</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>Percent of Prediction</th><th>Percent of DWPC</th><th>Metapath</th><th>Length</th><th>Verbose Path</th></tr></thead><tbody><tr><td>41.30%</td><td>100.00%</td><td>CbGaD</td><td>2</td><td>Bupropion–binds–CHRNA3–associates–nicotine dependence</td></tr><tr><td>38.50%</td><td>100.00%</td><td>CbGbCtD</td><td>3</td><td>Bupropion–binds–CHRNA3–binds–Varenicline–treats–nicotine dependence</td></tr><tr><td>0.52%</td><td>5.47%</td><td>CbGpPWpGaD</td><td>4</td><td>Bupropion–binds–CHRNA3–participates–Nicotine Activity on Chromaffin Cells–participates–CHRNB4–associates–nicotine dependence</td></tr><tr><td>0.41%</td><td>4.35%</td><td>CbGpPWpGaD</td><td>4</td><td>Bupropion–binds–CHRNA3–participates–Highly calcium permeable nicotinic acetylcholine receptors–participates–CHRNB3–associates–nicotine dependence</td></tr></tbody></table>\r\n\r\n<p>One limitation of our approach is that it overlooks paths that contribute to a prediction but correspond to a metapath whose transformed DWPC was negative (which occurs for DWPCs that are below the mean).</p>",
+      "body_md": "# Calculating metapath and path contributions\r\n\r\nThe computation of contribution stats for each prediction occurs in [this notebook](https://github.com/dhimmel/learn/blob/0fbb1a533d378da6fbc213682e7b7e11c582aa98/prediction/5-contribution.ipynb). The code is rather gnarly, so I'm going to describe the method by example. Specifically, what specific network evidence do we observe for bupropion treating nicotine dependence, something we've [discussed before](https://thinklab.com/discussion/predictions-of-whether-a-compound-treats-a-disease/203#8).\r\n\r\nThe first step is to compile the list of metapaths that provide support for the prediction. Our [logistic regression model](https://thinklab.com/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4) assigned positive coefficients to 12 DWPC features. Going forward, we only consider these 12 metapaths. A metapath is considered to positively contribute if its logistic regression term is positive. The following table shows the process:\r\n\r\n| Metapath | Path Count | DWPC | Transformed DWPC | Coefficient | Term | Contribution |\r\n|------------|------------|--------|------------------|-------------|--------------|------------|\r\n| CbGaD | 1 | 0.0261 | 3.859 | 0.198 | 0.765 | 41.26% |\r\n| CbGbCtD | 1 | 0.0287 | 3.201 | 0.223 | 0.713 | 38.48% |\r\n| CcSEcCtD | 208 | 0.0371 | 2.360 | 0.081 | 0.192 | 10.36% |\r\n| CbGpPWpGaD | 142 | 0.0329 | 3.211 | 0.055 | 0.176 | 9.47% |\r\n| CbGeAlD | 13 | 0.0019 | 0.211 | 0.037 | 0.008 | 0.42% |\r\n\r\nThe table shows that there are 5 metapaths providing positive support. The metapath's Transformed DWPC (which has been [IHS-transformed](https://thinklab.com/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193#6) and standardized) is multiplied by the logistic regression coefficient to compute the Term. Only metapaths with positive terms retrained. So for example, if a specific compound-disease pair has a negative Transformed DWPC, it is not considered to contribute. In reality a lack of paths of the given type is negatively contributing to the prediction -- but this effect cannot be decomposed to specific paths, so we ignore it. Finally, all of the terms can be scaled to sum to one, yielding Contribution -- the proportion of the total support provided by a specific metapath.\r\n\r\nOnce we know the contribution of a metapath, it's easy to calculate the contribution of a specific path, since we know how much each path contributes to the untransformed DWPC. To compute the contribution of a path, we multiply its metapath's contribution by its contribution to that metapath. For the bupropion example, we can calculate the overall contribution of each CbGpPWpGaD path, using the DWPC and Contribution values from the above table:\r\n\r\n```cypher\r\nMATCH path = (n0:Compound)-[:BINDS_CbG]-(n1)-[:PARTICIPATES_GpPW]-(n2)-[:PARTICIPATES_GpPW]-(n3)-[:ASSOCIATES_DaG]-(n4:Disease)\r\n  USING JOIN ON n2\r\nWHERE n0.name = 'Bupropion'\r\n  AND n4.name = 'nicotine dependence'\r\n  AND n1 <> n3\r\nWITH\r\n[\r\n  size((n0)-[:BINDS_CbG]-()),\r\n  size(()-[:BINDS_CbG]-(n1)),\r\n  size((n1)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n2)),\r\n  size((n2)-[:PARTICIPATES_GpPW]-()),\r\n  size(()-[:PARTICIPATES_GpPW]-(n3)),\r\n  size((n3)-[:ASSOCIATES_DaG]-()),\r\n  size(()-[:ASSOCIATES_DaG]-(n4))\r\n] AS degrees, path\r\nWITH\r\n  extract(n in nodes(path)| n.name) AS nodes,\r\n  // Input the untransformed DWPC in the next line\r\n  sum(reduce(pdp = 1.0, d in degrees| pdp * d ^ -0.4)) / 0.03288 AS dwpc_contribution\r\nWITH\r\n  nodes,\r\n  dwpc_contribution, // Contribution of the PDP to the DWPC\r\n  // Input the metapath contribution in the next line\r\n  dwpc_contribution * 0.0947 AS contribution // Contribution of the PDP to the overall prediction\r\nRETURN nodes, dwpc_contribution, contribution\r\nORDER BY contribution DESC\r\n```\r\n\r\nThe contribution values returned by this query equal the values in the path table of the [browser guide](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB01156/DOID_0050742.html) (copied below).\r\n\r\n| Percent of Prediction | Percent of DWPC | Metapath | Length | Verbose Path |\r\n|-----------------------|-----------------|------------|--------|-----------|\r\n| 41.30% | 100.00% | CbGaD | 2 | Bupropion–binds–CHRNA3–associates–nicotine dependence |\r\n| 38.50% | 100.00% | CbGbCtD | 3 | Bupropion–binds–CHRNA3–binds–Varenicline–treats–nicotine dependence |\r\n| 0.52% | 5.47% | CbGpPWpGaD | 4 | Bupropion–binds–CHRNA3–participates–Nicotine Activity on Chromaffin Cells–participates–CHRNB4–associates–nicotine dependence |\r\n| 0.41% | 4.35% | CbGpPWpGaD | 4 | Bupropion–binds–CHRNA3–participates–Highly calcium permeable nicotinic acetylcholine receptors–participates–CHRNB3–associates–nicotine dependence |\r\n\r\nOne limitation of our approach is that it overlooks paths that contribute to a prediction but correspond to a metapath whose transformed DWPC was negative (which occurs for DWPCs that are below the mean).",
+      "comment_id": 1452,
+      "profile_id": 17,
+      "published": "2016-12-21T23:59:00.028255Z",
+      "thread_id": 229,
+      "url": "/discussion/decomposing-predictions-into-their-network-support/229#2"
+    },
+    {
+      "body_html": "<p>So were most of the metapath (type) counts done using Python instead of Cypher? I wondered if one of the reasons for migrating the network to Neo4j was for improving feature extraction, e.g. metapath counts.</p>",
+      "body_md": "So were most of the metapath (type) counts done using Python instead of Cypher? I wondered if one of the reasons for migrating the network to Neo4j was for improving feature extraction, e.g. metapath counts.",
+      "comment_id": 1453,
+      "profile_id": 315,
+      "published": "2016-12-22T07:33:14.090563Z",
+      "thread_id": 226,
+      "url": "/doc/7/review#32"
+    },
+    {
+      "body_html": "<p>All operations on the metagraph are done in Python, as Neo4j does not have any way to interact with the metagraph. Figure 1, Table 1, and Table 2 are created using the <code>hetio</code> Python package, before the hetnet is imported into Neo4j.</p>\n\n<p>The <a href=\"https://thinklab.com/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d112\">adoption of Neo4j</a> was primarily motivated by the need for immediate network access and a versatile graph query language. Regarding feature extraction, both <code>hetio</code> and Cypher can calculate the DWPC, although the Cypher implementation is more readable. Note that feature extraction (calculating the DWPC for a compound–disease–metapath combination) relies on extracting paths not metapaths.</p>",
+      "body_md": "All operations on the metagraph are done in Python, as Neo4j does not have any way to interact with the metagraph. Figure 1, Table 1, and Table 2 are created using the `hetio` Python package, before the hetnet is imported into Neo4j.\n\nThe [adoption of Neo4j](https://thinklab.com/discussion/using-the-neo4j-graph-database-for-hetnets/112) was primarily motivated by the need for immediate network access and a versatile graph query language. Regarding feature extraction, both `hetio` and Cypher can calculate the DWPC, although the Cypher implementation is more readable. Note that feature extraction (calculating the DWPC for a compound--disease--metapath combination) relies on extracting paths not metapaths.",
+      "comment_id": 1454,
+      "profile_id": 17,
+      "published": "2016-12-22T15:45:54.213561Z",
+      "thread_id": 226,
+      "url": "/doc/7/review#33"
     }
   ],
   "documents": [
@@ -5102,7 +5138,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/report",
-      "views": 241
+      "views": 247
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -7064,7 +7100,7 @@
       "username": "gaya_n"
     }
   ],
-  "retrieved": "2016-12-21T21:25:24.809526Z",
+  "retrieved": "2016-12-22T21:22:11.473570Z",
   "threads": [
     {
       "document_id": null,
@@ -7076,7 +7112,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 662
+      "views": 663
     },
     {
       "document_id": null,
@@ -7280,7 +7316,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 314
+      "views": 315
     },
     {
       "document_id": null,
@@ -7316,7 +7352,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 480
+      "views": 481
     },
     {
       "document_id": null,
@@ -7388,7 +7424,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 156
+      "views": 157
     },
     {
       "document_id": null,
@@ -7400,7 +7436,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 475
+      "views": 477
     },
     {
       "document_id": null,
@@ -7424,7 +7460,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 235
+      "views": 236
     },
     {
       "document_id": null,
@@ -7436,7 +7472,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 554
+      "views": 556
     },
     {
       "document_id": null,
@@ -7448,7 +7484,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 466
+      "views": 468
     },
     {
       "document_id": null,
@@ -7472,7 +7508,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 859
+      "views": 861
     },
     {
       "document_id": null,
@@ -7496,7 +7532,7 @@
       "thread_id": 91,
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 112
+      "views": 113
     },
     {
       "document_id": null,
@@ -7604,7 +7640,7 @@
       "thread_id": 105,
       "topic_field": "Genes,Diseases,DisGeNET,Associations",
       "url": "/discussion/processing-disgenet-for-disease-gene-relationships/105",
-      "views": 127
+      "views": 128
     },
     {
       "document_id": null,
@@ -7652,7 +7688,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 316
+      "views": 317
     },
     {
       "document_id": null,
@@ -7676,7 +7712,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 452
+      "views": 453
     },
     {
       "document_id": null,
@@ -7712,7 +7748,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 114
+      "views": 115
     },
     {
       "document_id": null,
@@ -7736,7 +7772,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 233
+      "views": 234
     },
     {
       "document_id": null,
@@ -7784,7 +7820,7 @@
       "thread_id": 178,
       "topic_field": "permutation,XSwap,network randomization,hetnets,hetio",
       "url": "/discussion/assessing-the-effectiveness-of-our-hetnet-permutations/178",
-      "views": 63
+      "views": 64
     },
     {
       "document_id": null,
@@ -7856,7 +7892,7 @@
       "thread_id": 193,
       "topic_field": "IHS,transformation,DWPC,regression",
       "url": "/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -7892,7 +7928,7 @@
       "thread_id": 201,
       "topic_field": "Machine learning,Heterogeneous Networks,Hetnets,HNEP,Prior Knowledge",
       "url": "/discussion/network-edge-prediction-estimating-the-prior/201",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -7904,7 +7940,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 184
+      "views": 185
     },
     {
       "document_id": null,
@@ -7916,7 +7952,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 260
+      "views": 261
     },
     {
       "document_id": null,
@@ -7928,7 +7964,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 633
+      "views": 639
     },
     {
       "document_id": null,
@@ -7940,7 +7976,7 @@
       "thread_id": 210,
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 92
+      "views": 93
     },
     {
       "document_id": null,
@@ -7976,7 +8012,7 @@
       "thread_id": 214,
       "topic_field": "DWPC,HNEP,Residual DWPC,R-DWPC,permutation,hetnet,algorithms",
       "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214",
-      "views": 59
+      "views": 60
     },
     {
       "document_id": null,
@@ -8000,7 +8036,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 170
+      "views": 171
     },
     {
       "document_id": null,
@@ -8012,7 +8048,7 @@
       "thread_id": 220,
       "topic_field": "Hetionet,Neo4j,Cypher,Network Biology",
       "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220",
-      "views": 113
+      "views": 115
     },
     {
       "document_id": null,
@@ -8036,7 +8072,7 @@
       "thread_id": 226,
       "topic_field": "",
       "url": "/doc/7/review",
-      "views": 22
+      "views": 25
     },
     {
       "document_id": null,
@@ -8048,7 +8084,7 @@
       "thread_id": 227,
       "topic_field": "applied imagination,Hetionet,hetnets,future,planning",
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227",
-      "views": 55
+      "views": 56
     },
     {
       "document_id": null,
@@ -8060,7 +8096,19 @@
       "thread_id": 228,
       "topic_field": "HNEP,DWPC,algorithms,hetnet,metapath,cypher",
       "url": "/discussion/decomposing-the-dwpc-to-assess-intermediate-node-contributions/228",
-      "views": 7
+      "views": 8
+    },
+    {
+      "document_id": null,
+      "doi": "10.15363/thinklab.d229",
+      "doi_field": "",
+      "profile_id": 17,
+      "published": "2016-12-21T22:32:27.980844Z",
+      "subject": "Decomposing predictions into their network support",
+      "thread_id": 229,
+      "topic_field": "DWPC,hetnet,paths,metapaths,machine learning,algorithms",
+      "url": "/discussion/decomposing-predictions-into-their-network-support/229",
+      "views": 9
     }
   ]
 }

@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-12-21T21:24:36.247368Z",
+  "retrieved": "2016-12-22T21:22:06.405959Z",
   "threads": [
     {
       "document_id": null,
@@ -505,7 +505,7 @@
       "thread_id": 119,
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 130
+      "views": 131
     },
     {
       "document_id": null,
@@ -541,7 +541,7 @@
       "thread_id": 122,
       "topic_field": "",
       "url": "/discussion/clarifying-the-scope-of-the-challenge/122",
-      "views": 53
+      "views": 54
     },
     {
       "document_id": null,
