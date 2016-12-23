@@ -903,7 +903,7 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1422	17	rephetio	2016-12-08T20:10:31.078726Z	226	/doc/7/review#7	7	43
 1424	315	rephetio	2016-12-15T04:15:28.467649Z	226	/doc/7/review#8	22	120
 1425	315	rephetio	2016-12-15T04:16:54.733830Z	226	/doc/7/review#9	21	124
-1426	315	rephetio	2016-12-15T04:18:13.552137Z	226	/doc/7/review#10	11	54
+1426	315	rephetio	2016-12-15T04:18:13.552137Z	226	/doc/7/review#10	11	53
 1427	315	rephetio	2016-12-15T04:19:48.389218Z	226	/doc/7/review#11	7	30
 1428	315	rephetio	2016-12-15T04:20:44.874988Z	226	/doc/7/review#12	9	49
 1429	315	rephetio	2016-12-15T04:22:34.888786Z	226	/doc/7/review#13	8	47
@@ -927,10 +927,14 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1447	17	rephetio	2016-12-16T15:31:26.181121Z	226	/doc/7/review#29	104	579
 1448	176	rephetio	2016-12-16T20:33:48.959931Z	226	/doc/7/review#30	89	567
 1449	17	rephetio	2016-12-19T15:37:26.501858Z	226	/doc/7/review#31	11	67
+1450	17	rephetio	2016-12-23T16:29:41.310951Z	228	/discussion/decomposing-the-dwpc-to-assess-intermediate-node-contributions/228#3	517	3550
 1451	17	rephetio	2016-12-21T22:32:28.054612Z	229	/discussion/decomposing-predictions-into-their-network-support/229	105	660
 1452	17	rephetio	2016-12-21T23:59:00.028255Z	229	/discussion/decomposing-predictions-into-their-network-support/229#2	623	4006
 1453	315	rephetio	2016-12-22T07:33:14.090563Z	226	/doc/7/review#32	36	207
 1454	17	rephetio	2016-12-22T15:45:54.213561Z	226	/doc/7/review#33	99	623
+1455	315	rephetio	2016-12-23T01:55:20.619152Z	226	/doc/7/review#34	15	74
+1456	17	rephetio	2016-12-23T14:58:50.192649Z	226	/doc/7/review#35	113	753
+1457	17	rephetio	2016-12-23T17:12:31.052626Z	229	/discussion/decomposing-predictions-into-their-network-support/229#3	315	1874
 799	17	thinklabOSP	2016-02-19T06:41:11.813300Z	160	/discussion/highlighting-the-immediacy-of-thinklab/160	158	1008
 800	125	thinklabOSP	2016-02-16T12:50:44.682536Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161	186	1007
 801	2	thinklabOSP	2016-02-16T18:06:25.264019Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161#2	209	1169
