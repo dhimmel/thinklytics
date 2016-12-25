@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2016-12-24T21:22:19.054638Z",
+  "retrieved": "2016-12-25T21:22:16.647768Z",
   "threads": [
     {
       "document_id": null,
@@ -2580,7 +2580,7 @@
       "thread_id": 27,
       "topic_field": "ThinkLab,File Hosting,Figshare,Data",
       "url": "/discussion/file-hosting-advice/27",
-      "views": 111
+      "views": 112
     },
     {
       "document_id": null,
@@ -2604,7 +2604,7 @@
       "thread_id": 32,
       "topic_field": "Markdown,TLFM",
       "url": "/discussion/markdown-feedback-bugs-and-suggestions/32",
-      "views": 105
+      "views": 106
     },
     {
       "document_id": null,
@@ -2628,7 +2628,7 @@
       "thread_id": 37,
       "topic_field": "ThinkLab,Discussions,Draft",
       "url": "/discussion/draft-mode-for-new-discussions/37",
-      "views": 29
+      "views": 31
     },
     {
       "document_id": null,
@@ -2760,7 +2760,7 @@
       "thread_id": 69,
       "topic_field": "Markdown,Discussions,Citation,DOI",
       "url": "/discussion/citing-thinklab-discussions-feedback-please/69",
-      "views": 42
+      "views": 43
     },
     {
       "document_id": null,
@@ -3024,7 +3024,7 @@
       "thread_id": 198,
       "topic_field": "SEO,Search Engine Marketing,HMTL,meta,description",
       "url": "/discussion/improving-search-engine-previewing/198",
-      "views": 46
+      "views": 47
     },
     {
       "document_id": null,
