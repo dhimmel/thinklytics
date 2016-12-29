@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-12-28T21:23:54.187891Z",
+  "retrieved": "2016-12-29T21:24:35.479003Z",
   "threads": [
     {
       "document_id": null,
@@ -469,7 +469,7 @@
       "thread_id": 76,
       "topic_field": "Duplicates,Pathways,Curation",
       "url": "/discussion/duplicate-pathway-detection-and-resolution/76",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,
@@ -553,7 +553,7 @@
       "thread_id": 123,
       "topic_field": "Crowdsourcing,Gamification,Science Games,Serious Games",
       "url": "/discussion/what-made-previous-crowdsourced-science-games-succeed-or-not/123",
-      "views": 53
+      "views": 54
     }
   ]
 }
