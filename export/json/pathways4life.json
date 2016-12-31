@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2016-12-30T21:25:36.945029Z",
+  "retrieved": "2016-12-31T21:26:16.356878Z",
   "threads": [
     {
       "document_id": null,
@@ -457,7 +457,7 @@
       "thread_id": 75,
       "topic_field": "Gene Relationships,Gene Interactions,Interactions,Pathways,Gene Sets",
       "url": "/discussion/pathway-novelty-based-on-unique-relationships-rather-than-genes/75",
-      "views": 51
+      "views": 52
     },
     {
       "document_id": null,
@@ -505,7 +505,7 @@
       "thread_id": 119,
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 131
+      "views": 132
     },
     {
       "document_id": null,
