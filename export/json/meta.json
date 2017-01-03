@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-01-02T21:26:45.817582Z",
+  "retrieved": "2017-01-03T21:27:00.394284Z",
   "threads": [
     {
       "document_id": null,
@@ -2880,7 +2880,7 @@
       "thread_id": 139,
       "topic_field": "",
       "url": "/discussion/latex-integration/139",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 136
+      "views": 138
     },
     {
       "document_id": null,
@@ -3060,7 +3060,7 @@
       "thread_id": 209,
       "topic_field": "",
       "url": "/discussion/share-single-posts/209",
-      "views": 27
+      "views": 28
     }
   ]
 }
