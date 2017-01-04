@@ -6837,6 +6837,15 @@
       "note_id": 297,
       "profile_id": 188,
       "url": "/discussion/decomposing-the-dwpc-to-assess-intermediate-node-contributions/228#note-297"
+    },
+    {
+      "added": "2017-01-04T17:06:48.460957Z",
+      "body_html": "<p>Thanks <a href=\"/u/b_good\" class=\"username\">@b_good</a> and <a href=\"/u/alexratner\" class=\"username\">@alexratner</a> for weighing in. The Greene Lab has got a new rotation  student, David Nicholson, who is interesting in piloting Snorkel. We <a href=\"https://github.com/greenelab/snorkeling/issues/1\">were thinking</a> of starting with <em>Compound–treats–Disease</em> relationships. The project is on GitHub at <a href=\"https://github.com/greenelab/snorkeling\"><code>greenelab/snorkeling</code></a>. Your time permitting, <a href=\"/u/b_good\" class=\"username\">@b_good</a> we'd love your involvement, especially in the early stages where your feedback will lead us down the right path. <a href=\"/u/b_good\" class=\"username\">@b_good</a>, do you have a GitHub handle?</p>",
+      "body_md": "Thanks @b_good and @alexratner for weighing in. The Greene Lab has got a new rotation  student, David Nicholson, who is interesting in piloting Snorkel. We [were thinking](https://github.com/greenelab/snorkeling/issues/1) of starting with _Compound–treats–Disease_ relationships. The project is on GitHub at [`greenelab/snorkeling`](https://github.com/greenelab/snorkeling). Your time permitting, @b_good we'd love your involvement, especially in the early stages where your feedback will lead us down the right path. @b_good, do you have a GitHub handle?",
+      "comment_id": 1397,
+      "note_id": 298,
+      "profile_id": 17,
+      "url": "/discussion/brainstorming-future-directions-for-hetionet/227#note-298"
     }
   ],
   "profiles": [
@@ -7170,7 +7179,7 @@
       "username": "hanockkwak"
     }
   ],
-  "retrieved": "2017-01-03T21:27:06.262196Z",
+  "retrieved": "2017-01-04T21:28:03.322472Z",
   "threads": [
     {
       "document_id": null,
@@ -7182,7 +7191,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 677
+      "views": 680
     },
     {
       "document_id": null,
@@ -7266,7 +7275,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 297
+      "views": 298
     },
     {
       "document_id": null,
@@ -7302,7 +7311,7 @@
       "thread_id": 42,
       "topic_field": "Terminologies,Mapping,Incomplete Interactome,MeSH",
       "url": "/discussion/mapping-incomplete-interactome-disease-names-to-mesh/42",
-      "views": 69
+      "views": 70
     },
     {
       "document_id": null,
@@ -7374,7 +7383,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 358
+      "views": 359
     },
     {
       "document_id": null,
@@ -7398,7 +7407,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 248
+      "views": 249
     },
     {
       "document_id": null,
@@ -7458,7 +7467,7 @@
       "thread_id": 66,
       "topic_field": "",
       "url": "/discussion/kabob-knowledgebase/66",
-      "views": 113
+      "views": 115
     },
     {
       "document_id": null,
@@ -7506,7 +7515,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 480
+      "views": 483
     },
     {
       "document_id": null,
@@ -7566,7 +7575,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 924
+      "views": 926
     },
     {
       "document_id": null,
@@ -7578,7 +7587,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 866
+      "views": 868
     },
     {
       "document_id": null,
@@ -7662,7 +7671,7 @@
       "thread_id": 97,
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 159
+      "views": 160
     },
     {
       "document_id": null,
@@ -7782,7 +7791,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 464
+      "views": 465
     },
     {
       "document_id": null,
@@ -7830,7 +7839,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 214
+      "views": 215
     },
     {
       "document_id": null,
@@ -7878,7 +7887,7 @@
       "thread_id": 171,
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 212
+      "views": 213
     },
     {
       "document_id": null,
@@ -7914,7 +7923,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 256
+      "views": 257
     },
     {
       "document_id": null,
@@ -7926,7 +7935,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 159
+      "views": 160
     },
     {
       "document_id": null,
@@ -7950,7 +7959,7 @@
       "thread_id": 187,
       "topic_field": "complexity,runtime,optimization,Neo4J,join hints",
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187",
-      "views": 58
+      "views": 59
     },
     {
       "document_id": null,
@@ -7962,7 +7971,7 @@
       "thread_id": 193,
       "topic_field": "IHS,transformation,DWPC,regression",
       "url": "/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193",
-      "views": 66
+      "views": 67
     },
     {
       "document_id": null,
@@ -8022,7 +8031,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 265
+      "views": 266
     },
     {
       "document_id": null,
@@ -8034,7 +8043,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 656
+      "views": 660
     },
     {
       "document_id": null,
@@ -8058,7 +8067,7 @@
       "thread_id": 212,
       "topic_field": "clinical trials,ClinicalTrials.gov",
       "url": "/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212",
-      "views": 79
+      "views": 80
     },
     {
       "document_id": null,
@@ -8070,7 +8079,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 474
+      "views": 475
     },
     {
       "document_id": null,
@@ -8106,7 +8115,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 178
+      "views": 179
     },
     {
       "document_id": null,
@@ -8130,7 +8139,7 @@
       "thread_id": 224,
       "topic_field": "epilepsy,Hetionet",
       "url": "/discussion/prediction-in-epilepsy/224",
-      "views": 53
+      "views": 54
     },
     {
       "document_id": 7,
@@ -8154,7 +8163,7 @@
       "thread_id": 227,
       "topic_field": "applied imagination,Hetionet,hetnets,future,planning",
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227",
-      "views": 57
+      "views": 58
     },
     {
       "document_id": null,
