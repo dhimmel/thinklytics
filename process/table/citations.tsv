@@ -121,9 +121,9 @@ rephetio	10.1371/journal.pcbi.1004259	44
 rephetio	10.1136/amiajnl-2012-001431	15
 rephetio	10.1136/amiajnl-2012-000852	14
 rephetio	10.1038/msb.2011.26	13
+rephetio	10.1093/nar/gkt1068	12
 rephetio	10.1016/j.cell.2014.10.050	11
 rephetio	10.1016/j.jbi.2014.08.004	11
-rephetio	10.1093/nar/gkt1068	11
 rephetio	10.1093/database/bav016	10
 rephetio	10.1093/bioinformatics/btr260	9
 rephetio	10.1038/75556	8
@@ -144,6 +144,7 @@ rephetio	10.6084/m9.figshare.3103054	6
 rephetio	10.1007/978-3-540-69828-9_12	5
 rephetio	10.1038/ncomms10331	5
 rephetio	10.1093/nar/gkt1229	5
+rephetio	10.1093/nar/gkw993	5
 rephetio	10.1186/s13321-014-0043-5	5
 rephetio	10.1371/journal.pbio.0060184	5
 rephetio	10.1371/journal.pone.0049686	5
@@ -151,7 +152,6 @@ rephetio	10.1021/ci100050t	4
 rephetio	10.1073/pnas.0506580102	4
 rephetio	10.1093/comnet/cnu016	4
 rephetio	10.1093/database/bav028	4
-rephetio	10.1093/nar/gkw993	4
 rephetio	10.1101/011569	4
 rephetio	10.1101/087619	4
 rephetio	10.1126/science.1158140	4
@@ -159,6 +159,7 @@ rephetio	10.1136/amiajnl-2011-000116	4
 rephetio	10.1137/1.9781611972795.67	4
 rephetio	10.1186/s13073-014-0095-1	4
 rephetio	10.1371/journal.pgen.1004967	4
+rephetio	10.15363/thinklab.d186	4
 rephetio	10.18637/jss.v033.i01	4
 rephetio	10.5281/zenodo.47223	4
 rephetio	10.1016/0022-2836	3
@@ -193,7 +194,6 @@ rephetio	10.1186/1758-2946-5-3	3
 rephetio	10.1186/1758-2946-5-7	3
 rephetio	10.1371/journal.pcbi.1000353	3
 rephetio	10.1371/journal.pcbi.1003285	3
-rephetio	10.15363/thinklab.d186	3
 rephetio	10.15363/thinklab.d215	3
 rephetio	10.3109/08037050903576726	3
 rephetio	10.5281/zenodo.21711	3
@@ -611,9 +611,11 @@ rephetio	10.1371/journal.pone.0009202	1
 rephetio	10.1371/journal.pone.0020284	1
 rephetio	10.1371/journal.pone.0101826	1
 rephetio	10.1385/comp:32:1:26	1
+rephetio	10.1517/13543776.2013.782394	1
 rephetio	10.1525/collabra.13	1
 rephetio	10.15363/thinklab.4	1
 rephetio	10.15363/thinklab.a5	1
+rephetio	10.15363/thinklab.a7	1
 rephetio	10.15363/thinklab.d102	1
 rephetio	10.15363/thinklab.d104	1
 rephetio	10.15363/thinklab.d105	1
@@ -664,6 +666,7 @@ rephetio	10.2147/NDT.S50371	1
 rephetio	10.2147/NDT.S833	1
 rephetio	10.2165/00023210-200519060-00004	1
 rephetio	10.2174/092986706778742918	1
+rephetio	10.2174/156802607780636726	1
 rephetio	10.2307/2332539	1
 rephetio	10.2337/diacare.26.2.279	1
 rephetio	10.3163/1536-5050.95.4.416	1
@@ -674,6 +677,7 @@ rephetio	10.3897/rio.1.e7547	1
 rephetio	10.4088/pcc.v05n0202	1
 rephetio	10.4088/pcc.v07n0305	1
 rephetio	10.4135/9781412983433	1
+rephetio	10.4135/9781483349985.n37	1
 rephetio	10.4137/JCNSD.S5128	1
 rephetio	10.5061/dryad.jp917	1
 rephetio	10.5114/aoms.2012.27270	1

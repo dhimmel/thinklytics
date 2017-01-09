@@ -5192,6 +5192,33 @@
       "published": "2017-01-08T17:54:47.796040Z",
       "thread_id": 226,
       "url": "/doc/7/review#38"
+    },
+    {
+      "body_html": "<h1>Chemical similarities between of the top epilepsy predictions</h1>\r\n\r\n<p>Hetionet v1.0 includes a <em>Compound–resembles–Compound</em> relationship based on <a href=\"https://thinklab.com/discussion/calculating-molecular-similarities-between-drugbank-compounds/70\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d70\">chemical similarity</a>. Resembles relationships were included for compounds with a Dice coefficient ≥ 0.5 <span class=\"citation\">[<a href=\"https://doi.org/10.15363/thinklab.a7\" class=\"citation hm citation-self\" data-key=\"10.15363/thinklab.a7\">1</a>]</span>.</p>\r\n\r\n<p>We can use the Hetionet Browser at <a href=\"https://neo4j.het.io\">https://neo4j.het.io</a> to visualize the chemical similarity between the top epilepsy predictions. First, set a Cypher parameter for <code>epilepsy_predictions</code> by executing:</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">:param epilepsy_predictions: ['Topiramate', 'Ethotoin', 'Quazepam', 'Alprazolam', 'Primidone', 'Lorazepam', 'Gabapentin', 'Diazepam', 'Methsuximide', 'Estazolam', 'Valproic Acid', 'Triazolam', 'Oxazepam', 'Temazepam', 'Phenytoin', 'Clorazepate', 'Clonazepam', 'Oxcarbazepine', 'Carbamazepine', 'Midazolam', 'Flurazepam', 'Tiagabine', 'Felbamate', 'Chlordiazepoxide', 'Amitriptyline', 'Lacosamide', 'Fosphenytoin', 'Lamotrigine', 'Clobazam', 'Pentobarbital', 'Butabarbital', 'Secobarbital', 'Bromazepam', 'Zonisamide', 'Levetiracetam', 'Talbutal', 'Methylphenobarbital', 'Heptabarbital', 'Nitrazepam', 'Butethal', 'Clotiazepam', 'Fospropofol', 'Sevoflurane', 'Aprobarbital', 'Thiopental', 'Halazepam', 'Phenobarbital', 'Desflurane', 'Fludiazepam', 'Amobarbital', 'Butalbital', 'Prazepam', 'Thiamylal', 'Cinolazepam', 'Glutethimide', 'Isoflurane', 'Adinazolam', 'Quinidine', 'Flunitrazepam', 'Clozapine', 'Ethosuximide', 'Trimethadione', 'Ketamine', 'Imipramine', 'Methazolamide', 'Ketazolam', 'Etomidate', 'Nortriptyline', 'Clomipramine', 'Acetazolamide', 'Enflurane', 'Modafinil', 'Phensuximide', 'Paramethadione', 'Verapamil', 'Chlorthalidone', 'Indapamide', 'Antipyrine', 'Cyproheptadine', 'Isocarboxazid', 'Bortezomib', 'Phenelzine', 'Diclofenamide', 'Pregabalin', 'Hexobarbital', 'Loxapine', 'Dalfampridine', 'Phenazopyridine', 'Zopiclone', 'Ranolazine', 'Amoxapine', 'Baclofen', 'Phenacemide', 'Eszopiclone', 'Desipramine', 'Dabrafenib', 'Rufinamide', 'Memantine', 'Zolpidem', 'Acamprosate']</code></pre>\r\n\r\n<p>To see the network: run the following  (with auto-complete turned on):</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH (c:Compound)\r\nWHERE c.name in  $epilepsy_predictions\r\nRETURN c</code></pre>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/21754174/c5ceafc6-d5c8-11e6-85da-111d94ec5525.png\" alt=\"epilepsy-prediction-resemblance\" title=\"Chemical similarity network of Project Rephetio top epilepsy predictions\"></p>\r\n\r\n<p>And to get a table with the number of similar epilepsy predictions for each compound, run:</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH (c0:Compound)-[rel:RESEMBLES_CrC]-(c1:Compound)\r\nWHERE c0.name in $epilepsy_predictions AND c1.name in $epilepsy_predictions\r\nRETURN c0.name AS compound_name, count(rel) AS n_similar_compounds\r\nORDER BY n_similar_compounds DESC, compound_name</code></pre>\r\n\r\n<p>This analysis shows that our top epilepsy predictions include many structurally similar compounds as well as many structurally dissimilar compounds. 29 of the 100 compounds resemble diazepam. Indeed, the benzodiazepines form the largest strongly connected component. The second largest strongly connected component appears to consist of barbiturates, such as phenobarbital which has 14 similar compounds. Halogenated ethers (e.g. enflurane) form a disjoint connected component.</p>\r\n\r\n<p>In total, 75 of the 100 compounds resemble at least one other compound. The median number of similar compounds was 6. Finally, 40 compounds had 2 or fewer similar compounds. This analysis shows our top epilepsy predictions pick up clusters of similar compounds, but not to the exclusion of dissimilar compounds.</p>",
+      "body_md": "# Chemical similarities between of the top epilepsy predictions\r\n\r\nHetionet v1.0 includes a _Compound--resembles--Compound_ relationship based on [chemical similarity](https://thinklab.com/discussion/calculating-molecular-similarities-between-drugbank-compounds/70). Resembles relationships were included for compounds with a Dice coefficient ≥ 0.5 [@10.15363/thinklab.a7].\r\n\r\nWe can use the Hetionet Browser at https://neo4j.het.io to visualize the chemical similarity between the top epilepsy predictions. First, set a Cypher parameter for `epilepsy_predictions` by executing:\r\n\r\n```cypher\r\n:param epilepsy_predictions: ['Topiramate', 'Ethotoin', 'Quazepam', 'Alprazolam', 'Primidone', 'Lorazepam', 'Gabapentin', 'Diazepam', 'Methsuximide', 'Estazolam', 'Valproic Acid', 'Triazolam', 'Oxazepam', 'Temazepam', 'Phenytoin', 'Clorazepate', 'Clonazepam', 'Oxcarbazepine', 'Carbamazepine', 'Midazolam', 'Flurazepam', 'Tiagabine', 'Felbamate', 'Chlordiazepoxide', 'Amitriptyline', 'Lacosamide', 'Fosphenytoin', 'Lamotrigine', 'Clobazam', 'Pentobarbital', 'Butabarbital', 'Secobarbital', 'Bromazepam', 'Zonisamide', 'Levetiracetam', 'Talbutal', 'Methylphenobarbital', 'Heptabarbital', 'Nitrazepam', 'Butethal', 'Clotiazepam', 'Fospropofol', 'Sevoflurane', 'Aprobarbital', 'Thiopental', 'Halazepam', 'Phenobarbital', 'Desflurane', 'Fludiazepam', 'Amobarbital', 'Butalbital', 'Prazepam', 'Thiamylal', 'Cinolazepam', 'Glutethimide', 'Isoflurane', 'Adinazolam', 'Quinidine', 'Flunitrazepam', 'Clozapine', 'Ethosuximide', 'Trimethadione', 'Ketamine', 'Imipramine', 'Methazolamide', 'Ketazolam', 'Etomidate', 'Nortriptyline', 'Clomipramine', 'Acetazolamide', 'Enflurane', 'Modafinil', 'Phensuximide', 'Paramethadione', 'Verapamil', 'Chlorthalidone', 'Indapamide', 'Antipyrine', 'Cyproheptadine', 'Isocarboxazid', 'Bortezomib', 'Phenelzine', 'Diclofenamide', 'Pregabalin', 'Hexobarbital', 'Loxapine', 'Dalfampridine', 'Phenazopyridine', 'Zopiclone', 'Ranolazine', 'Amoxapine', 'Baclofen', 'Phenacemide', 'Eszopiclone', 'Desipramine', 'Dabrafenib', 'Rufinamide', 'Memantine', 'Zolpidem', 'Acamprosate']\r\n```\r\n\r\nTo see the network: run the following  (with auto-complete turned on):\r\n\r\n```cypher\r\nMATCH (c:Compound)\r\nWHERE c.name in  $epilepsy_predictions\r\nRETURN c\r\n```\r\n\r\n![epilepsy-prediction-resemblance](https://cloud.githubusercontent.com/assets/1117703/21754174/c5ceafc6-d5c8-11e6-85da-111d94ec5525.png \"Chemical similarity network of Project Rephetio top epilepsy predictions\")\r\n\r\nAnd to get a table with the number of similar epilepsy predictions for each compound, run:\r\n\r\n```cypher\r\nMATCH (c0:Compound)-[rel:RESEMBLES_CrC]-(c1:Compound)\r\nWHERE c0.name in $epilepsy_predictions AND c1.name in $epilepsy_predictions\r\nRETURN c0.name AS compound_name, count(rel) AS n_similar_compounds\r\nORDER BY n_similar_compounds DESC, compound_name\r\n```\r\n\r\nThis analysis shows that our top epilepsy predictions include many structurally similar compounds as well as many structurally dissimilar compounds. 29 of the 100 compounds resemble diazepam. Indeed, the benzodiazepines form the largest strongly connected component. The second largest strongly connected component appears to consist of barbiturates, such as phenobarbital which has 14 similar compounds. Halogenated ethers (e.g. enflurane) form a disjoint connected component.\r\n\r\nIn total, 75 of the 100 compounds resemble at least one other compound. The median number of similar compounds was 6. Finally, 40 compounds had 2 or fewer similar compounds. This analysis shows our top epilepsy predictions pick up clusters of similar compounds, but not to the exclusion of dissimilar compounds.",
+      "comment_id": 1464,
+      "profile_id": 17,
+      "published": "2017-01-08T23:11:41.200175Z",
+      "thread_id": 224,
+      "url": "/discussion/prediction-in-epilepsy/224#9"
+    },
+    {
+      "body_html": "<h1>Categorizing the top epilepsy predictions</h1>\r\n\r\n<p>This post will investigate the categories of compounds in the top 100 epilepsy predictions. For this analysis (<a href=\"https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/3.contribution.ipynb\">notebook</a>), We'll use three categorizations of compounds: DrugBank categories, third-level ATC Codes, and DrugCentral pharmacologic classes.</p>\r\n\r\n<h2>DrugBank categories</h2>\r\n\r\n<p>DrugBank annotates compounds with <a href=\"https://www.drugbank.ca/categories\">categories</a> \"based on pharmacological action\" <span class=\"citation\">[<a href=\"https://doi.org/10.1093/nar/gkt1068\" class=\"citation hm \" data-key=\"10.1093/nar/gkt1068\">1</a>]</span>. Compounds can have zero or more categories. 84 of the 100 compounds had at least one annotated category. The top eight categories are shown below (<a href=\"https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/compounds-categories.tsv\">full table here</a>):</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>Category</th><th>Count</th><th>Compounds (in the top epilepsy predictions)</th></tr></thead><tbody><tr><td>Anticonvulsants</td><td>28</td><td>Acetazolamide, Carbamazepine, Clobazam, Clonazepam, Diazepam, Ethosuximide, Ethotoin, Felbamate, Fosphenytoin, Gabapentin, Lacosamide, Lamotrigine, Levetiracetam, Methsuximide, Methylphenobarbital, Nitrazepam, Oxcarbazepine, Phenobarbital, Phensuximide, Phenytoin, Pregabalin, Primidone, Thiopental, Tiagabine, Topiramate, Trimethadione, Valproic Acid, Zonisamide</td></tr><tr><td>Hypnotics and Sedatives</td><td>24</td><td>Alprazolam, Butabarbital, Butethal, Chlordiazepoxide, Cinolazepam, Diazepam, Eszopiclone, Etomidate, Fospropofol, Glutethimide, Halazepam, Hexobarbital, Lorazepam, Methylphenobarbital, Midazolam, Nitrazepam, Oxazepam, Pentobarbital, Phenobarbital, Quazepam, Secobarbital, Thiopental, Zolpidem, Zopiclone</td></tr><tr><td>GABA Modulators</td><td>17</td><td>Alprazolam, Bromazepam, Chlordiazepoxide, Clonazepam, Diazepam, Flunitrazepam, Hexobarbital, Methylphenobarbital, Midazolam, Nitrazepam, Oxazepam, Pentobarbital, Phenobarbital, Prazepam, Secobarbital, Thiopental, Triazolam</td></tr><tr><td>Benzodiazepines</td><td>15</td><td>Alprazolam, Bromazepam, Chlordiazepoxide, Cinolazepam, Clobazam, Clonazepam, Clotiazepam, Fludiazepam, Flunitrazepam, Halazepam, Ketazolam, Lorazepam, Quazepam, Temazepam, Triazolam</td></tr><tr><td>Anti-Anxiety Agents</td><td>12</td><td>Alprazolam, Bromazepam, Chlordiazepoxide, Diazepam, Flunitrazepam, Gabapentin, Halazepam, Midazolam, Nitrazepam, Oxazepam, Prazepam, Triazolam</td></tr><tr><td>Barbiturates</td><td>7</td><td>Butabarbital, Butethal, Heptabarbital, Hexobarbital, Pentobarbital, Primidone, Secobarbital</td></tr><tr><td>Antidepressive Agents</td><td>6</td><td>Adinazolam, Desipramine, Isocarboxazid, Lamotrigine, Nortriptyline, Phenelzine</td></tr><tr><td>Adjuvants, Anesthesia</td><td>6</td><td>Chlordiazepoxide, Diazepam, Midazolam, Pentobarbital, Secobarbital, Triazolam</td></tr></tbody></table>\r\n\r\n<p>In total, the 100 epilepsy predictions covered 64 DrugBank compounds. Less common categories included stimulants (modafinil), vasodilators (verapamil), potassium channel blockers (dalfampridine), and antipruritics (cyproheptadine).</p>\r\n\r\n<h2>Third-level ATC Codes</h2>\r\n\r\n<p>The Anatomical Therapeutic Chemical (ATC) Classification System is a classification of drugs produced by the WHOCC <span class=\"citation\">[<a href=\"https://doi.org/10.4135/9781483349985.n37\" class=\"citation hm \" data-key=\"10.4135/9781483349985.n37\">2</a>]</span>. The third-level indicates a therapeutic/pharmacological subgroup. DrugBank compounds are annotated with zero or more ATC codes. 91 of the 100 compounds had at least 1 ATC code. Together, the predictions included 26 third-level ATC codes.</p>\r\n\r\n<p>See the <a href=\"https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/compounds-third-level-atc-codes.tsv\">full table here</a>. The most common codes in the 100 predictions were antiepileptics (25 compounds), hypnotics and sedatives (21 compounds), anxiolytics (12 compounds), \"anesthetics, general\" (8 compounds), antidepressants (8 compounds), and antiglaucoma preparations and miotics (3 compounds). Less common codes included antiarrhythmics (quinidine), urologicals (phenazopyridine), and antiinfectives (primidone).</p>\r\n\r\n<h2>DrugCentral Pharmacologic Classes</h2>\r\n\r\n<p>DrugCentral contains pharmacologic classes of six types (Chemical/Ingredient, Mechanism of Action, Physiologic Effect, Established Pharmacologic Class, Pharmacological Action, Application) from 3 publicly-available source (FDA, MeSH, and ChEBI) <span class=\"citation\">[<a href=\"https://doi.org/10.1093/nar/gkw993\" class=\"citation hm \" data-key=\"10.1093/nar/gkw993\">3</a>, <a href=\"https://doi.org/10.15363/thinklab.d186\" class=\"citation hm citation-self\" data-key=\"10.15363/thinklab.d186\">4</a>]</span>. We included <a href=\"https://thinklab.com/discussion/incorporating-drugcentral-data-in-our-network/186#4\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d186\">three of the six types</a> in Hetionet v1.0. This analysis however will look at all 6 types.</p>\r\n\r\n<p>See the <a href=\"https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/compounds-pharmacologic-classes.tsv\">full table here</a>. 92 compounds had at least 1 pharmacologic class. Overall, the epilepsy predictions included 206 distinct pharmacologic classes. Due to the large size and diverse nature of this table, it's difficult to quantify. However, it's a good place to work backwards from class to compounds for the epilepsy predictions. For example, you can search for \"Monoamine Oxidase Inhibitors\" to find the compounds isocarboxazid and phenelzine.</p>\r\n\r\n<h2>Conclusion</h2>\r\n\r\n<p>The top epilepsy predictions pick up on several drug categories with known anti-ictogenic properties, such as anesthetics, GABA modulators, and of course known anti-epileptics. In addition, the predictions cover categories of drugs that wouldn't traditionally be considered, such as the antimalarial quinidine. In addition, we pick up on classes of AEDs whose primary indication is not epilepsy, such as the carbonic anhydrase inhibitors acetazolamide, diclofenamide, methazolamide, zonisamide that have traditionally been used for glaucoma, but are also effective anti-ictogenic drugs <span class=\"citation\">[<a href=\"https://doi.org/10.2174/156802607780636726\" class=\"citation hm \" data-key=\"10.2174/156802607780636726\">5</a>, <a href=\"https://doi.org/10.1517/13543776.2013.782394\" class=\"citation hm \" data-key=\"10.1517/13543776.2013.782394\">6</a>]</span>. <a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a> those are my thoughts, you likely have more!</p>",
+      "body_md": "# Categorizing the top epilepsy predictions\r\n\r\nThis post will investigate the categories of compounds in the top 100 epilepsy predictions. For this analysis ([notebook](https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/3.contribution.ipynb)), We'll use three categorizations of compounds: DrugBank categories, third-level ATC Codes, and DrugCentral pharmacologic classes.\r\n\r\n## DrugBank categories\r\n\r\nDrugBank annotates compounds with [categories](https://www.drugbank.ca/categories) \"based on pharmacological action\" [@10.1093/nar/gkt1068]. Compounds can have zero or more categories. 84 of the 100 compounds had at least one annotated category. The top eight categories are shown below ([full table here](https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/compounds-categories.tsv)):\r\n\r\n| Category | Count | Compounds (in the top epilepsy predictions) |\r\n|-------------------------|-------|---------------|\r\n| Anticonvulsants | 28 | Acetazolamide, Carbamazepine, Clobazam, Clonazepam, Diazepam, Ethosuximide, Ethotoin, Felbamate, Fosphenytoin, Gabapentin, Lacosamide, Lamotrigine, Levetiracetam, Methsuximide, Methylphenobarbital, Nitrazepam, Oxcarbazepine, Phenobarbital, Phensuximide, Phenytoin, Pregabalin, Primidone, Thiopental, Tiagabine, Topiramate, Trimethadione, Valproic Acid, Zonisamide |\r\n| Hypnotics and Sedatives | 24 | Alprazolam, Butabarbital, Butethal, Chlordiazepoxide, Cinolazepam, Diazepam, Eszopiclone, Etomidate, Fospropofol, Glutethimide, Halazepam, Hexobarbital, Lorazepam, Methylphenobarbital, Midazolam, Nitrazepam, Oxazepam, Pentobarbital, Phenobarbital, Quazepam, Secobarbital, Thiopental, Zolpidem, Zopiclone |\r\n| GABA Modulators | 17 | Alprazolam, Bromazepam, Chlordiazepoxide, Clonazepam, Diazepam, Flunitrazepam, Hexobarbital, Methylphenobarbital, Midazolam, Nitrazepam, Oxazepam, Pentobarbital, Phenobarbital, Prazepam, Secobarbital, Thiopental, Triazolam |\r\n| Benzodiazepines | 15 | Alprazolam, Bromazepam, Chlordiazepoxide, Cinolazepam, Clobazam, Clonazepam, Clotiazepam, Fludiazepam, Flunitrazepam, Halazepam, Ketazolam, Lorazepam, Quazepam, Temazepam, Triazolam |\r\n| Anti-Anxiety Agents | 12 | Alprazolam, Bromazepam, Chlordiazepoxide, Diazepam, Flunitrazepam, Gabapentin, Halazepam, Midazolam, Nitrazepam, Oxazepam, Prazepam, Triazolam |\r\n| Barbiturates | 7 | Butabarbital, Butethal, Heptabarbital, Hexobarbital, Pentobarbital, Primidone, Secobarbital |\r\n| Antidepressive Agents | 6 | Adinazolam, Desipramine, Isocarboxazid, Lamotrigine, Nortriptyline, Phenelzine |\r\n| Adjuvants, Anesthesia | 6 | Chlordiazepoxide, Diazepam, Midazolam, Pentobarbital, Secobarbital, Triazolam |\r\n\r\nIn total, the 100 epilepsy predictions covered 64 DrugBank compounds. Less common categories included stimulants (modafinil), vasodilators (verapamil), potassium channel blockers (dalfampridine), and antipruritics (cyproheptadine).\r\n\r\n## Third-level ATC Codes\r\n\r\nThe Anatomical Therapeutic Chemical (ATC) Classification System is a classification of drugs produced by the WHOCC [@10.4135/9781483349985.n37]. The third-level indicates a therapeutic/pharmacological subgroup. DrugBank compounds are annotated with zero or more ATC codes. 91 of the 100 compounds had at least 1 ATC code. Together, the predictions included 26 third-level ATC codes.\r\n\r\nSee the [full table here](https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/compounds-third-level-atc-codes.tsv). The most common codes in the 100 predictions were antiepileptics (25 compounds), hypnotics and sedatives (21 compounds), anxiolytics (12 compounds), \"anesthetics, general\" (8 compounds), antidepressants (8 compounds), and antiglaucoma preparations and miotics (3 compounds). Less common codes included antiarrhythmics (quinidine), urologicals (phenazopyridine), and antiinfectives (primidone).\r\n\r\n## DrugCentral Pharmacologic Classes\r\n\r\nDrugCentral contains pharmacologic classes of six types (Chemical/Ingredient, Mechanism of Action, Physiologic Effect, Established Pharmacologic Class, Pharmacological Action, Application) from 3 publicly-available source (FDA, MeSH, and ChEBI) [@10.1093/nar/gkw993 @10.15363/thinklab.d186]. We included [three of the six types](https://thinklab.com/discussion/incorporating-drugcentral-data-in-our-network/186#4) in Hetionet v1.0. This analysis however will look at all 6 types.\r\n\r\nSee the [full table here](https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/compounds-pharmacologic-classes.tsv). 92 compounds had at least 1 pharmacologic class. Overall, the epilepsy predictions included 206 distinct pharmacologic classes. Due to the large size and diverse nature of this table, it's difficult to quantify. However, it's a good place to work backwards from class to compounds for the epilepsy predictions. For example, you can search for \"Monoamine Oxidase Inhibitors\" to find the compounds isocarboxazid and phenelzine.\r\n\r\n## Conclusion\r\n\r\nThe top epilepsy predictions pick up on several drug categories with known anti-ictogenic properties, such as anesthetics, GABA modulators, and of course known anti-epileptics. In addition, the predictions cover categories of drugs that wouldn't traditionally be considered, such as the antimalarial quinidine. In addition, we pick up on classes of AEDs whose primary indication is not epilepsy, such as the carbonic anhydrase inhibitors acetazolamide, diclofenamide, methazolamide, zonisamide that have traditionally been used for glaucoma, but are also effective anti-ictogenic drugs [@10.2174/156802607780636726 @10.1517/13543776.2013.782394]. @pouyakhankhanian those are my thoughts, you likely have more!",
+      "comment_id": 1465,
+      "profile_id": 17,
+      "published": "2017-01-09T00:06:27.192296Z",
+      "thread_id": 224,
+      "url": "/discussion/prediction-in-epilepsy/224#10"
+    },
+    {
+      "body_html": "<p>I think it would be a great experimental setup to begin your extraction work using the relationships in your current hetnet as your gold standard (standards.. one per relation type).  First that means you have a gold standard already which is a huge part of the work in building up an NLP system (and can likely publish good results in NLP-related arenas).  Second, if it works, you have an automated way to grow the hetnet on a daily basis and potentially to scrub out the licensed content.  Third you set yourself up for a great experiment - can a drug-treats-disease automatic relation finder outperform your results from the hetnet + R inference model?   How can those methods be harmonized?</p>\r\n\r\n<p>This will be a great project... </p>",
+      "body_md": "I think it would be a great experimental setup to begin your extraction work using the relationships in your current hetnet as your gold standard (standards.. one per relation type).  First that means you have a gold standard already which is a huge part of the work in building up an NLP system (and can likely publish good results in NLP-related arenas).  Second, if it works, you have an automated way to grow the hetnet on a daily basis and potentially to scrub out the licensed content.  Third you set yourself up for a great experiment - can a drug-treats-disease automatic relation finder outperform your results from the hetnet + R inference model?   How can those methods be harmonized?\r\n\r\nThis will be a great project...",
+      "comment_id": 1466,
+      "profile_id": 48,
+      "published": "2017-01-09T04:22:26.918064Z",
+      "thread_id": 227,
+      "url": "/discussion/brainstorming-future-directions-for-hetionet/227#12"
     }
   ],
   "documents": [
@@ -5219,7 +5246,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/report",
-      "views": 293
+      "views": 301
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -7224,7 +7251,7 @@
       "username": "hanockkwak"
     }
   ],
-  "retrieved": "2017-01-08T21:33:47.973925Z",
+  "retrieved": "2017-01-09T21:31:46.075436Z",
   "threads": [
     {
       "document_id": null,
@@ -7236,7 +7263,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 685
+      "views": 686
     },
     {
       "document_id": null,
@@ -7296,7 +7323,7 @@
       "thread_id": 31,
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 94
+      "views": 96
     },
     {
       "document_id": null,
@@ -7320,7 +7347,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 298
+      "views": 299
     },
     {
       "document_id": null,
@@ -7332,7 +7359,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 339
+      "views": 341
     },
     {
       "document_id": null,
@@ -7392,7 +7419,7 @@
       "thread_id": 46,
       "topic_field": "Indications,LabeledIn,Data Processing,Crowdsourcing",
       "url": "/discussion/processing-labeledin-to-extract-indications/46",
-      "views": 123
+      "views": 125
     },
     {
       "document_id": null,
@@ -7452,7 +7479,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 249
+      "views": 250
     },
     {
       "document_id": null,
@@ -7476,7 +7503,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 490
+      "views": 491
     },
     {
       "document_id": null,
@@ -7500,7 +7527,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 566
+      "views": 569
     },
     {
       "document_id": null,
@@ -7560,7 +7587,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 487
+      "views": 490
     },
     {
       "document_id": null,
@@ -7596,7 +7623,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 566
+      "views": 571
     },
     {
       "document_id": null,
@@ -7608,7 +7635,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 472
+      "views": 474
     },
     {
       "document_id": null,
@@ -7620,7 +7647,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 930
+      "views": 931
     },
     {
       "document_id": null,
@@ -7632,7 +7659,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 868
+      "views": 869
     },
     {
       "document_id": null,
@@ -7692,7 +7719,7 @@
       "thread_id": 95,
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 247
+      "views": 248
     },
     {
       "document_id": null,
@@ -7704,7 +7731,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 304
+      "views": 305
     },
     {
       "document_id": null,
@@ -7788,7 +7815,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 440
+      "views": 441
     },
     {
       "document_id": null,
@@ -7884,7 +7911,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 216
+      "views": 218
     },
     {
       "document_id": null,
@@ -8064,7 +8091,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 186
+      "views": 187
     },
     {
       "document_id": null,
@@ -8088,7 +8115,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 668
+      "views": 669
     },
     {
       "document_id": null,
@@ -8124,7 +8151,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 477
+      "views": 480
     },
     {
       "document_id": null,
@@ -8184,7 +8211,7 @@
       "thread_id": 224,
       "topic_field": "epilepsy,Hetionet",
       "url": "/discussion/prediction-in-epilepsy/224",
-      "views": 56
+      "views": 59
     },
     {
       "document_id": 7,
@@ -8196,7 +8223,7 @@
       "thread_id": 226,
       "topic_field": "",
       "url": "/doc/7/review",
-      "views": 40
+      "views": 44
     },
     {
       "document_id": null,
@@ -8208,7 +8235,7 @@
       "thread_id": 227,
       "topic_field": "applied imagination,Hetionet,hetnets,future,planning",
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227",
-      "views": 64
+      "views": 70
     },
     {
       "document_id": null,
@@ -8232,7 +8259,7 @@
       "thread_id": 229,
       "topic_field": "DWPC,hetnet,paths,metapaths,machine learning,algorithms",
       "url": "/discussion/decomposing-predictions-into-their-network-support/229",
-      "views": 13
+      "views": 14
     }
   ]
 }
