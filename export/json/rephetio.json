@@ -5221,6 +5221,15 @@
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227#12"
     },
     {
+      "body_html": "<p><a href=\"/u/b_good\" class=\"username\">@b_good</a>, <a href=\"#12\">your comment</a> nails the promise of snorkeling hetnets. I was envisioning using Snorkel for network construction rather than relationship prediction. In other words, I'd want each literature extracted relationship to derive from specific phrases that directly attest to the relationships' existence. However you bring up an interesting point — will Snorkel begin to infer relationships and become a substitute for hetnet edge prediction?</p>\r\n\r\n<h2>The <em>Compound–treats–Disease</em> Pilot</h2>\r\n\r\n<blockquote><p>you might consider starting with a relation type (or 2) that are less semantically complex and more plentiful in the research literature than 'treats'.</p></blockquote>\r\n\r\n<p>Is whether a compound <em>treats</em> a disease really so semantically complex? For example, here is an example abstract sentence which implies a CtD relationship from <a href=\"https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/PubTator/curator_identifier.cgi?user=User636411530&amp;pmid=8694680&amp;searchtype=PubMed_Search&amp;query=8694680&amp;page=1&amp;Species_display=1&amp;Chemical_display=1&amp;Gene_display=1&amp;Disease_display=1&amp;Mutation_display=1&amp;tax=\">an abstract</a> <span class=\"citation\">[<a href=\"https://doi.org/10.1001/archpsyc.1996.01830080023006\" class=\"citation hm \" data-key=\"10.1001/archpsyc.1996.01830080023006\">1</a>]</span>:</p>\r\n\r\n<blockquote><p>Acamprosate proved to be a safe and effective aid in treating alcohol-dependent patients and in maintaining the abstinence of patients during 2 years.</p></blockquote>\r\n\r\n<p>I'm hoping we can steer Snorkel away from making inferences say based on the genes involved in alcohol dependence and instead focus on actual statements of clinical efficacy. PharmacotherapyDB has 755 disease-modifying treatments — <a href=\"/u/ajratner\" class=\"username\">@ajratner</a> will this be sufficient to support an effective labeling function? If not, we could expand to all <a href=\"https://thinklab.com/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212#2\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d212\">clinical trial indications</a>, which would give us ~30,000 gold standard relationships.</p>\r\n\r\n<p><a href=\"/u/b_good\" class=\"username\">@b_good</a> if we struggle at snorkeling <em>treats</em> relationships, we could always pilot another relationship type that was more semantically straightforward and plentiful. <em>Gene–interacts–Gene</em> <a href=\"https://thinklab.com/discussion/creating-a-catalog-of-protein-interactions/85#9\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d85\">relationships</a> would be one possibility.</p>\r\n\r\n<h2>Entity tagging and mapping</h2>\r\n\r\n<blockquote><p>Is compound functionally too different from chemical? We have tags for chemical and disease in Snorkel format already, for PubMed abstracts via <a href=\"https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/PubTator/\">PubTator</a>.</p></blockquote>\r\n\r\n<p><a href=\"/u/alexratner\" class=\"username\">@alexratner</a>, compound and chemical are the same thing. Looks like PubTator tags<br>genes, diseases, species, chemicals, and mutations <span class=\"citation\">[<a href=\"https://doi.org/10.1093/nar/gkt441\" class=\"citation hm \" data-key=\"10.1093/nar/gkt441\">2</a>, <a href=\"https://doi.org/10.1093/database/bas041\" class=\"citation hm \" data-key=\"10.1093/database/bas041\">3</a>]</span>. Of these, Hetionet contains genes, diseases, and chemicals. </p>\r\n\r\n<ul><li><p>PubTator uses Entrez Gene for genes, as <a href=\"https://thinklab.com/discussion/using-entrez-gene-as-our-gene-vocabulary/34#12\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d34\">do we</a>. Genes are tagged using <a href=\"https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/#GNormPlus\">GNormPlus</a> <span class=\"citation\">[<a href=\"https://doi.org/10.1155/2015/918710\" class=\"citation hm \" data-key=\"10.1155/2015/918710\">4</a>]</span>.</p></li><li><p>PubTator uses <a href=\"https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/#DNorm\">DNorm</a> to tag diseases <span class=\"citation\">[<a href=\"https://doi.org/10.1093/bioinformatics/btt474\" class=\"citation hm \" data-key=\"10.1093/bioinformatics/btt474\">5</a>]</span>, which uses MEDIC. MEDIC is the disease vocabulary used by the Comparative Toxicogenomics Database (CTD) <span class=\"citation\">[<a href=\"https://doi.org/10.1093/database/bar065\" class=\"citation hm \" data-key=\"10.1093/database/bar065\">6</a>]</span>, which consists of OMIM and MeSH terms.</p></li><li><p>Compounds in PubTator are tagged with <a href=\"https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/#tmChem\">tmChem</a> <span class=\"citation\">[<a href=\"https://doi.org/10.1186/1758-2946-7-S1-S3\" class=\"citation hm \" data-key=\"10.1186/1758-2946-7-S1-S3\">7</a>]</span>, which uses MeSH and ChEBI, so we'll have to find <a href=\"https://twitter.com/biocs/status/818376472641544192\">a way</a> to map MeSH to Drugbank.</p></li></ul>\r\n\r\n<h2>Future Snorkel discussion</h2>\r\n\r\n<p>I'd like to make sure this brainstorming discussion doesn't explode with Snorkel implementation details. So for any Snorkel comments that will generate lot's of discussion, let's either create new discussions on Thinklab or <a href=\"https://github.com/greenelab/snorkeling/issues\">issues</a> on <code>greenelab/snorkeling</code>. We can also make a new Thinklab project for snorkeling.</p>",
+      "body_md": "@b_good, [your comment](#12) nails the promise of snorkeling hetnets. I was envisioning using Snorkel for network construction rather than relationship prediction. In other words, I'd want each literature extracted relationship to derive from specific phrases that directly attest to the relationships' existence. However you bring up an interesting point -- will Snorkel begin to infer relationships and become a substitute for hetnet edge prediction?\r\n\r\n##  The _Compound--treats--Disease_ Pilot\r\n\r\n> you might consider starting with a relation type (or 2) that are less semantically complex and more plentiful in the research literature than 'treats'.\r\n\r\nIs whether a compound _treats_ a disease really so semantically complex? For example, here is an example abstract sentence which implies a CtD relationship from [an abstract](https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/PubTator/curator_identifier.cgi?user=User636411530&pmid=8694680&searchtype=PubMed_Search&query=8694680&page=1&Species_display=1&Chemical_display=1&Gene_display=1&Disease_display=1&Mutation_display=1&tax=) [@10.1001/archpsyc.1996.01830080023006]:\r\n\r\n> Acamprosate proved to be a safe and effective aid in treating alcohol-dependent patients and in maintaining the abstinence of patients during 2 years.\r\n\r\nI'm hoping we can steer Snorkel away from making inferences say based on the genes involved in alcohol dependence and instead focus on actual statements of clinical efficacy. PharmacotherapyDB has 755 disease-modifying treatments -- @ajratner will this be sufficient to support an effective labeling function? If not, we could expand to all [clinical trial indications](https://thinklab.com/discussion/cataloging-drugdisease-therapies-in-the-clinicaltrialsgov-database/212#2), which would give us ~30,000 gold standard relationships.\r\n\r\n@b_good if we struggle at snorkeling _treats_ relationships, we could always pilot another relationship type that was more semantically straightforward and plentiful. _Gene--interacts--Gene_ [relationships](https://thinklab.com/discussion/creating-a-catalog-of-protein-interactions/85#9) would be one possibility.\r\n\r\n## Entity tagging and mapping\r\n\r\n> Is compound functionally too different from chemical? We have tags for chemical and disease in Snorkel format already, for PubMed abstracts via [PubTator](https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/PubTator/).\r\n\r\n@alexratner, compound and chemical are the same thing. Looks like PubTator tags\r\ngenes, diseases, species, chemicals, and mutations [@10.1093/nar/gkt441 @10.1093/database/bas041]. Of these, Hetionet contains genes, diseases, and chemicals. \r\n\r\n+ PubTator uses Entrez Gene for genes, as [do we](https://thinklab.com/discussion/using-entrez-gene-as-our-gene-vocabulary/34#12). Genes are tagged using [GNormPlus](https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/#GNormPlus) [@10.1155/2015/918710].\r\n\r\n+ PubTator uses [DNorm](https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/#DNorm) to tag diseases [@10.1093/bioinformatics/btt474], which uses MEDIC. MEDIC is the disease vocabulary used by the Comparative Toxicogenomics Database (CTD) [@10.1093/database/bar065], which consists of OMIM and MeSH terms.\r\n\r\n+ Compounds in PubTator are tagged with [tmChem](https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/#tmChem) [@10.1186/1758-2946-7-S1-S3], which uses MeSH and ChEBI, so we'll have to find [a way](https://twitter.com/biocs/status/818376472641544192) to map MeSH to Drugbank.\r\n\r\n## Future Snorkel discussion\r\n\r\nI'd like to make sure this brainstorming discussion doesn't explode with Snorkel implementation details. So for any Snorkel comments that will generate lot's of discussion, let's either create new discussions on Thinklab or [issues](https://github.com/greenelab/snorkeling/issues) on `greenelab/snorkeling`. We can also make a new Thinklab project for snorkeling.",
+      "comment_id": 1467,
+      "profile_id": 17,
+      "published": "2017-01-13T17:43:04.333124Z",
+      "thread_id": 227,
+      "url": "/discussion/brainstorming-future-directions-for-hetionet/227#13"
+    },
+    {
       "body_html": "<h1>Quantifying the biological evidence behind the top epilepsy predicitons</h1>\r\n\r\n<p>In a <a href=\"#8\">previous comment</a>, I introduced aggregating individual path contributions for all 100 top epilepsy predictions. This post will go into further depth on the topic — specifically, we're trying to understand what biomedical evidence in Hetionet supports our top epilepsy predictions. These analyses were performed by <a href=\"https://nbviewer.jupyter.org/github/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/3.contribution.ipynb\">this notebook</a>.</p>\r\n\r\n<h2>Contributions by metapath</h2>\r\n\r\n<p>First, we'll aggregate path contributions by their metapath. Here we're asking what types of paths contributed to the top epilepsy predictions (<a href=\"https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/metapath-contributions.tsv\">source</a>).</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>Metapath</th><th>Paths</th><th>Contribution</th></tr></thead><tbody><tr><td>CbGbCtD</td><td>6,358</td><td>20.624</td></tr><tr><td>CrCtD</td><td>160</td><td>18.266</td></tr><tr><td>CbGaD</td><td>562</td><td>17.568</td></tr><tr><td>CiPCiCtD</td><td>322</td><td>15.051</td></tr><tr><td>CrCrCtD</td><td>2,559</td><td>11.902</td></tr><tr><td>CpDpCtD</td><td>212</td><td>5.3199</td></tr><tr><td>CcSEcCtD</td><td>117,720</td><td>4.4182</td></tr><tr><td>CbGpPWpGaD</td><td>248,740</td><td>3.9824</td></tr><tr><td>CbGeAlD</td><td>10,522</td><td>1.6028</td></tr><tr><td>CtDrD</td><td>5</td><td>1.13</td></tr><tr><td>CrCbGaD</td><td>5,788</td><td>0.13895</td></tr><tr><td>CbGdCrCtD</td><td>8</td><td>0.001348</td></tr></tbody></table>\r\n\r\n<p>Note that the total contribution of all paths across all predictions is 100. So for example, 6,358 <em>Compound–binds–Gene–binds–Compound–treats–Disease</em> (CbGbCtD) paths provide 20.6% of the support for the top epilepsy predictions combined. Illustrating the importance of integrative drug repurposing in epilepsy, 10 different metapaths each provided at least 1% of the total support.</p>\r\n\r\n<p>Next, we aggregated metapath contributions by their source metaedge. This analysis asks what types of edges inform the algorithm about compounds for treating epilepsy?</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>Source Metaedge</th><th>Paths</th><th>Contribution</th></tr></thead><tbody><tr><td>Compound—binds—Gene</td><td>266,192</td><td>43.78</td></tr><tr><td>Compound—resembles—Compound</td><td>8,507</td><td>30.31</td></tr><tr><td>Compound—includes—Pharmacologic Class</td><td>322</td><td>15.05</td></tr><tr><td>Compound—palliates—Disease</td><td>212</td><td>5.32</td></tr><tr><td>Compound—causes—Side Effect</td><td>117,724</td><td>4.42</td></tr><tr><td>Compound—treats—Disease</td><td>5</td><td>1.13</td></tr></tbody></table>\r\n\r\n<p>We see that 43.8% of the support for predicted epilepsy treatments came from their targeted genes. We see that our method is leveraging many different types of information on compounds to make its epilepsy predictions. Note that which diseases a compound treats (excluding epilepsy of course) did not play a major role, as we <a href=\"https://thinklab.com/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d210\">suppressed</a> many of these features <span class=\"citation\">[<a href=\"https://doi.org/10.15363/thinklab.d215\" class=\"citation hm citation-self\" data-key=\"10.15363/thinklab.d215\">1</a>]</span>. </p>\r\n\r\n<p>If we aggregate instead by target metaedge, we can understand what aspects of epilepsy our algorithm leveraged:</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>Target Metaedge</th><th>Paths</th><th>Contribution</th></tr></thead><tbody><tr><td>epilepsy syndrome—treats—Compound</td><td>127,343</td><td>75.58</td></tr><tr><td>epilepsy syndrome—associates—Gene</td><td>255,092</td><td>21.69</td></tr><tr><td>epilepsy syndrome—localizes—Anatomy</td><td>10,522</td><td>1.60</td></tr><tr><td>epilepsy syndrome—resembles—Disease</td><td>5</td><td>1.13</td></tr></tbody></table>\r\n\r\n<p>In the context of top predictions, our algorithm understood epilepsy primarily by its known treatments (76%) and genetic associations (22%).</p>\r\n\r\n<h2>Contribution by target gene groups</h2>\r\n\r\n<p>43.8% of the support for epilepsy predictions came from paths that start with a <em>Compound—binds—Gene</em> metaedge. Let's dig deeper here. Are all the compounds binding to the same family or functional group of genes? To answer this question, I aggregated all paths by the gene node in their source relationship. Paths without a gene as the first intermediate node dropped out.</p>\r\n\r\n<p>However, an issue arose where many genes belonged to the same family or functional group, such as encoding proteins for the same receptor. For example, see the following symbol to name mappings:</p>\r\n\r\n<ul><li><em>GRIA2</em>: \"glutamate receptor, ionotropic, AMPA 2\"</li><li><em>GRIK2</em>: \"glutamate receptor, ionotropic, kainate 2\"</li><li><em>GRIN2A</em>: \"glutamate receptor, ionotropic, N-methyl D-aspartate 2A\"</li><li><em>GRM5</em>: \"glutamate receptor, metabotropic 5\"</li></ul>\r\n\r\n<p>To resolve this issue, I truncated gene names at their first comma not in parentheses. Note that this this approach does not appear to work with current HGNC gene names, but does appear to work for our version of Entrez Gene <span class=\"citation\">[<a href=\"https://doi.org/10.15363/thinklab.d34\" class=\"citation hm citation-self\" data-key=\"10.15363/thinklab.d34\">2</a>, <a href=\"https://doi.org/10.5281/zenodo.45524\" class=\"citation hm citation-figure\" data-key=\"10.5281/zenodo.45524\">3</a>]</span>. The top 6 results are shown below (<a href=\"https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/source-edge-binds-contributions.tsv\">full table here</a>):</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>Truncated Gene Name</th><th>Paths</th><th>Contribution</th><th>Symbols</th></tr></thead><tbody><tr><td>gamma-aminobutyric acid (GABA) A receptor</td><td>91967</td><td>15.329</td><td>GABRA1, GABRG2, GABRB2, GABRA5, GABRB3, GABRD, GABRA3, GABRA2, GABRA4, GABRA6, GABRG3, GABRB1, GABRG1, GABRR1, GABRR2, GABRQ, GABRE, GABRP, GABRR3</td></tr><tr><td>cytochrome P450</td><td>34323</td><td>5.5857</td><td>CYP2C19, CYP3A4, CYP2E1, CYP2B6, CYP2C8, CYP2C9, CYP2C18, CYP2D6, CYP3A5, CYP1A2, CYP2A6, CYP3A7, CYP11A1, CYP4B1, CYP11B1, CYP1A1, CYP1B1, CYP3A43, CYP11B2, CYP19A1, CYP4A11</td></tr><tr><td>sodium channel</td><td>8771</td><td>4.5576</td><td>SCN9A, SCN1A, SCN3A, SCN5A, SCN4A, SCN8A, SCN2A, SCN10A, SCN11A, SCN7A, SCN1B, SCN3B, SCN2B, SCN4B</td></tr><tr><td>glutamate receptor</td><td>11441</td><td>3.8415</td><td>GRIA2, GRIK2, GRIN2A, GRIN2B, GRM5, GRIA1, GRIN3A, GRIN1, GRIK5, GRIA4, GRIK1, GRIN2C, GRIN2D, GRIA3, GRIK4, GRIK3</td></tr><tr><td>calcium channel</td><td>4579</td><td>2.665</td><td>CACNA1G, CACNA2D2, CACNA1H, CACNA1B, CACNA1A, CACNA1I, CACNA2D1, CACNB4, CACNA1D, CACNB3, CACNB1, CACNB2, CACNA1C, CACNA1S, CACNA1F</td></tr><tr><td>cholinergic receptor</td><td>19114</td><td>2.0839</td><td>CHRNA7, CHRNA4, CHRM1, CHRM3, CHRM2, CHRM4, CHRM5</td></tr></tbody></table>\r\n\r\n<p>We see that 15.3% of the support for the top epilepsy predictions is based on the predicted compound binding to GABAᴀ receptors. In addition, 5.6% can be attributed to compounds binding cytochrome P450 proteins, which metabolize many drugs and are important for the pharmacokinetics of AEDs <span class=\"citation\">[<a href=\"https://doi.org/10.2174/157015910792246254\" class=\"citation hm \" data-key=\"10.2174/157015910792246254\">4</a>]</span>. Compounds that bound sodium channels — an established therapeutic target for epilepsy <span class=\"citation\">[<a href=\"https://doi.org/10.2174/156802612800229206\" class=\"citation hm \" data-key=\"10.2174/156802612800229206\">5</a>]</span> — contributed 4.6%. The list continues, attesting to the ability of our method to detect and leverage bonafide targets for treating epilepsy. For example, the next genes groups were glutamate receptors <span class=\"citation\">[<a href=\"https://doi.org/10.1093/med/9780199746545.003.0010\" class=\"citation hm \" data-key=\"10.1093/med/9780199746545.003.0010\">6</a>]</span>, calcium channels <span class=\"citation\">[<a href=\"https://doi.org/10.1007/0-387-27526-6_13\" class=\"citation hm \" data-key=\"10.1007/0-387-27526-6_13\">7</a>]</span>, and cholinergic receptors <span class=\"citation\">[<a href=\"https://doi.org/10.2174/1568007023339193\" class=\"citation hm \" data-key=\"10.2174/1568007023339193\">8</a>, <a href=\"https://doi.org/10.1007/s11064-007-9429-3\" class=\"citation hm \" data-key=\"10.1007/s11064-007-9429-3\">9</a>]</span>. Our gene-name-truncation approach did not group carbonic anhydrases, another known target <span class=\"citation\">[<a href=\"https://doi.org/10.2174/156802607780636726\" class=\"citation hm \" data-key=\"10.2174/156802607780636726\">10</a>, <a href=\"https://doi.org/10.1517/13543776.2013.782394\" class=\"citation hm \" data-key=\"10.1517/13543776.2013.782394\">11</a>]</span>. However, the 15 carbonic anhydrase genes had a combined contribution of 0.79%.</p>\r\n\r\n<p>In total, 121 gene groups provided support, 11 (or 12 if combining carbonic anhydrases) of which contributed over 0.5%.</p>\r\n\r\n<h2>Contribution by Side Effect node</h2>\r\n\r\n<p>117,720 <em>CcSEcCtD</em> paths provided 4.4% of the support for our epilepsy predictions. These paths traverse 1,137 specific side effects.  If we restrict ourselves to <em>Compound—causes—Side Effect</em> source edge contributions, we can rank side effects by their aggregate contribution to our epilepsy predictions. The top five side effects reflect known adverse adverse of AEDs. In order, this approach highlights Ataxia (0.069% of total support) <span class=\"citation\">[<a href=\"https://doi.org/10.1136/jnnp.2006.100222\" class=\"citation hm \" data-key=\"10.1136/jnnp.2006.100222\">12</a>]</span>, Nystagmus (0.049%) <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.ebcr.2015.07.003\" class=\"citation hm \" data-key=\"10.1016/j.ebcr.2015.07.003\">13</a>]</span>, Diplopia (0.045%) <span class=\"citation\">[<a href=\"https://doi.org/10.1016/S1059-1311(03)00082-7\" class=\"citation hm \" data-key=\"10.1016/S1059-1311(03)00082-7\">14</a>]</span>, Somnolence (0.044%) <span class=\"citation\">[<a href=\"https://doi.org/10.1016/S1388-2457(00)00411-9\" class=\"citation hm \" data-key=\"10.1016/S1388-2457(00)00411-9\">15</a>]</span>, and Vomiting (0.043%) <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.seizure.2010.12.011\" class=\"citation hm \" data-key=\"10.1016/j.seizure.2010.12.011\">16</a>]</span>.</p>\r\n\r\n<h2>Contributions by Anatomy node</h2>\r\n\r\n<p>Finally, Hetionet contained <em>Disease–localizes–Anatomy</em> relationships automatically generated from <a href=\"https://thinklab.com/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67#5\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d67\">MEDLINE co-occurrence</a>. Epilepsy ended having relationships with 24 anatomies (anatomical structures, e.g. tissues) that contributed to the predictions through <em>Compound–binds–Gene–expresses–Anatomy–localizes–Disease</em> (CbGeAlD) paths. By aggregating CbGeAlD paths by their Anatomy node, we computed <a href=\"https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/anatomy-node-contributions.tsv\">the contribution</a> of each anatomy to our epilepsy predictions. What caught my eye is that anatomies that are more relevant to parthenogenesis and drug efficacy were near the top of the list. Examples include the telencephalon, forebrain, and nervous system. The anatomies that are related to epilepsy but primarily through its symptoms were near the bottom of the list. These examples include the tongue and meninx. This particular observation isn't well controlled, but I wanted to mention it as a future avenue of research.</p>\r\n\r\n<h2>Conclusion</h2>\r\n\r\n<p>Our top epilepsy predictions derive from a diverse set of supporting evidence that is supported by the current understanding of epilepsy. Aggregating path contributions allows us to evaluate the overall contribution of each network component, for a given context.</p>",
       "body_md": "# Quantifying the biological evidence behind the top epilepsy predicitons\r\n\r\nIn a [previous comment](#8), I introduced aggregating individual path contributions for all 100 top epilepsy predictions. This post will go into further depth on the topic -- specifically, we're trying to understand what biomedical evidence in Hetionet supports our top epilepsy predictions. These analyses were performed by [this notebook](https://nbviewer.jupyter.org/github/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/3.contribution.ipynb).\r\n\r\n## Contributions by metapath\r\n\r\nFirst, we'll aggregate path contributions by their metapath. Here we're asking what types of paths contributed to the top epilepsy predictions ([source](https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/metapath-contributions.tsv)).\r\n\r\n| Metapath | Paths | Contribution |\r\n|------------|------------|--------------|\r\n| CbGbCtD | 6,358 | 20.624 |\r\n| CrCtD | 160 | 18.266 |\r\n| CbGaD | 562 | 17.568 |\r\n| CiPCiCtD | 322 | 15.051 |\r\n| CrCrCtD | 2,559 | 11.902 |\r\n| CpDpCtD | 212 | 5.3199 |\r\n| CcSEcCtD | 117,720 | 4.4182 |\r\n| CbGpPWpGaD | 248,740 | 3.9824 |\r\n| CbGeAlD | 10,522 | 1.6028 |\r\n| CtDrD | 5 | 1.13 |\r\n| CrCbGaD | 5,788 | 0.13895 |\r\n| CbGdCrCtD | 8 | 0.001348 |\r\n\r\nNote that the total contribution of all paths across all predictions is 100. So for example, 6,358 _Compound–binds–Gene–binds–Compound–treats–Disease_ (CbGbCtD) paths provide 20.6% of the support for the top epilepsy predictions combined. Illustrating the importance of integrative drug repurposing in epilepsy, 10 different metapaths each provided at least 1% of the total support.\r\n\r\nNext, we aggregated metapath contributions by their source metaedge. This analysis asks what types of edges inform the algorithm about compounds for treating epilepsy?\r\n\r\n| Source Metaedge | Paths | Contribution |\r\n|--------------------|---------|--------------|\r\n| Compound—binds—Gene | 266,192 | 43.78 |\r\n| Compound—resembles—Compound | 8,507 | 30.31 |\r\n| Compound—includes—Pharmacologic Class | 322 | 15.05 |\r\n| Compound—palliates—Disease | 212 | 5.32 |\r\n| Compound—causes—Side Effect | 117,724 | 4.42 |\r\n| Compound—treats—Disease | 5 | 1.13 |\r\n\r\nWe see that 43.8% of the support for predicted epilepsy treatments came from their targeted genes. We see that our method is leveraging many different types of information on compounds to make its epilepsy predictions. Note that which diseases a compound treats (excluding epilepsy of course) did not play a major role, as we [suppressed](https://thinklab.com/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#4) many of these features [@10.15363/thinklab.d215]. \r\n\r\nIf we aggregate instead by target metaedge, we can understand what aspects of epilepsy our algorithm leveraged:\r\n\r\n| Target Metaedge | Paths | Contribution |\r\n|----------|---------|--------------|\r\n| epilepsy syndrome—treats—Compound | 127,343 | 75.58 |\r\n| epilepsy syndrome—associates—Gene | 255,092 | 21.69 |\r\n| epilepsy syndrome—localizes—Anatomy | 10,522 | 1.60 |\r\n| epilepsy syndrome—resembles—Disease | 5 | 1.13 |\r\n\r\nIn the context of top predictions, our algorithm understood epilepsy primarily by its known treatments (76%) and genetic associations (22%).\r\n\r\n## Contribution by target gene groups\r\n\r\n43.8% of the support for epilepsy predictions came from paths that start with a _Compound—binds—Gene_ metaedge. Let's dig deeper here. Are all the compounds binding to the same family or functional group of genes? To answer this question, I aggregated all paths by the gene node in their source relationship. Paths without a gene as the first intermediate node dropped out.\r\n\r\nHowever, an issue arose where many genes belonged to the same family or functional group, such as encoding proteins for the same receptor. For example, see the following symbol to name mappings:\r\n\r\n+ _GRIA2_: \"glutamate receptor, ionotropic, AMPA 2\"\r\n+ _GRIK2_: \"glutamate receptor, ionotropic, kainate 2\"\r\n+ _GRIN2A_: \"glutamate receptor, ionotropic, N-methyl D-aspartate 2A\"\r\n+ _GRM5_: \"glutamate receptor, metabotropic 5\"\r\n\r\nTo resolve this issue, I truncated gene names at their first comma not in parentheses. Note that this this approach does not appear to work with current HGNC gene names, but does appear to work for our version of Entrez Gene [@10.15363/thinklab.d34 @10.5281/zenodo.45524]. The top 6 results are shown below ([full table here](https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/source-edge-binds-contributions.tsv)):\r\n\r\n| Truncated Gene Name | Paths | Contribution | Symbols |\r\n|---------------------|-------|--------------|----------------|\r\n| gamma-aminobutyric acid (GABA) A receptor | 91967 | 15.329 | GABRA1, GABRG2, GABRB2, GABRA5, GABRB3, GABRD, GABRA3, GABRA2, GABRA4, GABRA6, GABRG3, GABRB1, GABRG1, GABRR1, GABRR2, GABRQ, GABRE, GABRP, GABRR3 |\r\n| cytochrome P450 | 34323 | 5.5857 | CYP2C19, CYP3A4, CYP2E1, CYP2B6, CYP2C8, CYP2C9, CYP2C18, CYP2D6, CYP3A5, CYP1A2, CYP2A6, CYP3A7, CYP11A1, CYP4B1, CYP11B1, CYP1A1, CYP1B1, CYP3A43, CYP11B2, CYP19A1, CYP4A11 |\r\n| sodium channel | 8771 | 4.5576 | SCN9A, SCN1A, SCN3A, SCN5A, SCN4A, SCN8A, SCN2A, SCN10A, SCN11A, SCN7A, SCN1B, SCN3B, SCN2B, SCN4B |\r\n| glutamate receptor | 11441 | 3.8415 | GRIA2, GRIK2, GRIN2A, GRIN2B, GRM5, GRIA1, GRIN3A, GRIN1, GRIK5, GRIA4, GRIK1, GRIN2C, GRIN2D, GRIA3, GRIK4, GRIK3 |\r\n| calcium channel | 4579 | 2.665 | CACNA1G, CACNA2D2, CACNA1H, CACNA1B, CACNA1A, CACNA1I, CACNA2D1, CACNB4, CACNA1D, CACNB3, CACNB1, CACNB2, CACNA1C, CACNA1S, CACNA1F |\r\n| cholinergic receptor | 19114 | 2.0839 | CHRNA7, CHRNA4, CHRM1, CHRM3, CHRM2, CHRM4, CHRM5 |\r\n\r\nWe see that 15.3% of the support for the top epilepsy predictions is based on the predicted compound binding to GABAᴀ receptors. In addition, 5.6% can be attributed to compounds binding cytochrome P450 proteins, which metabolize many drugs and are important for the pharmacokinetics of AEDs [@10.2174/157015910792246254]. Compounds that bound sodium channels -- an established therapeutic target for epilepsy [@10.2174/156802612800229206] -- contributed 4.6%. The list continues, attesting to the ability of our method to detect and leverage bonafide targets for treating epilepsy. For example, the next genes groups were glutamate receptors [@10.1093/med/9780199746545.003.0010], calcium channels [@10.1007/0-387-27526-6_13], and cholinergic receptors [@10.2174/1568007023339193 @10.1007/s11064-007-9429-3]. Our gene-name-truncation approach did not group carbonic anhydrases, another known target [@10.2174/156802607780636726 @10.1517/13543776.2013.782394]. However, the 15 carbonic anhydrase genes had a combined contribution of 0.79%.\r\n\r\nIn total, 121 gene groups provided support, 11 (or 12 if combining carbonic anhydrases) of which contributed over 0.5%.\r\n\r\n## Contribution by Side Effect node\r\n\r\n117,720 _CcSEcCtD_ paths provided 4.4% of the support for our epilepsy predictions. These paths traverse 1,137 specific side effects.  If we restrict ourselves to _Compound—causes—Side Effect_ source edge contributions, we can rank side effects by their aggregate contribution to our epilepsy predictions. The top five side effects reflect known adverse adverse of AEDs. In order, this approach highlights Ataxia (0.069% of total support) [@10.1136/jnnp.2006.100222], Nystagmus (0.049%) [@10.1016/j.ebcr.2015.07.003], Diplopia (0.045%) [@10.1016/S1059-1311(03)00082-7], Somnolence (0.044%) [@10.1016/S1388-2457(00)00411-9], and Vomiting (0.043%) [@10.1016/j.seizure.2010.12.011].\r\n\r\n## Contributions by Anatomy node\r\n\r\nFinally, Hetionet contained _Disease–localizes–Anatomy_ relationships automatically generated from [MEDLINE co-occurrence](https://thinklab.com/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67#5). Epilepsy ended having relationships with 24 anatomies (anatomical structures, e.g. tissues) that contributed to the predictions through _Compound–binds–Gene–expresses–Anatomy–localizes–Disease_ (CbGeAlD) paths. By aggregating CbGeAlD paths by their Anatomy node, we computed [the contribution](https://github.com/dhimmel/rephetio/blob/898ba3e8dec371af168af14ed316c9a9e49f32bc/epilepsy/data/anatomy-node-contributions.tsv) of each anatomy to our epilepsy predictions. What caught my eye is that anatomies that are more relevant to parthenogenesis and drug efficacy were near the top of the list. Examples include the telencephalon, forebrain, and nervous system. The anatomies that are related to epilepsy but primarily through its symptoms were near the bottom of the list. These examples include the tongue and meninx. This particular observation isn't well controlled, but I wanted to mention it as a future avenue of research.\r\n\r\n## Conclusion\r\n\r\nOur top epilepsy predictions derive from a diverse set of supporting evidence that is supported by the current understanding of epilepsy. Aggregating path contributions allows us to evaluate the overall contribution of each network component, for a given context.",
       "comment_id": 1468,
@@ -5264,7 +5273,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/report",
-      "views": 307
+      "views": 310
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"/doi/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"/doi/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"/doi/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -7269,7 +7278,7 @@
       "username": "hanockkwak"
     }
   ],
-  "retrieved": "2017-01-12T21:33:03.566759Z",
+  "retrieved": "2017-01-13T21:33:47.936090Z",
   "threads": [
     {
       "document_id": null,
@@ -7281,7 +7290,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 689
+      "views": 690
     },
     {
       "document_id": null,
@@ -7341,7 +7350,7 @@
       "thread_id": 31,
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 96
+      "views": 97
     },
     {
       "document_id": null,
@@ -7353,7 +7362,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 194
+      "views": 196
     },
     {
       "document_id": null,
@@ -7365,7 +7374,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 301
+      "views": 303
     },
     {
       "document_id": null,
@@ -7389,7 +7398,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 160
+      "views": 161
     },
     {
       "document_id": null,
@@ -7449,7 +7458,7 @@
       "thread_id": 47,
       "topic_field": "Validation,Evalauation",
       "url": "/discussion/evaluation-framework/47",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -7521,7 +7530,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 495
+      "views": 496
     },
     {
       "document_id": null,
@@ -7557,7 +7566,7 @@
       "thread_id": 66,
       "topic_field": "",
       "url": "/discussion/kabob-knowledgebase/66",
-      "views": 116
+      "views": 117
     },
     {
       "document_id": null,
@@ -7605,7 +7614,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 495
+      "views": 496
     },
     {
       "document_id": null,
@@ -7641,7 +7650,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 576
+      "views": 579
     },
     {
       "document_id": null,
@@ -7653,7 +7662,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 478
+      "views": 479
     },
     {
       "document_id": null,
@@ -7749,7 +7758,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 307
+      "views": 308
     },
     {
       "document_id": null,
@@ -7833,7 +7842,7 @@
       "thread_id": 107,
       "topic_field": "Open science,Open Data,Copyright,License,Permission,Licensing,Intellectual Property,Creative Commons",
       "url": "/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107",
-      "views": 442
+      "views": 443
     },
     {
       "document_id": null,
@@ -7857,7 +7866,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 321
+      "views": 322
     },
     {
       "document_id": null,
@@ -7881,7 +7890,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 470
+      "views": 471
     },
     {
       "document_id": null,
@@ -7977,7 +7986,7 @@
       "thread_id": 171,
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 215
+      "views": 216
     },
     {
       "document_id": null,
@@ -8013,7 +8022,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 259
+      "views": 260
     },
     {
       "document_id": null,
@@ -8085,7 +8094,7 @@
       "thread_id": 200,
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 65
+      "views": 66
     },
     {
       "document_id": null,
@@ -8121,7 +8130,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 268
+      "views": 269
     },
     {
       "document_id": null,
@@ -8133,7 +8142,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 683
+      "views": 689
     },
     {
       "document_id": null,
@@ -8169,7 +8178,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 483
+      "views": 484
     },
     {
       "document_id": null,
@@ -8205,7 +8214,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 182
+      "views": 183
     },
     {
       "document_id": null,
@@ -8229,7 +8238,7 @@
       "thread_id": 224,
       "topic_field": "epilepsy,Hetionet",
       "url": "/discussion/prediction-in-epilepsy/224",
-      "views": 63
+      "views": 64
     },
     {
       "document_id": 7,
@@ -8253,7 +8262,7 @@
       "thread_id": 227,
       "topic_field": "applied imagination,Hetionet,hetnets,future,planning",
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227",
-      "views": 74
+      "views": 76
     },
     {
       "document_id": null,
