@@ -132,6 +132,7 @@ rephetio	10.1126/science.1257601	8
 rephetio	10.1038/nmeth.1280	7
 rephetio	10.1093/nar/gkr972	7
 rephetio	10.1093/nar/gku1011	7
+rephetio	10.1093/nar/gkw993	7
 rephetio	10.1109/ASONAM.2011.112	7
 rephetio	10.7717/peerj.1054	7
 rephetio	10.1038/msb.2009.98	6
@@ -143,8 +144,6 @@ rephetio	10.1186/gb-2012-13-1-r5	6
 rephetio	10.6084/m9.figshare.3103054	6
 rephetio	10.1007/978-3-540-69828-9_12	5
 rephetio	10.1038/ncomms10331	5
-rephetio	10.1093/nar/gkt1229	5
-rephetio	10.1093/nar/gkw993	5
 rephetio	10.1186/s13321-014-0043-5	5
 rephetio	10.1371/journal.pbio.0060184	5
 rephetio	10.1371/journal.pone.0049686	5
@@ -152,6 +151,7 @@ rephetio	10.1021/ci100050t	4
 rephetio	10.1073/pnas.0506580102	4
 rephetio	10.1093/comnet/cnu016	4
 rephetio	10.1093/database/bav028	4
+rephetio	10.1093/nar/gkt1229	4
 rephetio	10.1101/011569	4
 rephetio	10.1101/087619	4
 rephetio	10.1126/science.1158140	4
@@ -168,6 +168,7 @@ rephetio	10.1016/j.bcp.2009.06.094	3
 rephetio	10.1016/j.cell.2005.08.029	3
 rephetio	10.1016/j.ddtec.2015.01.005	3
 rephetio	10.1016/j.drudis.2012.07.017	3
+rephetio	10.1016/j.physbeh.2008.05.020	3
 rephetio	10.1016/j.ymeth.2014.11.020	3
 rephetio	10.1038/536016a	3
 rephetio	10.1038/ng.3259	3
@@ -212,7 +213,6 @@ rephetio	10.1016/0013-4694(75)90199-6	2
 rephetio	10.1016/j.amjmed.2008.01.017	2
 rephetio	10.1016/j.drudis.2012.07.014	2
 rephetio	10.1016/j.drudis.2012.08.005	2
-rephetio	10.1016/j.physbeh.2008.05.020	2
 rephetio	10.1016/s0169-023x(97)00017-7	2
 rephetio	10.1038/523272a	2
 rephetio	10.1038/530148a	2
@@ -254,6 +254,7 @@ rephetio	10.1093/nar/gku935	2
 rephetio	10.1093/nar/gkv1075	2
 rephetio	10.1093/nar/gkv1351	2
 rephetio	10.1093/nar/gkv810	2
+rephetio	10.1093/nar/gkw1133	2
 rephetio	10.1093/ntr/nts201	2
 rephetio	10.1097/00000542-197111000-00006	2
 rephetio	10.1103/PhysRevE.86.036115	2
@@ -261,6 +262,7 @@ rephetio	10.1103/physrevx.3.041022	2
 rephetio	10.1111/j.1460-9592.2004.01538.x	2
 rephetio	10.1111/j.1467-9868.2005.00503.x	2
 rephetio	10.1126/science.aaa0355	2
+rephetio	10.1126/science.aah6168	2
 rephetio	10.1126/scisignal.2001699	2
 rephetio	10.1126/scitranslmed.3001318	2
 rephetio	10.1140/epjst/e2013-01712-8	2
@@ -498,7 +500,6 @@ rephetio	10.1093/nar/gku1075	1
 rephetio	10.1093/nar/gku1113	1
 rephetio	10.1093/nar/gkv1072	1
 rephetio	10.1093/nar/gkv1230	1
-rephetio	10.1093/nar/gkw1133	1
 rephetio	10.1097/00000539-200010000-00041	1
 rephetio	10.1097/00000542-197109000-00007	1
 rephetio	10.1097/00000542-197503000-00026	1
@@ -564,7 +565,6 @@ rephetio	10.1126/science.1158684	1
 rephetio	10.1126/science.1184819	1
 rephetio	10.1126/science.1216570	1
 rephetio	10.1126/science.1260419	1
-rephetio	10.1126/science.aah6168	1
 rephetio	10.1136/amiajnl-2012-001291	1
 rephetio	10.1136/amiajnl-2014-002649	1
 rephetio	10.1136/bmj.d7292	1
