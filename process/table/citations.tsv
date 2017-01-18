@@ -161,6 +161,7 @@ rephetio	10.1186/s13073-014-0095-1	4
 rephetio	10.1371/journal.pgen.1004967	4
 rephetio	10.15363/thinklab.d186	4
 rephetio	10.15363/thinklab.d215	4
+rephetio	10.15363/thinklab.d224	4
 rephetio	10.18637/jss.v033.i01	4
 rephetio	10.5281/zenodo.47223	4
 rephetio	10.1016/0022-2836	3
@@ -196,6 +197,7 @@ rephetio	10.1186/1758-2946-5-3	3
 rephetio	10.1186/1758-2946-5-7	3
 rephetio	10.1371/journal.pcbi.1000353	3
 rephetio	10.1371/journal.pcbi.1003285	3
+rephetio	10.15363/thinklab.d229	3
 rephetio	10.3109/08037050903576726	3
 rephetio	10.5281/zenodo.21711	3
 rephetio	10.5281/zenodo.45524	3
@@ -206,13 +208,18 @@ rephetio	10.1001/archneur.61.8.1254	2
 rephetio	10.1001/jama.1994.03510380059038	2
 rephetio	10.1002/14651858.CD003982.pub2	2
 rephetio	10.1002/14651858.CD006103.pub7	2
+rephetio	10.1007/0-387-27526-6_13	2
 rephetio	10.1007/11564126_44	2
 rephetio	10.1007/978-981-287-077-3_63	2
 rephetio	10.1007/s00228-003-0693-0	2
 rephetio	10.1016/0013-4694(75)90199-6	2
+rephetio	10.1016/S1059-1311(03)00082-7	2
+rephetio	10.1016/S1388-2457(00)00411-9	2
 rephetio	10.1016/j.amjmed.2008.01.017	2
 rephetio	10.1016/j.drudis.2012.07.014	2
 rephetio	10.1016/j.drudis.2012.08.005	2
+rephetio	10.1016/j.ebcr.2015.07.003	2
+rephetio	10.1016/j.seizure.2010.12.011	2
 rephetio	10.1016/s0169-023x(97)00017-7	2
 rephetio	10.1038/523272a	2
 rephetio	10.1038/530148a	2
@@ -240,6 +247,7 @@ rephetio	10.1093/bja/aes027	2
 rephetio	10.1093/brain/awn081	2
 rephetio	10.1093/database/bar036	2
 rephetio	10.1093/database/bav010	2
+rephetio	10.1093/med/9780199746545.003.0010	2
 rephetio	10.1093/nar/gki031	2
 rephetio	10.1093/nar/gkl999	2
 rephetio	10.1093/nar/gkn892	2
@@ -265,6 +273,7 @@ rephetio	10.1126/science.aaa0355	2
 rephetio	10.1126/science.aah6168	2
 rephetio	10.1126/scisignal.2001699	2
 rephetio	10.1126/scitranslmed.3001318	2
+rephetio	10.1136/jnnp.2006.100222	2
 rephetio	10.1140/epjst/e2013-01712-8	2
 rephetio	10.1186/gb-2005-6-2-r21	2
 rephetio	10.1186/s13742-015-0087-0	2
@@ -281,7 +290,6 @@ rephetio	10.15363/thinklab.d194	2
 rephetio	10.15363/thinklab.d200	2
 rephetio	10.15363/thinklab.d201	2
 rephetio	10.15363/thinklab.d210	2
-rephetio	10.15363/thinklab.d224	2
 rephetio	10.15363/thinklab.d34	2
 rephetio	10.15363/thinklab.d39	2
 rephetio	10.15363/thinklab.d40	2
@@ -292,12 +300,16 @@ rephetio	10.15363/thinklab.d97	2
 rephetio	10.2147/COPD.S1121	2
 rephetio	10.2147/btt.s10123	2
 rephetio	10.2174/1386207013330670	2
+rephetio	10.2174/1568007023339193	2
 rephetio	10.2174/156802607780636726	2
+rephetio	10.2174/156802612800229206	2
+rephetio	10.2174/157015910792246254	2
 rephetio	10.2200/S00433ED1V01Y201207DMK005	2
 rephetio	10.2307/1932409	2
 rephetio	10.2307/2288929	2
 rephetio	10.2307/2340521	2
 rephetio	10.3897/zookeys.150.2189	2
+rephetio	10.4135/9781483349985.n37	2
 rephetio	10.4338/ACI-2015-01-RA-0010	2
 rephetio	10.5281/zenodo.27229	2
 rephetio	10.5281/zenodo.27244	2
@@ -334,7 +346,6 @@ rephetio	10.1002/pmic.201100598	1
 rephetio	10.1002/psp4.12009	1
 rephetio	10.1002/wics.147	1
 rephetio	10.1002/wsbm.1337	1
-rephetio	10.1007/0-387-27526-6_13	1
 rephetio	10.1007/978-1-60761-232-2_6	1
 rephetio	10.1007/978-3-642-16318-0_27	1
 rephetio	10.1007/978-3-642-23935-9_37	1
@@ -350,8 +361,6 @@ rephetio	10.1007/s12064-012-0162-3	1
 rephetio	10.1016/S0140-6736(68)91356-1	1
 rephetio	10.1016/S0387-7604(99)00113-8	1
 rephetio	10.1016/S0888-7543	1
-rephetio	10.1016/S1059-1311(03)00082-7	1
-rephetio	10.1016/S1388-2457(00)00411-9	1
 rephetio	10.1016/S1474-4422(07)70215-6	1
 rephetio	10.1016/j.ajhg.2015.05.020	1
 rephetio	10.1016/j.amjmed.2015.10.015	1
@@ -362,7 +371,6 @@ rephetio	10.1016/j.critrevonc.2016.05.015	1
 rephetio	10.1016/j.ctrv.2015.06.001	1
 rephetio	10.1016/j.drudis.2011.12.020	1
 rephetio	10.1016/j.dss.2006.04.003	1
-rephetio	10.1016/j.ebcr.2015.07.003	1
 rephetio	10.1016/j.jbi.2003.11.003	1
 rephetio	10.1016/j.jbi.2006.11.003	1
 rephetio	10.1016/j.jbi.2010.09.009	1
@@ -375,7 +383,6 @@ rephetio	10.1016/j.molcel.2004.09.016	1
 rephetio	10.1016/j.nurt.2006.11.009	1
 rephetio	10.1016/j.physa.2011.02.004	1
 rephetio	10.1016/j.sbi.2013.02.008	1
-rephetio	10.1016/j.seizure.2010.12.011	1
 rephetio	10.1016/j.seizure.2011.01.003	1
 rephetio	10.1016/j.socnet.2008.02.001	1
 rephetio	10.1016/j.socnet.2013.01.004	1
@@ -421,6 +428,7 @@ rephetio	10.1038/nrd1178	1
 rephetio	10.1038/nrd2997	1
 rephetio	10.1038/nrd3681	1
 rephetio	10.1038/nrg1768	1
+rephetio	10.1038/nrn1430	1
 rephetio	10.1038/srep00620	1
 rephetio	10.1038/srep03202	1
 rephetio	10.1038/srep03289	1
@@ -468,7 +476,6 @@ rephetio	10.1093/database/bas041	1
 rephetio	10.1093/hmg/ddw160	1
 rephetio	10.1093/jamia/ocv062	1
 rephetio	10.1093/jamia/ocv102	1
-rephetio	10.1093/med/9780199746545.003.0010	1
 rephetio	10.1093/nar/28.1.235	1
 rephetio	10.1093/nar/30.1.412	1
 rephetio	10.1093/nar/gkg056	1
@@ -569,7 +576,6 @@ rephetio	10.1136/amiajnl-2012-001291	1
 rephetio	10.1136/amiajnl-2014-002649	1
 rephetio	10.1136/bmj.d7292	1
 rephetio	10.1136/bmj.g254	1
-rephetio	10.1136/jnnp.2006.100222	1
 rephetio	10.1137/1.9781611972825.13	1
 rephetio	10.1137/S003614450342480	1
 rephetio	10.1140/epjb/e2011-10795-8	1
@@ -658,6 +664,7 @@ rephetio	10.15363/thinklab.d21	1
 rephetio	10.15363/thinklab.d212	1
 rephetio	10.15363/thinklab.d216	1
 rephetio	10.15363/thinklab.d220	1
+rephetio	10.15363/thinklab.d228	1
 rephetio	10.15363/thinklab.d23	1
 rephetio	10.15363/thinklab.d41	1
 rephetio	10.15363/thinklab.d43	1
@@ -683,9 +690,6 @@ rephetio	10.2147/NDT.S50371	1
 rephetio	10.2147/NDT.S833	1
 rephetio	10.2165/00023210-200519060-00004	1
 rephetio	10.2174/092986706778742918	1
-rephetio	10.2174/1568007023339193	1
-rephetio	10.2174/156802612800229206	1
-rephetio	10.2174/157015910792246254	1
 rephetio	10.2307/2332539	1
 rephetio	10.2337/diacare.26.2.279	1
 rephetio	10.3163/1536-5050.95.4.416	1
@@ -696,7 +700,6 @@ rephetio	10.3897/rio.1.e7547	1
 rephetio	10.4088/pcc.v05n0202	1
 rephetio	10.4088/pcc.v07n0305	1
 rephetio	10.4135/9781412983433	1
-rephetio	10.4135/9781483349985.n37	1
 rephetio	10.4137/JCNSD.S5128	1
 rephetio	10.5061/dryad.jp917	1
 rephetio	10.5114/aoms.2012.27270	1
