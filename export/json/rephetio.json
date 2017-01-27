@@ -5309,6 +5309,51 @@
       "published": "2017-01-26T19:58:12.422911Z",
       "thread_id": 34,
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34#13"
+    },
+    {
+      "body_html": "<h1>Version 2 with target piecharts</h1>\r\n\r\n<p>Thanks <a href=\"/u/alexanderpico\" class=\"username\">@alexanderpico</a> and <a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a> for the feedback. Here's the latest version that shows the normalized contribution of each target (gene group) to the prediction. It's way more informative and interesting than before (and hopefully still legible)!</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/raw/3f3e6ecb7a9b8bb64cde76ac8176d31fc19fdc42/epilepsy/figure/compound-network/compound-network.png\" alt=\"Predicted epilepsy compound network\"></p>\r\n\r\n<p>Making the legend was a pain. I had to first choose colors, which I selected from <a href=\"https://github.com/d3/d3-scale/blob/2225fe65f3b0aa2c76588d78a18e4412adfc5795/README.md#schemeCategory10\">d3's category10</a>. Then I manually applied the colors to the Cytoscape chart options. However, I couldn't generate the legend in Cytoscape, so I used <code>ggplot2</code> in R and pieced together the SVG exports in Inkscape. So lot's of opportunity for errors and difficult to automate.</p>\r\n\r\n<blockquote><p>Alternative would be striped chart within the rectangle that would \"fill\" from left to right per the contribution to the prediction</p></blockquote>\r\n\r\n<p><a href=\"/u/alexanderpico\" class=\"username\">@alexanderpico</a> great idea regarding a striped chart within the node. Unfortunately, I couldn't find any other good properties besides fill color for representing the compound's effect on ictogenesis, which the striped chart would displace.</p>\r\n\r\n<blockquote><p>In particular, I'd want to see if there is some clustering of drugs based on what gene target they act one.</p></blockquote>\r\n\r\n<p><a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a> hopefully this is now within reach. The raw data for the piecharts is available in <a href=\"https://github.com/dhimmel/rephetio/blob/3f3e6ecb7a9b8bb64cde76ac8176d31fc19fdc42/epilepsy/figure/compound-network/target-contributions-wide.tsv\"><code>target-contributions-wide.tsv</code></a> if anything is hard to see in the network. </p>\r\n\r\n<p>I manually laid out disconnected compounds. The visualization could be improved by placing similar compounds together. For example, I placed sevoflurane with the other halogenated ethers even though it's chemical similarity was not strong enough to have any <em>resembles</em> relationships. So <a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a>, feel free to play with the <a href=\"https://github.com/dhimmel/rephetio/blob/3f3e6ecb7a9b8bb64cde76ac8176d31fc19fdc42/epilepsy/figure/compound-network/compound-network.cys\">cytoscape session</a> to help organize things.</p>",
+      "body_md": "# Version 2 with target piecharts\r\n\r\nThanks @alexanderpico and @pouyakhankhanian for the feedback. Here's the latest version that shows the normalized contribution of each target (gene group) to the prediction. It's way more informative and interesting than before (and hopefully still legible)!\r\n\r\n![Predicted epilepsy compound network](https://github.com/dhimmel/rephetio/raw/3f3e6ecb7a9b8bb64cde76ac8176d31fc19fdc42/epilepsy/figure/compound-network/compound-network.png)\r\n\r\nMaking the legend was a pain. I had to first choose colors, which I selected from [d3's category10](https://github.com/d3/d3-scale/blob/2225fe65f3b0aa2c76588d78a18e4412adfc5795/README.md#schemeCategory10). Then I manually applied the colors to the Cytoscape chart options. However, I couldn't generate the legend in Cytoscape, so I used `ggplot2` in R and pieced together the SVG exports in Inkscape. So lot's of opportunity for errors and difficult to automate.\r\n\r\n> Alternative would be striped chart within the rectangle that would \"fill\" from left to right per the contribution to the prediction\r\n\r\n@alexanderpico great idea regarding a striped chart within the node. Unfortunately, I couldn't find any other good properties besides fill color for representing the compound's effect on ictogenesis, which the striped chart would displace.\r\n\r\n> In particular, I'd want to see if there is some clustering of drugs based on what gene target they act one.\r\n\r\n@pouyakhankhanian hopefully this is now within reach. The raw data for the piecharts is available in [`target-contributions-wide.tsv`](https://github.com/dhimmel/rephetio/blob/3f3e6ecb7a9b8bb64cde76ac8176d31fc19fdc42/epilepsy/figure/compound-network/target-contributions-wide.tsv) if anything is hard to see in the network. \r\n\r\nI manually laid out disconnected compounds. The visualization could be improved by placing similar compounds together. For example, I placed sevoflurane with the other halogenated ethers even though it's chemical similarity was not strong enough to have any _resembles_ relationships. So @pouyakhankhanian, feel free to play with the [cytoscape session](https://github.com/dhimmel/rephetio/blob/3f3e6ecb7a9b8bb64cde76ac8176d31fc19fdc42/epilepsy/figure/compound-network/compound-network.cys) to help organize things.",
+      "comment_id": 1477,
+      "profile_id": 17,
+      "published": "2017-01-26T21:48:46.584505Z",
+      "thread_id": 230,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#6"
+    },
+    {
+      "body_html": "<h1>Cytoscape in the web browser?</h1>\r\n\r\n<p>Obviousely, having the above visualization as an interactive web visualization would be super cool and useful. I've heard about <a href=\"http://js.cytoscape.org/\">cytoscape.js</a> <span class=\"citation\">[<a href=\"https://doi.org/10.1093/bioinformatics/btv557\" class=\"citation hm \" data-key=\"10.1093/bioinformatics/btv557\">1</a>]</span> which is designed for this purpose. Hence, I exported the visualization from Cytoscape to a webpage <span class=\"citation\">[<a href=\"https://doi.org/10.12688/f1000research.4510.2\" class=\"citation hm \" data-key=\"10.12688/f1000research.4510.2\">2</a>]</span> with the commands:</p>\r\n\r\n<blockquote><p>File &gt; Export &gt; Network View(s) as Web Page</p></blockquote>\r\n\r\n<p>After unzipping the export, I launched a webserver using Python 3 (<code>python -m http.server</code>). The resulting webpage, hosted locally, showed an interactive version of the <a href=\"#2\">initial graph</a>. Awesome! Unfortunately, the pie charts were not included in the visualization.</p>\r\n\r\n<p>One final feature I'd like to implement that cytoscape.js may support is node hyperlinks. So for example, clicking the Isocarboxazid node would <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB01247/DOID_1826.html\" title=\"Hetionet Neo4j Browser. Does Isocarboxazid treat epilepsy syndrome?\">navigate you here</a>. Scripted editing of the SVG may also be a viable <a href=\"http://bl.ocks.org/d3noob/8150631\" title=\"Adding links to objects\">option here</a>.</p>",
+      "body_md": "# Cytoscape in the web browser?\r\n\r\nObviousely, having the above visualization as an interactive web visualization would be super cool and useful. I've heard about [cytoscape.js](http://js.cytoscape.org/) [@10.1093/bioinformatics/btv557] which is designed for this purpose. Hence, I exported the visualization from Cytoscape to a webpage [@10.12688/f1000research.4510.2] with the commands:\r\n\r\n> File > Export > Network View(s) as Web Page\r\n\r\nAfter unzipping the export, I launched a webserver using Python 3 (`python -m http.server`). The resulting webpage, hosted locally, showed an interactive version of the [initial graph](#2). Awesome! Unfortunately, the pie charts were not included in the visualization.\r\n\r\nOne final feature I'd like to implement that cytoscape.js may support is node hyperlinks. So for example, clicking the Isocarboxazid node would [navigate you here](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB01247/DOID_1826.html \"Hetionet Neo4j Browser. Does Isocarboxazid treat epilepsy syndrome?\"). Scripted editing of the SVG may also be a viable [option here](http://bl.ocks.org/d3noob/8150631 \"Adding links to objects\").",
+      "comment_id": 1478,
+      "profile_id": 17,
+      "published": "2017-01-26T22:09:01.578683Z",
+      "thread_id": 230,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#7"
+    },
+    {
+      "body_html": "<p>It's incredibly busy but I really do find it quite informative. The big benzo cluster on the upper right is clearly GABA heavy. The other big cluster is the barbituate cluster on the bottom, just left of center. This cluster is GABA/glutamate/Choline heavy. The halogentated ethers on the bottom right (I guess sevoflurane was not connected but moved closer for clarity) are also interesting, they seem to have potassium channels in common as well as GABA.</p>\r\n\r\n<p>Perhaps one of the most interesting clusters is the TCA (tricyclic antidepressant) cluster. We can tell they are ictogenic because they are shaded pink. It's interesting that these seem to share the CYP genes in common. Recall that CYP genes are actually not mechanistically related to epilepsy, but it just so happens that many seizure meds interact with the CYP protein. I'm a little surprised that there is not as much GABA in this cluster. </p>\r\n\r\n<p>The carbonic anhydrase inhibitors are clustered and are associated with the carbonic anhydrase proteins as expected.</p>\r\n\r\n<p>One very note-worthy thing is that the hetionet was not a prior \"aware\" of all these genes that are associated with epilepsy (i.e. there was no direct gene-disease connection in the network for most of these genes), and yet it still used these epilepsy genes to make it's predictions. The likely reason that genes associated with epilepsy were not connected to epilepsy via a gene-disease connection is because these are very rare mutations, most of these genes have been reported in only a handful of people. <a href=\"/u/dhimmel\" class=\"username\">@dhimmel</a> any thoughts about using this network for gene discovery? (sounds like a rabbit-hole though)</p>",
+      "body_md": "It's incredibly busy but I really do find it quite informative. The big benzo cluster on the upper right is clearly GABA heavy. The other big cluster is the barbituate cluster on the bottom, just left of center. This cluster is GABA/glutamate/Choline heavy. The halogentated ethers on the bottom right (I guess sevoflurane was not connected but moved closer for clarity) are also interesting, they seem to have potassium channels in common as well as GABA.\r\n\r\nPerhaps one of the most interesting clusters is the TCA (tricyclic antidepressant) cluster. We can tell they are ictogenic because they are shaded pink. It's interesting that these seem to share the CYP genes in common. Recall that CYP genes are actually not mechanistically related to epilepsy, but it just so happens that many seizure meds interact with the CYP protein. I'm a little surprised that there is not as much GABA in this cluster. \r\n\r\nThe carbonic anhydrase inhibitors are clustered and are associated with the carbonic anhydrase proteins as expected.\r\n\r\nOne very note-worthy thing is that the hetionet was not a prior \"aware\" of all these genes that are associated with epilepsy (i.e. there was no direct gene-disease connection in the network for most of these genes), and yet it still used these epilepsy genes to make it's predictions. The likely reason that genes associated with epilepsy were not connected to epilepsy via a gene-disease connection is because these are very rare mutations, most of these genes have been reported in only a handful of people. @dhimmel any thoughts about using this network for gene discovery? (sounds like a rabbit-hole though)",
+      "comment_id": 1479,
+      "profile_id": 188,
+      "published": "2017-01-26T22:39:07.293325Z",
+      "thread_id": 230,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#8"
+    },
+    {
+      "body_html": "<p>I have made an alternative suggestion for the pie chart figure:</p>\r\n\r\n<p><img src=\"https://cloud.githubusercontent.com/assets/1117703/22377022/557b3946-e47e-11e6-957f-0130ada2f6ca.png\" alt=\"compound-network-ljj\"><br>What I changed was to make the nodes be just the pie charts, move the text labels to not be on top of the pie charts (to improve readability), recolor the pie charts using a color scale from ColorBrewer, and reduce edge width to reduce clutter.</p>",
+      "body_md": "I have made an alternative suggestion for the pie chart figure:\r\n\r\n![compound-network-ljj](https://cloud.githubusercontent.com/assets/1117703/22377022/557b3946-e47e-11e6-957f-0130ada2f6ca.png)\r\nWhat I changed was to make the nodes be just the pie charts, move the text labels to not be on top of the pie charts (to improve readability), recolor the pie charts using a color scale from ColorBrewer, and reduce edge width to reduce clutter.",
+      "comment_id": 1480,
+      "profile_id": 125,
+      "published": "2017-01-27T07:19:06.515982Z",
+      "thread_id": 230,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#9"
+    },
+    {
+      "body_html": "<p><a href=\"/u/larsjuhljensen\" class=\"username\">@larsjuhljensen</a> thanks for the suggestions. I'm excited about reducing clutter and improving readability. Stay tuned for a version that incorporates your modifications.</p>\r\n\r\n<blockquote><p>there was no direct gene-disease connection in the network for most of these genes</p></blockquote>\r\n\r\n<p><a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a>, I'm not so sure about this. You can run the following query at <a href=\"https://neo4j.het.io\">https://neo4j.het.io</a> to see all epilepsy-associated genes in Hetionet v1.0.</p>\r\n\r\n<pre><code class=\"no-highlight hljs\">MATCH (disease:Disease)-[assoc:ASSOCIATES_DaG]-(gene:Gene)\r\nWHERE disease.name = 'epilepsy syndrome'\r\nRETURN\r\n  gene.name AS gene_symbol,\r\n  gene.description AS gene_name,\r\n  assoc.sources AS sources\r\n ORDER BY gene_symbol</code></pre>\r\n\r\n<p>I suspect these 399 associations contain many of the \"very rare mutations … reported in only a handful of people\" that you're thinking of. Quoting <a href=\"https://thinklab.com/p/rephetio/report\">our report</a>:</p>\r\n\r\n<blockquote><p><em>Disease–associates–Gene</em> edges were extracted from the GWAS Catalog <span class=\"citation\">[<a href=\"https://doi.org/10.5281/zenodo.48428\" class=\"citation hm citation-figure\" data-key=\"10.5281/zenodo.48428\">1</a>]</span>, DISEASES <span class=\"citation\">[<a href=\"https://doi.org/10.15363/thinklab.d106\" class=\"citation hm citation-self\" data-key=\"10.15363/thinklab.d106\">2</a>, <a href=\"https://doi.org/10.5281/zenodo.48425\" class=\"citation hm citation-figure\" data-key=\"10.5281/zenodo.48425\">3</a>]</span>, DisGeNET <span class=\"citation\">[<a href=\"https://doi.org/10.15363/thinklab.d105\" class=\"citation hm citation-self\" data-key=\"10.15363/thinklab.d105\">4</a>, <a href=\"https://doi.org/10.5281/zenodo.48426\" class=\"citation hm citation-figure\" data-key=\"10.5281/zenodo.48426\">5</a>]</span>, and DOAF <span class=\"citation\">[<a href=\"https://doi.org/10.15363/thinklab.d94\" class=\"citation hm citation-self\" data-key=\"10.15363/thinklab.d94\">6</a>, <a href=\"https://doi.org/10.5281/zenodo.48427\" class=\"citation hm citation-figure\" data-key=\"10.5281/zenodo.48427\">7</a>]</span>.</p></blockquote>\r\n\r\n<p>I think DISEASES, DisGeNET, and possibly DOAF are capable of containing associations based on rare mutations that were discovered prior to ~2015.</p>\r\n\r\n<p>Another way we can approach the issue is by looking at the contribution of <em>Epilepsy–associates–Gene</em> (target edges) on our top 100 predictions. <a href=\"https://github.com/dhimmel/rephetio/blob/3f3e6ecb7a9b8bb64cde76ac8176d31fc19fdc42/epilepsy/data/target-edge-associates-contributions.tsv\">This table</a> shows how much each gene group that was associated with epilepsy contributed to the top predictions. The gene groups with contributions greater than 1% are shown below:</p>\r\n\r\n<table class=\"table markdown-table\"><thead><tr><th>Gene Group</th><th>Paths</th><th>Contribution</th><th>Genes</th></tr></thead><tbody><tr><td>gamma-aminobutyric acid (GABA) A receptor</td><td>23347</td><td>6.834</td><td>GABRA1, GABRA5, GABRB2, GABRB3, GABRD, GABRG2</td></tr><tr><td>glutamate receptor</td><td>20142</td><td>2.2849</td><td>GRIA1, GRIA2, GRIA4, GRIK1, GRIK2, GRIK5, GRIN2A, GRIN2B, GRM1, GRM2, GRM3, GRM4, GRM5, GRM8</td></tr><tr><td>sodium channel</td><td>2678</td><td>2.1133</td><td>SCN1A, SCN1B, SCN2A, SCN3A, SCN4A, SCN8A, SCN9A</td></tr><tr><td>calcium channel</td><td>10209</td><td>1.5873</td><td>CACNA1A, CACNA1D, CACNA1G, CACNA1H, CACNA2D2, CACNB4, CACNG2, CACNG3</td></tr><tr><td>potassium channel</td><td>15467</td><td>1.547</td><td>KCNAB2, KCNB1, KCNC1, KCNC4, KCND2, KCNH1, KCNJ10, KCNJ11, KCNK3, KCNK9, KCNMA1, KCNQ2, KCNQ3, KCNQ4, KCNV1</td></tr><tr><td>cholinergic receptor</td><td>13397</td><td>1.5254</td><td>CHRM1, CHRM2, CHRM3, CHRNA2, CHRNA4, CHRNA7, CHRNB2</td></tr><tr><td>cytochrome P450</td><td>9365</td><td>1.1146</td><td>CYP11A1, CYP2C19, CYP2D6</td></tr><tr><td>carbonic anhydrase</td><td>1268</td><td>0.79162</td><td>CA13, CA4</td></tr></tbody></table>\r\n\r\n<p>These are the same gene groups as the <a href=\"https://thinklab.com/discussion/prediction-in-epilepsy/224#11\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d224\">source edge analysis identified</a>. However, in this list, the cytochrome P450 family is demoted, as it's the only group that's not mechanistically related to epilepsy pathophysiology.</p>",
+      "body_md": "@larsjuhljensen thanks for the suggestions. I'm excited about reducing clutter and improving readability. Stay tuned for a version that incorporates your modifications.\r\n\r\n> there was no direct gene-disease connection in the network for most of these genes\r\n\r\n@pouyakhankhanian, I'm not so sure about this. You can run the following query at https://neo4j.het.io to see all epilepsy-associated genes in Hetionet v1.0.\r\n\r\n```cypher\r\nMATCH (disease:Disease)-[assoc:ASSOCIATES_DaG]-(gene:Gene)\r\nWHERE disease.name = 'epilepsy syndrome'\r\nRETURN\r\n  gene.name AS gene_symbol,\r\n  gene.description AS gene_name,\r\n  assoc.sources AS sources\r\n ORDER BY gene_symbol\r\n```\r\n\r\nI suspect these 399 associations contain many of the \"very rare mutations … reported in only a handful of people\" that you're thinking of. Quoting [our report](https://thinklab.com/p/rephetio/report):\r\n\r\n> _Disease–associates–Gene_ edges were extracted from the GWAS Catalog [@10.5281/zenodo.48428], DISEASES [@10.15363/thinklab.d106 @10.5281/zenodo.48425], DisGeNET [@10.15363/thinklab.d105 @10.5281/zenodo.48426], and DOAF [@10.15363/thinklab.d94 @10.5281/zenodo.48427].\r\n\r\nI think DISEASES, DisGeNET, and possibly DOAF are capable of containing associations based on rare mutations that were discovered prior to ~2015.\r\n\r\nAnother way we can approach the issue is by looking at the contribution of _Epilepsy–associates–Gene_ (target edges) on our top 100 predictions. [This table](https://github.com/dhimmel/rephetio/blob/3f3e6ecb7a9b8bb64cde76ac8176d31fc19fdc42/epilepsy/data/target-edge-associates-contributions.tsv) shows how much each gene group that was associated with epilepsy contributed to the top predictions. The gene groups with contributions greater than 1% are shown below:\r\n\r\n| Gene Group | Paths | Contribution | Genes |\r\n|--------------------|-------|--------------|---------------------|\r\n| gamma-aminobutyric acid (GABA) A receptor | 23347 | 6.834 | GABRA1, GABRA5, GABRB2, GABRB3, GABRD, GABRG2 |\r\n| glutamate receptor | 20142 | 2.2849 | GRIA1, GRIA2, GRIA4, GRIK1, GRIK2, GRIK5, GRIN2A, GRIN2B, GRM1, GRM2, GRM3, GRM4, GRM5, GRM8 |\r\n| sodium channel | 2678 | 2.1133 | SCN1A, SCN1B, SCN2A, SCN3A, SCN4A, SCN8A, SCN9A |\r\n| calcium channel | 10209 | 1.5873 | CACNA1A, CACNA1D, CACNA1G, CACNA1H, CACNA2D2, CACNB4, CACNG2, CACNG3 |\r\n| potassium channel | 15467 | 1.547 | KCNAB2, KCNB1, KCNC1, KCNC4, KCND2, KCNH1, KCNJ10, KCNJ11, KCNK3, KCNK9, KCNMA1, KCNQ2, KCNQ3, KCNQ4, KCNV1 |\r\n| cholinergic receptor | 13397 | 1.5254 | CHRM1, CHRM2, CHRM3, CHRNA2, CHRNA4, CHRNA7, CHRNB2 |\r\n| cytochrome P450 | 9365 | 1.1146 | CYP11A1, CYP2C19, CYP2D6 |\r\n| carbonic anhydrase | 1268 | 0.79162 | CA13, CA4 |\r\n\r\nThese are the same gene groups as the [source edge analysis identified](https://thinklab.com/discussion/prediction-in-epilepsy/224#11). However, in this list, the cytochrome P450 family is demoted, as it's the only group that's not mechanistically related to epilepsy pathophysiology.",
+      "comment_id": 1481,
+      "profile_id": 17,
+      "published": "2017-01-27T16:38:05.361393Z",
+      "thread_id": 230,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#10"
     }
   ],
   "documents": [
@@ -7008,6 +7053,24 @@
       "note_id": 301,
       "profile_id": 48,
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227#note-301"
+    },
+    {
+      "added": "2017-01-26T22:39:49.856391Z",
+      "body_html": "<p>Unfortunate that the links and pie charts don't work. Still I think the links you provide to cytoscape and neo4j allow quite a bit of interaction. It is not ideal but it is better than what we've had for a lot of projects.</p>",
+      "body_md": "Unfortunate that the links and pie charts don't work. Still I think the links you provide to cytoscape and neo4j allow quite a bit of interaction. It is not ideal but it is better than what we've had for a lot of projects.",
+      "comment_id": 1478,
+      "note_id": 302,
+      "profile_id": 188,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#note-302"
+    },
+    {
+      "added": "2017-01-27T06:55:36.065352Z",
+      "body_html": "<p>With all due respect, I think you have overloaded your visualization with properties. By having so many different properties visualized in a single figure, it is near impossible to spot any patterns. The art of visualization is to highlight what is important; the way to do that is by not showing what is not important.</p>",
+      "body_md": "With all due respect, I think you have overloaded your visualization with properties. By having so many different properties visualized in a single figure, it is near impossible to spot any patterns. The art of visualization is to highlight what is important; the way to do that is by not showing what is not important.",
+      "comment_id": 1477,
+      "note_id": 303,
+      "profile_id": 125,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#note-303"
     }
   ],
   "profiles": [
@@ -7341,7 +7404,7 @@
       "username": "hanockkwak"
     }
   ],
-  "retrieved": "2017-01-26T21:43:53.277034Z",
+  "retrieved": "2017-01-27T21:42:44.698733Z",
   "threads": [
     {
       "document_id": null,
@@ -7353,7 +7416,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 703
+      "views": 706
     },
     {
       "document_id": null,
@@ -7425,7 +7488,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 200
+      "views": 201
     },
     {
       "document_id": null,
@@ -7437,7 +7500,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 307
+      "views": 308
     },
     {
       "document_id": null,
@@ -7557,7 +7620,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 329
+      "views": 330
     },
     {
       "document_id": null,
@@ -7593,7 +7656,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 507
+      "views": 511
     },
     {
       "document_id": null,
@@ -7617,7 +7680,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 590
+      "views": 591
     },
     {
       "document_id": null,
@@ -7665,7 +7728,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 164
+      "views": 165
     },
     {
       "document_id": null,
@@ -7713,7 +7776,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 600
+      "views": 601
     },
     {
       "document_id": null,
@@ -7737,7 +7800,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 949
+      "views": 951
     },
     {
       "document_id": null,
@@ -7953,7 +8016,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 482
+      "views": 483
     },
     {
       "document_id": null,
@@ -8001,7 +8064,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 221
+      "views": 222
     },
     {
       "document_id": null,
@@ -8037,7 +8100,7 @@
       "thread_id": 162,
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 130
+      "views": 131
     },
     {
       "document_id": null,
@@ -8085,7 +8148,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 262
+      "views": 263
     },
     {
       "document_id": null,
@@ -8205,7 +8268,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 742
+      "views": 746
     },
     {
       "document_id": null,
@@ -8241,7 +8304,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 494
+      "views": 496
     },
     {
       "document_id": null,
@@ -8277,7 +8340,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 187
+      "views": 188
     },
     {
       "document_id": null,
@@ -8301,7 +8364,7 @@
       "thread_id": 224,
       "topic_field": "epilepsy,Hetionet",
       "url": "/discussion/prediction-in-epilepsy/224",
-      "views": 75
+      "views": 76
     },
     {
       "document_id": 7,
@@ -8361,7 +8424,7 @@
       "thread_id": 230,
       "topic_field": "Cytoscape,networks,compounds,visualization,epilepsy",
       "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230",
-      "views": 7
+      "views": 10
     }
   ]
 }
