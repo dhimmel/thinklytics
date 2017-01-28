@@ -5354,6 +5354,24 @@
       "published": "2017-01-27T16:38:05.361393Z",
       "thread_id": 230,
       "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#10"
+    },
+    {
+      "body_html": "<h1>Version 3 to decrease clutter</h1>\r\n\r\n<p>Based on <a href=\"/u/larsjuhljensen\" class=\"username\">@larsjuhljensen</a> <a href=\"#9\">suggestions</a>, I created the next iteration of the visualization (<a href=\"https://github.com/dhimmel/rephetio/blob/f969a7356e54dfdc2659cefbaec937fc0d0f6c4d/epilepsy/figure/compound-network/compound-network.cys\"><code>compound-network.cys</code></a>):</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/raw/f969a7356e54dfdc2659cefbaec937fc0d0f6c4d/epilepsy/figure/compound-network/compound-network.png\" alt=\"Top epilepsy prediction viz\"></p>\r\n\r\n<p>Nodes are now entirely their target-contribution piechart. Ditching the rounded rectangles and moving the text atop nodes saved space. The compound names will still be small but should be readable at printout size. I moved the effect on ictogenesis to the node border, since I think this information is crucial.</p>\r\n\r\n<p>I also moved the disconnected nodes around to put similar compounds (either by name or target contributions) together.</p>\r\n\r\n<p>Of course, suggestions still welcome.</p>",
+      "body_md": "# Version 3 to decrease clutter\r\n\r\nBased on @larsjuhljensen [suggestions](#9), I created the next iteration of the visualization ([`compound-network.cys`](https://github.com/dhimmel/rephetio/blob/f969a7356e54dfdc2659cefbaec937fc0d0f6c4d/epilepsy/figure/compound-network/compound-network.cys)):\r\n\r\n![Top epilepsy prediction viz](https://github.com/dhimmel/rephetio/raw/f969a7356e54dfdc2659cefbaec937fc0d0f6c4d/epilepsy/figure/compound-network/compound-network.png)\r\n\r\nNodes are now entirely their target-contribution piechart. Ditching the rounded rectangles and moving the text atop nodes saved space. The compound names will still be small but should be readable at printout size. I moved the effect on ictogenesis to the node border, since I think this information is crucial.\r\n\r\nI also moved the disconnected nodes around to put similar compounds (either by name or target contributions) together.\r\n\r\nOf course, suggestions still welcome.",
+      "comment_id": 1482,
+      "profile_id": 17,
+      "published": "2017-01-27T23:10:29.107285Z",
+      "thread_id": 230,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#11"
+    },
+    {
+      "body_html": "<p>I find it is too packed and that it is thus hard to spot clusters because there are nodes everywhere. I would make the figure taller to get some more real estate and rearrange the nodes so that there is some free space between your clusters. There is an element of horror vacui to this visualization; white space should be your friend.</p>\r\n\r\n<p>And sorry to be so negative, but I still find the figure to overloaded in terms of visual properties. Maybe the effect on ictogenesis is important to show, but in that case you'll have to remove something else. Right now, by attempting to show everything at the same time, you in my opinion effectively end up showing nothing.</p>\r\n\r\n<p>Here are some questions to consider for improving the figure further:</p>\r\n\r\n<ul><li>What is the main conclusion that you want people to draw from looking at this figure?</li><li>You have two types of effect on ictogenesis coded in light blue and light red. Are both equally important? If not, could you maybe just highlight the one that is important?</li><li>Part of what makes this hard to look at is the number of target classes. By having so many classes, you use up a lot of color space, making it hard to show anything else. Could some classes be left out? Could some be combined (e.g. calcium channels + potassium channels + sodium channels = cation channels)?</li><li>Are the relevant target classes shown? When I try to find the target class that best discriminates between nodes with red circles and nodes with blue circles, it appears to be the class \"other\". This suggests to me that, despite showing so much, you are in fact not showing what matters most.</li><li>And last but certainly not least: are you sure this should even be shown as a network? Your focus seems to be all kinds of properties of the nodes, whereas the edges barely matter, except for showing that there are certain groups of chemically similar compounds. Simply categorizing the compounds might be a much better way to represent this.</li></ul>\r\n\r\n<p>Just trying to be constructive here.</p>",
+      "body_md": "I find it is too packed and that it is thus hard to spot clusters because there are nodes everywhere. I would make the figure taller to get some more real estate and rearrange the nodes so that there is some free space between your clusters. There is an element of horror vacui to this visualization; white space should be your friend.\r\n\r\nAnd sorry to be so negative, but I still find the figure to overloaded in terms of visual properties. Maybe the effect on ictogenesis is important to show, but in that case you'll have to remove something else. Right now, by attempting to show everything at the same time, you in my opinion effectively end up showing nothing.\r\n\r\nHere are some questions to consider for improving the figure further:\r\n\r\n - What is the main conclusion that you want people to draw from looking at this figure?\r\n - You have two types of effect on ictogenesis coded in light blue and light red. Are both equally important? If not, could you maybe just highlight the one that is important?\r\n - Part of what makes this hard to look at is the number of target classes. By having so many classes, you use up a lot of color space, making it hard to show anything else. Could some classes be left out? Could some be combined (e.g. calcium channels + potassium channels + sodium channels = cation channels)?\r\n - Are the relevant target classes shown? When I try to find the target class that best discriminates between nodes with red circles and nodes with blue circles, it appears to be the class \"other\". This suggests to me that, despite showing so much, you are in fact not showing what matters most.\r\n - And last but certainly not least: are you sure this should even be shown as a network? Your focus seems to be all kinds of properties of the nodes, whereas the edges barely matter, except for showing that there are certain groups of chemically similar compounds. Simply categorizing the compounds might be a much better way to represent this.\r\n\r\nJust trying to be constructive here.",
+      "comment_id": 1483,
+      "profile_id": 125,
+      "published": "2017-01-28T06:57:03.299577Z",
+      "thread_id": 230,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#12"
     }
   ],
   "documents": [
@@ -5381,7 +5399,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/report",
-      "views": 357
+      "views": 359
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"https://doi.org/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"https://doi.org/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"https://doi.org/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -7071,6 +7089,24 @@
       "note_id": 303,
       "profile_id": 125,
       "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#note-303"
+    },
+    {
+      "added": "2017-01-28T06:18:41.034496Z",
+      "body_html": "",
+      "body_md": "",
+      "comment_id": 1482,
+      "note_id": 304,
+      "profile_id": 125,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#note-304"
+    },
+    {
+      "added": "2017-01-28T06:22:12.394443Z",
+      "body_html": "",
+      "body_md": "",
+      "comment_id": 1482,
+      "note_id": 305,
+      "profile_id": 125,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#note-305"
     }
   ],
   "profiles": [
@@ -7404,7 +7440,7 @@
       "username": "hanockkwak"
     }
   ],
-  "retrieved": "2017-01-27T21:42:44.698733Z",
+  "retrieved": "2017-01-28T21:43:15.450939Z",
   "threads": [
     {
       "document_id": null,
@@ -7680,7 +7716,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 591
+      "views": 594
     },
     {
       "document_id": null,
@@ -7740,7 +7776,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 510
+      "views": 511
     },
     {
       "document_id": null,
@@ -7800,7 +7836,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 951
+      "views": 952
     },
     {
       "document_id": null,
@@ -7920,7 +7956,7 @@
       "thread_id": 102,
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 278
+      "views": 279
     },
     {
       "document_id": null,
@@ -8016,7 +8052,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 483
+      "views": 484
     },
     {
       "document_id": null,
@@ -8268,7 +8304,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 746
+      "views": 747
     },
     {
       "document_id": null,
@@ -8304,7 +8340,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 496
+      "views": 500
     },
     {
       "document_id": null,
@@ -8424,7 +8460,7 @@
       "thread_id": 230,
       "topic_field": "Cytoscape,networks,compounds,visualization,epilepsy",
       "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230",
-      "views": 10
+      "views": 15
     }
   ]
 }
