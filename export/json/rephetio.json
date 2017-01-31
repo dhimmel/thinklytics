@@ -5381,6 +5381,33 @@
       "published": "2017-01-30T04:09:42.787425Z",
       "thread_id": 230,
       "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#13"
+    },
+    {
+      "body_html": "<h1>Version 4 three panel format</h1>\r\n\r\n<p>Thanks <a href=\"/u/larsjuhljensen\" class=\"username\">@larsjuhljensen</a> and <a href=\"/u/scootermorris\" class=\"username\">@scootermorris</a> for the help. Your comments help guide this iteration. Unfortunately, I have little more time to work on this visualization, so while I'll appreciate more suggestions, I may not incorporate them here (although they'll guide my future thinking).</p>\r\n\r\n<p>The new version contains three panels (<a href=\"https://github.com/dhimmel/rephetio/blob/54ce1bacfe6392c04d6afd164df7718a0d2769b3/epilepsy/figure/combined/compound-network-combined.pdf\">pdf</a>, <a href=\"https://github.com/dhimmel/rephetio/blob/54ce1bacfe6392c04d6afd164df7718a0d2769b3/epilepsy/figure/compound-network/compound-network.cys\">session</a>). Panel A shows the ranked top 100 epilepsy predictions, colored by their effect on ictogenesis (<a href=\"https://thinklab.com/doc/7/review#section-31\">more info</a>). The curve denotes the predicted probability of treatment. Panel B shows the structural similarity network for these compounds with structures drawn. Panel C is the same network and layout as Panel B, but shows target contributions as pie charts.</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/raw/54ce1bacfe6392c04d6afd164df7718a0d2769b3/epilepsy/figure/combined/compound-network-combined.png\" alt=\"compound-network-combined\"></p>\r\n\r\n<p>Thanks <a href=\"/u/scootermorris\" class=\"username\">@scootermorris</a> for having made <a href=\"http://apps.cytoscape.org/apps/layoutsaver\">layoutSaver</a>, which saved me lot's of time by syncing the node positions between the structure and target networks.</p>\r\n\r\n<p><a href=\"/u/larsjuhljensen\" class=\"username\">@larsjuhljensen</a> call me a kenophobe 😉, but I do think minimizing space usage, especially with this monstrosity, is important. I agree that the extra space and grid alignment of <a href=\"https://thinklab.com/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#9\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d230\">your figure</a> improve the aesthetics and readability. However, I couldn't achieve the correct dimensionality (printable and readable on a single page) without a bit of horror vacui.</p>\r\n\r\n<blockquote><p>What is the main conclusion that you want people to draw from looking at this figure?</p></blockquote>\r\n\r\n<p>The figure is supposed to provide pharmacological context to our top 100 epilepsy predictions. It's certainly exploratory — there are a few conclusions we'll point out, but I'm hoping the viewer will be able to generate their own observations or questions. In part, this figure helps us answer our own questions as well.</p>\r\n\r\n<blockquote><p>You have two types of effect on ictogenesis coded in light blue and light red. Are both equally important? If not, could you maybe just highlight the one that is important?</p></blockquote>\r\n\r\n<p>All three categories (red, blue, white) are crucial.</p>\r\n\r\n<blockquote><p>Part of what makes this hard to look at is the number of target classes. By having so many classes, you use up a lot of color space, making it hard to show anything else. Could some classes be left out? Could some be combined (e.g. calcium channels + potassium channels + sodium channels = cation channels)?</p></blockquote>\r\n\r\n<p>Something I'll consider. The categories were automatically generated and ordered. I like showing how we detect almost all of the bonafide anticonvulsant targets.</p>\r\n\r\n<blockquote><p>Are the relevant target classes shown? When I try to find the target class that best discriminates between nodes with red circles and nodes with blue circles, it appears to be the class \"other\". This suggests to me that, despite showing so much, you are in fact not showing what matters most.</p></blockquote>\r\n\r\n<p>Still have to look into the ictogenic compounds more in light of this visualization. The fact that our method cannot differentiate the ictogenic compounds is a shortcoming, although one that is important to highlight and that we are comfortable with.</p>\r\n\r\n<blockquote><p>And last but certainly not least: are you sure this should even be shown as a network? Your focus seems to be all kinds of properties of the nodes, whereas the edges barely matter, except for showing that there are certain groups of chemically similar compounds. Simply categorizing the compounds might be a much better way to represent this.</p></blockquote>\r\n\r\n<p>It's not imperative that's its shown as a network. But I do think a 2-dimensional projection of the compounds that places similar compounds together is most effective. A network of chemical structure seemed like the easiest way to get there.</p>",
+      "body_md": "# Version 4 three panel format\r\n\r\nThanks @larsjuhljensen and @scootermorris for the help. Your comments help guide this iteration. Unfortunately, I have little more time to work on this visualization, so while I'll appreciate more suggestions, I may not incorporate them here (although they'll guide my future thinking).\r\n\r\nThe new version contains three panels ([pdf](https://github.com/dhimmel/rephetio/blob/54ce1bacfe6392c04d6afd164df7718a0d2769b3/epilepsy/figure/combined/compound-network-combined.pdf), [session](https://github.com/dhimmel/rephetio/blob/54ce1bacfe6392c04d6afd164df7718a0d2769b3/epilepsy/figure/compound-network/compound-network.cys)). Panel A shows the ranked top 100 epilepsy predictions, colored by their effect on ictogenesis ([more info](https://thinklab.com/doc/7/review#section-31)). The curve denotes the predicted probability of treatment. Panel B shows the structural similarity network for these compounds with structures drawn. Panel C is the same network and layout as Panel B, but shows target contributions as pie charts.\r\n\r\n![compound-network-combined](https://github.com/dhimmel/rephetio/raw/54ce1bacfe6392c04d6afd164df7718a0d2769b3/epilepsy/figure/combined/compound-network-combined.png)\r\n\r\nThanks @scootermorris for having made [layoutSaver](http://apps.cytoscape.org/apps/layoutsaver), which saved me lot's of time by syncing the node positions between the structure and target networks.\r\n\r\n@larsjuhljensen call me a kenophobe 😉, but I do think minimizing space usage, especially with this monstrosity, is important. I agree that the extra space and grid alignment of [your figure](https://thinklab.com/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#9) improve the aesthetics and readability. However, I couldn't achieve the correct dimensionality (printable and readable on a single page) without a bit of horror vacui.\r\n\r\n> What is the main conclusion that you want people to draw from looking at this figure?\r\n\r\nThe figure is supposed to provide pharmacological context to our top 100 epilepsy predictions. It's certainly exploratory -- there are a few conclusions we'll point out, but I'm hoping the viewer will be able to generate their own observations or questions. In part, this figure helps us answer our own questions as well.\r\n\r\n>You have two types of effect on ictogenesis coded in light blue and light red. Are both equally important? If not, could you maybe just highlight the one that is important?\r\n\r\nAll three categories (red, blue, white) are crucial.\r\n\r\n> Part of what makes this hard to look at is the number of target classes. By having so many classes, you use up a lot of color space, making it hard to show anything else. Could some classes be left out? Could some be combined (e.g. calcium channels + potassium channels + sodium channels = cation channels)?\r\n\r\nSomething I'll consider. The categories were automatically generated and ordered. I like showing how we detect almost all of the bonafide anticonvulsant targets.\r\n\r\n> Are the relevant target classes shown? When I try to find the target class that best discriminates between nodes with red circles and nodes with blue circles, it appears to be the class \"other\". This suggests to me that, despite showing so much, you are in fact not showing what matters most.\r\n\r\nStill have to look into the ictogenic compounds more in light of this visualization. The fact that our method cannot differentiate the ictogenic compounds is a shortcoming, although one that is important to highlight and that we are comfortable with.\r\n\r\n> And last but certainly not least: are you sure this should even be shown as a network? Your focus seems to be all kinds of properties of the nodes, whereas the edges barely matter, except for showing that there are certain groups of chemically similar compounds. Simply categorizing the compounds might be a much better way to represent this.\r\n\r\nIt's not imperative that's its shown as a network. But I do think a 2-dimensional projection of the compounds that places similar compounds together is most effective. A network of chemical structure seemed like the easiest way to get there.",
+      "comment_id": 1485,
+      "profile_id": 17,
+      "published": "2017-01-31T01:07:31.634234Z",
+      "thread_id": 230,
+      "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#14"
+    },
+    {
+      "body_html": "<p>The epilepsy section of our <a href=\"https://thinklab.com/doc/7/review#section-34\">initial report</a> states:</p>\r\n\r\n<blockquote><p>As an example, we predicted five tricyclic antidepressants primarily based on their binding to the GABAᴬ receptor.</p></blockquote>\r\n\r\n<p>This statement derived from an <a href=\"https://thinklab.com/discussion/prediction-in-epilepsy/224#2\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d224\">earlier comment</a> that.</p>\r\n\r\n<blockquote><p>The 15 predicted drugs that are known to induce seizures include five are tricyclic antidepressants (TCAs) (amitriptyline, imipramine, nortriptyline, clomipramine, desipramine)</p></blockquote>\r\n\r\n<p>However, our <a href=\"https://thinklab.com/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#14\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d230\">new visualization</a> of the top epilepsy predictions and their targeted genes makes it clear that binding GABAᴬ isn't the cause of these predictions. For convenience, this visualization is reproduced below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/raw/54ce1bacfe6392c04d6afd164df7718a0d2769b3/epilepsy/figure/combined/compound-network-combined.png\" alt=\"Top epilepsy predictions\"></p>\r\n\r\n<p>Specifically, I'm referring to <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB00321/DOID_1826.html\">amitriptyline</a>, <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB00543/DOID_1826.html\">amoxapine</a>, <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB01242/DOID_1826.html\">clomipramine</a>, <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB00363/DOID_1826.html\">clozapine</a>, <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB00434/DOID_1826.html\">cyproheptadine</a>, <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB01151/DOID_1826.html\">desipramine</a>, <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB00458/DOID_1826.html\">imipramine</a>, <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB00408/DOID_1826.html\">loxapine</a>, and <a href=\"https://neo4j.het.io/browser/?cmd=play&amp;arg=https://neo4j.het.io/guides/rep/DB00540/DOID_1826.html\">nortriptyline</a>, which all share a tricyclic structure and cluster together in the visualization.</p>",
+      "body_md": "The epilepsy section of our [initial report](https://thinklab.com/doc/7/review#section-34) states:\r\n\r\n> As an example, we predicted five tricyclic antidepressants primarily based on their binding to the GABAᴬ receptor.\r\n\r\nThis statement derived from an [earlier comment](https://thinklab.com/discussion/prediction-in-epilepsy/224#2) that.\r\n\r\n> The 15 predicted drugs that are known to induce seizures include five are tricyclic antidepressants (TCAs) (amitriptyline, imipramine, nortriptyline, clomipramine, desipramine)\r\n\r\nHowever, our [new visualization](https://thinklab.com/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#14) of the top epilepsy predictions and their targeted genes makes it clear that binding GABAᴬ isn't the cause of these predictions. For convenience, this visualization is reproduced below:\r\n\r\n![Top epilepsy predictions](https://github.com/dhimmel/rephetio/raw/54ce1bacfe6392c04d6afd164df7718a0d2769b3/epilepsy/figure/combined/compound-network-combined.png)\r\n\r\nSpecifically, I'm referring to [amitriptyline](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB00321/DOID_1826.html), [amoxapine](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB00543/DOID_1826.html), [clomipramine](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB01242/DOID_1826.html), [clozapine](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB00363/DOID_1826.html), [cyproheptadine](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB00434/DOID_1826.html), [desipramine](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB01151/DOID_1826.html), [imipramine](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB00458/DOID_1826.html), [loxapine](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB00408/DOID_1826.html), and [nortriptyline](https://neo4j.het.io/browser/?cmd=play&arg=https://neo4j.het.io/guides/rep/DB00540/DOID_1826.html), which all share a tricyclic structure and cluster together in the visualization.",
+      "comment_id": 1486,
+      "profile_id": 17,
+      "published": "2017-01-31T19:43:50.619915Z",
+      "thread_id": 231,
+      "url": "/discussion/why-we-predicted-ictogenic-tricyclic-compounds-treat-epilepsy/231"
+    },
+    {
+      "body_html": "<h1>Literature survey</h1>\r\n\r\n<p>Below is a collection of related literature, which I may update as the research continuous. The primary questions is why the 9 cyclic compounds listed above are ictogenic.</p>\r\n\r\n<p>From a 2010 article <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.seizure.2009.11.005\" class=\"citation hm \" data-key=\"10.1016/j.seizure.2009.11.005\">1</a>]</span>:</p>\r\n\r\n<blockquote><p>The mechanisms through which antidepressants alter neuronal excitability and modify seizure threshold are still largely unknown. Antidepressants act mainly by blocking the re-uptake of monoamines. Both animal and human data have shown that blocking the re-uptake of norepinephrine and/or serotonin has an anticonvulsant effect <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.yebeh.2005.07.014\" class=\"citation hm \" data-key=\"10.1016/j.yebeh.2005.07.014\">2</a>]</span>. The convulsive properties of antidepressants have been suggested to be the result of their possible local anaesthetic or anticholinergic effect <span class=\"citation\">[<a href=\"https://doi.org/10.1016/s0006-2952(96)00509-6\" class=\"citation hm \" data-key=\"10.1016/s0006-2952(96)00509-6\">3</a>]</span>. It has been proposed that selective serotonin re-uptake inhibitors (SSRIs) are less likely to cause seizures than cyclic antidepressants <span class=\"citation\">[<a href=\"https://doi.org/10.1016/s0736-4679(97)00072-3\" class=\"citation hm \" data-key=\"10.1016/s0736-4679(97)00072-3\">4</a>]</span>. On the other hand, seizures have been associated with SSRIs in previous studies of adverse events as in the case of escitaloprame <span class=\"citation\">[<a href=\"https://doi.org/10.2165/00002018-199920030-00007\" class=\"citation hm \" data-key=\"10.2165/00002018-199920030-00007\">5</a>]</span>.</p></blockquote>\r\n\r\n<p>From a 2016 article <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.yebeh.2016.01.029\" class=\"citation hm \" data-key=\"10.1016/j.yebeh.2016.01.029\">6</a>]</span>:</p>\r\n\r\n<blockquote><p>Antidepressants may disturb the neuronal balance and control of excitability, leading to seizures. Seizures may occur as a consequence of a misbalance between inhibitory GABAergic and excitatory glutamatergic neurotransmission with increase in glutamatergic activation and, thus, excessive calcium influx, initiating intracellular processes. The underlying mechanisms are not clear <span class=\"citation\">[<a href=\"https://doi.org/10.2165/00002018-199818020-00004\" class=\"citation hm \" data-key=\"10.2165/00002018-199818020-00004\">7</a>]</span>.</p></blockquote>\r\n\r\n<p>From a 2002 article <span class=\"citation\">[<a href=\"https://doi.org/10.2165/00002018-200225020-00004\" class=\"citation hm \" data-key=\"10.2165/00002018-200225020-00004\">8</a>]</span></p>\r\n\r\n<blockquote><p>Different specific mechanisms may be involved, which are mediated by the γ-aminobutyric acid (GABA) system and other neurotransmitters. Discussion of these mechanisms is beyond the scope of this review and readers may refer to specific reviews <span class=\"citation\">[<a href=\"https://doi.org/10.1111/j.1528-1157.1998.tb01268.x\" class=\"citation hm \" data-key=\"10.1111/j.1528-1157.1998.tb01268.x\">9</a>]</span>.</p></blockquote>\r\n\r\n<p>Other references: <span class=\"citation\">[<a href=\"https://doi.org/10.1007/s11910-016-0670-5\" class=\"citation hm \" data-key=\"10.1007/s11910-016-0670-5\">10</a>]</span></p>",
+      "body_md": "# Literature survey\r\n\r\nBelow is a collection of related literature, which I may update as the research continuous. The primary questions is why the 9 cyclic compounds listed above are ictogenic.\r\n\r\nFrom a 2010 article [@10.1016/j.seizure.2009.11.005]:\r\n\r\n> The mechanisms through which antidepressants alter neuronal excitability and modify seizure threshold are still largely unknown. Antidepressants act mainly by blocking the re-uptake of monoamines. Both animal and human data have shown that blocking the re-uptake of norepinephrine and/or serotonin has an anticonvulsant effect [@10.1016/j.yebeh.2005.07.014]. The convulsive properties of antidepressants have been suggested to be the result of their possible local anaesthetic or anticholinergic effect [@10.1016/s0006-2952(96)00509-6]. It has been proposed that selective serotonin re-uptake inhibitors (SSRIs) are less likely to cause seizures than cyclic antidepressants [@10.1016/s0736-4679(97)00072-3]. On the other hand, seizures have been associated with SSRIs in previous studies of adverse events as in the case of escitaloprame [@10.2165/00002018-199920030-00007].\r\n\r\nFrom a 2016 article [@10.1016/j.yebeh.2016.01.029]:\r\n\r\n> Antidepressants may disturb the neuronal balance and control of excitability, leading to seizures. Seizures may occur as a consequence of a misbalance between inhibitory GABAergic and excitatory glutamatergic neurotransmission with increase in glutamatergic activation and, thus, excessive calcium influx, initiating intracellular processes. The underlying mechanisms are not clear [@10.2165/00002018-199818020-00004].\r\n\r\nFrom a 2002 article [@10.2165/00002018-200225020-00004]\r\n\r\n> Different specific mechanisms may be involved, which are mediated by the γ-aminobutyric acid (GABA) system and other neurotransmitters. Discussion of these mechanisms is beyond the scope of this review and readers may refer to specific reviews [@10.1111/j.1528-1157.1998.tb01268.x].\r\n\r\n\r\nOther references: [@10.1007/s11910-016-0670-5]",
+      "comment_id": 1487,
+      "profile_id": 17,
+      "published": "2017-01-31T21:40:42.244669Z",
+      "thread_id": 231,
+      "url": "/discussion/why-we-predicted-ictogenic-tricyclic-compounds-treat-epilepsy/231#2"
     }
   ],
   "documents": [
@@ -5408,7 +5435,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/report",
-      "views": 366
+      "views": 368
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"https://doi.org/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"https://doi.org/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"https://doi.org/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -7456,7 +7483,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-01-30T21:43:39.145182Z",
+  "retrieved": "2017-01-31T21:47:12.909331Z",
   "threads": [
     {
       "document_id": null,
@@ -7528,7 +7555,7 @@
       "thread_id": 31,
       "topic_field": "SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm",
       "url": "/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31",
-      "views": 98
+      "views": 100
     },
     {
       "document_id": null,
@@ -7600,7 +7627,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 567
+      "views": 568
     },
     {
       "document_id": null,
@@ -7612,7 +7639,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 275
+      "views": 276
     },
     {
       "document_id": null,
@@ -7708,7 +7735,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 514
+      "views": 516
     },
     {
       "document_id": null,
@@ -7732,7 +7759,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 596
+      "views": 598
     },
     {
       "document_id": null,
@@ -7768,7 +7795,7 @@
       "thread_id": 68,
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 130
+      "views": 131
     },
     {
       "document_id": null,
@@ -7780,7 +7807,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 165
+      "views": 166
     },
     {
       "document_id": null,
@@ -7792,7 +7819,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 514
+      "views": 517
     },
     {
       "document_id": null,
@@ -7816,7 +7843,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 247
+      "views": 248
     },
     {
       "document_id": null,
@@ -7828,7 +7855,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 604
+      "views": 606
     },
     {
       "document_id": null,
@@ -7852,7 +7879,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 954
+      "views": 955
     },
     {
       "document_id": null,
@@ -7864,7 +7891,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 883
+      "views": 885
     },
     {
       "document_id": null,
@@ -7888,7 +7915,7 @@
       "thread_id": 91,
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 114
+      "views": 115
     },
     {
       "document_id": null,
@@ -7900,7 +7927,7 @@
       "thread_id": 93,
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 79
+      "views": 80
     },
     {
       "document_id": null,
@@ -7936,7 +7963,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 310
+      "views": 311
     },
     {
       "document_id": null,
@@ -7960,7 +7987,7 @@
       "thread_id": 101,
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 126
+      "views": 127
     },
     {
       "document_id": null,
@@ -8068,7 +8095,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 484
+      "views": 485
     },
     {
       "document_id": null,
@@ -8116,7 +8143,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 222
+      "views": 223
     },
     {
       "document_id": null,
@@ -8164,7 +8191,7 @@
       "thread_id": 171,
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 221
+      "views": 222
     },
     {
       "document_id": null,
@@ -8320,7 +8347,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 753
+      "views": 757
     },
     {
       "document_id": null,
@@ -8356,7 +8383,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 501
+      "views": 502
     },
     {
       "document_id": null,
@@ -8392,7 +8419,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 188
+      "views": 189
     },
     {
       "document_id": null,
@@ -8404,7 +8431,7 @@
       "thread_id": 220,
       "topic_field": "Hetionet,Neo4j,Cypher,Network Biology",
       "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220",
-      "views": 123
+      "views": 124
     },
     {
       "document_id": null,
@@ -8416,7 +8443,7 @@
       "thread_id": 224,
       "topic_field": "epilepsy,Hetionet",
       "url": "/discussion/prediction-in-epilepsy/224",
-      "views": 76
+      "views": 77
     },
     {
       "document_id": 7,
@@ -8428,7 +8455,7 @@
       "thread_id": 226,
       "topic_field": "",
       "url": "/doc/7/review",
-      "views": 56
+      "views": 57
     },
     {
       "document_id": null,
@@ -8476,7 +8503,19 @@
       "thread_id": 230,
       "topic_field": "Cytoscape,networks,compounds,visualization,epilepsy",
       "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230",
-      "views": 18
+      "views": 19
+    },
+    {
+      "document_id": null,
+      "doi": "10.15363/thinklab.d231",
+      "doi_field": "",
+      "profile_id": 17,
+      "published": "2017-01-31T19:43:50.542317Z",
+      "subject": "Why we predicted ictogenic tricyclic compounds treat epilepsy?",
+      "thread_id": 231,
+      "topic_field": "epilepsy,tricyclic antidepressants,pharmacology",
+      "url": "/discussion/why-we-predicted-ictogenic-tricyclic-compounds-treat-epilepsy/231",
+      "views": 2
     }
   ]
 }
