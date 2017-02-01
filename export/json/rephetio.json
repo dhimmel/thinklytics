@@ -5275,8 +5275,8 @@
       "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#2"
     },
     {
-      "body_html": "<h1>Improving the visualization</h1>\r\n\r\n<p>I'd like to improve the visualization <a href=\"#2\">above</a>.</p>\r\n\r\n<p>But before going any further, is a network with 100 labeled nodes too expansive for a manuscript visualization? If we do have labeled nodes — which is really helpful — can we make the labels a readable font size?</p>\r\n\r\n<p>One alternative to compound names would be drawing compound structures using <a href=\"http://apps.cytoscape.org/apps/structureViz2\">structureViz2</a> <span class=\"citation\">[<a href=\"https://doi.org/10.1093/bioinformatics/btm329\" class=\"citation hm \" data-key=\"10.1093/bioinformatics/btm329\">1</a>]</span>. We could then made nodes circular or square to conserve space.</p>\r\n\r\n<p>I'd also like to make text always fit within a node.</p>\r\n\r\n<p>Finally, I'm really interested in drawing rings around the nodes that are composed of colored arcs. Each arc would represent how much a certain target of the compound contributed to the prediction (following from <a href=\"https://thinklab.com/discussion/prediction-in-epilepsy/224#11\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d224\">this comment</a>).</p>\r\n\r\n<p>Cytoscape 3.4.0 has a <a href=\"http://manual.cytoscape.org/en/3.4.0/Styles.html#using-graphics-in-styles\">ring chart</a>. Alternatively, the <a href=\"http://apps.cytoscape.org/apps/enhancedgraphics\">enhancedGraphics</a> app <span class=\"citation\">[<a href=\"https://doi.org/10.12688/f1000research.4460.1\" class=\"citation hm \" data-key=\"10.12688/f1000research.4460.1\">2</a>]</span> has circle/circos charts that may do the job. I briefly tried out the builtin ring chart but couldn't get the rings to surround the \"round rectangle\" node shape — instead the rights were drawn inside the nodes.</p>\r\n\r\n<p>Tagging <a href=\"/u/sergiobaranzini\" class=\"username\">@sergiobaranzini</a> &amp; <a href=\"/u/alexanderpico\" class=\"username\">@alexanderpico</a> — two experts of Cytoscape. Any suggestions?</p>",
-      "body_md": "# Improving the visualization\r\n\r\nI'd like to improve the visualization [above](#2).\r\n\r\nBut before going any further, is a network with 100 labeled nodes too expansive for a manuscript visualization? If we do have labeled nodes -- which is really helpful -- can we make the labels a readable font size?\r\n\r\nOne alternative to compound names would be drawing compound structures using [structureViz2](http://apps.cytoscape.org/apps/structureViz2) [@10.1093/bioinformatics/btm329]. We could then made nodes circular or square to conserve space.\r\n\r\nI'd also like to make text always fit within a node.\r\n\r\nFinally, I'm really interested in drawing rings around the nodes that are composed of colored arcs. Each arc would represent how much a certain target of the compound contributed to the prediction (following from [this comment](https://thinklab.com/discussion/prediction-in-epilepsy/224#11)).\r\n\r\nCytoscape 3.4.0 has a [ring chart](http://manual.cytoscape.org/en/3.4.0/Styles.html#using-graphics-in-styles). Alternatively, the [enhancedGraphics](http://apps.cytoscape.org/apps/enhancedgraphics) app [@10.12688/f1000research.4460.1] has circle/circos charts that may do the job. I briefly tried out the builtin ring chart but couldn't get the rings to surround the \"round rectangle\" node shape -- instead the rights were drawn inside the nodes.\r\n\r\nTagging @sergiobaranzini & @alexanderpico -- two experts of Cytoscape. Any suggestions?",
+      "body_html": "<h1>Improving the visualization</h1>\r\n\r\n<p>I'd like to improve the visualization <a href=\"#2\">above</a>.</p>\r\n\r\n<p>But before going any further, is a network with 100 labeled nodes too expansive for a manuscript visualization? If we do have labeled nodes — which is really helpful — can we make the labels a readable font size?</p>\r\n\r\n<p>One alternative to compound names would be drawing compound structures using <a href=\"http://apps.cytoscape.org/apps/chemViz2\">chemViz2</a>. We could then made nodes circular or square to conserve space.</p>\r\n\r\n<p>I'd also like to make text always fit within a node.</p>\r\n\r\n<p>Finally, I'm really interested in drawing rings around the nodes that are composed of colored arcs. Each arc would represent how much a certain target of the compound contributed to the prediction (following from <a href=\"https://thinklab.com/discussion/prediction-in-epilepsy/224#11\" class=\"citation thread-citation\" data-key=\"10.15363/thinklab.d224\">this comment</a>).</p>\r\n\r\n<p>Cytoscape 3.4.0 has a <a href=\"http://manual.cytoscape.org/en/3.4.0/Styles.html#using-graphics-in-styles\">ring chart</a>. Alternatively, the <a href=\"http://apps.cytoscape.org/apps/enhancedgraphics\">enhancedGraphics</a> app <span class=\"citation\">[<a href=\"https://doi.org/10.12688/f1000research.4460.1\" class=\"citation hm \" data-key=\"10.12688/f1000research.4460.1\">1</a>]</span> has circle/circos charts that may do the job. I briefly tried out the builtin ring chart but couldn't get the rings to surround the \"round rectangle\" node shape — instead the rights were drawn inside the nodes.</p>\r\n\r\n<p>Tagging <a href=\"/u/sergiobaranzini\" class=\"username\">@sergiobaranzini</a> &amp; <a href=\"/u/alexanderpico\" class=\"username\">@alexanderpico</a> — two experts of Cytoscape. Any suggestions?</p>",
+      "body_md": "# Improving the visualization\r\n\r\nI'd like to improve the visualization [above](#2).\r\n\r\nBut before going any further, is a network with 100 labeled nodes too expansive for a manuscript visualization? If we do have labeled nodes -- which is really helpful -- can we make the labels a readable font size?\r\n\r\nOne alternative to compound names would be drawing compound structures using [chemViz2](http://apps.cytoscape.org/apps/chemViz2). We could then made nodes circular or square to conserve space.\r\n\r\nI'd also like to make text always fit within a node.\r\n\r\nFinally, I'm really interested in drawing rings around the nodes that are composed of colored arcs. Each arc would represent how much a certain target of the compound contributed to the prediction (following from [this comment](https://thinklab.com/discussion/prediction-in-epilepsy/224#11)).\r\n\r\nCytoscape 3.4.0 has a [ring chart](http://manual.cytoscape.org/en/3.4.0/Styles.html#using-graphics-in-styles). Alternatively, the [enhancedGraphics](http://apps.cytoscape.org/apps/enhancedgraphics) app [@10.12688/f1000research.4460.1] has circle/circos charts that may do the job. I briefly tried out the builtin ring chart but couldn't get the rings to surround the \"round rectangle\" node shape -- instead the rights were drawn inside the nodes.\r\n\r\nTagging @sergiobaranzini & @alexanderpico -- two experts of Cytoscape. Any suggestions?",
       "comment_id": 1473,
       "profile_id": 17,
       "published": "2017-01-24T18:10:04.182351Z",
@@ -5401,13 +5401,22 @@
       "url": "/discussion/why-we-predicted-ictogenic-tricyclic-compounds-treat-epilepsy/231"
     },
     {
-      "body_html": "<h1>Literature survey</h1>\r\n\r\n<p>Below is a collection of related literature, which I may update as the research continuous. The primary questions is why the 9 cyclic compounds listed above are ictogenic.</p>\r\n\r\n<p>From a 2010 article <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.seizure.2009.11.005\" class=\"citation hm \" data-key=\"10.1016/j.seizure.2009.11.005\">1</a>]</span>:</p>\r\n\r\n<blockquote><p>The mechanisms through which antidepressants alter neuronal excitability and modify seizure threshold are still largely unknown. Antidepressants act mainly by blocking the re-uptake of monoamines. Both animal and human data have shown that blocking the re-uptake of norepinephrine and/or serotonin has an anticonvulsant effect <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.yebeh.2005.07.014\" class=\"citation hm \" data-key=\"10.1016/j.yebeh.2005.07.014\">2</a>]</span>. The convulsive properties of antidepressants have been suggested to be the result of their possible local anaesthetic or anticholinergic effect <span class=\"citation\">[<a href=\"https://doi.org/10.1016/s0006-2952(96)00509-6\" class=\"citation hm \" data-key=\"10.1016/s0006-2952(96)00509-6\">3</a>]</span>. It has been proposed that selective serotonin re-uptake inhibitors (SSRIs) are less likely to cause seizures than cyclic antidepressants <span class=\"citation\">[<a href=\"https://doi.org/10.1016/s0736-4679(97)00072-3\" class=\"citation hm \" data-key=\"10.1016/s0736-4679(97)00072-3\">4</a>]</span>. On the other hand, seizures have been associated with SSRIs in previous studies of adverse events as in the case of escitaloprame <span class=\"citation\">[<a href=\"https://doi.org/10.2165/00002018-199920030-00007\" class=\"citation hm \" data-key=\"10.2165/00002018-199920030-00007\">5</a>]</span>.</p></blockquote>\r\n\r\n<p>From a 2016 article <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.yebeh.2016.01.029\" class=\"citation hm \" data-key=\"10.1016/j.yebeh.2016.01.029\">6</a>]</span>:</p>\r\n\r\n<blockquote><p>Antidepressants may disturb the neuronal balance and control of excitability, leading to seizures. Seizures may occur as a consequence of a misbalance between inhibitory GABAergic and excitatory glutamatergic neurotransmission with increase in glutamatergic activation and, thus, excessive calcium influx, initiating intracellular processes. The underlying mechanisms are not clear <span class=\"citation\">[<a href=\"https://doi.org/10.2165/00002018-199818020-00004\" class=\"citation hm \" data-key=\"10.2165/00002018-199818020-00004\">7</a>]</span>.</p></blockquote>\r\n\r\n<p>From a 2002 article <span class=\"citation\">[<a href=\"https://doi.org/10.2165/00002018-200225020-00004\" class=\"citation hm \" data-key=\"10.2165/00002018-200225020-00004\">8</a>]</span></p>\r\n\r\n<blockquote><p>Different specific mechanisms may be involved, which are mediated by the γ-aminobutyric acid (GABA) system and other neurotransmitters. Discussion of these mechanisms is beyond the scope of this review and readers may refer to specific reviews <span class=\"citation\">[<a href=\"https://doi.org/10.1111/j.1528-1157.1998.tb01268.x\" class=\"citation hm \" data-key=\"10.1111/j.1528-1157.1998.tb01268.x\">9</a>]</span>.</p></blockquote>\r\n\r\n<p>Other references: <span class=\"citation\">[<a href=\"https://doi.org/10.1007/s11910-016-0670-5\" class=\"citation hm \" data-key=\"10.1007/s11910-016-0670-5\">10</a>]</span></p>",
-      "body_md": "# Literature survey\r\n\r\nBelow is a collection of related literature, which I may update as the research continuous. The primary questions is why the 9 cyclic compounds listed above are ictogenic.\r\n\r\nFrom a 2010 article [@10.1016/j.seizure.2009.11.005]:\r\n\r\n> The mechanisms through which antidepressants alter neuronal excitability and modify seizure threshold are still largely unknown. Antidepressants act mainly by blocking the re-uptake of monoamines. Both animal and human data have shown that blocking the re-uptake of norepinephrine and/or serotonin has an anticonvulsant effect [@10.1016/j.yebeh.2005.07.014]. The convulsive properties of antidepressants have been suggested to be the result of their possible local anaesthetic or anticholinergic effect [@10.1016/s0006-2952(96)00509-6]. It has been proposed that selective serotonin re-uptake inhibitors (SSRIs) are less likely to cause seizures than cyclic antidepressants [@10.1016/s0736-4679(97)00072-3]. On the other hand, seizures have been associated with SSRIs in previous studies of adverse events as in the case of escitaloprame [@10.2165/00002018-199920030-00007].\r\n\r\nFrom a 2016 article [@10.1016/j.yebeh.2016.01.029]:\r\n\r\n> Antidepressants may disturb the neuronal balance and control of excitability, leading to seizures. Seizures may occur as a consequence of a misbalance between inhibitory GABAergic and excitatory glutamatergic neurotransmission with increase in glutamatergic activation and, thus, excessive calcium influx, initiating intracellular processes. The underlying mechanisms are not clear [@10.2165/00002018-199818020-00004].\r\n\r\nFrom a 2002 article [@10.2165/00002018-200225020-00004]\r\n\r\n> Different specific mechanisms may be involved, which are mediated by the γ-aminobutyric acid (GABA) system and other neurotransmitters. Discussion of these mechanisms is beyond the scope of this review and readers may refer to specific reviews [@10.1111/j.1528-1157.1998.tb01268.x].\r\n\r\n\r\nOther references: [@10.1007/s11910-016-0670-5]",
+      "body_html": "<h1>Literature survey</h1>\r\n\r\n<p>Below is a collection of related literature, which I may update as the research continuous. The primary questions is why the 9 cyclic compounds listed above are ictogenic.</p>\r\n\r\n<p>From a 2010 article <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.seizure.2009.11.005\" class=\"citation hm \" data-key=\"10.1016/j.seizure.2009.11.005\">1</a>]</span>:</p>\r\n\r\n<blockquote><p>The mechanisms through which antidepressants alter neuronal excitability and modify seizure threshold are still largely unknown. Antidepressants act mainly by blocking the re-uptake of monoamines. Both animal and human data have shown that blocking the re-uptake of norepinephrine and/or serotonin has an anticonvulsant effect <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.yebeh.2005.07.014\" class=\"citation hm \" data-key=\"10.1016/j.yebeh.2005.07.014\">2</a>]</span>. The convulsive properties of antidepressants have been suggested to be the result of their possible local anaesthetic or anticholinergic effect <span class=\"citation\">[<a href=\"https://doi.org/10.1016/s0006-2952(96)00509-6\" class=\"citation hm \" data-key=\"10.1016/s0006-2952(96)00509-6\">3</a>]</span>. It has been proposed that selective serotonin re-uptake inhibitors (SSRIs) are less likely to cause seizures than cyclic antidepressants <span class=\"citation\">[<a href=\"https://doi.org/10.1016/s0736-4679(97)00072-3\" class=\"citation hm \" data-key=\"10.1016/s0736-4679(97)00072-3\">4</a>]</span>. On the other hand, seizures have been associated with SSRIs in previous studies of adverse events as in the case of escitaloprame <span class=\"citation\">[<a href=\"https://doi.org/10.2165/00002018-199920030-00007\" class=\"citation hm \" data-key=\"10.2165/00002018-199920030-00007\">5</a>]</span>.</p></blockquote>\r\n\r\n<p>From a 2016 article <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.yebeh.2016.01.029\" class=\"citation hm \" data-key=\"10.1016/j.yebeh.2016.01.029\">6</a>]</span>:</p>\r\n\r\n<blockquote><p>Antidepressants may disturb the neuronal balance and control of excitability, leading to seizures. Seizures may occur as a consequence of a misbalance between inhibitory GABAergic and excitatory glutamatergic neurotransmission with increase in glutamatergic activation and, thus, excessive calcium influx, initiating intracellular processes. The underlying mechanisms are not clear <span class=\"citation\">[<a href=\"https://doi.org/10.2165/00002018-199818020-00004\" class=\"citation hm \" data-key=\"10.2165/00002018-199818020-00004\">7</a>]</span>.</p></blockquote>\r\n\r\n<p>From a 2002 article <span class=\"citation\">[<a href=\"https://doi.org/10.2165/00002018-200225020-00004\" class=\"citation hm \" data-key=\"10.2165/00002018-200225020-00004\">8</a>]</span></p>\r\n\r\n<blockquote><p>Different specific mechanisms may be involved, which are mediated by the γ-aminobutyric acid (GABA) system and other neurotransmitters. Discussion of these mechanisms is beyond the scope of this review and readers may refer to specific reviews <span class=\"citation\">[<a href=\"https://doi.org/10.1111/j.1528-1157.1998.tb01268.x\" class=\"citation hm \" data-key=\"10.1111/j.1528-1157.1998.tb01268.x\">9</a>]</span>.</p></blockquote>\r\n\r\n<p>From a 1996 article <span class=\"citation\">[<a href=\"https://doi.org/10.1016/s0006-2952(96)00509-6\" class=\"citation hm \" data-key=\"10.1016/s0006-2952(96)00509-6\">3</a>]</span> (referenced in <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.seizure.2009.11.005\" class=\"citation hm \" data-key=\"10.1016/j.seizure.2009.11.005\">1</a>]</span> above):</p>\r\n\r\n<blockquote><p>Taken together, the total body of information strongly suggests that the pharmacodynamic action by which antidepressant drugs cause seizures is unrelated to their ability to block norepinephrine or serotonin reuptake. Rather, it seems more likely that these drugs produce convulsions by virtue of their local anesthetic or their antihistaminic/antimuscarinic properties.</p></blockquote>\r\n\r\n<p>Other references: <span class=\"citation\">[<a href=\"https://doi.org/10.1007/s11910-016-0670-5\" class=\"citation hm \" data-key=\"10.1007/s11910-016-0670-5\">10</a>]</span></p>",
+      "body_md": "# Literature survey\r\n\r\nBelow is a collection of related literature, which I may update as the research continuous. The primary questions is why the 9 cyclic compounds listed above are ictogenic.\r\n\r\nFrom a 2010 article [@10.1016/j.seizure.2009.11.005]:\r\n\r\n> The mechanisms through which antidepressants alter neuronal excitability and modify seizure threshold are still largely unknown. Antidepressants act mainly by blocking the re-uptake of monoamines. Both animal and human data have shown that blocking the re-uptake of norepinephrine and/or serotonin has an anticonvulsant effect [@10.1016/j.yebeh.2005.07.014]. The convulsive properties of antidepressants have been suggested to be the result of their possible local anaesthetic or anticholinergic effect [@10.1016/s0006-2952(96)00509-6]. It has been proposed that selective serotonin re-uptake inhibitors (SSRIs) are less likely to cause seizures than cyclic antidepressants [@10.1016/s0736-4679(97)00072-3]. On the other hand, seizures have been associated with SSRIs in previous studies of adverse events as in the case of escitaloprame [@10.2165/00002018-199920030-00007].\r\n\r\nFrom a 2016 article [@10.1016/j.yebeh.2016.01.029]:\r\n\r\n> Antidepressants may disturb the neuronal balance and control of excitability, leading to seizures. Seizures may occur as a consequence of a misbalance between inhibitory GABAergic and excitatory glutamatergic neurotransmission with increase in glutamatergic activation and, thus, excessive calcium influx, initiating intracellular processes. The underlying mechanisms are not clear [@10.2165/00002018-199818020-00004].\r\n\r\nFrom a 2002 article [@10.2165/00002018-200225020-00004]\r\n\r\n> Different specific mechanisms may be involved, which are mediated by the γ-aminobutyric acid (GABA) system and other neurotransmitters. Discussion of these mechanisms is beyond the scope of this review and readers may refer to specific reviews [@10.1111/j.1528-1157.1998.tb01268.x].\r\n\r\nFrom a 1996 article [@10.1016/s0006-2952(96)00509-6] (referenced in [@10.1016/j.seizure.2009.11.005] above):\r\n\r\n> Taken together, the total body of information strongly suggests that the pharmacodynamic action by which antidepressant drugs cause seizures is unrelated to their ability to block norepinephrine or serotonin reuptake. Rather, it seems more likely that these drugs produce convulsions by virtue of their local anesthetic or their antihistaminic/antimuscarinic properties.\r\n\r\nOther references: [@10.1007/s11910-016-0670-5]",
       "comment_id": 1487,
       "profile_id": 17,
       "published": "2017-01-31T21:40:42.244669Z",
       "thread_id": 231,
       "url": "/discussion/why-we-predicted-ictogenic-tricyclic-compounds-treat-epilepsy/231#2"
+    },
+    {
+      "body_html": "<h1>Cholinergic receptors?</h1>\r\n\r\n<p>One visually striking pattern is that of the 9 ictogenic tricyclic compounds, 8 target cholinergic receptors. Furthermore, clomipramine also likely exhibits anti-cholinergic effects <span class=\"citation\">[<a href=\"https://doi.org/10.1016/S0014-2999(02)01556-X\" class=\"citation hm \" data-key=\"10.1016/S0014-2999(02)01556-X\">1</a>, <a href=\"https://doi.org/10.1016/S0014-2999(02)02557-8\" class=\"citation hm \" data-key=\"10.1016/S0014-2999(02)02557-8\">2</a>, <a href=\"https://doi.org/10.1177/030006057300100537\" class=\"citation hm \" data-key=\"10.1177/030006057300100537\">3</a>]</span>, which would mean all 9 ictogenic tricyclic compounds bind to cholinergic receptors. I have not confirmed this, but I believe these compounds are all antagonists of cholinergic receptors.</p>\r\n\r\n<p>There are two anti-ictogenic tricyclic compounds: oxcarbazepine and carbamazepine. Although these compounds likely have anti-cholinergic effects <span class=\"citation\">[<a href=\"https://doi.org/10.1016/j.ejphar.2010.05.063\" class=\"citation hm \" data-key=\"10.1016/j.ejphar.2010.05.063\">4</a>, <a href=\"https://doi.org/10.1016/0028-3908(76)90031-9\" class=\"citation hm \" data-key=\"10.1016/0028-3908(76)90031-9\">5</a>, <a href=\"https://doi.org/10.1111/j.1528-1157.1999.tb00848.x\" class=\"citation hm \" data-key=\"10.1111/j.1528-1157.1999.tb00848.x\">6</a>]</span>, they are unique in their targeting of the sodium channel (according to our visualization).</p>\r\n\r\n<p>Interestingly, there's evidence that cholinergic receptor inhibition may a therapeutic mechanism of action for carbamazepine <span class=\"citation\">[<a href=\"https://doi.org/10.3389/fphys.2015.00022\" class=\"citation hm \" data-key=\"10.3389/fphys.2015.00022\">7</a>]</span>. Quoting from <span class=\"citation\">[<a href=\"https://doi.org/10.1111/j.1528-1157.1999.tb00848.x\" class=\"citation hm \" data-key=\"10.1111/j.1528-1157.1999.tb00848.x\">6</a>]</span>:</p>\r\n\r\n<blockquote><p>The increased sensitivity of these mutant receptors supports the hypothesis that the antiepileptic activity of carbamazepine can, at least to some extent, be attributed to the nAChR inhibition.</p></blockquote>\r\n\r\n<p>And furthermore, the barbiturates — which clustered together and were all anti-ictogenic — also inhibit cholinergic receptors <span class=\"citation\">[<a href=\"https://doi.org/10.1085/jgp.109.3.401\" class=\"citation hm \" data-key=\"10.1085/jgp.109.3.401\">8</a>]</span>. Pharmacologists believe the primary mechanisms of action for barbituates on epilepsy are GABAᴀ agonism, blocking AMPA/kainate receptors, and inhibiting glutamate release <span class=\"citation\">[<a href=\"https://doi.org/10.1111/epi.12025\" class=\"citation hm \" data-key=\"10.1111/epi.12025\">9</a>]</span>. Potentially, the anti-cholinergic effects of barbiturates are overshadowed by these other mechanisms.</p>\r\n\r\n<p><a href=\"/u/pouyakhankhanian\" class=\"username\">@pouyakhankhanian</a>, do you also find the cholinergic receptors interesting here?</p>",
+      "body_md": "# Cholinergic receptors?\r\n\r\nOne visually striking pattern is that of the 9 ictogenic tricyclic compounds, 8 target cholinergic receptors. Furthermore, clomipramine also likely exhibits anti-cholinergic effects [@10.1016/S0014-2999(02)01556-X @10.1016/S0014-2999(02)02557-8 @10.1177/030006057300100537], which would mean all 9 ictogenic tricyclic compounds bind to cholinergic receptors. I have not confirmed this, but I believe these compounds are all antagonists of cholinergic receptors.\r\n\r\nThere are two anti-ictogenic tricyclic compounds: oxcarbazepine and carbamazepine. Although these compounds likely have anti-cholinergic effects [@10.1016/j.ejphar.2010.05.063 @10.1016/0028-3908(76)90031-9 @10.1111/j.1528-1157.1999.tb00848.x], they are unique in their targeting of the sodium channel (according to our visualization).\r\n\r\nInterestingly, there's evidence that cholinergic receptor inhibition may a therapeutic mechanism of action for carbamazepine [@10.3389/fphys.2015.00022]. Quoting from [@10.1111/j.1528-1157.1999.tb00848.x]:\r\n\r\n> The increased sensitivity of these mutant receptors supports the hypothesis that the antiepileptic activity of carbamazepine can, at least to some extent, be attributed to the nAChR inhibition.\r\n\r\nAnd furthermore, the barbiturates -- which clustered together and were all anti-ictogenic -- also inhibit cholinergic receptors [@10.1085/jgp.109.3.401]. Pharmacologists believe the primary mechanisms of action for barbituates on epilepsy are GABAᴀ agonism, blocking AMPA/kainate receptors, and inhibiting glutamate release [@10.1111/epi.12025]. Potentially, the anti-cholinergic effects of barbiturates are overshadowed by these other mechanisms.\r\n\r\n@pouyakhankhanian, do you also find the cholinergic receptors interesting here?",
+      "comment_id": 1488,
+      "profile_id": 17,
+      "published": "2017-02-01T18:01:48.521665Z",
+      "thread_id": 231,
+      "url": "/discussion/why-we-predicted-ictogenic-tricyclic-compounds-treat-epilepsy/231#3"
     }
   ],
   "documents": [
@@ -5435,7 +5444,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/report",
-      "views": 368
+      "views": 372
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"https://doi.org/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"https://doi.org/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"https://doi.org/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -7143,6 +7152,24 @@
       "note_id": 305,
       "profile_id": 125,
       "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230#note-305"
+    },
+    {
+      "added": "2017-02-01T17:22:13.408727Z",
+      "body_html": "<p>Care should be taken against over-interpreting the \"clusters\" in your visualization.  In particular, if you look at the drugs listed closely, you'll see that there are actually two groups with only cyproheptadine and clozapine showing any similarity that crosses the groups.  The fact that the two groups are next to each other is a simple artifact of the layout.</p>",
+      "body_md": "Care should be taken against over-interpreting the \"clusters\" in your visualization.  In particular, if you look at the drugs listed closely, you'll see that there are actually two groups with only cyproheptadine and clozapine showing any similarity that crosses the groups.  The fact that the two groups are next to each other is a simple artifact of the layout.",
+      "comment_id": 1486,
+      "note_id": 306,
+      "profile_id": 323,
+      "url": "/discussion/why-we-predicted-ictogenic-tricyclic-compounds-treat-epilepsy/231#note-306"
+    },
+    {
+      "added": "2017-02-01T18:16:15.886770Z",
+      "body_html": "<p><a href=\"/u/scootermorris\" class=\"username\">@scootermorris</a> great point. The 9 ictogenic tricyclic compounds can be broken into two groups based on their structures. First the <a href=\"https://en.wikipedia.org/wiki/Tricyclic_antidepressant\">tricyclic antidepressants</a> — amitriptyline, imipramine, nortriptyline, clomipramine, and desipramine — have the three connected rings with a tail. Second there's cyproheptadine, loxapine, clozapine, and amoxapine, which all have a fourth ring that is not directly touching the tricyclic structure. These four compounds seem to have diverse therapeutic applications: cyproheptadine is a first-generation antihistamine, loxapine is a typical antipsychotic, clozapine is an atypical antipsychotic, and amoxapine is a tetracyclic antidepressant. So <a href=\"/u/scootermorris\" class=\"username\">@scootermorris</a> I think you're right that the small chemical differences may actual be quite meaningful.</p>",
+      "body_md": "@scootermorris great point. The 9 ictogenic tricyclic compounds can be broken into two groups based on their structures. First the [tricyclic antidepressants](https://en.wikipedia.org/wiki/Tricyclic_antidepressant) -- amitriptyline, imipramine, nortriptyline, clomipramine, and desipramine -- have the three connected rings with a tail. Second there's cyproheptadine, loxapine, clozapine, and amoxapine, which all have a fourth ring that is not directly touching the tricyclic structure. These four compounds seem to have diverse therapeutic applications: cyproheptadine is a first-generation antihistamine, loxapine is a typical antipsychotic, clozapine is an atypical antipsychotic, and amoxapine is a tetracyclic antidepressant. So @scootermorris I think you're right that the small chemical differences may actual be quite meaningful.",
+      "comment_id": 1486,
+      "note_id": 307,
+      "profile_id": 17,
+      "url": "/discussion/why-we-predicted-ictogenic-tricyclic-compounds-treat-epilepsy/231#note-307"
     }
   ],
   "profiles": [
@@ -7483,7 +7510,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-01-31T21:47:12.909331Z",
+  "retrieved": "2017-02-01T21:45:20.590015Z",
   "threads": [
     {
       "document_id": null,
@@ -7495,7 +7522,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 706
+      "views": 707
     },
     {
       "document_id": null,
@@ -7519,7 +7546,7 @@
       "thread_id": 23,
       "topic_field": "Reproducibility",
       "url": "/discussion/enabling-reproducibility-and-reuse/23",
-      "views": 134
+      "views": 135
     },
     {
       "document_id": null,
@@ -7567,7 +7594,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 201
+      "views": 203
     },
     {
       "document_id": null,
@@ -7627,7 +7654,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 568
+      "views": 569
     },
     {
       "document_id": null,
@@ -7639,7 +7666,7 @@
       "thread_id": 44,
       "topic_field": "UMLS,Terminologies,Mapping,Disease Ontology,Vocabularies,Diseases,MeSH,DO",
       "url": "/discussion/unifying-disease-vocabularies/44",
-      "views": 276
+      "views": 277
     },
     {
       "document_id": null,
@@ -7711,7 +7738,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 255
+      "views": 256
     },
     {
       "document_id": null,
@@ -7735,7 +7762,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 516
+      "views": 517
     },
     {
       "document_id": null,
@@ -7759,7 +7786,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 598
+      "views": 604
     },
     {
       "document_id": null,
@@ -7819,7 +7846,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 517
+      "views": 519
     },
     {
       "document_id": null,
@@ -7855,7 +7882,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 606
+      "views": 610
     },
     {
       "document_id": null,
@@ -7891,7 +7918,7 @@
       "thread_id": 84,
       "topic_field": "Python,Computer Science,Programming,Jupyter,Coding,IPython,Notebooks",
       "url": "/discussion/python-for-the-modern-biodata-scientist/84",
-      "views": 885
+      "views": 887
     },
     {
       "document_id": null,
@@ -7999,7 +8026,7 @@
       "thread_id": 102,
       "topic_field": "Networks,Drug Repurposing,Network Biology,Dataset,Heterogeneous Network",
       "url": "/discussion/one-network-to-rule-them-all/102",
-      "views": 280
+      "views": 281
     },
     {
       "document_id": null,
@@ -8071,7 +8098,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 325
+      "views": 327
     },
     {
       "document_id": null,
@@ -8095,7 +8122,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 485
+      "views": 486
     },
     {
       "document_id": null,
@@ -8119,7 +8146,7 @@
       "thread_id": 115,
       "topic_field": "HNEP,Hetnets,Features,Metapaths",
       "url": "/discussion/assessing-the-informativeness-of-features/115",
-      "views": 100
+      "views": 101
     },
     {
       "document_id": null,
@@ -8131,7 +8158,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 117
+      "views": 118
     },
     {
       "document_id": null,
@@ -8143,7 +8170,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 223
+      "views": 224
     },
     {
       "document_id": null,
@@ -8155,7 +8182,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 256
+      "views": 257
     },
     {
       "document_id": null,
@@ -8179,7 +8206,7 @@
       "thread_id": 162,
       "topic_field": "Drug Repurposing,Nomenclature,Hetnets",
       "url": "/discussion/data-nomenclature-naming-and-abbreviating-our-network-types/162",
-      "views": 131
+      "views": 132
     },
     {
       "document_id": null,
@@ -8323,7 +8350,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 191
+      "views": 193
     },
     {
       "document_id": null,
@@ -8335,7 +8362,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 276
+      "views": 277
     },
     {
       "document_id": null,
@@ -8347,7 +8374,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 757
+      "views": 762
     },
     {
       "document_id": null,
@@ -8359,7 +8386,7 @@
       "thread_id": 210,
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 96
+      "views": 97
     },
     {
       "document_id": null,
@@ -8443,7 +8470,7 @@
       "thread_id": 224,
       "topic_field": "epilepsy,Hetionet",
       "url": "/discussion/prediction-in-epilepsy/224",
-      "views": 77
+      "views": 79
     },
     {
       "document_id": 7,
@@ -8455,7 +8482,7 @@
       "thread_id": 226,
       "topic_field": "",
       "url": "/doc/7/review",
-      "views": 57
+      "views": 58
     },
     {
       "document_id": null,
@@ -8491,7 +8518,7 @@
       "thread_id": 229,
       "topic_field": "DWPC,hetnet,paths,metapaths,machine learning,algorithms",
       "url": "/discussion/decomposing-predictions-into-their-network-support/229",
-      "views": 18
+      "views": 19
     },
     {
       "document_id": null,
@@ -8503,7 +8530,7 @@
       "thread_id": 230,
       "topic_field": "Cytoscape,networks,compounds,visualization,epilepsy",
       "url": "/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230",
-      "views": 19
+      "views": 21
     },
     {
       "document_id": null,
@@ -8515,7 +8542,7 @@
       "thread_id": 231,
       "topic_field": "epilepsy,tricyclic antidepressants,pharmacology",
       "url": "/discussion/why-we-predicted-ictogenic-tricyclic-compounds-treat-epilepsy/231",
-      "views": 2
+      "views": 7
     }
   ]
 }
