@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-02-02T21:45:53.657665Z",
+  "retrieved": "2017-02-03T21:45:21.178208Z",
   "threads": [
     {
       "document_id": null,
@@ -2616,7 +2616,7 @@
       "thread_id": 33,
       "topic_field": "Privacy,IT,Google Analytics,Piwik,Sysadmin,Analytics",
       "url": "/discussion/web-analytics-platform/33",
-      "views": 73
+      "views": 74
     },
     {
       "document_id": null,
@@ -2712,7 +2712,7 @@
       "thread_id": 59,
       "topic_field": "Markdown,TLFM,Editor",
       "url": "/discussion/thinklab-editor-and-markdown-suggestions/59",
-      "views": 61
+      "views": 62
     },
     {
       "document_id": null,
