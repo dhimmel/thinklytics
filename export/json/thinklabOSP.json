@@ -1664,7 +1664,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2017-02-05T21:46:49.709260Z",
+  "retrieved": "2017-02-06T21:47:32.865756Z",
   "threads": [
     {
       "document_id": 12,
@@ -1688,7 +1688,7 @@
       "thread_id": 160,
       "topic_field": "ASAPbio,Delays,Publishing,Preprints",
       "url": "/discussion/highlighting-the-immediacy-of-thinklab/160",
-      "views": 31
+      "views": 32
     },
     {
       "document_id": null,
@@ -1700,7 +1700,7 @@
       "thread_id": 161,
       "topic_field": "",
       "url": "/discussion/how-to-address-the-risk-of-stealing-ideas/161",
-      "views": 139
+      "views": 140
     },
     {
       "document_id": 12,
@@ -1736,7 +1736,7 @@
       "thread_id": 166,
       "topic_field": "",
       "url": "/discussion/review-summary/166",
-      "views": 25
+      "views": 26
     },
     {
       "document_id": 12,
