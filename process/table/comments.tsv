@@ -922,12 +922,12 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1442	17	rephetio	2016-12-15T16:42:31.415721Z	226	/doc/7/review#26	66	510
 1443	17	rephetio	2016-12-15T16:56:09.284080Z	226	/doc/7/review#27	64	349
 1444	17	rephetio	2016-12-15T17:05:01.645700Z	226	/doc/7/review#28	79	521
-1445	17	rephetio	2016-12-15T21:16:12.403408Z	228	/discussion/decomposing-the-dwpc-to-assess-intermediate-node-contributions/228	212	1322
-1446	17	rephetio	2016-12-15T21:41:18.549540Z	228	/discussion/decomposing-the-dwpc-to-assess-intermediate-node-contributions/228#2	540	3755
+1445	17	rephetio	2016-12-15T21:16:12.403408Z	228	/discussion/decomposing-the-dwpc-to-assess-intermediate-node-or-edge-contributions/228	212	1322
+1446	17	rephetio	2016-12-15T21:41:18.549540Z	228	/discussion/decomposing-the-dwpc-to-assess-intermediate-node-or-edge-contributions/228#2	540	3755
 1447	17	rephetio	2016-12-16T15:31:26.181121Z	226	/doc/7/review#29	104	579
 1448	176	rephetio	2016-12-16T20:33:48.959931Z	226	/doc/7/review#30	89	567
 1449	17	rephetio	2016-12-19T15:37:26.501858Z	226	/doc/7/review#31	11	67
-1450	17	rephetio	2016-12-23T16:29:41.310951Z	228	/discussion/decomposing-the-dwpc-to-assess-intermediate-node-contributions/228#3	517	3550
+1450	17	rephetio	2016-12-23T16:29:41.310951Z	228	/discussion/decomposing-the-dwpc-to-assess-intermediate-node-or-edge-contributions/228#3	517	3550
 1451	17	rephetio	2016-12-21T22:32:28.054612Z	229	/discussion/decomposing-predictions-into-their-network-support/229	105	660
 1452	17	rephetio	2016-12-21T23:59:00.028255Z	229	/discussion/decomposing-predictions-into-their-network-support/229#2	623	4006
 1453	315	rephetio	2016-12-22T07:33:14.090563Z	226	/doc/7/review#32	36	207
@@ -944,7 +944,7 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1465	17	rephetio	2017-01-09T00:06:27.192296Z	224	/discussion/prediction-in-epilepsy/224#10	582	4767
 1466	48	rephetio	2017-01-09T04:22:26.918064Z	227	/discussion/brainstorming-future-directions-for-hetionet/227#12	126	728
 1467	17	rephetio	2017-01-13T17:43:04.333124Z	227	/discussion/brainstorming-future-directions-for-hetionet/227#13	420	2727
-1468	17	rephetio	2017-01-10T20:08:57.254807Z	224	/discussion/prediction-in-epilepsy/224#11	1235	7807
+1468	17	rephetio	2017-01-10T20:08:57.254807Z	224	/discussion/prediction-in-epilepsy/224#11	1241	7833
 1469	17	rephetio	2017-01-10T20:30:23.163407Z	34	/discussion/using-entrez-gene-as-our-gene-vocabulary/34#12	61	345
 1470	313	rephetio	2017-01-18T19:47:15.375200Z	227	/discussion/brainstorming-future-directions-for-hetionet/227#14	183	1154
 1471	17	rephetio	2017-01-24T17:23:18.254424Z	230	/discussion/visualizing-the-top-epilepsy-predictions-in-cytoscape/230	106	616
@@ -970,6 +970,7 @@ comment_id	profile_id	project	published	thread_id	url	word_count	character_count
 1492	17	rephetio	2017-02-04T20:55:54.177731Z	102	/discussion/one-network-to-rule-them-all/102#6	181	1093
 1493	17	rephetio	2017-02-04T23:29:52.116590Z	210	/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210#5	58	356
 1494	17	rephetio	2017-02-07T18:31:08.658327Z	226	/doc/7/review#40	86	550
+1495	17	rephetio	2017-02-08T01:11:51.153909Z	200	/discussion/measuring-user-contribution-and-content-creation/200#5	121	718
 799	17	thinklabOSP	2016-02-19T06:41:11.813300Z	160	/discussion/highlighting-the-immediacy-of-thinklab/160	158	1008
 800	125	thinklabOSP	2016-02-16T12:50:44.682536Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161	186	1007
 801	2	thinklabOSP	2016-02-16T18:06:25.264019Z	161	/discussion/how-to-address-the-risk-of-stealing-ideas/161#2	209	1169

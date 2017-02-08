@@ -160,6 +160,7 @@ rephetio	10.1136/amiajnl-2011-000116	4
 rephetio	10.1137/1.9781611972795.67	4
 rephetio	10.1186/s13073-014-0095-1	4
 rephetio	10.1371/journal.pgen.1004967	4
+rephetio	10.15363/thinklab.a7	4
 rephetio	10.15363/thinklab.d186	4
 rephetio	10.15363/thinklab.d215	4
 rephetio	10.18637/jss.v033.i01	4
@@ -171,6 +172,7 @@ rephetio	10.1016/j.ddtec.2015.01.005	3
 rephetio	10.1016/j.drudis.2012.07.017	3
 rephetio	10.1016/j.physbeh.2008.05.020	3
 rephetio	10.1016/j.ymeth.2014.11.020	3
+rephetio	10.1016/s0006-2952(96)00509-6	3
 rephetio	10.1038/536016a	3
 rephetio	10.1038/ng.3259	3
 rephetio	10.1038/nrd1468	3
@@ -197,10 +199,8 @@ rephetio	10.1186/1758-2946-5-3	3
 rephetio	10.1186/1758-2946-5-7	3
 rephetio	10.1371/journal.pcbi.1000353	3
 rephetio	10.1371/journal.pcbi.1003285	3
-rephetio	10.15363/thinklab.a7	3
 rephetio	10.15363/thinklab.d194	3
 rephetio	10.15363/thinklab.d210	3
-rephetio	10.15363/thinklab.d229	3
 rephetio	10.3109/08037050903576726	3
 rephetio	10.5281/zenodo.21711	3
 rephetio	10.5281/zenodo.45524	3
@@ -211,7 +211,6 @@ rephetio	10.1001/archneur.61.8.1254	2
 rephetio	10.1001/jama.1994.03510380059038	2
 rephetio	10.1002/14651858.CD003982.pub2	2
 rephetio	10.1002/14651858.CD006103.pub7	2
-rephetio	10.1007/0-387-27526-6_13	2
 rephetio	10.1007/11564126_44	2
 rephetio	10.1007/978-981-287-077-3_63	2
 rephetio	10.1007/s00228-003-0693-0	2
@@ -224,7 +223,7 @@ rephetio	10.1016/j.drudis.2012.08.005	2
 rephetio	10.1016/j.ebcr.2015.07.003	2
 rephetio	10.1016/j.seizure.2009.11.005	2
 rephetio	10.1016/j.seizure.2010.12.011	2
-rephetio	10.1016/s0006-2952(96)00509-6	2
+rephetio	10.1016/j.yebeh.2016.01.029	2
 rephetio	10.1016/s0169-023x(97)00017-7	2
 rephetio	10.1038/523272a	2
 rephetio	10.1038/530148a	2
@@ -238,6 +237,7 @@ rephetio	10.1038/nrd3480	2
 rephetio	10.1038/nrd4126	2
 rephetio	10.1038/nrg2363	2
 rephetio	10.1038/nrg2615	2
+rephetio	10.1038/nrn1430	2
 rephetio	10.1038/sdata.2014.32	2
 rephetio	10.1038/tp.2015.209	2
 rephetio	10.1056/NEJMoa1102035	2
@@ -252,7 +252,6 @@ rephetio	10.1093/bja/aes027	2
 rephetio	10.1093/brain/awn081	2
 rephetio	10.1093/database/bar036	2
 rephetio	10.1093/database/bav010	2
-rephetio	10.1093/med/9780199746545.003.0010	2
 rephetio	10.1093/nar/gki031	2
 rephetio	10.1093/nar/gkl999	2
 rephetio	10.1093/nar/gkn892	2
@@ -292,6 +291,7 @@ rephetio	10.1371/journal.pgen.1001273	2
 rephetio	10.1371/journal.pone.0017258	2
 rephetio	10.1371/journal.pone.0113371	2
 rephetio	10.1517/13543776.2013.782394	2
+rephetio	10.15363/thinklab.a5	2
 rephetio	10.15363/thinklab.d105	2
 rephetio	10.15363/thinklab.d106	2
 rephetio	10.15363/thinklab.d107	2
@@ -311,9 +311,7 @@ rephetio	10.15363/thinklab.d97	2
 rephetio	10.2147/COPD.S1121	2
 rephetio	10.2147/btt.s10123	2
 rephetio	10.2174/1386207013330670	2
-rephetio	10.2174/1568007023339193	2
 rephetio	10.2174/156802607780636726	2
-rephetio	10.2174/156802612800229206	2
 rephetio	10.2174/157015910792246254	2
 rephetio	10.2200/S00433ED1V01Y201207DMK005	2
 rephetio	10.2307/1932409	2
@@ -364,6 +362,7 @@ rephetio	10.1002/pmic.201100598	1
 rephetio	10.1002/psp4.12009	1
 rephetio	10.1002/wics.147	1
 rephetio	10.1002/wsbm.1337	1
+rephetio	10.1007/0-387-27526-6_13	1
 rephetio	10.1007/978-1-60761-232-2_6	1
 rephetio	10.1007/978-3-642-16318-0_27	1
 rephetio	10.1007/978-3-642-23935-9_37	1
@@ -404,15 +403,16 @@ rephetio	10.1016/j.jneuroim.2014.08.591	1
 rephetio	10.1016/j.jocs.2011.05.009	1
 rephetio	10.1016/j.molcel.2004.09.016	1
 rephetio	10.1016/j.nurt.2006.11.009	1
+rephetio	10.1016/j.nurt.2006.11.010	1
 rephetio	10.1016/j.physa.2011.02.004	1
 rephetio	10.1016/j.sbi.2013.02.008	1
+rephetio	10.1016/j.seizure.2010.10.027	1
 rephetio	10.1016/j.seizure.2011.01.003	1
 rephetio	10.1016/j.socnet.2008.02.001	1
 rephetio	10.1016/j.socnet.2013.01.004	1
 rephetio	10.1016/j.tips.2013.03.004	1
 rephetio	10.1016/j.tips.2013.07.003	1
 rephetio	10.1016/j.yebeh.2005.07.014	1
-rephetio	10.1016/j.yebeh.2016.01.029	1
 rephetio	10.1016/s0736-4679(97)00072-3	1
 rephetio	10.1017/cbo9780511815478	1
 rephetio	10.1021/c160017a018	1
@@ -454,12 +454,12 @@ rephetio	10.1038/nrd1178	1
 rephetio	10.1038/nrd2997	1
 rephetio	10.1038/nrd3681	1
 rephetio	10.1038/nrg1768	1
-rephetio	10.1038/nrn1430	1
 rephetio	10.1038/srep00620	1
 rephetio	10.1038/srep03202	1
 rephetio	10.1038/srep03289	1
 rephetio	10.1038/srep10888	1
 rephetio	10.1039/C4MB00014E	1
+rephetio	10.1046/j.1528-1157.2001.042suppl.3008.x	1
 rephetio	10.1053/j.seminhematol.2005.05.002	1
 rephetio	10.1056/NEJMc055301	1
 rephetio	10.1056/NEJMoa1414325	1
@@ -505,6 +505,7 @@ rephetio	10.1093/database/bas041	1
 rephetio	10.1093/hmg/ddw160	1
 rephetio	10.1093/jamia/ocv062	1
 rephetio	10.1093/jamia/ocv102	1
+rephetio	10.1093/med/9780199746545.003.0010	1
 rephetio	10.1093/nar/28.1.235	1
 rephetio	10.1093/nar/30.1.412	1
 rephetio	10.1093/nar/gkg056	1
@@ -597,6 +598,7 @@ rephetio	10.1111/epi.12025	1
 rephetio	10.1111/j.1349-7006.2007.00477.x	1
 rephetio	10.1111/j.1467-9868.2011.00771.x	1
 rephetio	10.1111/j.1528-1157.1998.tb01268.x	1
+rephetio	10.1111/j.1528-1167.2010.02797.x	1
 rephetio	10.1111/j.1600-0587.2012.07348.x	1
 rephetio	10.1124/mol.106.025130	1
 rephetio	10.1126/science.1132939	1
@@ -674,7 +676,6 @@ rephetio	10.1371/journal.pone.0101826	1
 rephetio	10.1385/comp:32:1:26	1
 rephetio	10.1517/14740338.2013.823399	1
 rephetio	10.15363/thinklab.4	1
-rephetio	10.15363/thinklab.a5	1
 rephetio	10.15363/thinklab.d102	1
 rephetio	10.15363/thinklab.d104	1
 rephetio	10.15363/thinklab.d110	1
@@ -698,7 +699,9 @@ rephetio	10.15363/thinklab.d213	1
 rephetio	10.15363/thinklab.d220	1
 rephetio	10.15363/thinklab.d227	1
 rephetio	10.15363/thinklab.d228	1
+rephetio	10.15363/thinklab.d229	1
 rephetio	10.15363/thinklab.d23	1
+rephetio	10.15363/thinklab.d231	1
 rephetio	10.15363/thinklab.d41	1
 rephetio	10.15363/thinklab.d43	1
 rephetio	10.15363/thinklab.d44	1
@@ -725,6 +728,9 @@ rephetio	10.2165/00002018-199920030-00007	1
 rephetio	10.2165/00002018-200225020-00004	1
 rephetio	10.2165/00023210-200519060-00004	1
 rephetio	10.2174/092986706778742918	1
+rephetio	10.2174/1568007023339193	1
+rephetio	10.2174/1568026053386962	1
+rephetio	10.2174/156802612800229206	1
 rephetio	10.2307/2332539	1
 rephetio	10.2337/diacare.26.2.279	1
 rephetio	10.3163/1536-5050.95.4.416	1
