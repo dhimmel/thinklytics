@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-02-09T21:48:46.355719Z",
+  "retrieved": "2017-02-10T21:49:28.763822Z",
   "threads": [
     {
       "document_id": null,
@@ -2832,7 +2832,7 @@
       "thread_id": 109,
       "topic_field": "Standards,DOI,DOI resolution",
       "url": "/discussion/switching-doi-links-to-the-preferred-format/109",
-      "views": 52
+      "views": 53
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 144
+      "views": 145
     },
     {
       "document_id": null,
