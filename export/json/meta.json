@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-02-10T21:49:28.763822Z",
+  "retrieved": "2017-02-11T21:50:11.516755Z",
   "threads": [
     {
       "document_id": null,
@@ -2676,7 +2676,7 @@
       "thread_id": 55,
       "topic_field": "RSS Feed,Project Tracking",
       "url": "/discussion/rss-feed-per-project-option/55",
-      "views": 44
+      "views": 45
     },
     {
       "document_id": null,
@@ -2940,7 +2940,7 @@
       "thread_id": 189,
       "topic_field": "Technical Issue",
       "url": "/discussion/mathjax-block-markers/189",
-      "views": 38
+      "views": 39
     },
     {
       "document_id": null,
