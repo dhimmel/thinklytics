@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-02-24T21:56:06.855133Z",
+  "retrieved": "2017-02-25T21:56:46.846182Z",
   "threads": [
     {
       "document_id": null,
@@ -2724,7 +2724,7 @@
       "thread_id": 60,
       "topic_field": "Comments",
       "url": "/discussion/comments-notes-interface-and-behaviour-suggestions/60",
-      "views": 66
+      "views": 67
     },
     {
       "document_id": null,
@@ -2964,7 +2964,7 @@
       "thread_id": 191,
       "topic_field": "Thinklab,metrics",
       "url": "/discussion/discussion-summary-statistics-for-illustrating-project-impact/191",
-      "views": 146
+      "views": 147
     },
     {
       "document_id": null,
