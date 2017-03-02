@@ -1664,7 +1664,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2017-03-01T21:58:49.057228Z",
+  "retrieved": "2017-03-02T22:00:56.227515Z",
   "threads": [
     {
       "document_id": 12,
@@ -1748,7 +1748,7 @@
       "thread_id": 168,
       "topic_field": "",
       "url": "/discussion/review-summary/168",
-      "views": 34
+      "views": 35
     },
     {
       "document_id": null,
@@ -1760,7 +1760,7 @@
       "thread_id": 170,
       "topic_field": "Open science,Incentives",
       "url": "/discussion/has-our-scientific-system-been-optimized-by-an-evolutionary-process/170",
-      "views": 42
+      "views": 43
     },
     {
       "document_id": 12,
