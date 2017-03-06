@@ -1606,7 +1606,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/thinklabOSP/proposal",
-      "views": 377
+      "views": 378
     }
   ],
   "notes": [
@@ -1664,7 +1664,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2017-03-05T22:02:53.336825Z",
+  "retrieved": "2017-03-06T22:01:12.905265Z",
   "threads": [
     {
       "document_id": 12,
@@ -1676,7 +1676,7 @@
       "thread_id": 158,
       "topic_field": "Open science,Peer review,Science Funding,Grant Writing,Grantmaking,Open Notebook Science",
       "url": "/doc/12/review",
-      "views": 95
+      "views": 96
     },
     {
       "document_id": null,
