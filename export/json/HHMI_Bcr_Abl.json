@@ -934,7 +934,7 @@
       "username": "obigriffith"
     }
   ],
-  "retrieved": "2017-03-09T22:02:31.253834Z",
+  "retrieved": "2017-03-10T22:02:22.217846Z",
   "threads": [
     {
       "document_id": null,
@@ -946,7 +946,7 @@
       "thread_id": 141,
       "topic_field": "Machine learning,Cancer Biology,Crowdsourcing,Literature Mining,Drug Targets",
       "url": "/doc/11/review",
-      "views": 43
+      "views": 44
     },
     {
       "document_id": null,
