@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-03-12T22:03:31.265580Z",
+  "retrieved": "2017-03-13T22:03:57.032143Z",
   "threads": [
     {
       "document_id": null,
@@ -2760,7 +2760,7 @@
       "thread_id": 69,
       "topic_field": "Markdown,Discussions,Citation,DOI",
       "url": "/discussion/citing-thinklab-discussions-feedback-please/69",
-      "views": 46
+      "views": 47
     },
     {
       "document_id": null,
@@ -2772,7 +2772,7 @@
       "thread_id": 78,
       "topic_field": "",
       "url": "/discussion/reviewers-or-contributors-what-term-should-we-use-for-thinklab-participants/78",
-      "views": 44
+      "views": 45
     },
     {
       "document_id": null,
@@ -2952,7 +2952,7 @@
       "thread_id": 190,
       "topic_field": "Thinklab,printing,typesetting",
       "url": "/discussion/hyperlinks-inserted-when-printing-thinklab-pages/190",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,
