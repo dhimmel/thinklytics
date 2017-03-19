@@ -7609,7 +7609,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-03-18T22:06:22.827362Z",
+  "retrieved": "2017-03-19T22:07:07.217097Z",
   "threads": [
     {
       "document_id": null,
@@ -7753,7 +7753,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 596
+      "views": 597
     },
     {
       "document_id": null,
@@ -7861,7 +7861,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 566
+      "views": 568
     },
     {
       "document_id": null,
@@ -7885,7 +7885,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 717
+      "views": 720
     },
     {
       "document_id": null,
@@ -8221,7 +8221,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 532
+      "views": 533
     },
     {
       "document_id": null,
@@ -8449,7 +8449,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 204
+      "views": 205
     },
     {
       "document_id": null,
@@ -8473,7 +8473,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 948
+      "views": 951
     },
     {
       "document_id": null,
@@ -8545,7 +8545,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 214
+      "views": 215
     },
     {
       "document_id": null,
