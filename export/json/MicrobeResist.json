@@ -202,7 +202,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/MicrobeResist/proposal",
-      "views": 541
+      "views": 544
     }
   ],
   "notes": [
@@ -321,7 +321,7 @@
       "username": "JamesMeadow"
     }
   ],
-  "retrieved": "2017-03-23T22:08:31.766923Z",
+  "retrieved": "2017-03-24T22:09:13.971759Z",
   "threads": [
     {
       "document_id": null,
@@ -417,7 +417,7 @@
       "thread_id": 15,
       "topic_field": "Markdown",
       "url": "/discussion/markdown-text-formatting-tips-for-proposal/15",
-      "views": 64
+      "views": 65
     }
   ]
 }
