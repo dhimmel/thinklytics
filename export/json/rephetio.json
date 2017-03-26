@@ -7609,7 +7609,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-03-25T22:10:23.976875Z",
+  "retrieved": "2017-03-26T22:10:28.648035Z",
   "threads": [
     {
       "document_id": null,
@@ -7753,7 +7753,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 600
+      "views": 601
     },
     {
       "document_id": null,
@@ -7813,7 +7813,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 391
+      "views": 392
     },
     {
       "document_id": null,
@@ -7825,7 +7825,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 348
+      "views": 349
     },
     {
       "document_id": null,
@@ -7837,7 +7837,7 @@
       "thread_id": 53,
       "topic_field": "Databases,Compounds,BindingDB,PubChem BioAssay,Affinity,Binding Affinity,Drug Targets,ChEMBL",
       "url": "/discussion/integrating-drug-target-information-from-bindingdb/53",
-      "views": 268
+      "views": 269
     },
     {
       "document_id": null,
@@ -7885,7 +7885,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 740
+      "views": 742
     },
     {
       "document_id": null,
@@ -7933,7 +7933,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 183
+      "views": 184
     },
     {
       "document_id": null,
@@ -7945,7 +7945,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 578
+      "views": 579
     },
     {
       "document_id": null,
@@ -7993,7 +7993,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 568
+      "views": 569
     },
     {
       "document_id": null,
@@ -8005,7 +8005,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 1025
+      "views": 1026
     },
     {
       "document_id": null,
@@ -8089,7 +8089,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 327
+      "views": 328
     },
     {
       "document_id": null,
@@ -8221,7 +8221,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 539
+      "views": 541
     },
     {
       "document_id": null,
@@ -8341,7 +8341,7 @@
       "thread_id": 181,
       "topic_field": "LINCS,L1000,Systems Pharmacology,UCSF,open education",
       "url": "/discussion/workshop-to-analyze-lincs-data-for-the-systems-pharmacology-course-at-ucsf/181",
-      "views": 173
+      "views": 174
     },
     {
       "document_id": null,
@@ -8509,7 +8509,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 527
+      "views": 528
     },
     {
       "document_id": null,
@@ -8593,7 +8593,7 @@
       "thread_id": 227,
       "topic_field": "applied imagination,Hetionet,hetnets,future,planning",
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227",
-      "views": 114
+      "views": 115
     },
     {
       "document_id": null,
