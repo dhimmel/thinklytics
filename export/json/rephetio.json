@@ -5507,6 +5507,15 @@
       "published": "2017-03-17T16:09:18.084504Z",
       "thread_id": 113,
       "url": "/discussion/tracking-project-reuse-citation-and-publicity/113#14"
+    },
+    {
+      "body_html": "<p>Could you specify the steps and subset of data taken for each of your source? This is my understanding so far of the process:<br>0) Compounds (DrugBank) - Approved small molecule compounds<br>1) Diseases (DO Slim) - 137 terms included diseases that have been studied by GWAS and cancer types from TopNodes_DOcancerslim <br>2) Symptoms (MeSH) - 438 descendants of Signs and Symptoms <br>3) Side effects (SIDER +UMLS identifiers)  - which ones?<br>4) Pharmacologic class (DrugCentral) - which ones?<br>5) Gene (Entrez Gene) - All Protein-coding human genes?<br>6) Anatomy (Uberon) - 402 terms by excluding terms known not to exist in humans and terms that were overly broad or arcane<br>7) Pathway (WikiPathways, Pathway Commons (Reactome+PID)) - All except for duplicate pathways and pathways without multiple participating genes?<br>8) BP, MF, CC (GOA) - only terms with 2–1000 annotated genes were included</p>\n\n<p>a) Could you confirm that the above information is correct for items 0,1,2,6 and 8?<br>b) Could you give more details on which terms were extracted for items 3, 4, 5 and 7?<br>c) Were there any dependencies when extracting information, e.g. only take genes associated with the approved drugs, or were they all extracted independently and then links were created between them despite not considering only those with relevance with one another or were the links (edges) created first and the nodes were populated according to the edges taken?</p>",
+      "body_md": "Could you specify the steps and subset of data taken for each of your source? This is my understanding so far of the process:\n0) Compounds (DrugBank) - Approved small molecule compounds\n1) Diseases (DO Slim) - 137 terms included diseases that have been studied by GWAS and cancer types from TopNodes_DOcancerslim \n2) Symptoms (MeSH) - 438 descendants of Signs and Symptoms \n3) Side effects (SIDER +UMLS identifiers)  - which ones?\n4) Pharmacologic class (DrugCentral) - which ones?\n5) Gene (Entrez Gene) - All Protein-coding human genes?\n6) Anatomy (Uberon) - 402 terms by excluding terms known not to exist in humans and terms that were overly broad or arcane\n7) Pathway (WikiPathways, Pathway Commons (Reactome+PID)) - All except for duplicate pathways and pathways without multiple participating genes?\n8) BP, MF, CC (GOA) - only terms with 2–1000 annotated genes were included\n\na) Could you confirm that the above information is correct for items 0,1,2,6 and 8?\nb) Could you give more details on which terms were extracted for items 3, 4, 5 and 7?\nc) Were there any dependencies when extracting information, e.g. only take genes associated with the approved drugs, or were they all extracted independently and then links were created between them despite not considering only those with relevance with one another or were the links (edges) created first and the nodes were populated according to the edges taken?",
+      "comment_id": 1501,
+      "profile_id": 315,
+      "published": "2017-03-29T01:19:00.031591Z",
+      "thread_id": 226,
+      "url": "/doc/7/review#43"
     }
   ],
   "documents": [
@@ -5534,7 +5543,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/rephetio/report",
-      "views": 592
+      "views": 598
     },
     {
       "body_html": "<h1>Project components</h1>\r\n\r\n<h2>Hetnets</h2>\r\n\r\n<p>Hetnets are networks with multiple node and edge types <span class=\"citation\">[<a href=\"/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104\" class=\"citation\" data-key=\"10.15363/thinklab.d104\">1</a>]</span>. Hetnets excel at data integration and are a versatile and intuitive data structure. While specific incarnations of hetnets have long existed, such as bipartite or property graphs, general algorithms that accommodate the multiple types are a recent development <span class=\"citation\">[<a href=\"https://doi.org/10.2200/S00433ED1V01Y201207DMK005\" class=\"citation\" data-key=\"10.2200/S00433ED1V01Y201207DMK005\">2</a>]</span>. Our research tries to predict edges on hetnets, using an algorithm originally developed for social network analysis <span class=\"citation\">[<a href=\"https://doi.org/10.1109/ASONAM.2011.112\" class=\"citation\" data-key=\"10.1109/ASONAM.2011.112\">3</a>]</span>. Previously, we predicted disease–gene associations <span class=\"citation\">[<a href=\"https://doi.org/10.1371/journal.pcbi.1004259\" class=\"citation\" data-key=\"10.1371/journal.pcbi.1004259\">4</a>]</span>. Here, we predict repurposing drugs.</p>\r\n\r\n<h2>Network construction</h2>\r\n\r\n<p>We've constructed a state of the art hetnet for drug repurposing called <a href=\"https://github.com/dhimmel/hetionet\">Hetionet</a>. The network contains 47,031 nodes of 11 types and 2,250,197 edges of 24 types. The schema is shown in the metagraph below:</p>\r\n\r\n<p><img src=\"https://github.com/dhimmel/rephetio/blob/103054a2bc3f86998fed6cb3753d1ecdb5cbe1e7/figure/metagraph.png?raw=true\" alt=\"\"></p>\r\n\r\n<p>Nodes are identified using standardized terminologies to facilitate integration and prevent duplication. Edges are integrated from high-throughput databases, which were chosen for their quality, reusability, throughput, and relevance to pharmacology. We thank the community for <a href=\"http://thinklab.com/d/22\">helping us</a> identify the most appropriate resources.</p>\r\n\r\n<p>In general, we've dedicated a single GitHub repository to each resource. Versioning is accomplished using commit specific URLs. We expect several of these repositories to be helpful outside of this project. Examples include our analysis of LINCS L1000 <span class=\"citation\">[<a href=\"/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43\" class=\"citation\" data-key=\"10.15363/thinklab.d43\">5</a>]</span>.</p>\r\n\r\n<h2>Indications catalog</h2>\r\n\r\n<p>Our approach requires a catalog of indications (compound–diseases treatments) for training and testing. Unfortunately, there was no open and structured catalog of indications, so we <a href=\"http://thinklab.com/d/21#21\">created our own</a> by combining four resources. We are <a href=\"http://thinklab.com/d/95\">now having physicians</a> curate the automated compilation to separate disease-modifying indications from symptomatic and non indications.</p>\r\n\r\n<h2>Neo4j</h2>\r\n\r\n<p>We use neo4j to store and operate on our hetnet <span class=\"citation\">[<a href=\"/discussion/using-the-neo4j-graph-database-for-hetnets/112\" class=\"citation\" data-key=\"10.15363/thinklab.d112\">6</a>]</span>. Neo4j is a powerful graph database. In addition our <a href=\"https://github.com/dhimmel/hetio\">hetio</a> python package provides an additional layer of functionality. Our project has led to the first public examples of duplicate node exclusion <span class=\"citation\">[<a href=\"/discussion/path-exclusion-conditions/134\" class=\"citation\" data-key=\"10.15363/thinklab.d134\">7</a>]</span> and network permutation <span class=\"citation\">[<a href=\"/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136\" class=\"citation\" data-key=\"10.15363/thinklab.d136\">8</a>]</span> in the cypher query language.</p>\r\n\r\n<h2>Open science</h2>\r\n\r\n<p>We're <a href=\"http://thinklab.com/d/23\">committed</a> to making this project as useful to the community as possible. Therefore, the project is entirely open notebook. We strive to share all outputs upon their creation, under permissive open licenses such as CC0 or CC-BY. Furthermore, we have devoted considerable effort to handling data copyright complications <span class=\"citation\">[<a href=\"/discussion/integrating-resources-with-disparate-licensing-into-an-open-network/107\" class=\"citation\" data-key=\"10.15363/thinklab.d107\">9</a>]</span>. Much of this effort has been to save our downstream users the hassle. In other words, were we not compiling an open resource our legal burden would have been much diminished.</p>\r\n\r\n<h2>Mechanisms of efficacy</h2>\r\n\r\n<p>Stay tuned for our investigation into which data sources are informative of drug efficacy.</p>\r\n\r\n<h2>Drug repurposing predictions</h2>\r\n\r\n<p>Stay tuned for our predictions of the probability that a given small molecule treats a given complex disease.</p>",
@@ -7609,7 +7618,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-03-28T22:11:38.607236Z",
+  "retrieved": "2017-03-29T22:17:20.274492Z",
   "threads": [
     {
       "document_id": null,
@@ -7621,7 +7630,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 774
+      "views": 775
     },
     {
       "document_id": null,
@@ -7693,7 +7702,7 @@
       "thread_id": 34,
       "topic_field": "Databases,HGNC,Genes,Entrez Gene",
       "url": "/discussion/using-entrez-gene-as-our-gene-vocabulary/34",
-      "views": 233
+      "views": 234
     },
     {
       "document_id": null,
@@ -7717,7 +7726,7 @@
       "thread_id": 40,
       "topic_field": "Drugs,Small Molecules,Compounds,Terminologies,Standards,Mapping,DrugBank,UniChem,InChI",
       "url": "/discussion/unifying-drug-vocabularies/40",
-      "views": 384
+      "views": 386
     },
     {
       "document_id": null,
@@ -7729,7 +7738,7 @@
       "thread_id": 41,
       "topic_field": "Ontologies",
       "url": "/discussion/tissue-node/41",
-      "views": 170
+      "views": 171
     },
     {
       "document_id": null,
@@ -7753,7 +7762,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 603
+      "views": 604
     },
     {
       "document_id": null,
@@ -7861,7 +7870,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 586
+      "views": 587
     },
     {
       "document_id": null,
@@ -7873,7 +7882,7 @@
       "thread_id": 62,
       "topic_field": "Databases,Indications,Clinical Informatics,EHR,Ehrlink,Medications,Health Records",
       "url": "/discussion/extracting-indications-from-the-ehrlink-resource/62",
-      "views": 108
+      "views": 109
     },
     {
       "document_id": null,
@@ -7885,7 +7894,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 750
+      "views": 752
     },
     {
       "document_id": null,
@@ -7909,7 +7918,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 230
+      "views": 231
     },
     {
       "document_id": null,
@@ -7945,7 +7954,7 @@
       "thread_id": 71,
       "topic_field": "Genomics,Genetics,LD,Loci,HapMap,Linkage Disequilibrium,Recombination Hotspots,GWAS Catalog,1000 Genomes",
       "url": "/discussion/calculating-genomic-windows-for-gwas-lead-snps/71",
-      "views": 580
+      "views": 581
     },
     {
       "document_id": null,
@@ -7969,7 +7978,7 @@
       "thread_id": 80,
       "topic_field": "DO,Disease Etiology,EFO,Association Studies,EBI,GWAS,GWAS Catalog,NHGRI,Associations",
       "url": "/discussion/extracting-disease-gene-associations-from-the-gwas-catalog/80",
-      "views": 269
+      "views": 271
     },
     {
       "document_id": null,
@@ -7981,7 +7990,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 690
+      "views": 692
     },
     {
       "document_id": null,
@@ -7993,7 +8002,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 573
+      "views": 577
     },
     {
       "document_id": null,
@@ -8041,7 +8050,7 @@
       "thread_id": 91,
       "topic_field": "TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome",
       "url": "/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91",
-      "views": 119
+      "views": 120
     },
     {
       "document_id": null,
@@ -8197,7 +8206,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 341
+      "views": 342
     },
     {
       "document_id": null,
@@ -8221,7 +8230,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 542
+      "views": 543
     },
     {
       "document_id": null,
@@ -8257,7 +8266,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 124
+      "views": 125
     },
     {
       "document_id": null,
@@ -8269,7 +8278,7 @@
       "thread_id": 130,
       "topic_field": "Open Source,Licensing,Neo4J,GPLv3,AGPLv3",
       "url": "/discussion/licensing-neo4j/130",
-      "views": 251
+      "views": 252
     },
     {
       "document_id": null,
@@ -8317,7 +8326,7 @@
       "thread_id": 171,
       "topic_field": "LINCS,L1000,shRNAs,overexpression,knockdown,upregulation,downregulation",
       "url": "/discussion/positive-correlations-between-knockdown-and-overexpression-profiles-from-lincs-l1000/171",
-      "views": 233
+      "views": 234
     },
     {
       "document_id": null,
@@ -8365,7 +8374,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 175
+      "views": 176
     },
     {
       "document_id": null,
@@ -8425,7 +8434,7 @@
       "thread_id": 200,
       "topic_field": "analytics,contribution,content",
       "url": "/discussion/measuring-user-contribution-and-content-creation/200",
-      "views": 76
+      "views": 77
     },
     {
       "document_id": null,
@@ -8461,7 +8470,7 @@
       "thread_id": 203,
       "topic_field": "hetnet,HNEP,pharmacology,predictions",
       "url": "/discussion/predictions-of-whether-a-compound-treats-a-disease/203",
-      "views": 298
+      "views": 299
     },
     {
       "document_id": null,
@@ -8473,7 +8482,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 992
+      "views": 995
     },
     {
       "document_id": null,
@@ -8509,7 +8518,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 530
+      "views": 531
     },
     {
       "document_id": null,
@@ -8569,7 +8578,7 @@
       "thread_id": 224,
       "topic_field": "epilepsy,Hetionet",
       "url": "/discussion/prediction-in-epilepsy/224",
-      "views": 96
+      "views": 97
     },
     {
       "document_id": 7,
