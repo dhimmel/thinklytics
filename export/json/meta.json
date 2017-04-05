@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-04-04T22:16:22.588947Z",
+  "retrieved": "2017-04-05T22:17:27.975261Z",
   "threads": [
     {
       "document_id": null,
@@ -2784,7 +2784,7 @@
       "thread_id": 79,
       "topic_field": "DOI,ThinkLab figures",
       "url": "/discussion/we-now-have-a-figures-feature/79",
-      "views": 54
+      "views": 56
     },
     {
       "document_id": null,
@@ -2952,7 +2952,7 @@
       "thread_id": 190,
       "topic_field": "Thinklab,printing,typesetting",
       "url": "/discussion/hyperlinks-inserted-when-printing-thinklab-pages/190",
-      "views": 36
+      "views": 37
     },
     {
       "document_id": null,
@@ -2988,7 +2988,7 @@
       "thread_id": 195,
       "topic_field": "",
       "url": "/discussion/auto-save/195",
-      "views": 34
+      "views": 35
     },
     {
       "document_id": null,
@@ -3036,7 +3036,7 @@
       "thread_id": 206,
       "topic_field": "open science,platforms",
       "url": "/discussion/open-realtime-science-platforms/206",
-      "views": 70
+      "views": 71
     },
     {
       "document_id": null,
