@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-04-06T22:19:30.907009Z",
+  "retrieved": "2017-04-07T22:17:19.279906Z",
   "threads": [
     {
       "document_id": null,
@@ -2652,7 +2652,7 @@
       "thread_id": 49,
       "topic_field": "ThinkLab,Contributions,Incentives",
       "url": "/discussion/contribution-valuation-options/49",
-      "views": 60
+      "views": 61
     },
     {
       "document_id": null,
@@ -2736,7 +2736,7 @@
       "thread_id": 63,
       "topic_field": "",
       "url": "/discussion/why-thinklab-uses-a-flat-discussion-structure-not-threaded/63",
-      "views": 91
+      "views": 92
     },
     {
       "document_id": null,
@@ -2868,7 +2868,7 @@
       "thread_id": 138,
       "topic_field": "",
       "url": "/discussion/a-pdf-upload-option-for-proposal-creation/138",
-      "views": 48
+      "views": 49
     },
     {
       "document_id": null,
@@ -2892,7 +2892,7 @@
       "thread_id": 144,
       "topic_field": "Review Process",
       "url": "/discussion/whole-proposal-reviewer-synopsis-fund-or-no-fund/144",
-      "views": 60
+      "views": 61
     },
     {
       "document_id": null,
@@ -2952,7 +2952,7 @@
       "thread_id": 190,
       "topic_field": "Thinklab,printing,typesetting",
       "url": "/discussion/hyperlinks-inserted-when-printing-thinklab-pages/190",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
@@ -3012,7 +3012,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 47
+      "views": 48
     },
     {
       "document_id": null,
