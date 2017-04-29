@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-04-28T22:25:44.426644Z",
+  "retrieved": "2017-04-29T22:26:32.772596Z",
   "threads": [
     {
       "document_id": null,
@@ -3012,7 +3012,7 @@
       "thread_id": 197,
       "topic_field": "ThinkLab,ssl,https",
       "url": "/discussion/support-and-enforce-ssl-connections-to-thinklab/197",
-      "views": 48
+      "views": 49
     },
     {
       "document_id": null,
