@@ -7681,7 +7681,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-05-27T22:39:35.137526Z",
+  "retrieved": "2017-05-28T22:38:46.541603Z",
   "threads": [
     {
       "document_id": null,
@@ -7693,7 +7693,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 839
+      "views": 841
     },
     {
       "document_id": null,
@@ -8005,7 +8005,7 @@
       "thread_id": 70,
       "topic_field": "DrugBank,Structural Similarity,Molecular Similarity,Fingerprint,Dice coefficient,Similarity,Chemical Similarity",
       "url": "/discussion/calculating-molecular-similarities-between-drugbank-compounds/70",
-      "views": 218
+      "views": 219
     },
     {
       "document_id": null,
@@ -8065,7 +8065,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 643
+      "views": 644
     },
     {
       "document_id": null,
@@ -8149,7 +8149,7 @@
       "thread_id": 95,
       "topic_field": "Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation",
       "url": "/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95",
-      "views": 258
+      "views": 259
     },
     {
       "document_id": null,
@@ -8161,7 +8161,7 @@
       "thread_id": 96,
       "topic_field": "Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome",
       "url": "/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96",
-      "views": 344
+      "views": 345
     },
     {
       "document_id": null,
@@ -8209,7 +8209,7 @@
       "thread_id": 104,
       "topic_field": "Heterogeneous Networks,Heterogeneous Information Networks,Nomenclature",
       "url": "/discussion/renaming-heterogeneous-networks-to-a-more-concise-and-catchy-term/104",
-      "views": 193
+      "views": 194
     },
     {
       "document_id": null,
@@ -8293,7 +8293,7 @@
       "thread_id": 112,
       "topic_field": "Database,Neo4J,Graphs,Graph Database,NoSQL",
       "url": "/discussion/using-the-neo4j-graph-database-for-hetnets/112",
-      "views": 623
+      "views": 624
     },
     {
       "document_id": null,
@@ -8317,7 +8317,7 @@
       "thread_id": 115,
       "topic_field": "HNEP,Hetnets,Features,Metapaths",
       "url": "/discussion/assessing-the-informativeness-of-features/115",
-      "views": 105
+      "views": 106
     },
     {
       "document_id": null,
@@ -8329,7 +8329,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 132
+      "views": 133
     },
     {
       "document_id": null,
@@ -8365,7 +8365,7 @@
       "thread_id": 136,
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 104
+      "views": 105
     },
     {
       "document_id": null,
@@ -8425,7 +8425,7 @@
       "thread_id": 182,
       "topic_field": "Pharmacotherapy,Indications,PharmacotherapyDB,curation",
       "url": "/discussion/announcing-pharmacotherapydb-the-open-catalog-of-drug-therapies-for-disease/182",
-      "views": 299
+      "views": 301
     },
     {
       "document_id": null,
@@ -8509,7 +8509,7 @@
       "thread_id": 201,
       "topic_field": "Machine learning,Heterogeneous Networks,Hetnets,HNEP,Prior Knowledge",
       "url": "/discussion/network-edge-prediction-estimating-the-prior/201",
-      "views": 75
+      "views": 76
     },
     {
       "document_id": null,
@@ -8545,7 +8545,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 1347
+      "views": 1354
     },
     {
       "document_id": null,
@@ -8557,7 +8557,7 @@
       "thread_id": 210,
       "topic_field": "HNEP,machine learning",
       "url": "/discussion/our-hetnet-edge-prediction-methodology-the-modeling-framework-for-project-rephetio/210",
-      "views": 122
+      "views": 123
     },
     {
       "document_id": null,
@@ -8629,7 +8629,7 @@
       "thread_id": 220,
       "topic_field": "Hetionet,Neo4j,Cypher,Network Biology",
       "url": "/discussion/exploring-the-power-of-hetionet-a-cypher-query-depot/220",
-      "views": 143
+      "views": 144
     },
     {
       "document_id": null,
@@ -8641,7 +8641,7 @@
       "thread_id": 224,
       "topic_field": "epilepsy,Hetionet",
       "url": "/discussion/prediction-in-epilepsy/224",
-      "views": 121
+      "views": 122
     },
     {
       "document_id": 7,
@@ -8665,7 +8665,7 @@
       "thread_id": 227,
       "topic_field": "applied imagination,Hetionet,hetnets,future,planning",
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227",
-      "views": 139
+      "views": 140
     },
     {
       "document_id": null,
