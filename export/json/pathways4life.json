@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2017-07-05T22:56:51.345787Z",
+  "retrieved": "2017-07-06T22:56:59.389469Z",
   "threads": [
     {
       "document_id": null,
@@ -445,7 +445,7 @@
       "thread_id": 73,
       "topic_field": "Citizen Science,Crowdsourcing,Open Sourse,Game Design,Pathways,Image Analysis",
       "url": "/discussion/open-for-feedback/73",
-      "views": 50
+      "views": 51
     },
     {
       "document_id": null,
@@ -517,7 +517,7 @@
       "thread_id": 120,
       "topic_field": "Gamification",
       "url": "/discussion/are-there-significant-differences-in-difficulty-between-pathway-modeling-tasks/120",
-      "views": 36
+      "views": 37
     },
     {
       "document_id": null,
