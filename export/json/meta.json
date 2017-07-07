@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-07-06T22:56:58.607571Z",
+  "retrieved": "2017-07-07T22:57:49.144503Z",
   "threads": [
     {
       "document_id": null,
@@ -2628,7 +2628,7 @@
       "thread_id": 37,
       "topic_field": "ThinkLab,Discussions,Draft",
       "url": "/discussion/draft-mode-for-new-discussions/37",
-      "views": 33
+      "views": 34
     },
     {
       "document_id": null,
@@ -2796,7 +2796,7 @@
       "thread_id": 86,
       "topic_field": "Metadata,Citation,Citations,DOI,References,CrossRef",
       "url": "/discussion/citation-metadata-refreshing/86",
-      "views": 60
+      "views": 61
     },
     {
       "document_id": null,
