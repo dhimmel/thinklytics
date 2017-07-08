@@ -1,6 +1,6 @@
 # Analytics for the _Thinklab_ platform
 
-[_Thinklab_](https://thinklab.com/) is a platform for collaborative online open science. This repository exports and stores _Thinklab_ content as well as providing basic analytics for _Thinklab_ projects.
+[_Thinklab_](https://thinklab.org/) is a platform for collaborative online open science. This repository exports and stores _Thinklab_ content as well as providing basic analytics for _Thinklab_ projects.
 
 ## Repository structure
 
