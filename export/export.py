@@ -8,12 +8,12 @@ import requests
 from bs4 import BeautifulSoup as bfs
 
 headers = {
-    'referer': 'https://thinklab.org',
+    'referer': 'http://thinklab.org',
 }
 
 project_listing_urls = [
-    'https://thinklab.org/proposals',
-    'https://thinklab.org/projects',
+    'http://thinklab.org/proposals',
+    'http://thinklab.org/projects',
 ]
 
 def retrieve_project_urls(url, css_sel = 'a.list-proj-name'):
@@ -36,7 +36,7 @@ def base_payload(session):
 def start_session(username, password):
     """Initiate a Thinklab requests session"""
     session = requests.Session()
-    login_url = 'https://thinklab.org/login'
+    login_url = 'http://thinklab.org/login'
     session.get(login_url)
     payload = base_payload(session)
     payload['email'] = username
@@ -47,12 +47,12 @@ def start_session(username, password):
 def retrieve_project_export(project, session):
     """
     Retrieve a JSON-formatted Thinklab project export.
-    See https://thinklab.org/d/191#8
+    See http://thinklab.org/d/191#8
 
     `project` is a Thinklab project id such as `rephetio`.
     `username` and `password` are Thinklab login credentials.
     """
-    export_url = 'https://thinklab.org/p/{}/export.json'.format(project)
+    export_url = 'http://thinklab.org/p/{}/export.json'.format(project)
     payload = base_payload(session)
     response = session.post(export_url, data=payload, headers=headers)
     try:
