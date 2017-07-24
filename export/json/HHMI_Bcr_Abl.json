@@ -886,7 +886,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/HHMI_Bcr_Abl/proposal",
-      "views": 346
+      "views": 347
     }
   ],
   "notes": [],
@@ -934,7 +934,7 @@
       "username": "obigriffith"
     }
   ],
-  "retrieved": "2017-07-23T23:05:26.997050Z",
+  "retrieved": "2017-07-24T23:06:03.421788Z",
   "threads": [
     {
       "document_id": null,
@@ -946,7 +946,7 @@
       "thread_id": 141,
       "topic_field": "Machine learning,Cancer Biology,Crowdsourcing,Literature Mining,Drug Targets",
       "url": "/doc/11/review",
-      "views": 46
+      "views": 47
     },
     {
       "document_id": null,

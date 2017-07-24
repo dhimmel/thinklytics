@@ -2544,7 +2544,7 @@
       "username": "bisasosamuel"
     }
   ],
-  "retrieved": "2017-07-23T23:05:29.500336Z",
+  "retrieved": "2017-07-24T23:06:06.007586Z",
   "threads": [
     {
       "document_id": null,
@@ -2700,7 +2700,7 @@
       "thread_id": 58,
       "topic_field": "Funding,Vetting,Grants,NIH",
       "url": "/discussion/thinklab-as-a-vetting-system-for-traditional-grants/58",
-      "views": 212
+      "views": 213
     },
     {
       "document_id": null,
@@ -2712,7 +2712,7 @@
       "thread_id": 59,
       "topic_field": "Markdown,TLFM,Editor",
       "url": "/discussion/thinklab-editor-and-markdown-suggestions/59",
-      "views": 63
+      "views": 64
     },
     {
       "document_id": null,
@@ -2724,7 +2724,7 @@
       "thread_id": 60,
       "topic_field": "Comments",
       "url": "/discussion/comments-notes-interface-and-behaviour-suggestions/60",
-      "views": 68
+      "views": 69
     },
     {
       "document_id": null,
@@ -2736,7 +2736,7 @@
       "thread_id": 63,
       "topic_field": "",
       "url": "/discussion/why-thinklab-uses-a-flat-discussion-structure-not-threaded/63",
-      "views": 97
+      "views": 98
     },
     {
       "document_id": null,
@@ -2748,7 +2748,7 @@
       "thread_id": 64,
       "topic_field": "",
       "url": "/discussion/should-we-aim-to-keep-discussions-narrowly-focused/64",
-      "views": 75
+      "views": 76
     },
     {
       "document_id": null,
@@ -2988,7 +2988,7 @@
       "thread_id": 195,
       "topic_field": "",
       "url": "/discussion/auto-save/195",
-      "views": 35
+      "views": 36
     },
     {
       "document_id": null,

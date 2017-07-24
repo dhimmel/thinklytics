@@ -121,7 +121,7 @@
       "title": "",
       "topic_field": "",
       "url": "/p/EdgeProject/idea",
-      "views": 157
+      "views": 158
     }
   ],
   "notes": [],
@@ -148,7 +148,7 @@
       "username": "kristinahettne"
     }
   ],
-  "retrieved": "2017-07-23T23:05:25.695046Z",
+  "retrieved": "2017-07-24T23:06:02.145707Z",
   "threads": [
     {
       "document_id": null,
@@ -160,7 +160,7 @@
       "thread_id": 172,
       "topic_field": "semantic web,linked data,question answering,workflows",
       "url": "/discussion/dynamic-sub-graph-assembly-versus-data-warehousing/172",
-      "views": 49
+      "views": 50
     },
     {
       "document_id": 14,
@@ -184,7 +184,7 @@
       "thread_id": 176,
       "topic_field": "",
       "url": "/discussion/review-summary/176",
-      "views": 29
+      "views": 30
     },
     {
       "document_id": null,
