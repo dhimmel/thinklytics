@@ -433,7 +433,7 @@
       "username": "alexanderpico"
     }
   ],
-  "retrieved": "2017-07-24T23:06:06.680214Z",
+  "retrieved": "2017-07-25T23:06:58.061016Z",
   "threads": [
     {
       "document_id": null,
@@ -481,7 +481,7 @@
       "thread_id": 77,
       "topic_field": "Markdown,ThinkLab,Spelling,Formatting",
       "url": "/discussion/thinklab-specific-comments/77",
-      "views": 54
+      "views": 55
     },
     {
       "document_id": null,
@@ -505,7 +505,7 @@
       "thread_id": 119,
       "topic_field": "Machine learning",
       "url": "/discussion/use-machine-learning-to-calculate-confidence-scores-for-users-snippets-and-pathways/119",
-      "views": 176
+      "views": 177
     },
     {
       "document_id": null,
@@ -553,7 +553,7 @@
       "thread_id": 123,
       "topic_field": "Crowdsourcing,Gamification,Science Games,Serious Games",
       "url": "/discussion/what-made-previous-crowdsourced-science-games-succeed-or-not/123",
-      "views": 55
+      "views": 56
     }
   ]
 }

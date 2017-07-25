@@ -7699,7 +7699,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-07-24T23:06:12.861141Z",
+  "retrieved": "2017-07-25T23:07:04.288130Z",
   "threads": [
     {
       "document_id": null,
@@ -7903,7 +7903,7 @@
       "thread_id": 51,
       "topic_field": "Mapping,UniChem,LINCS",
       "url": "/discussion/unichem-mapping-to-lincs-small-molecules/51",
-      "views": 450
+      "views": 451
     },
     {
       "document_id": null,
@@ -7915,7 +7915,7 @@
       "thread_id": 52,
       "topic_field": "HSDN",
       "url": "/discussion/human-symptom-disease-network-mesh-id-matching/52",
-      "views": 382
+      "views": 383
     },
     {
       "document_id": null,
@@ -8371,7 +8371,7 @@
       "thread_id": 134,
       "topic_field": "HNEP,Network Theory,Graph Theory,Hetnets,Paths",
       "url": "/discussion/path-exclusion-conditions/134",
-      "views": 331
+      "views": 332
     },
     {
       "document_id": null,
@@ -8479,7 +8479,7 @@
       "thread_id": 187,
       "topic_field": "complexity,runtime,optimization,Neo4J,join hints",
       "url": "/discussion/estimating-the-complexity-of-hetnet-traversal/187",
-      "views": 72
+      "views": 73
     },
     {
       "document_id": null,
@@ -8563,7 +8563,7 @@
       "thread_id": 205,
       "topic_field": "logistic regression,GLM,coefficients,statistics,regression",
       "url": "/discussion/computing-standardized-logistic-regression-coefficients/205",
-      "views": 1620
+      "views": 1621
     },
     {
       "document_id": null,
@@ -8611,7 +8611,7 @@
       "thread_id": 214,
       "topic_field": "DWPC,HNEP,Residual DWPC,R-DWPC,permutation,hetnet,algorithms",
       "url": "/discussion/introducing-the-residual-degree-weighted-path-count-r-dwpc/214",
-      "views": 67
+      "views": 68
     },
     {
       "document_id": null,
