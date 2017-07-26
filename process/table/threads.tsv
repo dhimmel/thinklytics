@@ -1,6 +1,6 @@
 document_id	doi	doi_field	profile_id	published	subject	thread_id	topic_field	url	views	project
 	10.15363/thinklab.d172		48	2016-02-23T23:33:01.236093Z	dynamic sub-graph assembly versus data warehousing	172	semantic web,linked data,question answering,workflows	/discussion/dynamic-sub-graph-assembly-versus-data-warehousing/172	50	EdgeProject
-14	10.15363/thinklab.d174			2016-02-23T23:33:01.467100Z		174		/doc/14/review	35	EdgeProject
+14	10.15363/thinklab.d174			2016-02-23T23:33:01.467100Z		174		/doc/14/review	36	EdgeProject
 14	10.15363/thinklab.d176		2	2016-02-24T02:08:25.801767Z		176		/discussion/review-summary/176	30	EdgeProject
 	10.15363/thinklab.d177		48	2016-02-25T21:20:10.261545Z	what to do when you start over	177	ThinkLab,google docs	/discussion/what-to-do-when-you-start-over/177	38	EdgeProject
 	10.15363/thinklab.d141			2016-01-18T19:48:55.431831Z	Predicting Bcr-Abl targets using a hybrid information extraction system	141	Machine learning,Cancer Biology,Crowdsourcing,Literature Mining,Drug Targets	/doc/11/review	47	HHMI_Bcr_Abl
@@ -17,7 +17,7 @@ document_id	doi	doi_field	profile_id	published	subject	thread_id	topic_field	url
 	10.15363/thinklab.d10		2	2014-06-11T23:59:22.634587Z	Concerns with projected outcomes	10		/discussion/concerns-with-projected-outcomes/10	65	MicrobeResist
 	10.15363/thinklab.d11		14	2014-06-12T20:57:58.551399Z	Methods considerations	11		/discussion/methods-considerations/11	61	MicrobeResist
 	10.15363/thinklab.d15		2	2014-09-10T20:33:29.473571Z	Markdown text formatting tips for proposal	15	Markdown	/discussion/markdown-text-formatting-tips-for-proposal/15	65	MicrobeResist
-	10.15363/thinklab.d129		157	2015-11-25T14:23:50.090589Z	Reviewer #1	129		/discussion/reviewer-1/129	460	dFoxPoperant
+	10.15363/thinklab.d129		157	2015-11-25T14:23:50.090589Z	Reviewer #1	129		/discussion/reviewer-1/129	461	dFoxPoperant
 	10.15363/thinklab.d132			2015-12-01T17:13:33.160639Z	What is the function of FoxP in operant self-learning?	132	CRISPR/Cas,Learning,FoxP,Neurogenetics,Genome Editing,Language,Behavior,RNAi,Operant Learning,Drosophila,Antibodies,Neurobiology	/doc/8/review	4	dFoxPoperant
 	10.15363/thinklab.d133		2	2015-12-01T20:33:03.623767Z	How much expertise is it realistic to expect grant reviewers to have?	133	Peer review,Grant Writing	/discussion/how-much-expertise-is-it-realistic-to-expect-grant-reviewers-to-have/133	96	dFoxPoperant
 17	10.15363/thinklab.d184			2016-03-11T07:45:54.180001Z		184		/doc/17/review	5	issnindiadatabase
@@ -78,7 +78,7 @@ document_id	doi	doi_field	profile_id	published	subject	thread_id	topic_field	url
 	10.15363/thinklab.d21		17	2015-01-14T05:55:24.808111Z	How should we construct a catalog of drug indications?	21	Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology	/discussion/how-should-we-construct-a-catalog-of-drug-indications/21	898	rephetio
 	10.15363/thinklab.d22		17	2015-01-16T00:46:28.770398Z	Suggestions for additional information types?	22	Bioinformatics,Chemoinformatics,Databases	/discussion/suggestions-for-additional-information-types/22	165	rephetio
 	10.15363/thinklab.d23		2	2015-01-16T10:18:57.231835Z	Enabling reproducibility and reuse	23	Reproducibility	/discussion/enabling-reproducibility-and-reuse/23	138	rephetio
-	10.15363/thinklab.d25		17	2015-01-22T18:14:09.267876Z	Seeking an open source implementation of the Gerstein-Sonnhammer-Chothia Algorithm	25	Python,R,Algorithms,Computer Science,SIDER,GSC Weighting,Gerstein-Sonnhammer-Chothia,Julia,Open Source Software	/discussion/seeking-an-open-source-implementation-of-the-gerstein-sonnhammer-chothia-algorithm/25	183	rephetio
+	10.15363/thinklab.d25		17	2015-01-22T18:14:09.267876Z	Seeking an open source implementation of the Gerstein-Sonnhammer-Chothia Algorithm	25	Python,R,Algorithms,Computer Science,SIDER,GSC Weighting,Gerstein-Sonnhammer-Chothia,Julia,Open Source Software	/discussion/seeking-an-open-source-implementation-of-the-gerstein-sonnhammer-chothia-algorithm/25	184	rephetio
 	10.15363/thinklab.d30	10.1038/msb.2009.98	17	2015-02-13T02:25:05.517557Z	Assessing the quality and applicability of the SIDER 2 resource	30	SIDER,Indications,NLP,Drugs,Side Effects,Drug Labels	/discussion/assessing-the-quality-and-applicability-of-the-sider-2-resource/30	178	rephetio
 	10.15363/thinklab.d31	10.1136/amiajnl-2012-001431	17	2015-02-17T02:21:47.729396Z	MEDI indications data — discrepancy in resource-specific counts	31	SIDER,Indications,NLP,MEDI,Wikipedia,MedlinePlus,ICD9,UMLS,RxNorm	/discussion/medi-indications-data-discrepancy-in-resource-specific-counts/31	109	rephetio
 	10.15363/thinklab.d34		17	2015-02-27T19:35:36.720301Z	Using Entrez Gene as our gene vocabulary	34	Databases,HGNC,Genes,Entrez Gene	/discussion/using-entrez-gene-as-our-gene-vocabulary/34	266	rephetio
@@ -112,7 +112,7 @@ document_id	doi	doi_field	profile_id	published	subject	thread_id	topic_field	url
 	10.15363/thinklab.d85		17	2015-07-02T00:44:39.833696Z	Creating a catalog of protein interactions	85	Protein Interactions,Interactions,PPI	/discussion/creating-a-catalog-of-protein-interactions/85	182	rephetio
 	10.15363/thinklab.d91		17	2015-07-10T18:15:03.705673Z	The TISSUES resource for the tissue-specificity of genes	91	TISSUES,Proteome,UniProtKB,Tissue Specificity,Transcriptome	/discussion/the-tissues-resource-for-the-tissue-specificity-of-genes/91	125	rephetio
 	10.15363/thinklab.d93		17	2015-07-14T19:30:52.136138Z	Disease similarity from MEDLINE topic cooccurrence	93	MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity	/discussion/disease-similarity-from-medline-topic-cooccurrence/93	89	rephetio
-	10.15363/thinklab.d94	10.1371/journal.pone.0049686	17	2015-07-14T19:55:24.432032Z	Functional disease annotations for genes using DOAF	94	Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations	/discussion/functional-disease-annotations-for-genes-using-doaf/94	86	rephetio
+	10.15363/thinklab.d94	10.1371/journal.pone.0049686	17	2015-07-14T19:55:24.432032Z	Functional disease annotations for genes using DOAF	94	Entrez Gene,Disease Ontology,DO,DOAF,GeneRIF,Gene Annotations	/discussion/functional-disease-annotations-for-genes-using-doaf/94	87	rephetio
 	10.15363/thinklab.d95		17	2015-07-14T21:45:53.200462Z	Expert curation of our indication catalog for disease-modifying treatments	95	Indications,Symptomatic Treatment,Disease-Modifying Therapy,Expert Curation	/discussion/expert-curation-of-our-indication-catalog-for-disease-modifying-treatments/95	261	rephetio
 	10.15363/thinklab.d96		17	2015-07-28T21:14:07.053888Z	STARGEO: expression signatures for disease using crowdsourced GEO annotation	96	Gene Expression,Gene Expression Omnibus,STARGEO,GEO,STAR-GEO,Transcriptome	/discussion/stargeo-expression-signatures-for-disease-using-crowdsourced-geo-annotation/96	359	rephetio
 	10.15363/thinklab.d97	10.1093/nar/gkv1075	17	2015-08-08T23:36:57.800091Z	Extracting side effects from SIDER 4	97	SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4	/discussion/extracting-side-effects-from-sider-4/97	188	rephetio
@@ -163,7 +163,7 @@ document_id	doi	doi_field	profile_id	published	subject	thread_id	topic_field	url
 	10.15363/thinklab.d231		17	2017-03-10T18:32:33.097951Z	Why we predicted ictogenic tricyclic compounds treat epilepsy?	231	epilepsy,tricyclic antidepressants,pharmacology	/discussion/why-we-predicted-ictogenic-tricyclic-compounds-treat-epilepsy/231	32	rephetio
 12	10.15363/thinklab.d158			2016-02-15T16:34:22.887147Z		158	Open science,Peer review,Science Funding,Grant Writing,Grantmaking,Open Notebook Science	/doc/12/review	107	thinklabOSP
 	10.15363/thinklab.d160		17	2016-02-19T06:41:11.751024Z	Highlighting the immediacy of Thinklab	160	ASAPbio,Delays,Publishing,Preprints	/discussion/highlighting-the-immediacy-of-thinklab/160	35	thinklabOSP
-	10.15363/thinklab.d161		125	2016-02-16T12:50:44.652992Z	How to address the risk of stealing ideas	161		/discussion/how-to-address-the-risk-of-stealing-ideas/161	150	thinklabOSP
+	10.15363/thinklab.d161		125	2016-02-16T12:50:44.652992Z	How to address the risk of stealing ideas	161		/discussion/how-to-address-the-risk-of-stealing-ideas/161	151	thinklabOSP
 12	10.15363/thinklab.d164		17	2016-02-19T06:04:20.499953Z		164		/discussion/review-summary/164	43	thinklabOSP
 	10.15363/thinklab.d165		17	2016-02-19T06:44:20.761176Z	Using the prize money for integrating with the larger internet movement in science	165	Indexing,Altmetrics,Integration	/discussion/using-the-prize-money-for-integrating-with-the-larger-internet-movement-in-science/165	32	thinklabOSP
 12	10.15363/thinklab.d166		125	2016-02-19T15:23:58.915605Z		166		/discussion/review-summary/166	27	thinklabOSP
