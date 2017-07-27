@@ -1664,7 +1664,7 @@
       "username": "larsjuhljensen"
     }
   ],
-  "retrieved": "2017-07-26T23:08:46.063420Z",
+  "retrieved": "2017-07-27T23:08:46.541571Z",
   "threads": [
     {
       "document_id": 12,
@@ -1712,7 +1712,7 @@
       "thread_id": 164,
       "topic_field": "",
       "url": "/discussion/review-summary/164",
-      "views": 43
+      "views": 44
     },
     {
       "document_id": null,
@@ -1736,7 +1736,7 @@
       "thread_id": 166,
       "topic_field": "",
       "url": "/discussion/review-summary/166",
-      "views": 27
+      "views": 28
     },
     {
       "document_id": 12,
@@ -1772,7 +1772,7 @@
       "thread_id": 175,
       "topic_field": "",
       "url": "/discussion/review-summary/175",
-      "views": 23
+      "views": 24
     }
   ]
 }
