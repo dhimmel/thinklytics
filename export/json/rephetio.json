@@ -7699,7 +7699,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-07-27T23:08:28.810910Z",
+  "retrieved": "2017-07-28T23:12:24.668071Z",
   "threads": [
     {
       "document_id": null,
@@ -7843,7 +7843,7 @@
       "thread_id": 43,
       "topic_field": "LINCS,Expression Signatures,Transcriptional Profiles",
       "url": "/discussion/computing-consensus-transcriptional-profiles-for-lincs-l1000-perturbations/43",
-      "views": 679
+      "views": 680
     },
     {
       "document_id": null,
@@ -7939,7 +7939,7 @@
       "thread_id": 57,
       "topic_field": "Evolution,Entrez Gene,ERC,UCSC Genome Browser,Evolutionary Rate Covariation",
       "url": "/discussion/selecting-informative-erc-evolutionary-rate-covariation-values-between-genes/57",
-      "views": 102
+      "views": 103
     },
     {
       "document_id": null,
@@ -8011,7 +8011,7 @@
       "thread_id": 68,
       "topic_field": "Open Source,Ontologies,Disease Ontology",
       "url": "/discussion/disease-ontology-feature-requests/68",
-      "views": 144
+      "views": 145
     },
     {
       "document_id": null,
@@ -8203,7 +8203,7 @@
       "thread_id": 101,
       "topic_field": "Transcription,Expression Signatures,STARGEO,ADEPTUS,Transcriptome",
       "url": "/discussion/the-adeptus-resource-for-expression-signatures-of-disease/101",
-      "views": 131
+      "views": 132
     },
     {
       "document_id": null,
@@ -8275,7 +8275,7 @@
       "thread_id": 108,
       "topic_field": "Copyright,Permission,Licensing,MSigDB,MIT",
       "url": "/discussion/msigdb-licensing/108",
-      "views": 195
+      "views": 196
     },
     {
       "document_id": null,
@@ -8347,7 +8347,7 @@
       "thread_id": 124,
       "topic_field": "Gene Expression,Over-Expression,Under-Expression,Bgee,Transcriptome",
       "url": "/discussion/processing-bgee-for-tissue-specific-gene-presence-and-overunder-expression/124",
-      "views": 139
+      "views": 140
     },
     {
       "document_id": null,
@@ -8539,7 +8539,7 @@
       "thread_id": 202,
       "topic_field": "hetnets,Data Visualization,Hetionet",
       "url": "/discussion/describing-hetionet-v10-through-visualization-and-statistics/202",
-      "views": 224
+      "views": 225
     },
     {
       "document_id": null,
