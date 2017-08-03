@@ -7699,7 +7699,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-08-02T23:11:29.790523Z",
+  "retrieved": "2017-08-03T23:10:48.617734Z",
   "threads": [
     {
       "document_id": null,
@@ -7999,7 +7999,7 @@
       "thread_id": 67,
       "topic_field": "Text Mining,MEDLINE,Pubmed,Literature Mining,MeSH",
       "url": "/discussion/mining-knowledge-from-medline-articles-and-their-indexed-mesh-terms/67",
-      "views": 281
+      "views": 282
     },
     {
       "document_id": null,
@@ -8095,7 +8095,7 @@
       "thread_id": 83,
       "topic_field": "R,Rstats,Programming,Coding,Hadley Wickham,Style,Hadleyverse",
       "url": "/discussion/r-best-practices/83",
-      "views": 1109
+      "views": 1110
     },
     {
       "document_id": null,
@@ -8143,7 +8143,7 @@
       "thread_id": 93,
       "topic_field": "MEDLINE,Literature Mining,MeSH,Cooccurrence,Disease Similarity",
       "url": "/discussion/disease-similarity-from-medline-topic-cooccurrence/93",
-      "views": 89
+      "views": 90
     },
     {
       "document_id": null,
@@ -8383,7 +8383,7 @@
       "thread_id": 136,
       "topic_field": "Neo4J,Edge Swaps,Cypher,XSwap,Permutation,Hetnets",
       "url": "/discussion/permuting-hetnets-and-implementing-randomized-edge-swaps-in-cypher/136",
-      "views": 112
+      "views": 113
     },
     {
       "document_id": null,
@@ -8455,7 +8455,7 @@
       "thread_id": 185,
       "topic_field": "LINCS,L1000,gene expression,imputation,genetic perturbation,knockdown,BING,overepression,downregulation,upregulation",
       "url": "/discussion/assessing-the-imputation-quality-of-gene-expression-in-lincs-l1000/185",
-      "views": 198
+      "views": 199
     },
     {
       "document_id": null,
@@ -8491,7 +8491,7 @@
       "thread_id": 193,
       "topic_field": "IHS,transformation,DWPC,regression",
       "url": "/discussion/transforming-dwpcs-for-hetnet-edge-prediction/193",
-      "views": 75
+      "views": 76
     },
     {
       "document_id": null,
