@@ -7699,7 +7699,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-08-03T23:10:48.617734Z",
+  "retrieved": "2017-08-04T23:11:09.394347Z",
   "threads": [
     {
       "document_id": null,
@@ -7723,7 +7723,7 @@
       "thread_id": 22,
       "topic_field": "Bioinformatics,Chemoinformatics,Databases",
       "url": "/discussion/suggestions-for-additional-information-types/22",
-      "views": 165
+      "views": 166
     },
     {
       "document_id": null,
@@ -7735,7 +7735,7 @@
       "thread_id": 23,
       "topic_field": "Reproducibility",
       "url": "/discussion/enabling-reproducibility-and-reuse/23",
-      "views": 138
+      "views": 139
     },
     {
       "document_id": null,
@@ -7795,7 +7795,7 @@
       "thread_id": 39,
       "topic_field": "GO,Propagation,Gene Ontology",
       "url": "/discussion/compiling-gene-ontology-annotations-into-an-easy-to-use-format/39",
-      "views": 351
+      "views": 352
     },
     {
       "document_id": null,
@@ -8071,7 +8071,7 @@
       "thread_id": 81,
       "topic_field": "Transcription,RNASeq,Gene Expression,Tissue Specificity,Microarrays",
       "url": "/discussion/tissue-specific-gene-expression-resources/81",
-      "views": 825
+      "views": 826
     },
     {
       "document_id": null,
@@ -8083,7 +8083,7 @@
       "thread_id": 82,
       "topic_field": "Transcription,Gene Expression,GTEx,RNA-Seq",
       "url": "/discussion/processing-gtex-for-tissue-specific-gene-expression/82",
-      "views": 685
+      "views": 686
     },
     {
       "document_id": null,
@@ -8191,7 +8191,7 @@
       "thread_id": 97,
       "topic_field": "SIDER,NLP,Drugs,Side Effects,Drug Labels,Text Mining,SIDER4",
       "url": "/discussion/extracting-side-effects-from-sider-4/97",
-      "views": 188
+      "views": 189
     },
     {
       "document_id": null,
@@ -8287,7 +8287,7 @@
       "thread_id": 110,
       "topic_field": "LINCS,Copyright,Licensing,MIT,L1000,Permissions",
       "url": "/discussion/lincs-l1000-licensing/110",
-      "views": 387
+      "views": 388
     },
     {
       "document_id": null,
@@ -8299,7 +8299,7 @@
       "thread_id": 111,
       "topic_field": "Incomplete Interactome,Permission,Licensing,Copyright Transfer,Supplement,AAAS",
       "url": "/discussion/incomplete-interactome-licensing/111",
-      "views": 118
+      "views": 119
     },
     {
       "document_id": null,
@@ -8623,7 +8623,7 @@
       "thread_id": 215,
       "topic_field": "HNEP,dropout contamination,overfitting",
       "url": "/discussion/edge-dropout-contamination-in-hetnet-edge-prediction/215",
-      "views": 37
+      "views": 38
     },
     {
       "document_id": null,
