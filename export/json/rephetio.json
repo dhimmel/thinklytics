@@ -7699,7 +7699,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-08-05T23:12:24.594084Z",
+  "retrieved": "2017-08-06T23:12:24.687455Z",
   "threads": [
     {
       "document_id": null,
@@ -7975,7 +7975,7 @@
       "thread_id": 65,
       "topic_field": "Databases,DrugBank,Drug Targets",
       "url": "/discussion/protein-target-carrier-transporter-and-enzyme-interactions-in-drugbank/65",
-      "views": 993
+      "views": 994
     },
     {
       "document_id": null,
@@ -8599,7 +8599,7 @@
       "thread_id": 213,
       "topic_field": "DrugBank,licensing,legal",
       "url": "/discussion/sounding-the-alarm-on-drugbanks-new-license-and-terms-of-use/213",
-      "views": 552
+      "views": 553
     },
     {
       "document_id": null,
