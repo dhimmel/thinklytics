@@ -7699,7 +7699,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-09-03T23:27:28.118520Z",
+  "retrieved": "2017-09-04T23:27:43.879093Z",
   "threads": [
     {
       "document_id": null,
@@ -7951,7 +7951,7 @@
       "thread_id": 61,
       "topic_field": "Drugs,RxNorm,Compounds,Terminologies,Ontologies,Mapping",
       "url": "/discussion/retrieving-the-ingredients-in-rxnorm-concepts/61",
-      "views": 682
+      "views": 683
     },
     {
       "document_id": null,
