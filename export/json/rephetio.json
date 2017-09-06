@@ -7699,7 +7699,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-09-05T23:27:28.318811Z",
+  "retrieved": "2017-09-06T23:27:57.602466Z",
   "threads": [
     {
       "document_id": null,
@@ -8635,7 +8635,7 @@
       "thread_id": 216,
       "topic_field": "neo4j,Neo4j Browser,Cloud,Cloud Computing,Docker",
       "url": "/discussion/hosting-hetionet-in-the-cloud-creating-a-public-neo4j-instance/216",
-      "views": 292
+      "views": 293
     },
     {
       "document_id": null,
