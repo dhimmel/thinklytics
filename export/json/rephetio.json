@@ -7699,7 +7699,7 @@
       "username": "scootermorris"
     }
   ],
-  "retrieved": "2017-09-07T23:28:39.189989Z",
+  "retrieved": "2017-09-08T23:29:31.480817Z",
   "threads": [
     {
       "document_id": null,
@@ -7711,7 +7711,7 @@
       "thread_id": 21,
       "topic_field": "Bioinformatics,Natural Language Processing,Indications,Pharmacology,Text Mining,Pubchem,Informatics,Disease Ontology",
       "url": "/discussion/how-should-we-construct-a-catalog-of-drug-indications/21",
-      "views": 900
+      "views": 901
     },
     {
       "document_id": null,
@@ -8683,7 +8683,7 @@
       "thread_id": 227,
       "topic_field": "applied imagination,Hetionet,hetnets,future,planning",
       "url": "/discussion/brainstorming-future-directions-for-hetionet/227",
-      "views": 155
+      "views": 156
     },
     {
       "document_id": null,
